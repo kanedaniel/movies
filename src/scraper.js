@@ -335,37 +335,103 @@ async function scrapeLido(page) {
   
   try {
     await page.goto(url, { waitUntil: 'networkidle2', timeout: 60000 });
-    await page.waitForTimeout(3000);
+    // Wait longer for JavaScript to load session times
+    await page.waitForTimeout(5000);
+    
+    // Try to wait for session time elements to appear
+    try {
+      await page.waitForSelector('[class*="session"], [class*="time"], button, .showtime', { timeout: 5000 });
+    } catch (e) {
+      console.log('  No session elements found, trying alternative approach...');
+    }
     
     const films = await page.evaluate(() => {
       const items = [];
-      const seen = new Set();
+      const filmMap = new Map();
       
+      // Lido loads session data dynamically
+      // Look for movie cards/containers that have both title and session times
+      
+      // First, find all movie links to get titles
       document.querySelectorAll('a[href*="/movies/"]').forEach(el => {
         const href = el.href;
-        if (seen.has(href)) return;
-        
-        let title = el.textContent?.trim();
-        if (!title || title.length < 2) {
-          const img = el.querySelector('img');
-          title = img?.alt?.trim();
-        }
-        
-        if (title && title.length > 2) {
-          seen.add(href);
-          items.push({ title, url: href });
+        if (href.includes('/movies/') && !filmMap.has(href)) {
+          let title = el.textContent?.trim();
+          if (!title || title.length < 2) {
+            const img = el.querySelector('img');
+            title = img?.alt?.trim();
+          }
+          if (title && title.length > 2) {
+            filmMap.set(href, { title, url: href, times: [] });
+          }
         }
       });
       
-      return items;
+      // Now look for session times in the page
+      // They often appear as buttons or links with time patterns
+      const timePattern = /^(\d{1,2}):(\d{2})\s*(am|pm)?$/i;
+      const allElements = document.querySelectorAll('button, a, span, div');
+      
+      allElements.forEach(el => {
+        const text = el.textContent?.trim();
+        if (text && timePattern.test(text)) {
+          // Found a time - try to associate it with a movie
+          // Look for nearby movie link
+          let parent = el.parentElement;
+          for (let i = 0; i < 10 && parent; i++) {
+            const movieLink = parent.querySelector('a[href*="/movies/"]');
+            if (movieLink && filmMap.has(movieLink.href)) {
+              const film = filmMap.get(movieLink.href);
+              if (!film.times.includes(text)) {
+                film.times.push(text);
+              }
+              break;
+            }
+            parent = parent.parentElement;
+          }
+        }
+      });
+      
+      // Also check for times in format "10:30 AM" or similar
+      const timePattern2 = /(\d{1,2}:\d{2}\s*[AP]M)/gi;
+      document.querySelectorAll('[class*="session"], [class*="time"], [class*="showtime"]').forEach(el => {
+        const text = el.textContent;
+        const matches = text?.match(timePattern2) || [];
+        if (matches.length > 0) {
+          // Try to find associated movie
+          let parent = el.parentElement;
+          for (let i = 0; i < 10 && parent; i++) {
+            const movieLink = parent.querySelector('a[href*="/movies/"]');
+            if (movieLink && filmMap.has(movieLink.href)) {
+              const film = filmMap.get(movieLink.href);
+              matches.forEach(t => {
+                const cleanTime = t.trim();
+                if (!film.times.includes(cleanTime)) {
+                  film.times.push(cleanTime);
+                }
+              });
+              break;
+            }
+            parent = parent.parentElement;
+          }
+        }
+      });
+      
+      // Convert map to array
+      const result = [];
+      filmMap.forEach(film => {
+        result.push({
+          title: film.title,
+          times: film.times.length > 0 ? film.times : ['See website'],
+          url: film.url
+        });
+      });
+      
+      return result;
     });
     
     for (const film of films) {
-      sessions.push({
-        title: film.title,
-        times: ['See website'],
-        url: film.url
-      });
+      sessions.push(film);
     }
     
     console.log(`  Found ${sessions.length} films`);
