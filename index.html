@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Melbourne Movies Today</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=JetBrains+Mono:wght@400;500&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-dark: #0a0a0c;
+      --bg-card: #141418;
+      --bg-card-hover: #1a1a1f;
+      --gold: #d4a843;
+      --gold-dim: #a68532;
+      --cream: #f5f0e6;
+      --cream-dim: #c9c4ba;
+      --red: #c23c3c;
+      --text: #e8e4dc;
+      --text-dim: #8a8680;
+      --border: #2a2a30;
+    }
+    
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    
+    body {
+      font-family: 'Source Sans 3', sans-serif;
+      background: var(--bg-dark);
+      color: var(--text);
+      min-height: 100vh;
+      line-height: 1.6;
+    }
+    
+    body::before {
+      content: '';
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+      opacity: 0.03;
+      pointer-events: none;
+      z-index: 1000;
+    }
+    
+    header {
+      text-align: center;
+      padding: 3rem 1rem 2rem;
+      border-bottom: 1px solid var(--border);
+      background: linear-gradient(180deg, #12121a 0%, var(--bg-dark) 100%);
+    }
+    
+    header::before {
+      content: '★ ★ ★';
+      display: block;
+      color: var(--gold);
+      letter-spacing: 1rem;
+      font-size: 0.75rem;
+      margin-bottom: 1rem;
+      opacity: 0.7;
+    }
+    
+    h1 {
+      font-family: 'Playfair Display', serif;
+      font-weight: 900;
+      font-size: clamp(2.5rem, 8vw, 4.5rem);
+      color: var(--cream);
+      letter-spacing: -0.02em;
+      text-transform: uppercase;
+    }
+    
+    h1 span {
+      display: block;
+      font-size: 0.35em;
+      font-weight: 400;
+      letter-spacing: 0.3em;
+      color: var(--gold);
+      margin-top: 0.5rem;
+    }
+    
+    .date-banner {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.85rem;
+      color: var(--text-dim);
+      margin-top: 1.5rem;
+      padding: 0.5rem 1.5rem;
+      background: var(--bg-card);
+      display: inline-block;
+      border: 1px solid var(--border);
+    }
+    
+    .loading {
+      text-align: center;
+      padding: 4rem;
+      color: var(--text-dim);
+    }
+    
+    .loading::after {
+      content: '';
+      display: inline-block;
+      width: 1.5rem; height: 1.5rem;
+      border: 2px solid var(--border);
+      border-top-color: var(--gold);
+      border-radius: 50%;
+      animation: spin 1s linear infinite;
+      margin-left: 1rem;
+      vertical-align: middle;
+    }
+    
+    @keyframes spin { to { transform: rotate(360deg); } }
+    
+    main {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 2rem 1rem;
+    }
+    
+    .cinema-section {
+      margin-bottom: 3rem;
+      animation: fadeIn 0.6s ease-out;
+    }
+    
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    
+    .cinema-header {
+      display: flex;
+      align-items: baseline;
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+      padding-bottom: 0.75rem;
+      border-bottom: 2px solid var(--gold);
+    }
+    
+    .cinema-header h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.75rem;
+      font-weight: 700;
+      color: var(--cream);
+    }
+    
+    .cinema-header a {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.75rem;
+      color: var(--gold-dim);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    
+    .cinema-header a:hover { color: var(--gold); }
+    
+    .cinema-note {
+      font-style: italic;
+      color: var(--text-dim);
+      font-size: 0.9rem;
+      margin-bottom: 1rem;
+    }
+    
+    .films-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap: 1.5rem;
+    }
+    
+    .film-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      padding: 1.25rem;
+      display: grid;
+      grid-template-columns: 80px 1fr;
+      gap: 1rem;
+      transition: all 0.3s ease;
+      position: relative;
+    }
+    
+    .film-card:hover {
+      background: var(--bg-card-hover);
+      border-color: var(--gold-dim);
+      transform: translateY(-2px);
+    }
+    
+    .film-card.no-poster { grid-template-columns: 1fr; }
+    
+    .film-poster {
+      width: 80px; height: 120px;
+      object-fit: cover;
+      background: var(--border);
+    }
+    
+    .film-poster-placeholder {
+      width: 80px; height: 120px;
+      background: linear-gradient(135deg, var(--border) 0%, #1a1a20 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2rem;
+      color: var(--text-dim);
+    }
+    
+    .film-info h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--cream);
+      margin-bottom: 0.25rem;
+      line-height: 1.3;
+    }
+    
+    .film-info h3 a {
+      color: inherit;
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    
+    .film-info h3 a:hover { color: var(--gold); }
+    
+    .film-meta {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.7rem;
+      color: var(--text-dim);
+      margin-bottom: 0.5rem;
+      display: flex;
+      gap: 0.75rem;
+      flex-wrap: wrap;
+    }
+    
+    .film-meta .rating { color: var(--gold); }
+    
+    .film-overview {
+      font-size: 0.85rem;
+      color: var(--text-dim);
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      margin-bottom: 0.75rem;
+      line-height: 1.5;
+    }
+    
+    .film-times {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+    
+    .film-time {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.75rem;
+      padding: 0.25rem 0.6rem;
+      background: transparent;
+      border: 1px solid var(--gold-dim);
+      color: var(--gold);
+      transition: all 0.2s;
+    }
+    
+    .film-time:hover {
+      background: var(--gold);
+      color: var(--bg-dark);
+    }
+    
+    .film-time.see-website {
+      border-style: dashed;
+      color: var(--text-dim);
+      border-color: var(--text-dim);
+    }
+    
+    .double-feature { border-left: 3px solid var(--red); }
+    
+    .double-feature-label {
+      position: absolute;
+      top: 0; right: 0;
+      background: var(--red);
+      color: var(--cream);
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.65rem;
+      padding: 0.2rem 0.5rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    
+    .no-sessions {
+      color: var(--text-dim);
+      font-style: italic;
+      padding: 2rem;
+      text-align: center;
+      background: var(--bg-card);
+      border: 1px dashed var(--border);
+    }
+    
+    footer {
+      text-align: center;
+      padding: 3rem 1rem;
+      border-top: 1px solid var(--border);
+      color: var(--text-dim);
+      font-size: 0.85rem;
+    }
+    
+    footer p { margin-bottom: 0.5rem; }
+    footer a { color: var(--gold-dim); text-decoration: none; }
+    footer a:hover { color: var(--gold); }
+    
+    .error-state {
+      text-align: center;
+      padding: 4rem 2rem;
+      color: var(--text-dim);
+    }
+    
+    .error-state h2 {
+      color: var(--red);
+      margin-bottom: 1rem;
+    }
+
+    @media (max-width: 640px) {
+      .film-card { grid-template-columns: 60px 1fr; }
+      .film-poster, .film-poster-placeholder { width: 60px; height: 90px; }
+      .films-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Melbourne Movies<span>Independent Cinema Guide</span></h1>
+    <div class="date-banner" id="date-banner">Loading...</div>
+  </header>
+  
+  <main id="main">
+    <div class="loading">Loading session times</div>
+  </main>
+  
+  <footer>
+    <p>Session data updated daily at 5am AEST</p>
+    <p>Film information from <a href="https://www.themoviedb.org/" target="_blank" rel="noopener">TMDB</a></p>
+    <p style="margin-top: 1rem; font-size: 0.75rem;">Always confirm times with the cinema before heading out</p>
+  </footer>
+
+  <script>
+    async function loadSessions() {
+      const main = document.getElementById('main');
+      const dateBanner = document.getElementById('date-banner');
+      
+      try {
+        const response = await fetch('data/sessions.json');
+        if (!response.ok) throw new Error('Failed to load session data');
+        
+        const data = await response.json();
+        dateBanner.textContent = data.date;
+        
+        if (!data.cinemas || data.cinemas.length === 0) {
+          main.innerHTML = '<div class="error-state"><h2>No Sessions Found</h2><p>Check back tomorrow!</p></div>';
+          return;
+        }
+        
+        let html = '';
+        for (const cinema of data.cinemas) {
+          html += `<section class="cinema-section"><div class="cinema-header"><h2>${escapeHtml(cinema.cinema)}</h2><a href="${escapeHtml(cinema.url)}" target="_blank" rel="noopener">Visit website →</a></div>${cinema.note ? `<p class="cinema-note">${escapeHtml(cinema.note)}</p>` : ''}`;
+          
+          if (cinema.sessions && cinema.sessions.length > 0) {
+            html += '<div class="films-grid">';
+            for (const session of cinema.sessions) {
+              const isDoubleFeature = session.isDoubleFeature || session.films;
+              const posterHtml = session.posterPath 
+                ? `<img src="${escapeHtml(session.posterPath)}" alt="" class="film-poster" loading="lazy">`
+                : '<div class="film-poster-placeholder">🎬</div>';
+              
+              const metaParts = [];
+              if (session.year) metaParts.push(session.year);
+              if (session.rating) metaParts.push(`<span class="rating">★ ${session.rating.toFixed(1)}</span>`);
+              
+              const timesHtml = session.times.map(t => {
+                const isGeneric = t.toLowerCase().includes('see website') || t.toLowerCase().includes('typical');
+                return `<span class="film-time ${isGeneric ? 'see-website' : ''}">${escapeHtml(t)}</span>`;
+              }).join('');
+              
+              html += `<article class="film-card ${isDoubleFeature ? 'double-feature' : ''}">${isDoubleFeature ? '<span class="double-feature-label">Double Feature</span>' : ''}${posterHtml}<div class="film-info"><h3><a href="${escapeHtml(session.url)}" target="_blank" rel="noopener">${escapeHtml(session.title)}</a></h3>${metaParts.length ? `<div class="film-meta">${metaParts.join('')}</div>` : ''}${session.overview ? `<p class="film-overview">${escapeHtml(session.overview)}</p>` : ''}<div class="film-times">${timesHtml}</div></div></article>`;
+            }
+            html += '</div>';
+          } else {
+            html += '<p class="no-sessions">No sessions listed for today</p>';
+          }
+          html += '</section>';
+        }
+        main.innerHTML = html;
+      } catch (error) {
+        console.error('Error loading sessions:', error);
+        main.innerHTML = `<div class="error-state"><h2>Unable to Load Sessions</h2><p>Please try refreshing the page.</p></div>`;
+      }
+    }
+    
+    function escapeHtml(text) {
+      if (!text) return '';
+      const div = document.createElement('div');
+      div.textContent = text;
+      return div.innerHTML;
+    }
+    
+    loadSessions();
+  </script>
+</body>
+</html>

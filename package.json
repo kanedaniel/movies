@@ -1,0 +1,14 @@
+{
+  "name": "melbourne-movies",
+  "version": "1.0.0",
+  "description": "Daily scraper for Melbourne independent cinema session times",
+  "main": "src/scraper.js",
+  "scripts": {
+    "scrape": "node src/scraper.js"
+  },
+  "keywords": ["melbourne", "cinema", "movies", "scraper"],
+  "license": "MIT",
+  "dependencies": {
+    "puppeteer": "^21.6.1"
+  }
+}

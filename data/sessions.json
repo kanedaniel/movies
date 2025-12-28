@@ -1,0 +1,42 @@
+{
+  "generatedAt": "2025-12-28T00:00:00.000Z",
+  "date": "Sunday, 28 December 2025",
+  "cinemas": [
+    {
+      "cinema": "ACMI",
+      "url": "https://www.acmi.net.au/whats-on/?what=film",
+      "sessions": []
+    },
+    {
+      "cinema": "Brunswick Picture House",
+      "url": "https://www.brunswickpicturehouse.com.au/now-showing/",
+      "sessions": []
+    },
+    {
+      "cinema": "Eclipse Cinema",
+      "url": "https://eclipse-cinema.com.au/session-time/",
+      "sessions": []
+    },
+    {
+      "cinema": "Cinema Nova",
+      "url": "https://www.cinemanova.com.au/",
+      "sessions": []
+    },
+    {
+      "cinema": "Lido Cinemas",
+      "url": "https://www.lidocinemas.com.au/now-showing",
+      "sessions": []
+    },
+    {
+      "cinema": "Hoyts Melbourne Central",
+      "url": "https://www.hoyts.com.au/cinemas/melbourne-central",
+      "sessions": []
+    },
+    {
+      "cinema": "The Astor Theatre",
+      "url": "https://www.astortheatre.net.au/",
+      "sessions": [],
+      "note": "Famous for double features - check website for full program"
+    }
+  ]
+}
