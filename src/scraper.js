@@ -497,83 +497,73 @@ async function scrapeAstor(page) {
   
   try {
     await page.goto(url, { waitUntil: 'networkidle2', timeout: 60000 });
-    await page.waitForTimeout(5000);
+    await page.waitForTimeout(3000);
     
-    // Get today's date for matching
-    const now = new Date();
-    const melbourneTime = new Date(now.toLocaleString('en-US', { timeZone: 'Australia/Melbourne' }));
-    const day = melbourneTime.getDate();
-    const monthNames = ['January', 'February', 'March', 'April', 'May', 'June', 
-                        'July', 'August', 'September', 'October', 'November', 'December'];
-    const month = monthNames[melbourneTime.getMonth()];
-    const dayNames = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
-    const dayName = dayNames[melbourneTime.getDay()];
-    
-    console.log(`  Looking for: ${dayName} ${day} ${month} or "Today"`);
-    
-    const films = await page.evaluate((day, month, dayName) => {
+    const films = await page.evaluate(() => {
       const items = [];
-      const pageText = document.body.innerText;
       
-      // Astor shows sessions with film titles and dates
-      // Look for patterns like "FILM TITLE" near "Today" or the date
-      const lines = pageText.split('\n');
-      
-      let currentFilm = null;
-      let foundToday = false;
-      
-      for (let i = 0; i < lines.length; i++) {
-        const line = lines[i].trim();
-        if (!line) continue;
+      // Each session is in div.movie_preview.session
+      document.querySelectorAll('div.movie_preview.session').forEach(sessionDiv => {
+        // Get the date/time text (e.g., "Today at 2pm", "Tomorrow at 7pm")
+        const dateTimeEl = sessionDiv.querySelector('span.extrabold');
+        const dateTimeText = dateTimeEl?.textContent?.trim() || '';
         
-        // Check if this line indicates today's session
-        const isToday = line.toLowerCase().includes('today') ||
-                       (line.includes(String(day)) && line.includes(month)) ||
-                       line.includes(`${dayName} ${day}`);
-        
-        if (isToday) {
-          foundToday = true;
-          // Look for film title nearby (usually before or after)
-          // Films often have (YEAR) format
-          for (let j = Math.max(0, i - 3); j < Math.min(lines.length, i + 3); j++) {
-            const nearLine = lines[j].trim();
-            // Match film titles - usually have year in parentheses or are all caps
-            if (nearLine.match(/\(\d{4}\)/) || 
-                (nearLine.length > 5 && nearLine.length < 80 && nearLine === nearLine.toUpperCase())) {
-              if (!items.some(f => f.title === nearLine)) {
-                items.push({
-                  title: nearLine,
-                  isDoubleFeature: nearLine.includes('+') || nearLine.includes(' & ')
-                });
-              }
-            }
-          }
+        // Only include "Today" sessions
+        if (!dateTimeText.toLowerCase().includes('today')) {
+          return;
         }
         
-        // Also look for double features format: "FILM + FILM"
-        if (line.includes(' + ') && line.length > 10 && line.length < 100) {
-          const hasDate = lines.slice(Math.max(0, i - 2), i + 3).some(l => 
-            l.toLowerCase().includes('today') || l.includes(String(day))
-          );
-          if (hasDate && !items.some(f => f.title === line)) {
-            items.push({
-              title: line,
-              isDoubleFeature: true
-            });
+        // Extract just the time part (e.g., "2pm", "6:30pm")
+        const timeMatch = dateTimeText.match(/at\s+(\d{1,2}(?::\d{2})?\s*(?:am|pm))/i);
+        const time = timeMatch ? timeMatch[1] : 'See website';
+        
+        // Check if single or double feature
+        const isDouble = sessionDiv.classList.contains('double');
+        
+        // Get film title(s) from h2.uppercase a elements
+        const titleLinks = sessionDiv.querySelectorAll('h2.uppercase a');
+        const titles = [];
+        titleLinks.forEach(link => {
+          // Get text but remove the rating span like [PG], [M], etc.
+          let title = link.textContent?.trim() || '';
+          title = title.replace(/\s*\[.*?\]\s*$/, '').trim();
+          if (title) {
+            titles.push(title);
           }
+        });
+        
+        if (titles.length === 0) return;
+        
+        // Get the session info URL
+        const sessionLink = sessionDiv.querySelector('a.movie_link');
+        const sessionUrl = sessionLink?.href || url;
+        
+        if (isDouble && titles.length >= 2) {
+          // Double feature - combine titles
+          items.push({
+            title: titles.join(' + '),
+            times: [time],
+            url: sessionUrl,
+            isDoubleFeature: true,
+            film1: titles[0],
+            film2: titles[1]
+          });
+        } else {
+          // Single feature
+          items.push({
+            title: titles[0],
+            times: [time],
+            url: sessionUrl,
+            isDoubleFeature: false
+          });
         }
-      }
+      });
       
       return items;
-    }, day, month, dayName);
+    });
     
     for (const film of films) {
-      sessions.push({
-        title: film.title,
-        times: ['See website'],
-        url,
-        isDoubleFeature: film.isDoubleFeature
-      });
+      sessions.push(film);
     }
     
     console.log(`  Found ${sessions.length} films`);
