@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2025-12-28T00:00:00.000Z",
-  "date": "Sunday, 28 December 2025",
+  "generatedAt": "2025-12-28T12:24:59.056Z",
+  "date": "Sunday 28 December 2025",
   "cinemas": [
     {
       "cinema": "ACMI",
@@ -10,7 +10,488 @@
     {
       "cinema": "Brunswick Picture House",
       "url": "https://www.brunswickpicturehouse.com.au/now-showing/",
-      "sessions": []
+      "sessions": [
+        {
+          "title": "The SpongeBob Movie: Search for Squarepants",
+          "times": [
+            "12:20PM",
+            "2:20PM",
+            "4:00PM",
+            "6:00PM",
+            "8:35PM"
+          ],
+          "url": "https://www.brunswickpicturehouse.com.au/movie/the-spongebob-movie-search-for-squarepants",
+          "overview": "No synopsis available.",
+          "posterPath": null,
+          "rating": null,
+          "year": null
+        },
+        {
+          "title": "The Golden Spurtle",
+          "times": [
+            "12:20PM",
+            "2:20PM",
+            "4:00PM",
+            "6:00PM",
+            "8:35PM"
+          ],
+          "url": "https://www.brunswickpicturehouse.com.au/movie/the-golden-spurtle",
+          "overview": "No synopsis available.",
+          "posterPath": null,
+          "rating": null,
+          "year": null
+        },
+        {
+          "title": "Urchin",
+          "times": [
+            "12:20PM",
+            "2:20PM",
+            "4:00PM",
+            "6:00PM",
+            "8:35PM"
+          ],
+          "url": "https://www.brunswickpicturehouse.com.au/movie/urchin",
+          "overview": "No synopsis available.",
+          "posterPath": null,
+          "rating": null,
+          "year": null
+        },
+        {
+          "title": "Sentimental Value",
+          "times": [
+            "12:20PM",
+            "2:20PM",
+            "4:00PM",
+            "6:00PM",
+            "8:35PM"
+          ],
+          "url": "https://www.brunswickpicturehouse.com.au/movie/sentimental-value",
+          "overview": "No synopsis available.",
+          "posterPath": null,
+          "rating": null,
+          "year": null
+        },
+        {
+          "title": "Song Sung Blue",
+          "times": [
+            "12:20PM",
+            "2:20PM",
+            "4:00PM",
+            "6:00PM",
+            "8:35PM"
+          ],
+          "url": "https://www.brunswickpicturehouse.com.au/movie/song-sung-blue",
+          "overview": "No synopsis available.",
+          "posterPath": null,
+          "rating": null,
+          "year": null
+        },
+        {
+          "title": "Jaws - 50th Anniversary",
+          "times": [
+            "12:20PM",
+            "2:20PM",
+            "4:00PM",
+            "6:00PM",
+            "8:35PM"
+          ],
+          "url": "https://www.brunswickpicturehouse.com.au/movie/jaws-50th-anniversary",
+          "overview": "No synopsis available.",
+          "posterPath": null,
+          "rating": null,
+          "year": null
+        },
+        {
+          "title": "Hamnet",
+          "times": [
+            "12:20PM",
+            "2:20PM",
+            "4:00PM",
+            "6:00PM",
+            "8:35PM"
+          ],
+          "url": "https://www.brunswickpicturehouse.com.au/movie/hamnet",
+          "overview": "No synopsis available.",
+          "posterPath": null,
+          "rating": null,
+          "year": null
+        },
+        {
+          "title": "Sirât",
+          "times": [
+            "12:20PM",
+            "2:20PM",
+            "4:00PM",
+            "6:00PM",
+            "8:35PM"
+          ],
+          "url": "https://www.brunswickpicturehouse.com.au/movie/sirt",
+          "overview": "No synopsis available.",
+          "posterPath": null,
+          "rating": null,
+          "year": null
+        },
+        {
+          "title": "The Secret Agent",
+          "times": [
+            "12:20PM",
+            "2:20PM",
+            "4:00PM",
+            "6:00PM",
+            "8:35PM"
+          ],
+          "url": "https://www.brunswickpicturehouse.com.au/movie/the-secret-agent",
+          "overview": "No synopsis available.",
+          "posterPath": null,
+          "rating": null,
+          "year": null
+        },
+        {
+          "title": "It Was Just an Accident",
+          "times": [
+            "12:20PM",
+            "2:20PM",
+            "4:00PM",
+            "6:00PM",
+            "8:35PM"
+          ],
+          "url": "https://www.brunswickpicturehouse.com.au/movie/it-was-just-an-accident",
+          "overview": "No synopsis available.",
+          "posterPath": null,
+          "rating": null,
+          "year": null
+        },
+        {
+          "title": "Pellegrinis – A Melbourne Legacy",
+          "times": [
+            "12:20PM",
+            "2:20PM",
+            "4:00PM",
+            "6:00PM",
+            "8:35PM"
+          ],
+          "url": "https://www.brunswickpicturehouse.com.au/movie/pellegrinis-a-melbourne-legacy",
+          "overview": "No synopsis available.",
+          "posterPath": null,
+          "rating": null,
+          "year": null
+        },
+        {
+          "title": "Marty Supreme",
+          "times": [
+            "12:20PM",
+            "2:20PM",
+            "4:00PM",
+            "6:00PM",
+            "8:35PM"
+          ],
+          "url": "https://www.brunswickpicturehouse.com.au/movie/marty-supreme",
+          "overview": "No synopsis available.",
+          "posterPath": null,
+          "rating": null,
+          "year": null
+        },
+        {
+          "title": "Perfect Days",
+          "times": [
+            "12:20PM",
+            "2:20PM",
+            "4:00PM",
+            "6:00PM",
+            "8:35PM"
+          ],
+          "url": "https://www.brunswickpicturehouse.com.au/movie/perfect-days",
+          "overview": "No synopsis available.",
+          "posterPath": null,
+          "rating": null,
+          "year": null
+        },
+        {
+          "title": "The Bride!",
+          "times": [
+            "12:20PM",
+            "2:20PM",
+            "4:00PM",
+            "6:00PM",
+            "8:35PM"
+          ],
+          "url": "https://www.brunswickpicturehouse.com.au/movie/the-bride",
+          "overview": "No synopsis available.",
+          "posterPath": null,
+          "rating": null,
+          "year": null
+        },
+        {
+          "title": "No Other Choice",
+          "times": [
+            "12:20PM",
+            "2:20PM",
+            "4:00PM",
+            "6:00PM",
+            "8:35PM"
+          ],
+          "url": "https://www.brunswickpicturehouse.com.au/movie/no-other-choice",
+          "overview": "No synopsis available.",
+          "posterPath": null,
+          "rating": null,
+          "year": null
+        },
+        {
+          "title": "Nouvelle Vague",
+          "times": [
+            "12:20PM",
+            "2:20PM",
+            "4:00PM",
+            "6:00PM",
+            "8:35PM"
+          ],
+          "url": "https://www.brunswickpicturehouse.com.au/movie/nouvelle-vague",
+          "overview": "No synopsis available.",
+          "posterPath": null,
+          "rating": null,
+          "year": null
+        },
+        {
+          "title": "Blue Moon",
+          "times": [
+            "12:20PM",
+            "2:20PM",
+            "4:00PM",
+            "6:00PM",
+            "8:35PM"
+          ],
+          "url": "https://www.brunswickpicturehouse.com.au/movie/blue-moon",
+          "overview": "No synopsis available.",
+          "posterPath": null,
+          "rating": null,
+          "year": null
+        },
+        {
+          "title": "Is This Thing On?",
+          "times": [
+            "12:20PM",
+            "2:20PM",
+            "4:00PM",
+            "6:00PM",
+            "8:35PM"
+          ],
+          "url": "https://www.brunswickpicturehouse.com.au/movie/is-this-thing-on",
+          "overview": "No synopsis available.",
+          "posterPath": null,
+          "rating": null,
+          "year": null
+        },
+        {
+          "title": "Fackham Hall",
+          "times": [
+            "12:20PM",
+            "2:20PM",
+            "4:00PM",
+            "6:00PM",
+            "8:35PM"
+          ],
+          "url": "https://www.brunswickpicturehouse.com.au/movie/fackham-hall",
+          "overview": "No synopsis available.",
+          "posterPath": null,
+          "rating": null,
+          "year": null
+        },
+        {
+          "title": "Chungking Express",
+          "times": [
+            "12:20PM",
+            "2:20PM",
+            "4:00PM",
+            "6:00PM",
+            "8:35PM"
+          ],
+          "url": "https://www.brunswickpicturehouse.com.au/movie/chungking-express",
+          "overview": "No synopsis available.",
+          "posterPath": null,
+          "rating": null,
+          "year": null
+        },
+        {
+          "title": "EPiC: Elvis Presley in Concert",
+          "times": [
+            "12:20PM",
+            "2:20PM",
+            "4:00PM",
+            "6:00PM",
+            "8:35PM"
+          ],
+          "url": "https://www.brunswickpicturehouse.com.au/movie/epic-elvis-presley-in-concert",
+          "overview": "No synopsis available.",
+          "posterPath": null,
+          "rating": null,
+          "year": null
+        },
+        {
+          "title": "Paris, Texas (1984)",
+          "times": [
+            "12:20PM",
+            "2:20PM",
+            "4:00PM",
+            "6:00PM",
+            "8:35PM"
+          ],
+          "url": "https://www.brunswickpicturehouse.com.au/movie/paris-texas-1984",
+          "overview": "No synopsis available.",
+          "posterPath": null,
+          "rating": null,
+          "year": null
+        },
+        {
+          "title": "Labyrinth - 40th Anniversary",
+          "times": [
+            "12:20PM",
+            "2:20PM",
+            "4:00PM",
+            "6:00PM",
+            "8:35PM"
+          ],
+          "url": "https://www.brunswickpicturehouse.com.au/movie/labyrinth---40th-anniversary",
+          "overview": "No synopsis available.",
+          "posterPath": null,
+          "rating": null,
+          "year": null
+        },
+        {
+          "title": "The President's Cake",
+          "times": [
+            "12:20PM",
+            "2:20PM",
+            "4:00PM",
+            "6:00PM",
+            "8:35PM"
+          ],
+          "url": "https://www.brunswickpicturehouse.com.au/movie/the-presidents-cake",
+          "overview": "No synopsis available.",
+          "posterPath": null,
+          "rating": null,
+          "year": null
+        },
+        {
+          "title": "Pillion",
+          "times": [
+            "12:20PM",
+            "2:20PM",
+            "4:00PM",
+            "6:00PM",
+            "8:35PM"
+          ],
+          "url": "https://www.brunswickpicturehouse.com.au/movie/pillion",
+          "overview": "No synopsis available.",
+          "posterPath": null,
+          "rating": null,
+          "year": null
+        },
+        {
+          "title": "Wuthering Heights",
+          "times": [
+            "12:20PM",
+            "2:20PM",
+            "4:00PM",
+            "6:00PM",
+            "8:35PM"
+          ],
+          "url": "https://www.brunswickpicturehouse.com.au/movie/wuthering-heights",
+          "overview": "No synopsis available.",
+          "posterPath": null,
+          "rating": null,
+          "year": null
+        },
+        {
+          "title": "The Testament of Ann Lee",
+          "times": [
+            "12:20PM",
+            "2:20PM",
+            "4:00PM",
+            "6:00PM",
+            "8:35PM"
+          ],
+          "url": "https://www.brunswickpicturehouse.com.au/movie/the-testament-of-ann-lee",
+          "overview": "No synopsis available.",
+          "posterPath": null,
+          "rating": null,
+          "year": null
+        },
+        {
+          "title": "How To Make A Killing",
+          "times": [
+            "12:20PM",
+            "2:20PM",
+            "4:00PM",
+            "6:00PM",
+            "8:35PM"
+          ],
+          "url": "https://www.brunswickpicturehouse.com.au/movie/how-to-make-a-killing",
+          "overview": "No synopsis available.",
+          "posterPath": null,
+          "rating": null,
+          "year": null
+        },
+        {
+          "title": "The Voice of Hind Rajab",
+          "times": [
+            "12:20PM",
+            "2:20PM",
+            "4:00PM",
+            "6:00PM",
+            "8:35PM"
+          ],
+          "url": "https://www.brunswickpicturehouse.com.au/movie/the-voice-of-hind-rajab",
+          "overview": "No synopsis available.",
+          "posterPath": null,
+          "rating": null,
+          "year": null
+        },
+        {
+          "title": "Breathless (1960 film)",
+          "times": [
+            "12:20PM",
+            "2:20PM",
+            "4:00PM",
+            "6:00PM",
+            "8:35PM"
+          ],
+          "url": "https://www.brunswickpicturehouse.com.au/movie/breathless-1960-film",
+          "overview": "No synopsis available.",
+          "posterPath": null,
+          "rating": null,
+          "year": null
+        },
+        {
+          "title": "Mulholland Drive (2001)",
+          "times": [
+            "12:20PM",
+            "2:20PM",
+            "4:00PM",
+            "6:00PM",
+            "8:35PM"
+          ],
+          "url": "https://www.brunswickpicturehouse.com.au/movie/mulholland-drive-2001",
+          "overview": "No synopsis available.",
+          "posterPath": null,
+          "rating": null,
+          "year": null
+        },
+        {
+          "title": "Wings of Desire (1987)",
+          "times": [
+            "12:20PM",
+            "2:20PM",
+            "4:00PM",
+            "6:00PM",
+            "8:35PM"
+          ],
+          "url": "https://www.brunswickpicturehouse.com.au/movie/wings-of-desire-1987",
+          "overview": "No synopsis available.",
+          "posterPath": null,
+          "rating": null,
+          "year": null
+        }
+      ]
     },
     {
       "cinema": "Eclipse Cinema",
@@ -20,17 +501,430 @@
     {
       "cinema": "Cinema Nova",
       "url": "https://www.cinemanova.com.au/",
-      "sessions": []
+      "sessions": [
+        {
+          "title": "Angel's Egg",
+          "times": [
+            "See website for times"
+          ],
+          "url": "https://www.cinemanova.com.au/films/angels-egg",
+          "overview": "No synopsis available.",
+          "posterPath": null,
+          "rating": null,
+          "year": null
+        },
+        {
+          "title": "Avatar: Fire and Ash",
+          "times": [
+            "See website for times"
+          ],
+          "url": "https://www.cinemanova.com.au/films/avatar-fire-and-ash",
+          "overview": "No synopsis available.",
+          "posterPath": null,
+          "rating": null,
+          "year": null
+        },
+        {
+          "title": "Ballad of Wallis Island, The",
+          "times": [
+            "See website for times"
+          ],
+          "url": "https://www.cinemanova.com.au/films/ballad-of-wallis-island-the",
+          "overview": "No synopsis available.",
+          "posterPath": null,
+          "rating": null,
+          "year": null
+        },
+        {
+          "title": "Bugonia",
+          "times": [
+            "See website for times"
+          ],
+          "url": "https://www.cinemanova.com.au/films/bugonia",
+          "overview": "No synopsis available.",
+          "posterPath": null,
+          "rating": null,
+          "year": null
+        },
+        {
+          "title": "Careless",
+          "times": [
+            "See website for times"
+          ],
+          "url": "https://www.cinemanova.com.au/films/careless",
+          "overview": "No synopsis available.",
+          "posterPath": null,
+          "rating": null,
+          "year": null
+        },
+        {
+          "title": "Choral, The",
+          "times": [
+            "See website for times"
+          ],
+          "url": "https://www.cinemanova.com.au/films/choral-the",
+          "overview": "No synopsis available.",
+          "posterPath": null,
+          "rating": null,
+          "year": null
+        },
+        {
+          "title": "Cinema Fiasco: Breakin'",
+          "times": [
+            "See website for times"
+          ],
+          "url": "https://www.cinemanova.com.au/films/cinema-fiasco-breakin",
+          "overview": "No synopsis available.",
+          "posterPath": null,
+          "rating": null,
+          "year": null
+        },
+        {
+          "title": "Die My Love",
+          "times": [
+            "See website for times"
+          ],
+          "url": "https://www.cinemanova.com.au/films/die-my-love",
+          "overview": "No synopsis available.",
+          "posterPath": null,
+          "rating": null,
+          "year": null
+        },
+        {
+          "title": "Eternity",
+          "times": [
+            "See website for times"
+          ],
+          "url": "https://www.cinemanova.com.au/films/eternity",
+          "overview": "No synopsis available.",
+          "posterPath": null,
+          "rating": null,
+          "year": null
+        },
+        {
+          "title": "Familiar Touch",
+          "times": [
+            "See website for times"
+          ],
+          "url": "https://www.cinemanova.com.au/films/familiar-touch",
+          "overview": "No synopsis available.",
+          "posterPath": null,
+          "rating": null,
+          "year": null
+        },
+        {
+          "title": "Flow",
+          "times": [
+            "See website for times"
+          ],
+          "url": "https://www.cinemanova.com.au/films/flow",
+          "overview": "No synopsis available.",
+          "posterPath": null,
+          "rating": null,
+          "year": null
+        },
+        {
+          "title": "Frankenstein",
+          "times": [
+            "See website for times"
+          ],
+          "url": "https://www.cinemanova.com.au/films/frankenstein",
+          "overview": "No synopsis available.",
+          "posterPath": null,
+          "rating": null,
+          "year": null
+        },
+        {
+          "title": "Golden Spurtle, The",
+          "times": [
+            "See website for times"
+          ],
+          "url": "https://www.cinemanova.com.au/films/golden-spurtle-the",
+          "overview": "No synopsis available.",
+          "posterPath": null,
+          "rating": null,
+          "year": null
+        },
+        {
+          "title": "If I Had Legs I'd Kick You",
+          "times": [
+            "See website for times"
+          ],
+          "url": "https://www.cinemanova.com.au/films/if-i-had-legs-id-kick-you",
+          "overview": "No synopsis available.",
+          "posterPath": null,
+          "rating": null,
+          "year": null
+        },
+        {
+          "title": "Inter Alia: NT Live",
+          "times": [
+            "See website for times"
+          ],
+          "url": "https://www.cinemanova.com.au/films/inter-alia-nt-live",
+          "overview": "No synopsis available.",
+          "posterPath": null,
+          "rating": null,
+          "year": null
+        },
+        {
+          "title": "Kokuho",
+          "times": [
+            "See website for times"
+          ],
+          "url": "https://www.cinemanova.com.au/films/kokuho",
+          "overview": "No synopsis available.",
+          "posterPath": null,
+          "rating": null,
+          "year": null
+        },
+        {
+          "title": "Lurker",
+          "times": [
+            "See website for times"
+          ],
+          "url": "https://www.cinemanova.com.au/films/lurker",
+          "overview": "No synopsis available.",
+          "posterPath": null,
+          "rating": null,
+          "year": null
+        },
+        {
+          "title": "Mistress Dispeller",
+          "times": [
+            "See website for times"
+          ],
+          "url": "https://www.cinemanova.com.au/films/mistress-dispeller",
+          "overview": "No synopsis available.",
+          "posterPath": null,
+          "rating": null,
+          "year": null
+        },
+        {
+          "title": "My Brother's Band",
+          "times": [
+            "See website for times"
+          ],
+          "url": "https://www.cinemanova.com.au/films/my-brothers-band",
+          "overview": "No synopsis available.",
+          "posterPath": null,
+          "rating": null,
+          "year": null
+        },
+        {
+          "title": "My Neighbour Totoro + Spirited Away",
+          "times": [
+            "See website for times"
+          ],
+          "url": "https://www.cinemanova.com.au/films/my-neighbour-totoro-spirited-away",
+          "films": [
+            {
+              "title": "My Neighbour Totoro",
+              "overview": "No synopsis available.",
+              "posterPath": null,
+              "rating": null,
+              "year": null,
+              "tmdbId": null
+            },
+            {
+              "title": "Spirited Away",
+              "overview": "No synopsis available.",
+              "posterPath": null,
+              "rating": null,
+              "year": null,
+              "tmdbId": null
+            }
+          ]
+        }
+      ]
     },
     {
       "cinema": "Lido Cinemas",
       "url": "https://www.lidocinemas.com.au/now-showing",
-      "sessions": []
+      "sessions": [
+        {
+          "title": "The Housemaid",
+          "times": [
+            "See website for times"
+          ],
+          "url": "https://www.lidocinemas.com.au/movies/the-housemaid",
+          "overview": "No synopsis available.",
+          "posterPath": null,
+          "rating": null,
+          "year": null
+        },
+        {
+          "title": "Rental Family",
+          "times": [
+            "See website for times"
+          ],
+          "url": "https://www.lidocinemas.com.au/movies/rental-family",
+          "overview": "No synopsis available.",
+          "posterPath": null,
+          "rating": null,
+          "year": null
+        },
+        {
+          "title": "Song Sung Blue",
+          "times": [
+            "See website for times"
+          ],
+          "url": "https://www.lidocinemas.com.au/movies/song-sung-blue",
+          "overview": "No synopsis available.",
+          "posterPath": null,
+          "rating": null,
+          "year": null
+        },
+        {
+          "title": "Sentimental Value",
+          "times": [
+            "See website for times"
+          ],
+          "url": "https://www.lidocinemas.com.au/movies/sentimental-value",
+          "overview": "No synopsis available.",
+          "posterPath": null,
+          "rating": null,
+          "year": null
+        }
+      ]
     },
     {
       "cinema": "Hoyts Melbourne Central",
       "url": "https://www.hoyts.com.au/cinemas/melbourne-central",
-      "sessions": []
+      "sessions": [
+        {
+          "title": "Avatar: Fire and Ash",
+          "times": [
+            "See website for times"
+          ],
+          "url": "https://www.hoyts.com.au/movies/avatar-fire-and-ash",
+          "overview": "No synopsis available.",
+          "posterPath": null,
+          "rating": null,
+          "year": null
+        },
+        {
+          "title": "Anaconda",
+          "times": [
+            "See website for times"
+          ],
+          "url": "https://www.hoyts.com.au/movies/anaconda",
+          "overview": "No synopsis available.",
+          "posterPath": null,
+          "rating": null,
+          "year": null
+        },
+        {
+          "title": "The SpongeBob Movie: Search for Squarepants",
+          "times": [
+            "See website for times"
+          ],
+          "url": "https://www.hoyts.com.au/movies/the-spongebob-movie-search-for-squarepants",
+          "overview": "No synopsis available.",
+          "posterPath": null,
+          "rating": null,
+          "year": null
+        },
+        {
+          "title": "The Housemaid",
+          "times": [
+            "See website for times"
+          ],
+          "url": "https://www.hoyts.com.au/movies/the-housemaid",
+          "overview": "No synopsis available.",
+          "posterPath": null,
+          "rating": null,
+          "year": null
+        },
+        {
+          "title": "Zootopia 2",
+          "times": [
+            "See website for times"
+          ],
+          "url": "https://www.hoyts.com.au/movies/zootopia-2",
+          "overview": "No synopsis available.",
+          "posterPath": null,
+          "rating": null,
+          "year": null
+        },
+        {
+          "title": "Wicked: For Good",
+          "times": [
+            "See website for times"
+          ],
+          "url": "https://www.hoyts.com.au/movies/wicked-for-good",
+          "overview": "No synopsis available.",
+          "posterPath": null,
+          "rating": null,
+          "year": null
+        },
+        {
+          "title": "Five Nights at Freddy's 2",
+          "times": [
+            "See website for times"
+          ],
+          "url": "https://www.hoyts.com.au/movies/five-nights-at-freddys-2",
+          "overview": "No synopsis available.",
+          "posterPath": null,
+          "rating": null,
+          "year": null
+        },
+        {
+          "title": "Dhurandhar (Hindi, Eng Sub)",
+          "times": [
+            "See website for times"
+          ],
+          "url": "https://www.hoyts.com.au/movies/dhurandhar-hindi-eng-sub",
+          "overview": "No synopsis available.",
+          "posterPath": null,
+          "rating": null,
+          "year": null
+        },
+        {
+          "title": "Nuremberg",
+          "times": [
+            "See website for times"
+          ],
+          "url": "https://www.hoyts.com.au/movies/nuremberg",
+          "overview": "No synopsis available.",
+          "posterPath": null,
+          "rating": null,
+          "year": null
+        },
+        {
+          "title": "Eternity",
+          "times": [
+            "See website for times"
+          ],
+          "url": "https://www.hoyts.com.au/movies/eternity",
+          "overview": "No synopsis available.",
+          "posterPath": null,
+          "rating": null,
+          "year": null
+        },
+        {
+          "title": "Song Sung Blue",
+          "times": [
+            "See website for times"
+          ],
+          "url": "https://www.hoyts.com.au/movies/song-sung-blue",
+          "overview": "No synopsis available.",
+          "posterPath": null,
+          "rating": null,
+          "year": null
+        },
+        {
+          "title": "Find out more",
+          "times": [
+            "See website for times"
+          ],
+          "url": "https://www.hoyts.com.au/movies/song-sung-blue",
+          "overview": "No synopsis available.",
+          "posterPath": null,
+          "rating": null,
+          "year": null
+        }
+      ]
     },
     {
       "cinema": "The Astor Theatre",
