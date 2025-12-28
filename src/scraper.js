@@ -14,22 +14,37 @@ async function fetchTMDB(title) {
   }
 
   try {
+    // Store original for ", The" check
+    const originalTitle = title;
+    
     let cleanTitle = title
-      .replace(/\s*\(\d{4}\)\s*$/i, '')
-      .replace(/\s*\(\d{4}\s+film\)\s*$/i, '')
-      .replace(/\s*-\s*\d+\w*\s*anniversary\s*$/i, '')
-      .replace(/\s*:\s*NT Live$/i, '')
-      .replace(/\s*-\s*RETRO CLASSIX$/i, '')
-      .replace(/\s*[–-]\s*PREVIEW$/i, '')
-      .replace(/\s*[–-]\s*ACC presents.*$/i, '')
-      .replace(/\s*\d+K\s*Restoration$/i, '')
-      .replace(/\s*\(Restoration\)$/i, '')
-      .replace(/\s*\[.*?\]$/i, '')
-      .replace(/,\s*The$/i, '')  // "Housemaid, The" -> "Housemaid"
+      // Format markers (3D, IMAX, 4K, 2D, HFR, Dolby, etc.)
+      .replace(/\b(3D|IMAX|4K|2K|2D|HFR|HDR|Dolby|Atmos)\b/gi, '')
+      // Language/subtitle markers: (Hindi), (Telugu, Eng Sub), (English Subtitles), etc.
+      .replace(/\([\w\s,'-]*(sub(titled|titles|s)?|dub(bed)?|eng|hindi|telugu|tamil|malayalam|kannada|korean|japanese|mandarin|cantonese|spanish|french|german|italian)[\w\s,'-]*\)/gi, '')
+      // Anniversary/restoration: "- 25th Anniversary", "– 50th Anniversary 4K Restoration", etc.
+      .replace(/[-–—]\s*\d+\s*(st|nd|rd|th)?\s*anniversary.*$/i, '')
+      // Restoration/remaster anywhere at end
+      .replace(/[-–—]?\s*(\d+K\s*)?(digital\s*)?(restoration|remaster(ed)?|re-?release).*$/i, '')
+      // Special screenings: "- Preview", "– Special Event", "- Encore", etc.
+      .replace(/[-–—]\s*(preview|special|encore|screening|event|limited).*$/i, '')
+      // NT Live, Met Opera, etc.
+      .replace(/\s*[-:]\s*(NT Live|Met Opera|National Theatre Live).*$/i, '')
+      // Retro/classic markers
+      .replace(/\s*[-–—]\s*(RETRO CLASSIX|CLASSIC|RETRO)$/i, '')
+      // Year in parentheses at end: (1984), (2024 film)
+      .replace(/\s*\(\d{4}(\s+film)?\)\s*$/i, '')
+      // Brackets at end: [Restored], [Special Edition], etc.
+      .replace(/\s*\[.*?\]\s*$/i, '')
+      // "Housemaid, The" -> "Housemaid" (we'll add "The" back below)
+      .replace(/,\s*The$/i, '')
+      // Clean up extra whitespace and trailing punctuation
+      .replace(/\s+/g, ' ')
+      .replace(/[-–—:]\s*$/g, '')
       .trim();
 
-    // If title ends with ", The", move it to front
-    if (title.match(/,\s*The$/i)) {
+    // If original title ends with ", The", move it to front
+    if (originalTitle.match(/,\s*The$/i)) {
       cleanTitle = 'The ' + cleanTitle;
     }
 
@@ -56,6 +71,7 @@ async function fetchTMDB(title) {
     }
   } catch (error) {
     console.error(`  TMDB lookup failed for "${title}":`, error.message);
+  }
   }
 
   const fallback = { overview: null, posterPath: null, rating: null, year: null, tmdbId: null };
@@ -420,44 +436,50 @@ async function scrapeHoyts(page) {
   
   try {
     await page.goto(url, { waitUntil: 'networkidle2', timeout: 60000 });
-    await page.waitForTimeout(3000);
+    // Wait for JavaScript to load the movie list
+    await page.waitForTimeout(5000);
+    
+    // Wait for the movies list to appear
+    try {
+      await page.waitForSelector('.movies-list__item, li.movies-list__item', { timeout: 10000 });
+      console.log('  Movies list found');
+    } catch (e) {
+      console.log('  Waiting for movies list timed out, trying anyway...');
+    }
     
     const films = await page.evaluate(() => {
       const items = [];
-      const seen = new Set();
       
-      const skipWords = ['find out', 'learn more', 'book now', 'sign up', 'join', 
-                         'menu', 'experiences', 'food', 'gift', 'more info'];
-      
-      document.querySelectorAll('a[href*="/movies/"]').forEach(el => {
-        const href = el.href;
-        let title = el.textContent?.trim();
+      // Each movie is in li.movies-list__item
+      document.querySelectorAll('li.movies-list__item').forEach(movieItem => {
+        // Get movie title from h2.movies-list__heading > a.movies-list__link
+        const titleLink = movieItem.querySelector('h2.movies-list__heading a.movies-list__link');
+        const title = titleLink?.textContent?.trim();
+        const movieUrl = titleLink?.href;
         
-        if (!title || title.length < 2) {
-          const img = el.querySelector('img');
-          title = img?.alt?.trim();
-        }
+        if (!title) return;
         
-        if (!title || title.length < 3) return;
+        // Get session times from div.sessions ul.sessions__list
+        const times = [];
+        movieItem.querySelectorAll('.sessions__list .session__time').forEach(timeEl => {
+          const time = timeEl.textContent?.trim();
+          if (time) {
+            times.push(time);
+          }
+        });
         
-        const titleLower = title.toLowerCase();
-        if (skipWords.some(w => titleLower.includes(w))) return;
-        if (/^\d+$/.test(title)) return;
-        if (seen.has(title)) return;
-        
-        seen.add(title);
-        items.push({ title, url: href });
+        items.push({
+          title,
+          times: times.length > 0 ? times : ['See website'],
+          url: movieUrl || 'https://www.hoyts.com.au/cinemas/melbourne-central'
+        });
       });
       
       return items;
     });
     
     for (const film of films) {
-      sessions.push({
-        title: film.title,
-        times: ['See website'],
-        url: film.url
-      });
+      sessions.push(film);
     }
     
     console.log(`  Found ${sessions.length} films`);
