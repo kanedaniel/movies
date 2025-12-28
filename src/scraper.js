@@ -5,7 +5,6 @@ const path = require('path');
 const TMDB_API_KEY = process.env.TMDB_API_KEY;
 const TMDB_BASE = 'https://api.themoviedb.org/3';
 
-// Cache for TMDB lookups to avoid duplicate requests
 const tmdbCache = new Map();
 
 async function fetchTMDB(title) {
@@ -15,14 +14,21 @@ async function fetchTMDB(title) {
   }
 
   try {
+    // Clean up title for better matching
     let cleanTitle = title
-      .replace(/\s*\(\d{4}\)\s*$/i, '')
-      .replace(/\s*-\s*\d+\w*\s*anniversary\s*$/i, '')
-      .replace(/\s*:\s*NT Live$/i, '')
-      .replace(/\s*-\s*RETRO CLASSIX$/i, '')
-      .replace(/\s*–\s*PREVIEW$/i, '')
-      .replace(/\s*–\s*ACC presents…$/i, '')
+      .replace(/\s*\(\d{4}\)\s*$/i, '')           // Remove (1984)
+      .replace(/\s*\(\d{4}\s+film\)\s*$/i, '')    // Remove (1984 film)
+      .replace(/\s*-\s*\d+\w*\s*anniversary\s*$/i, '') // Remove - 50th Anniversary
+      .replace(/\s*:\s*NT Live$/i, '')            // Remove : NT Live
+      .replace(/\s*-\s*RETRO CLASSIX$/i, '')      // Remove - RETRO CLASSIX
+      .replace(/\s*[–-]\s*PREVIEW$/i, '')         // Remove – PREVIEW
+      .replace(/\s*[–-]\s*ACC presents.*$/i, '')  // Remove ACC presents
+      .replace(/\s*\d+K\s*Restoration$/i, '')     // Remove 4K Restoration
+      .replace(/\s*\(Restoration\)$/i, '')        // Remove (Restoration)
+      .replace(/\s*\[.*?\]$/i, '')                // Remove [anything] at end
       .trim();
+
+    console.log(`  TMDB lookup: "${title}" -> "${cleanTitle}"`);
 
     const searchUrl = `${TMDB_BASE}/search/movie?api_key=${TMDB_API_KEY}&query=${encodeURIComponent(cleanTitle)}`;
     const response = await fetch(searchUrl);
@@ -31,20 +37,23 @@ async function fetchTMDB(title) {
     if (data.results && data.results.length > 0) {
       const movie = data.results[0];
       const result = {
-        overview: movie.overview || 'No synopsis available.',
+        overview: movie.overview || null,
         posterPath: movie.poster_path ? `https://image.tmdb.org/t/p/w300${movie.poster_path}` : null,
         rating: movie.vote_average || null,
         year: movie.release_date ? movie.release_date.substring(0, 4) : null,
         tmdbId: movie.id
       };
+      console.log(`  TMDB found: "${movie.title}" (${result.year})`);
       tmdbCache.set(cacheKey, result);
       return result;
+    } else {
+      console.log(`  TMDB: No results for "${cleanTitle}"`);
     }
   } catch (error) {
-    console.error(`TMDB lookup failed for "${title}":`, error.message);
+    console.error(`  TMDB lookup failed for "${title}":`, error.message);
   }
 
-  const fallback = { overview: 'No synopsis available.', posterPath: null, rating: null, year: null, tmdbId: null };
+  const fallback = { overview: null, posterPath: null, rating: null, year: null, tmdbId: null };
   tmdbCache.set(cacheKey, fallback);
   return fallback;
 }
@@ -53,333 +62,541 @@ async function scrapeACMI(page) {
   console.log('Scraping ACMI...');
   const sessions = [];
   
-  try {
-    await page.goto('https://www.acmi.net.au/whats-on/?what=film', { waitUntil: 'networkidle2', timeout: 30000 });
-    await page.waitForSelector('body', { timeout: 10000 });
-    
-    const films = await page.evaluate(() => {
-      const items = [];
-      document.querySelectorAll('a[href*="/whats-on/"]').forEach(el => {
-        const title = el.querySelector('h3, h2, .title')?.textContent?.trim();
-        const timeEl = el.querySelector('.time, .date, p');
-        const time = timeEl?.textContent?.trim();
-        if (title && title.length > 2 && !title.includes('Exhibition') && !title.includes('Game Worlds')) {
-          items.push({ title, time: time || 'See website for times', url: el.href });
-        }
-      });
-      return items;
-    });
-    
-    for (const film of films) {
-      sessions.push({
-        title: film.title,
-        times: [film.time],
-        url: film.url
-      });
-    }
-  } catch (error) {
-    console.error('ACMI scrape error:', error.message);
-  }
-  
-  return { cinema: 'ACMI', url: 'https://www.acmi.net.au/whats-on/?what=film', sessions };
-}
-
-async function scrapeBrunswickPictureHouse(page) {
-  console.log('Scraping Brunswick Picture House...');
-  const sessions = [];
-  
-  try {
-    await page.goto('https://www.brunswickpicturehouse.com.au/now-showing/', { waitUntil: 'networkidle2', timeout: 30000 });
-    
-    const films = await page.evaluate(() => {
-      const items = [];
-      document.querySelectorAll('a[href*="/movie/"]').forEach(el => {
-        const title = el.textContent?.trim();
-        const href = el.href;
-        if (title && title.length > 2 && !href.includes('/checkout/')) {
-          const parent = el.closest('div, li, tr');
-          const times = [];
-          if (parent) {
-            parent.querySelectorAll('a[href*="/checkout/"]').forEach(timeEl => {
-              const time = timeEl.textContent?.trim();
-              if (time && /^\d{1,2}:\d{2}/.test(time)) {
-                times.push(time);
-              }
-            });
-          }
-          if (times.length > 0) {
-            items.push({ title, times, url: href });
-          }
-        }
-      });
-      return items;
-    });
-    
-    const filmMap = new Map();
-    for (const film of films) {
-      if (filmMap.has(film.title)) {
-        const existing = filmMap.get(film.title);
-        film.times.forEach(t => {
-          if (!existing.times.includes(t)) existing.times.push(t);
-        });
-      } else {
-        filmMap.set(film.title, film);
-      }
-    }
-    
-    filmMap.forEach(film => sessions.push(film));
-  } catch (error) {
-    console.error('Brunswick Picture House scrape error:', error.message);
-  }
-  
-  return { cinema: 'Brunswick Picture House', url: 'https://www.brunswickpicturehouse.com.au/now-showing/', sessions };
-}
-
-async function scrapeEclipse(page) {
-  console.log('Scraping Eclipse Cinema...');
-  const sessions = [];
+  // Build URL with today's date
   const today = new Date();
-  const dayNames = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
-  const todayPrefix = `${dayNames[today.getDay()]}-${String(today.getDate()).padStart(2, '0')}`;
+  const dateStr = today.toISOString().split('T')[0]; // YYYY-MM-DD
+  const url = `https://www.acmi.net.au/whats-on/?what=film&when_start=${dateStr}&when_end=${dateStr}`;
+  
+  console.log(`  URL: ${url}`);
   
   try {
-    await page.goto('https://eclipse-cinema.com.au/session-time/', { waitUntil: 'networkidle2', timeout: 30000 });
+    await page.goto(url, { waitUntil: 'networkidle2', timeout: 60000 });
+    await page.waitForTimeout(3000);
     
-    const films = await page.evaluate((todayPrefix) => {
+    const films = await page.evaluate(() => {
       const items = [];
-      document.querySelectorAll('.elementor-widget-container, article, .film-item, div').forEach(container => {
-        const titleEl = container.querySelector('h2, h3, .title');
+      // Look for event cards with film info
+      document.querySelectorAll('a[href*="/whats-on/"]').forEach(el => {
+        const href = el.href;
+        // Skip if it's just the main whats-on link or contains filters
+        if (href === 'https://www.acmi.net.au/whats-on/' || href.includes('?')) return;
+        
+        const titleEl = el.querySelector('h2, h3, h4, [class*="title"]');
         const title = titleEl?.textContent?.trim();
         
-        if (title && title.length > 3) {
-          const text = container.textContent || '';
-          const times = [];
-          
-          if (text.includes(todayPrefix)) {
-            container.querySelectorAll('a[href*="veezi"]').forEach(timeEl => {
-              const time = timeEl.textContent?.trim();
-              if (time && /^\d{1,2}:\d{2}$/.test(time)) {
-                times.push(time);
-              }
-            });
-          }
-          
-          if (times.length > 0) {
-            items.push({ title, times, url: 'https://eclipse-cinema.com.au/session-time/' });
-          }
-        }
-      });
-      return items;
-    }, todayPrefix);
-    
-    const filmMap = new Map();
-    for (const film of films) {
-      const cleanTitle = film.title.replace(/\s+/g, ' ').trim();
-      if (!filmMap.has(cleanTitle)) {
-        filmMap.set(cleanTitle, { ...film, title: cleanTitle });
-      }
-    }
-    
-    filmMap.forEach(film => sessions.push(film));
-  } catch (error) {
-    console.error('Eclipse Cinema scrape error:', error.message);
-  }
-  
-  return { cinema: 'Eclipse Cinema', url: 'https://eclipse-cinema.com.au/session-time/', sessions };
-}
-
-async function scrapeCinemaNova(page) {
-  console.log('Scraping Cinema Nova...');
-  const sessions = [];
-  
-  try {
-    await page.goto('https://www.cinemanova.com.au/films-now-showing', { waitUntil: 'networkidle2', timeout: 30000 });
-    
-    const filmLinks = await page.evaluate(() => {
-      const links = [];
-      document.querySelectorAll('a[href*="/films/"]').forEach(el => {
-        const href = el.href;
-        const img = el.querySelector('img');
-        if (href && !links.some(l => l.url === href)) {
-          const title = img?.alt || el.textContent?.trim() || href.split('/films/')[1]?.replace(/-/g, ' ');
-          if (title) {
-            links.push({ url: href, title });
-          }
-        }
-      });
-      return links;
-    });
-    
-    for (const film of filmLinks.slice(0, 20)) {
-      const title = film.title
-        .split('-').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ')
-        .replace(/\s+/g, ' ').trim();
-      
-      sessions.push({
-        title,
-        times: ['See website for times'],
-        url: film.url
-      });
-    }
-  } catch (error) {
-    console.error('Cinema Nova scrape error:', error.message);
-  }
-  
-  return { cinema: 'Cinema Nova', url: 'https://www.cinemanova.com.au/', sessions };
-}
-
-async function scrapeLido(page) {
-  console.log('Scraping Lido Cinemas...');
-  const sessions = [];
-  
-  try {
-    await page.goto('https://www.lidocinemas.com.au/now-showing', { waitUntil: 'networkidle2', timeout: 30000 });
-    
-    const films = await page.evaluate(() => {
-      const items = [];
-      document.querySelectorAll('a[href*="/movies/"]').forEach(el => {
-        const title = el.textContent?.trim() || el.querySelector('img')?.alt;
-        const href = el.href;
-        if (title && title.length > 2 && !items.some(i => i.title === title)) {
-          items.push({ title, url: href });
-        }
-      });
-      return items;
-    });
-    
-    for (const film of films) {
-      sessions.push({
-        title: film.title,
-        times: ['See website for times'],
-        url: film.url
-      });
-    }
-  } catch (error) {
-    console.error('Lido Cinemas scrape error:', error.message);
-  }
-  
-  return { cinema: 'Lido Cinemas', url: 'https://www.lidocinemas.com.au/now-showing', sessions };
-}
-
-async function scrapeHoyts(page) {
-  console.log('Scraping Hoyts Melbourne Central...');
-  const sessions = [];
-  
-  try {
-    await page.goto('https://www.hoyts.com.au/cinemas/melbourne-central', { waitUntil: 'networkidle2', timeout: 30000 });
-    await page.waitForTimeout(2000);
-    
-    const films = await page.evaluate(() => {
-      const items = [];
-      document.querySelectorAll('a[href*="/movies/"]').forEach(el => {
-        const title = el.textContent?.trim() || el.getAttribute('title') || el.querySelector('img')?.alt;
-        const href = el.href;
+        // Look for time info
+        const timeEl = el.querySelector('[class*="time"], [class*="date"], time');
+        const time = timeEl?.textContent?.trim();
+        
         if (title && title.length > 2) {
-          items.push({ title, url: href });
+          // Filter out non-film content
+          const skipWords = ['exhibition', 'game worlds', 'story of the moving image', 'talk', 'workshop'];
+          const titleLower = title.toLowerCase();
+          if (skipWords.some(word => titleLower.includes(word))) return;
+          
+          items.push({ 
+            title, 
+            time: time || 'See website for times', 
+            url: href 
+          });
         }
       });
       return items;
     });
     
+    // Dedupe by title
     const seen = new Set();
     for (const film of films) {
       if (!seen.has(film.title)) {
         seen.add(film.title);
         sessions.push({
           title: film.title,
-          times: ['See website for times'],
+          times: [film.time],
           url: film.url
         });
       }
     }
+    
+    console.log(`  Found ${sessions.length} films`);
   } catch (error) {
-    console.error('Hoyts scrape error:', error.message);
+    console.error('  ACMI scrape error:', error.message);
   }
   
-  return { cinema: 'Hoyts Melbourne Central', url: 'https://www.hoyts.com.au/cinemas/melbourne-central', sessions };
+  return { cinema: 'ACMI', url: url, sessions };
+}
+
+async function scrapeBrunswickPictureHouse(page) {
+  console.log('Scraping Brunswick Picture House...');
+  const sessions = [];
+  const url = 'https://www.brunswickpicturehouse.com.au/now-showing/';
+  
+  try {
+    await page.goto(url, { waitUntil: 'networkidle2', timeout: 60000 });
+    await page.waitForTimeout(3000);
+    
+    // Get the page content and parse the showtimes section
+    const films = await page.evaluate(() => {
+      const items = [];
+      const text = document.body.innerText;
+      
+      // Look for the Showtimes section - Brunswick has a simple format:
+      // Movie Title | Time
+      const lines = text.split('\n');
+      let inShowtimes = false;
+      
+      for (const line of lines) {
+        if (line.includes('Showtimes')) {
+          inShowtimes = true;
+          continue;
+        }
+        if (inShowtimes && line.includes('Marketing Signup')) {
+          break;
+        }
+        
+        // Match pattern: has a time like "12:20PM" or "8:35PM"
+        const timeMatch = line.match(/(\d{1,2}:\d{2}\s*[AP]M)/i);
+        if (timeMatch && inShowtimes) {
+          // The title is everything before the time indicator
+          const parts = line.split('|');
+          if (parts.length >= 1) {
+            const title = parts[0].trim();
+            const time = timeMatch[1];
+            if (title && title.length > 2 && !title.match(/^\d/)) {
+              items.push({ title, time });
+            }
+          }
+        }
+      }
+      
+      // Also try to get URLs from links
+      const movieLinks = {};
+      document.querySelectorAll('a[href*="/movie/"]').forEach(el => {
+        const title = el.textContent?.trim();
+        const href = el.href;
+        if (title && href && !href.includes('checkout')) {
+          movieLinks[title] = href;
+        }
+      });
+      
+      // Merge URLs with items
+      return items.map(item => ({
+        ...item,
+        url: movieLinks[item.title] || 'https://www.brunswickpicturehouse.com.au/now-showing/'
+      }));
+    });
+    
+    // Group by title and collect times
+    const filmMap = new Map();
+    for (const film of films) {
+      if (filmMap.has(film.title)) {
+        filmMap.get(film.title).times.push(film.time);
+      } else {
+        filmMap.set(film.title, {
+          title: film.title,
+          times: [film.time],
+          url: film.url
+        });
+      }
+    }
+    
+    filmMap.forEach(film => sessions.push(film));
+    console.log(`  Found ${sessions.length} films`);
+  } catch (error) {
+    console.error('  Brunswick Picture House scrape error:', error.message);
+  }
+  
+  return { cinema: 'Brunswick Picture House', url, sessions };
+}
+
+async function scrapeEclipse(page) {
+  console.log('Scraping Eclipse Cinema...');
+  const sessions = [];
+  const url = 'https://eclipse-cinema.com.au/session-time/';
+  
+  const today = new Date();
+  const dayNames = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+  const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+  const todayStr = `${dayNames[today.getDay()]}-${String(today.getDate()).padStart(2, '0')}-${months[today.getMonth()]}`;
+  
+  console.log(`  Looking for date: ${todayStr}`);
+  
+  try {
+    await page.goto(url, { waitUntil: 'networkidle2', timeout: 60000 });
+    await page.waitForTimeout(3000);
+    
+    const films = await page.evaluate((todayStr) => {
+      const items = [];
+      
+      // Eclipse lists films with dates like "Mon-29-Dec"
+      // Find all film blocks
+      const filmBlocks = document.querySelectorAll('h2, h3');
+      
+      filmBlocks.forEach(heading => {
+        const title = heading.textContent?.trim();
+        if (!title || title.length < 3) return;
+        
+        // Skip navigation/header items
+        const skipWords = ['by date', 'by film', 'session time', 'eclipse cinema'];
+        if (skipWords.some(w => title.toLowerCase().includes(w))) return;
+        
+        // Get the parent container
+        let container = heading.closest('div, article, section');
+        if (!container) container = heading.parentElement;
+        
+        // Check if today's date appears in this container
+        const containerText = container?.textContent || '';
+        if (!containerText.includes(todayStr)) return;
+        
+        // Find time links (Veezi booking links)
+        const times = [];
+        const timeLinks = container.querySelectorAll('a[href*="veezi"]');
+        timeLinks.forEach(link => {
+          const time = link.textContent?.trim();
+          if (time && /^\d{1,2}:\d{2}$/.test(time)) {
+            times.push(time);
+          }
+        });
+        
+        if (times.length > 0) {
+          items.push({ title, times, url: 'https://eclipse-cinema.com.au/session-time/' });
+        }
+      });
+      
+      return items;
+    }, todayStr);
+    
+    // Dedupe
+    const seen = new Set();
+    for (const film of films) {
+      if (!seen.has(film.title)) {
+        seen.add(film.title);
+        sessions.push(film);
+      }
+    }
+    
+    console.log(`  Found ${sessions.length} films`);
+  } catch (error) {
+    console.error('  Eclipse Cinema scrape error:', error.message);
+  }
+  
+  return { cinema: 'Eclipse Cinema', url, sessions };
+}
+
+async function scrapeCinemaNova(page) {
+  console.log('Scraping Cinema Nova...');
+  const sessions = [];
+  const url = 'https://www.cinemanova.com.au/films-today-after-0:00';
+  
+  try {
+    await page.goto(url, { waitUntil: 'networkidle2', timeout: 60000 });
+    await page.waitForTimeout(3000);
+    
+    const films = await page.evaluate(() => {
+      const items = [];
+      
+      // Find film entries - Nova shows films with session times
+      document.querySelectorAll('a[href*="/films/"]').forEach(el => {
+        const href = el.href;
+        if (!href || href.includes('coming-soon') || href.includes('now-showing')) return;
+        
+        // Get title from link text or image alt
+        let title = el.textContent?.trim();
+        const img = el.querySelector('img');
+        if ((!title || title.length < 2) && img) {
+          title = img.alt?.trim();
+        }
+        
+        // Extract film slug for cleaner title if needed
+        if (!title || title.length < 2) {
+          const match = href.match(/\/films\/([^\/\?]+)/);
+          if (match) {
+            title = match[1].replace(/-/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
+          }
+        }
+        
+        if (title && title.length > 2) {
+          // Look for times near this element
+          const parent = el.closest('div, li, article');
+          const times = [];
+          if (parent) {
+            const timeMatches = parent.textContent?.match(/\d{1,2}:\d{2}\s*[AP]?M?/gi) || [];
+            timeMatches.forEach(t => {
+              if (!times.includes(t)) times.push(t);
+            });
+          }
+          
+          items.push({
+            title,
+            times: times.length > 0 ? times : ['See website for times'],
+            url: href
+          });
+        }
+      });
+      
+      return items;
+    });
+    
+    // Dedupe by URL (more reliable than title)
+    const seen = new Set();
+    for (const film of films) {
+      if (!seen.has(film.url)) {
+        seen.add(film.url);
+        sessions.push(film);
+      }
+    }
+    
+    console.log(`  Found ${sessions.length} films`);
+  } catch (error) {
+    console.error('  Cinema Nova scrape error:', error.message);
+  }
+  
+  return { cinema: 'Cinema Nova', url, sessions };
+}
+
+async function scrapeLido(page) {
+  console.log('Scraping Lido Cinemas...');
+  const sessions = [];
+  const url = 'https://www.lidocinemas.com.au/now-showing';
+  
+  try {
+    await page.goto(url, { waitUntil: 'networkidle2', timeout: 60000 });
+    await page.waitForTimeout(3000);
+    
+    const films = await page.evaluate(() => {
+      const items = [];
+      
+      document.querySelectorAll('a[href*="/movies/"]').forEach(el => {
+        const href = el.href;
+        let title = el.textContent?.trim();
+        
+        // Also check for title in nested elements
+        if (!title || title.length < 2) {
+          const titleEl = el.querySelector('h2, h3, h4, [class*="title"]');
+          title = titleEl?.textContent?.trim();
+        }
+        
+        // Check image alt
+        if (!title || title.length < 2) {
+          const img = el.querySelector('img');
+          title = img?.alt?.trim();
+        }
+        
+        if (title && title.length > 2 && href) {
+          // Skip duplicates and non-movie links
+          if (!items.some(i => i.url === href)) {
+            items.push({
+              title,
+              url: href
+            });
+          }
+        }
+      });
+      
+      return items;
+    });
+    
+    for (const film of films) {
+      sessions.push({
+        title: film.title,
+        times: ['See website for times'],
+        url: film.url
+      });
+    }
+    
+    console.log(`  Found ${sessions.length} films`);
+  } catch (error) {
+    console.error('  Lido Cinemas scrape error:', error.message);
+  }
+  
+  return { cinema: 'Lido Cinemas', url, sessions };
+}
+
+async function scrapeHoyts(page) {
+  console.log('Scraping Hoyts Melbourne Central...');
+  const sessions = [];
+  const url = 'https://www.hoyts.com.au/cinemas/melbourne-central';
+  
+  try {
+    await page.goto(url, { waitUntil: 'networkidle2', timeout: 60000 });
+    await page.waitForTimeout(3000);
+    
+    const films = await page.evaluate(() => {
+      const items = [];
+      
+      // Filter words that indicate non-movie content
+      const skipWords = ['find out more', 'learn more', 'book now', 'sign up', 'join', 'menu', 'experiences', 'food', 'gift'];
+      
+      document.querySelectorAll('a[href*="/movies/"]').forEach(el => {
+        const href = el.href;
+        let title = el.textContent?.trim();
+        
+        // Check for title in nested elements
+        if (!title || title.length < 2) {
+          const titleEl = el.querySelector('h2, h3, h4, [class*="title"]');
+          title = titleEl?.textContent?.trim();
+        }
+        
+        // Check image alt
+        if (!title || title.length < 2) {
+          const img = el.querySelector('img');
+          title = img?.alt?.trim();
+        }
+        
+        if (title && title.length > 2) {
+          const titleLower = title.toLowerCase();
+          
+          // Skip non-movie links
+          if (skipWords.some(w => titleLower.includes(w))) return;
+          
+          // Skip if title is too short or just numbers
+          if (title.length < 3 || /^\d+$/.test(title)) return;
+          
+          if (!items.some(i => i.title === title)) {
+            items.push({
+              title,
+              url: href
+            });
+          }
+        }
+      });
+      
+      return items;
+    });
+    
+    for (const film of films) {
+      sessions.push({
+        title: film.title,
+        times: ['See website for times'],
+        url: film.url
+      });
+    }
+    
+    console.log(`  Found ${sessions.length} films`);
+  } catch (error) {
+    console.error('  Hoyts scrape error:', error.message);
+  }
+  
+  return { cinema: 'Hoyts Melbourne Central', url, sessions };
 }
 
 async function scrapeAstor(page) {
   console.log('Scraping Astor Theatre...');
   const sessions = [];
+  const url = 'https://www.astortheatre.net.au/';
   
   try {
-    await page.goto('https://www.palacecinemas.com.au/cinemas/the-astor-theatre/', { waitUntil: 'networkidle2', timeout: 30000 });
-    await page.waitForTimeout(2000);
+    await page.goto(url, { waitUntil: 'networkidle2', timeout: 60000 });
+    await page.waitForTimeout(5000); // Astor site can be slow
     
     const films = await page.evaluate(() => {
       const items = [];
-      document.querySelectorAll('.session, .movie-item, a[href*="/movies/"]').forEach(el => {
-        const title = el.textContent?.trim() || el.getAttribute('title');
-        if (title && title.length > 2) {
-          items.push({ title, url: el.href || 'https://www.astortheatre.net.au/' });
+      
+      // Skip words - navigation, social, etc.
+      const skipWords = [
+        'now showing', 'calendar', 'session times', 'prices', 'about', 
+        'private hire', 'friends', 'blog', 'contact', 'map', 'parking',
+        'twitter', 'facebook', 'instagram', 'the astor theatre',
+        'phone', 'email', 'menu', 'home', 'search', 'ical', 'subscribe'
+      ];
+      
+      // Look for session/film information
+      // Astor typically shows double features with format "Film 1 + Film 2" or lists them
+      const allText = document.body.innerText;
+      const lines = allText.split('\n');
+      
+      for (const line of lines) {
+        const trimmed = line.trim();
+        if (!trimmed || trimmed.length < 3 || trimmed.length > 150) continue;
+        
+        const lineLower = trimmed.toLowerCase();
+        
+        // Skip navigation/footer items
+        if (skipWords.some(w => lineLower === w || lineLower.startsWith(w + ' ') || lineLower.includes(w))) continue;
+        
+        // Skip lines that are clearly not film titles
+        if (lineLower.includes('@') || lineLower.includes('http') || lineLower.includes('.com') || lineLower.includes('.au')) continue;
+        if (/^\d+$/.test(trimmed)) continue; // Just numbers
+        if (trimmed.startsWith('(') && trimmed.endsWith(')')) continue;
+        
+        // Look for film-like patterns:
+        // - Contains a year in parentheses like (1954)
+        // - Contains "+" indicating double feature
+        const hasYear = /\(\d{4}\)/.test(trimmed);
+        const isDoubleFeature = trimmed.includes(' + ') || (trimmed.includes(' & ') && trimmed.length > 10);
+        
+        if (hasYear || isDoubleFeature) {
+          items.push({
+            title: trimmed,
+            isDoubleFeature
+          });
         }
-      });
+      }
+      
       return items;
     });
     
+    // Dedupe and clean up
     const seen = new Set();
     for (const film of films) {
-      if (!seen.has(film.title) && film.title.length > 2) {
-        seen.add(film.title);
+      // Clean up title
+      let title = film.title.replace(/\s+/g, ' ').trim();
+      
+      if (!seen.has(title) && title.length > 3) {
+        seen.add(title);
         sessions.push({
-          title: film.title,
+          title,
           times: ['See website for times'],
-          url: film.url,
-          isDoubleFeature: false
+          url,
+          isDoubleFeature: film.isDoubleFeature
         });
       }
     }
     
-    if (sessions.length === 0) {
-      await page.goto('https://www.astortheatre.net.au/', { waitUntil: 'networkidle2', timeout: 30000 });
-      await page.waitForTimeout(3000);
-      
-      const altFilms = await page.evaluate(() => {
-        const items = [];
-        document.querySelectorAll('a, .session, .film').forEach(el => {
-          const text = el.textContent?.trim();
-          if (text && text.length > 5 && text.length < 100) {
-            items.push({ title: text, url: 'https://www.astortheatre.net.au/' });
-          }
-        });
-        return items.slice(0, 10);
-      });
-      
-      for (const film of altFilms) {
-        sessions.push({
-          title: film.title,
-          times: ['7:30 PM (typical)'],
-          url: film.url,
-          isDoubleFeature: film.title.includes('+') || film.title.includes(' & ') || film.title.includes(' / ')
-        });
-      }
-    }
+    console.log(`  Found ${sessions.length} films`);
+    return { 
+      cinema: 'The Astor Theatre', 
+      url, 
+      sessions,
+      note: 'Famous for double features - check website for full program'
+    };
   } catch (error) {
-    console.error('Astor Theatre scrape error:', error.message);
+    console.error('  Astor Theatre scrape error:', error.message);
+    return { 
+      cinema: 'The Astor Theatre', 
+      url, 
+      sessions: [],
+      note: 'Famous for double features - check website for full program'
+    };
   }
-  
-  return { 
-    cinema: 'The Astor Theatre', 
-    url: 'https://www.astortheatre.net.au/', 
-    sessions,
-    note: 'Famous for double features - check website for full program'
-  };
 }
 
 async function enrichWithTMDB(cinemaData) {
   console.log(`Enriching ${cinemaData.cinema} with TMDB data...`);
   
   for (const session of cinemaData.sessions) {
-    if (session.isDoubleFeature || session.title.includes(' + ') || session.title.includes(' & ')) {
-      const titles = session.title.split(/\s*[+&\/]\s*/);
+    // Handle double features
+    if (session.isDoubleFeature && (session.title.includes(' + ') || session.title.includes(' & '))) {
+      const separator = session.title.includes(' + ') ? ' + ' : ' & ';
+      const titles = session.title.split(separator);
       session.films = [];
+      
       for (const title of titles) {
         const tmdb = await fetchTMDB(title.trim());
         session.films.push({
           title: title.trim(),
           ...tmdb
         });
+        await new Promise(r => setTimeout(r, 250));
+      }
+      
+      // Use first film's poster for the card
+      if (session.films[0]?.posterPath) {
+        session.posterPath = session.films[0].posterPath;
+      }
+      // Combine overviews
+      const overviews = session.films.map(f => f.overview).filter(Boolean);
+      if (overviews.length > 0) {
+        session.overview = overviews[0]; // Just use first film's overview
       }
     } else {
       const tmdb = await fetchTMDB(session.title);
@@ -387,21 +604,34 @@ async function enrichWithTMDB(cinemaData) {
       session.posterPath = tmdb.posterPath;
       session.rating = tmdb.rating;
       session.year = tmdb.year;
+      await new Promise(r => setTimeout(r, 250));
     }
-    
-    await new Promise(r => setTimeout(r, 100));
   }
   
   return cinemaData;
 }
 
 async function main() {
-  console.log('Starting Melbourne Cinema Scraper...');
-  console.log('Date:', new Date().toLocaleDateString('en-AU', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' }));
+  console.log('='.repeat(60));
+  console.log('Melbourne Cinema Scraper');
+  console.log('='.repeat(60));
+  console.log('Date:', new Date().toLocaleDateString('en-AU', { 
+    weekday: 'long', year: 'numeric', month: 'long', day: 'numeric',
+    timeZone: 'Australia/Melbourne'
+  }));
+  console.log('Time:', new Date().toLocaleTimeString('en-AU', { timeZone: 'Australia/Melbourne' }));
+  console.log('='.repeat(60));
+  
+  if (!TMDB_API_KEY) {
+    console.error('ERROR: TMDB_API_KEY environment variable not set!');
+    process.exit(1);
+  }
+  console.log('TMDB API Key: Set ✓');
+  console.log('');
   
   const browser = await puppeteer.launch({
     headless: 'new',
-    args: ['--no-sandbox', '--disable-setuid-sandbox']
+    args: ['--no-sandbox', '--disable-setuid-sandbox', '--disable-dev-shm-usage']
   });
   
   const page = await browser.newPage();
@@ -422,6 +652,7 @@ async function main() {
   
   for (const scraper of scrapers) {
     try {
+      console.log('');
       const data = await scraper(page);
       const enriched = await enrichWithTMDB(data);
       results.push(enriched);
@@ -434,7 +665,10 @@ async function main() {
   
   const output = {
     generatedAt: new Date().toISOString(),
-    date: new Date().toLocaleDateString('en-AU', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' }),
+    date: new Date().toLocaleDateString('en-AU', { 
+      weekday: 'long', year: 'numeric', month: 'long', day: 'numeric',
+      timeZone: 'Australia/Melbourne'
+    }),
     cinemas: results
   };
   
@@ -448,9 +682,20 @@ async function main() {
     JSON.stringify(output, null, 2)
   );
   
-  console.log('Done! Sessions saved to data/sessions.json');
+  console.log('');
+  console.log('='.repeat(60));
+  console.log('COMPLETE');
+  console.log('='.repeat(60));
   console.log(`Total cinemas: ${results.length}`);
   console.log(`Total sessions: ${results.reduce((sum, c) => sum + c.sessions.length, 0)}`);
+  
+  // Summary
+  for (const cinema of results) {
+    console.log(`  ${cinema.cinema}: ${cinema.sessions.length} films`);
+  }
 }
 
-main().catch(console.error);
+main().catch(error => {
+  console.error('Fatal error:', error);
+  process.exit(1);
+});
