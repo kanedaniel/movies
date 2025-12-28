@@ -335,98 +335,69 @@ async function scrapeLido(page) {
   
   try {
     await page.goto(url, { waitUntil: 'networkidle2', timeout: 60000 });
-    // Wait longer for JavaScript to load session times
+    // Wait for JavaScript to load session times
     await page.waitForTimeout(5000);
     
-    // Try to wait for session time elements to appear
+    // Wait for the Sessions elements to appear
     try {
-      await page.waitForSelector('[class*="session"], [class*="time"], button, .showtime', { timeout: 5000 });
+      await page.waitForSelector('.Sessions, ul.Sessions, .sessions-link', { timeout: 10000 });
+      console.log('  Session elements found');
     } catch (e) {
-      console.log('  No session elements found, trying alternative approach...');
+      console.log('  Waiting for sessions timed out, trying anyway...');
     }
     
     const films = await page.evaluate(() => {
-      const items = [];
       const filmMap = new Map();
       
-      // Lido loads session data dynamically
-      // Look for movie cards/containers that have both title and session times
-      
-      // First, find all movie links to get titles
-      document.querySelectorAll('a[href*="/movies/"]').forEach(el => {
-        const href = el.href;
-        if (href.includes('/movies/') && !filmMap.has(href)) {
-          let title = el.textContent?.trim();
-          if (!title || title.length < 2) {
-            const img = el.querySelector('img');
-            title = img?.alt?.trim();
-          }
-          if (title && title.length > 2) {
-            filmMap.set(href, { title, url: href, times: [] });
+      // Target the session links directly - they have data-name attribute with movie title
+      // Structure: a.sessions-link[data-name="Movie Title"] > span.Time
+      document.querySelectorAll('a.sessions-link, a[class*="sessions-link"]').forEach(link => {
+        const movieName = link.getAttribute('data-name');
+        const timeSpan = link.querySelector('span.Time, .Time');
+        const time = timeSpan?.textContent?.trim();
+        
+        if (movieName && time) {
+          if (filmMap.has(movieName)) {
+            filmMap.get(movieName).times.push(time);
+          } else {
+            filmMap.set(movieName, {
+              title: movieName,
+              times: [time],
+              url: link.href || 'https://www.lidocinemas.com.au/now-showing'
+            });
           }
         }
       });
       
-      // Now look for session times in the page
-      // They often appear as buttons or links with time patterns
-      const timePattern = /^(\d{1,2}):(\d{2})\s*(am|pm)?$/i;
-      const allElements = document.querySelectorAll('button, a, span, div');
-      
-      allElements.forEach(el => {
-        const text = el.textContent?.trim();
-        if (text && timePattern.test(text)) {
-          // Found a time - try to associate it with a movie
-          // Look for nearby movie link
-          let parent = el.parentElement;
-          for (let i = 0; i < 10 && parent; i++) {
-            const movieLink = parent.querySelector('a[href*="/movies/"]');
-            if (movieLink && filmMap.has(movieLink.href)) {
-              const film = filmMap.get(movieLink.href);
-              if (!film.times.includes(text)) {
-                film.times.push(text);
+      // Also try getting films from the movie cards in case sessions approach fails
+      if (filmMap.size === 0) {
+        document.querySelectorAll('.Markup.Movie, div[class*="Movie"]').forEach(card => {
+          const titleEl = card.querySelector('a[href*="/movies/"]');
+          const title = titleEl?.textContent?.trim() || card.getAttribute('data-name');
+          
+          if (title) {
+            const times = [];
+            card.querySelectorAll('.Time, span[class*="Time"]').forEach(t => {
+              const time = t.textContent?.trim();
+              if (time && /\d{1,2}:\d{2}/.test(time)) {
+                times.push(time);
               }
-              break;
-            }
-            parent = parent.parentElement;
-          }
-        }
-      });
-      
-      // Also check for times in format "10:30 AM" or similar
-      const timePattern2 = /(\d{1,2}:\d{2}\s*[AP]M)/gi;
-      document.querySelectorAll('[class*="session"], [class*="time"], [class*="showtime"]').forEach(el => {
-        const text = el.textContent;
-        const matches = text?.match(timePattern2) || [];
-        if (matches.length > 0) {
-          // Try to find associated movie
-          let parent = el.parentElement;
-          for (let i = 0; i < 10 && parent; i++) {
-            const movieLink = parent.querySelector('a[href*="/movies/"]');
-            if (movieLink && filmMap.has(movieLink.href)) {
-              const film = filmMap.get(movieLink.href);
-              matches.forEach(t => {
-                const cleanTime = t.trim();
-                if (!film.times.includes(cleanTime)) {
-                  film.times.push(cleanTime);
-                }
+            });
+            
+            if (!filmMap.has(title)) {
+              filmMap.set(title, {
+                title,
+                times: times.length > 0 ? times : ['See website'],
+                url: titleEl?.href || 'https://www.lidocinemas.com.au/now-showing'
               });
-              break;
             }
-            parent = parent.parentElement;
           }
-        }
-      });
+        });
+      }
       
       // Convert map to array
       const result = [];
-      filmMap.forEach(film => {
-        result.push({
-          title: film.title,
-          times: film.times.length > 0 ? film.times : ['See website'],
-          url: film.url
-        });
-      });
-      
+      filmMap.forEach(film => result.push(film));
       return result;
     });
     
