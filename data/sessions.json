@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2025-12-29T02:15:23.827Z",
+  "generatedAt": "2025-12-29T02:23:30.148Z",
   "date": "Monday 29 December 2025",
   "cinemas": [
     {
@@ -554,17 +554,6 @@
           "year": "2025"
         },
         {
-          "title": "The SpongeBob Movie: Search for Squarepants",
-          "times": [
-            "1:00 pm"
-          ],
-          "url": "https://www.lidocinemas.com.au/tickets?c=0000000003&s=99139",
-          "overview": "Desperate to be a big guy, SpongeBob sets out to prove his bravery to Mr. Krabs by following The Flying Dutchman – a mysterious swashbuckling ghost pirate – on a seafaring adventure that takes him to the deepest depths of the deep sea, where no Sponge has gone before.",
-          "posterPath": "https://image.tmdb.org/t/p/w300/pDWYW9v8fmJdA7N0I1MOdQA3ETq.jpg",
-          "rating": 6.848,
-          "year": "2025"
-        },
-        {
           "title": "Avatar: Fire and Ash",
           "times": [
             "3:30 pm"
@@ -684,13 +673,10 @@
         {
           "title": "Avatar: Fire and Ash",
           "times": [
-            "1:30 pm",
             "2:00 pm",
             "3:45 pm",
             "6:00 pm",
-            "6:00 pm",
             "7:45 pm",
-            "8:30 pm",
             "8:30 pm",
             "10:00 pm"
           ],
@@ -707,9 +693,7 @@
             "4:40 pm",
             "6:00 pm",
             "7:00 pm",
-            "7:00 pm",
-            "9:30 pm",
-            "10:00 pm"
+            "9:30 pm"
           ],
           "url": "https://www.hoyts.com.au/movies/anaconda",
           "overview": "A group of friends facing mid-life crises head to the rainforest with the intention of remaking their favorite movie from their youth, only to find themselves in a fight for their lives against natural disasters, giant snakes and violent criminals.",
@@ -734,12 +718,9 @@
         {
           "title": "The Housemaid",
           "times": [
-            "3:00 pm",
             "3:30 pm",
-            "5:30 pm",
             "7:00 pm",
-            "8:45 pm",
-            "9:30 pm"
+            "8:45 pm"
           ],
           "url": "https://www.hoyts.com.au/movies/the-housemaid",
           "overview": "Trying to escape her past, Millie Calloway accepts a job as a live-in housemaid for the wealthy Nina and Andrew Winchester. But what begins as a dream job quickly unravels into something far more dangerous—a sexy, seductive game of secrets, scandal, and power.",
@@ -765,7 +746,6 @@
           "title": "Wicked: For Good",
           "times": [
             "3:20 pm",
-            "3:45 pm",
             "8:45 pm"
           ],
           "url": "https://www.hoyts.com.au/movies/wicked-for-good",
@@ -807,7 +787,8 @@
           "rating": 7.274,
           "year": "2025"
         }
-      ]
+      ],
+      "note": "Lux sessions not listed"
     },
     {
       "cinema": "The Astor Theatre",
@@ -855,8 +836,7 @@
           "posterPath": "https://image.tmdb.org/t/p/w300/vfrQk5IPloGg1v9Rzbh2Eg3VGyM.jpg",
           "overview": "During its return to the earth, commercial spaceship Nostromo intercepts a distress signal from a distant planet. When a three-member team of the crew discovers a chamber containing thousands of eggs on the planet, a creature inside one of the eggs attacks an explorer. The entire crew is unaware of the impending nightmare set to descend upon them when the alien parasite planted inside its unfortunate host is birthed."
         }
-      ],
-      "note": "Famous for double features - check website for full program"
+      ]
     }
   ]
 }
