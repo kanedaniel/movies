@@ -167,50 +167,23 @@ async function scrapeBrunswickPictureHouse(page) {
       const items = [];
       const seenTitles = new Set();
       
-      // The page has multiple sections - one per day
-      // Each section has a date header with "Today", "Tomorrow", etc.
-      // Find the container that has "Today" in its date header
-      
-      // Look for all poster-list containers (each day is a separate one)
-      const posterLists = document.querySelectorAll('.poster-list');
-      let todayContainer = null;
-      
-      for (const container of posterLists) {
-        // Check if this container's date header contains "Today"
-        const dateHeader = container.previousElementSibling;
-        if (dateHeader?.textContent?.toLowerCase().includes('today')) {
-          todayContainer = container;
-          break;
-        }
-        // Also check inside the container
-        const internalHeader = container.querySelector('.text-h6, [class*="text-h6"]');
-        if (internalHeader?.textContent?.toLowerCase().includes('today')) {
-          todayContainer = container;
-          break;
-        }
+      // Find the span with class "text-primary" containing "Today"
+      const todaySpan = document.querySelector('span.text-primary');
+      if (!todaySpan || !todaySpan.textContent?.toLowerCase().includes('today')) {
+        console.log('Could not find Today span');
+        return items;
       }
       
-      // If we couldn't find it that way, try finding the Today text and getting its nearest poster-list
-      if (!todayContainer) {
-        const todaySpan = Array.from(document.querySelectorAll('span')).find(s => 
-          s.textContent?.toLowerCase() === 'today'
-        );
-        if (todaySpan) {
-          // Go up to find the section, then find the poster-list within or after it
-          let parent = todaySpan.parentElement;
-          for (let i = 0; i < 5 && parent; i++) {
-            const list = parent.querySelector('.poster-list') || parent.nextElementSibling;
-            if (list?.classList?.contains('poster-list')) {
-              todayContainer = list;
-              break;
-            }
-            parent = parent.parentElement;
-          }
-        }
+      // Go up to the header div (text-h6), then get its next sibling (poster-list)
+      const headerDiv = todaySpan.closest('.text-h6, [class*="text-h6"]');
+      if (!headerDiv) {
+        console.log('Could not find header div');
+        return items;
       }
       
-      if (!todayContainer) {
-        console.log('Could not find Today container');
+      const todayContainer = headerDiv.nextElementSibling;
+      if (!todayContainer || !todayContainer.classList.contains('poster-list')) {
+        console.log('Could not find poster-list after header');
         return items;
       }
       
@@ -277,35 +250,33 @@ async function scrapeEclipse(page) {
     
     const films = await page.evaluate((todayStr) => {
       const items = [];
-      const pageText = document.body.innerText;
       
-      // Split by film titles (h2/h3 elements or similar)
-      const headings = document.querySelectorAll('h2, h3');
+      // Find all film entries that have today's date in their class
+      // Classes look like: veezi-f-date-Mon-29-Dec
+      const todayClass = `veezi-f-date-${todayStr}`;
+      const filmEntries = document.querySelectorAll(`.veezi-filter-entry.${CSS.escape(todayClass)}`);
       
-      headings.forEach(heading => {
-        const title = heading.textContent?.trim();
-        if (!title || title.length < 3) return;
+      filmEntries.forEach(entry => {
+        // Get title from the filter-film-title div
+        const titleEl = entry.querySelector('.veezi-filter-film-title');
+        const title = titleEl?.textContent?.trim();
         
-        const skipWords = ['by date', 'by film', 'session time', 'eclipse cinema', 'session times'];
-        if (skipWords.some(w => title.toLowerCase().includes(w))) return;
+        if (!title) return;
         
-        // Find parent container
-        let container = heading.parentElement;
-        // Walk up to find a larger container
-        for (let i = 0; i < 5 && container; i++) {
-          if (container.textContent?.includes(todayStr)) break;
-          container = container.parentElement;
-        }
-        
-        if (!container || !container.textContent?.includes(todayStr)) return;
-        
-        // Get all veezi links from this section
+        // Get times - only visible ones for today's date
+        // Time links have classes like: veezi-time-ST00000146-Mon-29-Dec
         const times = [];
-        const veeziLinks = container.querySelectorAll('a[href*="veezi"]');
-        veeziLinks.forEach(link => {
-          const time = link.textContent?.trim();
-          if (time && /^\d{1,2}:\d{2}$/.test(time)) {
-            times.push(time);
+        const timeClass = `veezi-time-${todayStr}`;
+        
+        entry.querySelectorAll(`a.veezi-film-purchase`).forEach(link => {
+          // Check if this time is for today (has the date class) and is visible
+          if (link.classList.toString().includes(todayStr) && 
+              link.style.display !== 'none') {
+            const timeEl = link.querySelector('p');
+            const time = timeEl?.textContent?.trim();
+            if (time && /^\d{1,2}:\d{2}$/.test(time)) {
+              times.push(time);
+            }
           }
         });
         
