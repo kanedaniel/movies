@@ -613,74 +613,85 @@ async function scrapeAstor(page) {
   const url = 'https://www.astortheatre.net.au/';
   
   try {
-    await page.goto(url, { waitUntil: 'networkidle2', timeout: 90000 });
-    await page.waitForTimeout(5000);
-    
-    const films = await page.evaluate(() => {
-      const items = [];
-      
-      // Each session is in div.movie_preview.session
-      document.querySelectorAll('div.movie_preview.session').forEach(sessionDiv => {
-        // Get the date/time text (e.g., "Today at 2pm", "Tomorrow at 7pm")
-        const dateTimeEl = sessionDiv.querySelector('span.extrabold');
-        const dateTimeText = dateTimeEl?.textContent?.trim() || '';
-        
-        // Only include "Today" sessions
-        if (!dateTimeText.toLowerCase().includes('today')) {
-          return;
-        }
-        
-        // Extract just the time part (e.g., "2pm", "6:30pm")
-        const timeMatch = dateTimeText.match(/at\s+(\d{1,2}(?::\d{2})?\s*(?:am|pm))/i);
-        const time = timeMatch ? timeMatch[1] : 'See website';
-        
-        // Check if single or double feature
-        const isDouble = sessionDiv.classList.contains('double');
-        
-        // Get film title(s) from h2.uppercase a elements
-        const titleLinks = sessionDiv.querySelectorAll('h2.uppercase a');
-        const titles = [];
-        titleLinks.forEach(link => {
-          // Get text but remove the rating span like [PG], [M], etc.
-          let title = link.textContent?.trim() || '';
-          title = title.replace(/\s*\[.*?\]\s*$/, '').trim();
-          if (title) {
-            titles.push(title);
-          }
-        });
-        
-        if (titles.length === 0) return;
-        
-        // Get the session info URL
-        const sessionLink = sessionDiv.querySelector('a.movie_link');
-        const sessionUrl = sessionLink?.href || url;
-        
-        if (isDouble && titles.length >= 2) {
-          // Double feature - combine titles
-          items.push({
-            title: titles.join(' + '),
-            times: [time],
-            url: sessionUrl,
-            isDoubleFeature: true,
-            film1: titles[0],
-            film2: titles[1]
-          });
-        } else {
-          // Single feature
-          items.push({
-            title: titles[0],
-            times: [time],
-            url: sessionUrl,
-            isDoubleFeature: false
-          });
-        }
-      });
-      
-      return items;
+    // First, get the initial page content
+    const response = await fetch(url, {
+      headers: {
+        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'
+      }
     });
+    const html = await response.text();
     
-    for (const film of films) {
-      sessions.push(film);
+    // Also try the AJAX endpoint for more sessions
+    const ajaxResponse = await fetch('https://www.astortheatre.net.au/wp-admin/admin-ajax.php', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/x-www-form-urlencoded',
+        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'
+      },
+      body: 'action=get_frontpage_sessions&offset=0'
+    });
+    const ajaxHtml = await ajaxResponse.text();
+    
+    // Combine both HTML sources
+    const combinedHtml = html + ajaxHtml;
+    
+    // Parse the HTML to extract sessions
+    // Look for div.movie_preview.session elements
+    const sessionRegex = /<div[^>]*class="[^"]*movie_preview[^"]*session[^"]*"[^>]*>([\s\S]*?)<\/div>\s*<\/div>\s*<\/div>/gi;
+    const todayRegex = /today/i;
+    const titleRegex = /<h2[^>]*class="[^"]*uppercase[^"]*"[^>]*>\s*<a[^>]*>([^<]+)<\/a>/gi;
+    const timeRegex = /at\s+(\d{1,2}(?::\d{2})?\s*(?:am|pm))/i;
+    const linkRegex = /<a[^>]*class="[^"]*movie_link[^"]*"[^>]*href="([^"]+)"/i;
+    const doubleRegex = /class="[^"]*double[^"]*"/i;
+    
+    let match;
+    while ((match = sessionRegex.exec(combinedHtml)) !== null) {
+      const sessionBlock = match[0];
+      
+      // Check if it's today
+      if (!todayRegex.test(sessionBlock)) continue;
+      
+      // Extract time
+      const timeMatch = sessionBlock.match(timeRegex);
+      const time = timeMatch ? timeMatch[1] : 'See website';
+      
+      // Extract titles
+      const titles = [];
+      let titleMatch;
+      const titleRegexLocal = /<h2[^>]*class="[^"]*uppercase[^"]*"[^>]*>\s*<a[^>]*>([^<]+)<\/a>/gi;
+      while ((titleMatch = titleRegexLocal.exec(sessionBlock)) !== null) {
+        let title = titleMatch[1].trim();
+        // Remove rating brackets like [PG], [M]
+        title = title.replace(/\s*\[.*?\]\s*$/, '').trim();
+        if (title) titles.push(title);
+      }
+      
+      if (titles.length === 0) continue;
+      
+      // Extract URL
+      const linkMatch = sessionBlock.match(linkRegex);
+      const sessionUrl = linkMatch ? linkMatch[1] : url;
+      
+      // Check if double feature
+      const isDouble = doubleRegex.test(sessionBlock);
+      
+      if (isDouble && titles.length >= 2) {
+        sessions.push({
+          title: titles.join(' + '),
+          times: [time],
+          url: sessionUrl,
+          isDoubleFeature: true,
+          film1: titles[0],
+          film2: titles[1]
+        });
+      } else {
+        sessions.push({
+          title: titles[0],
+          times: [time],
+          url: sessionUrl,
+          isDoubleFeature: false
+        });
+      }
     }
     
     console.log(`  Found ${sessions.length} films`);
