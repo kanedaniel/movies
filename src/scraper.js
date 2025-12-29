@@ -56,14 +56,28 @@ async function fetchTMDB(title) {
 
     if (data.results && data.results.length > 0) {
       const movie = data.results[0];
+      
+      // Fetch movie details to get runtime
+      let runtime = null;
+      try {
+        const detailsUrl = `${TMDB_BASE}/movie/${movie.id}?api_key=${TMDB_API_KEY}`;
+        const detailsResponse = await fetch(detailsUrl);
+        const details = await detailsResponse.json();
+        runtime = details.runtime || null;
+        await new Promise(r => setTimeout(r, 100)); // Small delay to avoid rate limiting
+      } catch (e) {
+        console.log(`  Could not fetch runtime for ${movie.title}`);
+      }
+      
       const result = {
         overview: movie.overview || null,
         posterPath: movie.poster_path ? `https://image.tmdb.org/t/p/w300${movie.poster_path}` : null,
         rating: movie.vote_average || null,
         year: movie.release_date ? movie.release_date.substring(0, 4) : null,
+        runtime: runtime,
         tmdbId: movie.id
       };
-      console.log(`  TMDB found: "${movie.title}" (${result.year})`);
+      console.log(`  TMDB found: "${movie.title}" (${result.year})${runtime ? ` - ${runtime}min` : ''}`);
       tmdbCache.set(cacheKey, result);
       return result;
     } else {
@@ -73,7 +87,7 @@ async function fetchTMDB(title) {
     console.error(`  TMDB lookup failed for "${title}":`, error.message);
   }
 
-  const fallback = { overview: null, posterPath: null, rating: null, year: null, tmdbId: null };
+  const fallback = { overview: null, posterPath: null, rating: null, year: null, runtime: null, tmdbId: null };
   tmdbCache.set(cacheKey, fallback);
   return fallback;
 }
@@ -625,9 +639,11 @@ async function enrichWithTMDB(cinemaData) {
       const titles = session.title.split(separator);
       session.films = [];
       
+      let totalRuntime = 0;
       for (const title of titles) {
         const tmdb = await fetchTMDB(title.trim());
         session.films.push({ title: title.trim(), ...tmdb });
+        if (tmdb.runtime) totalRuntime += tmdb.runtime;
         await new Promise(r => setTimeout(r, 250));
       }
       
@@ -637,12 +653,22 @@ async function enrichWithTMDB(cinemaData) {
       if (session.films[0]?.overview) {
         session.overview = session.films[0].overview;
       }
+      // Sum runtime for double features
+      session.runtime = totalRuntime > 0 ? totalRuntime : null;
+      // Use first film's year and average rating
+      session.year = session.films[0]?.year || null;
+      if (session.films[0]?.rating && session.films[1]?.rating) {
+        session.rating = (session.films[0].rating + session.films[1].rating) / 2;
+      } else {
+        session.rating = session.films[0]?.rating || session.films[1]?.rating || null;
+      }
     } else {
       const tmdb = await fetchTMDB(session.title);
       session.overview = tmdb.overview;
       session.posterPath = tmdb.posterPath;
       session.rating = tmdb.rating;
       session.year = tmdb.year;
+      session.runtime = tmdb.runtime;
       await new Promise(r => setTimeout(r, 250));
     }
   }
