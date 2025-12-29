@@ -118,98 +118,57 @@ async function scrapeACMI(page) {
   const sessions = [];
   
   const dateStr = getMelbourneDateStr();
-  const url = `https://www.acmi.net.au/whats-on/?what=film&when_start=${dateStr}&when_end=${dateStr}`;
+  const apiUrl = `https://admin.acmi.net.au/api/v2/calendar/by-day/?date=${dateStr}`;
+  const websiteUrl = `https://www.acmi.net.au/whats-on/?what=film&when_start=${dateStr}&when_end=${dateStr}`;
   
-  console.log(`  URL: ${url}`);
+  console.log(`  API URL: ${apiUrl}`);
   
   try {
-    await page.goto(url, { waitUntil: 'networkidle2', timeout: 60000 });
-    await page.waitForTimeout(5000);
-    
-    // Wait for event cards to load
-    try {
-      await page.waitForSelector('article.event-card, .event-card', { timeout: 10000 });
-      console.log('  Event cards found');
-    } catch (e) {
-      console.log('  No event cards found, trying alternative selectors...');
-    }
-    
-    const films = await page.evaluate(() => {
-      const items = [];
-      
-      // Try multiple selector approaches
-      let cards = document.querySelectorAll('article.event-card');
-      if (cards.length === 0) {
-        cards = document.querySelectorAll('[class*="event-card"]');
+    const response = await fetch(apiUrl, {
+      headers: {
+        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'
       }
-      if (cards.length === 0) {
-        cards = document.querySelectorAll('article');
-      }
-      
-      console.log('Found cards:', cards.length);
-      
-      cards.forEach(card => {
-        // Try multiple ways to get the title
-        let title = null;
-        
-        // Method 1: h3.heading--base--xl span.event-card__title
-        let titleEl = card.querySelector('h3.heading--base--xl span.event-card__title');
-        if (titleEl) title = titleEl.textContent?.trim();
-        
-        // Method 2: Any .event-card__title
-        if (!title) {
-          titleEl = card.querySelector('.event-card__title');
-          if (titleEl) title = titleEl.textContent?.trim();
-        }
-        
-        // Method 3: aria-label on article
-        if (!title) {
-          const ariaLabel = card.getAttribute('aria-label');
-          if (ariaLabel && ariaLabel.includes('Event:')) {
-            title = ariaLabel.replace('Event:', '').trim();
-          }
-        }
-        
-        if (!title) return;
-        
-        // Skip "Best of 2025" type headers
-        if (title === 'Best of 2025') return;
-        
-        // Get time from p.text-sm or any p with time pattern
-        let time = 'See website';
-        const timeEl = card.querySelector('p.text-sm');
-        if (timeEl) {
-          const timeText = timeEl.textContent?.trim();
-          if (timeText && /\d{1,2}:\d{2}/.test(timeText)) {
-            time = timeText;
-          }
-        }
-        
-        // Get URL from the main link
-        const linkEl = card.querySelector('a[href*="/whats-on/"]');
-        const filmUrl = linkEl?.href || '';
-        
-        // Skip non-film events
-        const skipWords = ['exhibition', 'game worlds', 'story of the moving image', 'talk', 'workshop', 'visit'];
-        const titleLower = title.toLowerCase();
-        if (skipWords.some(word => titleLower.includes(word))) return;
-        
-        items.push({ title, time, url: filmUrl });
-      });
-      
-      return items;
     });
     
-    // Group by title in case same film has multiple times
+    if (!response.ok) {
+      throw new Error(`API returned ${response.status}`);
+    }
+    
+    const data = await response.json();
+    
+    // Group sessions by film title
     const filmMap = new Map();
-    for (const film of films) {
-      if (filmMap.has(film.title)) {
-        filmMap.get(film.title).times.push(film.time);
+    
+    for (const item of data) {
+      // Only include films
+      if (!item.event_type || item.event_type.name !== 'Film') continue;
+      
+      const title = item.event?.title;
+      if (!title) continue;
+      
+      // Extract time from start_datetime (e.g., "2025-12-30T15:30:00+11:00")
+      let time = 'See website';
+      if (item.start_datetime) {
+        const dateObj = new Date(item.start_datetime);
+        const hours = dateObj.getHours();
+        const mins = dateObj.getMinutes();
+        const ampm = hours >= 12 ? 'pm' : 'am';
+        const hour12 = hours % 12 || 12;
+        time = mins > 0 ? `${hour12}:${mins.toString().padStart(2, '0')}${ampm}` : `${hour12}${ampm}`;
+      }
+      
+      // Build URL
+      const filmUrl = item.event?.url 
+        ? `https://www.acmi.net.au${item.event.url}` 
+        : websiteUrl;
+      
+      if (filmMap.has(title)) {
+        filmMap.get(title).times.push(time);
       } else {
-        filmMap.set(film.title, {
-          title: film.title,
-          times: [film.time],
-          url: film.url
+        filmMap.set(title, {
+          title,
+          times: [time],
+          url: filmUrl
         });
       }
     }
@@ -221,7 +180,7 @@ async function scrapeACMI(page) {
     console.error('  ACMI scrape error:', error.message);
   }
   
-  return { cinema: 'ACMI', url, sessions };
+  return { cinema: 'ACMI', url: websiteUrl, sessions };
 }
 
 async function scrapeBrunswickPictureHouse(page) {
