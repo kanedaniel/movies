@@ -430,12 +430,12 @@
               }
               
               const meta = [];
-              if (session.year) meta.push(session.year);
+              if (session.year) meta.push(`<span>${session.year}</span>`);
               if (session.runtime) {
                 const hours = Math.floor(session.runtime / 60);
                 const mins = session.runtime % 60;
                 const runtimeStr = hours > 0 ? `${hours}h ${mins.toString().padStart(2, '0')}m` : `${mins}m`;
-                meta.push(runtimeStr);
+                meta.push(`<span>${runtimeStr}</span>`);
               }
               if (session.rating) meta.push(`<span class="rating">★ ${session.rating.toFixed(1)}</span>`);
               
