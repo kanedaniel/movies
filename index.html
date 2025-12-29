@@ -97,6 +97,36 @@
       border-bottom: 1px solid var(--border);
     }
     
+    .search-container {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      padding: 0.75rem 1rem;
+      background: var(--bg-card);
+      border-bottom: 1px solid var(--border);
+    }
+    
+    .search-input {
+      width: 100%;
+      max-width: 400px;
+      padding: 0.6rem 1rem;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.9rem;
+      background: var(--bg-dark);
+      border: 1px solid var(--border);
+      color: var(--text);
+      outline: none;
+      transition: border-color 0.2s;
+    }
+    
+    .search-input::placeholder {
+      color: var(--text-dim);
+    }
+    
+    .search-input:focus {
+      border-color: var(--gold-dim);
+    }
+    
     .cinema-toggle {
       font-family: 'JetBrains Mono', monospace;
       font-size: 0.75rem;
@@ -447,12 +477,16 @@
   <header>
     <h1>What's on at the movies&nbsp;today?</h1>
     <div class="date-banner" id="date-banner">Loading...</div>
-    <p class="site-description">A site what's got Melbourne movie times built by Kane Daniel. Always confirm session times on the cinema website before heading out. DM me bugs and feature requests on <a href="https://www.instagram.com/normal_lifter/" target="_blank" rel="noopener">IG</a>. Scraping the Astor is only working semi-reliably at the moment. Working on it.</p>
+    <p class="site-description">A site what's got Melbourne movie times built by Kane Daniel. Always confirm session times on the cinema website before heading out. DM me bugs and feature requests on <a href="https://www.instagram.com/normal_lifter/" target="_blank" rel="noopener">IG</a>.</p>
   </header>
   
   <nav class="cinema-nav" id="cinema-nav">
     <!-- Populated by JavaScript -->
   </nav>
+  
+  <div class="search-container">
+    <input type="text" class="search-input" id="film-search" placeholder="Search films...">
+  </div>
   
   <main id="main">
     <div class="loading">Loading session times</div>
@@ -578,7 +612,7 @@
                 return `<span class="film-time ${isGeneric ? 'see-website' : ''}">${esc(t)}</span>`;
               }).join('');
               
-              html += `<article class="film-card ${isDouble ? 'double-feature' : ''}">
+              html += `<article class="film-card ${isDouble ? 'double-feature' : ''}" data-title="${esc(session.title.toLowerCase())}">
                 ${isDouble ? '<span class="double-feature-label">Double Feature</span>' : ''}
                 ${poster}
                 <div class="film-info">
@@ -651,6 +685,45 @@
       d.textContent = text;
       return d.innerHTML;
     }
+    
+    // Search functionality
+    document.getElementById('film-search').addEventListener('input', (e) => {
+      const query = e.target.value.toLowerCase().trim();
+      const filmCards = document.querySelectorAll('.film-card');
+      const cinemaSections = document.querySelectorAll('.cinema-section');
+      
+      filmCards.forEach(card => {
+        const title = card.dataset.title || '';
+        if (query === '' || title.includes(query)) {
+          card.style.display = '';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+      
+      // Hide cinema sections with no visible films
+      cinemaSections.forEach(section => {
+        const visibleFilms = section.querySelectorAll('.film-card:not([style*="display: none"])');
+        const filmList = section.querySelector('.film-list');
+        const moreBtn = section.querySelector('.show-more-btn');
+        
+        // When searching, expand all to show results
+        if (query !== '' && filmList) {
+          filmList.classList.remove('collapsed');
+          filmList.classList.add('expanded');
+          if (moreBtn) moreBtn.textContent = 'LESS ▲';
+        }
+        
+        // Don't hide sections that are already hidden by cinema toggle
+        if (!section.classList.contains('hidden')) {
+          if (visibleFilms.length === 0 && query !== '') {
+            section.style.display = 'none';
+          } else {
+            section.style.display = '';
+          }
+        }
+      });
+    });
     
     loadSessions();
   </script>
