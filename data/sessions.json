@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2025-12-29T03:14:30.517Z",
+  "generatedAt": "2025-12-29T05:38:27.884Z",
   "date": "Monday 29 December 2025",
   "cinemas": [
     {
@@ -14,7 +14,7 @@
           "url": "https://www.acmi.net.au/whats-on/best-of-2025/frankenstein/",
           "overview": "Dr. Victor Frankenstein, a brilliant but egotistical scientist, brings a creature to life in a monstrous experiment that ultimately leads to the undoing of both the creator and his tragic creation.",
           "posterPath": "https://image.tmdb.org/t/p/w300/g4JtvGlQO7DByTI6frUobqvSL3R.jpg",
-          "rating": 7.711,
+          "rating": 7.712,
           "year": "2025",
           "runtime": 150
         },
@@ -88,18 +88,6 @@
           "overview": "When a twenty-something retail clerk meets a rising popstar, he takes the opportunity to edge his way into the in-crowd. But as the line between friend and fan blurs beyond recognition, access and proximity become a matter of life and death.",
           "posterPath": "https://image.tmdb.org/t/p/w300/remyTlj6bJqoSStgjn3EwyOcki7.jpg",
           "rating": 6.583,
-          "year": "2025",
-          "runtime": 100
-        },
-        {
-          "title": "Peak Everything",
-          "times": [
-            "13:00"
-          ],
-          "url": "https://eclipse-cinema.com.au/session-time/",
-          "overview": "Adam is a kind-hearted kennel-owner. Hypersensitive and borderline depressed, Adam orders a therapeutic solar lamp. Through the lamp’s supplier's technical support line, he meets Tina, a radiant woman with a voice that soothes all of his worries. This unexpected encounter changes everything: Earth trembles, and hearts explode… It's love!",
-          "posterPath": "https://image.tmdb.org/t/p/w300/6aq7flJkxR8HStDrSc95lcDe84Q.jpg",
-          "rating": 6.5,
           "year": "2025",
           "runtime": 100
         },
@@ -279,7 +267,7 @@
           "url": "https://www.cinemanova.com.au/films/the-housemaid",
           "overview": "Trying to escape her past, Millie Calloway accepts a job as a live-in housemaid for the wealthy Nina and Andrew Winchester. But what begins as a dream job quickly unravels into something far more dangerous—a sexy, seductive game of secrets, scandal, and power.",
           "posterPath": "https://image.tmdb.org/t/p/w300/cWsBscZzwu5brg9YjNkGewRUvJX.jpg",
-          "rating": 7.7,
+          "rating": 7.715,
           "year": "2025",
           "runtime": 131
         },
@@ -310,7 +298,7 @@
           "url": "https://www.cinemanova.com.au/films/springsteen-deliver-me-from-nowhere",
           "overview": "Bruce Springsteen, a young musician on the cusp of global superstardom, struggles to reconcile the pressures of success with the ghosts of his past.",
           "posterPath": "https://image.tmdb.org/t/p/w300/csBV3eq4RDjNg1acNQ8kwOZyPlZ.jpg",
-          "rating": 6.921,
+          "rating": 6.923,
           "year": "2025",
           "runtime": 120
         },
@@ -355,7 +343,7 @@
           "url": "https://www.cinemanova.com.au/films/bugonia",
           "overview": "Two conspiracy obsessed young men kidnap the high-powered CEO of a major company, convinced that she is an alien intent on destroying planet Earth.",
           "posterPath": "https://image.tmdb.org/t/p/w300/oxgsAQDAAxA92mFGYCZllgWkH9J.jpg",
-          "rating": 7.407,
+          "rating": 7.409,
           "year": "2025",
           "runtime": 119
         },
@@ -492,7 +480,7 @@
           "url": "https://www.cinemanova.com.au/films/die-my-love",
           "overview": "Grace and her partner Jackson move into an old country house. She pursues her dream of writing, and the couple welcome a baby soon after. However, with Jackson frequently absent, and the pressures of domestic life weighing on her, Grace begins to unravel, leaving a path of destruction in her wake.",
           "posterPath": "https://image.tmdb.org/t/p/w300/kajpShbFhOdpl6yCrLezMrr9tB4.jpg",
-          "rating": 6.337,
+          "rating": 6.3,
           "year": "2025",
           "runtime": 119
         },
@@ -517,7 +505,7 @@
           "url": "https://www.cinemanova.com.au/films/frankenstein",
           "overview": "Dr. Victor Frankenstein, a brilliant but egotistical scientist, brings a creature to life in a monstrous experiment that ultimately leads to the undoing of both the creator and his tragic creation.",
           "posterPath": "https://image.tmdb.org/t/p/w300/g4JtvGlQO7DByTI6frUobqvSL3R.jpg",
-          "rating": 7.711,
+          "rating": 7.712,
           "year": "2025",
           "runtime": 150
         },
@@ -567,25 +555,23 @@
         {
           "title": "The Housemaid",
           "times": [
-            "3:20 pm",
             "6:10 pm",
             "9:00 pm",
             "9:00 pm"
           ],
-          "url": "https://www.lidocinemas.com.au/tickets?c=0000000003&s=99151",
+          "url": "https://www.lidocinemas.com.au/tickets?c=0000000003&s=99162",
           "overview": "Trying to escape her past, Millie Calloway accepts a job as a live-in housemaid for the wealthy Nina and Andrew Winchester. But what begins as a dream job quickly unravels into something far more dangerous—a sexy, seductive game of secrets, scandal, and power.",
           "posterPath": "https://image.tmdb.org/t/p/w300/cWsBscZzwu5brg9YjNkGewRUvJX.jpg",
-          "rating": 7.7,
+          "rating": 7.715,
           "year": "2025",
           "runtime": 131
         },
         {
           "title": "Rental Family",
           "times": [
-            "3:30 pm",
             "6:00 pm"
           ],
-          "url": "https://www.lidocinemas.com.au/tickets?c=0000000003&s=99152",
+          "url": "https://www.lidocinemas.com.au/tickets?c=0000000003&s=99163",
           "overview": "An American actor in Tokyo struggles to find purpose until he lands an unusual gig: working for a Japanese 'rental family' agency, playing stand-in roles for strangers. As he immerses himself in his clients' worlds, he begins to form genuine bonds that blur the lines between performance and reality.",
           "posterPath": "https://image.tmdb.org/t/p/w300/dGRZ55srJoK6TcjPTfHe701UWq0.jpg",
           "rating": 7.5,
@@ -607,25 +593,23 @@
         {
           "title": "Anaconda",
           "times": [
-            "2:15 pm",
             "4:30 pm",
             "6:45 pm"
           ],
-          "url": "https://www.lidocinemas.com.au/tickets?c=0000000003&s=99136",
+          "url": "https://www.lidocinemas.com.au/tickets?c=0000000003&s=99149",
           "overview": "A group of friends facing mid-life crises head to the rainforest with the intention of remaking their favorite movie from their youth, only to find themselves in a fight for their lives against natural disasters, giant snakes and violent criminals.",
           "posterPath": "https://image.tmdb.org/t/p/w300/5MDnvvkOqthhE5gQebzkcOhD1p5.jpg",
-          "rating": 6.455,
+          "rating": 6.569,
           "year": "2025",
           "runtime": 100
         },
         {
           "title": "Sentimental Value",
           "times": [
-            "2:40 pm",
             "5:30 pm",
             "8:20 pm"
           ],
-          "url": "https://www.lidocinemas.com.au/tickets?c=0000000003&s=99135",
+          "url": "https://www.lidocinemas.com.au/tickets?c=0000000003&s=99148",
           "overview": "Sisters Nora and Agnes reunite with their estranged father, the charismatic Gustav, a once-renowned director who offers stage actress Nora a role in what he hopes will be his comeback film. When Nora turns it down, she soon discovers he has given her part to an eager young Hollywood star.",
           "posterPath": "https://image.tmdb.org/t/p/w300/dNy7iCibnVTJuvosArcDEdbruBT.jpg",
           "rating": 7.576,
@@ -645,18 +629,6 @@
           "runtime": 107
         },
         {
-          "title": "Avatar: Fire and Ash",
-          "times": [
-            "3:30 pm"
-          ],
-          "url": "https://www.lidocinemas.com.au/tickets?c=0000000003&s=99153",
-          "overview": "In the wake of the devastating war against the RDA and the loss of their eldest son, Jake Sully and Neytiri face a new threat on Pandora: the Ash People, a violent and power-hungry Na'vi tribe led by the ruthless Varang. Jake's family must fight for their survival and the future of Pandora in a conflict that pushes them to their emotional and physical limits.",
-          "posterPath": "https://image.tmdb.org/t/p/w300/g96wHxU7EnoIFwemb2RgohIXrgW.jpg",
-          "rating": 7.387,
-          "year": "2025",
-          "runtime": 198
-        },
-        {
           "title": "Nuremberg",
           "times": [
             "5:40 pm"
@@ -667,19 +639,6 @@
           "rating": 7.293,
           "year": "2025",
           "runtime": 148
-        },
-        {
-          "title": "Urchin",
-          "times": [
-            "3:30 pm",
-            "8:40 pm"
-          ],
-          "url": "https://www.lidocinemas.com.au/tickets?c=0000000003&s=99150",
-          "overview": "Mike, a rough sleeper in London, is trapped in a cycle of self-destruction as he attempts to turn his life around. Along the way, he encounters unexpected chances for a fresh start.",
-          "posterPath": "https://image.tmdb.org/t/p/w300/zc8n3hm3S2VxFxlNH1MNN28LVMa.jpg",
-          "rating": 6.817,
-          "year": "2025",
-          "runtime": 100
         },
         {
           "title": "One Battle After Another",
@@ -694,28 +653,16 @@
           "runtime": 162
         },
         {
-          "title": "Bugonia",
+          "title": "Urchin",
           "times": [
-            "3:10 pm"
+            "8:40 pm"
           ],
-          "url": "https://www.lidocinemas.com.au/tickets?c=0000000003&s=99154",
-          "overview": "Two conspiracy obsessed young men kidnap the high-powered CEO of a major company, convinced that she is an alien intent on destroying planet Earth.",
-          "posterPath": "https://image.tmdb.org/t/p/w300/oxgsAQDAAxA92mFGYCZllgWkH9J.jpg",
-          "rating": 7.407,
+          "url": "https://www.lidocinemas.com.au/tickets?c=0000000003&s=99155",
+          "overview": "Mike, a rough sleeper in London, is trapped in a cycle of self-destruction as he attempts to turn his life around. Along the way, he encounters unexpected chances for a fresh start.",
+          "posterPath": "https://image.tmdb.org/t/p/w300/zc8n3hm3S2VxFxlNH1MNN28LVMa.jpg",
+          "rating": 6.817,
           "year": "2025",
-          "runtime": 119
-        },
-        {
-          "title": "Yi Yi (2000) – 25th Anniversary 4K Restoration",
-          "times": [
-            "2:00 pm"
-          ],
-          "url": "https://www.lidocinemas.com.au/tickets?c=0000000003&s=99137",
-          "overview": "Each member of a Taipei family asks hard questions about life's meaning as they experience everyday quandaries. NJ is morose: his brother owes him money, his mother-in-law is in a coma, his wife suffers a spiritual crisis when she finds her life a blank and his business partners make bad decisions.",
-          "posterPath": "https://image.tmdb.org/t/p/w300/mR8dSQZI8X6Z1NClJhFrtJp636z.jpg",
-          "rating": 7.917,
-          "year": "2000",
-          "runtime": 174
+          "runtime": 100
         },
         {
           "title": "Eternity",
@@ -737,7 +684,7 @@
           "url": "https://www.lidocinemas.com.au/tickets?c=0000000003&s=99156",
           "overview": "Grace and her partner Jackson move into an old country house. She pursues her dream of writing, and the couple welcome a baby soon after. However, with Jackson frequently absent, and the pressures of domestic life weighing on her, Grace begins to unravel, leaving a path of destruction in her wake.",
           "posterPath": "https://image.tmdb.org/t/p/w300/kajpShbFhOdpl6yCrLezMrr9tB4.jpg",
-          "rating": 6.339,
+          "rating": 6.3,
           "year": "2025",
           "runtime": 119
         },
@@ -774,8 +721,6 @@
         {
           "title": "Avatar: Fire and Ash",
           "times": [
-            "2:00 pm",
-            "3:45 pm",
             "6:00 pm",
             "7:45 pm",
             "8:30 pm",
@@ -791,7 +736,6 @@
         {
           "title": "Anaconda",
           "times": [
-            "3:30 pm",
             "4:40 pm",
             "6:00 pm",
             "7:00 pm",
@@ -800,42 +744,39 @@
           "url": "https://www.hoyts.com.au/movies/anaconda",
           "overview": "A group of friends facing mid-life crises head to the rainforest with the intention of remaking their favorite movie from their youth, only to find themselves in a fight for their lives against natural disasters, giant snakes and violent criminals.",
           "posterPath": "https://image.tmdb.org/t/p/w300/5MDnvvkOqthhE5gQebzkcOhD1p5.jpg",
-          "rating": 6.455,
+          "rating": 6.569,
           "year": "2025",
           "runtime": 100
         },
         {
-          "title": "The SpongeBob Movie: Search for Squarepants",
-          "times": [
-            "2:15 pm",
-            "4:40 pm",
-            "6:30 pm"
-          ],
-          "url": "https://www.hoyts.com.au/movies/the-spongebob-movie-search-for-squarepants",
-          "overview": "Desperate to be a big guy, SpongeBob sets out to prove his bravery to Mr. Krabs by following The Flying Dutchman – a mysterious swashbuckling ghost pirate – on a seafaring adventure that takes him to the deepest depths of the deep sea, where no Sponge has gone before.",
-          "posterPath": "https://image.tmdb.org/t/p/w300/pDWYW9v8fmJdA7N0I1MOdQA3ETq.jpg",
-          "rating": 6.848,
-          "year": "2025",
-          "runtime": 96
-        },
-        {
           "title": "The Housemaid",
           "times": [
-            "3:30 pm",
             "7:00 pm",
             "8:45 pm"
           ],
           "url": "https://www.hoyts.com.au/movies/the-housemaid",
           "overview": "Trying to escape her past, Millie Calloway accepts a job as a live-in housemaid for the wealthy Nina and Andrew Winchester. But what begins as a dream job quickly unravels into something far more dangerous—a sexy, seductive game of secrets, scandal, and power.",
           "posterPath": "https://image.tmdb.org/t/p/w300/cWsBscZzwu5brg9YjNkGewRUvJX.jpg",
-          "rating": 7.7,
+          "rating": 7.715,
           "year": "2025",
           "runtime": 131
         },
         {
+          "title": "The SpongeBob Movie: Search for Squarepants",
+          "times": [
+            "4:40 pm",
+            "6:30 pm"
+          ],
+          "url": "https://www.hoyts.com.au/movies/the-spongebob-movie-search-for-squarepants",
+          "overview": "Desperate to be a big guy, SpongeBob sets out to prove his bravery to Mr. Krabs by following The Flying Dutchman – a mysterious swashbuckling ghost pirate – on a seafaring adventure that takes him to the deepest depths of the deep sea, where no Sponge has gone before.",
+          "posterPath": "https://image.tmdb.org/t/p/w300/pDWYW9v8fmJdA7N0I1MOdQA3ETq.jpg",
+          "rating": 6.8,
+          "year": "2025",
+          "runtime": 96
+        },
+        {
           "title": "Zootopia 2",
           "times": [
-            "2:10 pm",
             "4:30 pm",
             "6:15 pm",
             "7:00 pm"
@@ -850,7 +791,6 @@
         {
           "title": "Wicked: For Good",
           "times": [
-            "3:20 pm",
             "8:45 pm"
           ],
           "url": "https://www.hoyts.com.au/movies/wicked-for-good",
@@ -868,7 +808,7 @@
           "url": "https://www.hoyts.com.au/movies/five-nights-at-freddys-2",
           "overview": "One year since the supernatural nightmare at Freddy Fazbear's Pizza, the stories about what transpired there have been twisted into a campy local legend, inspiring the town's first ever Fazfest. With the truth kept from her, Abby sneaks out to reconnect with Freddy, Bonnie, Chica, and Foxy, setting into motion a terrifying series of events that will reveal dark secrets about the real origin of Freddy's, and unleash a decades-hidden horror.",
           "posterPath": "https://image.tmdb.org/t/p/w300/udAxQEORq2I5wxI97N2TEqdhzBE.jpg",
-          "rating": 6.8,
+          "rating": 6.869,
           "year": "2025",
           "runtime": 104
         },
@@ -890,6 +830,65 @@
     {
       "cinema": "The Astor Theatre",
       "url": "https://www.astortheatre.net.au/",
+      "sessions": [
+        {
+          "title": "Seven Samurai - 70th Anniversary 4K Restoration",
+          "times": [
+            "2pm"
+          ],
+          "url": "https://www.astortheatre.net.au/sessions/2025-12-29-1400",
+          "isDoubleFeature": false,
+          "overview": "A samurai answers a village's request for protection after he falls on hard times. The town needs protection from bandits, so the samurai gathers six others to help him teach the people how to defend themselves, and the villagers provide the soldiers with food.",
+          "posterPath": "https://image.tmdb.org/t/p/w300/lOMGc8bnSwQhS4XyE1S99uH8NXf.jpg",
+          "rating": 8.452,
+          "year": "1954",
+          "runtime": 207
+        },
+        {
+          "title": "Alien + Aliens - Special Edition",
+          "times": [
+            "6:30pm"
+          ],
+          "url": "https://www.astortheatre.net.au/sessions/2025-12-29-1830",
+          "isDoubleFeature": true,
+          "film1": "Alien",
+          "film2": "Aliens - Special Edition",
+          "films": [
+            {
+              "title": "Alien",
+              "overview": "During its return to the earth, commercial spaceship Nostromo intercepts a distress signal from a distant planet. When a three-member team of the crew discovers a chamber containing thousands of eggs on the planet, a creature inside one of the eggs attacks an explorer. The entire crew is unaware of the impending nightmare set to descend upon them when the alien parasite planted inside its unfortunate host is birthed.",
+              "posterPath": "https://image.tmdb.org/t/p/w300/vfrQk5IPloGg1v9Rzbh2Eg3VGyM.jpg",
+              "rating": 8.166,
+              "year": "1979",
+              "runtime": 117,
+              "tmdbId": 348
+            },
+            {
+              "title": "Aliens - Special Edition",
+              "overview": "Ripley, the sole survivor of the Nostromo's deadly encounter with the monstrous Alien, returns to Earth after drifting through space in hypersleep for 57 years. Although her story is initially met with skepticism, she agrees to accompany a team of Colonial Marines back to LV-426.",
+              "posterPath": "https://image.tmdb.org/t/p/w300/r1x5JGpyqZU8PYhbs4UcrO1Xb6x.jpg",
+              "rating": 7.955,
+              "year": "1986",
+              "runtime": 137,
+              "tmdbId": 679
+            }
+          ],
+          "posterPath": "https://image.tmdb.org/t/p/w300/vfrQk5IPloGg1v9Rzbh2Eg3VGyM.jpg",
+          "overview": "During its return to the earth, commercial spaceship Nostromo intercepts a distress signal from a distant planet. When a three-member team of the crew discovers a chamber containing thousands of eggs on the planet, a creature inside one of the eggs attacks an explorer. The entire crew is unaware of the impending nightmare set to descend upon them when the alien parasite planted inside its unfortunate host is birthed.",
+          "runtime": 254,
+          "year": "1979",
+          "rating": 8.060500000000001
+        }
+      ]
+    },
+    {
+      "cinema": "Palace Como",
+      "url": "https://www.palacecinemas.com.au/cinemas/palace-cinema-como",
+      "sessions": []
+    },
+    {
+      "cinema": "Palace Kino",
+      "url": "https://www.palacecinemas.com.au/cinemas/the-kino-melbourne",
       "sessions": []
     }
   ]
