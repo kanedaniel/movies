@@ -69,6 +69,23 @@
       border: 1px solid var(--border);
     }
     
+    .site-description {
+      max-width: 500px;
+      margin: 1.5rem auto 0;
+      font-size: 0.85rem;
+      color: var(--text-dim);
+      line-height: 1.5;
+    }
+    
+    .site-description a {
+      color: var(--gold);
+      text-decoration: none;
+    }
+    
+    .site-description a:hover {
+      text-decoration: underline;
+    }
+    
     /* Cinema filter nav */
     .cinema-nav {
       display: flex;
@@ -430,6 +447,7 @@
   <header>
     <h1>What's on at the movies&nbsp;today?</h1>
     <div class="date-banner" id="date-banner">Loading...</div>
+    <p class="site-description">A site what's got Melbourne movie times built by Kane Daniel. Always confirm session times on the cinema website before heading out. DM me bugs and feature requests on <a href="https://www.instagram.com/normal_lifter/" target="_blank" rel="noopener">IG</a>.</p>
   </header>
   
   <nav class="cinema-nav" id="cinema-nav">
@@ -443,7 +461,6 @@
   <footer>
     <p>Session data updated daily at 5am AEST</p>
     <p>Film information from <a href="https://www.themoviedb.org/" target="_blank" rel="noopener">TMDB</a></p>
-    <p style="margin-top: 1rem; font-size: 0.75rem;">Always confirm times with the cinema before heading out</p>
   </footer>
 
   <script>
