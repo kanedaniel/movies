@@ -689,15 +689,26 @@ async function scrapePalaceComo(page) {
   
   try {
     await page.goto(url, { waitUntil: 'networkidle2', timeout: 60000 });
-    await page.waitForTimeout(5000);
+    await page.waitForTimeout(8000); // Wait longer for React to render
     
-    // Wait for film cards to load
-    try {
-      await page.waitForSelector('a[href*="/movies/"]', { timeout: 10000 });
-      console.log('  Palace content loaded');
-    } catch (e) {
-      console.log('  Waiting for content timed out, trying anyway...');
-    }
+    // Debug: log what we find
+    const debug = await page.evaluate(() => {
+      const links = document.querySelectorAll('a[href*="/movies/"]');
+      const buttons = document.querySelectorAll('button');
+      const allText = document.body.innerText.substring(0, 500);
+      return {
+        linkCount: links.length,
+        buttonCount: buttons.length,
+        sampleText: allText,
+        linkHrefs: Array.from(links).slice(0, 5).map(l => l.getAttribute('href')),
+        linkTexts: Array.from(links).slice(0, 5).map(l => l.textContent?.trim())
+      };
+    });
+    console.log('  Debug - links found:', debug.linkCount);
+    console.log('  Debug - buttons found:', debug.buttonCount);
+    console.log('  Debug - sample hrefs:', debug.linkHrefs);
+    console.log('  Debug - sample texts:', debug.linkTexts);
+    console.log('  Debug - page text sample:', debug.sampleText.substring(0, 200));
     
     const films = await page.evaluate((baseUrl) => {
       const items = [];
