@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2025-12-29T00:07:16.312Z",
+  "generatedAt": "2025-12-29T01:00:00.304Z",
   "date": "Monday 29 December 2025",
   "cinemas": [
     {
@@ -10,7 +10,274 @@
     {
       "cinema": "Brunswick Picture House",
       "url": "https://www.brunswickpicturehouse.com.au/now-showing/",
-      "sessions": []
+      "sessions": [
+        {
+          "title": "Sentimental Value",
+          "times": [
+            "3:30 PM",
+            "6:00 PM"
+          ],
+          "url": "https://www.brunswickpicturehouse.com.au/now-showing/",
+          "overview": "Sisters Nora and Agnes reunite with their estranged father, the charismatic Gustav, a once-renowned director who offers stage actress Nora a role in what he hopes will be his comeback film. When Nora turns it down, she soon discovers he has given her part to an eager young Hollywood star.",
+          "posterPath": "https://image.tmdb.org/t/p/w300/dNy7iCibnVTJuvosArcDEdbruBT.jpg",
+          "rating": 7.58,
+          "year": "2025"
+        },
+        {
+          "title": "Urchin",
+          "times": [
+            "8:35 PM"
+          ],
+          "url": "https://www.brunswickpicturehouse.com.au/now-showing/",
+          "overview": "Mike, a rough sleeper in London, is trapped in a cycle of self-destruction as he attempts to turn his life around. Along the way, he encounters unexpected chances for a fresh start.",
+          "posterPath": "https://image.tmdb.org/t/p/w300/zc8n3hm3S2VxFxlNH1MNN28LVMa.jpg",
+          "rating": 6.817,
+          "year": "2025"
+        },
+        {
+          "title": "Sentimental Value",
+          "times": [
+            "8:30 PM"
+          ],
+          "url": "https://www.brunswickpicturehouse.com.au/now-showing/",
+          "overview": "Sisters Nora and Agnes reunite with their estranged father, the charismatic Gustav, a once-renowned director who offers stage actress Nora a role in what he hopes will be his comeback film. When Nora turns it down, she soon discovers he has given her part to an eager young Hollywood star.",
+          "posterPath": "https://image.tmdb.org/t/p/w300/dNy7iCibnVTJuvosArcDEdbruBT.jpg",
+          "rating": 7.58,
+          "year": "2025"
+        },
+        {
+          "title": "Song Sung Blue",
+          "times": [
+            "6:00 PM"
+          ],
+          "url": "https://www.brunswickpicturehouse.com.au/now-showing/",
+          "overview": "Based on a true story, two down-on-their-luck musicians form a joyous Neil Diamond tribute band, proving it's never too late to find love and follow your dreams.",
+          "posterPath": "https://image.tmdb.org/t/p/w300/3HsIAbHWbFDUbY2jfj4wqEjGC3b.jpg",
+          "rating": 7,
+          "year": "2025"
+        },
+        {
+          "title": "Sentimental Value",
+          "times": [
+            "12:30 PM",
+            "5:15 PM"
+          ],
+          "url": "https://www.brunswickpicturehouse.com.au/now-showing/",
+          "overview": "Sisters Nora and Agnes reunite with their estranged father, the charismatic Gustav, a once-renowned director who offers stage actress Nora a role in what he hopes will be his comeback film. When Nora turns it down, she soon discovers he has given her part to an eager young Hollywood star.",
+          "posterPath": "https://image.tmdb.org/t/p/w300/dNy7iCibnVTJuvosArcDEdbruBT.jpg",
+          "rating": 7.58,
+          "year": "2025"
+        },
+        {
+          "title": "Song Sung Blue",
+          "times": [
+            "7:50 PM"
+          ],
+          "url": "https://www.brunswickpicturehouse.com.au/now-showing/",
+          "overview": "Based on a true story, two down-on-their-luck musicians form a joyous Neil Diamond tribute band, proving it's never too late to find love and follow your dreams.",
+          "posterPath": "https://image.tmdb.org/t/p/w300/3HsIAbHWbFDUbY2jfj4wqEjGC3b.jpg",
+          "rating": 7,
+          "year": "2025"
+        },
+        {
+          "title": "Urchin",
+          "times": [
+            "3:10 PM"
+          ],
+          "url": "https://www.brunswickpicturehouse.com.au/now-showing/",
+          "overview": "Mike, a rough sleeper in London, is trapped in a cycle of self-destruction as he attempts to turn his life around. Along the way, he encounters unexpected chances for a fresh start.",
+          "posterPath": "https://image.tmdb.org/t/p/w300/zc8n3hm3S2VxFxlNH1MNN28LVMa.jpg",
+          "rating": 6.817,
+          "year": "2025"
+        },
+        {
+          "title": "Sentimental Value",
+          "times": [
+            "8:35 PM"
+          ],
+          "url": "https://www.brunswickpicturehouse.com.au/now-showing/",
+          "overview": "Sisters Nora and Agnes reunite with their estranged father, the charismatic Gustav, a once-renowned director who offers stage actress Nora a role in what he hopes will be his comeback film. When Nora turns it down, she soon discovers he has given her part to an eager young Hollywood star.",
+          "posterPath": "https://image.tmdb.org/t/p/w300/dNy7iCibnVTJuvosArcDEdbruBT.jpg",
+          "rating": 7.58,
+          "year": "2025"
+        },
+        {
+          "title": "Song Sung Blue",
+          "times": [
+            "6:00 PM"
+          ],
+          "url": "https://www.brunswickpicturehouse.com.au/now-showing/",
+          "overview": "Based on a true story, two down-on-their-luck musicians form a joyous Neil Diamond tribute band, proving it's never too late to find love and follow your dreams.",
+          "posterPath": "https://image.tmdb.org/t/p/w300/3HsIAbHWbFDUbY2jfj4wqEjGC3b.jpg",
+          "rating": 7,
+          "year": "2025"
+        },
+        {
+          "title": "Urchin",
+          "times": [
+            "4:00 PM"
+          ],
+          "url": "https://www.brunswickpicturehouse.com.au/now-showing/",
+          "overview": "Mike, a rough sleeper in London, is trapped in a cycle of self-destruction as he attempts to turn his life around. Along the way, he encounters unexpected chances for a fresh start.",
+          "posterPath": "https://image.tmdb.org/t/p/w300/zc8n3hm3S2VxFxlNH1MNN28LVMa.jpg",
+          "rating": 6.817,
+          "year": "2025"
+        },
+        {
+          "title": "The SpongeBob Movie: Search for Squarepants",
+          "times": [
+            "11:30 AM"
+          ],
+          "url": "https://www.brunswickpicturehouse.com.au/now-showing/",
+          "overview": "Desperate to be a big guy, SpongeBob sets out to prove his bravery to Mr. Krabs by following The Flying Dutchman – a mysterious swashbuckling ghost pirate – on a seafaring adventure that takes him to the deepest depths of the deep sea, where no Sponge has gone before.",
+          "posterPath": "https://image.tmdb.org/t/p/w300/pDWYW9v8fmJdA7N0I1MOdQA3ETq.jpg",
+          "rating": 6.848,
+          "year": "2025"
+        },
+        {
+          "title": "Sentimental Value",
+          "times": [
+            "6:05 PM"
+          ],
+          "url": "https://www.brunswickpicturehouse.com.au/now-showing/",
+          "overview": "Sisters Nora and Agnes reunite with their estranged father, the charismatic Gustav, a once-renowned director who offers stage actress Nora a role in what he hopes will be his comeback film. When Nora turns it down, she soon discovers he has given her part to an eager young Hollywood star.",
+          "posterPath": "https://image.tmdb.org/t/p/w300/dNy7iCibnVTJuvosArcDEdbruBT.jpg",
+          "rating": 7.58,
+          "year": "2025"
+        },
+        {
+          "title": "Song Sung Blue",
+          "times": [
+            "8:40 PM"
+          ],
+          "url": "https://www.brunswickpicturehouse.com.au/now-showing/",
+          "overview": "Based on a true story, two down-on-their-luck musicians form a joyous Neil Diamond tribute band, proving it's never too late to find love and follow your dreams.",
+          "posterPath": "https://image.tmdb.org/t/p/w300/3HsIAbHWbFDUbY2jfj4wqEjGC3b.jpg",
+          "rating": 7,
+          "year": "2025"
+        },
+        {
+          "title": "Urchin",
+          "times": [
+            "4:00 PM"
+          ],
+          "url": "https://www.brunswickpicturehouse.com.au/now-showing/",
+          "overview": "Mike, a rough sleeper in London, is trapped in a cycle of self-destruction as he attempts to turn his life around. Along the way, he encounters unexpected chances for a fresh start.",
+          "posterPath": "https://image.tmdb.org/t/p/w300/zc8n3hm3S2VxFxlNH1MNN28LVMa.jpg",
+          "rating": 6.817,
+          "year": "2025"
+        },
+        {
+          "title": "Sentimental Value",
+          "times": [
+            "8:00 PM"
+          ],
+          "url": "https://www.brunswickpicturehouse.com.au/now-showing/",
+          "overview": "Sisters Nora and Agnes reunite with their estranged father, the charismatic Gustav, a once-renowned director who offers stage actress Nora a role in what he hopes will be his comeback film. When Nora turns it down, she soon discovers he has given her part to an eager young Hollywood star.",
+          "posterPath": "https://image.tmdb.org/t/p/w300/dNy7iCibnVTJuvosArcDEdbruBT.jpg",
+          "rating": 7.58,
+          "year": "2025"
+        },
+        {
+          "title": "Song Sung Blue",
+          "times": [
+            "5:25 PM"
+          ],
+          "url": "https://www.brunswickpicturehouse.com.au/now-showing/",
+          "overview": "Based on a true story, two down-on-their-luck musicians form a joyous Neil Diamond tribute band, proving it's never too late to find love and follow your dreams.",
+          "posterPath": "https://image.tmdb.org/t/p/w300/3HsIAbHWbFDUbY2jfj4wqEjGC3b.jpg",
+          "rating": 7,
+          "year": "2025"
+        },
+        {
+          "title": "Urchin",
+          "times": [
+            "3:25 PM"
+          ],
+          "url": "https://www.brunswickpicturehouse.com.au/now-showing/",
+          "overview": "Mike, a rough sleeper in London, is trapped in a cycle of self-destruction as he attempts to turn his life around. Along the way, he encounters unexpected chances for a fresh start.",
+          "posterPath": "https://image.tmdb.org/t/p/w300/zc8n3hm3S2VxFxlNH1MNN28LVMa.jpg",
+          "rating": 6.817,
+          "year": "2025"
+        },
+        {
+          "title": "Sentimental Value",
+          "times": [
+            "6:00 PM"
+          ],
+          "url": "https://www.brunswickpicturehouse.com.au/now-showing/",
+          "overview": "Sisters Nora and Agnes reunite with their estranged father, the charismatic Gustav, a once-renowned director who offers stage actress Nora a role in what he hopes will be his comeback film. When Nora turns it down, she soon discovers he has given her part to an eager young Hollywood star.",
+          "posterPath": "https://image.tmdb.org/t/p/w300/dNy7iCibnVTJuvosArcDEdbruBT.jpg",
+          "rating": 7.58,
+          "year": "2025"
+        },
+        {
+          "title": "Song Sung Blue",
+          "times": [
+            "8:35 PM"
+          ],
+          "url": "https://www.brunswickpicturehouse.com.au/now-showing/",
+          "overview": "Based on a true story, two down-on-their-luck musicians form a joyous Neil Diamond tribute band, proving it's never too late to find love and follow your dreams.",
+          "posterPath": "https://image.tmdb.org/t/p/w300/3HsIAbHWbFDUbY2jfj4wqEjGC3b.jpg",
+          "rating": 7,
+          "year": "2025"
+        },
+        {
+          "title": "Sentimental Value",
+          "times": [
+            "8:30 PM"
+          ],
+          "url": "https://www.brunswickpicturehouse.com.au/now-showing/",
+          "overview": "Sisters Nora and Agnes reunite with their estranged father, the charismatic Gustav, a once-renowned director who offers stage actress Nora a role in what he hopes will be his comeback film. When Nora turns it down, she soon discovers he has given her part to an eager young Hollywood star.",
+          "posterPath": "https://image.tmdb.org/t/p/w300/dNy7iCibnVTJuvosArcDEdbruBT.jpg",
+          "rating": 7.58,
+          "year": "2025"
+        },
+        {
+          "title": "Song Sung Blue",
+          "times": [
+            "6:00 PM"
+          ],
+          "url": "https://www.brunswickpicturehouse.com.au/now-showing/",
+          "overview": "Based on a true story, two down-on-their-luck musicians form a joyous Neil Diamond tribute band, proving it's never too late to find love and follow your dreams.",
+          "posterPath": "https://image.tmdb.org/t/p/w300/3HsIAbHWbFDUbY2jfj4wqEjGC3b.jpg",
+          "rating": 7,
+          "year": "2025"
+        },
+        {
+          "title": "Sentimental Value",
+          "times": [
+            "6:00 PM"
+          ],
+          "url": "https://www.brunswickpicturehouse.com.au/now-showing/",
+          "overview": "Sisters Nora and Agnes reunite with their estranged father, the charismatic Gustav, a once-renowned director who offers stage actress Nora a role in what he hopes will be his comeback film. When Nora turns it down, she soon discovers he has given her part to an eager young Hollywood star.",
+          "posterPath": "https://image.tmdb.org/t/p/w300/dNy7iCibnVTJuvosArcDEdbruBT.jpg",
+          "rating": 7.58,
+          "year": "2025"
+        },
+        {
+          "title": "Song Sung Blue",
+          "times": [
+            "8:35 PM"
+          ],
+          "url": "https://www.brunswickpicturehouse.com.au/now-showing/",
+          "overview": "Based on a true story, two down-on-their-luck musicians form a joyous Neil Diamond tribute band, proving it's never too late to find love and follow your dreams.",
+          "posterPath": "https://image.tmdb.org/t/p/w300/3HsIAbHWbFDUbY2jfj4wqEjGC3b.jpg",
+          "rating": 7,
+          "year": "2025"
+        },
+        {
+          "title": "Urchin",
+          "times": [
+            "1:15 PM"
+          ],
+          "url": "https://www.brunswickpicturehouse.com.au/now-showing/",
+          "overview": "Mike, a rough sleeper in London, is trapped in a cycle of self-destruction as he attempts to turn his life around. Along the way, he encounters unexpected chances for a fresh start.",
+          "posterPath": "https://image.tmdb.org/t/p/w300/zc8n3hm3S2VxFxlNH1MNN28LVMa.jpg",
+          "rating": 6.817,
+          "year": "2025"
+        }
+      ]
     },
     {
       "cinema": "Eclipse Cinema",
@@ -271,7 +538,7 @@
           "url": "https://www.cinemanova.com.au/films/avatar-fire-and-ash",
           "overview": "In the wake of the devastating war against the RDA and the loss of their eldest son, Jake Sully and Neytiri face a new threat on Pandora: the Ash People, a violent and power-hungry Na'vi tribe led by the ruthless Varang. Jake's family must fight for their survival and the future of Pandora in a conflict that pushes them to their emotional and physical limits.",
           "posterPath": "https://image.tmdb.org/t/p/w300/g96wHxU7EnoIFwemb2RgohIXrgW.jpg",
-          "rating": 7.4,
+          "rating": 7.387,
           "year": "2025"
         },
         {
@@ -304,7 +571,7 @@
           "url": "https://www.cinemanova.com.au/films/train-dreams",
           "overview": "A logger leads a life of quiet grace as he experiences love and loss during an era of monumental change in early 20th-century America.",
           "posterPath": "https://image.tmdb.org/t/p/w300/l3zS4YnpOi4usyEXGJMtxSqDDyb.jpg",
-          "rating": 7.279,
+          "rating": 7.283,
           "year": "2025"
         },
         {
@@ -500,18 +767,6 @@
           "year": "2025"
         },
         {
-          "title": "Avatar: Fire and Ash",
-          "times": [
-            "11:30 am",
-            "3:30 pm"
-          ],
-          "url": "https://www.lidocinemas.com.au/tickets?c=0000000003&s=99144",
-          "overview": "In the wake of the devastating war against the RDA and the loss of their eldest son, Jake Sully and Neytiri face a new threat on Pandora: the Ash People, a violent and power-hungry Na'vi tribe led by the ruthless Varang. Jake's family must fight for their survival and the future of Pandora in a conflict that pushes them to their emotional and physical limits.",
-          "posterPath": "https://image.tmdb.org/t/p/w300/g96wHxU7EnoIFwemb2RgohIXrgW.jpg",
-          "rating": 7.4,
-          "year": "2025"
-        },
-        {
           "title": "Nuremberg",
           "times": [
             "12:30 pm",
@@ -535,6 +790,17 @@
           "year": "2025"
         },
         {
+          "title": "Avatar: Fire and Ash",
+          "times": [
+            "3:30 pm"
+          ],
+          "url": "https://www.lidocinemas.com.au/tickets?c=0000000003&s=99153",
+          "overview": "In the wake of the devastating war against the RDA and the loss of their eldest son, Jake Sully and Neytiri face a new threat on Pandora: the Ash People, a violent and power-hungry Na'vi tribe led by the ruthless Varang. Jake's family must fight for their survival and the future of Pandora in a conflict that pushes them to their emotional and physical limits.",
+          "posterPath": "https://image.tmdb.org/t/p/w300/g96wHxU7EnoIFwemb2RgohIXrgW.jpg",
+          "rating": 7.387,
+          "year": "2025"
+        },
+        {
           "title": "Urchin",
           "times": [
             "3:30 pm",
@@ -544,17 +810,6 @@
           "overview": "Mike, a rough sleeper in London, is trapped in a cycle of self-destruction as he attempts to turn his life around. Along the way, he encounters unexpected chances for a fresh start.",
           "posterPath": "https://image.tmdb.org/t/p/w300/zc8n3hm3S2VxFxlNH1MNN28LVMa.jpg",
           "rating": 6.817,
-          "year": "2025"
-        },
-        {
-          "title": "Wicked: For Good",
-          "times": [
-            "11:15 am"
-          ],
-          "url": "https://www.lidocinemas.com.au/tickets?c=0000000003&s=99143",
-          "overview": "As an angry mob rises against the Wicked Witch, Glinda and Elphaba will need to come together one final time. With their singular friendship now the fulcrum of their futures, they will need to truly see each other, with honesty and empathy, if they are to change themselves, and all of Oz, for good.",
-          "posterPath": "https://image.tmdb.org/t/p/w300/si9tolnefLSUKaqQEGz1bWArOaL.jpg",
-          "rating": 6.768,
           "year": "2025"
         },
         {
@@ -587,7 +842,7 @@
           "url": "https://www.lidocinemas.com.au/tickets?c=0000000003&s=99137",
           "overview": "Each member of a Taipei family asks hard questions about life's meaning as they experience everyday quandaries. NJ is morose: his brother owes him money, his mother-in-law is in a coma, his wife suffers a spiritual crisis when she finds her life a blank and his business partners make bad decisions.",
           "posterPath": "https://image.tmdb.org/t/p/w300/mR8dSQZI8X6Z1NClJhFrtJp636z.jpg",
-          "rating": 7.914,
+          "rating": 7.917,
           "year": "2000"
         },
         {
@@ -657,13 +912,12 @@
           "url": "https://www.hoyts.com.au/movies/avatar-fire-and-ash",
           "overview": "In the wake of the devastating war against the RDA and the loss of their eldest son, Jake Sully and Neytiri face a new threat on Pandora: the Ash People, a violent and power-hungry Na'vi tribe led by the ruthless Varang. Jake's family must fight for their survival and the future of Pandora in a conflict that pushes them to their emotional and physical limits.",
           "posterPath": "https://image.tmdb.org/t/p/w300/g96wHxU7EnoIFwemb2RgohIXrgW.jpg",
-          "rating": 7.4,
+          "rating": 7.387,
           "year": "2025"
         },
         {
           "title": "Anaconda",
           "times": [
-            "11:10 am",
             "11:45 am",
             "3:30 pm",
             "4:40 pm",
@@ -682,7 +936,6 @@
         {
           "title": "The SpongeBob Movie: Search for Squarepants",
           "times": [
-            "11:00 am",
             "1:15 pm",
             "2:15 pm",
             "4:40 pm",
@@ -765,24 +1018,12 @@
         {
           "title": "Nuremberg",
           "times": [
-            "11:00 am",
             "1:30 pm"
           ],
           "url": "https://www.hoyts.com.au/movies/nuremberg",
           "overview": "In postwar Germany, an American psychiatrist must determine whether Nazi prisoners are fit to go on trial for war crimes, and finds himself in a complex battle of intellect and ethics with Hermann Göring, Hitler's right-hand man.",
           "posterPath": "https://image.tmdb.org/t/p/w300/sxu8TsG7k06ymWL98ELEIE1EMZV.jpg",
           "rating": 7.274,
-          "year": "2025"
-        },
-        {
-          "title": "Eternity",
-          "times": [
-            "11:00 am"
-          ],
-          "url": "https://www.hoyts.com.au/movies/eternity",
-          "overview": "In an afterlife where souls have one week to decide where to spend eternity, Joan is faced with the impossible choice between the man she spent her life with and her first love, who died young and has waited decades for her to arrive.",
-          "posterPath": "https://image.tmdb.org/t/p/w300/o8pg20G67BGmQvRkXwstNre062J.jpg",
-          "rating": 7.022,
           "year": "2025"
         }
       ]
