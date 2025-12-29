@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2025-12-29T02:36:43.677Z",
+  "generatedAt": "2025-12-29T02:56:52.806Z",
   "date": "Monday 29 December 2025",
   "cinemas": [
     {
@@ -782,7 +782,6 @@
         {
           "title": "The SpongeBob Movie: Search for Squarepants",
           "times": [
-            "1:15 pm",
             "2:15 pm",
             "4:40 pm",
             "6:30 pm"
@@ -859,18 +858,6 @@
           "rating": 6.303,
           "year": "2025",
           "runtime": 212
-        },
-        {
-          "title": "Nuremberg",
-          "times": [
-            "1:30 pm"
-          ],
-          "url": "https://www.hoyts.com.au/movies/nuremberg",
-          "overview": "In postwar Germany, an American psychiatrist must determine whether Nazi prisoners are fit to go on trial for war crimes, and finds himself in a complex battle of intellect and ethics with Hermann Göring, Hitler's right-hand man.",
-          "posterPath": "https://image.tmdb.org/t/p/w300/sxu8TsG7k06ymWL98ELEIE1EMZV.jpg",
-          "rating": 7.274,
-          "year": "2025",
-          "runtime": 148
         }
       ],
       "note": "Lux sessions not listed"
