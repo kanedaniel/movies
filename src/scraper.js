@@ -251,27 +251,34 @@ async function scrapeEclipse(page) {
     const films = await page.evaluate((todayStr) => {
       const items = [];
       
-      // Find all film entries that have today's date in their class
-      // Classes look like: veezi-f-date-Mon-29-Dec
-      const todayClass = `veezi-f-date-${todayStr}`;
-      const filmEntries = document.querySelectorAll(`.veezi-filter-entry.${CSS.escape(todayClass)}`);
+      // Get all film entries and check each one for today's date
+      // Can't rely on class selector due to broken HTML from apostrophes
+      const filmEntries = document.querySelectorAll('.veezi-filter-entry');
       
       filmEntries.forEach(entry => {
+        // Check if this entry has today's date - look in class list or dropdown
+        const classStr = entry.className || '';
+        const hasDateInClass = classStr.toLowerCase().includes(todayStr.toLowerCase());
+        
+        // Also check the date dropdown for today
+        const dateSelect = entry.querySelector('select.veezi-file-date-select');
+        const hasDateInDropdown = dateSelect && 
+          Array.from(dateSelect.options).some(opt => opt.value === todayStr);
+        
+        if (!hasDateInClass && !hasDateInDropdown) return;
+        
         // Get title from the filter-film-title div
         const titleEl = entry.querySelector('.veezi-filter-film-title');
         const title = titleEl?.textContent?.trim();
         
         if (!title) return;
         
-        // Get times - only visible ones for today's date
-        // Time links have classes like: veezi-time-ST00000146-Mon-29-Dec
+        // Get times for today - check the class of each time link
         const times = [];
-        const timeClass = `veezi-time-${todayStr}`;
-        
-        entry.querySelectorAll(`a.veezi-film-purchase`).forEach(link => {
-          // Check if this time is for today (has the date class) and is visible
-          if (link.classList.toString().includes(todayStr) && 
-              link.style.display !== 'none') {
+        entry.querySelectorAll('a.veezi-film-purchase').forEach(link => {
+          // Check if this time is for today (has the date in its class)
+          const linkClass = link.className || '';
+          if (linkClass.includes(todayStr)) {
             const timeEl = link.querySelector('p');
             const time = timeEl?.textContent?.trim();
             if (time && /^\d{1,2}:\d{2}$/.test(time)) {
