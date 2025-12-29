@@ -471,11 +471,19 @@
           return nameA.localeCompare(nameB);
         });
         
+        // Load saved preferences
+        let hiddenCinemas = [];
+        try {
+          const saved = localStorage.getItem('hiddenCinemas');
+          if (saved) hiddenCinemas = JSON.parse(saved);
+        } catch (e) {}
+        
         // Build cinema nav
         let navHtml = '';
         sortedCinemas.forEach(cinema => {
           const cinemaId = cinema.cinema.toLowerCase().replace(/[^a-z0-9]/g, '-');
-          navHtml += `<button class="cinema-toggle active" data-cinema="${cinemaId}">${cinema.cinema}</button>`;
+          const isHidden = hiddenCinemas.includes(cinemaId);
+          navHtml += `<button class="cinema-toggle ${isHidden ? '' : 'active'}" data-cinema="${cinemaId}">${cinema.cinema}</button>`;
         });
         cinemaNav.innerHTML = navHtml;
         
@@ -488,6 +496,13 @@
             if (section) {
               section.classList.toggle('hidden');
             }
+            
+            // Save preference
+            try {
+              const hidden = Array.from(cinemaNav.querySelectorAll('.cinema-toggle:not(.active)'))
+                .map(b => b.dataset.cinema);
+              localStorage.setItem('hiddenCinemas', JSON.stringify(hidden));
+            } catch (e) {}
           });
         });
         
@@ -495,8 +510,9 @@
         for (const cinema of sortedCinemas) {
           const cinemaId = cinema.cinema.toLowerCase().replace(/[^a-z0-9]/g, '-');
           const hasMoreThanThree = cinema.sessions && cinema.sessions.length > 3;
+          const isHidden = hiddenCinemas.includes(cinemaId);
           
-          html += `<section class="cinema-section" id="cinema-${cinemaId}">
+          html += `<section class="cinema-section ${isHidden ? 'hidden' : ''}" id="cinema-${cinemaId}">
             <div class="cinema-header">
               <h2>${esc(cinema.cinema)}</h2>
               <a href="${esc(cinema.url)}" target="_blank" rel="noopener">Visit website →</a>
