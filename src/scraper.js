@@ -693,60 +693,57 @@ async function scrapePalaceComo(page) {
     
     // Wait for film cards to load
     try {
-      await page.waitForSelector('.chakra-stack', { timeout: 10000 });
+      await page.waitForSelector('a[href*="/movies/"]', { timeout: 10000 });
       console.log('  Palace content loaded');
     } catch (e) {
       console.log('  Waiting for content timed out, trying anyway...');
     }
     
-    const films = await page.evaluate(() => {
+    const films = await page.evaluate((baseUrl) => {
       const items = [];
+      const seen = new Set();
       
-      // Each film is in a chakra-stack with the movie link
-      document.querySelectorAll('.chakra-stack').forEach(stack => {
-        // Find the title link
-        const titleLink = stack.querySelector('a.chakra-link[href^="/movies/"]');
-        if (!titleLink) return;
+      // Find all movie links and work up to their container
+      document.querySelectorAll('a[href*="/movies/"]').forEach(link => {
+        const href = link.getAttribute('href');
+        if (!href || !href.includes('/movies/')) return;
         
-        const title = titleLink.textContent?.trim();
-        if (!title || title === 'More Info') return;
+        const title = link.textContent?.trim();
+        if (!title || title === 'More Info' || title.length < 2) return;
+        if (seen.has(title)) return;
         
-        // Get times from span elements with time pattern
+        // Find the parent container that has the times
+        let container = link.closest('.chakra-stack');
+        if (!container) container = link.parentElement?.parentElement?.parentElement;
+        if (!container) return;
+        
+        // Get times - look for buttons with time text
         const times = [];
-        stack.querySelectorAll('span').forEach(span => {
-          const text = span.textContent?.trim();
-          // Match patterns like "4:30pm", "8:00pm"
-          if (text && /^\d{1,2}:\d{2}\s*(am|pm)$/i.test(text.replace(/\s+/g, ''))) {
-            times.push(text.replace(/\s+/g, ''));
+        container.querySelectorAll('button').forEach(btn => {
+          const btnText = btn.textContent?.trim() || '';
+          // Extract time pattern like "4:30pm" or "8:00pm"
+          const timeMatch = btnText.match(/(\d{1,2}:\d{2}\s*[ap]m)/i);
+          if (timeMatch) {
+            times.push(timeMatch[1].replace(/\s+/g, ''));
           }
         });
         
         if (times.length > 0) {
-          const movieUrl = titleLink.href || url;
-          items.push({ title, times, url: movieUrl });
+          seen.add(title);
+          items.push({ 
+            title, 
+            times, 
+            url: href.startsWith('http') ? href : baseUrl + href 
+          });
         }
       });
       
       return items;
-    });
+    }, 'https://www.palacecinemas.com.au');
     
-    // Dedupe by title
-    const filmMap = new Map();
     for (const film of films) {
-      if (filmMap.has(film.title)) {
-        // Add any new times
-        const existing = filmMap.get(film.title);
-        film.times.forEach(t => {
-          if (!existing.times.includes(t)) {
-            existing.times.push(t);
-          }
-        });
-      } else {
-        filmMap.set(film.title, film);
-      }
+      sessions.push(film);
     }
-    
-    filmMap.forEach(film => sessions.push(film));
     
     console.log(`  Found ${sessions.length} films`);
   } catch (error) {
@@ -767,60 +764,57 @@ async function scrapePalaceKino(page) {
     
     // Wait for film cards to load
     try {
-      await page.waitForSelector('.chakra-stack', { timeout: 10000 });
+      await page.waitForSelector('a[href*="/movies/"]', { timeout: 10000 });
       console.log('  Palace content loaded');
     } catch (e) {
       console.log('  Waiting for content timed out, trying anyway...');
     }
     
-    const films = await page.evaluate(() => {
+    const films = await page.evaluate((baseUrl) => {
       const items = [];
+      const seen = new Set();
       
-      // Each film is in a chakra-stack with the movie link
-      document.querySelectorAll('.chakra-stack').forEach(stack => {
-        // Find the title link
-        const titleLink = stack.querySelector('a.chakra-link[href^="/movies/"]');
-        if (!titleLink) return;
+      // Find all movie links and work up to their container
+      document.querySelectorAll('a[href*="/movies/"]').forEach(link => {
+        const href = link.getAttribute('href');
+        if (!href || !href.includes('/movies/')) return;
         
-        const title = titleLink.textContent?.trim();
-        if (!title || title === 'More Info') return;
+        const title = link.textContent?.trim();
+        if (!title || title === 'More Info' || title.length < 2) return;
+        if (seen.has(title)) return;
         
-        // Get times from span elements with time pattern
+        // Find the parent container that has the times
+        let container = link.closest('.chakra-stack');
+        if (!container) container = link.parentElement?.parentElement?.parentElement;
+        if (!container) return;
+        
+        // Get times - look for buttons with time text
         const times = [];
-        stack.querySelectorAll('span').forEach(span => {
-          const text = span.textContent?.trim();
-          // Match patterns like "4:30pm", "8:00pm"
-          if (text && /^\d{1,2}:\d{2}\s*(am|pm)$/i.test(text.replace(/\s+/g, ''))) {
-            times.push(text.replace(/\s+/g, ''));
+        container.querySelectorAll('button').forEach(btn => {
+          const btnText = btn.textContent?.trim() || '';
+          // Extract time pattern like "4:30pm" or "8:00pm"
+          const timeMatch = btnText.match(/(\d{1,2}:\d{2}\s*[ap]m)/i);
+          if (timeMatch) {
+            times.push(timeMatch[1].replace(/\s+/g, ''));
           }
         });
         
         if (times.length > 0) {
-          const movieUrl = titleLink.href || url;
-          items.push({ title, times, url: movieUrl });
+          seen.add(title);
+          items.push({ 
+            title, 
+            times, 
+            url: href.startsWith('http') ? href : baseUrl + href 
+          });
         }
       });
       
       return items;
-    });
+    }, 'https://www.palacecinemas.com.au');
     
-    // Dedupe by title
-    const filmMap = new Map();
     for (const film of films) {
-      if (filmMap.has(film.title)) {
-        // Add any new times
-        const existing = filmMap.get(film.title);
-        film.times.forEach(t => {
-          if (!existing.times.includes(t)) {
-            existing.times.push(t);
-          }
-        });
-      } else {
-        filmMap.set(film.title, film);
-      }
+      sessions.push(film);
     }
-    
-    filmMap.forEach(film => sessions.push(film));
     
     console.log(`  Found ${sessions.length} films`);
   } catch (error) {
