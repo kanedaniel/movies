@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2025-12-29T20:43:48.675Z",
+  "generatedAt": "2025-12-29T20:58:10.729Z",
   "date": "Tuesday 30 December 2025",
   "cinemas": [
     {
@@ -403,7 +403,7 @@
           "rating": 7.393,
           "year": "2025",
           "runtime": 198,
-          "trailerUrl": "https://www.youtube.com/watch?v=hsxgDO2mvng"
+          "trailerUrl": "https://www.youtube.com/watch?v=lUc3pRoNybQ"
         },
         {
           "title": "Time Masters, The",
@@ -439,7 +439,7 @@
           "url": "https://www.cinemanova.com.au/films/train-dreams",
           "overview": "A logger leads a life of quiet grace as he experiences love and loss during an era of monumental change in early 20th-century America.",
           "posterPath": "https://image.tmdb.org/t/p/w300/l3zS4YnpOi4usyEXGJMtxSqDDyb.jpg",
-          "rating": 7.289,
+          "rating": 7.288,
           "year": "2025",
           "runtime": 102,
           "trailerUrl": "https://www.youtube.com/watch?v=6voWeM-xQ4Y"
@@ -704,7 +704,7 @@
           "rating": 6.75,
           "year": "2025",
           "runtime": 96,
-          "trailerUrl": "https://www.youtube.com/watch?v=_gtIWSAOIEE"
+          "trailerUrl": "https://www.youtube.com/watch?v=DJNcVCKx0qI"
         },
         {
           "title": "Avatar: Fire and Ash",
@@ -718,7 +718,7 @@
           "rating": 7.393,
           "year": "2025",
           "runtime": 198,
-          "trailerUrl": "https://www.youtube.com/watch?v=hsxgDO2mvng"
+          "trailerUrl": "https://www.youtube.com/watch?v=lUc3pRoNybQ"
         },
         {
           "title": "Nuremberg",
@@ -838,7 +838,7 @@
           "rating": 7.4,
           "year": "2025",
           "runtime": 198,
-          "trailerUrl": "https://www.youtube.com/watch?v=hsxgDO2mvng"
+          "trailerUrl": "https://www.youtube.com/watch?v=lUc3pRoNybQ"
         },
         {
           "title": "The History of Sound",
@@ -890,7 +890,7 @@
           "rating": 7.393,
           "year": "2025",
           "runtime": 198,
-          "trailerUrl": "https://www.youtube.com/watch?v=hsxgDO2mvng"
+          "trailerUrl": "https://www.youtube.com/watch?v=lUc3pRoNybQ"
         },
         {
           "title": "Anaconda",
@@ -962,7 +962,7 @@
           "rating": 6.75,
           "year": "2025",
           "runtime": 96,
-          "trailerUrl": "https://www.youtube.com/watch?v=_gtIWSAOIEE"
+          "trailerUrl": "https://www.youtube.com/watch?v=DJNcVCKx0qI"
         },
         {
           "title": "Wicked: For Good",
