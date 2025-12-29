@@ -1,38 +1,11 @@
 {
-  "generatedAt": "2025-12-29T19:27:48.836Z",
+  "generatedAt": "2025-12-29T20:43:48.675Z",
   "date": "Tuesday 30 December 2025",
   "cinemas": [
     {
       "cinema": "ACMI",
       "url": "https://www.acmi.net.au/whats-on/?what=film&when_start=2025-12-30&when_end=2025-12-30",
-      "sessions": [
-        {
-          "title": "Life After",
-          "times": [
-            "See website"
-          ],
-          "url": "https://www.acmi.net.au/whats-on/best-of-2025/life-after-big-screen-premiere/",
-          "overview": "LIFE AFTER is a gripping investigative documentary that exposes the tangled web of moral dilemmas and profit motives surrounding assisted dying. Disabled filmmaker Reid Davenport uncovers shocking abuses of power while amplifying the voices of the disability community fighting for justice and dignity in an unfolding matter of life and death.  In 1983, a disabled Californian woman named Elizabeth Bouvia sought the “right to die,” igniting a national debate about autonomy and the value of disabled lives. After years of courtroom battles, Bouvia vanished from public view. Sundance-winner Davenport embarks on a personal investigation to find out what really happened to Bouvia and reveal why her story is disturbingly relevant today.",
-          "posterPath": "https://image.tmdb.org/t/p/w300/qulfysnXS8jJ5yaLWirWOvQvadP.jpg",
-          "rating": null,
-          "year": "2025",
-          "runtime": 100,
-          "trailerUrl": "https://www.youtube.com/watch?v=pb1P1wQQQp4"
-        },
-        {
-          "title": "Bird",
-          "times": [
-            "6:30pm"
-          ],
-          "url": "https://www.acmi.net.au/whats-on/best-of-2025/bird/",
-          "overview": "Saxophone player Charlie ‘Bird’ Parker comes to New York in 1940 and is quickly noticed for his remarkable way of playing. He becomes a drug addict but his loving wife Chan tries to help him.",
-          "posterPath": "https://image.tmdb.org/t/p/w300/rTCp6M98RQAxRl0x0guU9GlH7HS.jpg",
-          "rating": 6.829,
-          "year": "1988",
-          "runtime": 161,
-          "trailerUrl": "https://www.youtube.com/watch?v=O9GGJO8HJ1E"
-        }
-      ]
+      "sessions": []
     },
     {
       "cinema": "Brunswick Picture House",
@@ -297,7 +270,7 @@
           "url": "https://www.cinemanova.com.au/films/the-housemaid",
           "overview": "Trying to escape her past, Millie Calloway accepts a job as a live-in housemaid for the wealthy Nina and Andrew Winchester. But what begins as a dream job quickly unravels into something far more dangerous—a sexy, seductive game of secrets, scandal, and power.",
           "posterPath": "https://image.tmdb.org/t/p/w300/cWsBscZzwu5brg9YjNkGewRUvJX.jpg",
-          "rating": 7.7,
+          "rating": 7.787,
           "year": "2025",
           "runtime": 131,
           "trailerUrl": "https://www.youtube.com/watch?v=e67WZM-Nkn4"
@@ -430,7 +403,7 @@
           "rating": 7.393,
           "year": "2025",
           "runtime": 198,
-          "trailerUrl": "https://www.youtube.com/watch?v=lUc3pRoNybQ"
+          "trailerUrl": "https://www.youtube.com/watch?v=hsxgDO2mvng"
         },
         {
           "title": "Time Masters, The",
@@ -521,9 +494,9 @@
             "21:05"
           ],
           "url": "https://www.cinemanova.com.au/films/die-my-love",
-          "overview": "Grace and her partner Jackson move into an old country house. She pursues her dream of writing, and the couple welcome a baby soon after. However, with Jackson frequently absent, and the pressures of domestic life weighing on her, Grace begins to unravel, leaving a path of destruction in her wake.",
+          "overview": "After inheriting a remote Montana house, Jackson moves there from New York with his partner Grace, and the couple soon welcome a child. As Jackson becomes increasingly absent and rural isolation sets in, Grace struggles with loneliness, creative frustration, and unresolved emotional wounds. What begins as an attempt at renewal gradually turns into an intense psychological descent, placing strain on their relationship and exposing the fragile balance between love, identity, and motherhood.",
           "posterPath": "https://image.tmdb.org/t/p/w300/kajpShbFhOdpl6yCrLezMrr9tB4.jpg",
-          "rating": 6.323,
+          "rating": 6.3,
           "year": "2025",
           "runtime": 119,
           "trailerUrl": "https://www.youtube.com/watch?v=2jzXHW6Qe70"
@@ -638,7 +611,7 @@
           "url": "https://www.lidocinemas.com.au/tickets?c=0000000003&s=99169",
           "overview": "Trying to escape her past, Millie Calloway accepts a job as a live-in housemaid for the wealthy Nina and Andrew Winchester. But what begins as a dream job quickly unravels into something far more dangerous—a sexy, seductive game of secrets, scandal, and power.",
           "posterPath": "https://image.tmdb.org/t/p/w300/cWsBscZzwu5brg9YjNkGewRUvJX.jpg",
-          "rating": 7.7,
+          "rating": 7.787,
           "year": "2025",
           "runtime": 131,
           "trailerUrl": "https://www.youtube.com/watch?v=e67WZM-Nkn4"
@@ -683,7 +656,7 @@
           "url": "https://www.lidocinemas.com.au/tickets?c=0000000003&s=99173",
           "overview": "A group of friends facing mid-life crises head to the rainforest with the intention of remaking their favorite movie from their youth, only to find themselves in a fight for their lives against natural disasters, giant snakes and violent criminals.",
           "posterPath": "https://image.tmdb.org/t/p/w300/5MDnvvkOqthhE5gQebzkcOhD1p5.jpg",
-          "rating": 6.664,
+          "rating": 6.7,
           "year": "2025",
           "runtime": 100,
           "trailerUrl": "https://www.youtube.com/watch?v=jMbBuQAYOeM"
@@ -714,7 +687,7 @@
           "url": "https://www.lidocinemas.com.au/tickets?c=0000000003&s=99167",
           "overview": "After cracking the biggest case in Zootopia's history, rookie cops Judy Hopps and Nick Wilde find themselves on the twisting trail of a great mystery when Gary De'Snake arrives and turns the animal metropolis upside down. To crack the case, Judy and Nick must go undercover to unexpected new parts of town, where their growing partnership is tested like never before.",
           "posterPath": "https://image.tmdb.org/t/p/w300/oJ7g2CifqpStmoYQyaLQgEU32qO.jpg",
-          "rating": 7.624,
+          "rating": 7.6,
           "year": "2025",
           "runtime": 107,
           "trailerUrl": "https://www.youtube.com/watch?v=5H7L9j0dW90"
@@ -728,10 +701,10 @@
           "url": "https://www.lidocinemas.com.au/tickets?c=0000000003&s=99168",
           "overview": "Desperate to be a big guy, SpongeBob sets out to prove his bravery to Mr. Krabs by following The Flying Dutchman – a mysterious swashbuckling ghost pirate – on a seafaring adventure that takes him to the deepest depths of the deep sea, where no Sponge has gone before.",
           "posterPath": "https://image.tmdb.org/t/p/w300/pDWYW9v8fmJdA7N0I1MOdQA3ETq.jpg",
-          "rating": 6.62,
+          "rating": 6.75,
           "year": "2025",
           "runtime": 96,
-          "trailerUrl": "https://www.youtube.com/watch?v=DJNcVCKx0qI"
+          "trailerUrl": "https://www.youtube.com/watch?v=_gtIWSAOIEE"
         },
         {
           "title": "Avatar: Fire and Ash",
@@ -745,7 +718,7 @@
           "rating": 7.393,
           "year": "2025",
           "runtime": 198,
-          "trailerUrl": "https://www.youtube.com/watch?v=lUc3pRoNybQ"
+          "trailerUrl": "https://www.youtube.com/watch?v=hsxgDO2mvng"
         },
         {
           "title": "Nuremberg",
@@ -865,7 +838,7 @@
           "rating": 7.4,
           "year": "2025",
           "runtime": 198,
-          "trailerUrl": "https://www.youtube.com/watch?v=lUc3pRoNybQ"
+          "trailerUrl": "https://www.youtube.com/watch?v=hsxgDO2mvng"
         },
         {
           "title": "The History of Sound",
@@ -917,7 +890,7 @@
           "rating": 7.393,
           "year": "2025",
           "runtime": 198,
-          "trailerUrl": "https://www.youtube.com/watch?v=lUc3pRoNybQ"
+          "trailerUrl": "https://www.youtube.com/watch?v=hsxgDO2mvng"
         },
         {
           "title": "Anaconda",
@@ -933,7 +906,7 @@
           "url": "https://www.hoyts.com.au/movies/anaconda",
           "overview": "A group of friends facing mid-life crises head to the rainforest with the intention of remaking their favorite movie from their youth, only to find themselves in a fight for their lives against natural disasters, giant snakes and violent criminals.",
           "posterPath": "https://image.tmdb.org/t/p/w300/5MDnvvkOqthhE5gQebzkcOhD1p5.jpg",
-          "rating": 6.664,
+          "rating": 6.7,
           "year": "2025",
           "runtime": 100,
           "trailerUrl": "https://www.youtube.com/watch?v=jMbBuQAYOeM"
@@ -949,7 +922,7 @@
           "url": "https://www.hoyts.com.au/movies/the-housemaid",
           "overview": "Trying to escape her past, Millie Calloway accepts a job as a live-in housemaid for the wealthy Nina and Andrew Winchester. But what begins as a dream job quickly unravels into something far more dangerous—a sexy, seductive game of secrets, scandal, and power.",
           "posterPath": "https://image.tmdb.org/t/p/w300/cWsBscZzwu5brg9YjNkGewRUvJX.jpg",
-          "rating": 7.7,
+          "rating": 7.787,
           "year": "2025",
           "runtime": 131,
           "trailerUrl": "https://www.youtube.com/watch?v=e67WZM-Nkn4"
@@ -968,7 +941,7 @@
           "url": "https://www.hoyts.com.au/movies/zootopia-2",
           "overview": "After cracking the biggest case in Zootopia's history, rookie cops Judy Hopps and Nick Wilde find themselves on the twisting trail of a great mystery when Gary De'Snake arrives and turns the animal metropolis upside down. To crack the case, Judy and Nick must go undercover to unexpected new parts of town, where their growing partnership is tested like never before.",
           "posterPath": "https://image.tmdb.org/t/p/w300/oJ7g2CifqpStmoYQyaLQgEU32qO.jpg",
-          "rating": 7.624,
+          "rating": 7.6,
           "year": "2025",
           "runtime": 107,
           "trailerUrl": "https://www.youtube.com/watch?v=5H7L9j0dW90"
@@ -986,10 +959,10 @@
           "url": "https://www.hoyts.com.au/movies/the-spongebob-movie-search-for-squarepants",
           "overview": "Desperate to be a big guy, SpongeBob sets out to prove his bravery to Mr. Krabs by following The Flying Dutchman – a mysterious swashbuckling ghost pirate – on a seafaring adventure that takes him to the deepest depths of the deep sea, where no Sponge has gone before.",
           "posterPath": "https://image.tmdb.org/t/p/w300/pDWYW9v8fmJdA7N0I1MOdQA3ETq.jpg",
-          "rating": 6.62,
+          "rating": 6.75,
           "year": "2025",
           "runtime": 96,
-          "trailerUrl": "https://www.youtube.com/watch?v=DJNcVCKx0qI"
+          "trailerUrl": "https://www.youtube.com/watch?v=_gtIWSAOIEE"
         },
         {
           "title": "Wicked: For Good",
