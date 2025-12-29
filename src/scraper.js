@@ -72,7 +72,6 @@ async function fetchTMDB(title) {
   } catch (error) {
     console.error(`  TMDB lookup failed for "${title}":`, error.message);
   }
-  }
 
   const fallback = { overview: null, posterPath: null, rating: null, year: null, tmdbId: null };
   tmdbCache.set(cacheKey, fallback);
