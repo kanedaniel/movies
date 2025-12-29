@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2025-12-29T01:15:28.507Z",
+  "generatedAt": "2025-12-29T02:15:23.827Z",
   "date": "Monday 29 December 2025",
   "cinemas": [
     {
@@ -39,7 +39,41 @@
     {
       "cinema": "Eclipse Cinema",
       "url": "https://eclipse-cinema.com.au/session-time/",
-      "sessions": []
+      "sessions": [
+        {
+          "title": "Lurker",
+          "times": [
+            "15:00"
+          ],
+          "url": "https://eclipse-cinema.com.au/session-time/",
+          "overview": "When a twenty-something retail clerk meets a rising popstar, he takes the opportunity to edge his way into the in-crowd. But as the line between friend and fan blurs beyond recognition, access and proximity become a matter of life and death.",
+          "posterPath": "https://image.tmdb.org/t/p/w300/remyTlj6bJqoSStgjn3EwyOcki7.jpg",
+          "rating": 6.583,
+          "year": "2025"
+        },
+        {
+          "title": "Peak Everything",
+          "times": [
+            "13:00"
+          ],
+          "url": "https://eclipse-cinema.com.au/session-time/",
+          "overview": "Adam is a kind-hearted kennel-owner. Hypersensitive and borderline depressed, Adam orders a therapeutic solar lamp. Through the lamp’s supplier's technical support line, he meets Tina, a radiant woman with a voice that soothes all of his worries. This unexpected encounter changes everything: Earth trembles, and hearts explode… It's love!",
+          "posterPath": "https://image.tmdb.org/t/p/w300/6aq7flJkxR8HStDrSc95lcDe84Q.jpg",
+          "rating": 6.5,
+          "year": "2025"
+        },
+        {
+          "title": "The Golden Spurtle",
+          "times": [
+            "17:00"
+          ],
+          "url": "https://eclipse-cinema.com.au/session-time/",
+          "overview": "In a quaint Scottish village in the Highlands, contenders from around the globe gather to compete for the title of World Porridge Champion armed only with oats, salt and water. As the ailing Porridge Chieftain's tenure ends, he embarks on a mission to find a successor. Amidst intense rivalries and the charm of eccentric locals, this documentary delves into the legacy of the village and unveils a captivating culinary spectacle.",
+          "posterPath": "https://image.tmdb.org/t/p/w300/miYmbKhA26C8oUIioC2OMTXse0o.jpg",
+          "rating": 6.714,
+          "year": "2025"
+        }
+      ]
     },
     {
       "cinema": "Cinema Nova",
@@ -237,7 +271,7 @@
           "url": "https://www.cinemanova.com.au/films/wicked-for-good",
           "overview": "As an angry mob rises against the Wicked Witch, Glinda and Elphaba will need to come together one final time. With their singular friendship now the fulcrum of their futures, they will need to truly see each other, with honesty and empathy, if they are to change themselves, and all of Oz, for good.",
           "posterPath": "https://image.tmdb.org/t/p/w300/si9tolnefLSUKaqQEGz1bWArOaL.jpg",
-          "rating": 6.768,
+          "rating": 6.775,
           "year": "2025"
         },
         {
@@ -367,7 +401,7 @@
           "url": "https://www.cinemanova.com.au/films/wake-up-dead-man-a-knives-out-mystery",
           "overview": "When young priest Jud Duplenticy is sent to assist charismatic firebrand Monsignor Jefferson Wicks, it’s clear that all is not well in the pews. After a sudden and seemingly impossible murder rocks the town, the lack of an obvious suspect prompts local police chief Geraldine Scott to join forces with renowned detective Benoit Blanc to unravel a mystery that defies all logic.",
           "posterPath": "https://image.tmdb.org/t/p/w300/qCOGGi8JBVEZMc3DVby8rUivyXz.jpg",
-          "rating": 7.205,
+          "rating": 7.202,
           "year": "2025"
         },
         {
@@ -425,7 +459,7 @@
           "url": "https://www.cinemanova.com.au/films/if-i-had-legs-i-d-kick-you",
           "overview": "With her life crashing down around her, Linda attempts to navigate her child's mysterious illness, her absent husband, a missing person, and an increasingly hostile relationship with her therapist.",
           "posterPath": "https://image.tmdb.org/t/p/w300/gkIFK1HzqfgQg4v4ifeNKogHtPG.jpg",
-          "rating": 6.558,
+          "rating": 6.6,
           "year": "2025"
         },
         {
@@ -474,10 +508,9 @@
         {
           "title": "Song Sung Blue",
           "times": [
-            "12:45 pm",
             "5:30 pm"
           ],
-          "url": "https://www.lidocinemas.com.au/tickets?c=0000000003&s=99140",
+          "url": "https://www.lidocinemas.com.au/tickets?c=0000000003&s=99147",
           "overview": "Based on a true story, two down-on-their-luck musicians form a joyous Neil Diamond tribute band, proving it's never too late to find love and follow your dreams.",
           "posterPath": "https://image.tmdb.org/t/p/w300/3HsIAbHWbFDUbY2jfj4wqEjGC3b.jpg",
           "rating": 7,
@@ -512,25 +545,12 @@
         {
           "title": "Zootopia 2",
           "times": [
-            "12:50 pm",
             "5:45 pm"
           ],
-          "url": "https://www.lidocinemas.com.au/tickets?c=0000000003&s=99138",
+          "url": "https://www.lidocinemas.com.au/tickets?c=0000000003&s=99145",
           "overview": "After cracking the biggest case in Zootopia's history, rookie cops Judy Hopps and Nick Wilde find themselves on the twisting trail of a great mystery when Gary De'Snake arrives and turns the animal metropolis upside down. To crack the case, Judy and Nick must go undercover to unexpected new parts of town, where their growing partnership is tested like never before.",
           "posterPath": "https://image.tmdb.org/t/p/w300/oJ7g2CifqpStmoYQyaLQgEU32qO.jpg",
           "rating": 7.629,
-          "year": "2025"
-        },
-        {
-          "title": "Nuremberg",
-          "times": [
-            "12:30 pm",
-            "5:40 pm"
-          ],
-          "url": "https://www.lidocinemas.com.au/tickets?c=0000000003&s=99141",
-          "overview": "In postwar Germany, an American psychiatrist must determine whether Nazi prisoners are fit to go on trial for war crimes, and finds himself in a complex battle of intellect and ethics with Hermann Göring, Hitler's right-hand man.",
-          "posterPath": "https://image.tmdb.org/t/p/w300/sxu8TsG7k06ymWL98ELEIE1EMZV.jpg",
-          "rating": 7.274,
           "year": "2025"
         },
         {
@@ -553,6 +573,17 @@
           "overview": "In the wake of the devastating war against the RDA and the loss of their eldest son, Jake Sully and Neytiri face a new threat on Pandora: the Ash People, a violent and power-hungry Na'vi tribe led by the ruthless Varang. Jake's family must fight for their survival and the future of Pandora in a conflict that pushes them to their emotional and physical limits.",
           "posterPath": "https://image.tmdb.org/t/p/w300/g96wHxU7EnoIFwemb2RgohIXrgW.jpg",
           "rating": 7.387,
+          "year": "2025"
+        },
+        {
+          "title": "Nuremberg",
+          "times": [
+            "5:40 pm"
+          ],
+          "url": "https://www.lidocinemas.com.au/tickets?c=0000000003&s=99146",
+          "overview": "In postwar Germany, an American psychiatrist must determine whether Nazi prisoners are fit to go on trial for war crimes, and finds himself in a complex battle of intellect and ethics with Hermann Göring, Hitler's right-hand man.",
+          "posterPath": "https://image.tmdb.org/t/p/w300/sxu8TsG7k06ymWL98ELEIE1EMZV.jpg",
+          "rating": 7.274,
           "year": "2025"
         },
         {
@@ -641,7 +672,7 @@
           "url": "https://www.lidocinemas.com.au/tickets?c=0000000003&s=99164",
           "overview": "When young priest Jud Duplenticy is sent to assist charismatic firebrand Monsignor Jefferson Wicks, it’s clear that all is not well in the pews. After a sudden and seemingly impossible murder rocks the town, the lack of an obvious suspect prompts local police chief Geraldine Scott to join forces with renowned detective Benoit Blanc to unravel a mystery that defies all logic.",
           "posterPath": "https://image.tmdb.org/t/p/w300/qCOGGi8JBVEZMc3DVby8rUivyXz.jpg",
-          "rating": 7.205,
+          "rating": 7.202,
           "year": "2025"
         }
       ]
@@ -703,8 +734,6 @@
         {
           "title": "The Housemaid",
           "times": [
-            "12:30 pm",
-            "12:30 pm",
             "3:00 pm",
             "3:30 pm",
             "5:30 pm",
@@ -721,7 +750,6 @@
         {
           "title": "Zootopia 2",
           "times": [
-            "12:50 pm",
             "2:10 pm",
             "4:30 pm",
             "6:15 pm",
@@ -743,7 +771,7 @@
           "url": "https://www.hoyts.com.au/movies/wicked-for-good",
           "overview": "As an angry mob rises against the Wicked Witch, Glinda and Elphaba will need to come together one final time. With their singular friendship now the fulcrum of their futures, they will need to truly see each other, with honesty and empathy, if they are to change themselves, and all of Oz, for good.",
           "posterPath": "https://image.tmdb.org/t/p/w300/si9tolnefLSUKaqQEGz1bWArOaL.jpg",
-          "rating": 6.768,
+          "rating": 6.775,
           "year": "2025"
         },
         {
@@ -794,7 +822,7 @@
           "isDoubleFeature": false,
           "overview": "A samurai answers a village's request for protection after he falls on hard times. The town needs protection from bandits, so the samurai gathers six others to help him teach the people how to defend themselves, and the villagers provide the soldiers with food.",
           "posterPath": "https://image.tmdb.org/t/p/w300/lOMGc8bnSwQhS4XyE1S99uH8NXf.jpg",
-          "rating": 8.5,
+          "rating": 8.452,
           "year": "1954"
         },
         {
