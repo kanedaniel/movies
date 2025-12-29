@@ -165,20 +165,64 @@ async function scrapeBrunswickPictureHouse(page) {
     
     const films = await page.evaluate(() => {
       const items = [];
+      const seenTitles = new Set();
       
-      // Each movie card is in a div with showing-status-now-playing class
-      // Find all movie containers that have the poster-title
-      const movieCards = document.querySelectorAll('[class*="showing-status-now-playing"]');
+      // The page has multiple sections - one per day
+      // Each section has a date header with "Today", "Tomorrow", etc.
+      // Find the container that has "Today" in its date header
+      
+      // Look for all poster-list containers (each day is a separate one)
+      const posterLists = document.querySelectorAll('.poster-list');
+      let todayContainer = null;
+      
+      for (const container of posterLists) {
+        // Check if this container's date header contains "Today"
+        const dateHeader = container.previousElementSibling;
+        if (dateHeader?.textContent?.toLowerCase().includes('today')) {
+          todayContainer = container;
+          break;
+        }
+        // Also check inside the container
+        const internalHeader = container.querySelector('.text-h6, [class*="text-h6"]');
+        if (internalHeader?.textContent?.toLowerCase().includes('today')) {
+          todayContainer = container;
+          break;
+        }
+      }
+      
+      // If we couldn't find it that way, try finding the Today text and getting its nearest poster-list
+      if (!todayContainer) {
+        const todaySpan = Array.from(document.querySelectorAll('span')).find(s => 
+          s.textContent?.toLowerCase() === 'today'
+        );
+        if (todaySpan) {
+          // Go up to find the section, then find the poster-list within or after it
+          let parent = todaySpan.parentElement;
+          for (let i = 0; i < 5 && parent; i++) {
+            const list = parent.querySelector('.poster-list') || parent.nextElementSibling;
+            if (list?.classList?.contains('poster-list')) {
+              todayContainer = list;
+              break;
+            }
+            parent = parent.parentElement;
+          }
+        }
+      }
+      
+      if (!todayContainer) {
+        console.log('Could not find Today container');
+        return items;
+      }
+      
+      // Now get all movie cards from just this container
+      const movieCards = todayContainer.querySelectorAll('[class*="showing-status-now-playing"]');
       
       movieCards.forEach(card => {
-        // Get movie title from div.poster-title
         const titleEl = card.querySelector('.poster-title');
         const title = titleEl?.textContent?.trim();
         
-        if (!title) return;
+        if (!title || seenTitles.has(title)) return;
         
-        // Get session times from button.showing elements
-        // Time is in div.text-left.full-width.text-primary inside the button
         const times = [];
         card.querySelectorAll('button.showing').forEach(btn => {
           const timeEl = btn.querySelector('div.text-primary, div[style*="color: var(--q-primary)"]');
@@ -189,6 +233,7 @@ async function scrapeBrunswickPictureHouse(page) {
         });
         
         if (times.length > 0) {
+          seenTitles.add(title);
           items.push({
             title,
             times,
