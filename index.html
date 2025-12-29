@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Today’s movies</title>
+  <title>Melbourne Movies Today</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=JetBrains+Mono:wght@400;500&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
@@ -384,7 +384,15 @@
             ${cinema.note ? `<p class="cinema-note">${esc(cinema.note)}</p>` : ''}`;
           
           if (cinema.sessions && cinema.sessions.length > 0) {
-            for (const session of cinema.sessions) {
+            // Sort by number of sessions (descending), then alphabetically
+            const sortedSessions = [...cinema.sessions].sort((a, b) => {
+              const aCount = (a.times || []).filter(t => !t.toLowerCase().includes('see website')).length;
+              const bCount = (b.times || []).filter(t => !t.toLowerCase().includes('see website')).length;
+              if (bCount !== aCount) return bCount - aCount;
+              return a.title.localeCompare(b.title);
+            });
+            
+            for (const session of sortedSessions) {
               const isDouble = session.isDoubleFeature || session.films;
               const poster = session.posterPath 
                 ? `<img src="${esc(session.posterPath)}" alt="" class="film-poster" loading="lazy">`
