@@ -323,6 +323,16 @@
     
     .film-meta .rating { color: var(--gold); }
     
+    .film-meta .trailer-link {
+      color: var(--text-dim);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    
+    .film-meta .trailer-link:hover {
+      color: var(--gold);
+    }
+    
     .film-overview {
       font-size: 0.9rem;
       color: var(--text-dim);
@@ -606,6 +616,7 @@
                 meta.push(`<span>${runtimeStr}</span>`);
               }
               if (session.rating) meta.push(`<span class="rating">★ ${session.rating.toFixed(1)}</span>`);
+              if (session.trailerUrl) meta.push(`<a href="${esc(session.trailerUrl)}" target="_blank" rel="noopener" class="trailer-link">▶ Trailer</a>`);
               
               const times = (session.times || ['See website']).map(t => {
                 const isGeneric = t.toLowerCase().includes('see website');

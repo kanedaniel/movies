@@ -57,16 +57,28 @@ async function fetchTMDB(title) {
     if (data.results && data.results.length > 0) {
       const movie = data.results[0];
       
-      // Fetch movie details to get runtime
+      // Fetch movie details to get runtime and trailers
       let runtime = null;
+      let trailerUrl = null;
       try {
-        const detailsUrl = `${TMDB_BASE}/movie/${movie.id}?api_key=${TMDB_API_KEY}`;
+        const detailsUrl = `${TMDB_BASE}/movie/${movie.id}?api_key=${TMDB_API_KEY}&append_to_response=videos`;
         const detailsResponse = await fetch(detailsUrl);
         const details = await detailsResponse.json();
         runtime = details.runtime || null;
+        
+        // Find YouTube trailer
+        if (details.videos && details.videos.results) {
+          const trailer = details.videos.results.find(v => 
+            v.site === 'YouTube' && (v.type === 'Trailer' || v.type === 'Teaser')
+          );
+          if (trailer) {
+            trailerUrl = `https://www.youtube.com/watch?v=${trailer.key}`;
+          }
+        }
+        
         await new Promise(r => setTimeout(r, 100)); // Small delay to avoid rate limiting
       } catch (e) {
-        console.log(`  Could not fetch runtime for ${movie.title}`);
+        console.log(`  Could not fetch details for ${movie.title}`);
       }
       
       const result = {
@@ -75,9 +87,10 @@ async function fetchTMDB(title) {
         rating: movie.vote_average || null,
         year: movie.release_date ? movie.release_date.substring(0, 4) : null,
         runtime: runtime,
+        trailerUrl: trailerUrl,
         tmdbId: movie.id
       };
-      console.log(`  TMDB found: "${movie.title}" (${result.year})${runtime ? ` - ${runtime}min` : ''}`);
+      console.log(`  TMDB found: "${movie.title}" (${result.year})${runtime ? ` - ${runtime}min` : ''}${trailerUrl ? ' [trailer]' : ''}`);
       tmdbCache.set(cacheKey, result);
       return result;
     } else {
@@ -87,7 +100,7 @@ async function fetchTMDB(title) {
     console.error(`  TMDB lookup failed for "${title}":`, error.message);
   }
 
-  const fallback = { overview: null, posterPath: null, rating: null, year: null, runtime: null, tmdbId: null };
+  const fallback = { overview: null, posterPath: null, rating: null, year: null, runtime: null, trailerUrl: null, tmdbId: null };
   tmdbCache.set(cacheKey, fallback);
   return fallback;
 }
@@ -850,6 +863,8 @@ async function enrichWithTMDB(cinemaData) {
       } else {
         session.rating = session.films[0]?.rating || session.films[1]?.rating || null;
       }
+      // Use first film's trailer
+      session.trailerUrl = session.films[0]?.trailerUrl || session.films[1]?.trailerUrl || null;
     } else {
       const tmdb = await fetchTMDB(session.title);
       session.overview = tmdb.overview;
@@ -857,6 +872,7 @@ async function enrichWithTMDB(cinemaData) {
       session.rating = tmdb.rating;
       session.year = tmdb.year;
       session.runtime = tmdb.runtime;
+      session.trailerUrl = tmdb.trailerUrl;
       await new Promise(r => setTimeout(r, 250));
     }
   }
