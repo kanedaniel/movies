@@ -1,11 +1,36 @@
 {
-  "generatedAt": "2025-12-29T02:56:52.806Z",
+  "generatedAt": "2025-12-29T03:14:30.517Z",
   "date": "Monday 29 December 2025",
   "cinemas": [
     {
       "cinema": "ACMI",
       "url": "https://www.acmi.net.au/whats-on/?what=film&when_start=2025-12-29&when_end=2025-12-29",
-      "sessions": []
+      "sessions": [
+        {
+          "title": "Frankenstein",
+          "times": [
+            "3:30pm"
+          ],
+          "url": "https://www.acmi.net.au/whats-on/best-of-2025/frankenstein/",
+          "overview": "Dr. Victor Frankenstein, a brilliant but egotistical scientist, brings a creature to life in a monstrous experiment that ultimately leads to the undoing of both the creator and his tragic creation.",
+          "posterPath": "https://image.tmdb.org/t/p/w300/g4JtvGlQO7DByTI6frUobqvSL3R.jpg",
+          "rating": 7.711,
+          "year": "2025",
+          "runtime": 150
+        },
+        {
+          "title": "Sinners",
+          "times": [
+            "6:30pm"
+          ],
+          "url": "https://www.acmi.net.au/whats-on/best-of-2025/sinners/",
+          "overview": "Trying to leave their troubled lives behind, twin brothers return to their hometown to start again, only to discover that an even greater evil is waiting to welcome them back.",
+          "posterPath": "https://image.tmdb.org/t/p/w300/qTvFWCGeGXgBRaINLY1zqgTPSpn.jpg",
+          "rating": 7.503,
+          "year": "2025",
+          "runtime": 138
+        }
+      ]
     },
     {
       "cinema": "Brunswick Picture House",
@@ -214,7 +239,7 @@
           "url": "https://www.cinemanova.com.au/films/nuremberg",
           "overview": "In postwar Germany, an American psychiatrist must determine whether Nazi prisoners are fit to go on trial for war crimes, and finds himself in a complex battle of intellect and ethics with Hermann Göring, Hitler's right-hand man.",
           "posterPath": "https://image.tmdb.org/t/p/w300/sxu8TsG7k06ymWL98ELEIE1EMZV.jpg",
-          "rating": 7.274,
+          "rating": 7.293,
           "year": "2025",
           "runtime": 148
         },
@@ -639,7 +664,7 @@
           "url": "https://www.lidocinemas.com.au/tickets?c=0000000003&s=99146",
           "overview": "In postwar Germany, an American psychiatrist must determine whether Nazi prisoners are fit to go on trial for war crimes, and finds himself in a complex battle of intellect and ethics with Hermann Göring, Hitler's right-hand man.",
           "posterPath": "https://image.tmdb.org/t/p/w300/sxu8TsG7k06ymWL98ELEIE1EMZV.jpg",
-          "rating": 7.274,
+          "rating": 7.293,
           "year": "2025",
           "runtime": 148
         },
