@@ -482,20 +482,28 @@ async function scrapeHoyts(page) {
         
         if (!title) return;
         
-        // Get session times from div.sessions ul.sessions__list
+        // Get session times, but skip LUX sessions
         const times = [];
-        movieItem.querySelectorAll('.sessions__list .session__time').forEach(timeEl => {
-          const time = timeEl.textContent?.trim();
+        movieItem.querySelectorAll('.sessions__list .sessions__item').forEach(sessionItem => {
+          // Check if this session has a LUX tag
+          const luxTag = sessionItem.querySelector('.session__tag--lux');
+          if (luxTag) return; // Skip LUX sessions
+          
+          const timeEl = sessionItem.querySelector('.session__time');
+          const time = timeEl?.textContent?.trim();
           if (time) {
             times.push(time);
           }
         });
         
-        items.push({
-          title,
-          times: times.length > 0 ? times : ['See website'],
-          url: movieUrl || 'https://www.hoyts.com.au/cinemas/melbourne-central'
-        });
+        // Only add if there are non-LUX sessions
+        if (times.length > 0) {
+          items.push({
+            title,
+            times,
+            url: movieUrl || 'https://www.hoyts.com.au/cinemas/melbourne-central'
+          });
+        }
       });
       
       return items;
@@ -510,7 +518,7 @@ async function scrapeHoyts(page) {
     console.error('  Hoyts scrape error:', error.message);
   }
   
-  return { cinema: 'Hoyts Melbourne Central', url, sessions };
+  return { cinema: 'Hoyts Melbourne Central', url, sessions, note: 'Lux sessions not listed' };
 }
 
 async function scrapeAstor(page) {
@@ -597,8 +605,7 @@ async function scrapeAstor(page) {
   return { 
     cinema: 'The Astor Theatre', 
     url, 
-    sessions,
-    note: 'Famous for double features - check website for full program'
+    sessions
   };
 }
 
