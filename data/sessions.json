@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2025-12-29T05:52:44.401Z",
+  "generatedAt": "2025-12-29T06:03:12.686Z",
   "date": "Monday 29 December 2025",
   "cinemas": [
     {
@@ -78,18 +78,6 @@
           "rating": 7.324,
           "year": "1964",
           "runtime": 88
-        },
-        {
-          "title": "Lurker",
-          "times": [
-            "15:00"
-          ],
-          "url": "https://eclipse-cinema.com.au/session-time/",
-          "overview": "When a twenty-something retail clerk meets a rising popstar, he takes the opportunity to edge his way into the in-crowd. But as the line between friend and fan blurs beyond recognition, access and proximity become a matter of life and death.",
-          "posterPath": "https://image.tmdb.org/t/p/w300/remyTlj6bJqoSStgjn3EwyOcki7.jpg",
-          "rating": 6.583,
-          "year": "2025",
-          "runtime": 100
         },
         {
           "title": "Prime Minister",
@@ -735,7 +723,6 @@
         {
           "title": "Anaconda",
           "times": [
-            "4:40 pm",
             "6:00 pm",
             "7:00 pm",
             "9:30 pm"
@@ -763,7 +750,6 @@
         {
           "title": "The SpongeBob Movie: Search for Squarepants",
           "times": [
-            "4:40 pm",
             "6:30 pm"
           ],
           "url": "https://www.hoyts.com.au/movies/the-spongebob-movie-search-for-squarepants",
@@ -828,7 +814,56 @@
     {
       "cinema": "The Astor Theatre",
       "url": "https://www.astortheatre.net.au/",
-      "sessions": []
+      "sessions": [
+        {
+          "title": "Seven Samurai - 70th Anniversary 4K Restoration",
+          "times": [
+            "2pm"
+          ],
+          "url": "https://www.astortheatre.net.au/sessions/2025-12-29-1400",
+          "isDoubleFeature": false,
+          "overview": "A samurai answers a village's request for protection after he falls on hard times. The town needs protection from bandits, so the samurai gathers six others to help him teach the people how to defend themselves, and the villagers provide the soldiers with food.",
+          "posterPath": "https://image.tmdb.org/t/p/w300/lOMGc8bnSwQhS4XyE1S99uH8NXf.jpg",
+          "rating": 8.452,
+          "year": "1954",
+          "runtime": 207
+        },
+        {
+          "title": "Alien + Aliens - Special Edition",
+          "times": [
+            "6:30pm"
+          ],
+          "url": "https://www.astortheatre.net.au/sessions/2025-12-29-1830",
+          "isDoubleFeature": true,
+          "film1": "Alien",
+          "film2": "Aliens - Special Edition",
+          "films": [
+            {
+              "title": "Alien",
+              "overview": "During its return to the earth, commercial spaceship Nostromo intercepts a distress signal from a distant planet. When a three-member team of the crew discovers a chamber containing thousands of eggs on the planet, a creature inside one of the eggs attacks an explorer. The entire crew is unaware of the impending nightmare set to descend upon them when the alien parasite planted inside its unfortunate host is birthed.",
+              "posterPath": "https://image.tmdb.org/t/p/w300/vfrQk5IPloGg1v9Rzbh2Eg3VGyM.jpg",
+              "rating": 8.166,
+              "year": "1979",
+              "runtime": 117,
+              "tmdbId": 348
+            },
+            {
+              "title": "Aliens - Special Edition",
+              "overview": "Ripley, the sole survivor of the Nostromo's deadly encounter with the monstrous Alien, returns to Earth after drifting through space in hypersleep for 57 years. Although her story is initially met with skepticism, she agrees to accompany a team of Colonial Marines back to LV-426.",
+              "posterPath": "https://image.tmdb.org/t/p/w300/r1x5JGpyqZU8PYhbs4UcrO1Xb6x.jpg",
+              "rating": 7.955,
+              "year": "1986",
+              "runtime": 137,
+              "tmdbId": 679
+            }
+          ],
+          "posterPath": "https://image.tmdb.org/t/p/w300/vfrQk5IPloGg1v9Rzbh2Eg3VGyM.jpg",
+          "overview": "During its return to the earth, commercial spaceship Nostromo intercepts a distress signal from a distant planet. When a three-member team of the crew discovers a chamber containing thousands of eggs on the planet, a creature inside one of the eggs attacks an explorer. The entire crew is unaware of the impending nightmare set to descend upon them when the alien parasite planted inside its unfortunate host is birthed.",
+          "runtime": 254,
+          "year": "1979",
+          "rating": 8.060500000000001
+        }
+      ]
     },
     {
       "cinema": "Palace Como",
