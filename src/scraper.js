@@ -152,40 +152,48 @@ async function scrapeBrunswickPictureHouse(page) {
   
   try {
     await page.goto(url, { waitUntil: 'networkidle2', timeout: 60000 });
-    await page.waitForTimeout(3000);
+    // Wait for Vue.js to render the content
+    await page.waitForTimeout(5000);
+    
+    // Wait for movie cards to appear
+    try {
+      await page.waitForSelector('.poster-title, div.poster-title', { timeout: 10000 });
+      console.log('  Movie cards found');
+    } catch (e) {
+      console.log('  Waiting for movie cards timed out, trying anyway...');
+    }
     
     const films = await page.evaluate(() => {
       const items = [];
-      const html = document.body.innerHTML;
       
-      // Brunswick lists films with times in format: Title | Time
-      // Look for movie links and nearby times
-      const movieLinks = document.querySelectorAll('a[href*="/movie/"]');
-      const seenTitles = new Set();
+      // Each movie card is in a div with showing-status-now-playing class
+      // Find all movie containers that have the poster-title
+      const movieCards = document.querySelectorAll('[class*="showing-status-now-playing"]');
       
-      movieLinks.forEach(link => {
-        const href = link.href;
-        if (href.includes('/checkout/')) return;
+      movieCards.forEach(card => {
+        // Get movie title from div.poster-title
+        const titleEl = card.querySelector('.poster-title');
+        const title = titleEl?.textContent?.trim();
         
-        const title = link.textContent?.trim();
-        if (!title || title.length < 2 || seenTitles.has(title)) return;
+        if (!title) return;
         
-        // Look for time in same row/container
-        const parent = link.closest('tr, div, li');
-        if (parent) {
-          const timeLinks = parent.querySelectorAll('a[href*="/checkout/"]');
-          const times = [];
-          timeLinks.forEach(tl => {
-            const timeText = tl.textContent?.trim();
-            if (timeText && /^\d{1,2}:\d{2}\s*(AM|PM)?$/i.test(timeText)) {
-              times.push(timeText);
-            }
-          });
-          
-          if (times.length > 0) {
-            seenTitles.add(title);
-            items.push({ title, times, url: href });
+        // Get session times from button.showing elements
+        // Time is in div.text-left.full-width.text-primary inside the button
+        const times = [];
+        card.querySelectorAll('button.showing').forEach(btn => {
+          const timeEl = btn.querySelector('div.text-primary, div[style*="color: var(--q-primary)"]');
+          const time = timeEl?.textContent?.trim();
+          if (time && /^\d{1,2}:\d{2}\s*(AM|PM)$/i.test(time)) {
+            times.push(time);
           }
+        });
+        
+        if (times.length > 0) {
+          items.push({
+            title,
+            times,
+            url: 'https://www.brunswickpicturehouse.com.au/now-showing/'
+          });
         }
       });
       
