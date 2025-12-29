@@ -682,6 +682,154 @@ async function scrapeAstor(page) {
   };
 }
 
+async function scrapePalaceComo(page) {
+  console.log('Scraping Palace Como...');
+  const sessions = [];
+  const url = 'https://www.palacecinemas.com.au/cinemas/palace-cinema-como';
+  
+  try {
+    await page.goto(url, { waitUntil: 'networkidle2', timeout: 60000 });
+    await page.waitForTimeout(5000);
+    
+    // Wait for film cards to load
+    try {
+      await page.waitForSelector('.chakra-stack', { timeout: 10000 });
+      console.log('  Palace content loaded');
+    } catch (e) {
+      console.log('  Waiting for content timed out, trying anyway...');
+    }
+    
+    const films = await page.evaluate(() => {
+      const items = [];
+      
+      // Each film is in a chakra-stack with the movie link
+      document.querySelectorAll('.chakra-stack').forEach(stack => {
+        // Find the title link
+        const titleLink = stack.querySelector('a.chakra-link[href^="/movies/"]');
+        if (!titleLink) return;
+        
+        const title = titleLink.textContent?.trim();
+        if (!title || title === 'More Info') return;
+        
+        // Get times from span elements with time pattern
+        const times = [];
+        stack.querySelectorAll('span').forEach(span => {
+          const text = span.textContent?.trim();
+          // Match patterns like "4:30pm", "8:00pm"
+          if (text && /^\d{1,2}:\d{2}\s*(am|pm)$/i.test(text.replace(/\s+/g, ''))) {
+            times.push(text.replace(/\s+/g, ''));
+          }
+        });
+        
+        if (times.length > 0) {
+          const movieUrl = titleLink.href || url;
+          items.push({ title, times, url: movieUrl });
+        }
+      });
+      
+      return items;
+    });
+    
+    // Dedupe by title
+    const filmMap = new Map();
+    for (const film of films) {
+      if (filmMap.has(film.title)) {
+        // Add any new times
+        const existing = filmMap.get(film.title);
+        film.times.forEach(t => {
+          if (!existing.times.includes(t)) {
+            existing.times.push(t);
+          }
+        });
+      } else {
+        filmMap.set(film.title, film);
+      }
+    }
+    
+    filmMap.forEach(film => sessions.push(film));
+    
+    console.log(`  Found ${sessions.length} films`);
+  } catch (error) {
+    console.error('  Palace Como scrape error:', error.message);
+  }
+  
+  return { cinema: 'Palace Como', url, sessions };
+}
+
+async function scrapePalaceKino(page) {
+  console.log('Scraping Palace Kino...');
+  const sessions = [];
+  const url = 'https://www.palacecinemas.com.au/cinemas/the-kino-melbourne';
+  
+  try {
+    await page.goto(url, { waitUntil: 'networkidle2', timeout: 60000 });
+    await page.waitForTimeout(5000);
+    
+    // Wait for film cards to load
+    try {
+      await page.waitForSelector('.chakra-stack', { timeout: 10000 });
+      console.log('  Palace content loaded');
+    } catch (e) {
+      console.log('  Waiting for content timed out, trying anyway...');
+    }
+    
+    const films = await page.evaluate(() => {
+      const items = [];
+      
+      // Each film is in a chakra-stack with the movie link
+      document.querySelectorAll('.chakra-stack').forEach(stack => {
+        // Find the title link
+        const titleLink = stack.querySelector('a.chakra-link[href^="/movies/"]');
+        if (!titleLink) return;
+        
+        const title = titleLink.textContent?.trim();
+        if (!title || title === 'More Info') return;
+        
+        // Get times from span elements with time pattern
+        const times = [];
+        stack.querySelectorAll('span').forEach(span => {
+          const text = span.textContent?.trim();
+          // Match patterns like "4:30pm", "8:00pm"
+          if (text && /^\d{1,2}:\d{2}\s*(am|pm)$/i.test(text.replace(/\s+/g, ''))) {
+            times.push(text.replace(/\s+/g, ''));
+          }
+        });
+        
+        if (times.length > 0) {
+          const movieUrl = titleLink.href || url;
+          items.push({ title, times, url: movieUrl });
+        }
+      });
+      
+      return items;
+    });
+    
+    // Dedupe by title
+    const filmMap = new Map();
+    for (const film of films) {
+      if (filmMap.has(film.title)) {
+        // Add any new times
+        const existing = filmMap.get(film.title);
+        film.times.forEach(t => {
+          if (!existing.times.includes(t)) {
+            existing.times.push(t);
+          }
+        });
+      } else {
+        filmMap.set(film.title, film);
+      }
+    }
+    
+    filmMap.forEach(film => sessions.push(film));
+    
+    console.log(`  Found ${sessions.length} films`);
+  } catch (error) {
+    console.error('  Palace Kino scrape error:', error.message);
+  }
+  
+  return { cinema: 'Palace Kino', url, sessions };
+}
+
 async function enrichWithTMDB(cinemaData) {
   console.log(`Enriching ${cinemaData.cinema} with TMDB data...`);
   
@@ -762,7 +910,9 @@ async function main() {
     scrapeCinemaNova,
     scrapeLido,
     scrapeHoyts,
-    scrapeAstor
+    scrapeAstor,
+    scrapePalaceComo,
+    scrapePalaceKino
   ];
   
   for (const scraper of scrapers) {
