@@ -5,6 +5,8 @@ on:
     - cron: '0 19 * * *'
   push:
     branches: [main]
+    paths:
+      - 'src/scraper.js'
   workflow_dispatch:
 
 jobs:
