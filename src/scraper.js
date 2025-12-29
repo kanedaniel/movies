@@ -600,8 +600,8 @@ async function scrapeAstor(page) {
   const url = 'https://www.astortheatre.net.au/';
   
   try {
-    await page.goto(url, { waitUntil: 'networkidle2', timeout: 60000 });
-    await page.waitForTimeout(3000);
+    await page.goto(url, { waitUntil: 'networkidle2', timeout: 90000 });
+    await page.waitForTimeout(5000);
     
     const films = await page.evaluate(() => {
       const items = [];
@@ -689,32 +689,13 @@ async function scrapePalaceComo(page) {
   
   try {
     await page.goto(url, { waitUntil: 'networkidle2', timeout: 60000 });
-    await page.waitForTimeout(8000); // Wait longer for React to render
-    
-    // Debug: log what we find
-    const debug = await page.evaluate(() => {
-      const links = document.querySelectorAll('a[href*="/movies/"]');
-      const buttons = document.querySelectorAll('button');
-      const allText = document.body.innerText.substring(0, 500);
-      return {
-        linkCount: links.length,
-        buttonCount: buttons.length,
-        sampleText: allText,
-        linkHrefs: Array.from(links).slice(0, 5).map(l => l.getAttribute('href')),
-        linkTexts: Array.from(links).slice(0, 5).map(l => l.textContent?.trim())
-      };
-    });
-    console.log('  Debug - links found:', debug.linkCount);
-    console.log('  Debug - buttons found:', debug.buttonCount);
-    console.log('  Debug - sample hrefs:', debug.linkHrefs);
-    console.log('  Debug - sample texts:', debug.linkTexts);
-    console.log('  Debug - page text sample:', debug.sampleText.substring(0, 200));
+    await page.waitForTimeout(8000);
     
     const films = await page.evaluate((baseUrl) => {
       const items = [];
       const seen = new Set();
       
-      // Find all movie links and work up to their container
+      // Find all movie links with actual title text
       document.querySelectorAll('a[href*="/movies/"]').forEach(link => {
         const href = link.getAttribute('href');
         if (!href || !href.includes('/movies/')) return;
@@ -723,29 +704,34 @@ async function scrapePalaceComo(page) {
         if (!title || title === 'More Info' || title.length < 2) return;
         if (seen.has(title)) return;
         
-        // Find the parent container that has the times
-        let container = link.closest('.chakra-stack');
-        if (!container) container = link.parentElement?.parentElement?.parentElement;
-        if (!container) return;
-        
-        // Get times - look for buttons with time text
-        const times = [];
-        container.querySelectorAll('button').forEach(btn => {
-          const btnText = btn.textContent?.trim() || '';
-          // Extract time pattern like "4:30pm" or "8:00pm"
-          const timeMatch = btnText.match(/(\d{1,2}:\d{2}\s*[ap]m)/i);
-          if (timeMatch) {
-            times.push(timeMatch[1].replace(/\s+/g, ''));
+        // Walk up to find a container with buttons (session times)
+        let container = link.parentElement;
+        let attempts = 0;
+        while (container && attempts < 10) {
+          const buttons = container.querySelectorAll('button');
+          if (buttons.length > 0) {
+            // Found container with buttons
+            const times = [];
+            buttons.forEach(btn => {
+              const btnText = btn.textContent?.trim() || '';
+              const timeMatch = btnText.match(/(\d{1,2}:\d{2}\s*[ap]m)/i);
+              if (timeMatch) {
+                times.push(timeMatch[1].replace(/\s+/g, ''));
+              }
+            });
+            
+            if (times.length > 0) {
+              seen.add(title);
+              items.push({ 
+                title, 
+                times, 
+                url: href.startsWith('http') ? href : baseUrl + href 
+              });
+            }
+            break;
           }
-        });
-        
-        if (times.length > 0) {
-          seen.add(title);
-          items.push({ 
-            title, 
-            times, 
-            url: href.startsWith('http') ? href : baseUrl + href 
-          });
+          container = container.parentElement;
+          attempts++;
         }
       });
       
@@ -771,21 +757,13 @@ async function scrapePalaceKino(page) {
   
   try {
     await page.goto(url, { waitUntil: 'networkidle2', timeout: 60000 });
-    await page.waitForTimeout(5000);
-    
-    // Wait for film cards to load
-    try {
-      await page.waitForSelector('a[href*="/movies/"]', { timeout: 10000 });
-      console.log('  Palace content loaded');
-    } catch (e) {
-      console.log('  Waiting for content timed out, trying anyway...');
-    }
+    await page.waitForTimeout(8000);
     
     const films = await page.evaluate((baseUrl) => {
       const items = [];
       const seen = new Set();
       
-      // Find all movie links and work up to their container
+      // Find all movie links with actual title text
       document.querySelectorAll('a[href*="/movies/"]').forEach(link => {
         const href = link.getAttribute('href');
         if (!href || !href.includes('/movies/')) return;
@@ -794,29 +772,34 @@ async function scrapePalaceKino(page) {
         if (!title || title === 'More Info' || title.length < 2) return;
         if (seen.has(title)) return;
         
-        // Find the parent container that has the times
-        let container = link.closest('.chakra-stack');
-        if (!container) container = link.parentElement?.parentElement?.parentElement;
-        if (!container) return;
-        
-        // Get times - look for buttons with time text
-        const times = [];
-        container.querySelectorAll('button').forEach(btn => {
-          const btnText = btn.textContent?.trim() || '';
-          // Extract time pattern like "4:30pm" or "8:00pm"
-          const timeMatch = btnText.match(/(\d{1,2}:\d{2}\s*[ap]m)/i);
-          if (timeMatch) {
-            times.push(timeMatch[1].replace(/\s+/g, ''));
+        // Walk up to find a container with buttons (session times)
+        let container = link.parentElement;
+        let attempts = 0;
+        while (container && attempts < 10) {
+          const buttons = container.querySelectorAll('button');
+          if (buttons.length > 0) {
+            // Found container with buttons
+            const times = [];
+            buttons.forEach(btn => {
+              const btnText = btn.textContent?.trim() || '';
+              const timeMatch = btnText.match(/(\d{1,2}:\d{2}\s*[ap]m)/i);
+              if (timeMatch) {
+                times.push(timeMatch[1].replace(/\s+/g, ''));
+              }
+            });
+            
+            if (times.length > 0) {
+              seen.add(title);
+              items.push({ 
+                title, 
+                times, 
+                url: href.startsWith('http') ? href : baseUrl + href 
+              });
+            }
+            break;
           }
-        });
-        
-        if (times.length > 0) {
-          seen.add(title);
-          items.push({ 
-            title, 
-            times, 
-            url: href.startsWith('http') ? href : baseUrl + href 
-          });
+          container = container.parentElement;
+          attempts++;
         }
       });
       
