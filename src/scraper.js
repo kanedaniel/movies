@@ -134,7 +134,22 @@ async function scrapeACMI(page) {
       throw new Error(`API returned ${response.status}`);
     }
     
-    const data = await response.json();
+    const json = await response.json();
+    
+    // Handle both array and object responses
+    let data = json;
+    if (!Array.isArray(json)) {
+      // Try common wrapper keys
+      data = json.data || json.results || json.items || json.events || [];
+      console.log(`  Response is object, keys: ${Object.keys(json).join(', ')}`);
+    }
+    
+    if (!Array.isArray(data)) {
+      console.log(`  Could not find array in response`);
+      return { cinema: 'ACMI', url: websiteUrl, sessions };
+    }
+    
+    console.log(`  Found ${data.length} items in API response`);
     
     // Group sessions by film title
     const filmMap = new Map();
@@ -579,6 +594,7 @@ async function scrapeAstor(page) {
       }
     });
     const html = await response.text();
+    console.log(`  Homepage HTML length: ${html.length}`);
     
     // Also try the AJAX endpoint for more sessions
     const ajaxResponse = await fetch('https://www.astortheatre.net.au/wp-admin/admin-ajax.php', {
@@ -590,9 +606,15 @@ async function scrapeAstor(page) {
       body: 'action=get_frontpage_sessions&offset=0'
     });
     const ajaxHtml = await ajaxResponse.text();
+    console.log(`  AJAX HTML length: ${ajaxHtml.length}`);
     
     // Combine both HTML sources
     const combinedHtml = html + ajaxHtml;
+    
+    // Debug: check for movie_preview
+    const previewCount = (combinedHtml.match(/movie_preview/g) || []).length;
+    const todayCount = (combinedHtml.match(/today/gi) || []).length;
+    console.log(`  Found ${previewCount} 'movie_preview' occurrences, ${todayCount} 'today' occurrences`);
     
     // Parse the HTML to extract sessions
     // Look for div.movie_preview.session elements
