@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2025-12-28T23:22:47.872Z",
+  "generatedAt": "2025-12-29T00:07:16.312Z",
   "date": "Monday 29 December 2025",
   "cinemas": [
     {
@@ -355,7 +355,7 @@
           "url": "https://www.cinemanova.com.au/films/die-my-love",
           "overview": "Grace and her partner Jackson move into an old country house. She pursues her dream of writing, and the couple welcome a baby soon after. However, with Jackson frequently absent, and the pressures of domestic life weighing on her, Grace begins to unravel, leaving a path of destruction in her wake.",
           "posterPath": "https://image.tmdb.org/t/p/w300/kajpShbFhOdpl6yCrLezMrr9tB4.jpg",
-          "rating": 6.36,
+          "rating": 6.337,
           "year": "2025"
         },
         {
@@ -424,13 +424,12 @@
         {
           "title": "The Housemaid",
           "times": [
-            "10:15 am",
             "3:20 pm",
             "6:10 pm",
             "9:00 pm",
             "9:00 pm"
           ],
-          "url": "https://www.lidocinemas.com.au/tickets?c=0000000003&s=99132",
+          "url": "https://www.lidocinemas.com.au/tickets?c=0000000003&s=99151",
           "overview": "Trying to escape her past, Millie Calloway accepts a job as a live-in housemaid for the wealthy Nina and Andrew Winchester. But what begins as a dream job quickly unravels into something far more dangerous—a sexy, seductive game of secrets, scandal, and power.",
           "posterPath": "https://image.tmdb.org/t/p/w300/cWsBscZzwu5brg9YjNkGewRUvJX.jpg",
           "rating": 7.7,
@@ -439,12 +438,11 @@
         {
           "title": "Rental Family",
           "times": [
-            "10:10 am",
             "11:45 am",
             "3:30 pm",
             "6:00 pm"
           ],
-          "url": "https://www.lidocinemas.com.au/tickets?c=0000000003&s=99133",
+          "url": "https://www.lidocinemas.com.au/tickets?c=0000000003&s=99339",
           "overview": "An American actor in Tokyo struggles to find purpose until he lands an unusual gig: working for a Japanese 'rental family' agency, playing stand-in roles for strangers. As he immerses himself in his clients' worlds, he begins to form genuine bonds that blur the lines between performance and reality.",
           "posterPath": "https://image.tmdb.org/t/p/w300/dGRZ55srJoK6TcjPTfHe701UWq0.jpg",
           "rating": 7.5,
@@ -492,26 +490,13 @@
         {
           "title": "Zootopia 2",
           "times": [
-            "10:20 am",
             "12:50 pm",
             "5:45 pm"
           ],
-          "url": "https://www.lidocinemas.com.au/tickets?c=0000000003&s=99130",
+          "url": "https://www.lidocinemas.com.au/tickets?c=0000000003&s=99138",
           "overview": "After cracking the biggest case in Zootopia's history, rookie cops Judy Hopps and Nick Wilde find themselves on the twisting trail of a great mystery when Gary De'Snake arrives and turns the animal metropolis upside down. To crack the case, Judy and Nick must go undercover to unexpected new parts of town, where their growing partnership is tested like never before.",
           "posterPath": "https://image.tmdb.org/t/p/w300/oJ7g2CifqpStmoYQyaLQgEU32qO.jpg",
-          "rating": 7.624,
-          "year": "2025"
-        },
-        {
-          "title": "The SpongeBob Movie: Search for Squarepants",
-          "times": [
-            "10:30 am",
-            "1:00 pm"
-          ],
-          "url": "https://www.lidocinemas.com.au/tickets?c=0000000003&s=99131",
-          "overview": "Desperate to be a big guy, SpongeBob sets out to prove his bravery to Mr. Krabs by following The Flying Dutchman – a mysterious swashbuckling ghost pirate – on a seafaring adventure that takes him to the deepest depths of the deep sea, where no Sponge has gone before.",
-          "posterPath": "https://image.tmdb.org/t/p/w300/pDWYW9v8fmJdA7N0I1MOdQA3ETq.jpg",
-          "rating": 6.848,
+          "rating": 7.629,
           "year": "2025"
         },
         {
@@ -536,6 +521,17 @@
           "overview": "In postwar Germany, an American psychiatrist must determine whether Nazi prisoners are fit to go on trial for war crimes, and finds himself in a complex battle of intellect and ethics with Hermann Göring, Hitler's right-hand man.",
           "posterPath": "https://image.tmdb.org/t/p/w300/sxu8TsG7k06ymWL98ELEIE1EMZV.jpg",
           "rating": 7.274,
+          "year": "2025"
+        },
+        {
+          "title": "The SpongeBob Movie: Search for Squarepants",
+          "times": [
+            "1:00 pm"
+          ],
+          "url": "https://www.lidocinemas.com.au/tickets?c=0000000003&s=99139",
+          "overview": "Desperate to be a big guy, SpongeBob sets out to prove his bravery to Mr. Krabs by following The Flying Dutchman – a mysterious swashbuckling ghost pirate – on a seafaring adventure that takes him to the deepest depths of the deep sea, where no Sponge has gone before.",
+          "posterPath": "https://image.tmdb.org/t/p/w300/pDWYW9v8fmJdA7N0I1MOdQA3ETq.jpg",
+          "rating": 6.848,
           "year": "2025"
         },
         {
@@ -589,10 +585,10 @@
             "2:00 pm"
           ],
           "url": "https://www.lidocinemas.com.au/tickets?c=0000000003&s=99137",
-          "overview": null,
-          "posterPath": null,
-          "rating": null,
-          "year": null
+          "overview": "Each member of a Taipei family asks hard questions about life's meaning as they experience everyday quandaries. NJ is morose: his brother owes him money, his mother-in-law is in a coma, his wife suffers a spiritual crisis when she finds her life a blank and his business partners make bad decisions.",
+          "posterPath": "https://image.tmdb.org/t/p/w300/mR8dSQZI8X6Z1NClJhFrtJp636z.jpg",
+          "rating": 7.914,
+          "year": "2000"
         },
         {
           "title": "Eternity",
@@ -622,10 +618,10 @@
             "7:30 pm"
           ],
           "url": "https://www.lidocinemas.com.au/tickets?c=0000000003&s=99160",
-          "overview": null,
-          "posterPath": null,
-          "rating": null,
-          "year": null
+          "overview": "In the wake of the devastating war against the RDA and the loss of their eldest son, Jake Sully and Neytiri face a new threat on Pandora: the Ash People, a violent and power-hungry Na'vi tribe led by the ruthless Varang. Jake's family must fight for their survival and the future of Pandora in a conflict that pushes them to their emotional and physical limits.",
+          "posterPath": "https://image.tmdb.org/t/p/w300/g96wHxU7EnoIFwemb2RgohIXrgW.jpg",
+          "rating": 7.384,
+          "year": "2025"
         },
         {
           "title": "Wake Up Dead Man: A Knives Out Mystery",
@@ -647,7 +643,16 @@
         {
           "title": "Avatar: Fire and Ash",
           "times": [
-            "See website"
+            "11:45 am",
+            "1:30 pm",
+            "2:00 pm",
+            "3:45 pm",
+            "6:00 pm",
+            "6:00 pm",
+            "7:45 pm",
+            "8:30 pm",
+            "8:30 pm",
+            "10:00 pm"
           ],
           "url": "https://www.hoyts.com.au/movies/avatar-fire-and-ash",
           "overview": "In the wake of the devastating war against the RDA and the loss of their eldest son, Jake Sully and Neytiri face a new threat on Pandora: the Ash People, a violent and power-hungry Na'vi tribe led by the ruthless Varang. Jake's family must fight for their survival and the future of Pandora in a conflict that pushes them to their emotional and physical limits.",
@@ -658,7 +663,15 @@
         {
           "title": "Anaconda",
           "times": [
-            "See website"
+            "11:10 am",
+            "11:45 am",
+            "3:30 pm",
+            "4:40 pm",
+            "6:00 pm",
+            "7:00 pm",
+            "7:00 pm",
+            "9:30 pm",
+            "10:00 pm"
           ],
           "url": "https://www.hoyts.com.au/movies/anaconda",
           "overview": "A group of friends facing mid-life crises head to the rainforest with the intention of remaking their favorite movie from their youth, only to find themselves in a fight for their lives against natural disasters, giant snakes and violent criminals.",
@@ -669,7 +682,11 @@
         {
           "title": "The SpongeBob Movie: Search for Squarepants",
           "times": [
-            "See website"
+            "11:00 am",
+            "1:15 pm",
+            "2:15 pm",
+            "4:40 pm",
+            "6:30 pm"
           ],
           "url": "https://www.hoyts.com.au/movies/the-spongebob-movie-search-for-squarepants",
           "overview": "Desperate to be a big guy, SpongeBob sets out to prove his bravery to Mr. Krabs by following The Flying Dutchman – a mysterious swashbuckling ghost pirate – on a seafaring adventure that takes him to the deepest depths of the deep sea, where no Sponge has gone before.",
@@ -680,7 +697,14 @@
         {
           "title": "The Housemaid",
           "times": [
-            "See website"
+            "12:30 pm",
+            "12:30 pm",
+            "3:00 pm",
+            "3:30 pm",
+            "5:30 pm",
+            "7:00 pm",
+            "8:45 pm",
+            "9:30 pm"
           ],
           "url": "https://www.hoyts.com.au/movies/the-housemaid",
           "overview": "Trying to escape her past, Millie Calloway accepts a job as a live-in housemaid for the wealthy Nina and Andrew Winchester. But what begins as a dream job quickly unravels into something far more dangerous—a sexy, seductive game of secrets, scandal, and power.",
@@ -691,18 +715,24 @@
         {
           "title": "Zootopia 2",
           "times": [
-            "See website"
+            "12:50 pm",
+            "2:10 pm",
+            "4:30 pm",
+            "6:15 pm",
+            "7:00 pm"
           ],
           "url": "https://www.hoyts.com.au/movies/zootopia-2",
           "overview": "After cracking the biggest case in Zootopia's history, rookie cops Judy Hopps and Nick Wilde find themselves on the twisting trail of a great mystery when Gary De'Snake arrives and turns the animal metropolis upside down. To crack the case, Judy and Nick must go undercover to unexpected new parts of town, where their growing partnership is tested like never before.",
           "posterPath": "https://image.tmdb.org/t/p/w300/oJ7g2CifqpStmoYQyaLQgEU32qO.jpg",
-          "rating": 7.624,
+          "rating": 7.629,
           "year": "2025"
         },
         {
           "title": "Wicked: For Good",
           "times": [
-            "See website"
+            "3:20 pm",
+            "3:45 pm",
+            "8:45 pm"
           ],
           "url": "https://www.hoyts.com.au/movies/wicked-for-good",
           "overview": "As an angry mob rises against the Wicked Witch, Glinda and Elphaba will need to come together one final time. With their singular friendship now the fulcrum of their futures, they will need to truly see each other, with honesty and empathy, if they are to change themselves, and all of Oz, for good.",
@@ -713,7 +743,7 @@
         {
           "title": "Five Nights at Freddy's 2",
           "times": [
-            "See website"
+            "9:50 pm"
           ],
           "url": "https://www.hoyts.com.au/movies/five-nights-at-freddys-2",
           "overview": "One year since the supernatural nightmare at Freddy Fazbear's Pizza, the stories about what transpired there have been twisted into a campy local legend, inspiring the town's first ever Fazfest. With the truth kept from her, Abby sneaks out to reconnect with Freddy, Bonnie, Chica, and Foxy, setting into motion a terrifying series of events that will reveal dark secrets about the real origin of Freddy's, and unleash a decades-hidden horror.",
@@ -722,9 +752,21 @@
           "year": "2025"
         },
         {
+          "title": "Dhurandhar (Hindi, Eng Sub)",
+          "times": [
+            "9:30 pm"
+          ],
+          "url": "https://www.hoyts.com.au/movies/dhurandhar-hindi-eng-sub",
+          "overview": "After the hijacking of IC-814 in 1999 and the Parliament attack in 2001, India’s Intelligence Bureau Chief, Ajay Sanyal, devises an indomitable mission to intrude and rupture the terrorist network in Pakistan, by infiltrating the underworld mafia of Karachi with the help of a mysterious traveler.",
+          "posterPath": "https://image.tmdb.org/t/p/w300/8FHOtUpNIk5ZPEay2N2EY5lrxkv.jpg",
+          "rating": 6.303,
+          "year": "2025"
+        },
+        {
           "title": "Nuremberg",
           "times": [
-            "See website"
+            "11:00 am",
+            "1:30 pm"
           ],
           "url": "https://www.hoyts.com.au/movies/nuremberg",
           "overview": "In postwar Germany, an American psychiatrist must determine whether Nazi prisoners are fit to go on trial for war crimes, and finds himself in a complex battle of intellect and ethics with Hermann Göring, Hitler's right-hand man.",
@@ -733,36 +775,14 @@
           "year": "2025"
         },
         {
-          "title": "Dhurandhar (Hindi, Eng Sub)",
-          "times": [
-            "See website"
-          ],
-          "url": "https://www.hoyts.com.au/movies/dhurandhar-hindi-eng-sub",
-          "overview": null,
-          "posterPath": null,
-          "rating": null,
-          "year": null
-        },
-        {
           "title": "Eternity",
           "times": [
-            "See website"
+            "11:00 am"
           ],
           "url": "https://www.hoyts.com.au/movies/eternity",
           "overview": "In an afterlife where souls have one week to decide where to spend eternity, Joan is faced with the impossible choice between the man she spent her life with and her first love, who died young and has waited decades for her to arrive.",
           "posterPath": "https://image.tmdb.org/t/p/w300/o8pg20G67BGmQvRkXwstNre062J.jpg",
           "rating": 7.022,
-          "year": "2025"
-        },
-        {
-          "title": "Song Sung Blue",
-          "times": [
-            "See website"
-          ],
-          "url": "https://www.hoyts.com.au/movies/song-sung-blue",
-          "overview": "Based on a true story, two down-on-their-luck musicians form a joyous Neil Diamond tribute band, proving it's never too late to find love and follow your dreams.",
-          "posterPath": "https://image.tmdb.org/t/p/w300/3HsIAbHWbFDUbY2jfj4wqEjGC3b.jpg",
-          "rating": 7,
           "year": "2025"
         }
       ]
@@ -772,76 +792,46 @@
       "url": "https://www.astortheatre.net.au/",
       "sessions": [
         {
-          "title": "SINGLE FEATURE",
+          "title": "Seven Samurai - 70th Anniversary 4K Restoration",
           "times": [
-            "See website"
+            "2pm"
           ],
-          "url": "https://www.astortheatre.net.au/",
+          "url": "https://www.astortheatre.net.au/sessions/2025-12-29-1400",
           "isDoubleFeature": false,
-          "overview": null,
-          "posterPath": null,
-          "rating": null,
-          "year": null
+          "overview": "A samurai answers a village's request for protection after he falls on hard times. The town needs protection from bandits, so the samurai gathers six others to help him teach the people how to defend themselves, and the villagers provide the soldiers with food.",
+          "posterPath": "https://image.tmdb.org/t/p/w300/lOMGc8bnSwQhS4XyE1S99uH8NXf.jpg",
+          "rating": 8.5,
+          "year": "1954"
         },
         {
-          "title": "SEVEN SAMURAI - 70TH ANNIVERSARY 4K RESTORATION [PG]",
+          "title": "Alien + Aliens - Special Edition",
           "times": [
-            "See website"
+            "6:30pm"
           ],
-          "url": "https://www.astortheatre.net.au/",
-          "isDoubleFeature": false,
-          "overview": null,
-          "posterPath": null,
-          "rating": null,
-          "year": null
-        },
-        {
-          "title": "BUY TICKETS",
-          "times": [
-            "See website"
+          "url": "https://www.astortheatre.net.au/sessions/2025-12-29-1830",
+          "isDoubleFeature": true,
+          "film1": "Alien",
+          "film2": "Aliens - Special Edition",
+          "films": [
+            {
+              "title": "Alien",
+              "overview": "During its return to the earth, commercial spaceship Nostromo intercepts a distress signal from a distant planet. When a three-member team of the crew discovers a chamber containing thousands of eggs on the planet, a creature inside one of the eggs attacks an explorer. The entire crew is unaware of the impending nightmare set to descend upon them when the alien parasite planted inside its unfortunate host is birthed.",
+              "posterPath": "https://image.tmdb.org/t/p/w300/vfrQk5IPloGg1v9Rzbh2Eg3VGyM.jpg",
+              "rating": 8.166,
+              "year": "1979",
+              "tmdbId": 348
+            },
+            {
+              "title": "Aliens - Special Edition",
+              "overview": "Ripley, the sole survivor of the Nostromo's deadly encounter with the monstrous Alien, returns to Earth after drifting through space in hypersleep for 57 years. Although her story is initially met with skepticism, she agrees to accompany a team of Colonial Marines back to LV-426.",
+              "posterPath": "https://image.tmdb.org/t/p/w300/r1x5JGpyqZU8PYhbs4UcrO1Xb6x.jpg",
+              "rating": 7.955,
+              "year": "1986",
+              "tmdbId": 679
+            }
           ],
-          "url": "https://www.astortheatre.net.au/",
-          "isDoubleFeature": false,
-          "overview": null,
-          "posterPath": null,
-          "rating": null,
-          "year": null
-        },
-        {
-          "title": "SESSION INFO",
-          "times": [
-            "See website"
-          ],
-          "url": "https://www.astortheatre.net.au/",
-          "isDoubleFeature": false,
-          "overview": null,
-          "posterPath": null,
-          "rating": null,
-          "year": null
-        },
-        {
-          "title": "DOUBLE FEATURE",
-          "times": [
-            "See website"
-          ],
-          "url": "https://www.astortheatre.net.au/",
-          "isDoubleFeature": false,
-          "overview": "Director José Luis Garci has turned his camera inward on filmmakers and screenwriters to portray them as so self-absorbed in the creative process that there is no other world, no other human relationship that can compete. As José (Adolfo Marsillach) and Federico (Jesus Puente) work together on a new screenplay, their interactions with their family (José's teen daughters, Federico's wife) disappear under the all-consuming task of creation. The daughters give up and go off on their own, and the wife joins a convent while Federico barely notices. And when the producer is interrupted by profound grief at the sudden death of his older son, he almost automatically returns to thinking about the film project when the funeral has ended. Garci honors many great directors at the beginning of this film, and the film continues to play out as an elaboration on this homage -- an illustration both of the dedication and the cost of filmmaking, no judgments given.",
-          "posterPath": "https://image.tmdb.org/t/p/w300/ewN1nhOAcAEKUwugdgGlTf4gJ8l.jpg",
-          "rating": 5.2,
-          "year": "1984"
-        },
-        {
-          "title": "ALIEN [M]",
-          "times": [
-            "See website"
-          ],
-          "url": "https://www.astortheatre.net.au/",
-          "isDoubleFeature": false,
-          "overview": "During its return to the earth, commercial spaceship Nostromo intercepts a distress signal from a distant planet. When a three-member team of the crew discovers a chamber containing thousands of eggs on the planet, a creature inside one of the eggs attacks an explorer. The entire crew is unaware of the impending nightmare set to descend upon them when the alien parasite planted inside its unfortunate host is birthed.",
           "posterPath": "https://image.tmdb.org/t/p/w300/vfrQk5IPloGg1v9Rzbh2Eg3VGyM.jpg",
-          "rating": 8.166,
-          "year": "1979"
+          "overview": "During its return to the earth, commercial spaceship Nostromo intercepts a distress signal from a distant planet. When a three-member team of the crew discovers a chamber containing thousands of eggs on the planet, a creature inside one of the eggs attacks an explorer. The entire crew is unaware of the impending nightmare set to descend upon them when the alien parasite planted inside its unfortunate host is birthed."
         }
       ],
       "note": "Famous for double features - check website for full program"
