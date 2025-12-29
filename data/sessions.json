@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2025-12-29T06:03:12.686Z",
+  "generatedAt": "2025-12-29T06:18:13.537Z",
   "date": "Monday 29 December 2025",
   "cinemas": [
     {
@@ -814,66 +814,268 @@
     {
       "cinema": "The Astor Theatre",
       "url": "https://www.astortheatre.net.au/",
-      "sessions": [
-        {
-          "title": "Seven Samurai - 70th Anniversary 4K Restoration",
-          "times": [
-            "2pm"
-          ],
-          "url": "https://www.astortheatre.net.au/sessions/2025-12-29-1400",
-          "isDoubleFeature": false,
-          "overview": "A samurai answers a village's request for protection after he falls on hard times. The town needs protection from bandits, so the samurai gathers six others to help him teach the people how to defend themselves, and the villagers provide the soldiers with food.",
-          "posterPath": "https://image.tmdb.org/t/p/w300/lOMGc8bnSwQhS4XyE1S99uH8NXf.jpg",
-          "rating": 8.452,
-          "year": "1954",
-          "runtime": 207
-        },
-        {
-          "title": "Alien + Aliens - Special Edition",
-          "times": [
-            "6:30pm"
-          ],
-          "url": "https://www.astortheatre.net.au/sessions/2025-12-29-1830",
-          "isDoubleFeature": true,
-          "film1": "Alien",
-          "film2": "Aliens - Special Edition",
-          "films": [
-            {
-              "title": "Alien",
-              "overview": "During its return to the earth, commercial spaceship Nostromo intercepts a distress signal from a distant planet. When a three-member team of the crew discovers a chamber containing thousands of eggs on the planet, a creature inside one of the eggs attacks an explorer. The entire crew is unaware of the impending nightmare set to descend upon them when the alien parasite planted inside its unfortunate host is birthed.",
-              "posterPath": "https://image.tmdb.org/t/p/w300/vfrQk5IPloGg1v9Rzbh2Eg3VGyM.jpg",
-              "rating": 8.166,
-              "year": "1979",
-              "runtime": 117,
-              "tmdbId": 348
-            },
-            {
-              "title": "Aliens - Special Edition",
-              "overview": "Ripley, the sole survivor of the Nostromo's deadly encounter with the monstrous Alien, returns to Earth after drifting through space in hypersleep for 57 years. Although her story is initially met with skepticism, she agrees to accompany a team of Colonial Marines back to LV-426.",
-              "posterPath": "https://image.tmdb.org/t/p/w300/r1x5JGpyqZU8PYhbs4UcrO1Xb6x.jpg",
-              "rating": 7.955,
-              "year": "1986",
-              "runtime": 137,
-              "tmdbId": 679
-            }
-          ],
-          "posterPath": "https://image.tmdb.org/t/p/w300/vfrQk5IPloGg1v9Rzbh2Eg3VGyM.jpg",
-          "overview": "During its return to the earth, commercial spaceship Nostromo intercepts a distress signal from a distant planet. When a three-member team of the crew discovers a chamber containing thousands of eggs on the planet, a creature inside one of the eggs attacks an explorer. The entire crew is unaware of the impending nightmare set to descend upon them when the alien parasite planted inside its unfortunate host is birthed.",
-          "runtime": 254,
-          "year": "1979",
-          "rating": 8.060500000000001
-        }
-      ]
+      "sessions": []
     },
     {
       "cinema": "Palace Como",
       "url": "https://www.palacecinemas.com.au/cinemas/palace-cinema-como",
-      "sessions": []
+      "sessions": [
+        {
+          "title": "Anaconda",
+          "times": [
+            "6:10pm",
+            "9:00pm"
+          ],
+          "url": "https://www.palacecinemas.com.au/movies/anaconda",
+          "overview": "A group of friends facing mid-life crises head to the rainforest with the intention of remaking their favorite movie from their youth, only to find themselves in a fight for their lives against natural disasters, giant snakes and violent criminals.",
+          "posterPath": "https://image.tmdb.org/t/p/w300/5MDnvvkOqthhE5gQebzkcOhD1p5.jpg",
+          "rating": 6.569,
+          "year": "2025",
+          "runtime": 100
+        },
+        {
+          "title": "Avatar: Fire and Ash (2D)",
+          "times": [
+            "6:40pm",
+            "7:50pm"
+          ],
+          "url": "https://www.palacecinemas.com.au/movies/avatar-fire-and-ash-2d",
+          "overview": "In the wake of the devastating war against the RDA and the loss of their eldest son, Jake Sully and Neytiri face a new threat on Pandora: the Ash People, a violent and power-hungry Na'vi tribe led by the ruthless Varang. Jake's family must fight for their survival and the future of Pandora in a conflict that pushes them to their emotional and physical limits.",
+          "posterPath": "https://image.tmdb.org/t/p/w300/g96wHxU7EnoIFwemb2RgohIXrgW.jpg",
+          "rating": 7.384,
+          "year": "2025",
+          "runtime": 198
+        },
+        {
+          "title": "My Brother's Band",
+          "times": [
+            "5:30pm"
+          ],
+          "url": "https://www.palacecinemas.com.au/movies/my-brothers-band",
+          "overview": "Diagnosed with leukemia, a successful orchestra conductor learns that he is adopted, and his younger brother is in a village marching band. The conductor decides to help them win a regional contest.",
+          "posterPath": "https://image.tmdb.org/t/p/w300/6lATJ42bWGAIQ0cG2dzSZD8bNcL.jpg",
+          "rating": 7.3,
+          "year": "2024",
+          "runtime": 103
+        },
+        {
+          "title": "Nuremberg",
+          "times": [
+            "8:20pm"
+          ],
+          "url": "https://www.palacecinemas.com.au/movies/nuremberg",
+          "overview": "In postwar Germany, an American psychiatrist must determine whether Nazi prisoners are fit to go on trial for war crimes, and finds himself in a complex battle of intellect and ethics with Hermann Göring, Hitler's right-hand man.",
+          "posterPath": "https://image.tmdb.org/t/p/w300/sxu8TsG7k06ymWL98ELEIE1EMZV.jpg",
+          "rating": 7.293,
+          "year": "2025",
+          "runtime": 148
+        },
+        {
+          "title": "Rental Family",
+          "times": [
+            "6:30pm",
+            "8:50pm"
+          ],
+          "url": "https://www.palacecinemas.com.au/movies/rental-family",
+          "overview": "An American actor in Tokyo struggles to find purpose until he lands an unusual gig: working for a Japanese 'rental family' agency, playing stand-in roles for strangers. As he immerses himself in his clients' worlds, he begins to form genuine bonds that blur the lines between performance and reality.",
+          "posterPath": "https://image.tmdb.org/t/p/w300/dGRZ55srJoK6TcjPTfHe701UWq0.jpg",
+          "rating": 7.5,
+          "year": "2025",
+          "runtime": 110
+        },
+        {
+          "title": "Sentimental Value",
+          "times": [
+            "5:40pm",
+            "8:30pm"
+          ],
+          "url": "https://www.palacecinemas.com.au/movies/sentimental-value",
+          "overview": "Sisters Nora and Agnes reunite with their estranged father, the charismatic Gustav, a once-renowned director who offers stage actress Nora a role in what he hopes will be his comeback film. When Nora turns it down, she soon discovers he has given her part to an eager young Hollywood star.",
+          "posterPath": "https://image.tmdb.org/t/p/w300/dNy7iCibnVTJuvosArcDEdbruBT.jpg",
+          "rating": 7.576,
+          "year": "2025",
+          "runtime": 133
+        },
+        {
+          "title": "Song Sung Blue",
+          "times": [
+            "6:00pm",
+            "7:10pm"
+          ],
+          "url": "https://www.palacecinemas.com.au/movies/song-sung-blue",
+          "overview": "Based on a true story, two down-on-their-luck musicians form a joyous Neil Diamond tribute band, proving it's never too late to find love and follow your dreams.",
+          "posterPath": "https://image.tmdb.org/t/p/w300/3HsIAbHWbFDUbY2jfj4wqEjGC3b.jpg",
+          "rating": 7,
+          "year": "2025",
+          "runtime": 133
+        },
+        {
+          "title": "The Housemaid",
+          "times": [
+            "5:50pm",
+            "8:40pm"
+          ],
+          "url": "https://www.palacecinemas.com.au/movies/the-housemaid",
+          "overview": "Trying to escape her past, Millie Calloway accepts a job as a live-in housemaid for the wealthy Nina and Andrew Winchester. But what begins as a dream job quickly unravels into something far more dangerous—a sexy, seductive game of secrets, scandal, and power.",
+          "posterPath": "https://image.tmdb.org/t/p/w300/cWsBscZzwu5brg9YjNkGewRUvJX.jpg",
+          "rating": 7.715,
+          "year": "2025",
+          "runtime": 131
+        },
+        {
+          "title": "Wicked: For Good",
+          "times": [
+            "8:40pm"
+          ],
+          "url": "https://www.palacecinemas.com.au/movies/wicked-for-good",
+          "overview": "As an angry mob rises against the Wicked Witch, Glinda and Elphaba will need to come together one final time. With their singular friendship now the fulcrum of their futures, they will need to truly see each other, with honesty and empathy, if they are to change themselves, and all of Oz, for good.",
+          "posterPath": "https://image.tmdb.org/t/p/w300/si9tolnefLSUKaqQEGz1bWArOaL.jpg",
+          "rating": 6.775,
+          "year": "2025",
+          "runtime": 137
+        },
+        {
+          "title": "Zootopia 2",
+          "times": [
+            "6:15pm"
+          ],
+          "url": "https://www.palacecinemas.com.au/movies/zootopia-2",
+          "overview": "After cracking the biggest case in Zootopia's history, rookie cops Judy Hopps and Nick Wilde find themselves on the twisting trail of a great mystery when Gary De'Snake arrives and turns the animal metropolis upside down. To crack the case, Judy and Nick must go undercover to unexpected new parts of town, where their growing partnership is tested like never before.",
+          "posterPath": "https://image.tmdb.org/t/p/w300/oJ7g2CifqpStmoYQyaLQgEU32qO.jpg",
+          "rating": 7.629,
+          "year": "2025",
+          "runtime": 107
+        }
+      ]
     },
     {
       "cinema": "Palace Kino",
       "url": "https://www.palacecinemas.com.au/cinemas/the-kino-melbourne",
-      "sessions": []
+      "sessions": [
+        {
+          "title": "Anaconda",
+          "times": [
+            "8:00pm",
+            "9:00pm"
+          ],
+          "url": "https://www.palacecinemas.com.au/movies/anaconda",
+          "overview": "A group of friends facing mid-life crises head to the rainforest with the intention of remaking their favorite movie from their youth, only to find themselves in a fight for their lives against natural disasters, giant snakes and violent criminals.",
+          "posterPath": "https://image.tmdb.org/t/p/w300/5MDnvvkOqthhE5gQebzkcOhD1p5.jpg",
+          "rating": 6.569,
+          "year": "2025",
+          "runtime": 100
+        },
+        {
+          "title": "Avatar: Fire and Ash (2D)",
+          "times": [
+            "7:00pm"
+          ],
+          "url": "https://www.palacecinemas.com.au/movies/avatar-fire-and-ash-2d",
+          "overview": "In the wake of the devastating war against the RDA and the loss of their eldest son, Jake Sully and Neytiri face a new threat on Pandora: the Ash People, a violent and power-hungry Na'vi tribe led by the ruthless Varang. Jake's family must fight for their survival and the future of Pandora in a conflict that pushes them to their emotional and physical limits.",
+          "posterPath": "https://image.tmdb.org/t/p/w300/g96wHxU7EnoIFwemb2RgohIXrgW.jpg",
+          "rating": 7.384,
+          "year": "2025",
+          "runtime": 198
+        },
+        {
+          "title": "Eternity",
+          "times": [
+            "9:00pm"
+          ],
+          "url": "https://www.palacecinemas.com.au/movies/eternity",
+          "overview": "In an afterlife where souls have one week to decide where to spend eternity, Joan is faced with the impossible choice between the man she spent her life with and her first love, who died young and has waited decades for her to arrive.",
+          "posterPath": "https://image.tmdb.org/t/p/w300/o8pg20G67BGmQvRkXwstNre062J.jpg",
+          "rating": 7,
+          "year": "2025",
+          "runtime": 114
+        },
+        {
+          "title": "My Brother's Band",
+          "times": [
+            "5:45pm"
+          ],
+          "url": "https://www.palacecinemas.com.au/movies/my-brothers-band",
+          "overview": "Diagnosed with leukemia, a successful orchestra conductor learns that he is adopted, and his younger brother is in a village marching band. The conductor decides to help them win a regional contest.",
+          "posterPath": "https://image.tmdb.org/t/p/w300/6lATJ42bWGAIQ0cG2dzSZD8bNcL.jpg",
+          "rating": 7.3,
+          "year": "2024",
+          "runtime": 103
+        },
+        {
+          "title": "Nuremberg",
+          "times": [
+            "8:00pm"
+          ],
+          "url": "https://www.palacecinemas.com.au/movies/nuremberg",
+          "overview": "In postwar Germany, an American psychiatrist must determine whether Nazi prisoners are fit to go on trial for war crimes, and finds himself in a complex battle of intellect and ethics with Hermann Göring, Hitler's right-hand man.",
+          "posterPath": "https://image.tmdb.org/t/p/w300/sxu8TsG7k06ymWL98ELEIE1EMZV.jpg",
+          "rating": 7.293,
+          "year": "2025",
+          "runtime": 148
+        },
+        {
+          "title": "Rental Family",
+          "times": [
+            "8:40pm"
+          ],
+          "url": "https://www.palacecinemas.com.au/movies/rental-family",
+          "overview": "An American actor in Tokyo struggles to find purpose until he lands an unusual gig: working for a Japanese 'rental family' agency, playing stand-in roles for strangers. As he immerses himself in his clients' worlds, he begins to form genuine bonds that blur the lines between performance and reality.",
+          "posterPath": "https://image.tmdb.org/t/p/w300/dGRZ55srJoK6TcjPTfHe701UWq0.jpg",
+          "rating": 7.5,
+          "year": "2025",
+          "runtime": 110
+        },
+        {
+          "title": "Sentimental Value",
+          "times": [
+            "6:15pm"
+          ],
+          "url": "https://www.palacecinemas.com.au/movies/sentimental-value",
+          "overview": "Sisters Nora and Agnes reunite with their estranged father, the charismatic Gustav, a once-renowned director who offers stage actress Nora a role in what he hopes will be his comeback film. When Nora turns it down, she soon discovers he has given her part to an eager young Hollywood star.",
+          "posterPath": "https://image.tmdb.org/t/p/w300/dNy7iCibnVTJuvosArcDEdbruBT.jpg",
+          "rating": 7.576,
+          "year": "2025",
+          "runtime": 133
+        },
+        {
+          "title": "Song Sung Blue",
+          "times": [
+            "5:50pm"
+          ],
+          "url": "https://www.palacecinemas.com.au/movies/song-sung-blue",
+          "overview": "Based on a true story, two down-on-their-luck musicians form a joyous Neil Diamond tribute band, proving it's never too late to find love and follow your dreams.",
+          "posterPath": "https://image.tmdb.org/t/p/w300/3HsIAbHWbFDUbY2jfj4wqEjGC3b.jpg",
+          "rating": 7,
+          "year": "2025",
+          "runtime": 133
+        },
+        {
+          "title": "The Housemaid",
+          "times": [
+            "6:00pm",
+            "7:00pm",
+            "8:45pm"
+          ],
+          "url": "https://www.palacecinemas.com.au/movies/the-housemaid",
+          "overview": "Trying to escape her past, Millie Calloway accepts a job as a live-in housemaid for the wealthy Nina and Andrew Winchester. But what begins as a dream job quickly unravels into something far more dangerous—a sexy, seductive game of secrets, scandal, and power.",
+          "posterPath": "https://image.tmdb.org/t/p/w300/cWsBscZzwu5brg9YjNkGewRUvJX.jpg",
+          "rating": 7.715,
+          "year": "2025",
+          "runtime": 131
+        },
+        {
+          "title": "Wake Up Dead Man: A Knives Out Mystery",
+          "times": [
+            "6:00pm"
+          ],
+          "url": "https://www.palacecinemas.com.au/movies/wake-up-dead-man-a-knives-out-mystery",
+          "overview": "When young priest Jud Duplenticy is sent to assist charismatic firebrand Monsignor Jefferson Wicks, it’s clear that all is not well in the pews. After a sudden and seemingly impossible murder rocks the town, the lack of an obvious suspect prompts local police chief Geraldine Scott to join forces with renowned detective Benoit Blanc to unravel a mystery that defies all logic.",
+          "posterPath": "https://image.tmdb.org/t/p/w300/qCOGGi8JBVEZMc3DVby8rUivyXz.jpg",
+          "rating": 7.202,
+          "year": "2025",
+          "runtime": 145
+        }
+      ]
     }
   ]
 }
