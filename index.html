@@ -183,7 +183,6 @@
     }
     
     .show-more-btn {
-      display: none;
       width: 100%;
       padding: 1rem;
       margin-top: -2rem;
@@ -201,12 +200,9 @@
       color: var(--cream);
     }
     
-    .film-list.collapsed + .show-more-btn {
-      display: block;
-    }
-    
     .film-list.expanded + .show-more-btn {
-      display: none;
+      margin-top: 0;
+      background: transparent;
     }
     
     /* Single column film cards - poster | title+precis | times */
@@ -467,10 +463,12 @@
           return;
         }
         
-        // Sort cinemas alphabetically
-        const sortedCinemas = [...data.cinemas].sort((a, b) => 
-          a.cinema.localeCompare(b.cinema)
-        );
+        // Sort cinemas alphabetically (ignoring leading "The")
+        const sortedCinemas = [...data.cinemas].sort((a, b) => {
+          const nameA = a.cinema.replace(/^The\s+/i, '');
+          const nameB = b.cinema.replace(/^The\s+/i, '');
+          return nameA.localeCompare(nameB);
+        });
         
         // Build cinema nav
         let navHtml = '';
@@ -570,15 +568,22 @@
         }
         main.innerHTML = html;
         
-        // Add show more button listeners
+        // Add show more/less button listeners
         document.querySelectorAll('.show-more-btn').forEach(btn => {
           btn.addEventListener('click', () => {
             const cinemaId = btn.dataset.cinema;
             const filmList = document.querySelector(`.film-list[data-cinema="${cinemaId}"]`);
             if (filmList) {
-              filmList.classList.remove('collapsed');
-              filmList.classList.add('expanded');
-              btn.style.display = 'none';
+              const isCollapsed = filmList.classList.contains('collapsed');
+              if (isCollapsed) {
+                filmList.classList.remove('collapsed');
+                filmList.classList.add('expanded');
+                btn.textContent = 'LESS ▲';
+              } else {
+                filmList.classList.remove('expanded');
+                filmList.classList.add('collapsed');
+                btn.textContent = 'MORE ▼';
+              }
             }
           });
         });
