@@ -115,41 +115,49 @@ async function scrapeACMI(page) {
     
     const films = await page.evaluate(() => {
       const items = [];
-      document.querySelectorAll('a[href*="/whats-on/"]').forEach(el => {
-        const href = el.href;
-        if (href === 'https://www.acmi.net.au/whats-on/' || href.includes('?')) return;
-        
-        const titleEl = el.querySelector('h2, h3, h4, [class*="title"]');
+      
+      // Each film is in article.event-card
+      document.querySelectorAll('article.event-card').forEach(card => {
+        // Get title from h3.heading--base--xl span.event-card__title
+        const titleEl = card.querySelector('h3.heading--base--xl span.event-card__title');
         const title = titleEl?.textContent?.trim();
-        const timeEl = el.querySelector('[class*="time"], [class*="date"], time, p');
-        let time = timeEl?.textContent?.trim() || '';
         
-        // Try to extract actual time
-        const timeMatch = time.match(/\d{1,2}[:.]\d{2}\s*(am|pm)?/i);
-        time = timeMatch ? timeMatch[0] : 'See website';
+        if (!title) return;
         
-        if (title && title.length > 2) {
-          const skipWords = ['exhibition', 'game worlds', 'story of the moving image', 'talk', 'workshop', 'visit'];
-          const titleLower = title.toLowerCase();
-          if (skipWords.some(word => titleLower.includes(word))) return;
-          
-          items.push({ title, time, url: href });
-        }
+        // Get time from p.text-sm
+        const timeEl = card.querySelector('p.text-sm');
+        let time = timeEl?.textContent?.trim() || 'See website';
+        
+        // Get URL from the main link
+        const linkEl = card.querySelector('a[href*="/whats-on/"]');
+        const filmUrl = linkEl?.href || '';
+        
+        // Skip non-film events
+        const skipWords = ['exhibition', 'game worlds', 'story of the moving image', 'talk', 'workshop', 'visit'];
+        const titleLower = title.toLowerCase();
+        if (skipWords.some(word => titleLower.includes(word))) return;
+        
+        items.push({ title, time, url: filmUrl });
       });
+      
       return items;
     });
     
-    const seen = new Set();
+    // Group by title in case same film has multiple times
+    const filmMap = new Map();
     for (const film of films) {
-      if (!seen.has(film.title)) {
-        seen.add(film.title);
-        sessions.push({
+      if (filmMap.has(film.title)) {
+        filmMap.get(film.title).times.push(film.time);
+      } else {
+        filmMap.set(film.title, {
           title: film.title,
           times: [film.time],
           url: film.url
         });
       }
     }
+    
+    filmMap.forEach(film => sessions.push(film));
     
     console.log(`  Found ${sessions.length} films`);
   } catch (error) {
