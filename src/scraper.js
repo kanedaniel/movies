@@ -111,22 +111,66 @@ async function scrapeACMI(page) {
   
   try {
     await page.goto(url, { waitUntil: 'networkidle2', timeout: 60000 });
-    await page.waitForTimeout(3000);
+    await page.waitForTimeout(5000);
+    
+    // Wait for event cards to load
+    try {
+      await page.waitForSelector('article.event-card, .event-card', { timeout: 10000 });
+      console.log('  Event cards found');
+    } catch (e) {
+      console.log('  No event cards found, trying alternative selectors...');
+    }
     
     const films = await page.evaluate(() => {
       const items = [];
       
-      // Each film is in article.event-card
-      document.querySelectorAll('article.event-card').forEach(card => {
-        // Get title from h3.heading--base--xl span.event-card__title
-        const titleEl = card.querySelector('h3.heading--base--xl span.event-card__title');
-        const title = titleEl?.textContent?.trim();
+      // Try multiple selector approaches
+      let cards = document.querySelectorAll('article.event-card');
+      if (cards.length === 0) {
+        cards = document.querySelectorAll('[class*="event-card"]');
+      }
+      if (cards.length === 0) {
+        cards = document.querySelectorAll('article');
+      }
+      
+      console.log('Found cards:', cards.length);
+      
+      cards.forEach(card => {
+        // Try multiple ways to get the title
+        let title = null;
+        
+        // Method 1: h3.heading--base--xl span.event-card__title
+        let titleEl = card.querySelector('h3.heading--base--xl span.event-card__title');
+        if (titleEl) title = titleEl.textContent?.trim();
+        
+        // Method 2: Any .event-card__title
+        if (!title) {
+          titleEl = card.querySelector('.event-card__title');
+          if (titleEl) title = titleEl.textContent?.trim();
+        }
+        
+        // Method 3: aria-label on article
+        if (!title) {
+          const ariaLabel = card.getAttribute('aria-label');
+          if (ariaLabel && ariaLabel.includes('Event:')) {
+            title = ariaLabel.replace('Event:', '').trim();
+          }
+        }
         
         if (!title) return;
         
-        // Get time from p.text-sm
+        // Skip "Best of 2025" type headers
+        if (title === 'Best of 2025') return;
+        
+        // Get time from p.text-sm or any p with time pattern
+        let time = 'See website';
         const timeEl = card.querySelector('p.text-sm');
-        let time = timeEl?.textContent?.trim() || 'See website';
+        if (timeEl) {
+          const timeText = timeEl.textContent?.trim();
+          if (timeText && /\d{1,2}:\d{2}/.test(timeText)) {
+            time = timeText;
+          }
+        }
         
         // Get URL from the main link
         const linkEl = card.querySelector('a[href*="/whats-on/"]');
