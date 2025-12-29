@@ -269,7 +269,7 @@
     
     .double-feature-label {
       position: absolute;
-      top: 0; right: 0;
+      top: 0; left: 0;
       background: var(--red);
       color: var(--cream);
       font-family: 'JetBrains Mono', monospace;
@@ -277,6 +277,27 @@
       padding: 0.2rem 0.5rem;
       text-transform: uppercase;
       letter-spacing: 0.05em;
+      z-index: 2;
+    }
+    
+    .double-poster-container {
+      position: relative;
+      width: 100px;
+      height: 150px;
+    }
+    
+    .double-poster-container img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100px;
+      height: 150px;
+      object-fit: cover;
+      transition: opacity 0.5s ease;
+    }
+    
+    .double-poster-container img.poster-hidden {
+      opacity: 0;
     }
     
     .no-sessions {
@@ -394,9 +415,19 @@
             
             for (const session of sortedSessions) {
               const isDouble = session.isDoubleFeature || session.films;
-              const poster = session.posterPath 
-                ? `<img src="${esc(session.posterPath)}" alt="" class="film-poster" loading="lazy">`
-                : '<div class="film-poster-placeholder">🎬</div>';
+              
+              let poster;
+              if (isDouble && session.films && session.films.length >= 2 && session.films[0]?.posterPath && session.films[1]?.posterPath) {
+                // Double feature with two posters - create cycling container
+                poster = `<div class="double-poster-container" data-posters='${JSON.stringify([session.films[0].posterPath, session.films[1].posterPath])}'>
+                  <img src="${esc(session.films[0].posterPath)}" alt="" class="film-poster" loading="lazy">
+                  <img src="${esc(session.films[1].posterPath)}" alt="" class="film-poster poster-hidden" loading="lazy">
+                </div>`;
+              } else if (session.posterPath) {
+                poster = `<img src="${esc(session.posterPath)}" alt="" class="film-poster" loading="lazy">`;
+              } else {
+                poster = '<div class="film-poster-placeholder">🎬</div>';
+              }
               
               const meta = [];
               if (session.year) meta.push(session.year);
@@ -424,10 +455,28 @@
           html += '</section>';
         }
         main.innerHTML = html;
+        
+        // Start cycling posters for double features
+        startPosterCycling();
       } catch (error) {
         console.error('Error:', error);
         main.innerHTML = `<div class="error-state"><h2>Unable to Load</h2><p>Please refresh the page.</p></div>`;
       }
+    }
+    
+    function startPosterCycling() {
+      const containers = document.querySelectorAll('.double-poster-container');
+      containers.forEach(container => {
+        const imgs = container.querySelectorAll('img');
+        if (imgs.length < 2) return;
+        
+        let showing = 0;
+        setInterval(() => {
+          imgs[showing].classList.add('poster-hidden');
+          showing = (showing + 1) % 2;
+          imgs[showing].classList.remove('poster-hidden');
+        }, 2000);
+      });
     }
     
     function esc(text) {
