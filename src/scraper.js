@@ -151,6 +151,10 @@ async function scrapeACMI(page) {
     
     console.log(`  Found ${data.length} items in API response`);
     
+    // Debug: show event types
+    const eventTypes = [...new Set(data.map(item => item.event_type?.name || 'unknown'))];
+    console.log(`  Event types: ${eventTypes.join(', ')}`);
+    
     // Group sessions by film title
     const filmMap = new Map();
     
@@ -621,11 +625,15 @@ async function scrapeAstor(page) {
     const blocks = combinedHtml.split(/<div[^>]*class="[^"]*movie_preview[^"]*session/i);
     console.log(`  Split into ${blocks.length} blocks`);
     
+    let todayBlocks = 0;
+    let titleMatches = 0;
+    
     for (let i = 1; i < blocks.length; i++) { // Start at 1 to skip content before first match
       const block = blocks[i];
       
       // Check if it's today
       if (!/today/i.test(block)) continue;
+      todayBlocks++;
       
       // Extract time: "Today at 2pm" or "Today at 6:30pm"
       const timeMatch = block.match(/today\s+at\s+(\d{1,2}(?::\d{2})?\s*(?:am|pm))/i);
@@ -637,11 +645,19 @@ async function scrapeAstor(page) {
       let titleMatch;
       let filmUrl = url;
       while ((titleMatch = titleRegex.exec(block)) !== null) {
+        titleMatches++;
         filmUrl = titleMatch[1] || filmUrl;
         let title = titleMatch[2].trim();
         // Remove rating brackets like [PG], [M]
         title = title.replace(/\s*\[.*?\]\s*$/, '').trim();
         if (title) titles.push(title);
+      }
+      
+      // Debug: if no titles found, show a snippet
+      if (titles.length === 0 && todayBlocks <= 2) {
+        // Look for any h2 content
+        const h2Match = block.match(/<h2[^>]*>([\s\S]{0,200})/i);
+        console.log(`  Block ${i} (today) - no title match. h2 snippet: ${h2Match ? h2Match[1].substring(0, 100) : 'no h2'}`);
       }
       
       if (titles.length === 0) continue;
