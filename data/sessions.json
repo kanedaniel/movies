@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2025-12-30T01:47:14.541Z",
+  "generatedAt": "2025-12-30T02:02:34.211Z",
   "date": "Tuesday 30 December 2025",
   "cinemas": [
     {
@@ -182,7 +182,7 @@
           "url": "https://www.cinemanova.com.au/films/angel-s-egg",
           "overview": "In the ruins of a strange city, a young girl takes care of a large egg she holds carefully in her arms. She bonds with a boy who is searching for a bird he saw in a dream.",
           "posterPath": "https://image.tmdb.org/t/p/w300/dcEUGvckbePFzPKhGXnS9T3kZMG.jpg",
-          "rating": 7.7,
+          "rating": 7.724,
           "year": "1985",
           "runtime": 71,
           "trailerUrl": "https://www.youtube.com/watch?v=SqyVGzaQFpQ"
@@ -716,20 +716,6 @@
           "trailerUrl": "https://www.youtube.com/watch?v=5H7L9j0dW90"
         },
         {
-          "title": "Nuremberg",
-          "times": [
-            "12:30 pm",
-            "5:40 pm"
-          ],
-          "url": "https://www.lidocinemas.com.au/tickets?c=0000000003&s=99178",
-          "overview": "In postwar Germany, an American psychiatrist must determine whether Nazi prisoners are fit to go on trial for war crimes, and finds himself in a complex battle of intellect and ethics with Hermann Göring, Hitler's right-hand man.",
-          "posterPath": "https://image.tmdb.org/t/p/w300/sxu8TsG7k06ymWL98ELEIE1EMZV.jpg",
-          "rating": 7.259,
-          "year": "2025",
-          "runtime": 148,
-          "trailerUrl": "https://www.youtube.com/watch?v=YWlCCVnZ4bo"
-        },
-        {
           "title": "The SpongeBob Movie: Search for Squarepants",
           "times": [
             "1:00 pm"
@@ -754,6 +740,19 @@
           "year": "2025",
           "runtime": 198,
           "trailerUrl": "https://www.youtube.com/watch?v=hsxgDO2mvng"
+        },
+        {
+          "title": "Nuremberg",
+          "times": [
+            "5:40 pm"
+          ],
+          "url": "https://www.lidocinemas.com.au/tickets?c=0000000003&s=99183",
+          "overview": "In postwar Germany, an American psychiatrist must determine whether Nazi prisoners are fit to go on trial for war crimes, and finds himself in a complex battle of intellect and ethics with Hermann Göring, Hitler's right-hand man.",
+          "posterPath": "https://image.tmdb.org/t/p/w300/sxu8TsG7k06ymWL98ELEIE1EMZV.jpg",
+          "rating": 7.259,
+          "year": "2025",
+          "runtime": 148,
+          "trailerUrl": "https://www.youtube.com/watch?v=YWlCCVnZ4bo"
         },
         {
           "title": "One Battle After Another",
@@ -892,7 +891,6 @@
         {
           "title": "The Housemaid",
           "times": [
-            "12:30 pm",
             "3:30 pm",
             "7:00 pm",
             "8:45 pm"
@@ -1125,7 +1123,6 @@
         {
           "title": "My Brother's Band",
           "times": [
-            "12:45pm",
             "3:45pm",
             "5:30pm"
           ],
@@ -1331,7 +1328,6 @@
         {
           "title": "Rental Family",
           "times": [
-            "12:40pm",
             "3:40pm",
             "8:40pm"
           ],
