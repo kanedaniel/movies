@@ -160,8 +160,10 @@ async function scrapeACMI(page) {
     // Flatten nested structure - data may be [{date, occurrences: [...]}]
     let items = data;
     if (data.length > 0 && data[0].occurrences && Array.isArray(data[0].occurrences)) {
-      items = data.flatMap(d => d.occurrences || []);
-      console.log(`  Flattened to ${items.length} occurrences`);
+      // Only take occurrences from today's date
+      const todayData = data.find(d => d.date === dateStr);
+      items = todayData?.occurrences || [];
+      console.log(`  Found ${items.length} occurrences for ${dateStr}`);
     }
     
     // Group sessions by film title
@@ -173,6 +175,12 @@ async function scrapeACMI(page) {
       
       // Skip non-films (but if type is unknown/empty, include it)
       if (eventType && eventType !== 'Film') continue;
+      
+      // Double-check the date matches today
+      if (item.start_datetime) {
+        const itemDate = item.start_datetime.split('T')[0];
+        if (itemDate !== dateStr) continue;
+      }
       
       const title = item.event?.title || item.title;
       if (!title) continue;
@@ -640,6 +648,9 @@ async function scrapeAstor(page) {
     let todayBlocks = 0;
     let titleMatches = 0;
     
+    // First pass: extract all today's films with their times
+    const todayFilms = [];
+    
     for (let i = 1; i < blocks.length; i++) { // Start at 1 to skip content before first match
       const block = blocks[i];
       
@@ -649,68 +660,58 @@ async function scrapeAstor(page) {
       
       // Extract time: "Today at 2pm" or "Today at 6:30pm"
       const timeMatch = block.match(/today\s+at\s+(\d{1,2}(?::\d{2})?\s*(?:am|pm))/i);
-      const time = timeMatch ? timeMatch[1] : 'See website';
+      const time = timeMatch ? timeMatch[1].toLowerCase().trim() : 'See website';
       
-      // Extract titles from h2 > a (class may or may not be present)
-      const titles = [];
-      const titleRegex = /<h2[^>]*>\s*<a[^>]*href="([^"]*)"[^>]*>([^<]+)/gi;
-      let titleMatch;
-      let filmUrl = url;
-      while ((titleMatch = titleRegex.exec(block)) !== null) {
-        titleMatches++;
-        filmUrl = titleMatch[1] || filmUrl;
-        let title = titleMatch[2].trim();
-        // Remove rating brackets like [PG], [M]
-        title = title.replace(/\s*\[.*?\]\s*$/, '').trim();
-        if (title) titles.push(title);
+      // Extract title from h2 > a (class may or may not be present)
+      const titleRegex = /<h2[^>]*>\s*<a[^>]*href="([^"]*)"[^>]*>([^<]+)/i;
+      const titleMatch = block.match(titleRegex);
+      
+      if (!titleMatch) continue;
+      titleMatches++;
+      
+      let filmUrl = titleMatch[1] || url;
+      let title = titleMatch[2].trim();
+      // Remove rating brackets like [PG], [M]
+      title = title.replace(/\s*\[.*?\]\s*$/, '').trim();
+      
+      if (title) {
+        todayFilms.push({ title, time, url: filmUrl });
       }
-      
-      // Debug: if no titles found, show a snippet
-      if (titles.length === 0 && todayBlocks <= 2) {
-        // Look for any h2 content
-        const h2Match = block.match(/<h2[^>]*>([\s\S]{0,200})/i);
-        console.log(`  Block ${i} (today) - no title match. h2 snippet: ${h2Match ? h2Match[1].substring(0, 100) : 'no h2'}`);
+    }
+    
+    console.log(`  Found ${todayFilms.length} today films before combining`);
+    
+    // Second pass: combine films with same time into double features
+    const timeMap = new Map();
+    for (const film of todayFilms) {
+      if (timeMap.has(film.time)) {
+        timeMap.get(film.time).push(film);
+      } else {
+        timeMap.set(film.time, [film]);
       }
-      
-      if (titles.length === 0) continue;
-      
-      // Check if double feature - either by class or by having 2 titles
-      const hasDoubleClass = /class="[^"]*double[^"]*"/i.test(block);
-      const isDouble = hasDoubleClass || titles.length >= 2;
-      
-      if (isDouble && titles.length >= 2) {
+    }
+    
+    for (const [time, films] of timeMap) {
+      if (films.length >= 2) {
+        // Double feature
         sessions.push({
-          title: titles.join(' + '),
+          title: films.map(f => f.title).join(' + '),
           times: [time],
-          url: filmUrl,
+          url: films[0].url,
           isDoubleFeature: true,
-          film1: titles[0],
-          film2: titles[1]
+          film1: films[0].title,
+          film2: films[1].title
         });
-      } else if (titles.length === 1) {
+      } else {
+        // Single film
         sessions.push({
-          title: titles[0],
+          title: films[0].title,
           times: [time],
-          url: filmUrl,
+          url: films[0].url,
           isDoubleFeature: false
         });
       }
     }
-    
-    // Dedupe - merge same titles with different times
-    const filmMap = new Map();
-    for (const s of sessions) {
-      if (filmMap.has(s.title)) {
-        const existing = filmMap.get(s.title);
-        s.times.forEach(t => {
-          if (!existing.times.includes(t)) existing.times.push(t);
-        });
-      } else {
-        filmMap.set(s.title, s);
-      }
-    }
-    sessions.length = 0;
-    filmMap.forEach(f => sessions.push(f));
     
     console.log(`  Found ${sessions.length} films`);
   } catch (error) {
