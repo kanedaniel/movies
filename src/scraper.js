@@ -884,6 +884,142 @@ async function scrapePalaceKino(page) {
   return { cinema: 'Palace Kino', url, sessions };
 }
 
+async function scrapePalaceWestgarth(page) {
+  console.log('Scraping Palace Westgarth...');
+  const sessions = [];
+  const url = 'https://www.palacecinemas.com.au/cinemas/palace-westgarth';
+  
+  try {
+    await page.goto(url, { waitUntil: 'networkidle2', timeout: 60000 });
+    await page.waitForTimeout(8000);
+    
+    const films = await page.evaluate((baseUrl) => {
+      const items = [];
+      const seen = new Set();
+      
+      // Find all movie links with actual title text
+      document.querySelectorAll('a[href*="/movies/"]').forEach(link => {
+        const href = link.getAttribute('href');
+        if (!href || !href.includes('/movies/')) return;
+        
+        const title = link.textContent?.trim();
+        if (!title || title === 'More Info' || title.length < 2) return;
+        if (seen.has(title)) return;
+        
+        // Walk up to find a container with buttons (session times)
+        let container = link.parentElement;
+        let attempts = 0;
+        while (container && attempts < 10) {
+          const buttons = container.querySelectorAll('button');
+          if (buttons.length > 0) {
+            // Found container with buttons
+            const times = [];
+            buttons.forEach(btn => {
+              const btnText = btn.textContent?.trim() || '';
+              const timeMatch = btnText.match(/(\d{1,2}:\d{2}\s*[ap]m)/i);
+              if (timeMatch) {
+                times.push(timeMatch[1].replace(/\s+/g, ''));
+              }
+            });
+            
+            if (times.length > 0) {
+              seen.add(title);
+              items.push({ 
+                title, 
+                times, 
+                url: href.startsWith('http') ? href : baseUrl + href 
+              });
+            }
+            break;
+          }
+          container = container.parentElement;
+          attempts++;
+        }
+      });
+      
+      return items;
+    }, 'https://www.palacecinemas.com.au');
+    
+    for (const film of films) {
+      sessions.push(film);
+    }
+    
+    console.log(`  Found ${sessions.length} films`);
+  } catch (error) {
+    console.error('  Palace Westgarth scrape error:', error.message);
+  }
+  
+  return { cinema: 'Palace Westgarth', url, sessions };
+}
+
+async function scrapePentridge(page) {
+  console.log('Scraping Pentridge Cinema...');
+  const sessions = [];
+  const url = 'https://www.palacecinemas.com.au/cinemas/pentridge-cinema';
+  
+  try {
+    await page.goto(url, { waitUntil: 'networkidle2', timeout: 60000 });
+    await page.waitForTimeout(8000);
+    
+    const films = await page.evaluate((baseUrl) => {
+      const items = [];
+      const seen = new Set();
+      
+      // Find all movie links with actual title text
+      document.querySelectorAll('a[href*="/movies/"]').forEach(link => {
+        const href = link.getAttribute('href');
+        if (!href || !href.includes('/movies/')) return;
+        
+        const title = link.textContent?.trim();
+        if (!title || title === 'More Info' || title.length < 2) return;
+        if (seen.has(title)) return;
+        
+        // Walk up to find a container with buttons (session times)
+        let container = link.parentElement;
+        let attempts = 0;
+        while (container && attempts < 10) {
+          const buttons = container.querySelectorAll('button');
+          if (buttons.length > 0) {
+            // Found container with buttons
+            const times = [];
+            buttons.forEach(btn => {
+              const btnText = btn.textContent?.trim() || '';
+              const timeMatch = btnText.match(/(\d{1,2}:\d{2}\s*[ap]m)/i);
+              if (timeMatch) {
+                times.push(timeMatch[1].replace(/\s+/g, ''));
+              }
+            });
+            
+            if (times.length > 0) {
+              seen.add(title);
+              items.push({ 
+                title, 
+                times, 
+                url: href.startsWith('http') ? href : baseUrl + href 
+              });
+            }
+            break;
+          }
+          container = container.parentElement;
+          attempts++;
+        }
+      });
+      
+      return items;
+    }, 'https://www.palacecinemas.com.au');
+    
+    for (const film of films) {
+      sessions.push(film);
+    }
+    
+    console.log(`  Found ${sessions.length} films`);
+  } catch (error) {
+    console.error('  Pentridge Cinema scrape error:', error.message);
+  }
+  
+  return { cinema: 'Pentridge Cinema', url, sessions };
+}
+
 async function enrichWithTMDB(cinemaData) {
   console.log(`Enriching ${cinemaData.cinema} with TMDB data...`);
   
@@ -969,7 +1105,9 @@ async function main() {
     scrapeHoyts,
     scrapeAstor,
     scrapePalaceComo,
-    scrapePalaceKino
+    scrapePalaceKino,
+    scrapePalaceWestgarth,
+    scrapePentridge
   ];
   
   for (const scraper of scrapers) {
