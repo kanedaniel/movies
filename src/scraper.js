@@ -155,18 +155,24 @@ async function scrapeACMI(page) {
     if (data.length > 0) {
       const first = data[0];
       console.log(`  First item keys: ${Object.keys(first).join(', ')}`);
-      if (first.event) console.log(`  First event keys: ${Object.keys(first.event).join(', ')}`);
+    }
+    
+    // Flatten nested structure - data may be [{date, occurrences: [...]}]
+    let items = data;
+    if (data.length > 0 && data[0].occurrences && Array.isArray(data[0].occurrences)) {
+      items = data.flatMap(d => d.occurrences || []);
+      console.log(`  Flattened to ${items.length} occurrences`);
     }
     
     // Group sessions by film title
     const filmMap = new Map();
     
-    for (const item of data) {
+    for (const item of items) {
       // Check for film type in various places
       const eventType = item.event_type?.name || item.event?.event_type?.name || item.type || '';
       
-      // Skip non-films (but if type is unknown, include it)
-      if (eventType && eventType !== 'Film' && eventType !== 'unknown') continue;
+      // Skip non-films (but if type is unknown/empty, include it)
+      if (eventType && eventType !== 'Film') continue;
       
       const title = item.event?.title || item.title;
       if (!title) continue;
@@ -668,8 +674,9 @@ async function scrapeAstor(page) {
       
       if (titles.length === 0) continue;
       
-      // Check if double feature
-      const isDouble = /class="[^"]*double[^"]*"/i.test(block);
+      // Check if double feature - either by class or by having 2 titles
+      const hasDoubleClass = /class="[^"]*double[^"]*"/i.test(block);
+      const isDouble = hasDoubleClass || titles.length >= 2;
       
       if (isDouble && titles.length >= 2) {
         sessions.push({
@@ -680,7 +687,7 @@ async function scrapeAstor(page) {
           film1: titles[0],
           film2: titles[1]
         });
-      } else {
+      } else if (titles.length === 1) {
         sessions.push({
           title: titles[0],
           times: [time],
@@ -689,6 +696,21 @@ async function scrapeAstor(page) {
         });
       }
     }
+    
+    // Dedupe - merge same titles with different times
+    const filmMap = new Map();
+    for (const s of sessions) {
+      if (filmMap.has(s.title)) {
+        const existing = filmMap.get(s.title);
+        s.times.forEach(t => {
+          if (!existing.times.includes(t)) existing.times.push(t);
+        });
+      } else {
+        filmMap.set(s.title, s);
+      }
+    }
+    sessions.length = 0;
+    filmMap.forEach(f => sessions.push(f));
     
     console.log(`  Found ${sessions.length} films`);
   } catch (error) {
