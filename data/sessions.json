@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2025-12-30T02:02:34.211Z",
+  "generatedAt": "2025-12-30T02:23:29.556Z",
   "date": "Tuesday 30 December 2025",
   "cinemas": [
     {
@@ -9,7 +9,7 @@
         {
           "title": "Life After",
           "times": [
-            "5am"
+            "4pm"
           ],
           "url": "https://www.acmi.net.au/whats-on/best-of-2025/life-after-big-screen-premiere/",
           "overview": "LIFE AFTER is a gripping investigative documentary that exposes the tangled web of moral dilemmas and profit motives surrounding assisted dying. Disabled filmmaker Reid Davenport uncovers shocking abuses of power while amplifying the voices of the disability community fighting for justice and dignity in an unfolding matter of life and death.  In 1983, a disabled Californian woman named Elizabeth Bouvia sought the “right to die,” igniting a national debate about autonomy and the value of disabled lives. After years of courtroom battles, Bouvia vanished from public view. Sundance-winner Davenport embarks on a personal investigation to find out what really happened to Bouvia and reveal why her story is disturbingly relevant today.",
@@ -22,7 +22,7 @@
         {
           "title": "Bird",
           "times": [
-            "7:30am"
+            "6:30pm"
           ],
           "url": "https://www.acmi.net.au/whats-on/best-of-2025/bird/",
           "overview": "Saxophone player Charlie ‘Bird’ Parker comes to New York in 1940 and is quickly noticed for his remarkable way of playing. He becomes a drug addict but his loving wife Chan tries to help him.",
@@ -99,7 +99,6 @@
         {
           "title": "Peak Everything",
           "times": [
-            "11:00",
             "15:15"
           ],
           "url": "https://eclipse-cinema.com.au/session-time/",
@@ -200,7 +199,7 @@
           "url": "https://www.cinemanova.com.au/films/my-brother-s-band",
           "overview": "Diagnosed with leukemia, a successful orchestra conductor learns that he is adopted, and his younger brother is in a village marching band. The conductor decides to help them win a regional contest.",
           "posterPath": "https://image.tmdb.org/t/p/w300/6lATJ42bWGAIQ0cG2dzSZD8bNcL.jpg",
-          "rating": 7.3,
+          "rating": 7.324,
           "year": "2024",
           "runtime": 103,
           "trailerUrl": "https://www.youtube.com/watch?v=bhfCXPYIKs8"
@@ -550,7 +549,7 @@
           "url": "https://www.cinemanova.com.au/films/frankenstein",
           "overview": "Dr. Victor Frankenstein, a brilliant but egotistical scientist, brings a creature to life in a monstrous experiment that ultimately leads to the undoing of both the creator and his tragic creation.",
           "posterPath": "https://image.tmdb.org/t/p/w300/g4JtvGlQO7DByTI6frUobqvSL3R.jpg",
-          "rating": 7.713,
+          "rating": 7.714,
           "year": "2025",
           "runtime": 150,
           "trailerUrl": "https://www.youtube.com/watch?v=9WZllcEgWrM"
@@ -659,10 +658,9 @@
         {
           "title": "Song Sung Blue",
           "times": [
-            "12:45 pm",
             "5:30 pm"
           ],
-          "url": "https://www.lidocinemas.com.au/tickets?c=0000000003&s=99177",
+          "url": "https://www.lidocinemas.com.au/tickets?c=0000000003&s=99184",
           "overview": "Based on a true story, two down-on-their-luck musicians form a joyous Neil Diamond tribute band, proving it's never too late to find love and follow your dreams.",
           "posterPath": "https://image.tmdb.org/t/p/w300/3HsIAbHWbFDUbY2jfj4wqEjGC3b.jpg",
           "rating": 7,
@@ -702,20 +700,6 @@
           "trailerUrl": "https://www.youtube.com/watch?v=zBFstFXdk90"
         },
         {
-          "title": "Zootopia 2",
-          "times": [
-            "12:50 pm",
-            "5:45 pm"
-          ],
-          "url": "https://www.lidocinemas.com.au/tickets?c=0000000003&s=99175",
-          "overview": "After cracking the biggest case in Zootopia's history, rookie cops Judy Hopps and Nick Wilde find themselves on the twisting trail of a great mystery when Gary De'Snake arrives and turns the animal metropolis upside down. To crack the case, Judy and Nick must go undercover to unexpected new parts of town, where their growing partnership is tested like never before.",
-          "posterPath": "https://image.tmdb.org/t/p/w300/oJ7g2CifqpStmoYQyaLQgEU32qO.jpg",
-          "rating": 7.6,
-          "year": "2025",
-          "runtime": 107,
-          "trailerUrl": "https://www.youtube.com/watch?v=5H7L9j0dW90"
-        },
-        {
           "title": "The SpongeBob Movie: Search for Squarepants",
           "times": [
             "1:00 pm"
@@ -727,6 +711,19 @@
           "year": "2025",
           "runtime": 96,
           "trailerUrl": "https://www.youtube.com/watch?v=_gtIWSAOIEE"
+        },
+        {
+          "title": "Zootopia 2",
+          "times": [
+            "5:45 pm"
+          ],
+          "url": "https://www.lidocinemas.com.au/tickets?c=0000000003&s=99182",
+          "overview": "After cracking the biggest case in Zootopia's history, rookie cops Judy Hopps and Nick Wilde find themselves on the twisting trail of a great mystery when Gary De'Snake arrives and turns the animal metropolis upside down. To crack the case, Judy and Nick must go undercover to unexpected new parts of town, where their growing partnership is tested like never before.",
+          "posterPath": "https://image.tmdb.org/t/p/w300/oJ7g2CifqpStmoYQyaLQgEU32qO.jpg",
+          "rating": 7.6,
+          "year": "2025",
+          "runtime": 107,
+          "trailerUrl": "https://www.youtube.com/watch?v=5H7L9j0dW90"
         },
         {
           "title": "Avatar: Fire and Ash",
@@ -906,7 +903,6 @@
         {
           "title": "Zootopia 2",
           "times": [
-            "12:50 pm",
             "2:10 pm",
             "4:30 pm",
             "6:15 pm",
@@ -997,14 +993,14 @@
       "url": "https://www.astortheatre.net.au/",
       "sessions": [
         {
-          "title": "The Princess Bride + The Princess Bride",
+          "title": "The Princess Bride + The Goonies",
           "times": [
             "2pm"
           ],
           "url": "https://www.astortheatre.net.au/films/the-princess-bride",
           "isDoubleFeature": true,
           "film1": "The Princess Bride",
-          "film2": "The Princess Bride",
+          "film2": "The Goonies",
           "films": [
             {
               "title": "The Princess Bride",
@@ -1017,32 +1013,32 @@
               "tmdbId": 2493
             },
             {
-              "title": "The Princess Bride",
-              "overview": "In this enchantingly cracked fairy tale, the beautiful Princess Buttercup and the dashing Westley must overcome staggering odds to find happiness amid six-fingered swordsmen, murderous princes, Sicilians and rodents of unusual size. But even death can't stop these true lovebirds from triumphing.",
-              "posterPath": "https://image.tmdb.org/t/p/w300/2FC9L9MrjBoGHYjYZjdWQdopVYb.jpg",
-              "rating": 7.7,
-              "year": "1987",
-              "runtime": 99,
-              "trailerUrl": "https://www.youtube.com/watch?v=7a8RKZrhmiE",
-              "tmdbId": 2493
+              "title": "The Goonies",
+              "overview": "Young teen Mikey Walsh and his friends set off on a quest to find Pirate One-Eyed Willie's treasure in hopes of saving their homes from demolition.",
+              "posterPath": "https://image.tmdb.org/t/p/w300/eBU7gCjTCj9n2LTxvCSIXXOvHkD.jpg",
+              "rating": 7.5,
+              "year": "1985",
+              "runtime": 114,
+              "trailerUrl": "https://www.youtube.com/watch?v=L79bjsmv7BM",
+              "tmdbId": 9340
             }
           ],
           "posterPath": "https://image.tmdb.org/t/p/w300/2FC9L9MrjBoGHYjYZjdWQdopVYb.jpg",
           "overview": "In this enchantingly cracked fairy tale, the beautiful Princess Buttercup and the dashing Westley must overcome staggering odds to find happiness amid six-fingered swordsmen, murderous princes, Sicilians and rodents of unusual size. But even death can't stop these true lovebirds from triumphing.",
-          "runtime": 198,
+          "runtime": 213,
           "year": "1987",
-          "rating": 7.7,
+          "rating": 7.6,
           "trailerUrl": "https://www.youtube.com/watch?v=7a8RKZrhmiE"
         },
         {
-          "title": "Dune: Part One + Dune: Part One",
+          "title": "Dune: Part One + Dune: Part Two",
           "times": [
             "7pm"
           ],
           "url": "https://www.astortheatre.net.au/films/dune-2",
           "isDoubleFeature": true,
           "film1": "Dune: Part One",
-          "film2": "Dune: Part One",
+          "film2": "Dune: Part Two",
           "films": [
             {
               "title": "Dune: Part One",
@@ -1055,21 +1051,21 @@
               "tmdbId": 438631
             },
             {
-              "title": "Dune: Part One",
-              "overview": "Paul Atreides, a brilliant and gifted young man born into a great destiny beyond his understanding, must travel to the most dangerous planet in the universe to ensure the future of his family and his people. As malevolent forces explode into conflict over the planet's exclusive supply of the most precious resource in existence-a commodity capable of unlocking humanity's greatest potential-only those who can conquer their fear will survive.",
-              "posterPath": "https://image.tmdb.org/t/p/w300/d5NXSklXo0qyIYkgV94XAgMIckC.jpg",
-              "rating": 7.776,
-              "year": "2021",
-              "runtime": 155,
-              "trailerUrl": "https://www.youtube.com/watch?v=w0HgHet0sxg",
-              "tmdbId": 438631
+              "title": "Dune: Part Two",
+              "overview": "Follow the mythic journey of Paul Atreides as he unites with Chani and the Fremen while on a path of revenge against the conspirators who destroyed his family. Facing a choice between the love of his life and the fate of the known universe, Paul endeavors to prevent a terrible future only he can foresee.",
+              "posterPath": "https://image.tmdb.org/t/p/w300/1pdfLvkbY9ohJlCjQH2CZjjYVvJ.jpg",
+              "rating": 8.132,
+              "year": "2024",
+              "runtime": 167,
+              "trailerUrl": "https://www.youtube.com/watch?v=p-4Xgcuwb00",
+              "tmdbId": 693134
             }
           ],
           "posterPath": "https://image.tmdb.org/t/p/w300/d5NXSklXo0qyIYkgV94XAgMIckC.jpg",
           "overview": "Paul Atreides, a brilliant and gifted young man born into a great destiny beyond his understanding, must travel to the most dangerous planet in the universe to ensure the future of his family and his people. As malevolent forces explode into conflict over the planet's exclusive supply of the most precious resource in existence-a commodity capable of unlocking humanity's greatest potential-only those who can conquer their fear will survive.",
-          "runtime": 310,
+          "runtime": 322,
           "year": "2021",
-          "rating": 7.776,
+          "rating": 7.954,
           "trailerUrl": "https://www.youtube.com/watch?v=w0HgHet0sxg"
         }
       ]
@@ -1129,7 +1125,7 @@
           "url": "https://www.palacecinemas.com.au/movies/my-brothers-band",
           "overview": "Diagnosed with leukemia, a successful orchestra conductor learns that he is adopted, and his younger brother is in a village marching band. The conductor decides to help them win a regional contest.",
           "posterPath": "https://image.tmdb.org/t/p/w300/6lATJ42bWGAIQ0cG2dzSZD8bNcL.jpg",
-          "rating": 7.3,
+          "rating": 7.324,
           "year": "2024",
           "runtime": 103,
           "trailerUrl": "https://www.youtube.com/watch?v=bhfCXPYIKs8"
@@ -1181,7 +1177,6 @@
         {
           "title": "Song Sung Blue",
           "times": [
-            "12:50pm",
             "3:10pm",
             "6:00pm",
             "7:10pm"
@@ -1307,7 +1302,7 @@
           "url": "https://www.palacecinemas.com.au/movies/my-brothers-band",
           "overview": "Diagnosed with leukemia, a successful orchestra conductor learns that he is adopted, and his younger brother is in a village marching band. The conductor decides to help them win a regional contest.",
           "posterPath": "https://image.tmdb.org/t/p/w300/6lATJ42bWGAIQ0cG2dzSZD8bNcL.jpg",
-          "rating": 7.3,
+          "rating": 7.324,
           "year": "2024",
           "runtime": 103,
           "trailerUrl": "https://www.youtube.com/watch?v=bhfCXPYIKs8"
@@ -1366,19 +1361,6 @@
           "year": "2025",
           "runtime": 133,
           "trailerUrl": "https://www.youtube.com/watch?v=ssZU6xUM-YI"
-        },
-        {
-          "title": "The History of Sound",
-          "times": [
-            "12:50pm"
-          ],
-          "url": "https://www.palacecinemas.com.au/movies/the-history-of-sound",
-          "overview": "In 1917, two young music students attending the Boston Conservatory bond over their mutual love of folk music. They reconnect a few years later, embarking on a song collecting trip in the backwaters of Maine.",
-          "posterPath": "https://image.tmdb.org/t/p/w300/5tNr1CySiYQICRsQbWWSSsDiKjn.jpg",
-          "rating": 6.1,
-          "year": "2025",
-          "runtime": 127,
-          "trailerUrl": "https://www.youtube.com/watch?v=E2PSkw8BI7k"
         },
         {
           "title": "The Housemaid",
