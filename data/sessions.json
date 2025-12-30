@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2025-12-30T00:25:11.778Z",
+  "generatedAt": "2025-12-30T00:38:29.993Z",
   "date": "Tuesday 30 December 2025",
   "cinemas": [
     {
@@ -403,7 +403,7 @@
           "rating": 7.399,
           "year": "2025",
           "runtime": 198,
-          "trailerUrl": "https://www.youtube.com/watch?v=lUc3pRoNybQ"
+          "trailerUrl": "https://www.youtube.com/watch?v=hsxgDO2mvng"
         },
         {
           "title": "Time Masters, The",
@@ -701,7 +701,7 @@
           "rating": 7.399,
           "year": "2025",
           "runtime": 198,
-          "trailerUrl": "https://www.youtube.com/watch?v=lUc3pRoNybQ"
+          "trailerUrl": "https://www.youtube.com/watch?v=hsxgDO2mvng"
         },
         {
           "title": "Nuremberg",
@@ -808,7 +808,7 @@
           "rating": 7.4,
           "year": "2025",
           "runtime": 198,
-          "trailerUrl": "https://www.youtube.com/watch?v=lUc3pRoNybQ"
+          "trailerUrl": "https://www.youtube.com/watch?v=hsxgDO2mvng"
         },
         {
           "title": "Back to the Future (1985)",
@@ -846,7 +846,7 @@
           "rating": 7.399,
           "year": "2025",
           "runtime": 198,
-          "trailerUrl": "https://www.youtube.com/watch?v=lUc3pRoNybQ"
+          "trailerUrl": "https://www.youtube.com/watch?v=hsxgDO2mvng"
         },
         {
           "title": "Anaconda",
@@ -1009,12 +1009,11 @@
           "rating": 7.4,
           "year": "2025",
           "runtime": 198,
-          "trailerUrl": "https://www.youtube.com/watch?v=lUc3pRoNybQ"
+          "trailerUrl": "https://www.youtube.com/watch?v=hsxgDO2mvng"
         },
         {
           "title": "Kokuho",
           "times": [
-            "11:10am",
             "3:40pm"
           ],
           "url": "https://www.palacecinemas.com.au/movies/kokuho",
@@ -1179,7 +1178,7 @@
           "rating": 7.4,
           "year": "2025",
           "runtime": 198,
-          "trailerUrl": "https://www.youtube.com/watch?v=lUc3pRoNybQ"
+          "trailerUrl": "https://www.youtube.com/watch?v=hsxgDO2mvng"
         },
         {
           "title": "Eternity",
