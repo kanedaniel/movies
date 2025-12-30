@@ -151,18 +151,24 @@ async function scrapeACMI(page) {
     
     console.log(`  Found ${data.length} items in API response`);
     
-    // Debug: show event types
-    const eventTypes = [...new Set(data.map(item => item.event_type?.name || 'unknown'))];
-    console.log(`  Event types: ${eventTypes.join(', ')}`);
+    // Debug: show first item structure
+    if (data.length > 0) {
+      const first = data[0];
+      console.log(`  First item keys: ${Object.keys(first).join(', ')}`);
+      if (first.event) console.log(`  First event keys: ${Object.keys(first.event).join(', ')}`);
+    }
     
     // Group sessions by film title
     const filmMap = new Map();
     
     for (const item of data) {
-      // Only include films
-      if (!item.event_type || item.event_type.name !== 'Film') continue;
+      // Check for film type in various places
+      const eventType = item.event_type?.name || item.event?.event_type?.name || item.type || '';
       
-      const title = item.event?.title;
+      // Skip non-films (but if type is unknown, include it)
+      if (eventType && eventType !== 'Film' && eventType !== 'unknown') continue;
+      
+      const title = item.event?.title || item.title;
       if (!title) continue;
       
       // Extract time from start_datetime (e.g., "2025-12-30T15:30:00+11:00")
@@ -639,9 +645,9 @@ async function scrapeAstor(page) {
       const timeMatch = block.match(/today\s+at\s+(\d{1,2}(?::\d{2})?\s*(?:am|pm))/i);
       const time = timeMatch ? timeMatch[1] : 'See website';
       
-      // Extract titles from h2.uppercase > a
+      // Extract titles from h2 > a (class may or may not be present)
       const titles = [];
-      const titleRegex = /<h2[^>]*class="[^"]*uppercase[^"]*"[^>]*>\s*<a[^>]*href="([^"]*)"[^>]*>([^<]+)<\/a>/gi;
+      const titleRegex = /<h2[^>]*>\s*<a[^>]*href="([^"]*)"[^>]*>([^<]+)/gi;
       let titleMatch;
       let filmUrl = url;
       while ((titleMatch = titleRegex.exec(block)) !== null) {
