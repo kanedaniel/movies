@@ -679,6 +679,7 @@ async function scrapeAstor(page) {
       }
     }
     
+    console.log(`  Today films: ${todayFilms.map(f => f.title + ' @ ' + f.time).join(', ')}`);
     console.log(`  Found ${todayFilms.length} today films before combining`);
     
     // Second pass: combine films with same time into double features
