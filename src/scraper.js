@@ -140,7 +140,7 @@ async function scrapeACMI(page) {
     let data = json;
     if (!Array.isArray(json)) {
       // Try common wrapper keys
-      data = json.data || json.results || json.items || json.events || [];
+      data = json.occurrences || json.data || json.results || json.items || json.events || [];
       console.log(`  Response is object, keys: ${Object.keys(json).join(', ')}`);
     }
     
@@ -617,31 +617,28 @@ async function scrapeAstor(page) {
     console.log(`  Found ${previewCount} 'movie_preview' occurrences, ${todayCount} 'today' occurrences`);
     
     // Parse the HTML to extract sessions
-    // Look for div.movie_preview.session elements
-    const sessionRegex = /<div[^>]*class="[^"]*movie_preview[^"]*session[^"]*"[^>]*>([\s\S]*?)<\/div>\s*<\/div>\s*<\/div>/gi;
-    const todayRegex = /today/i;
-    const titleRegex = /<h2[^>]*class="[^"]*uppercase[^"]*"[^>]*>\s*<a[^>]*>([^<]+)<\/a>/gi;
-    const timeRegex = /at\s+(\d{1,2}(?::\d{2})?\s*(?:am|pm))/i;
-    const linkRegex = /<a[^>]*class="[^"]*movie_link[^"]*"[^>]*href="([^"]+)"/i;
-    const doubleRegex = /class="[^"]*double[^"]*"/i;
+    // Split by movie_preview session divs and process each
+    const blocks = combinedHtml.split(/<div[^>]*class="[^"]*movie_preview[^"]*session/i);
+    console.log(`  Split into ${blocks.length} blocks`);
     
-    let match;
-    while ((match = sessionRegex.exec(combinedHtml)) !== null) {
-      const sessionBlock = match[0];
+    for (let i = 1; i < blocks.length; i++) { // Start at 1 to skip content before first match
+      const block = blocks[i];
       
       // Check if it's today
-      if (!todayRegex.test(sessionBlock)) continue;
+      if (!/today/i.test(block)) continue;
       
-      // Extract time
-      const timeMatch = sessionBlock.match(timeRegex);
+      // Extract time: "Today at 2pm" or "Today at 6:30pm"
+      const timeMatch = block.match(/today\s+at\s+(\d{1,2}(?::\d{2})?\s*(?:am|pm))/i);
       const time = timeMatch ? timeMatch[1] : 'See website';
       
-      // Extract titles
+      // Extract titles from h2.uppercase > a
       const titles = [];
+      const titleRegex = /<h2[^>]*class="[^"]*uppercase[^"]*"[^>]*>\s*<a[^>]*href="([^"]*)"[^>]*>([^<]+)<\/a>/gi;
       let titleMatch;
-      const titleRegexLocal = /<h2[^>]*class="[^"]*uppercase[^"]*"[^>]*>\s*<a[^>]*>([^<]+)<\/a>/gi;
-      while ((titleMatch = titleRegexLocal.exec(sessionBlock)) !== null) {
-        let title = titleMatch[1].trim();
+      let filmUrl = url;
+      while ((titleMatch = titleRegex.exec(block)) !== null) {
+        filmUrl = titleMatch[1] || filmUrl;
+        let title = titleMatch[2].trim();
         // Remove rating brackets like [PG], [M]
         title = title.replace(/\s*\[.*?\]\s*$/, '').trim();
         if (title) titles.push(title);
@@ -649,18 +646,14 @@ async function scrapeAstor(page) {
       
       if (titles.length === 0) continue;
       
-      // Extract URL
-      const linkMatch = sessionBlock.match(linkRegex);
-      const sessionUrl = linkMatch ? linkMatch[1] : url;
-      
       // Check if double feature
-      const isDouble = doubleRegex.test(sessionBlock);
+      const isDouble = /class="[^"]*double[^"]*"/i.test(block);
       
       if (isDouble && titles.length >= 2) {
         sessions.push({
           title: titles.join(' + '),
           times: [time],
-          url: sessionUrl,
+          url: filmUrl,
           isDoubleFeature: true,
           film1: titles[0],
           film2: titles[1]
@@ -669,7 +662,7 @@ async function scrapeAstor(page) {
         sessions.push({
           title: titles[0],
           times: [time],
-          url: sessionUrl,
+          url: filmUrl,
           isDoubleFeature: false
         });
       }
@@ -696,12 +689,14 @@ async function scrapePalaceComo(page) {
     await page.goto(url, { waitUntil: 'networkidle2', timeout: 60000 });
     await page.waitForTimeout(8000);
     
-    const films = await page.evaluate((baseUrl) => {
+    const result = await page.evaluate((baseUrl) => {
       const items = [];
       const seen = new Set();
+      const debug = { linksFound: 0, titlesFound: [], buttonsFound: 0 };
       
       // Find all movie links with actual title text
       document.querySelectorAll('a[href*="/movies/"]').forEach(link => {
+        debug.linksFound++;
         const href = link.getAttribute('href');
         if (!href || !href.includes('/movies/')) return;
         
@@ -709,12 +704,15 @@ async function scrapePalaceComo(page) {
         if (!title || title === 'More Info' || title.length < 2) return;
         if (seen.has(title)) return;
         
+        debug.titlesFound.push(title);
+        
         // Walk up to find a container with buttons (session times)
         let container = link.parentElement;
         let attempts = 0;
         while (container && attempts < 10) {
           const buttons = container.querySelectorAll('button');
           if (buttons.length > 0) {
+            debug.buttonsFound += buttons.length;
             // Found container with buttons
             const times = [];
             buttons.forEach(btn => {
@@ -740,10 +738,12 @@ async function scrapePalaceComo(page) {
         }
       });
       
-      return items;
+      return { items, debug };
     }, 'https://www.palacecinemas.com.au');
     
-    for (const film of films) {
+    console.log(`  Debug - links: ${result.debug.linksFound}, titles: ${result.debug.titlesFound.slice(0, 3).join(', ')}, buttons: ${result.debug.buttonsFound}`);
+    
+    for (const film of result.items) {
       sessions.push(film);
     }
     
