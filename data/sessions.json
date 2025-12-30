@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2025-12-30T01:02:54.796Z",
+  "generatedAt": "2025-12-30T01:47:14.541Z",
   "date": "Tuesday 30 December 2025",
   "cinemas": [
     {
@@ -9,8 +9,7 @@
         {
           "title": "Life After",
           "times": [
-            "5am",
-            "7:30am"
+            "5am"
           ],
           "url": "https://www.acmi.net.au/whats-on/best-of-2025/life-after-big-screen-premiere/",
           "overview": "LIFE AFTER is a gripping investigative documentary that exposes the tangled web of moral dilemmas and profit motives surrounding assisted dying. Disabled filmmaker Reid Davenport uncovers shocking abuses of power while amplifying the voices of the disability community fighting for justice and dignity in an unfolding matter of life and death.  In 1983, a disabled Californian woman named Elizabeth Bouvia sought the “right to die,” igniting a national debate about autonomy and the value of disabled lives. After years of courtroom battles, Bouvia vanished from public view. Sundance-winner Davenport embarks on a personal investigation to find out what really happened to Bouvia and reveal why her story is disturbingly relevant today.",
@@ -23,7 +22,6 @@
         {
           "title": "Bird",
           "times": [
-            "7:30am",
             "7:30am"
           ],
           "url": "https://www.acmi.net.au/whats-on/best-of-2025/bird/",
@@ -33,390 +31,6 @@
           "year": "1988",
           "runtime": 161,
           "trailerUrl": "https://www.youtube.com/watch?v=O9GGJO8HJ1E"
-        },
-        {
-          "title": "Sorry, Baby",
-          "times": [
-            "4am",
-            "7:30am"
-          ],
-          "url": "https://www.acmi.net.au/whats-on/best-of-2025/sorry-baby/",
-          "overview": "Agnes feels stuck. Unlike her best friend, Lydie, who’s moved to New York and is now expecting a baby, Agnes still lives in the New England house they once shared as graduate students, now working as a professor at her alma mater. A ‘bad thing’ happened to Agnes a few years ago and, since then, despite her best efforts, life hasn’t gotten back on track.",
-          "posterPath": "https://image.tmdb.org/t/p/w300/n8wZEQen5hDNRGzm4fY4sxWe5xe.jpg",
-          "rating": 6.908,
-          "year": "2025",
-          "runtime": 103,
-          "trailerUrl": "https://www.youtube.com/watch?v=oDfxLAGPRrE"
-        },
-        {
-          "title": "All We Imagine as Light",
-          "times": [
-            "4am",
-            "7:30am"
-          ],
-          "url": "https://www.acmi.net.au/whats-on/best-of-2025/all-we-imagine-as-light/",
-          "overview": "In Mumbai, Nurse Prabha's routine is troubled when she receives an unexpected gift from her estranged husband. Her younger roommate, Anu, tries in vain to find a spot in the city to be intimate with her boyfriend. A trip to a beach town allows them to find a space for their desires to manifest.",
-          "posterPath": "https://image.tmdb.org/t/p/w300/ruImrzB4POsrgwCMozmOBV67zs5.jpg",
-          "rating": 6.849,
-          "year": "2024",
-          "runtime": 118,
-          "trailerUrl": "https://www.youtube.com/watch?v=HknqmTUjg8c"
-        },
-        {
-          "title": "Young Mothers",
-          "times": [
-            "2:30am",
-            "12am",
-            "12am"
-          ],
-          "url": "https://www.acmi.net.au/whats-on/matinees/young-mothers/",
-          "overview": "Housed in a shelter for young mothers, Jessica, Perla, Julia, Ariane, and Naïma, all of whom have grown up in difficult circumstances, struggle to obtain a better life for themselves and their children.",
-          "posterPath": "https://image.tmdb.org/t/p/w300/okfaa71H1P0WC1uzYliOgYS2gte.jpg",
-          "rating": 6.672,
-          "year": "2025",
-          "runtime": 106,
-          "trailerUrl": "https://www.youtube.com/watch?v=br3boRnJ_qE"
-        },
-        {
-          "title": "The Wolves Always Come at Night",
-          "times": [
-            "5am",
-            "7:30am"
-          ],
-          "url": "https://www.acmi.net.au/whats-on/best-of-2025/the-wolves-always-come-at-night/",
-          "overview": "Davaa and Zaya are a young nomadic couple in the vast Bayanhongor region of Mongolia who are in the throes of animal birthing season when a seismic event suddenly changes their lives. They are forced to migrate afar but are haunted by their past lives.",
-          "posterPath": "https://image.tmdb.org/t/p/w300/3WmhSLBCyg47uedMsBSrI2KMz0E.jpg",
-          "rating": 8.5,
-          "year": "2025",
-          "runtime": 96,
-          "trailerUrl": "https://www.youtube.com/watch?v=goInp93kzF8"
-        },
-        {
-          "title": "A House of Dynamite",
-          "times": [
-            "7:30am",
-            "7:30am"
-          ],
-          "url": "https://www.acmi.net.au/whats-on/best-of-2025/a-house-of-dynamite/",
-          "overview": "When a single, unattributed missile is launched at the United States, a race begins to determine who is responsible and how to respond.",
-          "posterPath": "https://image.tmdb.org/t/p/w300/AiJ8L90ftPAwVf3SDx7Fj9IMZoy.jpg",
-          "rating": 6.375,
-          "year": "2025",
-          "runtime": 112,
-          "trailerUrl": "https://www.youtube.com/watch?v=_wpw2QHJNco"
-        },
-        {
-          "title": "Dahomey",
-          "times": [
-            "3am"
-          ],
-          "url": "https://www.acmi.net.au/whats-on/best-of-2025/dahomey/",
-          "overview": "Thousands of royal artifacts of Dahomey, a West African kingdom, were taken by French colonists in the 19th century for collection and display in Paris. Centuries later, a fraction returned to their home in modern-day Benin. This dramatized documentary follows the journey of 26 of the treasures as told by cultural art historians, embattled university students, and one of the repatriated statues himself.",
-          "posterPath": "https://image.tmdb.org/t/p/w300/9d8KvJ3OjUq9rwuM743QPQO48aL.jpg",
-          "rating": 6.631,
-          "year": "2024",
-          "runtime": 68,
-          "trailerUrl": "https://www.youtube.com/watch?v=5YNac-cOugg"
-        },
-        {
-          "title": "Two Prosecutors",
-          "times": [
-            "5am",
-            "5am",
-            "7:30am"
-          ],
-          "url": "https://www.acmi.net.au/whats-on/best-of-2025/two-prosecutors/",
-          "overview": "In 1937, amidst Stalin's Great Terror, a newly appointed prosecutor for the USSR is made aware of alleged corruption in the Secret Police, and takes it upon himself to investigate.",
-          "posterPath": "https://image.tmdb.org/t/p/w300/dU46ROG7HoP7biPtntaMTjkGbU6.jpg",
-          "rating": 6,
-          "year": "2025",
-          "runtime": 118,
-          "trailerUrl": "https://www.youtube.com/watch?v=q1tglpe78wQ"
-        },
-        {
-          "title": "Frankenstein",
-          "times": [
-            "7:30am",
-            "7:30am"
-          ],
-          "url": "https://www.acmi.net.au/whats-on/best-of-2025/frankenstein/",
-          "overview": "Dr. Victor Frankenstein, a brilliant but egotistical scientist, brings a creature to life in a monstrous experiment that ultimately leads to the undoing of both the creator and his tragic creation.",
-          "posterPath": "https://image.tmdb.org/t/p/w300/g4JtvGlQO7DByTI6frUobqvSL3R.jpg",
-          "rating": 7.713,
-          "year": "2025",
-          "runtime": 150,
-          "trailerUrl": "https://www.youtube.com/watch?v=9WZllcEgWrM"
-        },
-        {
-          "title": "The Brutalist",
-          "times": [
-            "2:30am"
-          ],
-          "url": "https://www.acmi.net.au/whats-on/best-of-2025/the-brutalist/",
-          "overview": "When an innovative modern architect flees post-war Europe, he is given the opportunity to rebuild his legacy. Set during the dawn of the modern United States (in Pennsylvania), his wife joins him, and their lives are forever changed by a demanding, wealthy patron.",
-          "posterPath": "https://image.tmdb.org/t/p/w300/vP7Yd6couiAaw9jgMd5cjMRj3hQ.jpg",
-          "rating": 6.965,
-          "year": "2024",
-          "runtime": 215,
-          "trailerUrl": "https://www.youtube.com/watch?v=bu-KP9HuvUA"
-        },
-        {
-          "title": "Flow",
-          "times": [
-            "4am",
-            "2:30am",
-            "5am"
-          ],
-          "url": "https://www.acmi.net.au/whats-on/best-of-2025/flow/",
-          "overview": "As the ‘flow’ progresses, the world where our ‘giant’ once stood gradually fades away, replaced by their inner worlds. Our ‘giant’ continues to advance endlessly, questioning the relationship between the world and oneself.",
-          "posterPath": "https://image.tmdb.org/t/p/w300/tx3VT4mKjIlkLpv3UBkOwUxIcB4.jpg",
-          "rating": 8,
-          "year": "2024",
-          "runtime": 8,
-          "trailerUrl": null
-        },
-        {
-          "title": "The NeverEnding Story",
-          "times": [
-            "2am",
-            "2am",
-            "2am",
-            "2am",
-            "2am"
-          ],
-          "url": "https://www.acmi.net.au/whats-on/kids-flicks-with-feelings-in-cinemas/the-neverending-story/",
-          "overview": "While hiding from bullies in his school's attic, a young boy discovers the extraordinary land of Fantasia, through a magical book called The Neverending Story. The book tells the tale of Atreyu, a young warrior who, with the help of a luck dragon named Falkor, must save Fantasia from the destruction of The Nothing.",
-          "posterPath": "https://image.tmdb.org/t/p/w300/ddYCa91iDXfJCxaqSYzwi2fjfnl.jpg",
-          "rating": 7.204,
-          "year": "1984",
-          "runtime": 97,
-          "trailerUrl": "https://www.youtube.com/watch?v=ToUgsvlsemo"
-        },
-        {
-          "title": "The Seed of the Sacred Fig",
-          "times": [
-            "7:30am",
-            "7:30am"
-          ],
-          "url": "https://www.acmi.net.au/whats-on/best-of-2025/seed-sacred-fig/",
-          "overview": "Investigating judge Iman grapples with paranoia amid political unrest in Tehran. When his gun vanishes, he suspects his wife and daughters, imposing draconian measures that strain family ties as societal rules crumble.",
-          "posterPath": "https://image.tmdb.org/t/p/w300/ifOazNzv2cNJ5CQjMV7cPXG2Lmy.jpg",
-          "rating": 7.6,
-          "year": "2024",
-          "runtime": 167,
-          "trailerUrl": "https://www.youtube.com/watch?v=0kw-dFiPK-E"
-        },
-        {
-          "title": "The History of Sound",
-          "times": [
-            "7:30am",
-            "2:30am",
-            "12am",
-            "12am",
-            "2:30am",
-            "12am",
-            "12am"
-          ],
-          "url": "https://www.acmi.net.au/whats-on/best-of-2025/the-history-of-sound/",
-          "overview": "In 1917, two young music students attending the Boston Conservatory bond over their mutual love of folk music. They reconnect a few years later, embarking on a song collecting trip in the backwaters of Maine.",
-          "posterPath": "https://image.tmdb.org/t/p/w300/5tNr1CySiYQICRsQbWWSSsDiKjn.jpg",
-          "rating": 6.1,
-          "year": "2025",
-          "runtime": 127,
-          "trailerUrl": "https://www.youtube.com/watch?v=E2PSkw8BI7k"
-        },
-        {
-          "title": "Sinners",
-          "times": [
-            "7:30am"
-          ],
-          "url": "https://www.acmi.net.au/whats-on/best-of-2025/sinners/",
-          "overview": "Trying to leave their troubled lives behind, twin brothers return to their hometown to start again, only to discover that an even greater evil is waiting to welcome them back.",
-          "posterPath": "https://image.tmdb.org/t/p/w300/qTvFWCGeGXgBRaINLY1zqgTPSpn.jpg",
-          "rating": 7.503,
-          "year": "2025",
-          "runtime": 138,
-          "trailerUrl": "https://www.youtube.com/watch?v=wDajDVYC3Mo"
-        },
-        {
-          "title": "Dot Matrix",
-          "times": [
-            "7am"
-          ],
-          "url": "https://www.acmi.net.au/whats-on/psychedelic-cinema/dot-matrix/",
-          "overview": "In 2012, Richard Tuohy made \"Screen Tone\" using patterns of dots printed straight to 16mm film. By doubling this principle in \"Dot Matrix\", a third, dizzying moire pattern and a deafening noise develops in the flicker (alternating black and white frames) because the dots also pass by the sound head.",
-          "posterPath": null,
-          "rating": null,
-          "year": "2013",
-          "runtime": 17,
-          "trailerUrl": null
-        },
-        {
-          "title": "2001: A Space Odyssey",
-          "times": [
-            "8am",
-            "4am"
-          ],
-          "url": "https://www.acmi.net.au/whats-on/psychedelic-cinema/2001-a-space-odyssey/",
-          "overview": "Humanity finds a mysterious object buried beneath the lunar surface and sets off to find its origins with the help of HAL 9000, the world's most advanced super computer.",
-          "posterPath": "https://image.tmdb.org/t/p/w300/ve72VxNqjGM69Uky4WTo2bK6rfq.jpg",
-          "rating": 8.06,
-          "year": "1968",
-          "runtime": 149,
-          "trailerUrl": "https://www.youtube.com/watch?v=kR2r-A9H3Kg"
-        },
-        {
-          "title": "The Trip",
-          "times": [
-            "3am"
-          ],
-          "url": "https://www.acmi.net.au/whats-on/psychedelic-cinema/the-trip/",
-          "overview": "After his wife leaves him, a disillusioned director dives into the drug scene, trying anything his friend suggests.",
-          "posterPath": "https://image.tmdb.org/t/p/w300/tRX6gEJ4G1oFBDxEGdIhfogdjCN.jpg",
-          "rating": 5.7,
-          "year": "1967",
-          "runtime": 85,
-          "trailerUrl": "https://www.youtube.com/watch?v=HNsEYrhy5dE"
-        },
-        {
-          "title": "Bridge to Terabithia",
-          "times": [
-            "2am",
-            "2am",
-            "2am",
-            "2am",
-            "2am"
-          ],
-          "url": "https://www.acmi.net.au/whats-on/kids-flicks-with-feelings-in-cinemas/bridge-to-terabithia/",
-          "overview": "Jesse Aarons trained all summer to become the fastest runner in school. So he's very upset when newcomer Leslie Burke outruns him and everyone else. Despite this and other differences including that she's rich, he's poor, she's a city girl, and he's a country boy the two become fast friends. Together they create Terabithia, a land of monsters, trolls, ogres, and giants where they rule as king and queen.",
-          "posterPath": "https://image.tmdb.org/t/p/w300/3xFxGodKPMFLheS8rujFSmLfcq4.jpg",
-          "rating": 7.306,
-          "year": "2007",
-          "runtime": 95,
-          "trailerUrl": "https://www.youtube.com/watch?v=T2TDSEG57hI"
-        },
-        {
-          "title": "Sentimental Value",
-          "times": [
-            "7:30am"
-          ],
-          "url": "https://www.acmi.net.au/whats-on/best-of-2025/sentimental-value/",
-          "overview": "Sisters Nora and Agnes reunite with their estranged father, the charismatic Gustav, a once-renowned director who offers stage actress Nora a role in what he hopes will be his comeback film. When Nora turns it down, she soon discovers he has given her part to an eager young Hollywood star.",
-          "posterPath": "https://image.tmdb.org/t/p/w300/dNy7iCibnVTJuvosArcDEdbruBT.jpg",
-          "rating": 7.586,
-          "year": "2025",
-          "runtime": 133,
-          "trailerUrl": "https://www.youtube.com/watch?v=zBFstFXdk90"
-        },
-        {
-          "title": "Lucifer Rising + Inauguration of the Pleasure Dome",
-          "times": [
-            "8am"
-          ],
-          "url": "https://www.acmi.net.au/whats-on/psychedelic-cinema/lucifer-rising-inauguration-of-the-pleasure-dome/",
-          "overview": null,
-          "posterPath": null,
-          "rating": null,
-          "year": null,
-          "runtime": null,
-          "trailerUrl": null
-        },
-        {
-          "title": "El Topo",
-          "times": [
-            "4am"
-          ],
-          "url": "https://www.acmi.net.au/whats-on/psychedelic-cinema/el-topo/",
-          "overview": "El Topo decides to confront warrior Masters on a trans-formative desert journey he begins with his 6 year old son, who must bury his childhood totems to become a man.",
-          "posterPath": "https://image.tmdb.org/t/p/w300/4ea7sUzZaQNRuIm4M6EqWLQWfnX.jpg",
-          "rating": 7.046,
-          "year": "1970",
-          "runtime": 125,
-          "trailerUrl": "https://www.youtube.com/watch?v=xjTlNTbv-xs"
-        },
-        {
-          "title": "Labyrinth",
-          "times": [
-            "2am",
-            "2am",
-            "2am",
-            "2am",
-            "2am"
-          ],
-          "url": "https://www.acmi.net.au/whats-on/kids-flicks-with-feelings-in-cinemas/labyrinth/",
-          "overview": "When Sarah is forced to babysit her half-brother Toby, she inadvertently summons the Goblin King who whisks Toby away to his castle at the center of a labyrinth. Sarah enters into a bargain with the Goblin King where she is given just thirteen hours to solve the labyrinth and rescue Toby, or else lose him forever.",
-          "posterPath": "https://image.tmdb.org/t/p/w300/hbSdA1DmNA9IlfVoqJkIWYF2oYm.jpg",
-          "rating": 7.3,
-          "year": "1986",
-          "runtime": 101,
-          "trailerUrl": "https://www.youtube.com/watch?v=8bJy0GF2RZ0"
-        },
-        {
-          "title": "Ran",
-          "times": [
-            "2:30am",
-            "12am",
-            "12am"
-          ],
-          "url": "https://www.acmi.net.au/whats-on/matinees/ran/",
-          "overview": "The movie follows Ran's journey, whose main desire is to fulfill his potential. He is ready to deal with difficult experiences of not being accepted by his family and friends, physical and emotional changes, and even dangers to his health, but he is not willing to give up on himself and his happiness.",
-          "posterPath": "https://image.tmdb.org/t/p/w300/FepaiApo8Yr6pNIZIeYG5kW06J.jpg",
-          "rating": 1,
-          "year": "2018",
-          "runtime": 20,
-          "trailerUrl": null
-        },
-        {
-          "title": "3 Women",
-          "times": [
-            "8am"
-          ],
-          "url": "https://www.acmi.net.au/whats-on/psychedelic-cinema/3-women/",
-          "overview": "Two co-workers, one a vain woman and the other an awkward teenager, share an increasingly bizarre relationship after becoming roommates.",
-          "posterPath": "https://image.tmdb.org/t/p/w300/uL5Yg8MEgHGXymTaJBYXn9g0xsH.jpg",
-          "rating": 7.094,
-          "year": "1977",
-          "runtime": 124,
-          "trailerUrl": "https://www.youtube.com/watch?v=9K8nRZBZvqc"
-        },
-        {
-          "title": "Daisies",
-          "times": [
-            "4am"
-          ],
-          "url": "https://www.acmi.net.au/whats-on/psychedelic-cinema/daisies/",
-          "overview": "A young girl inspires her mother to pursue her dreams.",
-          "posterPath": "https://image.tmdb.org/t/p/w300/y8k3fCGTKFUIkTH1gUyWM4qQgGO.jpg",
-          "rating": null,
-          "year": "2013",
-          "runtime": 7,
-          "trailerUrl": null
-        },
-        {
-          "title": "Blaktivism is Film",
-          "times": [
-            "7:30am"
-          ],
-          "url": "https://www.acmi.net.au/whats-on/blaktivism-is-film/",
-          "overview": null,
-          "posterPath": null,
-          "rating": null,
-          "year": null,
-          "runtime": null,
-          "trailerUrl": null
-        },
-        {
-          "title": "Chungking Express",
-          "times": [
-            "7:30am"
-          ],
-          "url": "https://www.acmi.net.au/whats-on/focus-on-tony-leung-chiu-wai/chungking-express/",
-          "overview": "Two melancholic Hong Kong policemen fall in love: one with a mysterious underworld figure, the other with a beautiful and ethereal server at a late-night restaurant.",
-          "posterPath": "https://image.tmdb.org/t/p/w300/43I9DcNoCzpyzK8JCkJYpHqHqGG.jpg",
-          "rating": 8,
-          "year": "1994",
-          "runtime": 103,
-          "trailerUrl": "https://www.youtube.com/watch?v=P9Mxf_6pVA0"
         }
       ]
     },
@@ -1075,12 +689,11 @@
         {
           "title": "Sentimental Value",
           "times": [
-            "11:50 am",
             "2:40 pm",
             "5:30 pm",
             "8:20 pm"
           ],
-          "url": "https://www.lidocinemas.com.au/tickets?c=0000000003&s=99179",
+          "url": "https://www.lidocinemas.com.au/tickets?c=0000000003&s=99172",
           "overview": "Sisters Nora and Agnes reunite with their estranged father, the charismatic Gustav, a once-renowned director who offers stage actress Nora a role in what he hopes will be his comeback film. When Nora turns it down, she soon discovers he has given her part to an eager young Hollywood star.",
           "posterPath": "https://image.tmdb.org/t/p/w300/dNy7iCibnVTJuvosArcDEdbruBT.jpg",
           "rating": 7.586,
@@ -1217,7 +830,7 @@
           "url": "https://www.lidocinemas.com.au/tickets?c=0000000003&s=99190",
           "overview": "In the wake of the devastating war against the RDA and the loss of their eldest son, Jake Sully and Neytiri face a new threat on Pandora: the Ash People, a violent and power-hungry Na'vi tribe led by the ruthless Varang. Jake's family must fight for their survival and the future of Pandora in a conflict that pushes them to their emotional and physical limits.",
           "posterPath": "https://image.tmdb.org/t/p/w300/g96wHxU7EnoIFwemb2RgohIXrgW.jpg",
-          "rating": 7.4,
+          "rating": 7.404,
           "year": "2025",
           "runtime": 198,
           "trailerUrl": "https://www.youtube.com/watch?v=hsxgDO2mvng"
@@ -1244,7 +857,6 @@
         {
           "title": "Avatar: Fire and Ash",
           "times": [
-            "11:45 am",
             "2:00 pm",
             "3:45 pm",
             "6:00 pm",
@@ -1263,7 +875,6 @@
         {
           "title": "Anaconda",
           "times": [
-            "11:45 am",
             "3:30 pm",
             "4:40 pm",
             "6:00 pm",
@@ -1388,31 +999,79 @@
       "url": "https://www.astortheatre.net.au/",
       "sessions": [
         {
-          "title": "The Princess Bride",
+          "title": "The Princess Bride + The Princess Bride",
           "times": [
             "2pm"
           ],
           "url": "https://www.astortheatre.net.au/films/the-princess-bride",
-          "isDoubleFeature": false,
-          "overview": "In this enchantingly cracked fairy tale, the beautiful Princess Buttercup and the dashing Westley must overcome staggering odds to find happiness amid six-fingered swordsmen, murderous princes, Sicilians and rodents of unusual size. But even death can't stop these true lovebirds from triumphing.",
+          "isDoubleFeature": true,
+          "film1": "The Princess Bride",
+          "film2": "The Princess Bride",
+          "films": [
+            {
+              "title": "The Princess Bride",
+              "overview": "In this enchantingly cracked fairy tale, the beautiful Princess Buttercup and the dashing Westley must overcome staggering odds to find happiness amid six-fingered swordsmen, murderous princes, Sicilians and rodents of unusual size. But even death can't stop these true lovebirds from triumphing.",
+              "posterPath": "https://image.tmdb.org/t/p/w300/2FC9L9MrjBoGHYjYZjdWQdopVYb.jpg",
+              "rating": 7.7,
+              "year": "1987",
+              "runtime": 99,
+              "trailerUrl": "https://www.youtube.com/watch?v=7a8RKZrhmiE",
+              "tmdbId": 2493
+            },
+            {
+              "title": "The Princess Bride",
+              "overview": "In this enchantingly cracked fairy tale, the beautiful Princess Buttercup and the dashing Westley must overcome staggering odds to find happiness amid six-fingered swordsmen, murderous princes, Sicilians and rodents of unusual size. But even death can't stop these true lovebirds from triumphing.",
+              "posterPath": "https://image.tmdb.org/t/p/w300/2FC9L9MrjBoGHYjYZjdWQdopVYb.jpg",
+              "rating": 7.7,
+              "year": "1987",
+              "runtime": 99,
+              "trailerUrl": "https://www.youtube.com/watch?v=7a8RKZrhmiE",
+              "tmdbId": 2493
+            }
+          ],
           "posterPath": "https://image.tmdb.org/t/p/w300/2FC9L9MrjBoGHYjYZjdWQdopVYb.jpg",
-          "rating": 7.7,
+          "overview": "In this enchantingly cracked fairy tale, the beautiful Princess Buttercup and the dashing Westley must overcome staggering odds to find happiness amid six-fingered swordsmen, murderous princes, Sicilians and rodents of unusual size. But even death can't stop these true lovebirds from triumphing.",
+          "runtime": 198,
           "year": "1987",
-          "runtime": 99,
+          "rating": 7.7,
           "trailerUrl": "https://www.youtube.com/watch?v=7a8RKZrhmiE"
         },
         {
-          "title": "Dune: Part One",
+          "title": "Dune: Part One + Dune: Part One",
           "times": [
             "7pm"
           ],
           "url": "https://www.astortheatre.net.au/films/dune-2",
-          "isDoubleFeature": false,
-          "overview": "Paul Atreides, a brilliant and gifted young man born into a great destiny beyond his understanding, must travel to the most dangerous planet in the universe to ensure the future of his family and his people. As malevolent forces explode into conflict over the planet's exclusive supply of the most precious resource in existence-a commodity capable of unlocking humanity's greatest potential-only those who can conquer their fear will survive.",
+          "isDoubleFeature": true,
+          "film1": "Dune: Part One",
+          "film2": "Dune: Part One",
+          "films": [
+            {
+              "title": "Dune: Part One",
+              "overview": "Paul Atreides, a brilliant and gifted young man born into a great destiny beyond his understanding, must travel to the most dangerous planet in the universe to ensure the future of his family and his people. As malevolent forces explode into conflict over the planet's exclusive supply of the most precious resource in existence-a commodity capable of unlocking humanity's greatest potential-only those who can conquer their fear will survive.",
+              "posterPath": "https://image.tmdb.org/t/p/w300/d5NXSklXo0qyIYkgV94XAgMIckC.jpg",
+              "rating": 7.776,
+              "year": "2021",
+              "runtime": 155,
+              "trailerUrl": "https://www.youtube.com/watch?v=w0HgHet0sxg",
+              "tmdbId": 438631
+            },
+            {
+              "title": "Dune: Part One",
+              "overview": "Paul Atreides, a brilliant and gifted young man born into a great destiny beyond his understanding, must travel to the most dangerous planet in the universe to ensure the future of his family and his people. As malevolent forces explode into conflict over the planet's exclusive supply of the most precious resource in existence-a commodity capable of unlocking humanity's greatest potential-only those who can conquer their fear will survive.",
+              "posterPath": "https://image.tmdb.org/t/p/w300/d5NXSklXo0qyIYkgV94XAgMIckC.jpg",
+              "rating": 7.776,
+              "year": "2021",
+              "runtime": 155,
+              "trailerUrl": "https://www.youtube.com/watch?v=w0HgHet0sxg",
+              "tmdbId": 438631
+            }
+          ],
           "posterPath": "https://image.tmdb.org/t/p/w300/d5NXSklXo0qyIYkgV94XAgMIckC.jpg",
-          "rating": 7.776,
+          "overview": "Paul Atreides, a brilliant and gifted young man born into a great destiny beyond his understanding, must travel to the most dangerous planet in the universe to ensure the future of his family and his people. As malevolent forces explode into conflict over the planet's exclusive supply of the most precious resource in existence-a commodity capable of unlocking humanity's greatest potential-only those who can conquer their fear will survive.",
+          "runtime": 310,
           "year": "2021",
-          "runtime": 155,
+          "rating": 7.776,
           "trailerUrl": "https://www.youtube.com/watch?v=w0HgHet0sxg"
         }
       ]
@@ -1424,7 +1083,6 @@
         {
           "title": "Anaconda",
           "times": [
-            "12:30pm",
             "6:10pm",
             "9:00pm"
           ],
@@ -1439,7 +1097,6 @@
         {
           "title": "Avatar: Fire and Ash (2D)",
           "times": [
-            "12:10pm",
             "2:40pm",
             "6:40pm",
             "7:50pm"
@@ -1447,7 +1104,7 @@
           "url": "https://www.palacecinemas.com.au/movies/avatar-fire-and-ash-2d",
           "overview": "In the wake of the devastating war against the RDA and the loss of their eldest son, Jake Sully and Neytiri face a new threat on Pandora: the Ash People, a violent and power-hungry Na'vi tribe led by the ruthless Varang. Jake's family must fight for their survival and the future of Pandora in a conflict that pushes them to their emotional and physical limits.",
           "posterPath": "https://image.tmdb.org/t/p/w300/g96wHxU7EnoIFwemb2RgohIXrgW.jpg",
-          "rating": 7.4,
+          "rating": 7.404,
           "year": "2025",
           "runtime": 198,
           "trailerUrl": "https://www.youtube.com/watch?v=hsxgDO2mvng"
@@ -1543,7 +1200,6 @@
         {
           "title": "The Housemaid",
           "times": [
-            "12:15pm",
             "3:00pm",
             "5:50pm",
             "8:40pm"
@@ -1607,14 +1263,13 @@
         {
           "title": "Avatar: Fire and Ash (2D)",
           "times": [
-            "12:15pm",
             "4:10pm",
             "7:00pm"
           ],
           "url": "https://www.palacecinemas.com.au/movies/avatar-fire-and-ash-2d",
           "overview": "In the wake of the devastating war against the RDA and the loss of their eldest son, Jake Sully and Neytiri face a new threat on Pandora: the Ash People, a violent and power-hungry Na'vi tribe led by the ruthless Varang. Jake's family must fight for their survival and the future of Pandora in a conflict that pushes them to their emotional and physical limits.",
           "posterPath": "https://image.tmdb.org/t/p/w300/g96wHxU7EnoIFwemb2RgohIXrgW.jpg",
-          "rating": 7.4,
+          "rating": 7.404,
           "year": "2025",
           "runtime": 198,
           "trailerUrl": "https://www.youtube.com/watch?v=hsxgDO2mvng"
@@ -1691,7 +1346,6 @@
         {
           "title": "Sentimental Value",
           "times": [
-            "12:30pm",
             "3:20pm",
             "6:15pm"
           ],
