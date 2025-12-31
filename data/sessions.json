@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2025-12-31T02:04:52.118Z",
+  "generatedAt": "2025-12-31T02:14:47.191Z",
   "date": "Wednesday 31 December 2025",
   "cinemas": [
     {
@@ -415,7 +415,7 @@
           "url": "https://www.cinemanova.com.au/films/avatar-fire-and-ash",
           "overview": "In the wake of the devastating war against the RDA and the loss of their eldest son, Jake Sully and Neytiri face a new threat on Pandora: the Ash People, a violent and power-hungry Na'vi tribe led by the ruthless Varang. Jake's family must fight for their survival and the future of Pandora in a conflict that pushes them to their emotional and physical limits.",
           "posterPath": "https://image.tmdb.org/t/p/w300/g96wHxU7EnoIFwemb2RgohIXrgW.jpg",
-          "rating": 7.408,
+          "rating": 7.396,
           "year": "2025",
           "runtime": 198,
           "trailerUrl": "https://www.youtube.com/watch?v=cjagOAvrWRY"
@@ -657,21 +657,6 @@
           "trailerUrl": "https://www.youtube.com/watch?v=e67WZM-Nkn4"
         },
         {
-          "title": "Song Sung Blue",
-          "times": [
-            "12:45 pm",
-            "6:30 pm",
-            "9:00 pm"
-          ],
-          "url": "https://www.lidocinemas.com.au/tickets?c=0000000003&s=99214",
-          "overview": "Based on a true story, two down-on-their-luck musicians form a joyous Neil Diamond tribute band, proving it's never too late to find love and follow your dreams.",
-          "posterPath": "https://image.tmdb.org/t/p/w300/3HsIAbHWbFDUbY2jfj4wqEjGC3b.jpg",
-          "rating": 7.429,
-          "year": "2025",
-          "runtime": 133,
-          "trailerUrl": "https://www.youtube.com/watch?v=ssZU6xUM-YI"
-        },
-        {
           "title": "Rental Family",
           "times": [
             "3:30 pm",
@@ -684,6 +669,20 @@
           "year": "2025",
           "runtime": 110,
           "trailerUrl": "https://www.youtube.com/watch?v=7W9B-0PdfXQ"
+        },
+        {
+          "title": "Song Sung Blue",
+          "times": [
+            "6:30 pm",
+            "9:00 pm"
+          ],
+          "url": "https://www.lidocinemas.com.au/tickets?c=0000000003&s=98476",
+          "overview": "Based on a true story, two down-on-their-luck musicians form a joyous Neil Diamond tribute band, proving it's never too late to find love and follow your dreams.",
+          "posterPath": "https://image.tmdb.org/t/p/w300/3HsIAbHWbFDUbY2jfj4wqEjGC3b.jpg",
+          "rating": 7.429,
+          "year": "2025",
+          "runtime": 133,
+          "trailerUrl": "https://www.youtube.com/watch?v=ssZU6xUM-YI"
         },
         {
           "title": "Anaconda",
@@ -738,7 +737,7 @@
           "url": "https://www.lidocinemas.com.au/tickets?c=0000000003&s=99225",
           "overview": "In the wake of the devastating war against the RDA and the loss of their eldest son, Jake Sully and Neytiri face a new threat on Pandora: the Ash People, a violent and power-hungry Na'vi tribe led by the ruthless Varang. Jake's family must fight for their survival and the future of Pandora in a conflict that pushes them to their emotional and physical limits.",
           "posterPath": "https://image.tmdb.org/t/p/w300/g96wHxU7EnoIFwemb2RgohIXrgW.jpg",
-          "rating": 7.408,
+          "rating": 7.396,
           "year": "2025",
           "runtime": 198,
           "trailerUrl": "https://www.youtube.com/watch?v=cjagOAvrWRY"
@@ -755,19 +754,6 @@
           "year": "2025",
           "runtime": 88,
           "trailerUrl": "https://www.youtube.com/watch?v=FkQImctnjmg"
-        },
-        {
-          "title": "Zootopia 2",
-          "times": [
-            "12:50 pm"
-          ],
-          "url": "https://www.lidocinemas.com.au/tickets?c=0000000003&s=99212",
-          "overview": "After cracking the biggest case in Zootopia's history, rookie cops Judy Hopps and Nick Wilde find themselves on the twisting trail of a great mystery when Gary De'Snake arrives and turns the animal metropolis upside down. To crack the case, Judy and Nick must go undercover to unexpected new parts of town, where their growing partnership is tested like never before.",
-          "posterPath": "https://image.tmdb.org/t/p/w300/6unXI876M8kUamB3XuVM4Xid7DI.jpg",
-          "rating": 7.6,
-          "year": "2025",
-          "runtime": 107,
-          "trailerUrl": "https://www.youtube.com/watch?v=5H7L9j0dW90"
         },
         {
           "title": "Nuremberg",
@@ -880,7 +866,7 @@
           "url": "https://www.hoyts.com.au/movies/avatar-fire-and-ash",
           "overview": "In the wake of the devastating war against the RDA and the loss of their eldest son, Jake Sully and Neytiri face a new threat on Pandora: the Ash People, a violent and power-hungry Na'vi tribe led by the ruthless Varang. Jake's family must fight for their survival and the future of Pandora in a conflict that pushes them to their emotional and physical limits.",
           "posterPath": "https://image.tmdb.org/t/p/w300/g96wHxU7EnoIFwemb2RgohIXrgW.jpg",
-          "rating": 7.408,
+          "rating": 7.396,
           "year": "2025",
           "runtime": 198,
           "trailerUrl": "https://www.youtube.com/watch?v=cjagOAvrWRY"
@@ -935,7 +921,6 @@
         {
           "title": "The SpongeBob Movie: Search for Squarepants",
           "times": [
-            "12:50 pm",
             "2:30 pm",
             "4:30 pm",
             "6:00 pm"
@@ -1119,7 +1104,6 @@
         {
           "title": "Song Sung Blue",
           "times": [
-            "12:50pm",
             "3:10pm",
             "6:30pm",
             "7:10pm"
@@ -1307,7 +1291,6 @@
         {
           "title": "The History of Sound",
           "times": [
-            "12:50pm",
             "9:00pm"
           ],
           "url": "https://www.palacecinemas.com.au/movies/the-history-of-sound",
@@ -1398,7 +1381,6 @@
         {
           "title": "My Brother's Band",
           "times": [
-            "12:50pm",
             "2:40pm",
             "6:15pm"
           ],
@@ -1767,7 +1749,7 @@
           "url": "https://imaxmelbourne.com.au/movie/avatar-fire-ash",
           "overview": "In the wake of the devastating war against the RDA and the loss of their eldest son, Jake Sully and Neytiri face a new threat on Pandora: the Ash People, a violent and power-hungry Na'vi tribe led by the ruthless Varang. Jake's family must fight for their survival and the future of Pandora in a conflict that pushes them to their emotional and physical limits.",
           "posterPath": "https://image.tmdb.org/t/p/w300/g96wHxU7EnoIFwemb2RgohIXrgW.jpg",
-          "rating": 7.408,
+          "rating": 7.396,
           "year": "2025",
           "runtime": 198,
           "trailerUrl": "https://www.youtube.com/watch?v=cjagOAvrWRY"
