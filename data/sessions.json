@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2025-12-31T02:35:38.956Z",
+  "generatedAt": "2025-12-31T02:52:38.383Z",
   "date": "Wednesday 31 December 2025",
   "cinemas": [
     {
@@ -39,19 +39,6 @@
           "trailerUrl": "https://www.youtube.com/watch?v=O-hgR7RC39c"
         },
         {
-          "title": "Song Sung Blue",
-          "times": [
-            "7:50 PM"
-          ],
-          "url": "https://www.brunswickpicturehouse.com.au/now-showing/",
-          "overview": "Based on a true story, two down-on-their-luck musicians form a joyous Neil Diamond tribute band, proving it's never too late to find love and follow your dreams.",
-          "posterPath": "https://image.tmdb.org/t/p/w300/3HsIAbHWbFDUbY2jfj4wqEjGC3b.jpg",
-          "rating": 7.429,
-          "year": "2025",
-          "runtime": 133,
-          "trailerUrl": "https://www.youtube.com/watch?v=ssZU6xUM-YI"
-        },
-        {
           "title": "Sentimental Value",
           "times": [
             "12:30 PM",
@@ -64,6 +51,19 @@
           "year": "2025",
           "runtime": 133,
           "trailerUrl": "https://www.youtube.com/watch?v=zBFstFXdk90"
+        },
+        {
+          "title": "Song Sung Blue",
+          "times": [
+            "7:50 PM"
+          ],
+          "url": "https://www.brunswickpicturehouse.com.au/now-showing/",
+          "overview": "Based on a true story, two down-on-their-luck musicians form a joyous Neil Diamond tribute band, proving it's never too late to find love and follow your dreams.",
+          "posterPath": "https://image.tmdb.org/t/p/w300/3HsIAbHWbFDUbY2jfj4wqEjGC3b.jpg",
+          "rating": 7.429,
+          "year": "2025",
+          "runtime": 133,
+          "trailerUrl": "https://www.youtube.com/watch?v=ssZU6xUM-YI"
         }
       ]
     },
@@ -383,7 +383,7 @@
           "url": "https://www.cinemanova.com.au/films/eternity",
           "overview": "In an afterlife where souls have one week to decide where to spend eternity, Joan is faced with the impossible choice between the man she spent her life with and her first love, who died young and has waited decades for her to arrive.",
           "posterPath": "https://image.tmdb.org/t/p/w300/o8pg20G67BGmQvRkXwstNre062J.jpg",
-          "rating": 7.049,
+          "rating": 7.063,
           "year": "2025",
           "runtime": 114,
           "trailerUrl": "https://www.youtube.com/watch?v=GzkoY6hUvQQ"
@@ -1324,7 +1324,6 @@
         {
           "title": "Anaconda",
           "times": [
-            "1:20pm",
             "9:15pm"
           ],
           "url": "https://www.palacecinemas.com.au/movies/anaconda",
@@ -1379,7 +1378,6 @@
         {
           "title": "Rental Family",
           "times": [
-            "1:30pm",
             "6:10pm"
           ],
           "url": "https://www.palacecinemas.com.au/movies/rental-family",
@@ -1467,7 +1465,6 @@
         {
           "title": "Anaconda",
           "times": [
-            "1:30pm",
             "4:00pm",
             "6:20pm",
             "7:20pm",
@@ -1520,7 +1517,7 @@
           "url": "https://www.palacecinemas.com.au/movies/eternity",
           "overview": "In an afterlife where souls have one week to decide where to spend eternity, Joan is faced with the impossible choice between the man she spent her life with and her first love, who died young and has waited decades for her to arrive.",
           "posterPath": "https://image.tmdb.org/t/p/w300/o8pg20G67BGmQvRkXwstNre062J.jpg",
-          "rating": 7.049,
+          "rating": 7.063,
           "year": "2025",
           "runtime": 114,
           "trailerUrl": "https://www.youtube.com/watch?v=GzkoY6hUvQQ"
