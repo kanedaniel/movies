@@ -130,8 +130,6 @@
     .premium-toggle-container {
       display: none;
       padding: 0.75rem 1rem;
-      border-top: 1px solid var(--border);
-      margin-top: 1rem;
     }
     
     .premium-toggle-container.visible {
@@ -258,10 +256,25 @@
     .cinema-header a:hover { color: var(--gold); }
     
     .cinema-note {
-      font-style: italic;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.8rem;
+      color: var(--text-dim);
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+    
+    .no-premium-sessions {
+      display: none;
+      padding: 2rem;
+      text-align: center;
       color: var(--text-dim);
       font-size: 0.9rem;
+      border: 1px dashed var(--border);
       margin-bottom: 1rem;
+    }
+    
+    .no-premium-sessions.visible {
+      display: block;
     }
     
     /* Film list with expandable overflow */
@@ -642,7 +655,8 @@
               html += `<div class="premium-toggle-container visible">
                 <input type="checkbox" id="premium-toggle" class="premium-toggle">
                 <label for="premium-toggle">Only show sessions with premium seats available</label>
-              </div>`;
+              </div>
+              <div class="no-premium-sessions" id="no-premium-message">No screenings available</div>`;
             }
             
             html += `<div class="film-list ${hasMoreThanThree ? 'collapsed' : ''}" data-cinema="${cinemaId}">`;
@@ -712,24 +726,38 @@
         
         // Add premium toggle listener
         const premiumToggle = document.getElementById('premium-toggle');
+        const noPremiumMessage = document.getElementById('no-premium-message');
         if (premiumToggle) {
           premiumToggle.addEventListener('change', () => {
             const imaxSection = document.getElementById('cinema-imax-melbourne');
             if (!imaxSection) return;
             
             const filmCards = imaxSection.querySelectorAll('.film-card');
+            let visibleCount = 0;
+            
             filmCards.forEach(card => {
               if (premiumToggle.checked) {
                 // Show only films with premium times
                 if (card.dataset.hasPremium === 'true') {
                   card.style.display = '';
+                  visibleCount++;
                 } else {
                   card.style.display = 'none';
                 }
               } else {
                 card.style.display = '';
+                visibleCount++;
               }
             });
+            
+            // Show/hide empty state message
+            if (noPremiumMessage) {
+              if (premiumToggle.checked && visibleCount === 0) {
+                noPremiumMessage.classList.add('visible');
+              } else {
+                noPremiumMessage.classList.remove('visible');
+              }
+            }
           });
         }
         
