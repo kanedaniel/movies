@@ -758,68 +758,97 @@ async function scrapeAstor(page) {
   };
 }
 
-async function scrapePalaceComo(page) {
-  console.log('Scraping Palace Como...');
+// Helper function to extract Palace cinema data from __NEXT_DATA__
+async function scrapePalaceFromNextData(page, cinemaName, url, cinemaId) {
+  console.log(`Scraping ${cinemaName}...`);
   const sessions = [];
-  const url = 'https://www.palacecinemas.com.au/cinemas/palace-cinema-como';
   
   try {
     await page.goto(url, { waitUntil: 'networkidle2', timeout: 60000 });
-    await page.waitForTimeout(8000);
+    await page.waitForTimeout(3000);
     
-    const result = await page.evaluate((baseUrl) => {
+    // Get today's date in Melbourne timezone (YYYY-MM-DD format)
+    const now = new Date();
+    const melbourneDate = new Date(now.toLocaleString('en-US', { timeZone: 'Australia/Melbourne' }));
+    const year = melbourneDate.getFullYear();
+    const month = String(melbourneDate.getMonth() + 1).padStart(2, '0');
+    const day = String(melbourneDate.getDate()).padStart(2, '0');
+    const todayStr = `${year}-${month}-${day}`;
+    
+    console.log(`  Looking for date: ${todayStr}`);
+    
+    const result = await page.evaluate((todayStr, cinemaIdParam) => {
       const items = [];
-      const seen = new Set();
-      const debug = { linksFound: 0, titlesFound: [], buttonsFound: 0 };
+      const debug = { found: false, movieCount: 0, todaySessionCount: 0, cinemaId: null };
       
-      // Find all movie links with actual title text
-      document.querySelectorAll('a[href*="/movies/"]').forEach(link => {
-        debug.linksFound++;
-        const href = link.getAttribute('href');
-        if (!href || !href.includes('/movies/')) return;
+      // Find __NEXT_DATA__ script tag
+      const nextDataScript = document.getElementById('__NEXT_DATA__');
+      if (!nextDataScript) {
+        return { items, debug, error: 'No __NEXT_DATA__ found' };
+      }
+      
+      try {
+        const data = JSON.parse(nextDataScript.textContent);
         
-        const title = link.textContent?.trim();
-        if (!title || title === 'More Info' || title.length < 2) return;
-        if (seen.has(title)) return;
+        // Auto-detect cinema ID from the page data if not provided
+        const cinemaId = cinemaIdParam || data?.props?.pageProps?.cinema?.cinemaId;
+        debug.cinemaId = cinemaId;
         
-        debug.titlesFound.push(title);
+        if (!cinemaId) {
+          return { items, debug, error: 'Could not determine cinema ID' };
+        }
         
-        // Walk up to find a container with buttons (session times)
-        let container = link.parentElement;
-        let attempts = 0;
-        while (container && attempts < 10) {
-          const buttons = container.querySelectorAll('button');
-          if (buttons.length > 0) {
-            debug.buttonsFound += buttons.length;
-            // Found container with buttons
-            const times = [];
-            buttons.forEach(btn => {
-              const btnText = btn.textContent?.trim() || '';
-              const timeMatch = btnText.match(/(\d{1,2}:\d{2}\s*[ap]m)/i);
-              if (timeMatch) {
-                times.push(timeMatch[1].replace(/\s+/g, ''));
-              }
+        const movies = data?.props?.pageProps?.sessions || [];
+        debug.found = true;
+        debug.movieCount = movies.length;
+        
+        movies.forEach(movie => {
+          const title = movie.title;
+          const slug = movie.slug;
+          if (!title) return;
+          
+          // Filter sessions for today and this cinema
+          const todaySessions = (movie.sessions || []).filter(session => {
+            // Date is stored as UTC but represents local time
+            // e.g., "2026-01-01T10:00:00.000Z" means 10:00am Melbourne time
+            const sessionDate = session.date?.substring(0, 10); // Get YYYY-MM-DD
+            const matchesCinema = session.cinemaId === cinemaId;
+            return sessionDate === todayStr && matchesCinema;
+          });
+          
+          if (todaySessions.length > 0) {
+            debug.todaySessionCount += todaySessions.length;
+            
+            // Extract times (the hour:minute from the ISO string)
+            const times = todaySessions.map(session => {
+              // "2026-01-01T10:00:00.000Z" -> "10:00"
+              const timeStr = session.date?.substring(11, 16); // "HH:MM"
+              const [hours, minutes] = timeStr.split(':');
+              const hour = parseInt(hours, 10);
+              const ampm = hour >= 12 ? 'pm' : 'am';
+              const hour12 = hour === 0 ? 12 : hour > 12 ? hour - 12 : hour;
+              return `${hour12}:${minutes}${ampm}`;
             });
             
-            if (times.length > 0) {
-              seen.add(title);
-              items.push({ 
-                title, 
-                times, 
-                url: href.startsWith('http') ? href : baseUrl + href 
-              });
-            }
-            break;
+            items.push({
+              title,
+              times,
+              url: `https://www.palacecinemas.com.au/movies/${slug}`
+            });
           }
-          container = container.parentElement;
-          attempts++;
-        }
-      });
+        });
+      } catch (e) {
+        return { items, debug, error: e.message };
+      }
       
       return { items, debug };
-    }, 'https://www.palacecinemas.com.au');
+    }, todayStr, cinemaId);
     
-    console.log(`  Debug - links: ${result.debug.linksFound}, titles: ${result.debug.titlesFound.slice(0, 3).join(', ')}, buttons: ${result.debug.buttonsFound}`);
+    if (result.error) {
+      console.log(`  Error: ${result.error}`);
+    } else {
+      console.log(`  Debug - cinemaId: ${result.debug.cinemaId}, movies: ${result.debug.movieCount}, today sessions: ${result.debug.todaySessionCount}`);
+    }
     
     for (const film of result.items) {
       sessions.push(film);
@@ -827,214 +856,46 @@ async function scrapePalaceComo(page) {
     
     console.log(`  Found ${sessions.length} films`);
   } catch (error) {
-    console.error('  Palace Como scrape error:', error.message);
+    console.error(`  ${cinemaName} scrape error:`, error.message);
   }
   
-  return { cinema: 'Palace Como', url, sessions };
+  return { cinema: cinemaName, url, sessions };
+}
+
+async function scrapePalaceComo(page) {
+  return scrapePalaceFromNextData(
+    page,
+    'Palace Como',
+    'https://www.palacecinemas.com.au/cinemas/palace-cinema-como',
+    '155'
+  );
 }
 
 async function scrapePalaceKino(page) {
-  console.log('Scraping Palace Kino...');
-  const sessions = [];
-  const url = 'https://www.palacecinemas.com.au/cinemas/the-kino-melbourne';
-  
-  try {
-    await page.goto(url, { waitUntil: 'networkidle2', timeout: 60000 });
-    await page.waitForTimeout(8000);
-    
-    const films = await page.evaluate((baseUrl) => {
-      const items = [];
-      const seen = new Set();
-      
-      // Find all movie links with actual title text
-      document.querySelectorAll('a[href*="/movies/"]').forEach(link => {
-        const href = link.getAttribute('href');
-        if (!href || !href.includes('/movies/')) return;
-        
-        const title = link.textContent?.trim();
-        if (!title || title === 'More Info' || title.length < 2) return;
-        if (seen.has(title)) return;
-        
-        // Walk up to find a container with buttons (session times)
-        let container = link.parentElement;
-        let attempts = 0;
-        while (container && attempts < 10) {
-          const buttons = container.querySelectorAll('button');
-          if (buttons.length > 0) {
-            // Found container with buttons
-            const times = [];
-            buttons.forEach(btn => {
-              const btnText = btn.textContent?.trim() || '';
-              const timeMatch = btnText.match(/(\d{1,2}:\d{2}\s*[ap]m)/i);
-              if (timeMatch) {
-                times.push(timeMatch[1].replace(/\s+/g, ''));
-              }
-            });
-            
-            if (times.length > 0) {
-              seen.add(title);
-              items.push({ 
-                title, 
-                times, 
-                url: href.startsWith('http') ? href : baseUrl + href 
-              });
-            }
-            break;
-          }
-          container = container.parentElement;
-          attempts++;
-        }
-      });
-      
-      return items;
-    }, 'https://www.palacecinemas.com.au');
-    
-    for (const film of films) {
-      sessions.push(film);
-    }
-    
-    console.log(`  Found ${sessions.length} films`);
-  } catch (error) {
-    console.error('  Palace Kino scrape error:', error.message);
-  }
-  
-  return { cinema: 'Palace Kino', url, sessions };
+  return scrapePalaceFromNextData(
+    page,
+    'Palace Kino',
+    'https://www.palacecinemas.com.au/cinemas/the-kino-melbourne',
+    null  // Will auto-detect from page data
+  );
 }
 
 async function scrapePalaceWestgarth(page) {
-  console.log('Scraping Palace Westgarth...');
-  const sessions = [];
-  const url = 'https://www.palacecinemas.com.au/cinemas/palace-westgarth';
-  
-  try {
-    await page.goto(url, { waitUntil: 'networkidle2', timeout: 60000 });
-    await page.waitForTimeout(8000);
-    
-    const films = await page.evaluate((baseUrl) => {
-      const items = [];
-      const seen = new Set();
-      
-      // Find all movie links with actual title text
-      document.querySelectorAll('a[href*="/movies/"]').forEach(link => {
-        const href = link.getAttribute('href');
-        if (!href || !href.includes('/movies/')) return;
-        
-        const title = link.textContent?.trim();
-        if (!title || title === 'More Info' || title.length < 2) return;
-        if (seen.has(title)) return;
-        
-        // Walk up to find a container with buttons (session times)
-        let container = link.parentElement;
-        let attempts = 0;
-        while (container && attempts < 10) {
-          const buttons = container.querySelectorAll('button');
-          if (buttons.length > 0) {
-            // Found container with buttons
-            const times = [];
-            buttons.forEach(btn => {
-              const btnText = btn.textContent?.trim() || '';
-              const timeMatch = btnText.match(/(\d{1,2}:\d{2}\s*[ap]m)/i);
-              if (timeMatch) {
-                times.push(timeMatch[1].replace(/\s+/g, ''));
-              }
-            });
-            
-            if (times.length > 0) {
-              seen.add(title);
-              items.push({ 
-                title, 
-                times, 
-                url: href.startsWith('http') ? href : baseUrl + href 
-              });
-            }
-            break;
-          }
-          container = container.parentElement;
-          attempts++;
-        }
-      });
-      
-      return items;
-    }, 'https://www.palacecinemas.com.au');
-    
-    for (const film of films) {
-      sessions.push(film);
-    }
-    
-    console.log(`  Found ${sessions.length} films`);
-  } catch (error) {
-    console.error('  Palace Westgarth scrape error:', error.message);
-  }
-  
-  return { cinema: 'Palace Westgarth', url, sessions };
+  return scrapePalaceFromNextData(
+    page,
+    'Palace Westgarth',
+    'https://www.palacecinemas.com.au/cinemas/palace-westgarth',
+    null  // Will auto-detect from page data
+  );
 }
 
 async function scrapePentridge(page) {
-  console.log('Scraping Pentridge Cinema...');
-  const sessions = [];
-  const url = 'https://www.palacecinemas.com.au/cinemas/pentridge-cinema';
-  
-  try {
-    await page.goto(url, { waitUntil: 'networkidle2', timeout: 60000 });
-    await page.waitForTimeout(8000);
-    
-    const films = await page.evaluate((baseUrl) => {
-      const items = [];
-      const seen = new Set();
-      
-      // Find all movie links with actual title text
-      document.querySelectorAll('a[href*="/movies/"]').forEach(link => {
-        const href = link.getAttribute('href');
-        if (!href || !href.includes('/movies/')) return;
-        
-        const title = link.textContent?.trim();
-        if (!title || title === 'More Info' || title.length < 2) return;
-        if (seen.has(title)) return;
-        
-        // Walk up to find a container with buttons (session times)
-        let container = link.parentElement;
-        let attempts = 0;
-        while (container && attempts < 10) {
-          const buttons = container.querySelectorAll('button');
-          if (buttons.length > 0) {
-            // Found container with buttons
-            const times = [];
-            buttons.forEach(btn => {
-              const btnText = btn.textContent?.trim() || '';
-              const timeMatch = btnText.match(/(\d{1,2}:\d{2}\s*[ap]m)/i);
-              if (timeMatch) {
-                times.push(timeMatch[1].replace(/\s+/g, ''));
-              }
-            });
-            
-            if (times.length > 0) {
-              seen.add(title);
-              items.push({ 
-                title, 
-                times, 
-                url: href.startsWith('http') ? href : baseUrl + href 
-              });
-            }
-            break;
-          }
-          container = container.parentElement;
-          attempts++;
-        }
-      });
-      
-      return items;
-    }, 'https://www.palacecinemas.com.au');
-    
-    for (const film of films) {
-      sessions.push(film);
-    }
-    
-    console.log(`  Found ${sessions.length} films`);
-  } catch (error) {
-    console.error('  Pentridge Cinema scrape error:', error.message);
-  }
-  
-  return { cinema: 'Pentridge Cinema', url, sessions };
+  return scrapePalaceFromNextData(
+    page,
+    'Pentridge Cinema',
+    'https://www.palacecinemas.com.au/cinemas/pentridge-cinema',
+    null  // Will auto-detect from page data
+  );
 }
 
 async function scrapeSunTheatre(page) {
