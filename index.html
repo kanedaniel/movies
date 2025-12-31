@@ -87,15 +87,18 @@
     }
     
     /* Cinema filter nav */
+    .cinema-nav-wrapper {
+      background: var(--bg-card);
+      border-bottom: 1px solid var(--border);
+      padding: 1rem;
+    }
+    
     .cinema-nav {
       display: flex;
       flex-wrap: wrap;
       gap: 0.5rem;
       justify-content: center;
-      padding: 1rem;
-      background: var(--bg-card);
-      border-bottom: 1px solid var(--border);
-      max-width: 900px;
+      max-width: 1000px;
       margin: 0 auto;
     }
     
@@ -558,9 +561,11 @@
     <p class="site-description">A site what's got Melbourne movie times built by Kane Daniel. Always confirm session times on the cinema website before heading out. DM me bugs and feature requests on <a href="https://www.instagram.com/normal_lifter/" target="_blank" rel="noopener">IG</a>.</p>
   </header>
   
-  <nav class="cinema-nav" id="cinema-nav">
-    <!-- Populated by JavaScript -->
-  </nav>
+  <div class="cinema-nav-wrapper">
+    <nav class="cinema-nav" id="cinema-nav">
+      <!-- Populated by JavaScript -->
+    </nav>
+  </div>
   
   <div class="search-container">
     <input type="text" class="search-input" id="film-search" placeholder="Search films...">
