@@ -150,34 +150,29 @@
     
     .premium-toggle {
       appearance: none;
-      width: 40px;
-      height: 20px;
-      background: var(--border);
-      border-radius: 10px;
+      width: 18px;
+      height: 18px;
+      background: var(--bg-dark);
+      border: 1px solid var(--border);
       position: relative;
       cursor: pointer;
-      transition: background 0.2s;
-    }
-    
-    .premium-toggle::before {
-      content: '';
-      position: absolute;
-      width: 16px;
-      height: 16px;
-      background: var(--text-dim);
-      border-radius: 50%;
-      top: 2px;
-      left: 2px;
-      transition: transform 0.2s, background 0.2s;
+      transition: background 0.2s, border-color 0.2s;
     }
     
     .premium-toggle:checked {
-      background: var(--gold-dim);
+      background: var(--gold);
+      border-color: var(--gold);
     }
     
     .premium-toggle:checked::before {
-      transform: translateX(20px);
-      background: var(--gold);
+      content: '✓';
+      position: absolute;
+      color: var(--bg-dark);
+      font-size: 12px;
+      font-weight: bold;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
     }
     
     .cinema-toggle {
@@ -642,6 +637,14 @@
               return a.title.localeCompare(b.title);
             });
             
+            // Add premium toggle for IMAX before film list
+            if (cinema.cinema === 'Imax Melbourne') {
+              html += `<div class="premium-toggle-container visible">
+                <input type="checkbox" id="premium-toggle" class="premium-toggle">
+                <label for="premium-toggle">Only show sessions with premium seats available</label>
+              </div>`;
+            }
+            
             html += `<div class="film-list ${hasMoreThanThree ? 'collapsed' : ''}" data-cinema="${cinemaId}">`;
             
             for (const session of sortedSessions) {
@@ -696,14 +699,6 @@
             }
             
             html += '</div>';
-            
-            // Add premium toggle for IMAX
-            if (cinema.cinema === 'Imax Melbourne') {
-              html += `<div class="premium-toggle-container visible">
-                <input type="checkbox" id="premium-toggle" class="premium-toggle">
-                <label for="premium-toggle">Only show sessions with premium seats available</label>
-              </div>`;
-            }
             
             if (hasMoreThanThree) {
               html += `<button class="show-more-btn" data-cinema="${cinemaId}">MORE ▼</button>`;

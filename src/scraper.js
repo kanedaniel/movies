@@ -325,8 +325,8 @@ async function scrapeEclipse(page) {
   console.log(`  Looking for date pattern: ${todayStr}`);
   
   try {
-    await page.goto(url, { waitUntil: 'networkidle2', timeout: 60000 });
-    await page.waitForTimeout(3000);
+    await page.goto(url, { waitUntil: 'networkidle2', timeout: 90000 });
+    await page.waitForTimeout(5000);
     
     const films = await page.evaluate((todayStr) => {
       const items = [];
@@ -614,8 +614,20 @@ async function scrapeAstor(page) {
   const url = 'https://www.astortheatre.net.au/';
   
   try {
+    // Helper function with timeout
+    const fetchWithTimeout = async (fetchUrl, options = {}, timeoutMs = 30000) => {
+      const controller = new AbortController();
+      const timeout = setTimeout(() => controller.abort(), timeoutMs);
+      try {
+        const response = await fetch(fetchUrl, { ...options, signal: controller.signal });
+        return response;
+      } finally {
+        clearTimeout(timeout);
+      }
+    };
+    
     // First, get the initial page content
-    const response = await fetch(url, {
+    const response = await fetchWithTimeout(url, {
       headers: {
         'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'
       }
@@ -624,16 +636,21 @@ async function scrapeAstor(page) {
     console.log(`  Homepage HTML length: ${html.length}`);
     
     // Also try the AJAX endpoint for more sessions
-    const ajaxResponse = await fetch('https://www.astortheatre.net.au/wp-admin/admin-ajax.php', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/x-www-form-urlencoded',
-        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'
-      },
-      body: 'action=get_frontpage_sessions&offset=0'
-    });
-    const ajaxHtml = await ajaxResponse.text();
-    console.log(`  AJAX HTML length: ${ajaxHtml.length}`);
+    let ajaxHtml = '';
+    try {
+      const ajaxResponse = await fetchWithTimeout('https://www.astortheatre.net.au/wp-admin/admin-ajax.php', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/x-www-form-urlencoded',
+          'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'
+        },
+        body: 'action=get_frontpage_sessions&offset=0'
+      });
+      ajaxHtml = await ajaxResponse.text();
+      console.log(`  AJAX HTML length: ${ajaxHtml.length}`);
+    } catch (e) {
+      console.log(`  AJAX fetch failed, using homepage only: ${e.message}`);
+    }
     
     // Combine both HTML sources
     const combinedHtml = html + ajaxHtml;
