@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2025-12-31T02:14:47.191Z",
+  "generatedAt": "2025-12-31T02:23:44.258Z",
   "date": "Wednesday 31 December 2025",
   "cinemas": [
     {
@@ -743,19 +743,6 @@
           "trailerUrl": "https://www.youtube.com/watch?v=cjagOAvrWRY"
         },
         {
-          "title": "The SpongeBob Movie: Search for Squarepants",
-          "times": [
-            "1:00 pm"
-          ],
-          "url": "https://www.lidocinemas.com.au/tickets?c=0000000003&s=99213",
-          "overview": "Desperate to be a big guy, SpongeBob sets out to prove his bravery to Mr. Krabs by following The Flying Dutchman – a mysterious swashbuckling ghost pirate – on a seafaring adventure that takes him to the deepest depths of the deep sea, where no Sponge has gone before.",
-          "posterPath": "https://image.tmdb.org/t/p/w300/pDWYW9v8fmJdA7N0I1MOdQA3ETq.jpg",
-          "rating": 6.9,
-          "year": "2025",
-          "runtime": 88,
-          "trailerUrl": "https://www.youtube.com/watch?v=FkQImctnjmg"
-        },
-        {
           "title": "Nuremberg",
           "times": [
             "5:40 pm"
@@ -1132,7 +1119,6 @@
         {
           "title": "The Housemaid",
           "times": [
-            "1:00pm",
             "2:40pm",
             "5:30pm",
             "8:15pm"
@@ -1144,19 +1130,6 @@
           "year": "2025",
           "runtime": 131,
           "trailerUrl": "https://www.youtube.com/watch?v=e67WZM-Nkn4"
-        },
-        {
-          "title": "Zootopia 2",
-          "times": [
-            "1:00pm"
-          ],
-          "url": "https://www.palacecinemas.com.au/movies/zootopia-2",
-          "overview": "After cracking the biggest case in Zootopia's history, rookie cops Judy Hopps and Nick Wilde find themselves on the twisting trail of a great mystery when Gary De'Snake arrives and turns the animal metropolis upside down. To crack the case, Judy and Nick must go undercover to unexpected new parts of town, where their growing partnership is tested like never before.",
-          "posterPath": "https://image.tmdb.org/t/p/w300/6unXI876M8kUamB3XuVM4Xid7DI.jpg",
-          "rating": 7.6,
-          "year": "2025",
-          "runtime": 107,
-          "trailerUrl": "https://www.youtube.com/watch?v=5H7L9j0dW90"
         }
       ]
     },
@@ -1304,7 +1277,6 @@
         {
           "title": "The Housemaid",
           "times": [
-            "1:00pm",
             "3:15pm",
             "6:00pm",
             "7:00pm",
@@ -1612,7 +1584,6 @@
         {
           "title": "Rental Family",
           "times": [
-            "1:00pm",
             "3:40pm",
             "6:15pm",
             "8:45pm"
@@ -1671,7 +1642,6 @@
         {
           "title": "The Housemaid",
           "times": [
-            "1:00pm",
             "2:45pm",
             "4:00pm",
             "6:00pm",
