@@ -1042,7 +1042,7 @@ async function scrapeSunTheatre(page) {
   const sessions = [];
   const url = 'https://suntheatre.com.au/now-playing/';
   
-  // Build today's date string in Sun Theatre format: "Tue 31st Dec 2025"
+  // Build today's date string in Sun Theatre format: "Wed 31st Dec 2025"
   const now = new Date();
   const melbourneTime = new Date(now.toLocaleString('en-US', { timeZone: 'Australia/Melbourne' }));
   const dayNames = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
@@ -1059,10 +1059,13 @@ async function scrapeSunTheatre(page) {
     await page.goto(url, { waitUntil: 'networkidle2', timeout: 60000 });
     await page.waitForTimeout(3000);
     
-    const films = await page.evaluate((todayStr) => {
+    const result = await page.evaluate((todayStr) => {
       const items = [];
+      const debug = { moviesFound: 0, todayMatches: 0 };
       
       document.querySelectorAll('.wpcinema_allshowing_movie').forEach(movieDiv => {
+        debug.moviesFound++;
+        
         // Get title
         const titleEl = movieDiv.querySelector('.movietitle a');
         if (!titleEl) return;
@@ -1080,9 +1083,13 @@ async function scrapeSunTheatre(page) {
         // Get movie URL
         const movieUrl = titleEl.getAttribute('href') || '';
         
-        // Find today's session wrap
-        const sessionWraps = movieDiv.querySelectorAll('.wpc-session-wrap');
+        // Find today's session wrap - must be inside .wpc-sessions
+        const sessionsContainer = movieDiv.querySelector('.wpc-sessions');
+        if (!sessionsContainer) return; // Skip items without session times (special events)
+        
+        const sessionWraps = sessionsContainer.querySelectorAll('.wpc-session-wrap');
         let todayTimes = [];
+        let foundToday = false;
         
         sessionWraps.forEach(wrap => {
           const dateLabel = wrap.querySelector('.wpc-movie-label');
@@ -1090,11 +1097,13 @@ async function scrapeSunTheatre(page) {
           
           const dateText = dateLabel.textContent?.trim() || '';
           // Check if this is today (dateText is like "Wed 31st Dec 2025:")
-          if (dateText.includes(todayStr)) {
-            // Get all times from this wrap
+          if (dateText.startsWith(todayStr)) {
+            foundToday = true;
+            debug.todayMatches++;
+            // Get all times from this wrap ONLY
             const timesDiv = wrap.querySelector('.wpc-session-times');
             if (timesDiv) {
-              timesDiv.querySelectorAll('span').forEach(span => {
+              timesDiv.querySelectorAll('span[class^="wpcinema_session"]').forEach(span => {
                 // Time is either in an <a> or directly in the span (if closed)
                 const link = span.querySelector('a');
                 let timeText = '';
@@ -1113,7 +1122,8 @@ async function scrapeSunTheatre(page) {
           }
         });
         
-        if (todayTimes.length > 0) {
+        // Only add films that have sessions today
+        if (foundToday && todayTimes.length > 0) {
           items.push({
             title,
             times: todayTimes,
@@ -1122,10 +1132,12 @@ async function scrapeSunTheatre(page) {
         }
       });
       
-      return items;
+      return { items, debug };
     }, todayStr);
     
-    for (const film of films) {
+    console.log(`  Debug: ${result.debug.moviesFound} movies found, ${result.debug.todayMatches} today matches`);
+    
+    for (const film of result.items) {
       sessions.push(film);
     }
     
