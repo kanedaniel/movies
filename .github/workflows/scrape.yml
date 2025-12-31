@@ -1,6 +1,8 @@
 name: Scrape Cinema Sessions
 
 on:
+  push:
+    branches: [main]
   schedule:
     - cron: '0 21 * * *'
   workflow_dispatch:
