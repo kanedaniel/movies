@@ -1037,6 +1037,106 @@ async function scrapePentridge(page) {
   return { cinema: 'Pentridge Cinema', url, sessions };
 }
 
+async function scrapeSunTheatre(page) {
+  console.log('Scraping Sun Theatre...');
+  const sessions = [];
+  const url = 'https://suntheatre.com.au/now-playing/';
+  
+  // Build today's date string in Sun Theatre format: "Tue 31st Dec 2025"
+  const now = new Date();
+  const melbourneTime = new Date(now.toLocaleString('en-US', { timeZone: 'Australia/Melbourne' }));
+  const dayNames = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+  const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+  const day = melbourneTime.getDate();
+  const suffix = (day === 1 || day === 21 || day === 31) ? 'st' : 
+                 (day === 2 || day === 22) ? 'nd' : 
+                 (day === 3 || day === 23) ? 'rd' : 'th';
+  const todayStr = `${dayNames[melbourneTime.getDay()]} ${day}${suffix} ${months[melbourneTime.getMonth()]} ${melbourneTime.getFullYear()}`;
+  
+  console.log(`  Looking for date: ${todayStr}`);
+  
+  try {
+    await page.goto(url, { waitUntil: 'networkidle2', timeout: 60000 });
+    await page.waitForTimeout(3000);
+    
+    const films = await page.evaluate((todayStr) => {
+      const items = [];
+      
+      document.querySelectorAll('.wpcinema_allshowing_movie').forEach(movieDiv => {
+        // Get title
+        const titleEl = movieDiv.querySelector('.movietitle a');
+        if (!titleEl) return;
+        
+        // Get text content but exclude the rating span
+        let title = '';
+        titleEl.childNodes.forEach(node => {
+          if (node.nodeType === Node.TEXT_NODE) {
+            title += node.textContent;
+          }
+        });
+        title = title.trim();
+        if (!title) return;
+        
+        // Get movie URL
+        const movieUrl = titleEl.getAttribute('href') || '';
+        
+        // Find today's session wrap
+        const sessionWraps = movieDiv.querySelectorAll('.wpc-session-wrap');
+        let todayTimes = [];
+        
+        sessionWraps.forEach(wrap => {
+          const dateLabel = wrap.querySelector('.wpc-movie-label');
+          if (!dateLabel) return;
+          
+          const dateText = dateLabel.textContent?.trim() || '';
+          // Check if this is today (dateText is like "Wed 31st Dec 2025:")
+          if (dateText.includes(todayStr)) {
+            // Get all times from this wrap
+            const timesDiv = wrap.querySelector('.wpc-session-times');
+            if (timesDiv) {
+              timesDiv.querySelectorAll('span').forEach(span => {
+                // Time is either in an <a> or directly in the span (if closed)
+                const link = span.querySelector('a');
+                let timeText = '';
+                if (link) {
+                  // Get just the time, not the category icons
+                  timeText = link.childNodes[0]?.textContent?.trim() || '';
+                } else {
+                  // Session closed - get text from span
+                  timeText = span.childNodes[0]?.textContent?.trim() || '';
+                }
+                if (timeText && /^\d{1,2}:\d{2}(am|pm)$/i.test(timeText)) {
+                  todayTimes.push(timeText);
+                }
+              });
+            }
+          }
+        });
+        
+        if (todayTimes.length > 0) {
+          items.push({
+            title,
+            times: todayTimes,
+            url: movieUrl
+          });
+        }
+      });
+      
+      return items;
+    }, todayStr);
+    
+    for (const film of films) {
+      sessions.push(film);
+    }
+    
+    console.log(`  Found ${sessions.length} films`);
+  } catch (error) {
+    console.error('  Sun Theatre scrape error:', error.message);
+  }
+  
+  return { cinema: 'Sun Theatre', url, sessions };
+}
+
 async function scrapeImax(page) {
   console.log('Scraping Imax Melbourne...');
   const sessions = [];
@@ -1199,7 +1299,8 @@ async function main() {
     scrapePalaceKino,
     scrapePalaceWestgarth,
     scrapePentridge,
-    scrapeImax
+    scrapeImax,
+    scrapeSunTheatre
   ];
   
   for (const scraper of scrapers) {
