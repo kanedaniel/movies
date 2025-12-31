@@ -127,6 +127,59 @@
       border-color: var(--gold-dim);
     }
     
+    .premium-toggle-container {
+      display: none;
+      padding: 0.75rem 1rem;
+      border-top: 1px solid var(--border);
+      margin-top: 1rem;
+    }
+    
+    .premium-toggle-container.visible {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+    }
+    
+    .premium-toggle-container label {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.8rem;
+      color: var(--text-dim);
+      cursor: pointer;
+    }
+    
+    .premium-toggle {
+      appearance: none;
+      width: 40px;
+      height: 20px;
+      background: var(--border);
+      border-radius: 10px;
+      position: relative;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    
+    .premium-toggle::before {
+      content: '';
+      position: absolute;
+      width: 16px;
+      height: 16px;
+      background: var(--text-dim);
+      border-radius: 50%;
+      top: 2px;
+      left: 2px;
+      transition: transform 0.2s, background 0.2s;
+    }
+    
+    .premium-toggle:checked {
+      background: var(--gold-dim);
+    }
+    
+    .premium-toggle:checked::before {
+      transform: translateX(20px);
+      background: var(--gold);
+    }
+    
     .cinema-toggle {
       font-family: 'JetBrains Mono', monospace;
       font-size: 0.75rem;
@@ -503,7 +556,7 @@
   </main>
   
   <footer>
-    <p>Session data updated daily at 5am AEST</p>
+    <p>Session data updated daily at 8am AEST</p>
     <p>Film information from <a href="https://www.themoviedb.org/" target="_blank" rel="noopener">TMDB</a></p>
   </footer>
 
@@ -593,6 +646,7 @@
             
             for (const session of sortedSessions) {
               const isDouble = session.isDoubleFeature || session.films;
+              const isImax = cinema.cinema === 'Imax Melbourne';
               
               let poster;
               if (isDouble && session.films && session.films.length >= 2 && session.films[0]?.posterPath && session.films[1]?.posterPath) {
@@ -618,12 +672,18 @@
               if (session.rating) meta.push(`<span class="rating">★ ${session.rating.toFixed(1)}</span>`);
               if (session.trailerUrl) meta.push(`<a href="${esc(session.trailerUrl)}" target="_blank" rel="noopener" class="trailer-link">▶ Trailer</a>`);
               
+              // For IMAX, track which times have premium
+              const premiumTimes = session.premiumTimes || [];
               const times = (session.times || ['See website']).map(t => {
                 const isGeneric = t.toLowerCase().includes('see website');
-                return `<span class="film-time ${isGeneric ? 'see-website' : ''}">${esc(t)}</span>`;
+                const hasPremium = isImax && premiumTimes.includes(t);
+                return `<span class="film-time ${isGeneric ? 'see-website' : ''}" data-premium="${hasPremium}">${esc(t)}</span>`;
               }).join('');
               
-              html += `<article class="film-card ${isDouble ? 'double-feature' : ''}" data-title="${esc(session.title.toLowerCase())}">
+              // Check if this session has any premium times (for filtering)
+              const hasPremiumSession = isImax && premiumTimes.length > 0;
+              
+              html += `<article class="film-card ${isDouble ? 'double-feature' : ''}" data-title="${esc(session.title.toLowerCase())}" data-has-premium="${hasPremiumSession}">
                 ${isDouble ? '<span class="double-feature-label">Double Feature</span>' : ''}
                 ${poster}
                 <div class="film-info">
@@ -637,6 +697,14 @@
             
             html += '</div>';
             
+            // Add premium toggle for IMAX
+            if (cinema.cinema === 'Imax Melbourne') {
+              html += `<div class="premium-toggle-container visible">
+                <input type="checkbox" id="premium-toggle" class="premium-toggle">
+                <label for="premium-toggle">Only show sessions with premium seats available</label>
+              </div>`;
+            }
+            
             if (hasMoreThanThree) {
               html += `<button class="show-more-btn" data-cinema="${cinemaId}">MORE ▼</button>`;
             }
@@ -646,6 +714,29 @@
           html += '</section>';
         }
         main.innerHTML = html;
+        
+        // Add premium toggle listener
+        const premiumToggle = document.getElementById('premium-toggle');
+        if (premiumToggle) {
+          premiumToggle.addEventListener('change', () => {
+            const imaxSection = document.getElementById('cinema-imax-melbourne');
+            if (!imaxSection) return;
+            
+            const filmCards = imaxSection.querySelectorAll('.film-card');
+            filmCards.forEach(card => {
+              if (premiumToggle.checked) {
+                // Show only films with premium times
+                if (card.dataset.hasPremium === 'true') {
+                  card.style.display = '';
+                } else {
+                  card.style.display = 'none';
+                }
+              } else {
+                card.style.display = '';
+              }
+            });
+          });
+        }
         
         // Add show more/less button listeners
         document.querySelectorAll('.show-more-btn').forEach(btn => {

@@ -1020,6 +1020,80 @@ async function scrapePentridge(page) {
   return { cinema: 'Pentridge Cinema', url, sessions };
 }
 
+async function scrapeImax(page) {
+  console.log('Scraping Imax Melbourne...');
+  const sessions = [];
+  const url = 'https://imaxmelbourne.com.au/session_times_and_tickets';
+  
+  try {
+    await page.goto(url, { waitUntil: 'networkidle2', timeout: 60000 });
+    await page.waitForTimeout(3000);
+    
+    const films = await page.evaluate(() => {
+      const items = [];
+      const filmMap = new Map();
+      
+      // Find all session list items
+      document.querySelectorAll('li').forEach(li => {
+        const timeEl = li.querySelector('span.time');
+        const movieEl = li.querySelector('a.movie');
+        
+        if (!timeEl || !movieEl) return;
+        
+        const time = timeEl.textContent?.trim();
+        let title = movieEl.textContent?.trim();
+        const movieUrl = movieEl.getAttribute('href');
+        
+        if (!time || !title) return;
+        
+        // Clean up title - remove rating brackets like [M], [PG]
+        title = title.replace(/\s*\[[^\]]*\]\s*$/, '').trim();
+        
+        // Check if premium is available (has a link, not soldout span)
+        const premiumLink = li.querySelector('a.buy-tickets span.label-time');
+        const premiumSoldout = li.querySelector('span.buy-tickets.soldout');
+        
+        let hasPremium = false;
+        if (premiumLink && premiumLink.textContent?.trim() === 'Premium') {
+          hasPremium = true;
+        }
+        // If there's a soldout span for Premium, it means premium exists but is sold out
+        const premiumExists = hasPremium || (premiumSoldout && premiumSoldout.textContent?.trim() === 'Premium');
+        
+        // Group by film title
+        if (filmMap.has(title)) {
+          const film = filmMap.get(title);
+          film.times.push(time);
+          film.premiumTimes = film.premiumTimes || [];
+          if (hasPremium) {
+            film.premiumTimes.push(time);
+          }
+        } else {
+          filmMap.set(title, {
+            title,
+            times: [time],
+            premiumTimes: hasPremium ? [time] : [],
+            url: movieUrl ? `https://imaxmelbourne.com.au${movieUrl}` : url
+          });
+        }
+      });
+      
+      filmMap.forEach(film => items.push(film));
+      return items;
+    });
+    
+    for (const film of films) {
+      sessions.push(film);
+    }
+    
+    console.log(`  Found ${sessions.length} films`);
+  } catch (error) {
+    console.error('  Imax Melbourne scrape error:', error.message);
+  }
+  
+  return { cinema: 'Imax Melbourne', url, sessions };
+}
+
 async function enrichWithTMDB(cinemaData) {
   console.log(`Enriching ${cinemaData.cinema} with TMDB data...`);
   
@@ -1107,7 +1181,8 @@ async function main() {
     scrapePalaceComo,
     scrapePalaceKino,
     scrapePalaceWestgarth,
-    scrapePentridge
+    scrapePentridge,
+    scrapeImax
   ];
   
   for (const scraper of scrapers) {
