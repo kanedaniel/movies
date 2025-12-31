@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2025-12-31T02:23:44.258Z",
+  "generatedAt": "2025-12-31T02:35:38.956Z",
   "date": "Wednesday 31 December 2025",
   "cinemas": [
     {
@@ -565,7 +565,7 @@
           "url": "https://www.cinemanova.com.au/films/if-i-had-legs-i-d-kick-you",
           "overview": "With her life crashing down around her, Linda attempts to navigate her child's mysterious illness, her absent husband, a missing person, and an increasingly hostile relationship with her therapist.",
           "posterPath": "https://image.tmdb.org/t/p/w300/gkIFK1HzqfgQg4v4ifeNKogHtPG.jpg",
-          "rating": 6.552,
+          "rating": 6.6,
           "year": "2025",
           "runtime": 113,
           "trailerUrl": "https://www.youtube.com/watch?v=-oDLBRLkflo"
@@ -1182,7 +1182,6 @@
         {
           "title": "My Brother's Band",
           "times": [
-            "1:10pm",
             "3:30pm",
             "5:45pm"
           ],
@@ -1435,7 +1434,6 @@
         {
           "title": "The Housemaid",
           "times": [
-            "1:15pm",
             "5:00pm",
             "8:30pm"
           ],
@@ -1659,7 +1657,6 @@
         {
           "title": "The SpongeBob Movie: Search for Squarepants",
           "times": [
-            "1:10pm",
             "2:10pm",
             "3:40pm",
             "4:45pm",
@@ -1691,7 +1688,6 @@
         {
           "title": "Zootopia 2",
           "times": [
-            "1:10pm",
             "4:00pm"
           ],
           "url": "https://www.palacecinemas.com.au/movies/zootopia-2",
