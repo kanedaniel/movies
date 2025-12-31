@@ -129,7 +129,7 @@
     
     .premium-toggle-container {
       display: none;
-      padding: 0.75rem 1rem;
+      padding: 1rem;
     }
     
     .premium-toggle-container.visible {
@@ -265,16 +265,20 @@
     
     .no-premium-sessions {
       display: none;
-      padding: 2rem;
-      text-align: center;
-      color: var(--text-dim);
-      font-size: 0.9rem;
-      border: 1px dashed var(--border);
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      padding: 1.25rem;
       margin-bottom: 1rem;
+      min-height: 150px;
+      align-items: center;
+      justify-content: center;
+      color: var(--text-dim);
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.85rem;
     }
     
     .no-premium-sessions.visible {
-      display: block;
+      display: flex;
     }
     
     /* Film list with expandable overflow */
@@ -656,7 +660,7 @@
                 <input type="checkbox" id="premium-toggle" class="premium-toggle">
                 <label for="premium-toggle">Only show sessions with premium seats available</label>
               </div>
-              <div class="no-premium-sessions" id="no-premium-message">No screenings available</div>`;
+              <div class="no-premium-sessions" id="no-premium-message">No screenings</div>`;
             }
             
             html += `<div class="film-list ${hasMoreThanThree ? 'collapsed' : ''}" data-cinema="${cinemaId}">`;
