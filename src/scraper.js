@@ -14,39 +14,19 @@ async function fetchTMDB(title) {
   }
 
   try {
-    // Store original for ", The" check
-    const originalTitle = title;
-    
+    // Clean up title for better matching
     let cleanTitle = title
-      // Format markers (3D, IMAX, 4K, 2D, HFR, Dolby, etc.)
-      .replace(/\b(3D|IMAX|4K|2K|2D|HFR|HDR|Dolby|Atmos)\b/gi, '')
-      // Language/subtitle markers: (Hindi), (Telugu, Eng Sub), (English Subtitles), etc.
-      .replace(/\([\w\s,'-]*(sub(titled|titles|s)?|dub(bed)?|eng|hindi|telugu|tamil|malayalam|kannada|korean|japanese|mandarin|cantonese|spanish|french|german|italian)[\w\s,'-]*\)/gi, '')
-      // Anniversary/restoration: "- 25th Anniversary", "– 50th Anniversary 4K Restoration", etc.
-      .replace(/[-–—]\s*\d+\s*(st|nd|rd|th)?\s*anniversary.*$/i, '')
-      // Restoration/remaster anywhere at end
-      .replace(/[-–—]?\s*(\d+K\s*)?(digital\s*)?(restoration|remaster(ed)?|re-?release).*$/i, '')
-      // Special screenings: "- Preview", "– Special Event", "- Encore", etc.
-      .replace(/[-–—]\s*(preview|special|encore|screening|event|limited).*$/i, '')
-      // NT Live, Met Opera, etc.
-      .replace(/\s*[-:]\s*(NT Live|Met Opera|National Theatre Live).*$/i, '')
-      // Retro/classic markers
-      .replace(/\s*[-–—]\s*(RETRO CLASSIX|CLASSIC|RETRO)$/i, '')
-      // Year in parentheses at end: (1984), (2024 film)
-      .replace(/\s*\(\d{4}(\s+film)?\)\s*$/i, '')
-      // Brackets at end: [Restored], [Special Edition], etc.
-      .replace(/\s*\[.*?\]\s*$/i, '')
-      // "Housemaid, The" -> "Housemaid" (we'll add "The" back below)
-      .replace(/,\s*The$/i, '')
-      // Clean up extra whitespace and trailing punctuation
-      .replace(/\s+/g, ' ')
-      .replace(/[-–—:]\s*$/g, '')
+      .replace(/\s*\(\d{4}\)\s*$/i, '')           // Remove (1984)
+      .replace(/\s*\(\d{4}\s+film\)\s*$/i, '')    // Remove (1984 film)
+      .replace(/\s*-\s*\d+\w*\s*anniversary\s*$/i, '') // Remove - 50th Anniversary
+      .replace(/\s*:\s*NT Live$/i, '')            // Remove : NT Live
+      .replace(/\s*-\s*RETRO CLASSIX$/i, '')      // Remove - RETRO CLASSIX
+      .replace(/\s*[–-]\s*PREVIEW$/i, '')         // Remove – PREVIEW
+      .replace(/\s*[–-]\s*ACC presents.*$/i, '')  // Remove ACC presents
+      .replace(/\s*\d+K\s*Restoration$/i, '')     // Remove 4K Restoration
+      .replace(/\s*\(Restoration\)$/i, '')        // Remove (Restoration)
+      .replace(/\s*\[.*?\]$/i, '')                // Remove [anything] at end
       .trim();
-
-    // If original title ends with ", The", move it to front
-    if (originalTitle.match(/,\s*The$/i)) {
-      cleanTitle = 'The ' + cleanTitle;
-    }
 
     console.log(`  TMDB lookup: "${title}" -> "${cleanTitle}"`);
 
@@ -55,48 +35,15 @@ async function fetchTMDB(title) {
     const data = await response.json();
 
     if (data.results && data.results.length > 0) {
-      // Prefer movies from the last 2 years, otherwise take first result
-      const currentYear = new Date().getFullYear();
-      const recentMovie = data.results.find(m => {
-        const year = m.release_date ? parseInt(m.release_date.substring(0, 4)) : 0;
-        return year >= currentYear - 1;
-      });
-      const movie = recentMovie || data.results[0];
-      
-      // Fetch movie details to get runtime and trailers
-      let runtime = null;
-      let trailerUrl = null;
-      try {
-        const detailsUrl = `${TMDB_BASE}/movie/${movie.id}?api_key=${TMDB_API_KEY}&append_to_response=videos`;
-        const detailsResponse = await fetch(detailsUrl);
-        const details = await detailsResponse.json();
-        runtime = details.runtime || null;
-        
-        // Find YouTube trailer
-        if (details.videos && details.videos.results) {
-          const trailer = details.videos.results.find(v => 
-            v.site === 'YouTube' && (v.type === 'Trailer' || v.type === 'Teaser')
-          );
-          if (trailer) {
-            trailerUrl = `https://www.youtube.com/watch?v=${trailer.key}`;
-          }
-        }
-        
-        await new Promise(r => setTimeout(r, 100)); // Small delay to avoid rate limiting
-      } catch (e) {
-        console.log(`  Could not fetch details for ${movie.title}`);
-      }
-      
+      const movie = data.results[0];
       const result = {
         overview: movie.overview || null,
         posterPath: movie.poster_path ? `https://image.tmdb.org/t/p/w300${movie.poster_path}` : null,
         rating: movie.vote_average || null,
         year: movie.release_date ? movie.release_date.substring(0, 4) : null,
-        runtime: runtime,
-        trailerUrl: trailerUrl,
         tmdbId: movie.id
       };
-      console.log(`  TMDB found: "${movie.title}" (${result.year})${runtime ? ` - ${runtime}min` : ''}${trailerUrl ? ' [trailer]' : ''}`);
+      console.log(`  TMDB found: "${movie.title}" (${result.year})`);
       tmdbCache.set(cacheKey, result);
       return result;
     } else {
@@ -106,129 +53,76 @@ async function fetchTMDB(title) {
     console.error(`  TMDB lookup failed for "${title}":`, error.message);
   }
 
-  const fallback = { overview: null, posterPath: null, rating: null, year: null, runtime: null, trailerUrl: null, tmdbId: null };
+  const fallback = { overview: null, posterPath: null, rating: null, year: null, tmdbId: null };
   tmdbCache.set(cacheKey, fallback);
   return fallback;
-}
-
-// Helper to get Melbourne date string
-function getMelbourneDateStr() {
-  const now = new Date();
-  // Convert to Melbourne time
-  const melbourneTime = new Date(now.toLocaleString('en-US', { timeZone: 'Australia/Melbourne' }));
-  return melbourneTime.toISOString().split('T')[0];
 }
 
 async function scrapeACMI(page) {
   console.log('Scraping ACMI...');
   const sessions = [];
   
-  const dateStr = getMelbourneDateStr();
-  const apiUrl = `https://admin.acmi.net.au/api/v2/calendar/by-day/?date=${dateStr}`;
-  const websiteUrl = `https://www.acmi.net.au/whats-on/?what=film&when_start=${dateStr}&when_end=${dateStr}`;
+  // Build URL with today's date
+  const today = new Date();
+  const dateStr = today.toISOString().split('T')[0]; // YYYY-MM-DD
+  const url = `https://www.acmi.net.au/whats-on/?what=film&when_start=${dateStr}&when_end=${dateStr}`;
   
-  console.log(`  API URL: ${apiUrl}`);
+  console.log(`  URL: ${url}`);
   
   try {
-    const response = await fetch(apiUrl, {
-      headers: {
-        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'
-      }
+    await page.goto(url, { waitUntil: 'networkidle2', timeout: 60000 });
+    await page.waitForTimeout(3000);
+    
+    const films = await page.evaluate(() => {
+      const items = [];
+      // Look for event cards with film info
+      document.querySelectorAll('a[href*="/whats-on/"]').forEach(el => {
+        const href = el.href;
+        // Skip if it's just the main whats-on link or contains filters
+        if (href === 'https://www.acmi.net.au/whats-on/' || href.includes('?')) return;
+        
+        const titleEl = el.querySelector('h2, h3, h4, [class*="title"]');
+        const title = titleEl?.textContent?.trim();
+        
+        // Look for time info
+        const timeEl = el.querySelector('[class*="time"], [class*="date"], time');
+        const time = timeEl?.textContent?.trim();
+        
+        if (title && title.length > 2) {
+          // Filter out non-film content
+          const skipWords = ['exhibition', 'game worlds', 'story of the moving image', 'talk', 'workshop'];
+          const titleLower = title.toLowerCase();
+          if (skipWords.some(word => titleLower.includes(word))) return;
+          
+          items.push({ 
+            title, 
+            time: time || 'See website for times', 
+            url: href 
+          });
+        }
+      });
+      return items;
     });
     
-    if (!response.ok) {
-      throw new Error(`API returned ${response.status}`);
-    }
-    
-    const json = await response.json();
-    
-    // Handle both array and object responses
-    let data = json;
-    if (!Array.isArray(json)) {
-      // Try common wrapper keys
-      data = json.occurrences || json.data || json.results || json.items || json.events || [];
-      console.log(`  Response is object, keys: ${Object.keys(json).join(', ')}`);
-    }
-    
-    if (!Array.isArray(data)) {
-      console.log(`  Could not find array in response`);
-      return { cinema: 'ACMI', url: websiteUrl, sessions };
-    }
-    
-    console.log(`  Found ${data.length} items in API response`);
-    
-    // Debug: show first item structure
-    if (data.length > 0) {
-      const first = data[0];
-      console.log(`  First item keys: ${Object.keys(first).join(', ')}`);
-    }
-    
-    // Flatten nested structure - data may be [{date, occurrences: [...]}]
-    let items = data;
-    if (data.length > 0 && data[0].occurrences && Array.isArray(data[0].occurrences)) {
-      // Only take occurrences from today's date
-      const todayData = data.find(d => d.date === dateStr);
-      items = todayData?.occurrences || [];
-      console.log(`  Found ${items.length} occurrences for ${dateStr}`);
-    }
-    
-    // Group sessions by film title
-    const filmMap = new Map();
-    
-    for (const item of items) {
-      // Check for film type in various places
-      const eventType = item.event_type?.name || item.event?.event_type?.name || item.type || '';
-      
-      // Skip non-films (but if type is unknown/empty, include it)
-      if (eventType && eventType !== 'Film') continue;
-      
-      // Double-check the date matches today
-      if (item.start_datetime) {
-        const itemDate = item.start_datetime.split('T')[0];
-        if (itemDate !== dateStr) continue;
-      }
-      
-      const title = item.event?.title || item.title;
-      if (!title) continue;
-      
-      // Extract time from start_datetime (e.g., "2025-12-30T16:00:00+11:00")
-      // Parse directly from the string to avoid timezone conversion
-      let time = 'See website';
-      if (item.start_datetime) {
-        const timeMatch = item.start_datetime.match(/T(\d{2}):(\d{2})/);
-        if (timeMatch) {
-          const hours = parseInt(timeMatch[1], 10);
-          const mins = parseInt(timeMatch[2], 10);
-          const ampm = hours >= 12 ? 'pm' : 'am';
-          const hour12 = hours % 12 || 12;
-          time = mins > 0 ? `${hour12}:${mins.toString().padStart(2, '0')}${ampm}` : `${hour12}${ampm}`;
-        }
-      }
-      
-      // Build URL
-      const filmUrl = item.event?.url 
-        ? `https://www.acmi.net.au${item.event.url}` 
-        : websiteUrl;
-      
-      if (filmMap.has(title)) {
-        filmMap.get(title).times.push(time);
-      } else {
-        filmMap.set(title, {
-          title,
-          times: [time],
-          url: filmUrl
+    // Dedupe by title
+    const seen = new Set();
+    for (const film of films) {
+      if (!seen.has(film.title)) {
+        seen.add(film.title);
+        sessions.push({
+          title: film.title,
+          times: [film.time],
+          url: film.url
         });
       }
     }
-    
-    filmMap.forEach(film => sessions.push(film));
     
     console.log(`  Found ${sessions.length} films`);
   } catch (error) {
     console.error('  ACMI scrape error:', error.message);
   }
   
-  return { cinema: 'ACMI', url: websiteUrl, sessions };
+  return { cinema: 'ACMI', url: url, sessions };
 }
 
 async function scrapeBrunswickPictureHouse(page) {
@@ -238,76 +132,74 @@ async function scrapeBrunswickPictureHouse(page) {
   
   try {
     await page.goto(url, { waitUntil: 'networkidle2', timeout: 60000 });
-    // Wait for Vue.js to render the content
-    await page.waitForTimeout(5000);
+    await page.waitForTimeout(3000);
     
-    // Wait for movie cards to appear
-    try {
-      await page.waitForSelector('.poster-title, div.poster-title', { timeout: 10000 });
-      console.log('  Movie cards found');
-    } catch (e) {
-      console.log('  Waiting for movie cards timed out, trying anyway...');
-    }
-    
+    // Get the page content and parse the showtimes section
     const films = await page.evaluate(() => {
       const items = [];
-      const seenTitles = new Set();
+      const text = document.body.innerText;
       
-      // Find the span with class "text-primary" containing "Today"
-      const todaySpan = document.querySelector('span.text-primary');
-      if (!todaySpan || !todaySpan.textContent?.toLowerCase().includes('today')) {
-        console.log('Could not find Today span');
-        return items;
-      }
+      // Look for the Showtimes section - Brunswick has a simple format:
+      // Movie Title | Time
+      const lines = text.split('\n');
+      let inShowtimes = false;
       
-      // Go up to the header div (text-h6), then get its next sibling (poster-list)
-      const headerDiv = todaySpan.closest('.text-h6, [class*="text-h6"]');
-      if (!headerDiv) {
-        console.log('Could not find header div');
-        return items;
-      }
-      
-      const todayContainer = headerDiv.nextElementSibling;
-      if (!todayContainer || !todayContainer.classList.contains('poster-list')) {
-        console.log('Could not find poster-list after header');
-        return items;
-      }
-      
-      // Now get all movie cards from just this container
-      const movieCards = todayContainer.querySelectorAll('[class*="showing-status-now-playing"]');
-      
-      movieCards.forEach(card => {
-        const titleEl = card.querySelector('.poster-title');
-        const title = titleEl?.textContent?.trim();
+      for (const line of lines) {
+        if (line.includes('Showtimes')) {
+          inShowtimes = true;
+          continue;
+        }
+        if (inShowtimes && line.includes('Marketing Signup')) {
+          break;
+        }
         
-        if (!title || seenTitles.has(title)) return;
-        
-        const times = [];
-        card.querySelectorAll('button.showing').forEach(btn => {
-          const timeEl = btn.querySelector('div.text-primary, div[style*="color: var(--q-primary)"]');
-          const time = timeEl?.textContent?.trim();
-          if (time && /^\d{1,2}:\d{2}\s*(AM|PM)$/i.test(time)) {
-            times.push(time);
+        // Match pattern: has a time like "12:20PM" or "8:35PM"
+        const timeMatch = line.match(/(\d{1,2}:\d{2}\s*[AP]M)/i);
+        if (timeMatch && inShowtimes) {
+          // The title is everything before the time indicator
+          const parts = line.split('|');
+          if (parts.length >= 1) {
+            const title = parts[0].trim();
+            const time = timeMatch[1];
+            if (title && title.length > 2 && !title.match(/^\d/)) {
+              items.push({ title, time });
+            }
           }
-        });
-        
-        if (times.length > 0) {
-          seenTitles.add(title);
-          items.push({
-            title,
-            times,
-            url: 'https://www.brunswickpicturehouse.com.au/now-showing/'
-          });
+        }
+      }
+      
+      // Also try to get URLs from links
+      const movieLinks = {};
+      document.querySelectorAll('a[href*="/movie/"]').forEach(el => {
+        const title = el.textContent?.trim();
+        const href = el.href;
+        if (title && href && !href.includes('checkout')) {
+          movieLinks[title] = href;
         }
       });
       
-      return items;
+      // Merge URLs with items
+      return items.map(item => ({
+        ...item,
+        url: movieLinks[item.title] || 'https://www.brunswickpicturehouse.com.au/now-showing/'
+      }));
     });
     
+    // Group by title and collect times
+    const filmMap = new Map();
     for (const film of films) {
-      sessions.push(film);
+      if (filmMap.has(film.title)) {
+        filmMap.get(film.title).times.push(film.time);
+      } else {
+        filmMap.set(film.title, {
+          title: film.title,
+          times: [film.time],
+          url: film.url
+        });
+      }
     }
     
+    filmMap.forEach(film => sessions.push(film));
     console.log(`  Found ${sessions.length} films`);
   } catch (error) {
     console.error('  Brunswick Picture House scrape error:', error.message);
@@ -321,74 +213,64 @@ async function scrapeEclipse(page) {
   const sessions = [];
   const url = 'https://eclipse-cinema.com.au/session-time/';
   
-  // Build today's date string in Eclipse format: "Mon-29-Dec"
-  const now = new Date();
-  const melbourneTime = new Date(now.toLocaleString('en-US', { timeZone: 'Australia/Melbourne' }));
+  const today = new Date();
   const dayNames = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
   const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
-  const todayStr = `${dayNames[melbourneTime.getDay()]}-${String(melbourneTime.getDate()).padStart(2, '0')}-${months[melbourneTime.getMonth()]}`;
+  const todayStr = `${dayNames[today.getDay()]}-${String(today.getDate()).padStart(2, '0')}-${months[today.getMonth()]}`;
   
-  console.log(`  Looking for date pattern: ${todayStr}`);
+  console.log(`  Looking for date: ${todayStr}`);
   
   try {
-    await page.goto(url, { waitUntil: 'networkidle2', timeout: 90000 });
-    await page.waitForTimeout(5000);
+    await page.goto(url, { waitUntil: 'networkidle2', timeout: 60000 });
+    await page.waitForTimeout(3000);
     
     const films = await page.evaluate((todayStr) => {
       const items = [];
       
-      // Get all film entries and check each one for today's date
-      // Can't rely on class selector due to broken HTML from apostrophes
-      const filmEntries = document.querySelectorAll('.veezi-filter-entry');
+      // Eclipse lists films with dates like "Mon-29-Dec"
+      // Find all film blocks
+      const filmBlocks = document.querySelectorAll('h2, h3');
       
-      filmEntries.forEach(entry => {
-        // Check if this entry has today's date - look in class list or dropdown
-        const classStr = entry.className || '';
-        const hasDateInClass = classStr.toLowerCase().includes(todayStr.toLowerCase());
+      filmBlocks.forEach(heading => {
+        const title = heading.textContent?.trim();
+        if (!title || title.length < 3) return;
         
-        // Also check the date dropdown for today
-        const dateSelect = entry.querySelector('select.veezi-file-date-select');
-        const hasDateInDropdown = dateSelect && 
-          Array.from(dateSelect.options).some(opt => opt.value === todayStr);
+        // Skip navigation/header items
+        const skipWords = ['by date', 'by film', 'session time', 'eclipse cinema'];
+        if (skipWords.some(w => title.toLowerCase().includes(w))) return;
         
-        if (!hasDateInClass && !hasDateInDropdown) return;
+        // Get the parent container
+        let container = heading.closest('div, article, section');
+        if (!container) container = heading.parentElement;
         
-        // Get title from the filter-film-title div
-        const titleEl = entry.querySelector('.veezi-filter-film-title');
-        const title = titleEl?.textContent?.trim();
+        // Check if today's date appears in this container
+        const containerText = container?.textContent || '';
+        if (!containerText.includes(todayStr)) return;
         
-        if (!title) return;
-        
-        // Get times for today - check the class of each time link
+        // Find time links (Veezi booking links)
         const times = [];
-        entry.querySelectorAll('a.veezi-film-purchase').forEach(link => {
-          // Check if this time is for today (has the date in its class)
-          const linkClass = link.className || '';
-          if (linkClass.includes(todayStr)) {
-            const timeEl = link.querySelector('p');
-            const time = timeEl?.textContent?.trim();
-            if (time && /^\d{1,2}:\d{2}$/.test(time)) {
-              times.push(time);
-            }
+        const timeLinks = container.querySelectorAll('a[href*="veezi"]');
+        timeLinks.forEach(link => {
+          const time = link.textContent?.trim();
+          if (time && /^\d{1,2}:\d{2}$/.test(time)) {
+            times.push(time);
           }
         });
         
         if (times.length > 0) {
-          items.push({ title, times });
+          items.push({ title, times, url: 'https://eclipse-cinema.com.au/session-time/' });
         }
       });
       
       return items;
     }, todayStr);
     
+    // Dedupe
     const seen = new Set();
     for (const film of films) {
       if (!seen.has(film.title)) {
         seen.add(film.title);
-        sessions.push({
-          ...film,
-          url
-        });
+        sessions.push(film);
       }
     }
     
@@ -409,47 +291,58 @@ async function scrapeCinemaNova(page) {
     await page.goto(url, { waitUntil: 'networkidle2', timeout: 60000 });
     await page.waitForTimeout(3000);
     
-    // Cinema Nova has a table with time | title format
     const films = await page.evaluate(() => {
       const items = [];
-      const filmMap = new Map();
       
-      // Find the session table - it has rows with time and title
-      const rows = document.querySelectorAll('tr, table tr');
-      
-      rows.forEach(row => {
-        const cells = row.querySelectorAll('td');
-        if (cells.length >= 2) {
-          // First cell is time link, second is title
-          const timeCell = cells[0];
-          const titleCell = cells[1];
-          
-          const timeLink = timeCell.querySelector('a');
-          const time = timeLink?.textContent?.trim() || timeCell.textContent?.trim();
-          const title = titleCell.textContent?.trim();
-          
-          // Validate time format
-          if (time && title && /^\d{1,2}:\d{2}$/.test(time)) {
-            if (filmMap.has(title)) {
-              filmMap.get(title).times.push(time);
-            } else {
-              filmMap.set(title, {
-                title,
-                times: [time],
-                url: `https://www.cinemanova.com.au/films/${title.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '')}`
-              });
-            }
+      // Find film entries - Nova shows films with session times
+      document.querySelectorAll('a[href*="/films/"]').forEach(el => {
+        const href = el.href;
+        if (!href || href.includes('coming-soon') || href.includes('now-showing')) return;
+        
+        // Get title from link text or image alt
+        let title = el.textContent?.trim();
+        const img = el.querySelector('img');
+        if ((!title || title.length < 2) && img) {
+          title = img.alt?.trim();
+        }
+        
+        // Extract film slug for cleaner title if needed
+        if (!title || title.length < 2) {
+          const match = href.match(/\/films\/([^\/\?]+)/);
+          if (match) {
+            title = match[1].replace(/-/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
           }
+        }
+        
+        if (title && title.length > 2) {
+          // Look for times near this element
+          const parent = el.closest('div, li, article');
+          const times = [];
+          if (parent) {
+            const timeMatches = parent.textContent?.match(/\d{1,2}:\d{2}\s*[AP]?M?/gi) || [];
+            timeMatches.forEach(t => {
+              if (!times.includes(t)) times.push(t);
+            });
+          }
+          
+          items.push({
+            title,
+            times: times.length > 0 ? times : ['See website for times'],
+            url: href
+          });
         }
       });
       
-      // Convert map to array
-      filmMap.forEach(film => items.push(film));
       return items;
     });
     
+    // Dedupe by URL (more reliable than title)
+    const seen = new Set();
     for (const film of films) {
-      sessions.push(film);
+      if (!seen.has(film.url)) {
+        seen.add(film.url);
+        sessions.push(film);
+      }
     }
     
     console.log(`  Found ${sessions.length} films`);
@@ -467,74 +360,47 @@ async function scrapeLido(page) {
   
   try {
     await page.goto(url, { waitUntil: 'networkidle2', timeout: 60000 });
-    // Wait for JavaScript to load session times
-    await page.waitForTimeout(5000);
-    
-    // Wait for the Sessions elements to appear
-    try {
-      await page.waitForSelector('.Sessions, ul.Sessions, .sessions-link', { timeout: 10000 });
-      console.log('  Session elements found');
-    } catch (e) {
-      console.log('  Waiting for sessions timed out, trying anyway...');
-    }
+    await page.waitForTimeout(3000);
     
     const films = await page.evaluate(() => {
-      const filmMap = new Map();
+      const items = [];
       
-      // Target the session links directly - they have data-name attribute with movie title
-      // Structure: a.sessions-link[data-name="Movie Title"] > span.Time
-      document.querySelectorAll('a.sessions-link, a[class*="sessions-link"]').forEach(link => {
-        const movieName = link.getAttribute('data-name');
-        const timeSpan = link.querySelector('span.Time, .Time');
-        const time = timeSpan?.textContent?.trim();
+      document.querySelectorAll('a[href*="/movies/"]').forEach(el => {
+        const href = el.href;
+        let title = el.textContent?.trim();
         
-        if (movieName && time) {
-          if (filmMap.has(movieName)) {
-            filmMap.get(movieName).times.push(time);
-          } else {
-            filmMap.set(movieName, {
-              title: movieName,
-              times: [time],
-              url: link.href || 'https://www.lidocinemas.com.au/now-showing'
+        // Also check for title in nested elements
+        if (!title || title.length < 2) {
+          const titleEl = el.querySelector('h2, h3, h4, [class*="title"]');
+          title = titleEl?.textContent?.trim();
+        }
+        
+        // Check image alt
+        if (!title || title.length < 2) {
+          const img = el.querySelector('img');
+          title = img?.alt?.trim();
+        }
+        
+        if (title && title.length > 2 && href) {
+          // Skip duplicates and non-movie links
+          if (!items.some(i => i.url === href)) {
+            items.push({
+              title,
+              url: href
             });
           }
         }
       });
       
-      // Also try getting films from the movie cards in case sessions approach fails
-      if (filmMap.size === 0) {
-        document.querySelectorAll('.Markup.Movie, div[class*="Movie"]').forEach(card => {
-          const titleEl = card.querySelector('a[href*="/movies/"]');
-          const title = titleEl?.textContent?.trim() || card.getAttribute('data-name');
-          
-          if (title) {
-            const times = [];
-            card.querySelectorAll('.Time, span[class*="Time"]').forEach(t => {
-              const time = t.textContent?.trim();
-              if (time && /\d{1,2}:\d{2}/.test(time)) {
-                times.push(time);
-              }
-            });
-            
-            if (!filmMap.has(title)) {
-              filmMap.set(title, {
-                title,
-                times: times.length > 0 ? times : ['See website'],
-                url: titleEl?.href || 'https://www.lidocinemas.com.au/now-showing'
-              });
-            }
-          }
-        });
-      }
-      
-      // Convert map to array
-      const result = [];
-      filmMap.forEach(film => result.push(film));
-      return result;
+      return items;
     });
     
     for (const film of films) {
-      sessions.push(film);
+      sessions.push({
+        title: film.title,
+        times: ['See website for times'],
+        url: film.url
+      });
     }
     
     console.log(`  Found ${sessions.length} films`);
@@ -552,50 +418,45 @@ async function scrapeHoyts(page) {
   
   try {
     await page.goto(url, { waitUntil: 'networkidle2', timeout: 60000 });
-    // Wait for JavaScript to load the movie list
-    await page.waitForTimeout(5000);
-    
-    // Wait for the movies list to appear
-    try {
-      await page.waitForSelector('.movies-list__item, li.movies-list__item', { timeout: 10000 });
-      console.log('  Movies list found');
-    } catch (e) {
-      console.log('  Waiting for movies list timed out, trying anyway...');
-    }
+    await page.waitForTimeout(3000);
     
     const films = await page.evaluate(() => {
       const items = [];
       
-      // Each movie is in li.movies-list__item
-      document.querySelectorAll('li.movies-list__item').forEach(movieItem => {
-        // Get movie title from h2.movies-list__heading > a.movies-list__link
-        const titleLink = movieItem.querySelector('h2.movies-list__heading a.movies-list__link');
-        const title = titleLink?.textContent?.trim();
-        const movieUrl = titleLink?.href;
+      // Filter words that indicate non-movie content
+      const skipWords = ['find out more', 'learn more', 'book now', 'sign up', 'join', 'menu', 'experiences', 'food', 'gift'];
+      
+      document.querySelectorAll('a[href*="/movies/"]').forEach(el => {
+        const href = el.href;
+        let title = el.textContent?.trim();
         
-        if (!title) return;
+        // Check for title in nested elements
+        if (!title || title.length < 2) {
+          const titleEl = el.querySelector('h2, h3, h4, [class*="title"]');
+          title = titleEl?.textContent?.trim();
+        }
         
-        // Get session times, but skip LUX sessions
-        const times = [];
-        movieItem.querySelectorAll('.sessions__list .sessions__item').forEach(sessionItem => {
-          // Check if this session has a LUX tag
-          const luxTag = sessionItem.querySelector('.session__tag--lux');
-          if (luxTag) return; // Skip LUX sessions
+        // Check image alt
+        if (!title || title.length < 2) {
+          const img = el.querySelector('img');
+          title = img?.alt?.trim();
+        }
+        
+        if (title && title.length > 2) {
+          const titleLower = title.toLowerCase();
           
-          const timeEl = sessionItem.querySelector('.session__time');
-          const time = timeEl?.textContent?.trim();
-          if (time) {
-            times.push(time);
+          // Skip non-movie links
+          if (skipWords.some(w => titleLower.includes(w))) return;
+          
+          // Skip if title is too short or just numbers
+          if (title.length < 3 || /^\d+$/.test(title)) return;
+          
+          if (!items.some(i => i.title === title)) {
+            items.push({
+              title,
+              url: href
+            });
           }
-        });
-        
-        // Only add if there are non-LUX sessions
-        if (times.length > 0) {
-          items.push({
-            title,
-            times,
-            url: movieUrl || 'https://www.hoyts.com.au/cinemas/melbourne-central'
-          });
         }
       });
       
@@ -603,7 +464,11 @@ async function scrapeHoyts(page) {
     });
     
     for (const film of films) {
-      sessions.push(film);
+      sessions.push({
+        title: film.title,
+        times: ['See website for times'],
+        url: film.url
+      });
     }
     
     console.log(`  Found ${sessions.length} films`);
@@ -611,7 +476,7 @@ async function scrapeHoyts(page) {
     console.error('  Hoyts scrape error:', error.message);
   }
   
-  return { cinema: 'Hoyts Melbourne Central', url, sessions, note: 'Lux sessions not listed' };
+  return { cinema: 'Hoyts Melbourne Central', url, sessions };
 }
 
 async function scrapeAstor(page) {
@@ -620,518 +485,125 @@ async function scrapeAstor(page) {
   const url = 'https://www.astortheatre.net.au/';
   
   try {
-    // Helper function with timeout
-    const fetchWithTimeout = async (fetchUrl, options = {}, timeoutMs = 30000) => {
-      const controller = new AbortController();
-      const timeout = setTimeout(() => controller.abort(), timeoutMs);
-      try {
-        const response = await fetch(fetchUrl, { ...options, signal: controller.signal });
-        return response;
-      } finally {
-        clearTimeout(timeout);
-      }
-    };
-    
-    // First, get the initial page content
-    const response = await fetchWithTimeout(url, {
-      headers: {
-        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'
-      }
-    });
-    const html = await response.text();
-    console.log(`  Homepage HTML length: ${html.length}`);
-    
-    // Also try the AJAX endpoint for more sessions
-    let ajaxHtml = '';
-    try {
-      const ajaxResponse = await fetchWithTimeout('https://www.astortheatre.net.au/wp-admin/admin-ajax.php', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/x-www-form-urlencoded',
-          'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'
-        },
-        body: 'action=get_frontpage_sessions&offset=0'
-      });
-      ajaxHtml = await ajaxResponse.text();
-      console.log(`  AJAX HTML length: ${ajaxHtml.length}`);
-    } catch (e) {
-      console.log(`  AJAX fetch failed, using homepage only: ${e.message}`);
-    }
-    
-    // Combine both HTML sources
-    const combinedHtml = html + ajaxHtml;
-    
-    // Debug: check for movie_preview
-    const previewCount = (combinedHtml.match(/movie_preview/g) || []).length;
-    const todayCount = (combinedHtml.match(/today/gi) || []).length;
-    console.log(`  Found ${previewCount} 'movie_preview' occurrences, ${todayCount} 'today' occurrences`);
-    
-    // Parse the HTML to extract sessions
-    // Split by movie_preview session divs and process each
-    const blocks = combinedHtml.split(/<div[^>]*class="[^"]*movie_preview[^"]*session/i);
-    console.log(`  Split into ${blocks.length} blocks`);
-    
-    let todayBlocks = 0;
-    let titleMatches = 0;
-    
-    // First pass: extract all today's films with their times
-    const todayFilms = [];
-    
-    for (let i = 1; i < blocks.length; i++) { // Start at 1 to skip content before first match
-      const block = blocks[i];
-      
-      // Check if it's today
-      if (!/today/i.test(block)) continue;
-      todayBlocks++;
-      
-      // Extract time: "Today at 2pm" or "Today at 6:30pm"
-      const timeMatch = block.match(/today\s+at\s+(\d{1,2}(?::\d{2})?\s*(?:am|pm))/i);
-      const time = timeMatch ? timeMatch[1].toLowerCase().trim() : 'See website';
-      
-      // Check if it's a double feature
-      const isDouble = /double\s*feature/i.test(block);
-      
-      // Extract ALL titles from h2 > a tags (there may be multiple for double features)
-      const titles = [];
-      const urls = [];
-      const titleRegex = /<a[^>]*href="([^"]*\/films\/[^"]*)"[^>]*>([^<]+)/gi;
-      let match;
-      while ((match = titleRegex.exec(block)) !== null) {
-        let title = match[2].trim();
-        // Remove rating brackets like [PG], [M]
-        title = title.replace(/\s*\[.*?\]\s*$/, '').trim();
-        if (title && !titles.includes(title)) {
-          titles.push(title);
-          urls.push(match[1]);
-        }
-      }
-      
-      if (titles.length === 0) continue;
-      
-      if (isDouble && titles.length >= 2) {
-        // Double feature - add as combined entry
-        todayFilms.push({ 
-          title: titles.join(' + '), 
-          time, 
-          url: urls[0],
-          isDouble: true,
-          film1: titles[0],
-          film2: titles[1]
-        });
-      } else {
-        // Single film
-        todayFilms.push({ title: titles[0], time, url: urls[0], isDouble: false });
-      }
-    }
-    
-    console.log(`  Today films: ${todayFilms.map(f => f.title + ' @ ' + f.time).join(', ')}`);
-    console.log(`  Found ${todayFilms.length} today films before dedup`);
-    
-    // Dedupe by title (same film might appear in multiple blocks)
-    const seenTitles = new Set();
-    for (const film of todayFilms) {
-      if (seenTitles.has(film.title)) continue;
-      seenTitles.add(film.title);
-      
-      if (film.isDouble) {
-        sessions.push({
-          title: film.title,
-          times: [film.time],
-          url: film.url,
-          isDoubleFeature: true,
-          film1: film.film1,
-          film2: film.film2
-        });
-      } else {
-        sessions.push({
-          title: film.title,
-          times: [film.time],
-          url: film.url,
-          isDoubleFeature: false
-        });
-      }
-    }
-    
-    console.log(`  Found ${sessions.length} films`);
-  } catch (error) {
-    console.error('  Astor Theatre scrape error:', error.message);
-  }
-  
-  return { 
-    cinema: 'The Astor Theatre', 
-    url, 
-    sessions
-  };
-}
-
-// Helper function to extract Palace cinema data from __NEXT_DATA__
-async function scrapePalaceFromNextData(page, cinemaName, url, cinemaId) {
-  console.log(`Scraping ${cinemaName}...`);
-  const sessions = [];
-  
-  try {
     await page.goto(url, { waitUntil: 'networkidle2', timeout: 60000 });
-    await page.waitForTimeout(3000);
-    
-    // Get today's date in Melbourne timezone (YYYY-MM-DD format)
-    const now = new Date();
-    const melbourneDate = new Date(now.toLocaleString('en-US', { timeZone: 'Australia/Melbourne' }));
-    const year = melbourneDate.getFullYear();
-    const month = String(melbourneDate.getMonth() + 1).padStart(2, '0');
-    const day = String(melbourneDate.getDate()).padStart(2, '0');
-    const todayStr = `${year}-${month}-${day}`;
-    
-    console.log(`  Looking for date: ${todayStr}`);
-    
-    const result = await page.evaluate((todayStr, cinemaIdParam) => {
-      const items = [];
-      const debug = { found: false, movieCount: 0, todaySessionCount: 0, cinemaId: null };
-      
-      // Find __NEXT_DATA__ script tag
-      const nextDataScript = document.getElementById('__NEXT_DATA__');
-      if (!nextDataScript) {
-        return { items, debug, error: 'No __NEXT_DATA__ found' };
-      }
-      
-      try {
-        const data = JSON.parse(nextDataScript.textContent);
-        
-        // Auto-detect cinema ID from the page data if not provided
-        const cinemaId = cinemaIdParam || data?.props?.pageProps?.cinema?.cinemaId;
-        debug.cinemaId = cinemaId;
-        
-        if (!cinemaId) {
-          return { items, debug, error: 'Could not determine cinema ID' };
-        }
-        
-        const movies = data?.props?.pageProps?.sessions || [];
-        debug.found = true;
-        debug.movieCount = movies.length;
-        
-        movies.forEach(movie => {
-          const title = movie.title;
-          const slug = movie.slug;
-          if (!title) return;
-          
-          // Filter sessions for today and this cinema
-          const todaySessions = (movie.sessions || []).filter(session => {
-            // Date is stored as UTC but represents local time
-            // e.g., "2026-01-01T10:00:00.000Z" means 10:00am Melbourne time
-            const sessionDate = session.date?.substring(0, 10); // Get YYYY-MM-DD
-            const matchesCinema = session.cinemaId === cinemaId;
-            return sessionDate === todayStr && matchesCinema;
-          });
-          
-          if (todaySessions.length > 0) {
-            debug.todaySessionCount += todaySessions.length;
-            
-            // Extract times (the hour:minute from the ISO string)
-            const times = todaySessions.map(session => {
-              // "2026-01-01T10:00:00.000Z" -> "10:00"
-              const timeStr = session.date?.substring(11, 16); // "HH:MM"
-              const [hours, minutes] = timeStr.split(':');
-              const hour = parseInt(hours, 10);
-              const ampm = hour >= 12 ? 'pm' : 'am';
-              const hour12 = hour === 0 ? 12 : hour > 12 ? hour - 12 : hour;
-              return `${hour12}:${minutes}${ampm}`;
-            });
-            
-            items.push({
-              title,
-              times,
-              url: `https://www.palacecinemas.com.au/movies/${slug}`
-            });
-          }
-        });
-      } catch (e) {
-        return { items, debug, error: e.message };
-      }
-      
-      return { items, debug };
-    }, todayStr, cinemaId);
-    
-    if (result.error) {
-      console.log(`  Error: ${result.error}`);
-    } else {
-      console.log(`  Debug - cinemaId: ${result.debug.cinemaId}, movies: ${result.debug.movieCount}, today sessions: ${result.debug.todaySessionCount}`);
-    }
-    
-    for (const film of result.items) {
-      sessions.push(film);
-    }
-    
-    console.log(`  Found ${sessions.length} films`);
-  } catch (error) {
-    console.error(`  ${cinemaName} scrape error:`, error.message);
-  }
-  
-  return { cinema: cinemaName, url, sessions };
-}
-
-async function scrapePalaceComo(page) {
-  return scrapePalaceFromNextData(
-    page,
-    'Palace Como',
-    'https://www.palacecinemas.com.au/cinemas/palace-cinema-como',
-    '155'
-  );
-}
-
-async function scrapePalaceKino(page) {
-  return scrapePalaceFromNextData(
-    page,
-    'Palace Kino',
-    'https://www.palacecinemas.com.au/cinemas/the-kino-melbourne',
-    null  // Will auto-detect from page data
-  );
-}
-
-async function scrapePalaceWestgarth(page) {
-  return scrapePalaceFromNextData(
-    page,
-    'Palace Westgarth',
-    'https://www.palacecinemas.com.au/cinemas/palace-westgarth',
-    null  // Will auto-detect from page data
-  );
-}
-
-async function scrapePentridge(page) {
-  return scrapePalaceFromNextData(
-    page,
-    'Pentridge Cinema',
-    'https://www.palacecinemas.com.au/cinemas/pentridge-cinema',
-    null  // Will auto-detect from page data
-  );
-}
-
-async function scrapeSunTheatre(page) {
-  console.log('Scraping Sun Theatre...');
-  const sessions = [];
-  const url = 'https://suntheatre.com.au/now-playing/';
-  
-  // Build today's date string in Sun Theatre format: "Thu 1st Jan:" (no year, with colon)
-  const now = new Date();
-  const melbourneTime = new Date(now.toLocaleString('en-US', { timeZone: 'Australia/Melbourne' }));
-  const dayNames = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
-  const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
-  const day = melbourneTime.getDate();
-  const suffix = (day === 1 || day === 21 || day === 31) ? 'st' : 
-                 (day === 2 || day === 22) ? 'nd' : 
-                 (day === 3 || day === 23) ? 'rd' : 'th';
-  const todayStr = `${dayNames[melbourneTime.getDay()]} ${day}${suffix} ${months[melbourneTime.getMonth()]}:`;
-  
-  console.log(`  Looking for date: ${todayStr}`);
-  
-  try {
-    await page.goto(url, { waitUntil: 'networkidle2', timeout: 60000 });
-    await page.waitForTimeout(3000);
-    
-    const result = await page.evaluate((todayStr) => {
-      const items = [];
-      const debug = { moviesFound: 0, todayMatches: 0 };
-      
-      document.querySelectorAll('.wpcinema_allshowing_movie').forEach(movieDiv => {
-        debug.moviesFound++;
-        
-        // Get title
-        const titleEl = movieDiv.querySelector('.movietitle a');
-        if (!titleEl) return;
-        
-        // Get text content but exclude the rating span
-        let title = '';
-        titleEl.childNodes.forEach(node => {
-          if (node.nodeType === Node.TEXT_NODE) {
-            title += node.textContent;
-          }
-        });
-        title = title.trim();
-        if (!title) return;
-        
-        // Get movie URL
-        const movieUrl = titleEl.getAttribute('href') || '';
-        
-        // Find today's session wrap - must be inside .wpc-sessions
-        const sessionsContainer = movieDiv.querySelector('.wpc-sessions');
-        if (!sessionsContainer) return; // Skip items without session times (special events)
-        
-        const sessionWraps = sessionsContainer.querySelectorAll('.wpc-session-wrap');
-        let todayTimes = [];
-        let foundToday = false;
-        
-        sessionWraps.forEach(wrap => {
-          const dateLabel = wrap.querySelector('.wpc-movie-label');
-          if (!dateLabel) return;
-          
-          const dateText = dateLabel.textContent?.trim() || '';
-          // Check if this is today (dateText is like "Wed 31st Dec 2025:")
-          if (dateText.startsWith(todayStr)) {
-            foundToday = true;
-            debug.todayMatches++;
-            // Get all times from this wrap ONLY
-            const timesDiv = wrap.querySelector('.wpc-session-times');
-            if (timesDiv) {
-              timesDiv.querySelectorAll('span[class^="wpcinema_session"]').forEach(span => {
-                // Time is either in an <a> or directly in the span (if closed)
-                const link = span.querySelector('a');
-                let timeText = '';
-                if (link) {
-                  // Get just the time, not the category icons
-                  timeText = link.childNodes[0]?.textContent?.trim() || '';
-                } else {
-                  // Session closed - get text from span
-                  timeText = span.childNodes[0]?.textContent?.trim() || '';
-                }
-                if (timeText && /^\d{1,2}:\d{2}(am|pm)$/i.test(timeText)) {
-                  todayTimes.push(timeText);
-                }
-              });
-            }
-          }
-        });
-        
-        // Only add films that have sessions today
-        if (foundToday && todayTimes.length > 0) {
-          items.push({
-            title,
-            times: todayTimes,
-            url: movieUrl
-          });
-        }
-      });
-      
-      return { items, debug };
-    }, todayStr);
-    
-    console.log(`  Debug: ${result.debug.moviesFound} movies found, ${result.debug.todayMatches} today matches`);
-    
-    for (const film of result.items) {
-      sessions.push(film);
-    }
-    
-    console.log(`  Found ${sessions.length} films`);
-  } catch (error) {
-    console.error('  Sun Theatre scrape error:', error.message);
-  }
-  
-  return { cinema: 'Sun Theatre', url, sessions };
-}
-
-async function scrapeImax(page) {
-  console.log('Scraping Imax Melbourne...');
-  const sessions = [];
-  const url = 'https://imaxmelbourne.com.au/session_times_and_tickets';
-  
-  try {
-    await page.goto(url, { waitUntil: 'networkidle2', timeout: 60000 });
-    await page.waitForTimeout(3000);
+    await page.waitForTimeout(5000); // Astor site can be slow
     
     const films = await page.evaluate(() => {
       const items = [];
-      const filmMap = new Map();
       
-      // Find all session list items
-      document.querySelectorAll('li').forEach(li => {
-        const timeEl = li.querySelector('span.time');
-        const movieEl = li.querySelector('a.movie');
+      // Skip words - navigation, social, etc.
+      const skipWords = [
+        'now showing', 'calendar', 'session times', 'prices', 'about', 
+        'private hire', 'friends', 'blog', 'contact', 'map', 'parking',
+        'twitter', 'facebook', 'instagram', 'the astor theatre',
+        'phone', 'email', 'menu', 'home', 'search', 'ical', 'subscribe'
+      ];
+      
+      // Look for session/film information
+      // Astor typically shows double features with format "Film 1 + Film 2" or lists them
+      const allText = document.body.innerText;
+      const lines = allText.split('\n');
+      
+      for (const line of lines) {
+        const trimmed = line.trim();
+        if (!trimmed || trimmed.length < 3 || trimmed.length > 150) continue;
         
-        if (!timeEl || !movieEl) return;
+        const lineLower = trimmed.toLowerCase();
         
-        const time = timeEl.textContent?.trim();
-        let title = movieEl.textContent?.trim();
-        const movieUrl = movieEl.getAttribute('href');
+        // Skip navigation/footer items
+        if (skipWords.some(w => lineLower === w || lineLower.startsWith(w + ' ') || lineLower.includes(w))) continue;
         
-        if (!time || !title) return;
+        // Skip lines that are clearly not film titles
+        if (lineLower.includes('@') || lineLower.includes('http') || lineLower.includes('.com') || lineLower.includes('.au')) continue;
+        if (/^\d+$/.test(trimmed)) continue; // Just numbers
+        if (trimmed.startsWith('(') && trimmed.endsWith(')')) continue;
         
-        // Clean up title - remove rating brackets like [M], [PG]
-        title = title.replace(/\s*\[[^\]]*\]\s*$/, '').trim();
+        // Look for film-like patterns:
+        // - Contains a year in parentheses like (1954)
+        // - Contains "+" indicating double feature
+        const hasYear = /\(\d{4}\)/.test(trimmed);
+        const isDoubleFeature = trimmed.includes(' + ') || (trimmed.includes(' & ') && trimmed.length > 10);
         
-        // Check if premium is available (has a link, not soldout span)
-        const premiumLink = li.querySelector('a.buy-tickets span.label-time');
-        const premiumSoldout = li.querySelector('span.buy-tickets.soldout');
-        
-        let hasPremium = false;
-        if (premiumLink && premiumLink.textContent?.trim() === 'Premium') {
-          hasPremium = true;
-        }
-        // If there's a soldout span for Premium, it means premium exists but is sold out
-        const premiumExists = hasPremium || (premiumSoldout && premiumSoldout.textContent?.trim() === 'Premium');
-        
-        // Group by film title
-        if (filmMap.has(title)) {
-          const film = filmMap.get(title);
-          film.times.push(time);
-          film.premiumTimes = film.premiumTimes || [];
-          if (hasPremium) {
-            film.premiumTimes.push(time);
-          }
-        } else {
-          filmMap.set(title, {
-            title,
-            times: [time],
-            premiumTimes: hasPremium ? [time] : [],
-            url: movieUrl ? `https://imaxmelbourne.com.au${movieUrl}` : url
+        if (hasYear || isDoubleFeature) {
+          items.push({
+            title: trimmed,
+            isDoubleFeature
           });
         }
-      });
+      }
       
-      filmMap.forEach(film => items.push(film));
       return items;
     });
     
+    // Dedupe and clean up
+    const seen = new Set();
     for (const film of films) {
-      sessions.push(film);
+      // Clean up title
+      let title = film.title.replace(/\s+/g, ' ').trim();
+      
+      if (!seen.has(title) && title.length > 3) {
+        seen.add(title);
+        sessions.push({
+          title,
+          times: ['See website for times'],
+          url,
+          isDoubleFeature: film.isDoubleFeature
+        });
+      }
     }
     
     console.log(`  Found ${sessions.length} films`);
+    return { 
+      cinema: 'The Astor Theatre', 
+      url, 
+      sessions,
+      note: 'Famous for double features - check website for full program'
+    };
   } catch (error) {
-    console.error('  Imax Melbourne scrape error:', error.message);
+    console.error('  Astor Theatre scrape error:', error.message);
+    return { 
+      cinema: 'The Astor Theatre', 
+      url, 
+      sessions: [],
+      note: 'Famous for double features - check website for full program'
+    };
   }
-  
-  return { cinema: 'Imax Melbourne', url, sessions };
 }
 
 async function enrichWithTMDB(cinemaData) {
   console.log(`Enriching ${cinemaData.cinema} with TMDB data...`);
   
   for (const session of cinemaData.sessions) {
+    // Handle double features
     if (session.isDoubleFeature && (session.title.includes(' + ') || session.title.includes(' & '))) {
       const separator = session.title.includes(' + ') ? ' + ' : ' & ';
       const titles = session.title.split(separator);
       session.films = [];
       
-      let totalRuntime = 0;
       for (const title of titles) {
         const tmdb = await fetchTMDB(title.trim());
-        session.films.push({ title: title.trim(), ...tmdb });
-        if (tmdb.runtime) totalRuntime += tmdb.runtime;
+        session.films.push({
+          title: title.trim(),
+          ...tmdb
+        });
         await new Promise(r => setTimeout(r, 250));
       }
       
+      // Use first film's poster for the card
       if (session.films[0]?.posterPath) {
         session.posterPath = session.films[0].posterPath;
       }
-      if (session.films[0]?.overview) {
-        session.overview = session.films[0].overview;
+      // Combine overviews
+      const overviews = session.films.map(f => f.overview).filter(Boolean);
+      if (overviews.length > 0) {
+        session.overview = overviews[0]; // Just use first film's overview
       }
-      // Sum runtime for double features
-      session.runtime = totalRuntime > 0 ? totalRuntime : null;
-      // Use first film's year and average rating
-      session.year = session.films[0]?.year || null;
-      if (session.films[0]?.rating && session.films[1]?.rating) {
-        session.rating = (session.films[0].rating + session.films[1].rating) / 2;
-      } else {
-        session.rating = session.films[0]?.rating || session.films[1]?.rating || null;
-      }
-      // Use first film's trailer
-      session.trailerUrl = session.films[0]?.trailerUrl || session.films[1]?.trailerUrl || null;
     } else {
       const tmdb = await fetchTMDB(session.title);
       session.overview = tmdb.overview;
       session.posterPath = tmdb.posterPath;
       session.rating = tmdb.rating;
       session.year = tmdb.year;
-      session.runtime = tmdb.runtime;
-      session.trailerUrl = tmdb.trailerUrl;
       await new Promise(r => setTimeout(r, 250));
     }
   }
@@ -1147,13 +619,15 @@ async function main() {
     weekday: 'long', year: 'numeric', month: 'long', day: 'numeric',
     timeZone: 'Australia/Melbourne'
   }));
+  console.log('Time:', new Date().toLocaleTimeString('en-AU', { timeZone: 'Australia/Melbourne' }));
   console.log('='.repeat(60));
   
   if (!TMDB_API_KEY) {
     console.error('ERROR: TMDB_API_KEY environment variable not set!');
     process.exit(1);
   }
-  console.log('TMDB API Key: Set ✓\n');
+  console.log('TMDB API Key: Set ✓');
+  console.log('');
   
   const browser = await puppeteer.launch({
     headless: 'new',
@@ -1173,13 +647,7 @@ async function main() {
     scrapeCinemaNova,
     scrapeLido,
     scrapeHoyts,
-    scrapeAstor,
-    scrapePalaceComo,
-    scrapePalaceKino,
-    scrapePalaceWestgarth,
-    scrapePentridge,
-    scrapeImax,
-    scrapeSunTheatre
+    scrapeAstor
   ];
   
   for (const scraper of scrapers) {
@@ -1214,12 +682,17 @@ async function main() {
     JSON.stringify(output, null, 2)
   );
   
-  console.log('\n' + '='.repeat(60));
+  console.log('');
+  console.log('='.repeat(60));
   console.log('COMPLETE');
   console.log('='.repeat(60));
   console.log(`Total cinemas: ${results.length}`);
-  console.log(`Total films: ${results.reduce((sum, c) => sum + c.sessions.length, 0)}`);
-  results.forEach(c => console.log(`  ${c.cinema}: ${c.sessions.length} films`));
+  console.log(`Total sessions: ${results.reduce((sum, c) => sum + c.sessions.length, 0)}`);
+  
+  // Summary
+  for (const cinema of results) {
+    console.log(`  ${cinema.cinema}: ${cinema.sessions.length} films`);
+  }
 }
 
 main().catch(error => {
