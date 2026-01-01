@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-01-01T04:34:33.498Z",
+  "generatedAt": "2026-01-01T04:59:35.778Z",
   "date": "Thursday 1 January 2026",
   "cinemas": [
     {
@@ -29,7 +29,48 @@
     {
       "cinema": "Eclipse Cinema",
       "url": "https://eclipse-cinema.com.au/session-time/",
-      "sessions": []
+      "sessions": [
+        {
+          "title": "History of Sound",
+          "times": [
+            "18:30"
+          ],
+          "url": "https://eclipse-cinema.com.au/session-time/",
+          "overview": "In 1917, two young music students attending the Boston Conservatory bond over their mutual love of folk music. They reconnect a few years later, embarking on a song collecting trip in the backwaters of Maine.",
+          "posterPath": "https://image.tmdb.org/t/p/w300/5tNr1CySiYQICRsQbWWSSsDiKjn.jpg",
+          "rating": 6.1,
+          "year": "2025",
+          "runtime": 127,
+          "trailerUrl": "https://www.youtube.com/watch?v=E2PSkw8BI7k"
+        },
+        {
+          "title": "Peak Everything",
+          "times": [
+            "16:30"
+          ],
+          "url": "https://eclipse-cinema.com.au/session-time/",
+          "overview": "Adam is a kind-hearted kennel-owner. Hypersensitive and borderline depressed, Adam orders a therapeutic solar lamp. Through the lamp’s supplier's technical support line, he meets Tina, a radiant woman with a voice that soothes all of his worries. This unexpected encounter changes everything: Earth trembles, and hearts explode… It's love!",
+          "posterPath": "https://image.tmdb.org/t/p/w300/6aq7flJkxR8HStDrSc95lcDe84Q.jpg",
+          "rating": 6.5,
+          "year": "2025",
+          "runtime": 100,
+          "trailerUrl": "https://www.youtube.com/watch?v=XoV5F_BpRFo"
+        },
+        {
+          "title": "Sentimental Value",
+          "times": [
+            "14:00",
+            "21:00"
+          ],
+          "url": "https://eclipse-cinema.com.au/session-time/",
+          "overview": "Sisters Nora and Agnes reunite with their estranged father, the charismatic Gustav, a once-renowned director who offers stage actress Nora a role in what he hopes will be his comeback film. When Nora turns it down, she soon discovers he has given her part to an eager young Hollywood star.",
+          "posterPath": "https://image.tmdb.org/t/p/w300/dNy7iCibnVTJuvosArcDEdbruBT.jpg",
+          "rating": 7.583,
+          "year": "2025",
+          "runtime": 133,
+          "trailerUrl": "https://www.youtube.com/watch?v=zBFstFXdk90"
+        }
+      ]
     },
     {
       "cinema": "Cinema Nova",
@@ -487,11 +528,10 @@
         {
           "title": "Rental Family",
           "times": [
-            "3:30 pm",
             "6:00 pm",
             "8:30 pm"
           ],
-          "url": "https://www.lidocinemas.com.au/tickets?c=0000000003&s=99470",
+          "url": "https://www.lidocinemas.com.au/tickets?c=0000000003&s=99472",
           "overview": "An American actor in Tokyo struggles to find purpose until he lands an unusual gig: working for a Japanese 'rental family' agency, playing stand-in roles for strangers. As he immerses himself in his clients' worlds, he begins to form genuine bonds that blur the lines between performance and reality.",
           "posterPath": "https://image.tmdb.org/t/p/w300/dGRZ55srJoK6TcjPTfHe701UWq0.jpg",
           "rating": 7.5,
@@ -543,10 +583,9 @@
         {
           "title": "The Choral",
           "times": [
-            "3:20 pm",
             "6:00 pm"
           ],
-          "url": "https://www.lidocinemas.com.au/tickets?c=0000000003&s=99464",
+          "url": "https://www.lidocinemas.com.au/tickets?c=0000000003&s=99465",
           "overview": "As World War I rages on, Dr. Henry Guthrie takes over a British choral society that's lost most of its men to the army. The community soon discovers that the best response to the chaos of war is to make beautiful music together.",
           "posterPath": "https://image.tmdb.org/t/p/w300/yQtms7CSM0CE0W6dYbLLAATb5rL.jpg",
           "rating": 7,
@@ -676,7 +715,6 @@
         {
           "title": "The Housemaid",
           "times": [
-            "3:15 pm",
             "7:00 pm",
             "8:45 pm"
           ],
@@ -750,7 +788,22 @@
     {
       "cinema": "The Astor Theatre",
       "url": "https://www.astortheatre.net.au/",
-      "sessions": []
+      "sessions": [
+        {
+          "title": "Heat - 4K",
+          "times": [
+            "7pm"
+          ],
+          "url": "https://www.astortheatre.net.au/films/heat-4k",
+          "isDoubleFeature": false,
+          "overview": "When Abigail is threatened with eviction she steals money from her workplace, when her manager finds out she has no choice but to face the consequences for her actions.",
+          "posterPath": "https://image.tmdb.org/t/p/w300/p4D9aBB2nrqIXDRNlbC41WSGP5J.jpg",
+          "rating": null,
+          "year": "2025",
+          "runtime": 11,
+          "trailerUrl": null
+        }
+      ]
     },
     {
       "cinema": "Palace Como",
@@ -789,7 +842,6 @@
         {
           "title": "The Housemaid",
           "times": [
-            "3:20pm",
             "6:10pm",
             "8:45pm"
           ],
@@ -919,7 +971,6 @@
         {
           "title": "The Choral",
           "times": [
-            "3:40pm",
             "6:10pm",
             "8:30pm"
           ],
@@ -961,7 +1012,6 @@
         {
           "title": "Rental Family",
           "times": [
-            "3:30pm",
             "6:00pm"
           ],
           "url": "https://www.palacecinemas.com.au/movies/rental-family",
@@ -1061,7 +1111,6 @@
         {
           "title": "The Choral",
           "times": [
-            "3:30pm",
             "6:10pm",
             "8:30pm",
             "8:45pm"
@@ -1116,7 +1165,6 @@
         {
           "title": "Sentimental Value",
           "times": [
-            "3:20pm",
             "6:00pm"
           ],
           "url": "https://www.palacecinemas.com.au/movies/sentimental-value",
@@ -1321,7 +1369,6 @@
         {
           "title": "The SpongeBob Movie: Search for Squarepants",
           "times": [
-            "3:40pm",
             "6:20pm"
           ],
           "url": "https://www.palacecinemas.com.au/movies/the-spongebob-movie-search-for-squarepants",
@@ -1331,19 +1378,6 @@
           "year": "2025",
           "runtime": 88,
           "trailerUrl": "https://www.youtube.com/watch?v=oHcAPqAVrrU"
-        },
-        {
-          "title": "Zootopia 2",
-          "times": [
-            "3:20pm"
-          ],
-          "url": "https://www.palacecinemas.com.au/movies/zootopia-2",
-          "overview": "After cracking the biggest case in Zootopia's history, rookie cops Judy Hopps and Nick Wilde find themselves on the twisting trail of a great mystery when Gary De'Snake arrives and turns the animal metropolis upside down. To crack the case, Judy and Nick must go undercover to unexpected new parts of town, where their growing partnership is tested like never before.",
-          "posterPath": "https://image.tmdb.org/t/p/w300/bjUWGw0Ao0qVWxagN3VCwBJHVo6.jpg",
-          "rating": 7.645,
-          "year": "2025",
-          "runtime": 107,
-          "trailerUrl": "https://www.youtube.com/watch?v=5H7L9j0dW90"
         },
         {
           "title": "Wicked: For Good",
