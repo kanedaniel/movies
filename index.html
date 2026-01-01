@@ -132,6 +132,60 @@
       border-color: var(--gold-dim);
     }
     
+    .repertory-toggle-container {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 1rem;
+      background: var(--bg-card);
+      border-bottom: 1px solid var(--border);
+      gap: 0.5rem;
+    }
+    
+    .repertory-toggle-row {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+    
+    .repertory-label {
+      font-family: 'Inter', sans-serif;
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--cream);
+    }
+    
+    .repertory-toggle-switch {
+      display: flex;
+      background: var(--border);
+      border-radius: 4px;
+      overflow: hidden;
+    }
+    
+    .repertory-toggle-switch button {
+      padding: 0.4rem 0.75rem;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.85rem;
+      font-weight: 600;
+      border: none;
+      background: transparent;
+      color: var(--text-dim);
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    
+    .repertory-toggle-switch button.active {
+      background: var(--cream);
+      color: var(--bg-dark);
+    }
+    
+    .repertory-description {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.8rem;
+      color: var(--text-dim);
+    }
+    
     .premium-toggle-container {
       display: none;
       margin-top: -0.5rem;
@@ -341,6 +395,10 @@
     .film-card:hover {
       background: var(--bg-card-hover);
       border-color: var(--gold-dim);
+    }
+    
+    .film-card.repertory-hidden {
+      display: none !important;
     }
     
     .film-poster {
@@ -571,6 +629,17 @@
     <input type="text" class="search-input" id="film-search" placeholder="Search films...">
   </div>
   
+  <div class="repertory-toggle-container">
+    <div class="repertory-toggle-row">
+      <span class="repertory-label">Repertory mode</span>
+      <div class="repertory-toggle-switch">
+        <button id="repertory-off" class="active">OFF</button>
+        <button id="repertory-on">ON</button>
+      </div>
+    </div>
+    <span class="repertory-description" id="repertory-description">Only show movies released before <span id="repertory-year"></span></span>
+  </div>
+  
   <main id="main">
     <div class="loading">Loading session times</div>
   </main>
@@ -712,7 +781,10 @@
               // Check if this session has any premium times (for filtering)
               const hasPremiumSession = isImax && premiumTimes.length > 0;
               
-              html += `<article class="film-card ${isDouble ? 'double-feature' : ''}" data-title="${esc(session.title.toLowerCase())}" data-has-premium="${hasPremiumSession}">
+              // Get year for repertory filtering
+              const filmYear = session.year ? parseInt(session.year) : null;
+              
+              html += `<article class="film-card ${isDouble ? 'double-feature' : ''}" data-title="${esc(session.title.toLowerCase())}" data-has-premium="${hasPremiumSession}" data-year="${filmYear || ''}">
                 ${isDouble ? '<span class="double-feature-label">Double Feature</span>' : ''}
                 ${poster}
                 <div class="film-info">
@@ -860,6 +932,64 @@
           }
         }
       });
+    });
+    
+    // Repertory mode functionality
+    const repertoryOnBtn = document.getElementById('repertory-on');
+    const repertoryOffBtn = document.getElementById('repertory-off');
+    const repertoryYearSpan = document.getElementById('repertory-year');
+    const repertoryDescription = document.getElementById('repertory-description');
+    
+    // Calculate cutoff year (2 years before current year)
+    const currentYear = new Date().getFullYear();
+    const repertoryCutoff = currentYear - 2;
+    repertoryYearSpan.textContent = repertoryCutoff + 1;
+    
+    let repertoryMode = false;
+    
+    function applyRepertoryFilter() {
+      const filmCards = document.querySelectorAll('.film-card');
+      const cinemaSections = document.querySelectorAll('.cinema-section');
+      
+      filmCards.forEach(card => {
+        const year = parseInt(card.dataset.year);
+        if (repertoryMode) {
+          // Show only films from cutoff year or earlier
+          if (year && year <= repertoryCutoff) {
+            card.classList.remove('repertory-hidden');
+          } else {
+            card.classList.add('repertory-hidden');
+          }
+        } else {
+          card.classList.remove('repertory-hidden');
+        }
+      });
+      
+      // Hide cinema sections with no visible films
+      cinemaSections.forEach(section => {
+        const visibleFilms = section.querySelectorAll('.film-card:not(.repertory-hidden):not([style*="display: none"])');
+        if (!section.classList.contains('hidden')) {
+          if (visibleFilms.length === 0 && repertoryMode) {
+            section.style.display = 'none';
+          } else {
+            section.style.display = '';
+          }
+        }
+      });
+    }
+    
+    repertoryOnBtn.addEventListener('click', () => {
+      repertoryMode = true;
+      repertoryOnBtn.classList.add('active');
+      repertoryOffBtn.classList.remove('active');
+      applyRepertoryFilter();
+    });
+    
+    repertoryOffBtn.addEventListener('click', () => {
+      repertoryMode = false;
+      repertoryOffBtn.classList.add('active');
+      repertoryOnBtn.classList.remove('active');
+      applyRepertoryFilter();
     });
     
     loadSessions();

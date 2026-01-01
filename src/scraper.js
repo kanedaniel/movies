@@ -55,7 +55,13 @@ async function fetchTMDB(title) {
     const data = await response.json();
 
     if (data.results && data.results.length > 0) {
-      const movie = data.results[0];
+      // Prefer movies from the last 2 years, otherwise take first result
+      const currentYear = new Date().getFullYear();
+      const recentMovie = data.results.find(m => {
+        const year = m.release_date ? parseInt(m.release_date.substring(0, 4)) : 0;
+        return year >= currentYear - 1;
+      });
+      const movie = recentMovie || data.results[0];
       
       // Fetch movie details to get runtime and trailers
       let runtime = null;
@@ -903,7 +909,7 @@ async function scrapeSunTheatre(page) {
   const sessions = [];
   const url = 'https://suntheatre.com.au/now-playing/';
   
-  // Build today's date string in Sun Theatre format: "Wed 31st Dec 2025"
+  // Build today's date string in Sun Theatre format: "Thu 1st Jan:" (no year, with colon)
   const now = new Date();
   const melbourneTime = new Date(now.toLocaleString('en-US', { timeZone: 'Australia/Melbourne' }));
   const dayNames = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
