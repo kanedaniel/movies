@@ -55,13 +55,8 @@ async function fetchTMDB(title) {
     const data = await response.json();
 
     if (data.results && data.results.length > 0) {
-      // Prefer movies from the last 2 years, otherwise take first result
-      const currentYear = new Date().getFullYear();
-      const recentMovie = data.results.find(m => {
-        const year = m.release_date ? parseInt(m.release_date.substring(0, 4)) : 0;
-        return year >= currentYear - 1;
-      });
-      const movie = recentMovie || data.results[0];
+      // Take first result (best match) - don't prefer recent films as this breaks classic cinema listings
+      const movie = data.results[0];
       
       // Fetch movie details to get runtime and trailers
       let runtime = null;
