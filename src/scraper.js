@@ -6,7 +6,7 @@ const path = require('path');
 // CONFIGURATION
 // ============================================================================
 const DAYS_TO_SCRAPE = 2; // 1 = today only, 2 = today + tomorrow, 7 = full week
-const OUTPUT_FILENAME = 'sessions.json'; // Change to 'sessions.json' for production
+const OUTPUT_FILENAME = 'sessions-v2.json'; // Change to 'sessions.json' for production
 
 const TMDB_API_KEY = process.env.TMDB_API_KEY;
 const TMDB_BASE = 'https://api.themoviedb.org/3';
@@ -352,9 +352,162 @@ async function scrapeHoyts(page, targetDate) {
 }
 
 async function scrapeAstor(page, targetDate) {
-  console.log(`Scraping Astor Theatre for ${targetDate}... [NOT YET IMPLEMENTED]`);
-  // TODO: Migrate from scraper.js
-  return { cinema: 'The Astor Theatre', url: 'https://www.astortheatre.net.au/', sessions: [] };
+  console.log(`Scraping Astor Theatre for ${targetDate}...`);
+  const sessions = [];
+  const url = 'https://www.astortheatre.net.au/';
+  
+  try {
+    // Helper function with timeout
+    const fetchWithTimeout = async (fetchUrl, options = {}, timeoutMs = 30000) => {
+      const controller = new AbortController();
+      const timeout = setTimeout(() => controller.abort(), timeoutMs);
+      try {
+        const response = await fetch(fetchUrl, { ...options, signal: controller.signal });
+        return response;
+      } finally {
+        clearTimeout(timeout);
+      }
+    };
+    
+    // Calculate what day label to look for based on targetDate
+    const [year, month, day] = targetDate.split('-').map(Number);
+    const targetDateObj = new Date(year, month - 1, day);
+    const today = new Date();
+    const melbourneToday = new Date(today.toLocaleString('en-US', { timeZone: 'Australia/Melbourne' }));
+    melbourneToday.setHours(0, 0, 0, 0);
+    
+    const diffDays = Math.round((targetDateObj - melbourneToday) / (1000 * 60 * 60 * 24));
+    
+    let dayPattern;
+    if (diffDays === 0) {
+      dayPattern = /today/i;
+    } else if (diffDays === 1) {
+      dayPattern = /tomorrow/i;
+    } else {
+      // Use day name (e.g., "Monday", "Tuesday")
+      const dayName = targetDateObj.toLocaleDateString('en-AU', { weekday: 'long' });
+      dayPattern = new RegExp(dayName, 'i');
+    }
+    
+    console.log(`  Looking for day pattern: ${dayPattern}`);
+    
+    // First, get the initial page content
+    const response = await fetchWithTimeout(url, {
+      headers: {
+        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'
+      }
+    });
+    const html = await response.text();
+    console.log(`  Homepage HTML length: ${html.length}`);
+    
+    // Also try the AJAX endpoint for more sessions
+    let ajaxHtml = '';
+    try {
+      const ajaxResponse = await fetchWithTimeout('https://www.astortheatre.net.au/wp-admin/admin-ajax.php', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/x-www-form-urlencoded',
+          'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'
+        },
+        body: 'action=get_frontpage_sessions&offset=0'
+      });
+      ajaxHtml = await ajaxResponse.text();
+      console.log(`  AJAX HTML length: ${ajaxHtml.length}`);
+    } catch (e) {
+      console.log(`  AJAX fetch failed, using homepage only: ${e.message}`);
+    }
+    
+    // Combine both HTML sources
+    const combinedHtml = html + ajaxHtml;
+    
+    // Parse the HTML to extract sessions
+    const blocks = combinedHtml.split(/<div[^>]*class="[^"]*movie_preview[^"]*session/i);
+    console.log(`  Split into ${blocks.length} blocks`);
+    
+    // First pass: extract all films for target day with their times
+    const targetFilms = [];
+    
+    for (let i = 1; i < blocks.length; i++) {
+      const block = blocks[i];
+      
+      // Check if it matches our target day
+      if (!dayPattern.test(block)) continue;
+      
+      // Extract time: "Today at 2pm" or "Tomorrow at 6:30pm" or "Monday at 7pm"
+      const timeMatch = block.match(/(?:today|tomorrow|monday|tuesday|wednesday|thursday|friday|saturday|sunday)\s+at\s+(\d{1,2}(?::\d{2})?\s*(?:am|pm))/i);
+      const time = timeMatch ? timeMatch[1].toLowerCase().trim() : 'See website';
+      
+      // Check if it's a double feature
+      const isDouble = /double\s*feature/i.test(block);
+      
+      // Extract ALL titles from h2 > a tags
+      const titles = [];
+      const urls = [];
+      const titleRegex = /<a[^>]*href="([^"]*\/films\/[^"]*)"[^>]*>([^<]+)/gi;
+      let match;
+      while ((match = titleRegex.exec(block)) !== null) {
+        let title = match[2].trim();
+        // Remove rating brackets like [PG], [M]
+        title = title.replace(/\s*\[.*?\]\s*$/, '').trim();
+        if (title && !titles.includes(title)) {
+          titles.push(title);
+          urls.push(match[1]);
+        }
+      }
+      
+      if (titles.length === 0) continue;
+      
+      if (isDouble && titles.length >= 2) {
+        targetFilms.push({ 
+          title: titles.join(' + '), 
+          time, 
+          url: urls[0],
+          isDouble: true,
+          film1: titles[0],
+          film2: titles[1]
+        });
+      } else {
+        targetFilms.push({ title: titles[0], time, url: urls[0], isDouble: false });
+      }
+    }
+    
+    console.log(`  Found ${targetFilms.length} films for target day`);
+    
+    // Dedupe by title
+    const seenTitles = new Set();
+    for (const film of targetFilms) {
+      if (seenTitles.has(film.title)) continue;
+      seenTitles.add(film.title);
+      
+      if (film.isDouble) {
+        sessions.push({
+          title: film.title,
+          times: [film.time],
+          url: film.url,
+          isDoubleFeature: true,
+          film1: film.film1,
+          film2: film.film2
+        });
+      } else {
+        sessions.push({
+          title: film.title,
+          times: [film.time],
+          url: film.url,
+          isDoubleFeature: false
+        });
+      }
+    }
+    
+    console.log(`  Found ${sessions.length} films`);
+  } catch (error) {
+    console.error('  Astor Theatre scrape error:', error.message);
+  }
+  
+  return { 
+    cinema: 'The Astor Theatre', 
+    url, 
+    sessions
+  };
 }
 
 async function scrapePalaceComo(page, targetDate) {
