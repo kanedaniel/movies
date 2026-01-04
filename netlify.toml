@@ -1,4 +1,3 @@
 [build]
-  command = ""
+  command = "echo done"
   publish = "."
-  ignore = "exit 0"
