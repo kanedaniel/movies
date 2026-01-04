@@ -1,0 +1,1201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🍿</text></svg>">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Melbourne Movies Today</title>
+  <!-- Privacy-friendly analytics by Plausible -->
+<script async src="https://plausible.io/js/pa-3SposaEeZIZonQM_k_FmH.js"></script>
+<script>
+  window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};
+  plausible.init()
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-dark: #0a0a0c;
+      --bg-card: #141418;
+      --bg-card-hover: #1a1a1f;
+      --gold: #d4a843;
+      --gold-dim: #a68532;
+      --cream: #f5f0e6;
+      --red: #c23c3c;
+      --text: #e8e4dc;
+      --text-dim: #8a8680;
+      --border: #2a2a30;
+    }
+    
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background: var(--bg-dark);
+      color: var(--text);
+      min-height: 100vh;
+      line-height: 1.6;
+    }
+    
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+      opacity: 0.03;
+      pointer-events: none;
+      z-index: 1000;
+    }
+    
+    header {
+      text-align: center;
+      padding: 3rem 1rem 1.5rem;
+      border-bottom: 1px solid var(--border);
+      background: linear-gradient(180deg, #12121a 0%, var(--bg-dark) 100%);
+    }
+    
+    h1 {
+      font-family: 'Inter', sans-serif;
+      font-weight: 700;
+      font-size: clamp(1.75rem, 5vw, 2.5rem);
+      color: var(--cream);
+      letter-spacing: -0.02em;
+      line-height: 1.2;
+    }
+    
+    .date-banner {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.85rem;
+      color: var(--text-dim);
+      margin-top: 1rem;
+      padding: 0.5rem 1.5rem;
+      background: var(--bg-card);
+      display: inline-block;
+      border: 1px solid var(--border);
+    }
+    
+    .site-description {
+      max-width: 500px;
+      margin: 1.5rem auto 0;
+      font-size: 0.85rem;
+      color: var(--text-dim);
+      line-height: 1.5;
+    }
+    
+    .site-description a {
+      color: var(--gold);
+      text-decoration: none;
+    }
+    
+    .site-description a:hover {
+      text-decoration: underline;
+    }
+    
+    /* Cinema filter nav */
+    .cinema-nav-wrapper {
+      background: var(--bg-card);
+      border-bottom: 1px solid var(--border);
+      padding: 1rem;
+    }
+    
+    .cinema-nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      justify-content: center;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+    
+    .search-container {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      padding: 0.75rem 1rem;
+      background: var(--bg-card);
+      border-bottom: 1px solid var(--border);
+    }
+    
+    .search-input {
+      width: 100%;
+      max-width: 400px;
+      padding: 0.6rem 1rem;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.9rem;
+      background: var(--bg-dark);
+      border: 1px solid var(--border);
+      color: var(--text);
+      outline: none;
+      transition: border-color 0.2s;
+    }
+    
+    .search-input::placeholder {
+      color: var(--text-dim);
+    }
+    
+    .search-input:focus {
+      border-color: var(--gold-dim);
+    }
+    
+    .repertory-toggle-container {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 1rem;
+      background: var(--bg-card);
+      border-bottom: 1px solid var(--border);
+      gap: 0.5rem;
+    }
+    
+    .repertory-toggle-row {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+    
+    .repertory-label {
+      font-family: 'Inter', sans-serif;
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--cream);
+    }
+    
+    .repertory-toggle-switch {
+      display: flex;
+      background: var(--border);
+      border-radius: 4px;
+      overflow: hidden;
+    }
+    
+    .repertory-toggle-switch button {
+      padding: 0.4rem 0.75rem;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.85rem;
+      font-weight: 600;
+      border: none;
+      background: transparent;
+      color: var(--text-dim);
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    
+    .repertory-toggle-switch button.active {
+      background: var(--gold);
+      color: var(--bg-dark);
+    }
+    
+    .repertory-description {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.8rem;
+      color: var(--text-dim);
+    }
+    
+    .premium-toggle-container {
+      display: none;
+      margin-top: -0.5rem;
+      margin-bottom: 1rem;
+    }
+    
+    .premium-toggle-container.visible {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+    }
+    
+    .premium-toggle-container label {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.8rem;
+      color: var(--text-dim);
+      cursor: pointer;
+    }
+    
+    .premium-toggle {
+      appearance: none;
+      width: 18px;
+      height: 18px;
+      background: var(--bg-dark);
+      border: 1px solid var(--border);
+      position: relative;
+      cursor: pointer;
+      transition: background 0.2s, border-color 0.2s;
+    }
+    
+    .premium-toggle:checked {
+      background: var(--gold);
+      border-color: var(--gold);
+    }
+    
+    .premium-toggle:checked::before {
+      content: '✓';
+      position: absolute;
+      color: var(--bg-dark);
+      font-size: 12px;
+      font-weight: bold;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+    
+    .cinema-toggle {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.75rem;
+      padding: 0.5rem 1rem;
+      background: transparent;
+      border: 1px solid var(--border);
+      color: var(--text);
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    
+    .cinema-toggle:hover {
+      border-color: var(--gold-dim);
+    }
+    
+    .cinema-toggle.active {
+      background: var(--gold);
+      color: var(--bg-dark);
+      border-color: var(--gold);
+    }
+    
+    .loading {
+      text-align: center;
+      padding: 4rem;
+      color: var(--text-dim);
+    }
+    
+    .loading::after {
+      content: '';
+      display: inline-block;
+      width: 1.5rem; height: 1.5rem;
+      border: 2px solid var(--border);
+      border-top-color: var(--gold);
+      border-radius: 50%;
+      animation: spin 1s linear infinite;
+      margin-left: 1rem;
+      vertical-align: middle;
+    }
+    
+    @keyframes spin { to { transform: rotate(360deg); } }
+    
+    main {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 2rem 1rem;
+    }
+    
+    .cinema-section {
+      margin-bottom: 3rem;
+    }
+    
+    .cinema-section.hidden {
+      display: none;
+    }
+    
+    .cinema-header {
+      display: flex;
+      align-items: baseline;
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+      padding-bottom: 0.75rem;
+      border-bottom: 2px solid var(--gold);
+      flex-wrap: wrap;
+    }
+    
+    .cinema-header h2 {
+      font-family: 'Inter', sans-serif;
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--cream);
+    }
+    
+    .cinema-header a {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.75rem;
+      color: var(--gold-dim);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    
+    .cinema-header a:hover { color: var(--gold); }
+    
+    .cinema-note {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.8rem;
+      color: var(--text-dim);
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+    
+    .no-premium-sessions {
+      display: none;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      padding: 1.25rem;
+      margin-bottom: 1rem;
+      min-height: 150px;
+      align-items: center;
+      justify-content: center;
+      color: var(--text-dim);
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.85rem;
+    }
+    
+    .no-premium-sessions.visible {
+      display: flex;
+    }
+    
+    /* Film list with expandable overflow */
+    .film-list {
+      position: relative;
+    }
+    
+    .film-list.collapsed .film-card:nth-child(n+4) {
+      display: none;
+    }
+    
+    .film-list.collapsed .film-card:nth-child(3) {
+      mask-image: linear-gradient(to bottom, black 0%, transparent 100%);
+      -webkit-mask-image: linear-gradient(to bottom, black 0%, transparent 100%);
+    }
+    
+    .show-more-btn {
+      width: 100%;
+      padding: 1rem;
+      margin-top: -2rem;
+      background: linear-gradient(to bottom, transparent, var(--bg-dark) 50%);
+      border: none;
+      color: var(--gold);
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.85rem;
+      cursor: pointer;
+      position: relative;
+      z-index: 10;
+    }
+    
+    .show-more-btn:hover {
+      color: var(--cream);
+    }
+    
+    .film-list.expanded + .show-more-btn {
+      margin-top: 0;
+      background: transparent;
+    }
+    
+    /* Single column film cards - poster | title+precis | times */
+    .film-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      padding: 1.25rem;
+      margin-bottom: 1rem;
+      display: grid;
+      grid-template-columns: 100px 1fr auto;
+      gap: 1.25rem;
+      align-items: start;
+      transition: all 0.3s ease;
+      position: relative;
+    }
+    
+    .film-card:hover {
+      background: var(--bg-card-hover);
+      border-color: var(--gold-dim);
+    }
+    
+    .film-card.repertory-hidden {
+      display: none !important;
+    }
+    
+    .film-poster {
+      width: 100px;
+      height: 150px;
+      object-fit: cover;
+      background: var(--border);
+    }
+    
+    .film-poster-placeholder {
+      width: 100px;
+      height: 150px;
+      background: linear-gradient(135deg, var(--border) 0%, #1a1a20 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2.5rem;
+      color: var(--text-dim);
+    }
+    
+    .film-info {
+      min-width: 0;
+    }
+    
+    .film-info h3 {
+      font-family: 'Inter', sans-serif;
+      font-size: 1.15rem;
+      font-weight: 600;
+      color: var(--cream);
+      margin-bottom: 0.35rem;
+      line-height: 1.3;
+    }
+    
+    .film-info h3 a {
+      color: inherit;
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    
+    .film-info h3 a:hover { color: var(--gold); }
+    
+    .film-meta {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.75rem;
+      color: var(--text-dim);
+      margin-bottom: 0.5rem;
+      display: flex;
+      gap: 0.75rem;
+      flex-wrap: wrap;
+    }
+    
+    .film-meta .rating { color: var(--gold); }
+    
+    .film-meta .trailer-link {
+      color: var(--text-dim);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    
+    .film-meta .trailer-link:hover {
+      color: var(--gold);
+    }
+    
+    .film-overview {
+      font-size: 0.9rem;
+      color: var(--text-dim);
+      line-height: 1.5;
+      display: -webkit-box;
+      -webkit-line-clamp: 4;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+    
+    .film-times-col {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      align-items: flex-end;
+      min-width: 90px;
+    }
+    
+    .film-time {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.8rem;
+      padding: 0.35rem 0.5rem;
+      background: transparent;
+      border: 1px solid var(--gold-dim);
+      color: var(--gold);
+      white-space: nowrap;
+      transition: all 0.2s;
+      text-align: center;
+      width: 90px;
+      box-sizing: border-box;
+    }
+    
+    .film-time:hover {
+      background: var(--gold);
+      color: var(--bg-dark);
+    }
+    
+    .film-time.past {
+      border-color: var(--text-dim);
+      color: var(--text-dim);
+      opacity: 0.5;
+    }
+    
+    .film-time.past:hover {
+      background: var(--text-dim);
+      color: var(--bg-dark);
+    }
+    
+    .film-time.see-website {
+      border-style: dashed;
+      color: var(--text-dim);
+      border-color: var(--text-dim);
+      font-size: 0.7rem;
+    }
+    
+    .double-feature { border-left: 3px solid var(--red); }
+    
+    .double-feature-label {
+      position: absolute;
+      top: 0; left: 0;
+      background: var(--red);
+      color: var(--cream);
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.65rem;
+      padding: 0.2rem 0.5rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      z-index: 2;
+    }
+    
+    .double-poster-container {
+      position: relative;
+      width: 100px;
+      height: 150px;
+    }
+    
+    .double-poster-container img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100px;
+      height: 150px;
+      object-fit: cover;
+      transition: opacity 0.5s ease;
+    }
+    
+    .double-poster-container img.poster-hidden {
+      opacity: 0;
+    }
+    
+    .no-sessions {
+      color: var(--text-dim);
+      font-style: italic;
+      padding: 2rem;
+      text-align: center;
+      background: var(--bg-card);
+      border: 1px dashed var(--border);
+    }
+    
+    .error-state {
+      text-align: center;
+      padding: 4rem 2rem;
+    }
+    
+    .error-state h2 {
+      font-family: 'Inter', sans-serif;
+      color: var(--cream);
+      margin-bottom: 1rem;
+    }
+    
+    footer {
+      text-align: center;
+      padding: 2rem;
+      border-top: 1px solid var(--border);
+      color: var(--text-dim);
+      font-size: 0.85rem;
+    }
+    
+    footer a { color: var(--gold-dim); }
+    footer a:hover { color: var(--gold); }
+    
+    /* Responsive */
+    @media (max-width: 640px) {
+      .film-card {
+        grid-template-columns: 80px 1fr;
+        grid-template-rows: auto auto;
+        gap: 1rem;
+      }
+      
+      .film-poster, .film-poster-placeholder,
+      .double-poster-container, .double-poster-container img {
+        width: 80px;
+        height: 120px;
+      }
+      
+      .film-times-col {
+        grid-column: 1 / -1;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        justify-content: flex-start;
+        min-width: 0;
+      }
+      
+      .film-time {
+        min-width: auto;
+        padding: 0.25rem 0.5rem;
+        font-size: 0.75rem;
+      }
+      
+      .cinema-nav {
+        gap: 0.35rem;
+      }
+      
+      .cinema-toggle {
+        font-size: 0.65rem;
+        padding: 0.4rem 0.6rem;
+      }
+    }
+    /* Day picker in title */
+    .day-picker-container {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.3em;
+    }
+    
+    .day-picker {
+      display: inline-block;
+      background: var(--gold);
+      color: var(--bg-dark);
+      padding: 0.1em 0.4em;
+    }
+    
+    .day-arrow {
+      background: none;
+      border: none;
+      color: var(--gold);
+      font-size: 1em;
+      font-weight: 700;
+      cursor: pointer;
+      padding: 0.1em 0.2em;
+      transition: all 0.2s;
+      line-height: 1;
+    }
+    
+    .day-arrow:hover:not(:disabled) {
+      color: var(--cream);
+      transform: scale(1.1);
+    }
+    
+    .day-arrow:disabled {
+      color: var(--border);
+      cursor: default;
+      opacity: 0.5;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>What's on at the movies<br>
+      <span class="day-picker-container">
+        <button class="day-arrow day-arrow-prev" id="day-prev" aria-label="Previous day">‹</button>
+        <span class="day-picker" id="day-picker">today</span>
+        <button class="day-arrow day-arrow-next" id="day-next" aria-label="Next day">›</button>
+      </span>
+    </h1>
+    <div class="date-banner" id="date-banner">Loading...</div>
+    <p class="site-description">A site what's got Melbourne movie times built by Kane Daniel. Always confirm session times on the cinema website before heading out. DM me bugs and feature requests on <a href="https://www.instagram.com/normal_lifter/" target="_blank" rel="noopener">IG</a>.</p>
+  </header>
+  
+  <div class="cinema-nav-wrapper">
+    <nav class="cinema-nav" id="cinema-nav">
+      <!-- Populated by JavaScript -->
+    </nav>
+  </div>
+  
+  <div class="search-container">
+    <input type="text" class="search-input" id="film-search" placeholder="Search films...">
+  </div>
+  
+  <div class="repertory-toggle-container">
+    <div class="repertory-toggle-row">
+      <span class="repertory-label">Repertory mode</span>
+      <div class="repertory-toggle-switch">
+        <button id="repertory-off" class="active">OFF</button>
+        <button id="repertory-on">ON</button>
+      </div>
+    </div>
+    <span class="repertory-description" id="repertory-description">Only show movies released before <span id="repertory-year"></span></span>
+  </div>
+  
+  <main id="main">
+    <div class="loading">Loading session times</div>
+  </main>
+  
+  <footer>
+    <p>Session data updated daily at 8am AEST</p>
+    <p>Film information from <a href="https://www.themoviedb.org/" target="_blank" rel="noopener">TMDB</a></p>
+  </footer>
+
+  <script>
+    let globalData = null;
+    let currentDayIndex = 0;
+    
+    // Check if a time string (e.g., "10:30am", "2:00pm") is in the past for Melbourne timezone
+    // Only applies to today (dayIndex 0)
+    function isTimePast(timeStr, dayIndex) {
+      if (dayIndex !== 0) return false; // Only grey out times for today
+      if (!timeStr || timeStr.toLowerCase().includes('see website')) return false;
+      
+      // Parse standardised format: "H:MMam" or "H:MMpm"
+      const match = timeStr.match(/^(\d{1,2}):(\d{2})(am|pm)$/i);
+      if (!match) return false;
+      
+      let hours = parseInt(match[1], 10);
+      const mins = parseInt(match[2], 10);
+      const isPM = match[3].toLowerCase() === 'pm';
+      
+      // Convert to 24-hour
+      if (isPM && hours !== 12) hours += 12;
+      if (!isPM && hours === 12) hours = 0;
+      
+      // Get current Melbourne time
+      const now = new Date();
+      const melbourneNow = new Date(now.toLocaleString('en-US', { timeZone: 'Australia/Melbourne' }));
+      
+      const sessionMinutes = hours * 60 + mins;
+      const nowMinutes = melbourneNow.getHours() * 60 + melbourneNow.getMinutes();
+      
+      return sessionMinutes < nowMinutes;
+    }
+    
+    async function loadSessions() {
+      const main = document.getElementById('main');
+      
+      try {
+        const response = await fetch('data/sessions-v2.json');
+        if (!response.ok) throw new Error('Failed to load session data');
+        
+        globalData = await response.json();
+        
+        if (!globalData.days || globalData.days.length === 0) {
+          main.innerHTML = '<div class="error-state"><h2>No Sessions Found</h2><p>Check back tomorrow!</p></div>';
+          return;
+        }
+        
+        // Build day tabs
+        buildDayTabs();
+        
+        // Render first day
+        renderDay(0);
+        
+      } catch (error) {
+        console.error('Error:', error);
+        main.innerHTML = `<div class="error-state"><h2>Unable to Load</h2><p>Please refresh the page.</p></div>`;
+      }
+    }
+    
+    function buildDayTabs() {
+      const prevBtn = document.getElementById('day-prev');
+      const nextBtn = document.getElementById('day-next');
+      
+      if (!prevBtn || !nextBtn || !globalData.days) return;
+      
+      prevBtn.addEventListener('click', () => {
+        if (currentDayIndex > 0) {
+          renderDay(currentDayIndex - 1);
+          updateDayPickerText();
+          updateArrowStates();
+        }
+      });
+      
+      nextBtn.addEventListener('click', () => {
+        if (currentDayIndex < globalData.days.length - 1) {
+          renderDay(currentDayIndex + 1);
+          updateDayPickerText();
+          updateArrowStates();
+        }
+      });
+      
+      updateArrowStates();
+    }
+    
+    function updateArrowStates() {
+      const prevBtn = document.getElementById('day-prev');
+      const nextBtn = document.getElementById('day-next');
+      
+      if (!prevBtn || !nextBtn || !globalData.days) return;
+      
+      prevBtn.disabled = currentDayIndex === 0;
+      nextBtn.disabled = currentDayIndex === globalData.days.length - 1;
+    }
+    
+    function updateDayPickerText() {
+      const dayPicker = document.getElementById('day-picker');
+      if (!dayPicker) return;
+      
+      let text;
+      if (currentDayIndex === 0) {
+        text = 'today';
+      } else if (currentDayIndex === 1) {
+        text = 'tomorrow';
+      } else {
+        text = globalData.days[currentDayIndex].date.split(',')[0].toLowerCase();
+      }
+      
+      dayPicker.textContent = text;
+    }
+    
+    function renderDay(dayIndex) {
+      currentDayIndex = dayIndex;
+      const main = document.getElementById('main');
+      const dateBanner = document.getElementById('date-banner');
+      const cinemaNav = document.getElementById('cinema-nav');
+      
+      const dayData = globalData.days[dayIndex];
+      if (!dayData) return;
+      
+      dateBanner.textContent = dayData.date;
+      
+      const cinemas = dayData.cinemas || [];
+      
+      if (cinemas.length === 0) {
+        main.innerHTML = '<div class="error-state"><h2>No Sessions Found</h2><p>Check back later!</p></div>';
+        return;
+      }
+      
+      // Sort cinemas alphabetically (ignoring leading "The")
+      const sortedCinemas = [...cinemas].sort((a, b) => {
+        const nameA = a.cinema.replace(/^The\s+/i, '');
+        const nameB = b.cinema.replace(/^The\s+/i, '');
+        return nameA.localeCompare(nameB);
+      });
+      
+      // Load saved preferences
+      let hiddenCinemas = [];
+      try {
+        const saved = localStorage.getItem('hiddenCinemas');
+        if (saved) hiddenCinemas = JSON.parse(saved);
+      } catch (e) {}
+      
+      // Build cinema nav
+      let navHtml = '';
+      sortedCinemas.forEach(cinema => {
+        const cinemaId = cinema.cinema.toLowerCase().replace(/[^a-z0-9]/g, '-');
+        const isHidden = hiddenCinemas.includes(cinemaId);
+        navHtml += `<button class="cinema-toggle ${isHidden ? '' : 'active'}" data-cinema="${cinemaId}">${cinema.cinema}</button>`;
+      });
+      cinemaNav.innerHTML = navHtml;
+      
+      // Add toggle listeners
+      cinemaNav.querySelectorAll('.cinema-toggle').forEach(btn => {
+        btn.addEventListener('click', () => {
+          btn.classList.toggle('active');
+          const cinemaId = btn.dataset.cinema;
+          const section = document.getElementById(`cinema-${cinemaId}`);
+          if (section) {
+            section.classList.toggle('hidden');
+          }
+          
+          try {
+            const hidden = Array.from(cinemaNav.querySelectorAll('.cinema-toggle:not(.active)'))
+              .map(b => b.dataset.cinema);
+            localStorage.setItem('hiddenCinemas', JSON.stringify(hidden));
+          } catch (e) {}
+        });
+      });
+      
+      let html = '';
+      for (const cinema of sortedCinemas) {
+        const cinemaId = cinema.cinema.toLowerCase().replace(/[^a-z0-9]/g, '-');
+        const hasMoreThanThree = cinema.sessions && cinema.sessions.length > 3;
+        const isHidden = hiddenCinemas.includes(cinemaId);
+        
+        html += `<section class="cinema-section ${isHidden ? 'hidden' : ''}" id="cinema-${cinemaId}">
+          <div class="cinema-header">
+            <h2>${esc(cinema.cinema)}</h2>
+            <a href="${esc(cinema.url)}" target="_blank" rel="noopener">Visit website →</a>
+          </div>
+          ${cinema.note ? `<p class="cinema-note">${esc(cinema.note)}</p>` : ''}`;
+        
+        if (cinema.sessions && cinema.sessions.length > 0) {
+          const sortedSessions = [...cinema.sessions].sort((a, b) => {
+            const aCount = (a.times || []).filter(t => !t.toLowerCase().includes('see website')).length;
+            const bCount = (b.times || []).filter(t => !t.toLowerCase().includes('see website')).length;
+            if (bCount !== aCount) return bCount - aCount;
+            return a.title.localeCompare(b.title);
+          });
+          
+          if (cinema.cinema === 'Imax Melbourne') {
+            html += `<div class="premium-toggle-container visible">
+              <input type="checkbox" id="premium-toggle" class="premium-toggle">
+              <label for="premium-toggle">Only show sessions with premium seats available</label>
+            </div>
+            <div class="no-premium-sessions" id="no-premium-message">No screenings</div>`;
+          }
+          
+          html += `<div class="film-list ${hasMoreThanThree ? 'collapsed' : ''}" data-cinema="${cinemaId}">`;
+          
+          for (const session of sortedSessions) {
+            const isDouble = session.isDoubleFeature || session.films;
+            const isImax = cinema.cinema === 'Imax Melbourne';
+            
+            let poster;
+            if (isDouble && session.films && session.films.length >= 2 && session.films[0]?.posterPath && session.films[1]?.posterPath) {
+              poster = `<div class="double-poster-container" data-posters='${JSON.stringify([session.films[0].posterPath, session.films[1].posterPath])}'>
+                <img src="${esc(session.films[0].posterPath)}" alt="" class="film-poster" loading="lazy">
+                <img src="${esc(session.films[1].posterPath)}" alt="" class="film-poster poster-hidden" loading="lazy">
+              </div>`;
+            } else if (session.posterPath) {
+              poster = `<img src="${esc(session.posterPath)}" alt="" class="film-poster" loading="lazy">`;
+            } else {
+              poster = '<div class="film-poster-placeholder">🎬</div>';
+            }
+            
+            const meta = [];
+            if (session.year) meta.push(`<span>${session.year}</span>`);
+            if (session.runtime) {
+              const hours = Math.floor(session.runtime / 60);
+              const mins = session.runtime % 60;
+              const runtimeStr = hours > 0 ? `${hours}h ${mins.toString().padStart(2, '0')}m` : `${mins}m`;
+              meta.push(`<span>${runtimeStr}</span>`);
+            }
+            if (session.rating) meta.push(`<span class="rating">★ ${session.rating.toFixed(1)}</span>`);
+            if (session.trailerUrl) meta.push(`<a href="${esc(session.trailerUrl)}" target="_blank" rel="noopener" class="trailer-link">▶ Trailer</a>`);
+            
+            const premiumTimes = session.premiumTimes || [];
+            const times = (session.times || ['See website']).map(t => {
+              const isGeneric = t.toLowerCase().includes('see website');
+              const hasPremium = isImax && premiumTimes.includes(t);
+              const isPast = isTimePast(t, currentDayIndex);
+              return `<span class="film-time ${isGeneric ? 'see-website' : ''} ${isPast ? 'past' : ''}" data-premium="${hasPremium}">${esc(t)}</span>`;
+            }).join('');
+            
+            const hasPremiumSession = isImax && premiumTimes.length > 0;
+            const filmYear = session.year ? parseInt(session.year) : null;
+            
+            html += `<article class="film-card ${isDouble ? 'double-feature' : ''}" data-title="${esc(session.title.toLowerCase())}" data-has-premium="${hasPremiumSession}" data-year="${filmYear || ''}">
+              ${isDouble ? '<span class="double-feature-label">Double Feature</span>' : ''}
+              ${poster}
+              <div class="film-info">
+                <h3><a href="${esc(session.url)}" target="_blank" rel="noopener">${esc(session.title)}</a></h3>
+                ${meta.length ? `<div class="film-meta">${meta.join('')}</div>` : ''}
+                ${session.overview ? `<p class="film-overview">${esc(session.overview)}</p>` : ''}
+              </div>
+              <div class="film-times-col">${times}</div>
+            </article>`;
+          }
+          
+          html += '</div>';
+          
+          if (hasMoreThanThree) {
+            html += `<button class="show-more-btn" data-cinema="${cinemaId}">MORE ▼</button>`;
+          }
+        } else {
+          html += '<p class="no-sessions">No sessions listed</p>';
+        }
+        html += '</section>';
+      }
+      main.innerHTML = html;
+      
+      // Add premium toggle listener
+      const premiumToggle = document.getElementById('premium-toggle');
+      const noPremiumMessage = document.getElementById('no-premium-message');
+      if (premiumToggle) {
+        premiumToggle.addEventListener('change', () => {
+          const imaxSection = document.getElementById('cinema-imax-melbourne');
+          if (!imaxSection) return;
+          
+          const filmCards = imaxSection.querySelectorAll('.film-card');
+          let visibleCount = 0;
+          
+          filmCards.forEach(card => {
+            if (premiumToggle.checked) {
+              if (card.dataset.hasPremium === 'true') {
+                card.style.display = '';
+                visibleCount++;
+              } else {
+                card.style.display = 'none';
+              }
+            } else {
+              card.style.display = '';
+              visibleCount++;
+            }
+          });
+          
+          if (noPremiumMessage) {
+            if (premiumToggle.checked && visibleCount === 0) {
+              noPremiumMessage.classList.add('visible');
+            } else {
+              noPremiumMessage.classList.remove('visible');
+            }
+          }
+        });
+      }
+      
+      // Add show more/less button listeners
+      document.querySelectorAll('.show-more-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+          const cinemaId = btn.dataset.cinema;
+          const filmList = document.querySelector(`.film-list[data-cinema="${cinemaId}"]`);
+          if (filmList) {
+            const isCollapsed = filmList.classList.contains('collapsed');
+            if (isCollapsed) {
+              filmList.classList.remove('collapsed');
+              filmList.classList.add('expanded');
+              btn.textContent = 'LESS ▲';
+            } else {
+              filmList.classList.remove('expanded');
+              filmList.classList.add('collapsed');
+              btn.textContent = 'MORE ▼';
+            }
+          }
+        });
+      });
+      
+      // Start cycling posters for double features
+      startPosterCycling();
+      
+      // Re-apply repertory filter if active
+      applyRepertoryFilter();
+    }
+    
+    function startPosterCycling() {
+      const containers = document.querySelectorAll('.double-poster-container');
+      containers.forEach(container => {
+        const imgs = container.querySelectorAll('img');
+        if (imgs.length < 2) return;
+        
+        let showing = 0;
+        setInterval(() => {
+          imgs[showing].classList.add('poster-hidden');
+          showing = (showing + 1) % 2;
+          imgs[showing].classList.remove('poster-hidden');
+        }, 2000);
+      });
+    }
+    
+    function esc(text) {
+      if (!text) return '';
+      const d = document.createElement('div');
+      d.textContent = text;
+      return d.innerHTML;
+    }
+    
+    // Search functionality
+    document.getElementById('film-search').addEventListener('input', (e) => {
+      const query = e.target.value.toLowerCase().trim();
+      const filmCards = document.querySelectorAll('.film-card');
+      const cinemaSections = document.querySelectorAll('.cinema-section');
+      
+      filmCards.forEach(card => {
+        const title = card.dataset.title || '';
+        if (query === '' || title.includes(query)) {
+          card.style.display = '';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+      
+      cinemaSections.forEach(section => {
+        const visibleFilms = section.querySelectorAll('.film-card:not([style*="display: none"])');
+        const filmList = section.querySelector('.film-list');
+        const moreBtn = section.querySelector('.show-more-btn');
+        
+        if (query !== '' && filmList) {
+          filmList.classList.remove('collapsed');
+          filmList.classList.add('expanded');
+          if (moreBtn) moreBtn.textContent = 'LESS ▲';
+        }
+        
+        if (!section.classList.contains('hidden')) {
+          if (visibleFilms.length === 0 && query !== '') {
+            section.style.display = 'none';
+          } else {
+            section.style.display = '';
+          }
+        }
+      });
+    });
+    
+    // Repertory mode functionality
+    const repertoryOnBtn = document.getElementById('repertory-on');
+    const repertoryOffBtn = document.getElementById('repertory-off');
+    const repertoryYearSpan = document.getElementById('repertory-year');
+    
+    const currentYear = new Date().getFullYear();
+    const repertoryCutoff = currentYear - 2;
+    repertoryYearSpan.textContent = repertoryCutoff + 1;
+    
+    let repertoryMode = false;
+    
+    function applyRepertoryFilter() {
+      const cinemaSections = document.querySelectorAll('.cinema-section');
+      
+      cinemaSections.forEach(section => {
+        const filmList = section.querySelector('.film-list');
+        const moreBtn = section.querySelector('.show-more-btn');
+        if (!filmList) return;
+        
+        const filmCards = Array.from(filmList.querySelectorAll('.film-card'));
+        
+        if (repertoryMode) {
+          // Sort: repertory films first, then others
+          filmCards.sort((a, b) => {
+            const aYear = parseInt(a.dataset.year) || 9999;
+            const bYear = parseInt(b.dataset.year) || 9999;
+            const aIsRepertory = aYear && aYear <= repertoryCutoff;
+            const bIsRepertory = bYear && bYear <= repertoryCutoff;
+            
+            if (aIsRepertory && !bIsRepertory) return -1;
+            if (!aIsRepertory && bIsRepertory) return 1;
+            return 0; // Keep relative order within each group
+          });
+          
+          // Reorder DOM
+          filmCards.forEach(card => filmList.appendChild(card));
+          
+          // Hide non-repertory films
+          filmCards.forEach(card => {
+            const year = parseInt(card.dataset.year);
+            if (year && year <= repertoryCutoff) {
+              card.classList.remove('repertory-hidden');
+            } else {
+              card.classList.add('repertory-hidden');
+            }
+          });
+          
+          // Expand list to show repertory films
+          filmList.classList.remove('collapsed');
+          filmList.classList.add('expanded');
+          if (moreBtn) moreBtn.textContent = 'LESS ▲';
+          
+        } else {
+          // Restore original order (by session count, then alphabetically)
+          filmCards.sort((a, b) => {
+            const aTimes = a.querySelectorAll('.film-time:not(.see-website)').length;
+            const bTimes = b.querySelectorAll('.film-time:not(.see-website)').length;
+            if (bTimes !== aTimes) return bTimes - aTimes;
+            
+            const aTitle = a.dataset.title || '';
+            const bTitle = b.dataset.title || '';
+            return aTitle.localeCompare(bTitle);
+          });
+          
+          // Reorder DOM
+          filmCards.forEach(card => filmList.appendChild(card));
+          
+          // Show all films
+          filmCards.forEach(card => {
+            card.classList.remove('repertory-hidden');
+          });
+          
+          // Restore collapsed state if more than 3 films
+          if (filmCards.length > 3) {
+            filmList.classList.remove('expanded');
+            filmList.classList.add('collapsed');
+            if (moreBtn) moreBtn.textContent = 'MORE ▼';
+          }
+        }
+        
+        // Hide/show section based on visible films
+        const visibleFilms = filmList.querySelectorAll('.film-card:not(.repertory-hidden)');
+        if (!section.classList.contains('hidden')) {
+          if (visibleFilms.length === 0 && repertoryMode) {
+            section.style.display = 'none';
+          } else {
+            section.style.display = '';
+          }
+        }
+      });
+    }
+    
+    repertoryOnBtn.addEventListener('click', () => {
+      repertoryMode = true;
+      repertoryOnBtn.classList.add('active');
+      repertoryOffBtn.classList.remove('active');
+      applyRepertoryFilter();
+    });
+    
+    repertoryOffBtn.addEventListener('click', () => {
+      repertoryMode = false;
+      repertoryOffBtn.classList.add('active');
+      repertoryOnBtn.classList.remove('active');
+      applyRepertoryFilter();
+    });
+    
+    loadSessions();
+  </script>
+</body>
+</html>
