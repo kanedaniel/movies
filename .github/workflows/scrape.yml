@@ -1,13 +1,15 @@
 name: Scrape Cinema Sessions
 
 on:
-  push:
-    branches: [main]
-    paths:
-      - 'src/scraper.js'
   schedule:
     - cron: '0 21 * * *'
   workflow_dispatch:
+  push:
+    branches:
+      - staging
+      - main
+    paths:
+      - 'src/scraper.js'
 
 jobs:
   scrape:
