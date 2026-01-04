@@ -6,7 +6,7 @@ const path = require('path');
 // CONFIGURATION
 // ============================================================================
 const DAYS_TO_SCRAPE = 2; // 1 = today only, 2 = today + tomorrow, 7 = full week
-const OUTPUT_FILENAME = 'sessions.json'; // Change to 'sessions.json' for production
+const OUTPUT_FILENAME = 'sessions-v2.json'; // Change to 'sessions.json' for production
 
 const TMDB_API_KEY = process.env.TMDB_API_KEY;
 const TMDB_BASE = 'https://api.themoviedb.org/3';
@@ -166,19 +166,31 @@ async function fetchTMDB(title) {
 // Get Melbourne date string for a given offset (0 = today, 1 = tomorrow)
 function getMelbourneDateStr(dayOffset = 0) {
   const now = new Date();
-  const melbourneTime = new Date(now.toLocaleString('en-US', { timeZone: 'Australia/Melbourne' }));
-  melbourneTime.setDate(melbourneTime.getDate() + dayOffset);
-  return melbourneTime.toISOString().split('T')[0]; // YYYY-MM-DD
+  // Get current Melbourne date parts
+  const melbourneFormatter = new Intl.DateTimeFormat('en-CA', { 
+    timeZone: 'Australia/Melbourne',
+    year: 'numeric',
+    month: '2-digit',
+    day: '2-digit'
+  });
+  const [year, month, day] = melbourneFormatter.format(now).split('-').map(Number);
+  
+  // Create date and add offset
+  const targetDate = new Date(year, month - 1, day + dayOffset);
+  const y = targetDate.getFullYear();
+  const m = String(targetDate.getMonth() + 1).padStart(2, '0');
+  const d = String(targetDate.getDate()).padStart(2, '0');
+  return `${y}-${m}-${d}`;
 }
 
 // Get formatted display date for a given offset
 function getDisplayDate(dayOffset = 0) {
-  const now = new Date();
-  const melbourneTime = new Date(now.toLocaleString('en-US', { timeZone: 'Australia/Melbourne' }));
-  melbourneTime.setDate(melbourneTime.getDate() + dayOffset);
-  return melbourneTime.toLocaleDateString('en-AU', { 
-    weekday: 'long', year: 'numeric', month: 'long', day: 'numeric',
-    timeZone: 'Australia/Melbourne'
+  const dateStr = getMelbourneDateStr(dayOffset);
+  const [year, month, day] = dateStr.split('-').map(Number);
+  const date = new Date(year, month - 1, day);
+  
+  return date.toLocaleDateString('en-AU', { 
+    weekday: 'long', year: 'numeric', month: 'long', day: 'numeric'
   });
 }
 
