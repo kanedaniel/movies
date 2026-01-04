@@ -954,26 +954,76 @@
     let repertoryMode = false;
     
     function applyRepertoryFilter() {
-      const filmCards = document.querySelectorAll('.film-card');
       const cinemaSections = document.querySelectorAll('.cinema-section');
       
-      filmCards.forEach(card => {
-        const year = parseInt(card.dataset.year);
-        if (repertoryMode) {
-          // Show only films from cutoff year or earlier
-          if (year && year <= repertoryCutoff) {
-            card.classList.remove('repertory-hidden');
-          } else {
-            card.classList.add('repertory-hidden');
-          }
-        } else {
-          card.classList.remove('repertory-hidden');
-        }
-      });
-      
-      // Hide cinema sections with no visible films
       cinemaSections.forEach(section => {
-        const visibleFilms = section.querySelectorAll('.film-card:not(.repertory-hidden):not([style*="display: none"])');
+        const filmList = section.querySelector('.film-list');
+        const moreBtn = section.querySelector('.show-more-btn');
+        if (!filmList) return;
+        
+        const filmCards = Array.from(filmList.querySelectorAll('.film-card'));
+        
+        if (repertoryMode) {
+          // Sort: repertory films first, then others
+          filmCards.sort((a, b) => {
+            const aYear = parseInt(a.dataset.year) || 9999;
+            const bYear = parseInt(b.dataset.year) || 9999;
+            const aIsRepertory = aYear && aYear <= repertoryCutoff;
+            const bIsRepertory = bYear && bYear <= repertoryCutoff;
+            
+            if (aIsRepertory && !bIsRepertory) return -1;
+            if (!aIsRepertory && bIsRepertory) return 1;
+            return 0; // Keep relative order within each group
+          });
+          
+          // Reorder DOM
+          filmCards.forEach(card => filmList.appendChild(card));
+          
+          // Hide non-repertory films
+          filmCards.forEach(card => {
+            const year = parseInt(card.dataset.year);
+            if (year && year <= repertoryCutoff) {
+              card.classList.remove('repertory-hidden');
+            } else {
+              card.classList.add('repertory-hidden');
+            }
+          });
+          
+          // Expand list to show repertory films
+          filmList.classList.remove('collapsed');
+          filmList.classList.add('expanded');
+          if (moreBtn) moreBtn.textContent = 'LESS ▲';
+          
+        } else {
+          // Restore original order (by session count, then alphabetically)
+          filmCards.sort((a, b) => {
+            const aTimes = a.querySelectorAll('.film-time:not(.see-website)').length;
+            const bTimes = b.querySelectorAll('.film-time:not(.see-website)').length;
+            if (bTimes !== aTimes) return bTimes - aTimes;
+            
+            const aTitle = a.dataset.title || '';
+            const bTitle = b.dataset.title || '';
+            return aTitle.localeCompare(bTitle);
+          });
+          
+          // Reorder DOM
+          filmCards.forEach(card => filmList.appendChild(card));
+          
+          // Show all films
+          filmCards.forEach(card => {
+            card.classList.remove('repertory-hidden');
+          });
+          
+          // Restore collapsed state if more than 3 films
+          if (filmCards.length > 3) {
+            filmList.classList.remove('expanded');
+            filmList.classList.add('collapsed');
+            if (moreBtn) moreBtn.textContent = 'MORE ▼';
+          }
+        }
+        
+        // Hide/show section based on visible films
+        const visibleFilms = filmList.querySelectorAll('.film-card:not(.repertory-hidden)');
         if (!section.classList.contains('hidden')) {
           if (visibleFilms.length === 0 && repertoryMode) {
             section.style.display = 'none';
