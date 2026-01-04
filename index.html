@@ -667,16 +667,16 @@
   </footer>
 
   <script>
-    // Check if a time string (e.g., "10:30am", "2:15pm") is in the past for Melbourne timezone
+    // Check if a time string (e.g., "10:30am", "2:00pm") is in the past for Melbourne timezone
     function isTimePast(timeStr) {
       if (!timeStr || timeStr.toLowerCase().includes('see website')) return false;
       
-      // Parse time string like "10:30am" or "2pm"
-      const match = timeStr.match(/^(\d{1,2})(?::(\d{2}))?\s*(am|pm)$/i);
+      // Parse standardised format: "H:MMam" or "H:MMpm"
+      const match = timeStr.match(/^(\d{1,2}):(\d{2})(am|pm)$/i);
       if (!match) return false;
       
       let hours = parseInt(match[1], 10);
-      const mins = match[2] ? parseInt(match[2], 10) : 0;
+      const mins = parseInt(match[2], 10);
       const isPM = match[3].toLowerCase() === 'pm';
       
       // Convert to 24-hour

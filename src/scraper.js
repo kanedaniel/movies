@@ -7,6 +7,53 @@ const TMDB_BASE = 'https://api.themoviedb.org/3';
 
 const tmdbCache = new Map();
 
+// Standardise time to format "H:MMam" or "H:MMpm" (e.g., "2:30pm", "10:00am")
+function standardiseTime(timeStr) {
+  if (!timeStr || timeStr.toLowerCase().includes('see website')) return timeStr;
+  
+  let hours, mins;
+  
+  // Try 12-hour format with space: "10:30 AM", "2:15 PM"
+  const match12space = timeStr.match(/^(\d{1,2}):(\d{2})\s*(am|pm)$/i);
+  if (match12space) {
+    hours = parseInt(match12space[1], 10);
+    mins = parseInt(match12space[2], 10);
+    const period = match12space[3].toLowerCase();
+    return `${hours}:${mins.toString().padStart(2, '0')}${period}`;
+  }
+  
+  // Try 12-hour format without minutes: "2pm", "10am"
+  const match12noMins = timeStr.match(/^(\d{1,2})\s*(am|pm)$/i);
+  if (match12noMins) {
+    hours = parseInt(match12noMins[1], 10);
+    const period = match12noMins[2].toLowerCase();
+    return `${hours}:00${period}`;
+  }
+  
+  // Try 12-hour format with minutes: "2:30pm", "10:00am"
+  const match12 = timeStr.match(/^(\d{1,2}):(\d{2})\s*(am|pm)$/i);
+  if (match12) {
+    hours = parseInt(match12[1], 10);
+    mins = parseInt(match12[2], 10);
+    const period = match12[3].toLowerCase();
+    return `${hours}:${mins.toString().padStart(2, '0')}${period}`;
+  }
+  
+  // Try 24-hour format: "14:35", "9:00"
+  const match24 = timeStr.match(/^(\d{1,2}):(\d{2})$/);
+  if (match24) {
+    hours = parseInt(match24[1], 10);
+    mins = parseInt(match24[2], 10);
+    
+    const period = hours >= 12 ? 'pm' : 'am';
+    const hour12 = hours === 0 ? 12 : hours > 12 ? hours - 12 : hours;
+    return `${hour12}:${mins.toString().padStart(2, '0')}${period}`;
+  }
+  
+  // Return original if no match
+  return timeStr;
+}
+
 async function fetchTMDB(title) {
   const cacheKey = title.toLowerCase().trim();
   if (tmdbCache.has(cacheKey)) {
@@ -1089,6 +1136,14 @@ async function enrichWithTMDB(cinemaData) {
   console.log(`Enriching ${cinemaData.cinema} with TMDB data...`);
   
   for (const session of cinemaData.sessions) {
+    // Standardise all time formats to "H:MMam/pm"
+    if (session.times && Array.isArray(session.times)) {
+      session.times = session.times.map(t => standardiseTime(t));
+    }
+    if (session.premiumTimes && Array.isArray(session.premiumTimes)) {
+      session.premiumTimes = session.premiumTimes.map(t => standardiseTime(t));
+    }
+    
     if (session.isDoubleFeature && (session.title.includes(' + ') || session.title.includes(' & '))) {
       const separator = session.title.includes(' + ') ? ' + ' : ' & ';
       const titles = session.title.split(separator);
