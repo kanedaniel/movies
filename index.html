@@ -505,6 +505,17 @@
       color: var(--bg-dark);
     }
     
+    .film-time.past {
+      border-color: var(--text-dim);
+      color: var(--text-dim);
+      opacity: 0.5;
+    }
+    
+    .film-time.past:hover {
+      background: var(--text-dim);
+      color: var(--bg-dark);
+    }
+    
     .film-time.see-website {
       border-style: dashed;
       color: var(--text-dim);
@@ -656,6 +667,32 @@
   </footer>
 
   <script>
+    // Check if a time string (e.g., "10:30am", "2:15pm") is in the past for Melbourne timezone
+    function isTimePast(timeStr) {
+      if (!timeStr || timeStr.toLowerCase().includes('see website')) return false;
+      
+      // Parse time string like "10:30am" or "2pm"
+      const match = timeStr.match(/^(\d{1,2})(?::(\d{2}))?\s*(am|pm)$/i);
+      if (!match) return false;
+      
+      let hours = parseInt(match[1], 10);
+      const mins = match[2] ? parseInt(match[2], 10) : 0;
+      const isPM = match[3].toLowerCase() === 'pm';
+      
+      // Convert to 24-hour
+      if (isPM && hours !== 12) hours += 12;
+      if (!isPM && hours === 12) hours = 0;
+      
+      // Get current Melbourne time
+      const now = new Date();
+      const melbourneNow = new Date(now.toLocaleString('en-US', { timeZone: 'Australia/Melbourne' }));
+      
+      const sessionMinutes = hours * 60 + mins;
+      const nowMinutes = melbourneNow.getHours() * 60 + melbourneNow.getMinutes();
+      
+      return sessionMinutes < nowMinutes;
+    }
+    
     async function loadSessions() {
       const main = document.getElementById('main');
       const dateBanner = document.getElementById('date-banner');
@@ -781,7 +818,8 @@
               const times = (session.times || ['See website']).map(t => {
                 const isGeneric = t.toLowerCase().includes('see website');
                 const hasPremium = isImax && premiumTimes.includes(t);
-                return `<span class="film-time ${isGeneric ? 'see-website' : ''}" data-premium="${hasPremium}">${esc(t)}</span>`;
+                const isPast = isTimePast(t);
+                return `<span class="film-time ${isGeneric ? 'see-website' : ''} ${isPast ? 'past' : ''}" data-premium="${hasPremium}">${esc(t)}</span>`;
               }).join('');
               
               // Check if this session has any premium times (for filtering)
