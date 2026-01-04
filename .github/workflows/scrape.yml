@@ -43,4 +43,5 @@ jobs:
           git config --local user.name "github-actions[bot]"
           git add data/sessions.json
           git diff --staged --quiet || git commit -m "Update session data for $(date +'%Y-%m-%d')"
+          git pull --rebase
           git push
