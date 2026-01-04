@@ -6,7 +6,7 @@ const path = require('path');
 // CONFIGURATION
 // ============================================================================
 const DAYS_TO_SCRAPE = 2; // 1 = today only, 2 = today + tomorrow, 7 = full week
-const OUTPUT_FILENAME = 'sessions-v2.json'; // Change to 'sessions.json' for production
+const OUTPUT_FILENAME = 'sessions.json'; // Change to 'sessions.json' for production
 
 const TMDB_API_KEY = process.env.TMDB_API_KEY;
 const TMDB_BASE = 'https://api.themoviedb.org/3';
