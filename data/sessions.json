@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-01-04T20:14:32.430Z",
+  "generatedAt": "2026-01-04T21:03:54.409Z",
   "days": [
     {
       "date": "Monday 5 January 2026",
@@ -66,7 +66,22 @@
         {
           "cinema": "The Astor Theatre",
           "url": "https://www.astortheatre.net.au/",
-          "sessions": []
+          "sessions": [
+            {
+              "title": "Stalker - 4K Restoration",
+              "times": [
+                "7:00pm"
+              ],
+              "url": "https://www.astortheatre.net.au/films/stalker",
+              "isDoubleFeature": false,
+              "overview": "A fashion stylist finds herself being stalked by a man after her car breaks down in the countryside.",
+              "posterPath": "https://image.tmdb.org/t/p/w300/vBmOOIIfL9V8VpvS6STSJZ68Ni8.jpg",
+              "rating": null,
+              "year": "2016",
+              "runtime": 109,
+              "trailerUrl": null
+            }
+          ]
         },
         {
           "cinema": "Palace Como",
@@ -120,7 +135,7 @@
               "url": "https://www.palacecinemas.com.au/movies/the-housemaid",
               "overview": "Trying to escape her past, Millie Calloway accepts a job as a live-in housemaid for the wealthy Nina and Andrew Winchester. But what begins as a dream job quickly unravels into something far more dangerous—a sexy, seductive game of secrets, scandal, and power.",
               "posterPath": "https://image.tmdb.org/t/p/w300/cWsBscZzwu5brg9YjNkGewRUvJX.jpg",
-              "rating": 7.5,
+              "rating": 7.394,
               "year": "2025",
               "runtime": 131,
               "trailerUrl": "https://www.youtube.com/watch?v=TGdKFCVn6G0"
@@ -308,7 +323,7 @@
               "url": "https://www.palacecinemas.com.au/movies/the-housemaid",
               "overview": "Trying to escape her past, Millie Calloway accepts a job as a live-in housemaid for the wealthy Nina and Andrew Winchester. But what begins as a dream job quickly unravels into something far more dangerous—a sexy, seductive game of secrets, scandal, and power.",
               "posterPath": "https://image.tmdb.org/t/p/w300/cWsBscZzwu5brg9YjNkGewRUvJX.jpg",
-              "rating": 7.5,
+              "rating": 7.394,
               "year": "2025",
               "runtime": 131,
               "trailerUrl": "https://www.youtube.com/watch?v=TGdKFCVn6G0"
@@ -514,7 +529,7 @@
               "url": "https://www.palacecinemas.com.au/movies/the-housemaid",
               "overview": "Trying to escape her past, Millie Calloway accepts a job as a live-in housemaid for the wealthy Nina and Andrew Winchester. But what begins as a dream job quickly unravels into something far more dangerous—a sexy, seductive game of secrets, scandal, and power.",
               "posterPath": "https://image.tmdb.org/t/p/w300/cWsBscZzwu5brg9YjNkGewRUvJX.jpg",
-              "rating": 7.5,
+              "rating": 7.394,
               "year": "2025",
               "runtime": 131,
               "trailerUrl": "https://www.youtube.com/watch?v=TGdKFCVn6G0"
@@ -710,7 +725,7 @@
               "url": "https://www.palacecinemas.com.au/movies/the-housemaid",
               "overview": "Trying to escape her past, Millie Calloway accepts a job as a live-in housemaid for the wealthy Nina and Andrew Winchester. But what begins as a dream job quickly unravels into something far more dangerous—a sexy, seductive game of secrets, scandal, and power.",
               "posterPath": "https://image.tmdb.org/t/p/w300/cWsBscZzwu5brg9YjNkGewRUvJX.jpg",
-              "rating": 7.5,
+              "rating": 7.394,
               "year": "2025",
               "runtime": 131,
               "trailerUrl": "https://www.youtube.com/watch?v=TGdKFCVn6G0"
@@ -1021,7 +1036,22 @@
         {
           "cinema": "The Astor Theatre",
           "url": "https://www.astortheatre.net.au/",
-          "sessions": []
+          "sessions": [
+            {
+              "title": "The Godfather",
+              "times": [
+                "7:00pm"
+              ],
+              "url": "https://www.astortheatre.net.au/films/the-godfather-2",
+              "isDoubleFeature": false,
+              "overview": "Spanning the years 1945 to 1955, a chronicle of the fictional Italian-American Corleone crime family. When organized crime family patriarch, Vito Corleone barely survives an attempt on his life, his youngest son, Michael steps in to take care of the would-be killers, launching a campaign of bloody revenge.",
+              "posterPath": "https://image.tmdb.org/t/p/w300/3bhkrj58Vtu7enYsRolD1fZdja1.jpg",
+              "rating": 8.685,
+              "year": "1972",
+              "runtime": 175,
+              "trailerUrl": "https://www.youtube.com/watch?v=Ew9ngL1GZvs"
+            }
+          ]
         },
         {
           "cinema": "Palace Como",
@@ -1075,7 +1105,7 @@
               "url": "https://www.palacecinemas.com.au/movies/the-housemaid",
               "overview": "Trying to escape her past, Millie Calloway accepts a job as a live-in housemaid for the wealthy Nina and Andrew Winchester. But what begins as a dream job quickly unravels into something far more dangerous—a sexy, seductive game of secrets, scandal, and power.",
               "posterPath": "https://image.tmdb.org/t/p/w300/cWsBscZzwu5brg9YjNkGewRUvJX.jpg",
-              "rating": 7.5,
+              "rating": 7.394,
               "year": "2025",
               "runtime": 131,
               "trailerUrl": "https://www.youtube.com/watch?v=TGdKFCVn6G0"
@@ -1263,7 +1293,7 @@
               "url": "https://www.palacecinemas.com.au/movies/the-housemaid",
               "overview": "Trying to escape her past, Millie Calloway accepts a job as a live-in housemaid for the wealthy Nina and Andrew Winchester. But what begins as a dream job quickly unravels into something far more dangerous—a sexy, seductive game of secrets, scandal, and power.",
               "posterPath": "https://image.tmdb.org/t/p/w300/cWsBscZzwu5brg9YjNkGewRUvJX.jpg",
-              "rating": 7.5,
+              "rating": 7.394,
               "year": "2025",
               "runtime": 131,
               "trailerUrl": "https://www.youtube.com/watch?v=TGdKFCVn6G0"
@@ -1468,7 +1498,7 @@
               "url": "https://www.palacecinemas.com.au/movies/the-housemaid",
               "overview": "Trying to escape her past, Millie Calloway accepts a job as a live-in housemaid for the wealthy Nina and Andrew Winchester. But what begins as a dream job quickly unravels into something far more dangerous—a sexy, seductive game of secrets, scandal, and power.",
               "posterPath": "https://image.tmdb.org/t/p/w300/cWsBscZzwu5brg9YjNkGewRUvJX.jpg",
-              "rating": 7.5,
+              "rating": 7.394,
               "year": "2025",
               "runtime": 131,
               "trailerUrl": "https://www.youtube.com/watch?v=TGdKFCVn6G0"
@@ -1678,7 +1708,7 @@
               "url": "https://www.palacecinemas.com.au/movies/the-housemaid",
               "overview": "Trying to escape her past, Millie Calloway accepts a job as a live-in housemaid for the wealthy Nina and Andrew Winchester. But what begins as a dream job quickly unravels into something far more dangerous—a sexy, seductive game of secrets, scandal, and power.",
               "posterPath": "https://image.tmdb.org/t/p/w300/cWsBscZzwu5brg9YjNkGewRUvJX.jpg",
-              "rating": 7.5,
+              "rating": 7.394,
               "year": "2025",
               "runtime": 131,
               "trailerUrl": "https://www.youtube.com/watch?v=TGdKFCVn6G0"
