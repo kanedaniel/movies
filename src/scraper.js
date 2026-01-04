@@ -6,7 +6,7 @@ const path = require('path');
 // CONFIGURATION
 // ============================================================================
 const DAYS_TO_SCRAPE = 2; // 1 = today only, 2 = today + tomorrow, 7 = full week
-const OUTPUT_FILENAME = 'sessions.json'; // Change to 'sessions.json' for production
+const OUTPUT_FILENAME = 'sessions.json';
 
 const TMDB_API_KEY = process.env.TMDB_API_KEY;
 const TMDB_BASE = 'https://api.themoviedb.org/3';
@@ -322,9 +322,112 @@ async function scrapeACMI(page, targetDate) {
 // ============================================================================
 
 async function scrapeBrunswickPictureHouse(page, targetDate) {
-  console.log(`Scraping Brunswick Picture House for ${targetDate}... [NOT YET IMPLEMENTED]`);
-  // TODO: Migrate from scraper.js
-  return { cinema: 'Brunswick Picture House', url: 'https://www.brunswickpicturehouse.com.au/now-showing/', sessions: [] };
+  console.log(`Scraping Brunswick Picture House for ${targetDate}...`);
+  const sessions = [];
+  const url = 'https://www.brunswickpicturehouse.com.au/now-showing/';
+  
+  try {
+    await page.goto(url, { waitUntil: 'networkidle2', timeout: 60000 });
+    // Wait for Vue.js to render the content
+    await page.waitForTimeout(5000);
+    
+    // Wait for movie cards to appear
+    try {
+      await page.waitForSelector('.poster-title, div.poster-title', { timeout: 10000 });
+      console.log('  Movie cards found');
+    } catch (e) {
+      console.log('  Waiting for movie cards timed out, trying anyway...');
+    }
+    
+    // Calculate what day label to look for
+    const [year, month, day] = targetDate.split('-').map(Number);
+    const targetDateObj = new Date(year, month - 1, day);
+    const today = new Date();
+    const melbourneToday = new Date(today.toLocaleString('en-US', { timeZone: 'Australia/Melbourne' }));
+    melbourneToday.setHours(0, 0, 0, 0);
+    
+    const diffDays = Math.round((targetDateObj - melbourneToday) / (1000 * 60 * 60 * 24));
+    
+    let dayLabel;
+    if (diffDays === 0) {
+      dayLabel = 'today';
+    } else if (diffDays === 1) {
+      dayLabel = 'tomorrow';
+    } else {
+      // Use day name (e.g., "Monday")
+      dayLabel = targetDateObj.toLocaleDateString('en-AU', { weekday: 'long' }).toLowerCase();
+    }
+    
+    console.log(`  Looking for day label: ${dayLabel}`);
+    
+    const films = await page.evaluate((searchLabel) => {
+      const items = [];
+      const seenTitles = new Set();
+      
+      // Find all day header spans with class "text-primary"
+      const daySpans = document.querySelectorAll('span.text-primary');
+      let targetContainer = null;
+      
+      for (const span of daySpans) {
+        if (span.textContent?.toLowerCase().includes(searchLabel)) {
+          // Go up to the header div, then get its next sibling (poster-list)
+          const headerDiv = span.closest('.text-h6, [class*="text-h6"]');
+          if (headerDiv) {
+            const container = headerDiv.nextElementSibling;
+            if (container && container.classList.contains('poster-list')) {
+              targetContainer = container;
+              break;
+            }
+          }
+        }
+      }
+      
+      if (!targetContainer) {
+        console.log('Could not find container for ' + searchLabel);
+        return items;
+      }
+      
+      // Now get all movie cards from just this container
+      const movieCards = targetContainer.querySelectorAll('[class*="showing-status-now-playing"]');
+      
+      movieCards.forEach(card => {
+        const titleEl = card.querySelector('.poster-title');
+        const title = titleEl?.textContent?.trim();
+        
+        if (!title || seenTitles.has(title)) return;
+        
+        const times = [];
+        card.querySelectorAll('button.showing').forEach(btn => {
+          const timeEl = btn.querySelector('div.text-primary, div[style*="color: var(--q-primary)"]');
+          const time = timeEl?.textContent?.trim();
+          if (time && /^\d{1,2}:\d{2}\s*(AM|PM)$/i.test(time)) {
+            times.push(time);
+          }
+        });
+        
+        if (times.length > 0) {
+          seenTitles.add(title);
+          items.push({
+            title,
+            times,
+            url: 'https://www.brunswickpicturehouse.com.au/now-showing/'
+          });
+        }
+      });
+      
+      return items;
+    }, dayLabel);
+    
+    for (const film of films) {
+      sessions.push(film);
+    }
+    
+    console.log(`  Found ${sessions.length} films`);
+  } catch (error) {
+    console.error('  Brunswick Picture House scrape error:', error.message);
+  }
+  
+  return { cinema: 'Brunswick Picture House', url, sessions };
 }
 
 async function scrapeEclipse(page, targetDate) {
