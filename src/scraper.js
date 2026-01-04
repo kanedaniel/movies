@@ -2,6 +2,12 @@ const puppeteer = require('puppeteer');
 const fs = require('fs');
 const path = require('path');
 
+// ============================================================================
+// CONFIGURATION
+// ============================================================================
+const DAYS_TO_SCRAPE = 2; // 1 = today only, 2 = today + tomorrow, 7 = full week
+const OUTPUT_FILENAME = 'sessions-v2.json'; // Change to 'sessions.json' for production
+
 const TMDB_API_KEY = process.env.TMDB_API_KEY;
 const TMDB_BASE = 'https://api.themoviedb.org/3';
 
@@ -153,21 +159,47 @@ async function fetchTMDB(title) {
   return fallback;
 }
 
-// Helper to get Melbourne date string
-function getMelbourneDateStr() {
+// ============================================================================
+// DATE UTILITIES
+// ============================================================================
+
+// Get Melbourne date string for a given offset (0 = today, 1 = tomorrow)
+function getMelbourneDateStr(dayOffset = 0) {
   const now = new Date();
-  // Convert to Melbourne time
   const melbourneTime = new Date(now.toLocaleString('en-US', { timeZone: 'Australia/Melbourne' }));
-  return melbourneTime.toISOString().split('T')[0];
+  melbourneTime.setDate(melbourneTime.getDate() + dayOffset);
+  return melbourneTime.toISOString().split('T')[0]; // YYYY-MM-DD
 }
 
-async function scrapeACMI(page) {
-  console.log('Scraping ACMI...');
+// Get formatted display date for a given offset
+function getDisplayDate(dayOffset = 0) {
+  const now = new Date();
+  const melbourneTime = new Date(now.toLocaleString('en-US', { timeZone: 'Australia/Melbourne' }));
+  melbourneTime.setDate(melbourneTime.getDate() + dayOffset);
+  return melbourneTime.toLocaleDateString('en-AU', { 
+    weekday: 'long', year: 'numeric', month: 'long', day: 'numeric',
+    timeZone: 'Australia/Melbourne'
+  });
+}
+
+// Get Melbourne Date object for a given offset
+function getMelbourneDate(dayOffset = 0) {
+  const now = new Date();
+  const melbourneTime = new Date(now.toLocaleString('en-US', { timeZone: 'Australia/Melbourne' }));
+  melbourneTime.setDate(melbourneTime.getDate() + dayOffset);
+  return melbourneTime;
+}
+
+// ============================================================================
+// SCRAPERS - Each accepts a targetDate parameter (YYYY-MM-DD)
+// ============================================================================
+
+async function scrapeACMI(page, targetDate) {
+  console.log(`Scraping ACMI for ${targetDate}...`);
   const sessions = [];
   
-  const dateStr = getMelbourneDateStr();
-  const apiUrl = `https://admin.acmi.net.au/api/v2/calendar/by-day/?date=${dateStr}`;
-  const websiteUrl = `https://www.acmi.net.au/whats-on/?what=film&when_start=${dateStr}&when_end=${dateStr}`;
+  const apiUrl = `https://admin.acmi.net.au/api/v2/calendar/by-day/?date=${targetDate}`;
+  const websiteUrl = `https://www.acmi.net.au/whats-on/?what=film&when_start=${targetDate}&when_end=${targetDate}`;
   
   console.log(`  API URL: ${apiUrl}`);
   
@@ -208,10 +240,10 @@ async function scrapeACMI(page) {
     // Flatten nested structure - data may be [{date, occurrences: [...]}]
     let items = data;
     if (data.length > 0 && data[0].occurrences && Array.isArray(data[0].occurrences)) {
-      // Only take occurrences from today's date
-      const todayData = data.find(d => d.date === dateStr);
-      items = todayData?.occurrences || [];
-      console.log(`  Found ${items.length} occurrences for ${dateStr}`);
+      // Only take occurrences from target date
+      const targetData = data.find(d => d.date === targetDate);
+      items = targetData?.occurrences || [];
+      console.log(`  Found ${items.length} occurrences for ${targetDate}`);
     }
     
     // Group sessions by film title
@@ -224,10 +256,10 @@ async function scrapeACMI(page) {
       // Skip non-films (but if type is unknown/empty, include it)
       if (eventType && eventType !== 'Film') continue;
       
-      // Double-check the date matches today
+      // Double-check the date matches target
       if (item.start_datetime) {
         const itemDate = item.start_datetime.split('T')[0];
-        if (itemDate !== dateStr) continue;
+        if (itemDate !== targetDate) continue;
       }
       
       const title = item.event?.title || item.title;
@@ -273,864 +305,85 @@ async function scrapeACMI(page) {
   return { cinema: 'ACMI', url: websiteUrl, sessions };
 }
 
-async function scrapeBrunswickPictureHouse(page) {
-  console.log('Scraping Brunswick Picture House...');
-  const sessions = [];
-  const url = 'https://www.brunswickpicturehouse.com.au/now-showing/';
-  
-  try {
-    await page.goto(url, { waitUntil: 'networkidle2', timeout: 60000 });
-    // Wait for Vue.js to render the content
-    await page.waitForTimeout(5000);
-    
-    // Wait for movie cards to appear
-    try {
-      await page.waitForSelector('.poster-title, div.poster-title', { timeout: 10000 });
-      console.log('  Movie cards found');
-    } catch (e) {
-      console.log('  Waiting for movie cards timed out, trying anyway...');
-    }
-    
-    const films = await page.evaluate(() => {
-      const items = [];
-      const seenTitles = new Set();
-      
-      // Find the span with class "text-primary" containing "Today"
-      const todaySpan = document.querySelector('span.text-primary');
-      if (!todaySpan || !todaySpan.textContent?.toLowerCase().includes('today')) {
-        console.log('Could not find Today span');
-        return items;
-      }
-      
-      // Go up to the header div (text-h6), then get its next sibling (poster-list)
-      const headerDiv = todaySpan.closest('.text-h6, [class*="text-h6"]');
-      if (!headerDiv) {
-        console.log('Could not find header div');
-        return items;
-      }
-      
-      const todayContainer = headerDiv.nextElementSibling;
-      if (!todayContainer || !todayContainer.classList.contains('poster-list')) {
-        console.log('Could not find poster-list after header');
-        return items;
-      }
-      
-      // Now get all movie cards from just this container
-      const movieCards = todayContainer.querySelectorAll('[class*="showing-status-now-playing"]');
-      
-      movieCards.forEach(card => {
-        const titleEl = card.querySelector('.poster-title');
-        const title = titleEl?.textContent?.trim();
-        
-        if (!title || seenTitles.has(title)) return;
-        
-        const times = [];
-        card.querySelectorAll('button.showing').forEach(btn => {
-          const timeEl = btn.querySelector('div.text-primary, div[style*="color: var(--q-primary)"]');
-          const time = timeEl?.textContent?.trim();
-          if (time && /^\d{1,2}:\d{2}\s*(AM|PM)$/i.test(time)) {
-            times.push(time);
-          }
-        });
-        
-        if (times.length > 0) {
-          seenTitles.add(title);
-          items.push({
-            title,
-            times,
-            url: 'https://www.brunswickpicturehouse.com.au/now-showing/'
-          });
-        }
-      });
-      
-      return items;
-    });
-    
-    for (const film of films) {
-      sessions.push(film);
-    }
-    
-    console.log(`  Found ${sessions.length} films`);
-  } catch (error) {
-    console.error('  Brunswick Picture House scrape error:', error.message);
-  }
-  
-  return { cinema: 'Brunswick Picture House', url, sessions };
+// ============================================================================
+// PLACEHOLDER SCRAPERS - To be migrated one by one
+// ============================================================================
+
+async function scrapeBrunswickPictureHouse(page, targetDate) {
+  console.log(`Scraping Brunswick Picture House for ${targetDate}... [NOT YET IMPLEMENTED]`);
+  // TODO: Migrate from scraper.js
+  return { cinema: 'Brunswick Picture House', url: 'https://www.brunswickpicturehouse.com.au/now-showing/', sessions: [] };
 }
 
-async function scrapeEclipse(page) {
-  console.log('Scraping Eclipse Cinema...');
-  const sessions = [];
-  const url = 'https://eclipse-cinema.com.au/session-time/';
-  
-  // Build today's date string in Eclipse format: "Mon-29-Dec"
-  const now = new Date();
-  const melbourneTime = new Date(now.toLocaleString('en-US', { timeZone: 'Australia/Melbourne' }));
-  const dayNames = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
-  const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
-  const todayStr = `${dayNames[melbourneTime.getDay()]}-${String(melbourneTime.getDate()).padStart(2, '0')}-${months[melbourneTime.getMonth()]}`;
-  
-  console.log(`  Looking for date pattern: ${todayStr}`);
-  
-  try {
-    await page.goto(url, { waitUntil: 'networkidle2', timeout: 90000 });
-    await page.waitForTimeout(5000);
-    
-    const films = await page.evaluate((todayStr) => {
-      const items = [];
-      
-      // Get all film entries and check each one for today's date
-      // Can't rely on class selector due to broken HTML from apostrophes
-      const filmEntries = document.querySelectorAll('.veezi-filter-entry');
-      
-      filmEntries.forEach(entry => {
-        // Check if this entry has today's date - look in class list or dropdown
-        const classStr = entry.className || '';
-        const hasDateInClass = classStr.toLowerCase().includes(todayStr.toLowerCase());
-        
-        // Also check the date dropdown for today
-        const dateSelect = entry.querySelector('select.veezi-file-date-select');
-        const hasDateInDropdown = dateSelect && 
-          Array.from(dateSelect.options).some(opt => opt.value === todayStr);
-        
-        if (!hasDateInClass && !hasDateInDropdown) return;
-        
-        // Get title from the filter-film-title div
-        const titleEl = entry.querySelector('.veezi-filter-film-title');
-        const title = titleEl?.textContent?.trim();
-        
-        if (!title) return;
-        
-        // Get times for today - check the class of each time link
-        const times = [];
-        entry.querySelectorAll('a.veezi-film-purchase').forEach(link => {
-          // Check if this time is for today (has the date in its class)
-          const linkClass = link.className || '';
-          if (linkClass.includes(todayStr)) {
-            const timeEl = link.querySelector('p');
-            const time = timeEl?.textContent?.trim();
-            if (time && /^\d{1,2}:\d{2}$/.test(time)) {
-              times.push(time);
-            }
-          }
-        });
-        
-        if (times.length > 0) {
-          items.push({ title, times });
-        }
-      });
-      
-      return items;
-    }, todayStr);
-    
-    const seen = new Set();
-    for (const film of films) {
-      if (!seen.has(film.title)) {
-        seen.add(film.title);
-        sessions.push({
-          ...film,
-          url
-        });
-      }
-    }
-    
-    console.log(`  Found ${sessions.length} films`);
-  } catch (error) {
-    console.error('  Eclipse Cinema scrape error:', error.message);
-  }
-  
-  return { cinema: 'Eclipse Cinema', url, sessions };
+async function scrapeEclipse(page, targetDate) {
+  console.log(`Scraping Eclipse Cinema for ${targetDate}... [NOT YET IMPLEMENTED]`);
+  // TODO: Migrate from scraper.js
+  return { cinema: 'Eclipse Cinema', url: 'https://eclipse-cinema.com.au/session-time/', sessions: [] };
 }
 
-async function scrapeCinemaNova(page) {
-  console.log('Scraping Cinema Nova...');
-  const sessions = [];
-  const url = 'https://www.cinemanova.com.au/films-today-after-0:00';
-  
-  try {
-    await page.goto(url, { waitUntil: 'networkidle2', timeout: 60000 });
-    await page.waitForTimeout(3000);
-    
-    // Cinema Nova has a table with time | title format
-    const films = await page.evaluate(() => {
-      const items = [];
-      const filmMap = new Map();
-      
-      // Find the session table - it has rows with time and title
-      const rows = document.querySelectorAll('tr, table tr');
-      
-      rows.forEach(row => {
-        const cells = row.querySelectorAll('td');
-        if (cells.length >= 2) {
-          // First cell is time link, second is title
-          const timeCell = cells[0];
-          const titleCell = cells[1];
-          
-          const timeLink = timeCell.querySelector('a');
-          const time = timeLink?.textContent?.trim() || timeCell.textContent?.trim();
-          const title = titleCell.textContent?.trim();
-          
-          // Validate time format
-          if (time && title && /^\d{1,2}:\d{2}$/.test(time)) {
-            if (filmMap.has(title)) {
-              filmMap.get(title).times.push(time);
-            } else {
-              filmMap.set(title, {
-                title,
-                times: [time],
-                url: `https://www.cinemanova.com.au/films/${title.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '')}`
-              });
-            }
-          }
-        }
-      });
-      
-      // Convert map to array
-      filmMap.forEach(film => items.push(film));
-      return items;
-    });
-    
-    for (const film of films) {
-      sessions.push(film);
-    }
-    
-    console.log(`  Found ${sessions.length} films`);
-  } catch (error) {
-    console.error('  Cinema Nova scrape error:', error.message);
-  }
-  
-  return { cinema: 'Cinema Nova', url, sessions };
+async function scrapeCinemaNova(page, targetDate) {
+  console.log(`Scraping Cinema Nova for ${targetDate}... [NOT YET IMPLEMENTED]`);
+  // TODO: Migrate from scraper.js
+  return { cinema: 'Cinema Nova', url: 'https://www.cinemanova.com.au/films-today-after-0:00', sessions: [] };
 }
 
-async function scrapeLido(page) {
-  console.log('Scraping Lido Cinemas...');
-  const sessions = [];
-  const url = 'https://www.lidocinemas.com.au/now-showing';
-  
-  try {
-    await page.goto(url, { waitUntil: 'networkidle2', timeout: 60000 });
-    // Wait for JavaScript to load session times
-    await page.waitForTimeout(5000);
-    
-    // Wait for the Sessions elements to appear
-    try {
-      await page.waitForSelector('.Sessions, ul.Sessions, .sessions-link', { timeout: 10000 });
-      console.log('  Session elements found');
-    } catch (e) {
-      console.log('  Waiting for sessions timed out, trying anyway...');
-    }
-    
-    const films = await page.evaluate(() => {
-      const filmMap = new Map();
-      
-      // Target the session links directly - they have data-name attribute with movie title
-      // Structure: a.sessions-link[data-name="Movie Title"] > span.Time
-      document.querySelectorAll('a.sessions-link, a[class*="sessions-link"]').forEach(link => {
-        const movieName = link.getAttribute('data-name');
-        const timeSpan = link.querySelector('span.Time, .Time');
-        const time = timeSpan?.textContent?.trim();
-        
-        if (movieName && time) {
-          if (filmMap.has(movieName)) {
-            filmMap.get(movieName).times.push(time);
-          } else {
-            filmMap.set(movieName, {
-              title: movieName,
-              times: [time],
-              url: link.href || 'https://www.lidocinemas.com.au/now-showing'
-            });
-          }
-        }
-      });
-      
-      // Also try getting films from the movie cards in case sessions approach fails
-      if (filmMap.size === 0) {
-        document.querySelectorAll('.Markup.Movie, div[class*="Movie"]').forEach(card => {
-          const titleEl = card.querySelector('a[href*="/movies/"]');
-          const title = titleEl?.textContent?.trim() || card.getAttribute('data-name');
-          
-          if (title) {
-            const times = [];
-            card.querySelectorAll('.Time, span[class*="Time"]').forEach(t => {
-              const time = t.textContent?.trim();
-              if (time && /\d{1,2}:\d{2}/.test(time)) {
-                times.push(time);
-              }
-            });
-            
-            if (!filmMap.has(title)) {
-              filmMap.set(title, {
-                title,
-                times: times.length > 0 ? times : ['See website'],
-                url: titleEl?.href || 'https://www.lidocinemas.com.au/now-showing'
-              });
-            }
-          }
-        });
-      }
-      
-      // Convert map to array
-      const result = [];
-      filmMap.forEach(film => result.push(film));
-      return result;
-    });
-    
-    for (const film of films) {
-      sessions.push(film);
-    }
-    
-    console.log(`  Found ${sessions.length} films`);
-  } catch (error) {
-    console.error('  Lido Cinemas scrape error:', error.message);
-  }
-  
-  return { cinema: 'Lido Cinemas', url, sessions };
+async function scrapeLido(page, targetDate) {
+  console.log(`Scraping Lido Cinemas for ${targetDate}... [NOT YET IMPLEMENTED]`);
+  // TODO: Migrate from scraper.js
+  return { cinema: 'Lido Cinemas', url: 'https://www.lidocinemas.com.au/now-showing', sessions: [] };
 }
 
-async function scrapeHoyts(page) {
-  console.log('Scraping Hoyts Melbourne Central...');
-  const sessions = [];
-  const url = 'https://www.hoyts.com.au/cinemas/melbourne-central';
-  
-  try {
-    await page.goto(url, { waitUntil: 'networkidle2', timeout: 60000 });
-    // Wait for JavaScript to load the movie list
-    await page.waitForTimeout(5000);
-    
-    // Wait for the movies list to appear
-    try {
-      await page.waitForSelector('.movies-list__item, li.movies-list__item', { timeout: 10000 });
-      console.log('  Movies list found');
-    } catch (e) {
-      console.log('  Waiting for movies list timed out, trying anyway...');
-    }
-    
-    const films = await page.evaluate(() => {
-      const items = [];
-      
-      // Each movie is in li.movies-list__item
-      document.querySelectorAll('li.movies-list__item').forEach(movieItem => {
-        // Get movie title from h2.movies-list__heading > a.movies-list__link
-        const titleLink = movieItem.querySelector('h2.movies-list__heading a.movies-list__link');
-        const title = titleLink?.textContent?.trim();
-        const movieUrl = titleLink?.href;
-        
-        if (!title) return;
-        
-        // Get session times, but skip LUX sessions
-        const times = [];
-        movieItem.querySelectorAll('.sessions__list .sessions__item').forEach(sessionItem => {
-          // Check if this session has a LUX tag
-          const luxTag = sessionItem.querySelector('.session__tag--lux');
-          if (luxTag) return; // Skip LUX sessions
-          
-          const timeEl = sessionItem.querySelector('.session__time');
-          const time = timeEl?.textContent?.trim();
-          if (time) {
-            times.push(time);
-          }
-        });
-        
-        // Only add if there are non-LUX sessions
-        if (times.length > 0) {
-          items.push({
-            title,
-            times,
-            url: movieUrl || 'https://www.hoyts.com.au/cinemas/melbourne-central'
-          });
-        }
-      });
-      
-      return items;
-    });
-    
-    for (const film of films) {
-      sessions.push(film);
-    }
-    
-    console.log(`  Found ${sessions.length} films`);
-  } catch (error) {
-    console.error('  Hoyts scrape error:', error.message);
-  }
-  
-  return { cinema: 'Hoyts Melbourne Central', url, sessions, note: 'Lux sessions not listed' };
+async function scrapeHoyts(page, targetDate) {
+  console.log(`Scraping Hoyts Melbourne Central for ${targetDate}... [NOT YET IMPLEMENTED]`);
+  // TODO: Migrate from scraper.js
+  return { cinema: 'Hoyts Melbourne Central', url: 'https://www.hoyts.com.au/cinemas/melbourne-central', sessions: [], note: 'Lux sessions not listed' };
 }
 
-async function scrapeAstor(page) {
-  console.log('Scraping Astor Theatre...');
-  const sessions = [];
-  const url = 'https://www.astortheatre.net.au/';
-  
-  try {
-    // Helper function with timeout
-    const fetchWithTimeout = async (fetchUrl, options = {}, timeoutMs = 30000) => {
-      const controller = new AbortController();
-      const timeout = setTimeout(() => controller.abort(), timeoutMs);
-      try {
-        const response = await fetch(fetchUrl, { ...options, signal: controller.signal });
-        return response;
-      } finally {
-        clearTimeout(timeout);
-      }
-    };
-    
-    // First, get the initial page content
-    const response = await fetchWithTimeout(url, {
-      headers: {
-        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'
-      }
-    });
-    const html = await response.text();
-    console.log(`  Homepage HTML length: ${html.length}`);
-    
-    // Also try the AJAX endpoint for more sessions
-    let ajaxHtml = '';
-    try {
-      const ajaxResponse = await fetchWithTimeout('https://www.astortheatre.net.au/wp-admin/admin-ajax.php', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/x-www-form-urlencoded',
-          'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'
-        },
-        body: 'action=get_frontpage_sessions&offset=0'
-      });
-      ajaxHtml = await ajaxResponse.text();
-      console.log(`  AJAX HTML length: ${ajaxHtml.length}`);
-    } catch (e) {
-      console.log(`  AJAX fetch failed, using homepage only: ${e.message}`);
-    }
-    
-    // Combine both HTML sources
-    const combinedHtml = html + ajaxHtml;
-    
-    // Debug: check for movie_preview
-    const previewCount = (combinedHtml.match(/movie_preview/g) || []).length;
-    const todayCount = (combinedHtml.match(/today/gi) || []).length;
-    console.log(`  Found ${previewCount} 'movie_preview' occurrences, ${todayCount} 'today' occurrences`);
-    
-    // Parse the HTML to extract sessions
-    // Split by movie_preview session divs and process each
-    const blocks = combinedHtml.split(/<div[^>]*class="[^"]*movie_preview[^"]*session/i);
-    console.log(`  Split into ${blocks.length} blocks`);
-    
-    let todayBlocks = 0;
-    let titleMatches = 0;
-    
-    // First pass: extract all today's films with their times
-    const todayFilms = [];
-    
-    for (let i = 1; i < blocks.length; i++) { // Start at 1 to skip content before first match
-      const block = blocks[i];
-      
-      // Check if it's today
-      if (!/today/i.test(block)) continue;
-      todayBlocks++;
-      
-      // Extract time: "Today at 2pm" or "Today at 6:30pm"
-      const timeMatch = block.match(/today\s+at\s+(\d{1,2}(?::\d{2})?\s*(?:am|pm))/i);
-      const time = timeMatch ? timeMatch[1].toLowerCase().trim() : 'See website';
-      
-      // Check if it's a double feature
-      const isDouble = /double\s*feature/i.test(block);
-      
-      // Extract ALL titles from h2 > a tags (there may be multiple for double features)
-      const titles = [];
-      const urls = [];
-      const titleRegex = /<a[^>]*href="([^"]*\/films\/[^"]*)"[^>]*>([^<]+)/gi;
-      let match;
-      while ((match = titleRegex.exec(block)) !== null) {
-        let title = match[2].trim();
-        // Remove rating brackets like [PG], [M]
-        title = title.replace(/\s*\[.*?\]\s*$/, '').trim();
-        if (title && !titles.includes(title)) {
-          titles.push(title);
-          urls.push(match[1]);
-        }
-      }
-      
-      if (titles.length === 0) continue;
-      
-      if (isDouble && titles.length >= 2) {
-        // Double feature - add as combined entry
-        todayFilms.push({ 
-          title: titles.join(' + '), 
-          time, 
-          url: urls[0],
-          isDouble: true,
-          film1: titles[0],
-          film2: titles[1]
-        });
-      } else {
-        // Single film
-        todayFilms.push({ title: titles[0], time, url: urls[0], isDouble: false });
-      }
-    }
-    
-    console.log(`  Today films: ${todayFilms.map(f => f.title + ' @ ' + f.time).join(', ')}`);
-    console.log(`  Found ${todayFilms.length} today films before dedup`);
-    
-    // Dedupe by title (same film might appear in multiple blocks)
-    const seenTitles = new Set();
-    for (const film of todayFilms) {
-      if (seenTitles.has(film.title)) continue;
-      seenTitles.add(film.title);
-      
-      if (film.isDouble) {
-        sessions.push({
-          title: film.title,
-          times: [film.time],
-          url: film.url,
-          isDoubleFeature: true,
-          film1: film.film1,
-          film2: film.film2
-        });
-      } else {
-        sessions.push({
-          title: film.title,
-          times: [film.time],
-          url: film.url,
-          isDoubleFeature: false
-        });
-      }
-    }
-    
-    console.log(`  Found ${sessions.length} films`);
-  } catch (error) {
-    console.error('  Astor Theatre scrape error:', error.message);
-  }
-  
-  return { 
-    cinema: 'The Astor Theatre', 
-    url, 
-    sessions
-  };
+async function scrapeAstor(page, targetDate) {
+  console.log(`Scraping Astor Theatre for ${targetDate}... [NOT YET IMPLEMENTED]`);
+  // TODO: Migrate from scraper.js
+  return { cinema: 'The Astor Theatre', url: 'https://www.astortheatre.net.au/', sessions: [] };
 }
 
-// Helper function to extract Palace cinema data from __NEXT_DATA__
-async function scrapePalaceFromNextData(page, cinemaName, url, cinemaId) {
-  console.log(`Scraping ${cinemaName}...`);
-  const sessions = [];
-  
-  try {
-    await page.goto(url, { waitUntil: 'networkidle2', timeout: 60000 });
-    await page.waitForTimeout(3000);
-    
-    // Get today's date in Melbourne timezone (YYYY-MM-DD format)
-    const now = new Date();
-    const melbourneDate = new Date(now.toLocaleString('en-US', { timeZone: 'Australia/Melbourne' }));
-    const year = melbourneDate.getFullYear();
-    const month = String(melbourneDate.getMonth() + 1).padStart(2, '0');
-    const day = String(melbourneDate.getDate()).padStart(2, '0');
-    const todayStr = `${year}-${month}-${day}`;
-    
-    console.log(`  Looking for date: ${todayStr}`);
-    
-    const result = await page.evaluate((todayStr, cinemaIdParam) => {
-      const items = [];
-      const debug = { found: false, movieCount: 0, todaySessionCount: 0, cinemaId: null };
-      
-      // Find __NEXT_DATA__ script tag
-      const nextDataScript = document.getElementById('__NEXT_DATA__');
-      if (!nextDataScript) {
-        return { items, debug, error: 'No __NEXT_DATA__ found' };
-      }
-      
-      try {
-        const data = JSON.parse(nextDataScript.textContent);
-        
-        // Auto-detect cinema ID from the page data if not provided
-        const cinemaId = cinemaIdParam || data?.props?.pageProps?.cinema?.cinemaId;
-        debug.cinemaId = cinemaId;
-        
-        if (!cinemaId) {
-          return { items, debug, error: 'Could not determine cinema ID' };
-        }
-        
-        const movies = data?.props?.pageProps?.sessions || [];
-        debug.found = true;
-        debug.movieCount = movies.length;
-        
-        movies.forEach(movie => {
-          const title = movie.title;
-          const slug = movie.slug;
-          if (!title) return;
-          
-          // Filter sessions for today and this cinema
-          const todaySessions = (movie.sessions || []).filter(session => {
-            // Date is stored as UTC but represents local time
-            // e.g., "2026-01-01T10:00:00.000Z" means 10:00am Melbourne time
-            const sessionDate = session.date?.substring(0, 10); // Get YYYY-MM-DD
-            const matchesCinema = session.cinemaId === cinemaId;
-            return sessionDate === todayStr && matchesCinema;
-          });
-          
-          if (todaySessions.length > 0) {
-            debug.todaySessionCount += todaySessions.length;
-            
-            // Extract times (the hour:minute from the ISO string)
-            const times = todaySessions.map(session => {
-              // "2026-01-01T10:00:00.000Z" -> "10:00"
-              const timeStr = session.date?.substring(11, 16); // "HH:MM"
-              const [hours, minutes] = timeStr.split(':');
-              const hour = parseInt(hours, 10);
-              const ampm = hour >= 12 ? 'pm' : 'am';
-              const hour12 = hour === 0 ? 12 : hour > 12 ? hour - 12 : hour;
-              return `${hour12}:${minutes}${ampm}`;
-            });
-            
-            items.push({
-              title,
-              times,
-              url: `https://www.palacecinemas.com.au/movies/${slug}`
-            });
-          }
-        });
-      } catch (e) {
-        return { items, debug, error: e.message };
-      }
-      
-      return { items, debug };
-    }, todayStr, cinemaId);
-    
-    if (result.error) {
-      console.log(`  Error: ${result.error}`);
-    } else {
-      console.log(`  Debug - cinemaId: ${result.debug.cinemaId}, movies: ${result.debug.movieCount}, today sessions: ${result.debug.todaySessionCount}`);
-    }
-    
-    for (const film of result.items) {
-      sessions.push(film);
-    }
-    
-    console.log(`  Found ${sessions.length} films`);
-  } catch (error) {
-    console.error(`  ${cinemaName} scrape error:`, error.message);
-  }
-  
-  return { cinema: cinemaName, url, sessions };
+async function scrapePalaceComo(page, targetDate) {
+  console.log(`Scraping Palace Como for ${targetDate}... [NOT YET IMPLEMENTED]`);
+  // TODO: Migrate from scraper.js
+  return { cinema: 'Palace Como', url: 'https://www.palacecinemas.com.au/cinemas/palace-cinema-como', sessions: [] };
 }
 
-async function scrapePalaceComo(page) {
-  return scrapePalaceFromNextData(
-    page,
-    'Palace Como',
-    'https://www.palacecinemas.com.au/cinemas/palace-cinema-como',
-    '155'
-  );
+async function scrapePalaceKino(page, targetDate) {
+  console.log(`Scraping Palace Kino for ${targetDate}... [NOT YET IMPLEMENTED]`);
+  // TODO: Migrate from scraper.js
+  return { cinema: 'Palace Kino', url: 'https://www.palacecinemas.com.au/cinemas/the-kino-melbourne', sessions: [] };
 }
 
-async function scrapePalaceKino(page) {
-  return scrapePalaceFromNextData(
-    page,
-    'Palace Kino',
-    'https://www.palacecinemas.com.au/cinemas/the-kino-melbourne',
-    null  // Will auto-detect from page data
-  );
+async function scrapePalaceWestgarth(page, targetDate) {
+  console.log(`Scraping Palace Westgarth for ${targetDate}... [NOT YET IMPLEMENTED]`);
+  // TODO: Migrate from scraper.js
+  return { cinema: 'Palace Westgarth', url: 'https://www.palacecinemas.com.au/cinemas/palace-westgarth', sessions: [] };
 }
 
-async function scrapePalaceWestgarth(page) {
-  return scrapePalaceFromNextData(
-    page,
-    'Palace Westgarth',
-    'https://www.palacecinemas.com.au/cinemas/palace-westgarth',
-    null  // Will auto-detect from page data
-  );
+async function scrapePentridge(page, targetDate) {
+  console.log(`Scraping Pentridge Cinema for ${targetDate}... [NOT YET IMPLEMENTED]`);
+  // TODO: Migrate from scraper.js
+  return { cinema: 'Pentridge Cinema', url: 'https://www.palacecinemas.com.au/cinemas/pentridge-cinema', sessions: [] };
 }
 
-async function scrapePentridge(page) {
-  return scrapePalaceFromNextData(
-    page,
-    'Pentridge Cinema',
-    'https://www.palacecinemas.com.au/cinemas/pentridge-cinema',
-    null  // Will auto-detect from page data
-  );
+async function scrapeSunTheatre(page, targetDate) {
+  console.log(`Scraping Sun Theatre for ${targetDate}... [NOT YET IMPLEMENTED]`);
+  // TODO: Migrate from scraper.js
+  return { cinema: 'Sun Theatre', url: 'https://suntheatre.com.au/now-playing/', sessions: [] };
 }
 
-async function scrapeSunTheatre(page) {
-  console.log('Scraping Sun Theatre...');
-  const sessions = [];
-  const url = 'https://suntheatre.com.au/now-playing/';
-  
-  // Build today's date string in Sun Theatre format: "Thu 1st Jan:" (no year, with colon)
-  const now = new Date();
-  const melbourneTime = new Date(now.toLocaleString('en-US', { timeZone: 'Australia/Melbourne' }));
-  const dayNames = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
-  const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
-  const day = melbourneTime.getDate();
-  const suffix = (day === 1 || day === 21 || day === 31) ? 'st' : 
-                 (day === 2 || day === 22) ? 'nd' : 
-                 (day === 3 || day === 23) ? 'rd' : 'th';
-  const todayStr = `${dayNames[melbourneTime.getDay()]} ${day}${suffix} ${months[melbourneTime.getMonth()]}:`;
-  
-  console.log(`  Looking for date: ${todayStr}`);
-  
-  try {
-    await page.goto(url, { waitUntil: 'networkidle2', timeout: 60000 });
-    await page.waitForTimeout(3000);
-    
-    const result = await page.evaluate((todayStr) => {
-      const items = [];
-      const debug = { moviesFound: 0, todayMatches: 0 };
-      
-      document.querySelectorAll('.wpcinema_allshowing_movie').forEach(movieDiv => {
-        debug.moviesFound++;
-        
-        // Get title
-        const titleEl = movieDiv.querySelector('.movietitle a');
-        if (!titleEl) return;
-        
-        // Get text content but exclude the rating span
-        let title = '';
-        titleEl.childNodes.forEach(node => {
-          if (node.nodeType === Node.TEXT_NODE) {
-            title += node.textContent;
-          }
-        });
-        title = title.trim();
-        if (!title) return;
-        
-        // Get movie URL
-        const movieUrl = titleEl.getAttribute('href') || '';
-        
-        // Find today's session wrap - must be inside .wpc-sessions
-        const sessionsContainer = movieDiv.querySelector('.wpc-sessions');
-        if (!sessionsContainer) return; // Skip items without session times (special events)
-        
-        const sessionWraps = sessionsContainer.querySelectorAll('.wpc-session-wrap');
-        let todayTimes = [];
-        let foundToday = false;
-        
-        sessionWraps.forEach(wrap => {
-          const dateLabel = wrap.querySelector('.wpc-movie-label');
-          if (!dateLabel) return;
-          
-          const dateText = dateLabel.textContent?.trim() || '';
-          // Check if this is today (dateText is like "Wed 31st Dec 2025:")
-          if (dateText.startsWith(todayStr)) {
-            foundToday = true;
-            debug.todayMatches++;
-            // Get all times from this wrap ONLY
-            const timesDiv = wrap.querySelector('.wpc-session-times');
-            if (timesDiv) {
-              timesDiv.querySelectorAll('span[class^="wpcinema_session"]').forEach(span => {
-                // Time is either in an <a> or directly in the span (if closed)
-                const link = span.querySelector('a');
-                let timeText = '';
-                if (link) {
-                  // Get just the time, not the category icons
-                  timeText = link.childNodes[0]?.textContent?.trim() || '';
-                } else {
-                  // Session closed - get text from span
-                  timeText = span.childNodes[0]?.textContent?.trim() || '';
-                }
-                if (timeText && /^\d{1,2}:\d{2}(am|pm)$/i.test(timeText)) {
-                  todayTimes.push(timeText);
-                }
-              });
-            }
-          }
-        });
-        
-        // Only add films that have sessions today
-        if (foundToday && todayTimes.length > 0) {
-          items.push({
-            title,
-            times: todayTimes,
-            url: movieUrl
-          });
-        }
-      });
-      
-      return { items, debug };
-    }, todayStr);
-    
-    console.log(`  Debug: ${result.debug.moviesFound} movies found, ${result.debug.todayMatches} today matches`);
-    
-    for (const film of result.items) {
-      sessions.push(film);
-    }
-    
-    console.log(`  Found ${sessions.length} films`);
-  } catch (error) {
-    console.error('  Sun Theatre scrape error:', error.message);
-  }
-  
-  return { cinema: 'Sun Theatre', url, sessions };
+async function scrapeImax(page, targetDate) {
+  console.log(`Scraping Imax Melbourne for ${targetDate}... [NOT YET IMPLEMENTED]`);
+  // TODO: Migrate from scraper.js
+  return { cinema: 'Imax Melbourne', url: 'https://imaxmelbourne.com.au/session_times_and_tickets', sessions: [] };
 }
 
-async function scrapeImax(page) {
-  console.log('Scraping Imax Melbourne...');
-  const sessions = [];
-  const url = 'https://imaxmelbourne.com.au/session_times_and_tickets';
-  
-  try {
-    await page.goto(url, { waitUntil: 'networkidle2', timeout: 60000 });
-    await page.waitForTimeout(3000);
-    
-    const films = await page.evaluate(() => {
-      const items = [];
-      const filmMap = new Map();
-      
-      // Find all session list items
-      document.querySelectorAll('li').forEach(li => {
-        const timeEl = li.querySelector('span.time');
-        const movieEl = li.querySelector('a.movie');
-        
-        if (!timeEl || !movieEl) return;
-        
-        const time = timeEl.textContent?.trim();
-        let title = movieEl.textContent?.trim();
-        const movieUrl = movieEl.getAttribute('href');
-        
-        if (!time || !title) return;
-        
-        // Clean up title - remove rating brackets like [M], [PG]
-        title = title.replace(/\s*\[[^\]]*\]\s*$/, '').trim();
-        
-        // Check if premium is available (has a link, not soldout span)
-        const premiumLink = li.querySelector('a.buy-tickets span.label-time');
-        const premiumSoldout = li.querySelector('span.buy-tickets.soldout');
-        
-        let hasPremium = false;
-        if (premiumLink && premiumLink.textContent?.trim() === 'Premium') {
-          hasPremium = true;
-        }
-        // If there's a soldout span for Premium, it means premium exists but is sold out
-        const premiumExists = hasPremium || (premiumSoldout && premiumSoldout.textContent?.trim() === 'Premium');
-        
-        // Group by film title
-        if (filmMap.has(title)) {
-          const film = filmMap.get(title);
-          film.times.push(time);
-          film.premiumTimes = film.premiumTimes || [];
-          if (hasPremium) {
-            film.premiumTimes.push(time);
-          }
-        } else {
-          filmMap.set(title, {
-            title,
-            times: [time],
-            premiumTimes: hasPremium ? [time] : [],
-            url: movieUrl ? `https://imaxmelbourne.com.au${movieUrl}` : url
-          });
-        }
-      });
-      
-      filmMap.forEach(film => items.push(film));
-      return items;
-    });
-    
-    for (const film of films) {
-      sessions.push(film);
-    }
-    
-    console.log(`  Found ${sessions.length} films`);
-  } catch (error) {
-    console.error('  Imax Melbourne scrape error:', error.message);
-  }
-  
-  return { cinema: 'Imax Melbourne', url, sessions };
-}
+// ============================================================================
+// TMDB ENRICHMENT
+// ============================================================================
 
 async function enrichWithTMDB(cinemaData) {
   console.log(`Enriching ${cinemaData.cinema} with TMDB data...`);
@@ -1189,14 +442,16 @@ async function enrichWithTMDB(cinemaData) {
   return cinemaData;
 }
 
+// ============================================================================
+// MAIN
+// ============================================================================
+
 async function main() {
   console.log('='.repeat(60));
-  console.log('Melbourne Cinema Scraper');
+  console.log('Melbourne Cinema Scraper v2 (Multi-day)');
   console.log('='.repeat(60));
-  console.log('Date:', new Date().toLocaleDateString('en-AU', { 
-    weekday: 'long', year: 'numeric', month: 'long', day: 'numeric',
-    timeZone: 'Australia/Melbourne'
-  }));
+  console.log('Today:', getDisplayDate(0));
+  console.log('Tomorrow:', getDisplayDate(1));
   console.log('='.repeat(60));
   
   if (!TMDB_API_KEY) {
@@ -1214,8 +469,6 @@ async function main() {
   await page.setUserAgent('Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36');
   await page.setViewport({ width: 1920, height: 1080 });
   
-  const results = [];
-  
   const scrapers = [
     scrapeACMI,
     scrapeBrunswickPictureHouse,
@@ -1232,26 +485,40 @@ async function main() {
     scrapeSunTheatre
   ];
   
-  for (const scraper of scrapers) {
-    try {
-      console.log('');
-      const data = await scraper(page);
-      const enriched = await enrichWithTMDB(data);
-      results.push(enriched);
-    } catch (error) {
-      console.error(`Scraper failed:`, error.message);
+  // Scrape for configured number of days
+  const days = [];
+  for (let dayOffset = 0; dayOffset < DAYS_TO_SCRAPE; dayOffset++) {
+    const targetDate = getMelbourneDateStr(dayOffset);
+    const displayDate = getDisplayDate(dayOffset);
+    
+    console.log('\n' + '='.repeat(60));
+    console.log(`Scraping for: ${displayDate} (${targetDate})`);
+    console.log('='.repeat(60));
+    
+    const results = [];
+    for (const scraper of scrapers) {
+      try {
+        console.log('');
+        const data = await scraper(page, targetDate);
+        const enriched = await enrichWithTMDB(data);
+        results.push(enriched);
+      } catch (error) {
+        console.error(`Scraper failed:`, error.message);
+      }
     }
+    
+    days.push({
+      date: displayDate,
+      dateKey: targetDate,
+      cinemas: results
+    });
   }
   
   await browser.close();
   
   const output = {
     generatedAt: new Date().toISOString(),
-    date: new Date().toLocaleDateString('en-AU', { 
-      weekday: 'long', year: 'numeric', month: 'long', day: 'numeric',
-      timeZone: 'Australia/Melbourne'
-    }),
-    cinemas: results
+    days: days
   };
   
   const dataDir = path.join(__dirname, '..', 'data');
@@ -1260,16 +527,19 @@ async function main() {
   }
   
   fs.writeFileSync(
-    path.join(dataDir, 'sessions.json'),
+    path.join(dataDir, OUTPUT_FILENAME),
     JSON.stringify(output, null, 2)
   );
   
   console.log('\n' + '='.repeat(60));
   console.log('COMPLETE');
   console.log('='.repeat(60));
-  console.log(`Total cinemas: ${results.length}`);
-  console.log(`Total films: ${results.reduce((sum, c) => sum + c.sessions.length, 0)}`);
-  results.forEach(c => console.log(`  ${c.cinema}: ${c.sessions.length} films`));
+  for (const day of days) {
+    console.log(`\n${day.date}:`);
+    console.log(`  Total cinemas: ${day.cinemas.length}`);
+    console.log(`  Total films: ${day.cinemas.reduce((sum, c) => sum + c.sessions.length, 0)}`);
+    day.cinemas.forEach(c => console.log(`    ${c.cinema}: ${c.sessions.length} films`));
+  }
 }
 
 main().catch(error => {

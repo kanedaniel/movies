@@ -627,11 +627,53 @@
         padding: 0.4rem 0.6rem;
       }
     }
+    /* Day picker in title */
+    .day-picker-container {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.3em;
+    }
+    
+    .day-picker {
+      display: inline-block;
+      background: var(--gold);
+      color: var(--bg-dark);
+      padding: 0.1em 0.4em;
+    }
+    
+    .day-arrow {
+      background: none;
+      border: none;
+      color: var(--gold);
+      font-size: 1em;
+      font-weight: 700;
+      cursor: pointer;
+      padding: 0.1em 0.2em;
+      transition: all 0.2s;
+      line-height: 1;
+    }
+    
+    .day-arrow:hover:not(:disabled) {
+      color: var(--cream);
+      transform: scale(1.1);
+    }
+    
+    .day-arrow:disabled {
+      color: var(--border);
+      cursor: default;
+      opacity: 0.5;
+    }
   </style>
 </head>
 <body>
   <header>
-    <h1>What's on at the movies&nbsp;today?</h1>
+    <h1>What's on at the movies<br>
+      <span class="day-picker-container">
+        <button class="day-arrow day-arrow-prev" id="day-prev" aria-label="Previous day">‹</button>
+        <span class="day-picker" id="day-picker">today</span>
+        <button class="day-arrow day-arrow-next" id="day-next" aria-label="Next day">›</button>
+      </span>
+    </h1>
     <div class="date-banner" id="date-banner">Loading...</div>
     <p class="site-description">A site what's got Melbourne movie times built by Kane Daniel. Always confirm session times on the cinema website before heading out. DM me bugs and feature requests on <a href="https://www.instagram.com/normal_lifter/" target="_blank" rel="noopener">IG</a>.</p>
   </header>
@@ -667,8 +709,13 @@
   </footer>
 
   <script>
+    let globalData = null;
+    let currentDayIndex = 0;
+    
     // Check if a time string (e.g., "10:30am", "2:00pm") is in the past for Melbourne timezone
-    function isTimePast(timeStr) {
+    // Only applies to today (dayIndex 0)
+    function isTimePast(timeStr, dayIndex) {
+      if (dayIndex !== 0) return false; // Only grey out times for today
       if (!timeStr || timeStr.toLowerCase().includes('see website')) return false;
       
       // Parse standardised format: "H:MMam" or "H:MMpm"
@@ -695,226 +742,293 @@
     
     async function loadSessions() {
       const main = document.getElementById('main');
-      const dateBanner = document.getElementById('date-banner');
-      const cinemaNav = document.getElementById('cinema-nav');
       
       try {
-        const response = await fetch('data/sessions.json');
+        const response = await fetch('data/sessions-v2.json');
         if (!response.ok) throw new Error('Failed to load session data');
         
-        const data = await response.json();
-        dateBanner.textContent = data.date;
+        globalData = await response.json();
         
-        if (!data.cinemas || data.cinemas.length === 0) {
+        if (!globalData.days || globalData.days.length === 0) {
           main.innerHTML = '<div class="error-state"><h2>No Sessions Found</h2><p>Check back tomorrow!</p></div>';
           return;
         }
         
-        // Sort cinemas alphabetically (ignoring leading "The")
-        const sortedCinemas = [...data.cinemas].sort((a, b) => {
-          const nameA = a.cinema.replace(/^The\s+/i, '');
-          const nameB = b.cinema.replace(/^The\s+/i, '');
-          return nameA.localeCompare(nameB);
-        });
+        // Build day tabs
+        buildDayTabs();
         
-        // Load saved preferences
-        let hiddenCinemas = [];
-        try {
-          const saved = localStorage.getItem('hiddenCinemas');
-          if (saved) hiddenCinemas = JSON.parse(saved);
-        } catch (e) {}
+        // Render first day
+        renderDay(0);
         
-        // Build cinema nav
-        let navHtml = '';
-        sortedCinemas.forEach(cinema => {
-          const cinemaId = cinema.cinema.toLowerCase().replace(/[^a-z0-9]/g, '-');
-          const isHidden = hiddenCinemas.includes(cinemaId);
-          navHtml += `<button class="cinema-toggle ${isHidden ? '' : 'active'}" data-cinema="${cinemaId}">${cinema.cinema}</button>`;
-        });
-        cinemaNav.innerHTML = navHtml;
-        
-        // Add toggle listeners
-        cinemaNav.querySelectorAll('.cinema-toggle').forEach(btn => {
-          btn.addEventListener('click', () => {
-            btn.classList.toggle('active');
-            const cinemaId = btn.dataset.cinema;
-            const section = document.getElementById(`cinema-${cinemaId}`);
-            if (section) {
-              section.classList.toggle('hidden');
-            }
-            
-            // Save preference
-            try {
-              const hidden = Array.from(cinemaNav.querySelectorAll('.cinema-toggle:not(.active)'))
-                .map(b => b.dataset.cinema);
-              localStorage.setItem('hiddenCinemas', JSON.stringify(hidden));
-            } catch (e) {}
-          });
-        });
-        
-        let html = '';
-        for (const cinema of sortedCinemas) {
-          const cinemaId = cinema.cinema.toLowerCase().replace(/[^a-z0-9]/g, '-');
-          const hasMoreThanThree = cinema.sessions && cinema.sessions.length > 3;
-          const isHidden = hiddenCinemas.includes(cinemaId);
-          
-          html += `<section class="cinema-section ${isHidden ? 'hidden' : ''}" id="cinema-${cinemaId}">
-            <div class="cinema-header">
-              <h2>${esc(cinema.cinema)}</h2>
-              <a href="${esc(cinema.url)}" target="_blank" rel="noopener">Visit website →</a>
-            </div>
-            ${cinema.note ? `<p class="cinema-note">${esc(cinema.note)}</p>` : ''}`;
-          
-          if (cinema.sessions && cinema.sessions.length > 0) {
-            // Sort by number of sessions (descending), then alphabetically
-            const sortedSessions = [...cinema.sessions].sort((a, b) => {
-              const aCount = (a.times || []).filter(t => !t.toLowerCase().includes('see website')).length;
-              const bCount = (b.times || []).filter(t => !t.toLowerCase().includes('see website')).length;
-              if (bCount !== aCount) return bCount - aCount;
-              return a.title.localeCompare(b.title);
-            });
-            
-            // Add premium toggle for IMAX before film list
-            if (cinema.cinema === 'Imax Melbourne') {
-              html += `<div class="premium-toggle-container visible">
-                <input type="checkbox" id="premium-toggle" class="premium-toggle">
-                <label for="premium-toggle">Only show sessions with premium seats available</label>
-              </div>
-              <div class="no-premium-sessions" id="no-premium-message">No screenings</div>`;
-            }
-            
-            html += `<div class="film-list ${hasMoreThanThree ? 'collapsed' : ''}" data-cinema="${cinemaId}">`;
-            
-            for (const session of sortedSessions) {
-              const isDouble = session.isDoubleFeature || session.films;
-              const isImax = cinema.cinema === 'Imax Melbourne';
-              
-              let poster;
-              if (isDouble && session.films && session.films.length >= 2 && session.films[0]?.posterPath && session.films[1]?.posterPath) {
-                // Double feature with two posters - create cycling container
-                poster = `<div class="double-poster-container" data-posters='${JSON.stringify([session.films[0].posterPath, session.films[1].posterPath])}'>
-                  <img src="${esc(session.films[0].posterPath)}" alt="" class="film-poster" loading="lazy">
-                  <img src="${esc(session.films[1].posterPath)}" alt="" class="film-poster poster-hidden" loading="lazy">
-                </div>`;
-              } else if (session.posterPath) {
-                poster = `<img src="${esc(session.posterPath)}" alt="" class="film-poster" loading="lazy">`;
-              } else {
-                poster = '<div class="film-poster-placeholder">🎬</div>';
-              }
-              
-              const meta = [];
-              if (session.year) meta.push(`<span>${session.year}</span>`);
-              if (session.runtime) {
-                const hours = Math.floor(session.runtime / 60);
-                const mins = session.runtime % 60;
-                const runtimeStr = hours > 0 ? `${hours}h ${mins.toString().padStart(2, '0')}m` : `${mins}m`;
-                meta.push(`<span>${runtimeStr}</span>`);
-              }
-              if (session.rating) meta.push(`<span class="rating">★ ${session.rating.toFixed(1)}</span>`);
-              if (session.trailerUrl) meta.push(`<a href="${esc(session.trailerUrl)}" target="_blank" rel="noopener" class="trailer-link">▶ Trailer</a>`);
-              
-              // For IMAX, track which times have premium
-              const premiumTimes = session.premiumTimes || [];
-              const times = (session.times || ['See website']).map(t => {
-                const isGeneric = t.toLowerCase().includes('see website');
-                const hasPremium = isImax && premiumTimes.includes(t);
-                const isPast = isTimePast(t);
-                return `<span class="film-time ${isGeneric ? 'see-website' : ''} ${isPast ? 'past' : ''}" data-premium="${hasPremium}">${esc(t)}</span>`;
-              }).join('');
-              
-              // Check if this session has any premium times (for filtering)
-              const hasPremiumSession = isImax && premiumTimes.length > 0;
-              
-              // Get year for repertory filtering
-              const filmYear = session.year ? parseInt(session.year) : null;
-              
-              html += `<article class="film-card ${isDouble ? 'double-feature' : ''}" data-title="${esc(session.title.toLowerCase())}" data-has-premium="${hasPremiumSession}" data-year="${filmYear || ''}">
-                ${isDouble ? '<span class="double-feature-label">Double Feature</span>' : ''}
-                ${poster}
-                <div class="film-info">
-                  <h3><a href="${esc(session.url)}" target="_blank" rel="noopener">${esc(session.title)}</a></h3>
-                  ${meta.length ? `<div class="film-meta">${meta.join('')}</div>` : ''}
-                  ${session.overview ? `<p class="film-overview">${esc(session.overview)}</p>` : ''}
-                </div>
-                <div class="film-times-col">${times}</div>
-              </article>`;
-            }
-            
-            html += '</div>';
-            
-            if (hasMoreThanThree) {
-              html += `<button class="show-more-btn" data-cinema="${cinemaId}">MORE ▼</button>`;
-            }
-          } else {
-            html += '<p class="no-sessions">No sessions listed for today</p>';
-          }
-          html += '</section>';
-        }
-        main.innerHTML = html;
-        
-        // Add premium toggle listener
-        const premiumToggle = document.getElementById('premium-toggle');
-        const noPremiumMessage = document.getElementById('no-premium-message');
-        if (premiumToggle) {
-          premiumToggle.addEventListener('change', () => {
-            const imaxSection = document.getElementById('cinema-imax-melbourne');
-            if (!imaxSection) return;
-            
-            const filmCards = imaxSection.querySelectorAll('.film-card');
-            let visibleCount = 0;
-            
-            filmCards.forEach(card => {
-              if (premiumToggle.checked) {
-                // Show only films with premium times
-                if (card.dataset.hasPremium === 'true') {
-                  card.style.display = '';
-                  visibleCount++;
-                } else {
-                  card.style.display = 'none';
-                }
-              } else {
-                card.style.display = '';
-                visibleCount++;
-              }
-            });
-            
-            // Show/hide empty state message
-            if (noPremiumMessage) {
-              if (premiumToggle.checked && visibleCount === 0) {
-                noPremiumMessage.classList.add('visible');
-              } else {
-                noPremiumMessage.classList.remove('visible');
-              }
-            }
-          });
-        }
-        
-        // Add show more/less button listeners
-        document.querySelectorAll('.show-more-btn').forEach(btn => {
-          btn.addEventListener('click', () => {
-            const cinemaId = btn.dataset.cinema;
-            const filmList = document.querySelector(`.film-list[data-cinema="${cinemaId}"]`);
-            if (filmList) {
-              const isCollapsed = filmList.classList.contains('collapsed');
-              if (isCollapsed) {
-                filmList.classList.remove('collapsed');
-                filmList.classList.add('expanded');
-                btn.textContent = 'LESS ▲';
-              } else {
-                filmList.classList.remove('expanded');
-                filmList.classList.add('collapsed');
-                btn.textContent = 'MORE ▼';
-              }
-            }
-          });
-        });
-        
-        // Start cycling posters for double features
-        startPosterCycling();
       } catch (error) {
         console.error('Error:', error);
         main.innerHTML = `<div class="error-state"><h2>Unable to Load</h2><p>Please refresh the page.</p></div>`;
       }
+    }
+    
+    function buildDayTabs() {
+      const prevBtn = document.getElementById('day-prev');
+      const nextBtn = document.getElementById('day-next');
+      
+      if (!prevBtn || !nextBtn || !globalData.days) return;
+      
+      prevBtn.addEventListener('click', () => {
+        if (currentDayIndex > 0) {
+          renderDay(currentDayIndex - 1);
+          updateDayPickerText();
+          updateArrowStates();
+        }
+      });
+      
+      nextBtn.addEventListener('click', () => {
+        if (currentDayIndex < globalData.days.length - 1) {
+          renderDay(currentDayIndex + 1);
+          updateDayPickerText();
+          updateArrowStates();
+        }
+      });
+      
+      updateArrowStates();
+    }
+    
+    function updateArrowStates() {
+      const prevBtn = document.getElementById('day-prev');
+      const nextBtn = document.getElementById('day-next');
+      
+      if (!prevBtn || !nextBtn || !globalData.days) return;
+      
+      prevBtn.disabled = currentDayIndex === 0;
+      nextBtn.disabled = currentDayIndex === globalData.days.length - 1;
+    }
+    
+    function updateDayPickerText() {
+      const dayPicker = document.getElementById('day-picker');
+      if (!dayPicker) return;
+      
+      let text;
+      if (currentDayIndex === 0) {
+        text = 'today';
+      } else if (currentDayIndex === 1) {
+        text = 'tomorrow';
+      } else {
+        text = globalData.days[currentDayIndex].date.split(',')[0].toLowerCase();
+      }
+      
+      dayPicker.textContent = text;
+    }
+    
+    function renderDay(dayIndex) {
+      currentDayIndex = dayIndex;
+      const main = document.getElementById('main');
+      const dateBanner = document.getElementById('date-banner');
+      const cinemaNav = document.getElementById('cinema-nav');
+      
+      const dayData = globalData.days[dayIndex];
+      if (!dayData) return;
+      
+      dateBanner.textContent = dayData.date;
+      
+      const cinemas = dayData.cinemas || [];
+      
+      if (cinemas.length === 0) {
+        main.innerHTML = '<div class="error-state"><h2>No Sessions Found</h2><p>Check back later!</p></div>';
+        return;
+      }
+      
+      // Sort cinemas alphabetically (ignoring leading "The")
+      const sortedCinemas = [...cinemas].sort((a, b) => {
+        const nameA = a.cinema.replace(/^The\s+/i, '');
+        const nameB = b.cinema.replace(/^The\s+/i, '');
+        return nameA.localeCompare(nameB);
+      });
+      
+      // Load saved preferences
+      let hiddenCinemas = [];
+      try {
+        const saved = localStorage.getItem('hiddenCinemas');
+        if (saved) hiddenCinemas = JSON.parse(saved);
+      } catch (e) {}
+      
+      // Build cinema nav
+      let navHtml = '';
+      sortedCinemas.forEach(cinema => {
+        const cinemaId = cinema.cinema.toLowerCase().replace(/[^a-z0-9]/g, '-');
+        const isHidden = hiddenCinemas.includes(cinemaId);
+        navHtml += `<button class="cinema-toggle ${isHidden ? '' : 'active'}" data-cinema="${cinemaId}">${cinema.cinema}</button>`;
+      });
+      cinemaNav.innerHTML = navHtml;
+      
+      // Add toggle listeners
+      cinemaNav.querySelectorAll('.cinema-toggle').forEach(btn => {
+        btn.addEventListener('click', () => {
+          btn.classList.toggle('active');
+          const cinemaId = btn.dataset.cinema;
+          const section = document.getElementById(`cinema-${cinemaId}`);
+          if (section) {
+            section.classList.toggle('hidden');
+          }
+          
+          try {
+            const hidden = Array.from(cinemaNav.querySelectorAll('.cinema-toggle:not(.active)'))
+              .map(b => b.dataset.cinema);
+            localStorage.setItem('hiddenCinemas', JSON.stringify(hidden));
+          } catch (e) {}
+        });
+      });
+      
+      let html = '';
+      for (const cinema of sortedCinemas) {
+        const cinemaId = cinema.cinema.toLowerCase().replace(/[^a-z0-9]/g, '-');
+        const hasMoreThanThree = cinema.sessions && cinema.sessions.length > 3;
+        const isHidden = hiddenCinemas.includes(cinemaId);
+        
+        html += `<section class="cinema-section ${isHidden ? 'hidden' : ''}" id="cinema-${cinemaId}">
+          <div class="cinema-header">
+            <h2>${esc(cinema.cinema)}</h2>
+            <a href="${esc(cinema.url)}" target="_blank" rel="noopener">Visit website →</a>
+          </div>
+          ${cinema.note ? `<p class="cinema-note">${esc(cinema.note)}</p>` : ''}`;
+        
+        if (cinema.sessions && cinema.sessions.length > 0) {
+          const sortedSessions = [...cinema.sessions].sort((a, b) => {
+            const aCount = (a.times || []).filter(t => !t.toLowerCase().includes('see website')).length;
+            const bCount = (b.times || []).filter(t => !t.toLowerCase().includes('see website')).length;
+            if (bCount !== aCount) return bCount - aCount;
+            return a.title.localeCompare(b.title);
+          });
+          
+          if (cinema.cinema === 'Imax Melbourne') {
+            html += `<div class="premium-toggle-container visible">
+              <input type="checkbox" id="premium-toggle" class="premium-toggle">
+              <label for="premium-toggle">Only show sessions with premium seats available</label>
+            </div>
+            <div class="no-premium-sessions" id="no-premium-message">No screenings</div>`;
+          }
+          
+          html += `<div class="film-list ${hasMoreThanThree ? 'collapsed' : ''}" data-cinema="${cinemaId}">`;
+          
+          for (const session of sortedSessions) {
+            const isDouble = session.isDoubleFeature || session.films;
+            const isImax = cinema.cinema === 'Imax Melbourne';
+            
+            let poster;
+            if (isDouble && session.films && session.films.length >= 2 && session.films[0]?.posterPath && session.films[1]?.posterPath) {
+              poster = `<div class="double-poster-container" data-posters='${JSON.stringify([session.films[0].posterPath, session.films[1].posterPath])}'>
+                <img src="${esc(session.films[0].posterPath)}" alt="" class="film-poster" loading="lazy">
+                <img src="${esc(session.films[1].posterPath)}" alt="" class="film-poster poster-hidden" loading="lazy">
+              </div>`;
+            } else if (session.posterPath) {
+              poster = `<img src="${esc(session.posterPath)}" alt="" class="film-poster" loading="lazy">`;
+            } else {
+              poster = '<div class="film-poster-placeholder">🎬</div>';
+            }
+            
+            const meta = [];
+            if (session.year) meta.push(`<span>${session.year}</span>`);
+            if (session.runtime) {
+              const hours = Math.floor(session.runtime / 60);
+              const mins = session.runtime % 60;
+              const runtimeStr = hours > 0 ? `${hours}h ${mins.toString().padStart(2, '0')}m` : `${mins}m`;
+              meta.push(`<span>${runtimeStr}</span>`);
+            }
+            if (session.rating) meta.push(`<span class="rating">★ ${session.rating.toFixed(1)}</span>`);
+            if (session.trailerUrl) meta.push(`<a href="${esc(session.trailerUrl)}" target="_blank" rel="noopener" class="trailer-link">▶ Trailer</a>`);
+            
+            const premiumTimes = session.premiumTimes || [];
+            const times = (session.times || ['See website']).map(t => {
+              const isGeneric = t.toLowerCase().includes('see website');
+              const hasPremium = isImax && premiumTimes.includes(t);
+              const isPast = isTimePast(t, currentDayIndex);
+              return `<span class="film-time ${isGeneric ? 'see-website' : ''} ${isPast ? 'past' : ''}" data-premium="${hasPremium}">${esc(t)}</span>`;
+            }).join('');
+            
+            const hasPremiumSession = isImax && premiumTimes.length > 0;
+            const filmYear = session.year ? parseInt(session.year) : null;
+            
+            html += `<article class="film-card ${isDouble ? 'double-feature' : ''}" data-title="${esc(session.title.toLowerCase())}" data-has-premium="${hasPremiumSession}" data-year="${filmYear || ''}">
+              ${isDouble ? '<span class="double-feature-label">Double Feature</span>' : ''}
+              ${poster}
+              <div class="film-info">
+                <h3><a href="${esc(session.url)}" target="_blank" rel="noopener">${esc(session.title)}</a></h3>
+                ${meta.length ? `<div class="film-meta">${meta.join('')}</div>` : ''}
+                ${session.overview ? `<p class="film-overview">${esc(session.overview)}</p>` : ''}
+              </div>
+              <div class="film-times-col">${times}</div>
+            </article>`;
+          }
+          
+          html += '</div>';
+          
+          if (hasMoreThanThree) {
+            html += `<button class="show-more-btn" data-cinema="${cinemaId}">MORE ▼</button>`;
+          }
+        } else {
+          html += '<p class="no-sessions">No sessions listed</p>';
+        }
+        html += '</section>';
+      }
+      main.innerHTML = html;
+      
+      // Add premium toggle listener
+      const premiumToggle = document.getElementById('premium-toggle');
+      const noPremiumMessage = document.getElementById('no-premium-message');
+      if (premiumToggle) {
+        premiumToggle.addEventListener('change', () => {
+          const imaxSection = document.getElementById('cinema-imax-melbourne');
+          if (!imaxSection) return;
+          
+          const filmCards = imaxSection.querySelectorAll('.film-card');
+          let visibleCount = 0;
+          
+          filmCards.forEach(card => {
+            if (premiumToggle.checked) {
+              if (card.dataset.hasPremium === 'true') {
+                card.style.display = '';
+                visibleCount++;
+              } else {
+                card.style.display = 'none';
+              }
+            } else {
+              card.style.display = '';
+              visibleCount++;
+            }
+          });
+          
+          if (noPremiumMessage) {
+            if (premiumToggle.checked && visibleCount === 0) {
+              noPremiumMessage.classList.add('visible');
+            } else {
+              noPremiumMessage.classList.remove('visible');
+            }
+          }
+        });
+      }
+      
+      // Add show more/less button listeners
+      document.querySelectorAll('.show-more-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+          const cinemaId = btn.dataset.cinema;
+          const filmList = document.querySelector(`.film-list[data-cinema="${cinemaId}"]`);
+          if (filmList) {
+            const isCollapsed = filmList.classList.contains('collapsed');
+            if (isCollapsed) {
+              filmList.classList.remove('collapsed');
+              filmList.classList.add('expanded');
+              btn.textContent = 'LESS ▲';
+            } else {
+              filmList.classList.remove('expanded');
+              filmList.classList.add('collapsed');
+              btn.textContent = 'MORE ▼';
+            }
+          }
+        });
+      });
+      
+      // Start cycling posters for double features
+      startPosterCycling();
+      
+      // Re-apply repertory filter if active
+      applyRepertoryFilter();
     }
     
     function startPosterCycling() {
@@ -954,20 +1068,17 @@
         }
       });
       
-      // Hide cinema sections with no visible films
       cinemaSections.forEach(section => {
         const visibleFilms = section.querySelectorAll('.film-card:not([style*="display: none"])');
         const filmList = section.querySelector('.film-list');
         const moreBtn = section.querySelector('.show-more-btn');
         
-        // When searching, expand all to show results
         if (query !== '' && filmList) {
           filmList.classList.remove('collapsed');
           filmList.classList.add('expanded');
           if (moreBtn) moreBtn.textContent = 'LESS ▲';
         }
         
-        // Don't hide sections that are already hidden by cinema toggle
         if (!section.classList.contains('hidden')) {
           if (visibleFilms.length === 0 && query !== '') {
             section.style.display = 'none';
@@ -982,9 +1093,7 @@
     const repertoryOnBtn = document.getElementById('repertory-on');
     const repertoryOffBtn = document.getElementById('repertory-off');
     const repertoryYearSpan = document.getElementById('repertory-year');
-    const repertoryDescription = document.getElementById('repertory-description');
     
-    // Calculate cutoff year (2 years before current year)
     const currentYear = new Date().getFullYear();
     const repertoryCutoff = currentYear - 2;
     repertoryYearSpan.textContent = repertoryCutoff + 1;
