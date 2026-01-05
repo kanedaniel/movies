@@ -1089,9 +1089,98 @@ async function scrapeSunTheatre(page, targetDate) {
 }
 
 async function scrapeImax(page, targetDate) {
-  console.log(`Scraping Imax Melbourne for ${targetDate}... [NOT YET IMPLEMENTED]`);
-  // TODO: Migrate from scraper.js
-  return { cinema: 'Imax Melbourne', url: 'https://imaxmelbourne.com.au/session_times_and_tickets', sessions: [] };
+  console.log(`Scraping Imax Melbourne for ${targetDate}...`);
+  const sessions = [];
+  const url = 'https://imaxmelbourne.com.au/session_times_and_tickets';
+  
+  try {
+    await page.goto(url, { waitUntil: 'networkidle2', timeout: 60000 });
+    await page.waitForTimeout(3000);
+    
+    // Select the target date from the dropdown
+    // The dropdown values are in YYYY-MM-DD format, which matches our targetDate
+    const dateSelected = await page.evaluate((dateValue) => {
+      const select = document.querySelector('#date_select');
+      if (!select) return false;
+      
+      // Check if the date exists in the options
+      const option = select.querySelector(`option[value="${dateValue}"]`);
+      if (!option) return false;
+      
+      select.value = dateValue;
+      // Trigger change event
+      select.dispatchEvent(new Event('change', { bubbles: true }));
+      return true;
+    }, targetDate);
+    
+    if (dateSelected) {
+      console.log(`  Selected date: ${targetDate}`);
+      await page.waitForTimeout(2000); // Wait for content to update
+    } else {
+      console.log(`  Could not find date: ${targetDate}, using default`);
+    }
+    
+    const films = await page.evaluate(() => {
+      const items = [];
+      const filmMap = new Map();
+      
+      // Find all session list items
+      document.querySelectorAll('li').forEach(li => {
+        const timeEl = li.querySelector('span.time');
+        const movieEl = li.querySelector('a.movie');
+        
+        if (!timeEl || !movieEl) return;
+        
+        const time = timeEl.textContent?.trim();
+        let title = movieEl.textContent?.trim();
+        const movieUrl = movieEl.getAttribute('href');
+        
+        if (!time || !title) return;
+        
+        // Clean up title - remove rating brackets like [M], [PG]
+        title = title.replace(/\s*\[[^\]]*\]\s*$/, '').trim();
+        
+        // Check if premium is available (has a link, not soldout span)
+        const premiumLink = li.querySelector('a.buy-tickets span.label-time');
+        const premiumSoldout = li.querySelector('span.buy-tickets.soldout');
+        
+        let hasPremium = false;
+        if (premiumLink && premiumLink.textContent?.trim() === 'Premium') {
+          hasPremium = true;
+        }
+        
+        // Group by film title
+        if (filmMap.has(title)) {
+          const film = filmMap.get(title);
+          film.times.push(time);
+          film.premiumTimes = film.premiumTimes || [];
+          if (hasPremium) {
+            film.premiumTimes.push(time);
+          }
+        } else {
+          filmMap.set(title, {
+            title,
+            times: [time],
+            premiumTimes: hasPremium ? [time] : [],
+            url: movieUrl ? `https://imaxmelbourne.com.au${movieUrl}` : 'https://imaxmelbourne.com.au/session_times_and_tickets'
+          });
+        }
+      });
+      
+      filmMap.forEach(film => items.push(film));
+      return items;
+    });
+    
+    for (const film of films) {
+      sessions.push(film);
+    }
+    
+    console.log(`  Found ${sessions.length} films`);
+  } catch (error) {
+    console.error('  Imax Melbourne scrape error:', error.message);
+  }
+  
+  return { cinema: 'Imax Melbourne', url, sessions };
 }
 
 // ============================================================================
