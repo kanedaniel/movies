@@ -631,6 +631,7 @@
     .day-picker-container {
       display: inline-flex;
       align-items: center;
+      justify-content: center;
       gap: 0.3em;
     }
     
@@ -639,6 +640,8 @@
       background: var(--gold);
       color: var(--bg-dark);
       padding: 0.1em 0.4em;
+      min-width: 180px;
+      text-align: center;
     }
     
     .day-arrow {
@@ -651,6 +654,7 @@
       padding: 0.1em 0.2em;
       transition: all 0.2s;
       line-height: 1;
+      flex-shrink: 0;
     }
     
     .day-arrow:hover:not(:disabled) {
@@ -667,7 +671,7 @@
 </head>
 <body>
   <header>
-    <h1>What's on at the movies<br>
+    <h1>What's on at da movies<br>
       <span class="day-picker-container">
         <button class="day-arrow day-arrow-prev" id="day-prev" aria-label="Previous day">‹</button>
         <span class="day-picker" id="day-picker">today</span>
@@ -744,7 +748,7 @@
       const main = document.getElementById('main');
       
       try {
-        const response = await fetch('data/sessions.json');
+        const response = await fetch('data/sessions-v2.json');
         if (!response.ok) throw new Error('Failed to load session data');
         
         globalData = await response.json();
@@ -788,6 +792,22 @@
         }
       });
       
+      // Keyboard shortcuts for arrow keys
+      document.addEventListener('keydown', (e) => {
+        // Don't trigger if user is typing in search box
+        if (document.activeElement.tagName === 'INPUT') return;
+        
+        if (e.key === 'ArrowLeft' && currentDayIndex > 0) {
+          renderDay(currentDayIndex - 1);
+          updateDayPickerText();
+          updateArrowStates();
+        } else if (e.key === 'ArrowRight' && currentDayIndex < globalData.days.length - 1) {
+          renderDay(currentDayIndex + 1);
+          updateDayPickerText();
+          updateArrowStates();
+        }
+      });
+      
       updateArrowStates();
     }
     
@@ -811,7 +831,8 @@
       } else if (currentDayIndex === 1) {
         text = 'tomorrow';
       } else {
-        text = globalData.days[currentDayIndex].date.split(',')[0].toLowerCase();
+        // Extract day name from date string like "Thursday 9 January 2026"
+        text = globalData.days[currentDayIndex].date.split(' ')[0];
       }
       
       dayPicker.textContent = text;

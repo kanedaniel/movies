@@ -5,7 +5,7 @@ const path = require('path');
 // ============================================================================
 // CONFIGURATION
 // ============================================================================
-const DAYS_TO_SCRAPE = 2; // 1 = today only, 2 = today + tomorrow, 7 = full week
+const DAYS_TO_SCRAPE = 7; // 1 = today only, 2 = today + tomorrow, 7 = full week
 const OUTPUT_FILENAME = 'sessions.json';
 
 const TMDB_API_KEY = process.env.TMDB_API_KEY;
@@ -1295,19 +1295,24 @@ async function scrapeCoburgDriveIn(page, targetDate) {
   const apiUrl = 'https://villagecinemas.com.au/api/session/getMovieSessions?cinemaId=004';
   
   try {
-    // Fetch the API directly - no need for Puppeteer page navigation
-    const response = await fetch(apiUrl, {
-      headers: {
-        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
-        'Accept': 'application/json'
+    // First navigate to the cinema page to establish session/cookies
+    await page.goto(url, { waitUntil: 'networkidle2', timeout: 60000 });
+    await page.waitForTimeout(2000);
+    
+    // Now fetch the API using the page context (includes cookies)
+    const movies = await page.evaluate(async (apiUrl) => {
+      const response = await fetch(apiUrl, {
+        headers: {
+          'Accept': 'application/json, text/plain, */*',
+          'Referer': 'https://villagecinemas.com.au/cinemas/coburg-drive-in'
+        }
+      });
+      if (!response.ok) {
+        throw new Error(`API returned ${response.status}`);
       }
-    });
+      return response.json();
+    }, apiUrl);
     
-    if (!response.ok) {
-      throw new Error(`API returned ${response.status}`);
-    }
-    
-    const movies = await response.json();
     console.log(`  API returned ${movies.length} movies`);
     
     const filmMap = new Map();
