@@ -582,9 +582,110 @@ async function scrapeLido(page, targetDate) {
 }
 
 async function scrapeHoyts(page, targetDate) {
-  console.log(`Scraping Hoyts Melbourne Central for ${targetDate}... [NOT YET IMPLEMENTED]`);
-  // TODO: Migrate from scraper.js
-  return { cinema: 'Hoyts Melbourne Central', url: 'https://www.hoyts.com.au/cinemas/melbourne-central', sessions: [], note: 'Lux sessions not listed' };
+  console.log(`Scraping Hoyts Melbourne Central for ${targetDate}...`);
+  const sessions = [];
+  const url = 'https://www.hoyts.com.au/cinemas/melbourne-central';
+  
+  try {
+    await page.goto(url, { waitUntil: 'networkidle2', timeout: 60000 });
+    await page.waitForTimeout(5000);
+    
+    // Build the date label to click
+    const [year, month, day] = targetDate.split('-').map(Number);
+    const targetDateObj = new Date(year, month - 1, day);
+    const today = new Date();
+    const melbourneToday = new Date(today.toLocaleString('en-US', { timeZone: 'Australia/Melbourne' }));
+    melbourneToday.setHours(0, 0, 0, 0);
+    
+    const diffDays = Math.round((targetDateObj - melbourneToday) / (1000 * 60 * 60 * 24));
+    
+    let dateLabel;
+    if (diffDays === 0) {
+      dateLabel = 'Today';
+    } else if (diffDays === 1) {
+      dateLabel = 'Tomorrow';
+    } else {
+      // Format: "Wed 7 Jan"
+      const dayNames = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+      const monthNames = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+      dateLabel = `${dayNames[targetDateObj.getDay()]} ${day} ${monthNames[month - 1]}`;
+    }
+    
+    console.log(`  Looking for date: ${dateLabel}`);
+    
+    // Click the date in the date picker
+    const dateClicked = await page.evaluate((label) => {
+      const dateLinks = document.querySelectorAll('.date-slide__link');
+      for (const link of dateLinks) {
+        if (link.textContent.trim() === label) {
+          link.click();
+          return true;
+        }
+      }
+      return false;
+    }, dateLabel);
+    
+    if (dateClicked) {
+      console.log(`  Clicked date: ${dateLabel}`);
+      await page.waitForTimeout(2000); // Wait for content to update
+    } else {
+      console.log(`  Could not find date: ${dateLabel}, using default`);
+    }
+    
+    // Wait for the movies list to appear
+    try {
+      await page.waitForSelector('.movies-list__item, li.movies-list__item', { timeout: 10000 });
+      console.log('  Movies list found');
+    } catch (e) {
+      console.log('  Waiting for movies list timed out, trying anyway...');
+    }
+    
+    const films = await page.evaluate(() => {
+      const items = [];
+      
+      // Each movie is in li.movies-list__item
+      document.querySelectorAll('li.movies-list__item').forEach(movieItem => {
+        const titleLink = movieItem.querySelector('h2.movies-list__heading a.movies-list__link');
+        const title = titleLink?.textContent?.trim();
+        const movieUrl = titleLink?.href;
+        
+        if (!title) return;
+        
+        // Get session times, but skip LUX sessions
+        const times = [];
+        movieItem.querySelectorAll('.sessions__list .sessions__item').forEach(sessionItem => {
+          const luxTag = sessionItem.querySelector('.session__tag--lux');
+          if (luxTag) return; // Skip LUX sessions
+          
+          const timeEl = sessionItem.querySelector('.session__time');
+          const time = timeEl?.textContent?.trim();
+          if (time) {
+            times.push(time);
+          }
+        });
+        
+        if (times.length > 0) {
+          items.push({
+            title,
+            times,
+            url: movieUrl || 'https://www.hoyts.com.au/cinemas/melbourne-central'
+          });
+        }
+      });
+      
+      return items;
+    });
+    
+    for (const film of films) {
+      sessions.push(film);
+    }
+    
+    console.log(`  Found ${sessions.length} films`);
+  } catch (error) {
+    console.error('  Hoyts scrape error:', error.message);
+  }
+  
+  return { cinema: 'Hoyts Melbourne Central', url, sessions, note: 'Lux sessions not listed' };
 }
 
 async function scrapeAstor(page, targetDate) {
