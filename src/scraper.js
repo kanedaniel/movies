@@ -1083,9 +1083,114 @@ async function scrapePalaceFromNextData(page, targetDate, cinemaName, url, cinem
 }
 
 async function scrapeSunTheatre(page, targetDate) {
-  console.log(`Scraping Sun Theatre for ${targetDate}... [NOT YET IMPLEMENTED]`);
-  // TODO: Migrate from scraper.js
-  return { cinema: 'Sun Theatre', url: 'https://suntheatre.com.au/now-playing/', sessions: [] };
+  console.log(`Scraping Sun Theatre for ${targetDate}...`);
+  const sessions = [];
+  const url = 'https://suntheatre.com.au/now-playing/';
+  
+  // Build date string in Sun Theatre format: "Thu 1st Jan:" (no year, with colon)
+  const [year, month, day] = targetDate.split('-').map(Number);
+  const targetDateObj = new Date(year, month - 1, day);
+  const dayNames = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+  const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+  const suffix = (day === 1 || day === 21 || day === 31) ? 'st' : 
+                 (day === 2 || day === 22) ? 'nd' : 
+                 (day === 3 || day === 23) ? 'rd' : 'th';
+  const dateStr = `${dayNames[targetDateObj.getDay()]} ${day}${suffix} ${months[month - 1]}:`;
+  
+  console.log(`  Looking for date: ${dateStr}`);
+  
+  try {
+    await page.goto(url, { waitUntil: 'networkidle2', timeout: 60000 });
+    await page.waitForTimeout(3000);
+    
+    const result = await page.evaluate((dateStr) => {
+      const items = [];
+      const debug = { moviesFound: 0, dateMatches: 0 };
+      
+      document.querySelectorAll('.wpcinema_allshowing_movie').forEach(movieDiv => {
+        debug.moviesFound++;
+        
+        // Get title
+        const titleEl = movieDiv.querySelector('.movietitle a');
+        if (!titleEl) return;
+        
+        // Get text content but exclude the rating span
+        let title = '';
+        titleEl.childNodes.forEach(node => {
+          if (node.nodeType === Node.TEXT_NODE) {
+            title += node.textContent;
+          }
+        });
+        title = title.trim();
+        if (!title) return;
+        
+        // Get movie URL
+        const movieUrl = titleEl.getAttribute('href') || '';
+        
+        // Find target date's session wrap - must be inside .wpc-sessions
+        const sessionsContainer = movieDiv.querySelector('.wpc-sessions');
+        if (!sessionsContainer) return; // Skip items without session times (special events)
+        
+        const sessionWraps = sessionsContainer.querySelectorAll('.wpc-session-wrap');
+        let targetTimes = [];
+        let foundDate = false;
+        
+        sessionWraps.forEach(wrap => {
+          const dateLabel = wrap.querySelector('.wpc-movie-label');
+          if (!dateLabel) return;
+          
+          const dateText = dateLabel.textContent?.trim() || '';
+          // Check if this matches target date (dateText is like "Wed 31st Dec 2025:")
+          if (dateText.startsWith(dateStr)) {
+            foundDate = true;
+            debug.dateMatches++;
+            // Get all times from this wrap ONLY
+            const timesDiv = wrap.querySelector('.wpc-session-times');
+            if (timesDiv) {
+              timesDiv.querySelectorAll('span[class^="wpcinema_session"]').forEach(span => {
+                // Time is either in an <a> or directly in the span (if closed)
+                const link = span.querySelector('a');
+                let timeText = '';
+                if (link) {
+                  // Get just the time, not the category icons
+                  timeText = link.childNodes[0]?.textContent?.trim() || '';
+                } else {
+                  // Session closed - get text from span
+                  timeText = span.childNodes[0]?.textContent?.trim() || '';
+                }
+                if (timeText && /^\d{1,2}:\d{2}(am|pm)$/i.test(timeText)) {
+                  targetTimes.push(timeText);
+                }
+              });
+            }
+          }
+        });
+        
+        // Only add films that have sessions on target date
+        if (foundDate && targetTimes.length > 0) {
+          items.push({
+            title,
+            times: targetTimes,
+            url: movieUrl
+          });
+        }
+      });
+      
+      return { items, debug };
+    }, dateStr);
+    
+    console.log(`  Debug: ${result.debug.moviesFound} movies found, ${result.debug.dateMatches} date matches`);
+    
+    for (const film of result.items) {
+      sessions.push(film);
+    }
+    
+    console.log(`  Found ${sessions.length} films`);
+  } catch (error) {
+    console.error('  Sun Theatre scrape error:', error.message);
+  }
+  
+  return { cinema: 'Sun Theatre', url, sessions };
 }
 
 async function scrapeImax(page, targetDate) {
