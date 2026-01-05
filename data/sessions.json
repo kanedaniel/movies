@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-01-05T12:04:17.545Z",
+  "generatedAt": "2026-01-05T12:24:22.760Z",
   "days": [
     {
       "date": "Monday 5 January 2026",
@@ -278,7 +278,7 @@
               "url": "https://www.cinemanova.com.au/films/train-dreams",
               "overview": "A logger leads a life of quiet grace as he experiences love and loss during an era of monumental change in early 20th-century America.",
               "posterPath": "https://image.tmdb.org/t/p/w300/l3zS4YnpOi4usyEXGJMtxSqDDyb.jpg",
-              "rating": 7.314,
+              "rating": 7.313,
               "year": "2025",
               "runtime": 102,
               "trailerUrl": "https://www.youtube.com/watch?v=6voWeM-xQ4Y"
@@ -410,7 +410,168 @@
         {
           "cinema": "Hoyts Melbourne Central",
           "url": "https://www.hoyts.com.au/cinemas/melbourne-central",
-          "sessions": [],
+          "sessions": [
+            {
+              "title": "Avatar: Fire and Ash",
+              "times": [
+                "10:00am",
+                "12:00pm",
+                "2:00pm",
+                "4:00pm",
+                "6:00pm",
+                "8:00pm",
+                "8:45pm",
+                "10:00pm"
+              ],
+              "url": "https://www.hoyts.com.au/movies/avatar-fire-and-ash",
+              "overview": "In the wake of the devastating war against the RDA and the loss of their eldest son, Jake Sully and Neytiri face a new threat on Pandora: the Ash People, a violent and power-hungry Na'vi tribe led by the ruthless Varang. Jake's family must fight for their survival and the future of Pandora in a conflict that pushes them to their emotional and physical limits.",
+              "posterPath": "https://image.tmdb.org/t/p/w300/g96wHxU7EnoIFwemb2RgohIXrgW.jpg",
+              "rating": 7.362,
+              "year": "2025",
+              "runtime": 198,
+              "trailerUrl": "https://www.youtube.com/watch?v=MEo4auqToCc"
+            },
+            {
+              "title": "Anaconda",
+              "times": [
+                "9:30am",
+                "10:15am",
+                "11:45am",
+                "3:45pm",
+                "4:40pm",
+                "6:15pm",
+                "7:00pm",
+                "9:30pm"
+              ],
+              "url": "https://www.hoyts.com.au/movies/anaconda",
+              "overview": "A group of friends facing mid-life crises head to the rainforest with the intention of remaking their favorite movie from their youth, only to find themselves in a fight for their lives against natural disasters, giant snakes and violent criminals.",
+              "posterPath": "https://image.tmdb.org/t/p/w300/5MDnvvkOqthhE5gQebzkcOhD1p5.jpg",
+              "rating": 6.2,
+              "year": "2025",
+              "runtime": 100,
+              "trailerUrl": "https://www.youtube.com/watch?v=jMbBuQAYOeM"
+            },
+            {
+              "title": "The Housemaid",
+              "times": [
+                "12:15pm",
+                "3:15pm",
+                "7:00pm",
+                "8:45pm"
+              ],
+              "url": "https://www.hoyts.com.au/movies/the-housemaid",
+              "overview": "Trying to escape her past, Millie Calloway accepts a job as a live-in housemaid for the wealthy Nina and Andrew Winchester. But what begins as a dream job quickly unravels into something far more dangerous—a sexy, seductive game of secrets, scandal, and power.",
+              "posterPath": "https://image.tmdb.org/t/p/w300/cWsBscZzwu5brg9YjNkGewRUvJX.jpg",
+              "rating": 7.4,
+              "year": "2025",
+              "runtime": 131,
+              "trailerUrl": "https://www.youtube.com/watch?v=TGdKFCVn6G0"
+            },
+            {
+              "title": "Zootopia 2",
+              "times": [
+                "9:30am",
+                "10:30am",
+                "1:15pm",
+                "2:10pm",
+                "4:30pm",
+                "6:10pm"
+              ],
+              "url": "https://www.hoyts.com.au/movies/zootopia-2",
+              "overview": "After cracking the biggest case in Zootopia's history, rookie cops Judy Hopps and Nick Wilde find themselves on the twisting trail of a great mystery when Gary De'Snake arrives and turns the animal metropolis upside down. To crack the case, Judy and Nick must go undercover to unexpected new parts of town, where their growing partnership is tested like never before.",
+              "posterPath": "https://image.tmdb.org/t/p/w300/bjUWGw0Ao0qVWxagN3VCwBJHVo6.jpg",
+              "rating": 7.641,
+              "year": "2025",
+              "runtime": 107,
+              "trailerUrl": "https://www.youtube.com/watch?v=knk2Fzxd9zc"
+            },
+            {
+              "title": "Song Sung Blue",
+              "times": [
+                "11:15am",
+                "6:20pm",
+                "9:00pm"
+              ],
+              "url": "https://www.hoyts.com.au/movies/song-sung-blue",
+              "overview": "Based on a true story, two down-on-their-luck musicians form a joyous Neil Diamond tribute band, proving it's never too late to find love and follow your dreams.",
+              "posterPath": "https://image.tmdb.org/t/p/w300/3HsIAbHWbFDUbY2jfj4wqEjGC3b.jpg",
+              "rating": 7.227,
+              "year": "2025",
+              "runtime": 133,
+              "trailerUrl": "https://www.youtube.com/watch?v=ssZU6xUM-YI"
+            },
+            {
+              "title": "The SpongeBob Movie: Search for Squarepants",
+              "times": [
+                "9:30am",
+                "11:00am",
+                "2:15pm",
+                "4:15pm",
+                "6:30pm"
+              ],
+              "url": "https://www.hoyts.com.au/movies/the-spongebob-movie-search-for-squarepants",
+              "overview": "Desperate to be a big guy, SpongeBob sets out to prove his bravery to Mr. Krabs by following The Flying Dutchman – a mysterious swashbuckling ghost pirate – on a seafaring adventure that takes him to the deepest depths of the deep sea, where no Sponge has gone before.",
+              "posterPath": "https://image.tmdb.org/t/p/w300/pDWYW9v8fmJdA7N0I1MOdQA3ETq.jpg",
+              "rating": 6.8,
+              "year": "2025",
+              "runtime": 88,
+              "trailerUrl": "https://www.youtube.com/watch?v=JZNZsKeulk8"
+            },
+            {
+              "title": "The Pout-Pout Fish",
+              "times": [
+                "9:45am",
+                "12:45pm"
+              ],
+              "url": "https://www.hoyts.com.au/movies/the-pout-pout-fish",
+              "overview": "Living on a rundown shipwreck, Mr. Fish one day discovers a hyperactive young sea dragon Pip - who had mistaken his home for a junkyard - pilfering his belongings. The heated argument that ensues leaves both their houses in ruin. But there is hope! Embarking on a seemingly impossible quest in search of the mythical \"Shimmer\" to grant them a wish, there’s only one problem: someone else is on the hunt…",
+              "posterPath": "https://image.tmdb.org/t/p/w300/13zx8Vh7nlGmP65NT7rPtORwvw9.jpg",
+              "rating": null,
+              "year": "2026",
+              "runtime": 92,
+              "trailerUrl": "https://www.youtube.com/watch?v=NhQfp1eITTY"
+            },
+            {
+              "title": "Wicked: For Good",
+              "times": [
+                "3:00pm",
+                "9:15pm"
+              ],
+              "url": "https://www.hoyts.com.au/movies/wicked-for-good",
+              "overview": "As an angry mob rises against the Wicked Witch, Glinda and Elphaba will need to come together one final time. With their singular friendship now the fulcrum of their futures, they will need to truly see each other, with honesty and empathy, if they are to change themselves, and all of Oz, for good.",
+              "posterPath": "https://image.tmdb.org/t/p/w300/si9tolnefLSUKaqQEGz1bWArOaL.jpg",
+              "rating": 6.701,
+              "year": "2025",
+              "runtime": 137,
+              "trailerUrl": "https://www.youtube.com/watch?v=iU4Gpi3Jb88"
+            },
+            {
+              "title": "Five Nights at Freddy's 2",
+              "times": [
+                "9:50pm"
+              ],
+              "url": "https://www.hoyts.com.au/movies/five-nights-at-freddys-2",
+              "overview": "One year since the supernatural nightmare at Freddy Fazbear's Pizza, the stories about what transpired there have been twisted into a campy local legend, inspiring the town's first ever Fazfest. With the truth kept from her, Abby sneaks out to reconnect with Freddy, Bonnie, Chica, and Foxy, setting into motion a terrifying series of events that will reveal dark secrets about the real origin of Freddy's, and unleash a decades-hidden horror.",
+              "posterPath": "https://image.tmdb.org/t/p/w300/udAxQEORq2I5wxI97N2TEqdhzBE.jpg",
+              "rating": 6.791,
+              "year": "2025",
+              "runtime": 104,
+              "trailerUrl": "https://www.youtube.com/watch?v=VWfTR7ptRsQ"
+            },
+            {
+              "title": "Nuremberg",
+              "times": [
+                "1:00pm"
+              ],
+              "url": "https://www.hoyts.com.au/movies/nuremberg",
+              "overview": "In postwar Germany, an American psychiatrist must determine whether Nazi prisoners are fit to go on trial for war crimes, and finds himself in a complex battle of intellect and ethics with Hermann Göring, Hitler's right-hand man.",
+              "posterPath": "https://image.tmdb.org/t/p/w300/sxu8TsG7k06ymWL98ELEIE1EMZV.jpg",
+              "rating": 7.328,
+              "year": "2025",
+              "runtime": 148,
+              "trailerUrl": "https://www.youtube.com/watch?v=iL_z7gzu4co"
+            }
+          ],
           "note": "Lux sessions not listed"
         },
         {
@@ -1019,7 +1180,168 @@
         {
           "cinema": "Hoyts Melbourne Central",
           "url": "https://www.hoyts.com.au/cinemas/melbourne-central",
-          "sessions": [],
+          "sessions": [
+            {
+              "title": "Avatar: Fire and Ash",
+              "times": [
+                "10:00am",
+                "12:00pm",
+                "2:00pm",
+                "4:00pm",
+                "6:00pm",
+                "8:00pm",
+                "8:45pm",
+                "10:00pm"
+              ],
+              "url": "https://www.hoyts.com.au/movies/avatar-fire-and-ash",
+              "overview": "In the wake of the devastating war against the RDA and the loss of their eldest son, Jake Sully and Neytiri face a new threat on Pandora: the Ash People, a violent and power-hungry Na'vi tribe led by the ruthless Varang. Jake's family must fight for their survival and the future of Pandora in a conflict that pushes them to their emotional and physical limits.",
+              "posterPath": "https://image.tmdb.org/t/p/w300/g96wHxU7EnoIFwemb2RgohIXrgW.jpg",
+              "rating": 7.362,
+              "year": "2025",
+              "runtime": 198,
+              "trailerUrl": "https://www.youtube.com/watch?v=MEo4auqToCc"
+            },
+            {
+              "title": "Anaconda",
+              "times": [
+                "9:30am",
+                "10:15am",
+                "11:45am",
+                "3:45pm",
+                "4:40pm",
+                "6:15pm",
+                "7:00pm",
+                "9:30pm"
+              ],
+              "url": "https://www.hoyts.com.au/movies/anaconda",
+              "overview": "A group of friends facing mid-life crises head to the rainforest with the intention of remaking their favorite movie from their youth, only to find themselves in a fight for their lives against natural disasters, giant snakes and violent criminals.",
+              "posterPath": "https://image.tmdb.org/t/p/w300/5MDnvvkOqthhE5gQebzkcOhD1p5.jpg",
+              "rating": 6.2,
+              "year": "2025",
+              "runtime": 100,
+              "trailerUrl": "https://www.youtube.com/watch?v=jMbBuQAYOeM"
+            },
+            {
+              "title": "The Housemaid",
+              "times": [
+                "12:15pm",
+                "3:15pm",
+                "7:00pm",
+                "8:45pm"
+              ],
+              "url": "https://www.hoyts.com.au/movies/the-housemaid",
+              "overview": "Trying to escape her past, Millie Calloway accepts a job as a live-in housemaid for the wealthy Nina and Andrew Winchester. But what begins as a dream job quickly unravels into something far more dangerous—a sexy, seductive game of secrets, scandal, and power.",
+              "posterPath": "https://image.tmdb.org/t/p/w300/cWsBscZzwu5brg9YjNkGewRUvJX.jpg",
+              "rating": 7.4,
+              "year": "2025",
+              "runtime": 131,
+              "trailerUrl": "https://www.youtube.com/watch?v=TGdKFCVn6G0"
+            },
+            {
+              "title": "Zootopia 2",
+              "times": [
+                "9:30am",
+                "10:30am",
+                "1:15pm",
+                "2:10pm",
+                "4:30pm",
+                "6:10pm"
+              ],
+              "url": "https://www.hoyts.com.au/movies/zootopia-2",
+              "overview": "After cracking the biggest case in Zootopia's history, rookie cops Judy Hopps and Nick Wilde find themselves on the twisting trail of a great mystery when Gary De'Snake arrives and turns the animal metropolis upside down. To crack the case, Judy and Nick must go undercover to unexpected new parts of town, where their growing partnership is tested like never before.",
+              "posterPath": "https://image.tmdb.org/t/p/w300/bjUWGw0Ao0qVWxagN3VCwBJHVo6.jpg",
+              "rating": 7.641,
+              "year": "2025",
+              "runtime": 107,
+              "trailerUrl": "https://www.youtube.com/watch?v=knk2Fzxd9zc"
+            },
+            {
+              "title": "Song Sung Blue",
+              "times": [
+                "11:15am",
+                "6:20pm",
+                "9:00pm"
+              ],
+              "url": "https://www.hoyts.com.au/movies/song-sung-blue",
+              "overview": "Based on a true story, two down-on-their-luck musicians form a joyous Neil Diamond tribute band, proving it's never too late to find love and follow your dreams.",
+              "posterPath": "https://image.tmdb.org/t/p/w300/3HsIAbHWbFDUbY2jfj4wqEjGC3b.jpg",
+              "rating": 7.227,
+              "year": "2025",
+              "runtime": 133,
+              "trailerUrl": "https://www.youtube.com/watch?v=ssZU6xUM-YI"
+            },
+            {
+              "title": "The SpongeBob Movie: Search for Squarepants",
+              "times": [
+                "9:30am",
+                "11:00am",
+                "2:15pm",
+                "4:15pm",
+                "6:30pm"
+              ],
+              "url": "https://www.hoyts.com.au/movies/the-spongebob-movie-search-for-squarepants",
+              "overview": "Desperate to be a big guy, SpongeBob sets out to prove his bravery to Mr. Krabs by following The Flying Dutchman – a mysterious swashbuckling ghost pirate – on a seafaring adventure that takes him to the deepest depths of the deep sea, where no Sponge has gone before.",
+              "posterPath": "https://image.tmdb.org/t/p/w300/pDWYW9v8fmJdA7N0I1MOdQA3ETq.jpg",
+              "rating": 6.8,
+              "year": "2025",
+              "runtime": 88,
+              "trailerUrl": "https://www.youtube.com/watch?v=JZNZsKeulk8"
+            },
+            {
+              "title": "The Pout-Pout Fish",
+              "times": [
+                "9:45am",
+                "12:45pm"
+              ],
+              "url": "https://www.hoyts.com.au/movies/the-pout-pout-fish",
+              "overview": "Living on a rundown shipwreck, Mr. Fish one day discovers a hyperactive young sea dragon Pip - who had mistaken his home for a junkyard - pilfering his belongings. The heated argument that ensues leaves both their houses in ruin. But there is hope! Embarking on a seemingly impossible quest in search of the mythical \"Shimmer\" to grant them a wish, there’s only one problem: someone else is on the hunt…",
+              "posterPath": "https://image.tmdb.org/t/p/w300/13zx8Vh7nlGmP65NT7rPtORwvw9.jpg",
+              "rating": null,
+              "year": "2026",
+              "runtime": 92,
+              "trailerUrl": "https://www.youtube.com/watch?v=NhQfp1eITTY"
+            },
+            {
+              "title": "Wicked: For Good",
+              "times": [
+                "3:00pm",
+                "9:15pm"
+              ],
+              "url": "https://www.hoyts.com.au/movies/wicked-for-good",
+              "overview": "As an angry mob rises against the Wicked Witch, Glinda and Elphaba will need to come together one final time. With their singular friendship now the fulcrum of their futures, they will need to truly see each other, with honesty and empathy, if they are to change themselves, and all of Oz, for good.",
+              "posterPath": "https://image.tmdb.org/t/p/w300/si9tolnefLSUKaqQEGz1bWArOaL.jpg",
+              "rating": 6.701,
+              "year": "2025",
+              "runtime": 137,
+              "trailerUrl": "https://www.youtube.com/watch?v=iU4Gpi3Jb88"
+            },
+            {
+              "title": "Five Nights at Freddy's 2",
+              "times": [
+                "9:50pm"
+              ],
+              "url": "https://www.hoyts.com.au/movies/five-nights-at-freddys-2",
+              "overview": "One year since the supernatural nightmare at Freddy Fazbear's Pizza, the stories about what transpired there have been twisted into a campy local legend, inspiring the town's first ever Fazfest. With the truth kept from her, Abby sneaks out to reconnect with Freddy, Bonnie, Chica, and Foxy, setting into motion a terrifying series of events that will reveal dark secrets about the real origin of Freddy's, and unleash a decades-hidden horror.",
+              "posterPath": "https://image.tmdb.org/t/p/w300/udAxQEORq2I5wxI97N2TEqdhzBE.jpg",
+              "rating": 6.791,
+              "year": "2025",
+              "runtime": 104,
+              "trailerUrl": "https://www.youtube.com/watch?v=VWfTR7ptRsQ"
+            },
+            {
+              "title": "Nuremberg",
+              "times": [
+                "1:00pm"
+              ],
+              "url": "https://www.hoyts.com.au/movies/nuremberg",
+              "overview": "In postwar Germany, an American psychiatrist must determine whether Nazi prisoners are fit to go on trial for war crimes, and finds himself in a complex battle of intellect and ethics with Hermann Göring, Hitler's right-hand man.",
+              "posterPath": "https://image.tmdb.org/t/p/w300/sxu8TsG7k06ymWL98ELEIE1EMZV.jpg",
+              "rating": 7.328,
+              "year": "2025",
+              "runtime": 148,
+              "trailerUrl": "https://www.youtube.com/watch?v=iL_z7gzu4co"
+            }
+          ],
           "note": "Lux sessions not listed"
         },
         {
