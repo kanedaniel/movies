@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-01-05T22:04:00.583Z",
+  "generatedAt": "2026-01-05T22:18:51.098Z",
   "days": [
     {
       "date": "Tuesday 6 January 2026",
@@ -2165,6 +2165,11 @@
               "trailerUrl": "https://www.youtube.com/watch?v=NhQfp1eITTY"
             }
           ]
+        },
+        {
+          "cinema": "Coburg Drive-In",
+          "url": "https://villagecinemas.com.au/cinemas/coburg-drive-in",
+          "sessions": []
         }
       ]
     },
@@ -4344,6 +4349,11 @@
               "trailerUrl": "https://www.youtube.com/watch?v=NhQfp1eITTY"
             }
           ]
+        },
+        {
+          "cinema": "Coburg Drive-In",
+          "url": "https://villagecinemas.com.au/cinemas/coburg-drive-in",
+          "sessions": []
         }
       ]
     }
