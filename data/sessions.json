@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-01-04T21:37:51.021Z",
+  "generatedAt": "2026-01-05T11:26:19.567Z",
   "days": [
     {
       "date": "Monday 5 January 2026",
@@ -17,7 +17,7 @@
               "url": "https://www.acmi.net.au/whats-on/kids-flicks-with-feelings-in-cinemas/the-neverending-story/",
               "overview": "While hiding from bullies in his school's attic, a young boy discovers the extraordinary land of Fantasia, through a magical book called The Neverending Story. The book tells the tale of Atreyu, a young warrior who, with the help of a luck dragon named Falkor, must save Fantasia from the destruction of The Nothing.",
               "posterPath": "https://image.tmdb.org/t/p/w300/ddYCa91iDXfJCxaqSYzwi2fjfnl.jpg",
-              "rating": 7.205,
+              "rating": 7.207,
               "year": "1984",
               "runtime": 97,
               "trailerUrl": "https://www.youtube.com/watch?v=ToUgsvlsemo"
@@ -42,19 +42,6 @@
           "url": "https://www.brunswickpicturehouse.com.au/now-showing/",
           "sessions": [
             {
-              "title": "Sentimental Value",
-              "times": [
-                "6:00pm"
-              ],
-              "url": "https://www.brunswickpicturehouse.com.au/now-showing/",
-              "overview": "Sisters Nora and Agnes reunite with their estranged father, the charismatic Gustav, a once-renowned director who offers stage actress Nora a role in what he hopes will be his comeback film. When Nora turns it down, she soon discovers he has given her part to an eager young Hollywood star.",
-              "posterPath": "https://image.tmdb.org/t/p/w300/7YYrTByEx7fPetfcTa6pEF6XjD9.jpg",
-              "rating": 7.6,
-              "year": "2025",
-              "runtime": 133,
-              "trailerUrl": "https://www.youtube.com/watch?v=zBFstFXdk90"
-            },
-            {
               "title": "Song Sung Blue",
               "times": [
                 "8:35pm"
@@ -62,7 +49,7 @@
               "url": "https://www.brunswickpicturehouse.com.au/now-showing/",
               "overview": "Based on a true story, two down-on-their-luck musicians form a joyous Neil Diamond tribute band, proving it's never too late to find love and follow your dreams.",
               "posterPath": "https://image.tmdb.org/t/p/w300/3HsIAbHWbFDUbY2jfj4wqEjGC3b.jpg",
-              "rating": 7.5,
+              "rating": 7.227,
               "year": "2025",
               "runtime": 133,
               "trailerUrl": "https://www.youtube.com/watch?v=ssZU6xUM-YI"
@@ -77,7 +64,343 @@
         {
           "cinema": "Cinema Nova",
           "url": "https://www.cinemanova.com.au/films-today-after-0:00",
-          "sessions": []
+          "sessions": [
+            {
+              "title": "Bugonia",
+              "times": [
+                "1:50pm",
+                "4:10pm",
+                "6:30pm",
+                "8:50pm"
+              ],
+              "url": "https://www.cinemanova.com.au/films/bugonia",
+              "overview": "Two conspiracy obsessed young men kidnap the high-powered CEO of a major company, convinced that she is an alien intent on destroying planet Earth.",
+              "posterPath": "https://image.tmdb.org/t/p/w300/oxgsAQDAAxA92mFGYCZllgWkH9J.jpg",
+              "rating": 7.407,
+              "year": "2025",
+              "runtime": 119,
+              "trailerUrl": "https://www.youtube.com/watch?v=gZ6pPFK6kaQ"
+            },
+            {
+              "title": "Rental Family",
+              "times": [
+                "2:35pm",
+                "4:45pm",
+                "6:55pm",
+                "9:05pm"
+              ],
+              "url": "https://www.cinemanova.com.au/films/rental-family",
+              "overview": "An American actor in Tokyo struggles to find purpose until he lands an unusual gig: working for a Japanese 'rental family' agency, playing stand-in roles for strangers. As he immerses himself in his clients' worlds, he begins to form genuine bonds that blur the lines between performance and reality.",
+              "posterPath": "https://image.tmdb.org/t/p/w300/dGRZ55srJoK6TcjPTfHe701UWq0.jpg",
+              "rating": 7.6,
+              "year": "2025",
+              "runtime": 110,
+              "trailerUrl": "https://www.youtube.com/watch?v=7W9B-0PdfXQ"
+            },
+            {
+              "title": "Eternity",
+              "times": [
+                "2:40pm",
+                "6:35pm",
+                "8:50pm"
+              ],
+              "url": "https://www.cinemanova.com.au/films/eternity",
+              "overview": "In an afterlife where souls have one week to decide where to spend eternity, Joan is faced with the impossible choice between the man she spent her life with and her first love, who died young and has waited decades for her to arrive.",
+              "posterPath": "https://image.tmdb.org/t/p/w300/o8pg20G67BGmQvRkXwstNre062J.jpg",
+              "rating": 7.138,
+              "year": "2025",
+              "runtime": 114,
+              "trailerUrl": "https://www.youtube.com/watch?v=GzkoY6hUvQQ"
+            },
+            {
+              "title": "Kokuho",
+              "times": [
+                "2:40pm",
+                "7:15pm"
+              ],
+              "url": "https://www.cinemanova.com.au/films/kokuho",
+              "overview": "Nagasaki, 1964: Following the death of his yakuza father, 15-year-old Kikuo is taken under the wing of a famous kabuki actor. Alongside Shunsuke, the actor’s only son, he decides to dedicate himself to this traditional form of theatre. For decades, the two young men grow and evolve together – and one will become the greatest Japanese master of the art of kabuki.",
+              "posterPath": "https://image.tmdb.org/t/p/w300/egDmNUBcSvu6aqQPCfyd1UneCYr.jpg",
+              "rating": 8.2,
+              "year": "2025",
+              "runtime": 174,
+              "trailerUrl": "https://www.youtube.com/watch?v=p6k9Y-irvOE"
+            },
+            {
+              "title": "Choral, The",
+              "times": [
+                "2:45pm",
+                "7:00pm"
+              ],
+              "url": "https://www.cinemanova.com.au/films/choral-the",
+              "overview": "As World War I rages on, Dr. Henry Guthrie takes over a British choral society that's lost most of its men to the army. The community soon discovers that the best response to the chaos of war is to make beautiful music together.",
+              "posterPath": "https://image.tmdb.org/t/p/w300/yQtms7CSM0CE0W6dYbLLAATb5rL.jpg",
+              "rating": 6.6,
+              "year": "2025",
+              "runtime": 113,
+              "trailerUrl": "https://www.youtube.com/watch?v=6zRVP-ZgMm8"
+            },
+            {
+              "title": "Sentimental Value",
+              "times": [
+                "2:50pm",
+                "4:00pm",
+                "5:25pm",
+                "6:40pm",
+                "8:00pm",
+                "9:15pm"
+              ],
+              "url": "https://www.cinemanova.com.au/films/sentimental-value",
+              "overview": "Sisters Nora and Agnes reunite with their estranged father, the charismatic Gustav, a once-renowned director who offers stage actress Nora a role in what he hopes will be his comeback film. When Nora turns it down, she soon discovers he has given her part to an eager young Hollywood star.",
+              "posterPath": "https://image.tmdb.org/t/p/w300/7YYrTByEx7fPetfcTa6pEF6XjD9.jpg",
+              "rating": 7.614,
+              "year": "2025",
+              "runtime": 133,
+              "trailerUrl": "https://www.youtube.com/watch?v=zBFstFXdk90"
+            },
+            {
+              "title": "Resurrection",
+              "times": [
+                "3:00pm",
+                "6:00pm",
+                "8:15pm"
+              ],
+              "url": "https://www.cinemanova.com.au/films/resurrection",
+              "overview": "A jaded homicide detective has been put on the case of a ruthless killer in the city of Chicago, who leaves a trail of horribly mutilated and dismembered corpses along with perversely ironic biblical quotes.",
+              "posterPath": "https://image.tmdb.org/t/p/w300/2j6cMHN1Mx1u8S897VVhO7wSrce.jpg",
+              "rating": 6.114,
+              "year": "1999",
+              "runtime": 108,
+              "trailerUrl": "https://www.youtube.com/watch?v=XxSMzmBz5oY"
+            },
+            {
+              "title": "One Battle After Another",
+              "times": [
+                "3:10pm",
+                "8:35pm"
+              ],
+              "url": "https://www.cinemanova.com.au/films/one-battle-after-another",
+              "overview": "Washed-up revolutionary Bob exists in a state of stoned paranoia, surviving off-grid with his spirited, self-reliant daughter, Willa. When his evil nemesis resurfaces after 16 years and she goes missing, the former radical scrambles to find her, father and daughter both battling the consequences of his past.",
+              "posterPath": "https://image.tmdb.org/t/p/w300/r4uXvqCeco0KmO0CjlhXuTEFuSE.jpg",
+              "rating": 7.458,
+              "year": "2025",
+              "runtime": 162,
+              "trailerUrl": "https://www.youtube.com/watch?v=u6GVb4p7oD4"
+            },
+            {
+              "title": "Wake Up Dead Man: A Knives Out Mystery",
+              "times": [
+                "3:25pm",
+                "8:10pm"
+              ],
+              "url": "https://www.cinemanova.com.au/films/wake-up-dead-man-a-knives-out-mystery",
+              "overview": "When young priest Jud Duplenticy is sent to assist charismatic firebrand Monsignor Jefferson Wicks, it’s clear that all is not well in the pews. After a sudden and seemingly impossible murder rocks the town, the lack of an obvious suspect prompts local police chief Geraldine Scott to join forces with renowned detective Benoit Blanc to unravel a mystery that defies all logic.",
+              "posterPath": "https://image.tmdb.org/t/p/w300/qCOGGi8JBVEZMc3DVby8rUivyXz.jpg",
+              "rating": 7.214,
+              "year": "2025",
+              "runtime": 145,
+              "trailerUrl": "https://www.youtube.com/watch?v=0hc8yz5-d5Y"
+            },
+            {
+              "title": "Nuremberg",
+              "times": [
+                "3:30pm",
+                "6:20pm"
+              ],
+              "url": "https://www.cinemanova.com.au/films/nuremberg",
+              "overview": "In postwar Germany, an American psychiatrist must determine whether Nazi prisoners are fit to go on trial for war crimes, and finds himself in a complex battle of intellect and ethics with Hermann Göring, Hitler's right-hand man.",
+              "posterPath": "https://image.tmdb.org/t/p/w300/sxu8TsG7k06ymWL98ELEIE1EMZV.jpg",
+              "rating": 7.328,
+              "year": "2025",
+              "runtime": 148,
+              "trailerUrl": "https://www.youtube.com/watch?v=iL_z7gzu4co"
+            },
+            {
+              "title": "Die My Love",
+              "times": [
+                "3:40pm",
+                "9:00pm"
+              ],
+              "url": "https://www.cinemanova.com.au/films/die-my-love",
+              "overview": "After inheriting a remote Montana house, Jackson moves there from New York with his partner Grace, and the couple soon welcome a child. As Jackson becomes increasingly absent and rural isolation sets in, Grace struggles with loneliness, creative frustration, and unresolved emotional wounds. What begins as an attempt at renewal gradually turns into an intense psychological descent, placing strain on their relationship and exposing the fragile balance between love, identity, and motherhood.",
+              "posterPath": "https://image.tmdb.org/t/p/w300/kajpShbFhOdpl6yCrLezMrr9tB4.jpg",
+              "rating": 6.32,
+              "year": "2025",
+              "runtime": 119,
+              "trailerUrl": "https://www.youtube.com/watch?v=2jzXHW6Qe70"
+            },
+            {
+              "title": "The Housemaid",
+              "times": [
+                "3:45pm",
+                "6:20pm",
+                "8:55pm"
+              ],
+              "url": "https://www.cinemanova.com.au/films/the-housemaid",
+              "overview": "Trying to escape her past, Millie Calloway accepts a job as a live-in housemaid for the wealthy Nina and Andrew Winchester. But what begins as a dream job quickly unravels into something far more dangerous—a sexy, seductive game of secrets, scandal, and power.",
+              "posterPath": "https://image.tmdb.org/t/p/w300/cWsBscZzwu5brg9YjNkGewRUvJX.jpg",
+              "rating": 7.4,
+              "year": "2025",
+              "runtime": 131,
+              "trailerUrl": "https://www.youtube.com/watch?v=TGdKFCVn6G0"
+            },
+            {
+              "title": "Wicked: For Good",
+              "times": [
+                "3:55pm"
+              ],
+              "url": "https://www.cinemanova.com.au/films/wicked-for-good",
+              "overview": "As an angry mob rises against the Wicked Witch, Glinda and Elphaba will need to come together one final time. With their singular friendship now the fulcrum of their futures, they will need to truly see each other, with honesty and empathy, if they are to change themselves, and all of Oz, for good.",
+              "posterPath": "https://image.tmdb.org/t/p/w300/si9tolnefLSUKaqQEGz1bWArOaL.jpg",
+              "rating": 6.701,
+              "year": "2025",
+              "runtime": 137,
+              "trailerUrl": "https://www.youtube.com/watch?v=iU4Gpi3Jb88"
+            },
+            {
+              "title": "Time Masters, The",
+              "times": [
+                "4:55pm"
+              ],
+              "url": "https://www.cinemanova.com.au/films/time-masters-the",
+              "overview": "On planet Perdide, an attack of giant hornets leaves young Piel alone in a wrecked car with his dying father. A mayday message reaches their friend Jaffar, an adventurer travelling through space. Onboard Jaffar’s shuttle are the renegade Prince Matton, his fiancée, and Silbad, who knows Perdide well. Thus begins an incredible race across space to save Piel.",
+              "posterPath": "https://image.tmdb.org/t/p/w300/2brFFdhCSdcSzBbTOWg9VQra6QI.jpg",
+              "rating": 7.246,
+              "year": "1982",
+              "runtime": 80,
+              "trailerUrl": "https://www.youtube.com/watch?v=D4f4tprXSiA"
+            },
+            {
+              "title": "Train Dreams",
+              "times": [
+                "5:00pm"
+              ],
+              "url": "https://www.cinemanova.com.au/films/train-dreams",
+              "overview": "A logger leads a life of quiet grace as he experiences love and loss during an era of monumental change in early 20th-century America.",
+              "posterPath": "https://image.tmdb.org/t/p/w300/l3zS4YnpOi4usyEXGJMtxSqDDyb.jpg",
+              "rating": 7.314,
+              "year": "2025",
+              "runtime": 102,
+              "trailerUrl": "https://www.youtube.com/watch?v=6voWeM-xQ4Y"
+            },
+            {
+              "title": "Pellegrinis",
+              "times": [
+                "6:00pm"
+              ],
+              "url": "https://www.cinemanova.com.au/films/pellegrinis",
+              "overview": "Pellegrini's Espresso Bar is a testament to the enduring power of community, tradition, and love. This documentary explores the cafe's rich history, its cultural impact, and the profound legacy of its beloved figure, Sisto Malaspina.",
+              "posterPath": "https://image.tmdb.org/t/p/w300/9srr4YptXBmwGNnwV8kzsDG00dQ.jpg",
+              "rating": null,
+              "year": "2025",
+              "runtime": 52,
+              "trailerUrl": null
+            },
+            {
+              "title": "Golden Spurtle, The",
+              "times": [
+                "6:05pm"
+              ],
+              "url": "https://www.cinemanova.com.au/films/golden-spurtle-the",
+              "overview": "In a quaint Scottish village in the Highlands, contenders from around the globe gather to compete for the title of World Porridge Champion armed only with oats, salt and water. As the ailing Porridge Chieftain's tenure ends, he embarks on a mission to find a successor. Amidst intense rivalries and the charm of eccentric locals, this documentary delves into the legacy of the village and unveils a captivating culinary spectacle.",
+              "posterPath": "https://image.tmdb.org/t/p/w300/miYmbKhA26C8oUIioC2OMTXse0o.jpg",
+              "rating": 6.714,
+              "year": "2025",
+              "runtime": 75,
+              "trailerUrl": "https://www.youtube.com/watch?v=AcTFnWvy8k4"
+            },
+            {
+              "title": "Urchin",
+              "times": [
+                "6:10pm"
+              ],
+              "url": "https://www.cinemanova.com.au/films/urchin",
+              "overview": "Mike, a rough sleeper in London, is trapped in a cycle of self-destruction as he attempts to turn his life around. Along the way, he encounters unexpected chances for a fresh start.",
+              "posterPath": "https://image.tmdb.org/t/p/w300/zc8n3hm3S2VxFxlNH1MNN28LVMa.jpg",
+              "rating": 6.7,
+              "year": "2025",
+              "runtime": 100,
+              "trailerUrl": "https://www.youtube.com/watch?v=O-hgR7RC39c"
+            },
+            {
+              "title": "My Brother's Band",
+              "times": [
+                "6:10pm"
+              ],
+              "url": "https://www.cinemanova.com.au/films/my-brother-s-band",
+              "overview": "Diagnosed with leukemia, a successful orchestra conductor learns that he is adopted, and his younger brother is in a village marching band. The conductor decides to help them win a regional contest.",
+              "posterPath": "https://image.tmdb.org/t/p/w300/6lATJ42bWGAIQ0cG2dzSZD8bNcL.jpg",
+              "rating": 7.317,
+              "year": "2024",
+              "runtime": 103,
+              "trailerUrl": "https://www.youtube.com/watch?v=bhfCXPYIKs8"
+            },
+            {
+              "title": "Orwell: 2+2=5",
+              "times": [
+                "6:15pm"
+              ],
+              "url": "https://www.cinemanova.com.au/films/orwell-2-2-5",
+              "overview": "George Orwell was one of the most visionary authors of the 20th century, whose novels 1984 and Animal Farm foretold a chilling, authoritarian future. Acclaimed director Raoul Peck interweaves clips, readings from Orwell's diary, cinematic references, and modern-day footage to craft not only a portrait of the writer, but a fresh take on how prophetic his work has become.",
+              "posterPath": "https://image.tmdb.org/t/p/w300/qG1LjcK8ohi4mSJ9j8KHUs5svbe.jpg",
+              "rating": 7.5,
+              "year": "2025",
+              "runtime": 119,
+              "trailerUrl": "https://www.youtube.com/watch?v=npwmcJxgLic"
+            },
+            {
+              "title": "The History of Sound",
+              "times": [
+                "6:50pm"
+              ],
+              "url": "https://www.cinemanova.com.au/films/the-history-of-sound",
+              "overview": "In 1917, two young music students attending the Boston Conservatory bond over a mutual love of folk music. They reconnect a few years later, embarking on a song-collecting trip in the backwaters of Maine.",
+              "posterPath": "https://image.tmdb.org/t/p/w300/5tNr1CySiYQICRsQbWWSSsDiKjn.jpg",
+              "rating": 6.1,
+              "year": "2025",
+              "runtime": 127,
+              "trailerUrl": "https://www.youtube.com/watch?v=E2PSkw8BI7k"
+            },
+            {
+              "title": "If I Had Legs I'd Kick You",
+              "times": [
+                "9:10pm"
+              ],
+              "url": "https://www.cinemanova.com.au/films/if-i-had-legs-i-d-kick-you",
+              "overview": "With her life crashing down around her, Linda attempts to navigate her child's mysterious illness, her absent husband, a missing person, and an increasingly hostile relationship with her therapist.",
+              "posterPath": "https://image.tmdb.org/t/p/w300/gkIFK1HzqfgQg4v4ifeNKogHtPG.jpg",
+              "rating": 6.5,
+              "year": "2025",
+              "runtime": 113,
+              "trailerUrl": "https://www.youtube.com/watch?v=-oDLBRLkflo"
+            },
+            {
+              "title": "Lurker",
+              "times": [
+                "9:15pm"
+              ],
+              "url": "https://www.cinemanova.com.au/films/lurker",
+              "overview": "When a twenty-something retail clerk meets a rising popstar, he takes the opportunity to edge his way into the in-crowd. But as the line between friend and fan blurs beyond recognition, access and proximity become a matter of life and death.",
+              "posterPath": "https://image.tmdb.org/t/p/w300/remyTlj6bJqoSStgjn3EwyOcki7.jpg",
+              "rating": 6.538,
+              "year": "2025",
+              "runtime": 100,
+              "trailerUrl": "https://www.youtube.com/watch?v=TohwFNb7AHI"
+            },
+            {
+              "title": "Twinless",
+              "times": [
+                "9:20pm"
+              ],
+              "url": "https://www.cinemanova.com.au/films/twinless",
+              "overview": "Two young men meet in a twin support group and form an unlikely friendship. Roman and Dennis both search for solace and an identity without their other halves and soon become inseparable outside the group.",
+              "posterPath": "https://image.tmdb.org/t/p/w300/9vaw9Az5tPLMjNLj426KgKsp0k8.jpg",
+              "rating": 7.211,
+              "year": "2025",
+              "runtime": 100,
+              "trailerUrl": "https://www.youtube.com/watch?v=dTVJeEb69e0"
+            }
+          ]
         },
         {
           "cinema": "Lido Cinemas",
@@ -113,878 +436,22 @@
         {
           "cinema": "Palace Como",
           "url": "https://www.palacecinemas.com.au/cinemas/palace-cinema-como",
-          "sessions": [
-            {
-              "title": "Song Sung Blue",
-              "times": [
-                "10:40am",
-                "1:30pm",
-                "3:10pm",
-                "5:00pm",
-                "7:00pm",
-                "8:50pm"
-              ],
-              "url": "https://www.palacecinemas.com.au/movies/song-sung-blue",
-              "overview": "Based on a true story, two down-on-their-luck musicians form a joyous Neil Diamond tribute band, proving it's never too late to find love and follow your dreams.",
-              "posterPath": "https://image.tmdb.org/t/p/w300/3HsIAbHWbFDUbY2jfj4wqEjGC3b.jpg",
-              "rating": 7.5,
-              "year": "2025",
-              "runtime": 133,
-              "trailerUrl": "https://www.youtube.com/watch?v=ssZU6xUM-YI"
-            },
-            {
-              "title": "The Choral",
-              "times": [
-                "10:10am",
-                "12:40pm",
-                "3:15pm",
-                "4:20pm",
-                "6:00pm",
-                "8:30pm"
-              ],
-              "url": "https://www.palacecinemas.com.au/movies/the-choral",
-              "overview": "As World War I rages on, Dr. Henry Guthrie takes over a British choral society that's lost most of its men to the army. The community soon discovers that the best response to the chaos of war is to make beautiful music together.",
-              "posterPath": "https://image.tmdb.org/t/p/w300/yQtms7CSM0CE0W6dYbLLAATb5rL.jpg",
-              "rating": 6.6,
-              "year": "2025",
-              "runtime": 113,
-              "trailerUrl": "https://www.youtube.com/watch?v=6zRVP-ZgMm8"
-            },
-            {
-              "title": "The Housemaid",
-              "times": [
-                "11:00am",
-                "12:30pm",
-                "3:20pm",
-                "6:10pm",
-                "8:45pm"
-              ],
-              "url": "https://www.palacecinemas.com.au/movies/the-housemaid",
-              "overview": "Trying to escape her past, Millie Calloway accepts a job as a live-in housemaid for the wealthy Nina and Andrew Winchester. But what begins as a dream job quickly unravels into something far more dangerous—a sexy, seductive game of secrets, scandal, and power.",
-              "posterPath": "https://image.tmdb.org/t/p/w300/cWsBscZzwu5brg9YjNkGewRUvJX.jpg",
-              "rating": 7.394,
-              "year": "2025",
-              "runtime": 131,
-              "trailerUrl": "https://www.youtube.com/watch?v=TGdKFCVn6G0"
-            },
-            {
-              "title": "Avatar: Fire and Ash (2D)",
-              "times": [
-                "1:00pm",
-                "6:30pm",
-                "7:50pm"
-              ],
-              "url": "https://www.palacecinemas.com.au/movies/avatar-fire-and-ash-2d",
-              "overview": "In the wake of the devastating war against the RDA and the loss of their eldest son, Jake Sully and Neytiri face a new threat on Pandora: the Ash People, a violent and power-hungry Na'vi tribe led by the ruthless Varang. Jake's family must fight for their survival and the future of Pandora in a conflict that pushes them to their emotional and physical limits.",
-              "posterPath": "https://image.tmdb.org/t/p/w300/g96wHxU7EnoIFwemb2RgohIXrgW.jpg",
-              "rating": 7.386,
-              "year": "2025",
-              "runtime": 198,
-              "trailerUrl": "https://www.youtube.com/watch?v=MEo4auqToCc"
-            },
-            {
-              "title": "Rental Family",
-              "times": [
-                "10:15am",
-                "12:45pm",
-                "4:00pm",
-                "5:45pm"
-              ],
-              "url": "https://www.palacecinemas.com.au/movies/rental-family",
-              "overview": "An American actor in Tokyo struggles to find purpose until he lands an unusual gig: working for a Japanese 'rental family' agency, playing stand-in roles for strangers. As he immerses himself in his clients' worlds, he begins to form genuine bonds that blur the lines between performance and reality.",
-              "posterPath": "https://image.tmdb.org/t/p/w300/dGRZ55srJoK6TcjPTfHe701UWq0.jpg",
-              "rating": 7.6,
-              "year": "2025",
-              "runtime": 110,
-              "trailerUrl": "https://www.youtube.com/watch?v=7W9B-0PdfXQ"
-            },
-            {
-              "title": "Sentimental Value",
-              "times": [
-                "10:10am",
-                "2:50pm",
-                "5:50pm"
-              ],
-              "url": "https://www.palacecinemas.com.au/movies/sentimental-value",
-              "overview": "Sisters Nora and Agnes reunite with their estranged father, the charismatic Gustav, a once-renowned director who offers stage actress Nora a role in what he hopes will be his comeback film. When Nora turns it down, she soon discovers he has given her part to an eager young Hollywood star.",
-              "posterPath": "https://image.tmdb.org/t/p/w300/7YYrTByEx7fPetfcTa6pEF6XjD9.jpg",
-              "rating": 7.6,
-              "year": "2025",
-              "runtime": 133,
-              "trailerUrl": "https://www.youtube.com/watch?v=zBFstFXdk90"
-            },
-            {
-              "title": "Nuremberg",
-              "times": [
-                "11:45am",
-                "2:30pm",
-                "5:40pm",
-                "8:10pm"
-              ],
-              "url": "https://www.palacecinemas.com.au/movies/nuremberg",
-              "overview": "In postwar Germany, an American psychiatrist must determine whether Nazi prisoners are fit to go on trial for war crimes, and finds himself in a complex battle of intellect and ethics with Hermann Göring, Hitler's right-hand man.",
-              "posterPath": "https://image.tmdb.org/t/p/w300/sxu8TsG7k06ymWL98ELEIE1EMZV.jpg",
-              "rating": 7.308,
-              "year": "2025",
-              "runtime": 148,
-              "trailerUrl": "https://www.youtube.com/watch?v=iL_z7gzu4co"
-            },
-            {
-              "title": "My Brother's Band",
-              "times": [
-                "12:15pm",
-                "3:10pm",
-                "5:30pm"
-              ],
-              "url": "https://www.palacecinemas.com.au/movies/my-brothers-band",
-              "overview": "Diagnosed with leukemia, a successful orchestra conductor learns that he is adopted, and his younger brother is in a village marching band. The conductor decides to help them win a regional contest.",
-              "posterPath": "https://image.tmdb.org/t/p/w300/6lATJ42bWGAIQ0cG2dzSZD8bNcL.jpg",
-              "rating": 7.318,
-              "year": "2024",
-              "runtime": 103,
-              "trailerUrl": "https://www.youtube.com/watch?v=bhfCXPYIKs8"
-            },
-            {
-              "title": "Anaconda",
-              "times": [
-                "10:00am",
-                "1:45pm",
-                "9:00pm"
-              ],
-              "url": "https://www.palacecinemas.com.au/movies/anaconda",
-              "overview": "A group of friends facing mid-life crises head to the rainforest with the intention of remaking their favorite movie from their youth, only to find themselves in a fight for their lives against natural disasters, giant snakes and violent criminals.",
-              "posterPath": "https://image.tmdb.org/t/p/w300/5MDnvvkOqthhE5gQebzkcOhD1p5.jpg",
-              "rating": 6.2,
-              "year": "2025",
-              "runtime": 100,
-              "trailerUrl": "https://www.youtube.com/watch?v=jMbBuQAYOeM"
-            },
-            {
-              "title": "Zootopia 2",
-              "times": [
-                "10:00am"
-              ],
-              "url": "https://www.palacecinemas.com.au/movies/zootopia-2",
-              "overview": "After cracking the biggest case in Zootopia's history, rookie cops Judy Hopps and Nick Wilde find themselves on the twisting trail of a great mystery when Gary De'Snake arrives and turns the animal metropolis upside down. To crack the case, Judy and Nick must go undercover to unexpected new parts of town, where their growing partnership is tested like never before.",
-              "posterPath": "https://image.tmdb.org/t/p/w300/bjUWGw0Ao0qVWxagN3VCwBJHVo6.jpg",
-              "rating": 7.649,
-              "year": "2025",
-              "runtime": 107,
-              "trailerUrl": "https://www.youtube.com/watch?v=knk2Fzxd9zc"
-            },
-            {
-              "title": "Kokuho",
-              "times": [
-                "11:40am",
-                "7:50pm"
-              ],
-              "url": "https://www.palacecinemas.com.au/movies/kokuho",
-              "overview": "Nagasaki, 1964: Following the death of his yakuza father, 15-year-old Kikuo is taken under the wing of a famous kabuki actor. Alongside Shunsuke, the actor’s only son, he decides to dedicate himself to this traditional form of theatre. For decades, the two young men grow and evolve together – and one will become the greatest Japanese master of the art of kabuki.",
-              "posterPath": "https://image.tmdb.org/t/p/w300/egDmNUBcSvu6aqQPCfyd1UneCYr.jpg",
-              "rating": 8.2,
-              "year": "2025",
-              "runtime": 174,
-              "trailerUrl": "https://www.youtube.com/watch?v=p6k9Y-irvOE"
-            },
-            {
-              "title": "Pellegrinis - A Melbourne Legacy",
-              "times": [
-                "10:15am"
-              ],
-              "url": "https://www.palacecinemas.com.au/movies/pellegrinis-a-melbourne-legacy",
-              "overview": "Pellegrini's Espresso Bar is a testament to the enduring power of community, tradition, and love. This documentary explores the cafe's rich history, its cultural impact, and the profound legacy of its beloved figure, Sisto Malaspina.",
-              "posterPath": "https://image.tmdb.org/t/p/w300/9srr4YptXBmwGNnwV8kzsDG00dQ.jpg",
-              "rating": null,
-              "year": "2025",
-              "runtime": 52,
-              "trailerUrl": null
-            }
-          ]
+          "sessions": []
         },
         {
           "cinema": "Palace Kino",
           "url": "https://www.palacecinemas.com.au/cinemas/the-kino-melbourne",
-          "sessions": [
-            {
-              "title": "Song Sung Blue",
-              "times": [
-                "10:20am",
-                "12:30pm",
-                "3:15pm",
-                "6:00pm",
-                "7:15pm",
-                "8:40pm"
-              ],
-              "url": "https://www.palacecinemas.com.au/movies/song-sung-blue",
-              "overview": "Based on a true story, two down-on-their-luck musicians form a joyous Neil Diamond tribute band, proving it's never too late to find love and follow your dreams.",
-              "posterPath": "https://image.tmdb.org/t/p/w300/3HsIAbHWbFDUbY2jfj4wqEjGC3b.jpg",
-              "rating": 7.5,
-              "year": "2025",
-              "runtime": 133,
-              "trailerUrl": "https://www.youtube.com/watch?v=ssZU6xUM-YI"
-            },
-            {
-              "title": "The Choral",
-              "times": [
-                "10:00am",
-                "1:10pm",
-                "3:40pm",
-                "6:10pm",
-                "8:30pm"
-              ],
-              "url": "https://www.palacecinemas.com.au/movies/the-choral",
-              "overview": "As World War I rages on, Dr. Henry Guthrie takes over a British choral society that's lost most of its men to the army. The community soon discovers that the best response to the chaos of war is to make beautiful music together.",
-              "posterPath": "https://image.tmdb.org/t/p/w300/yQtms7CSM0CE0W6dYbLLAATb5rL.jpg",
-              "rating": 6.6,
-              "year": "2025",
-              "runtime": 113,
-              "trailerUrl": "https://www.youtube.com/watch?v=6zRVP-ZgMm8"
-            },
-            {
-              "title": "The Housemaid",
-              "times": [
-                "12:45pm",
-                "4:30pm",
-                "8:50pm"
-              ],
-              "url": "https://www.palacecinemas.com.au/movies/the-housemaid",
-              "overview": "Trying to escape her past, Millie Calloway accepts a job as a live-in housemaid for the wealthy Nina and Andrew Winchester. But what begins as a dream job quickly unravels into something far more dangerous—a sexy, seductive game of secrets, scandal, and power.",
-              "posterPath": "https://image.tmdb.org/t/p/w300/cWsBscZzwu5brg9YjNkGewRUvJX.jpg",
-              "rating": 7.394,
-              "year": "2025",
-              "runtime": 131,
-              "trailerUrl": "https://www.youtube.com/watch?v=TGdKFCVn6G0"
-            },
-            {
-              "title": "Avatar: Fire and Ash (2D)",
-              "times": [
-                "2:00pm",
-                "6:10pm"
-              ],
-              "url": "https://www.palacecinemas.com.au/movies/avatar-fire-and-ash-2d",
-              "overview": "In the wake of the devastating war against the RDA and the loss of their eldest son, Jake Sully and Neytiri face a new threat on Pandora: the Ash People, a violent and power-hungry Na'vi tribe led by the ruthless Varang. Jake's family must fight for their survival and the future of Pandora in a conflict that pushes them to their emotional and physical limits.",
-              "posterPath": "https://image.tmdb.org/t/p/w300/g96wHxU7EnoIFwemb2RgohIXrgW.jpg",
-              "rating": 7.386,
-              "year": "2025",
-              "runtime": 198,
-              "trailerUrl": "https://www.youtube.com/watch?v=MEo4auqToCc"
-            },
-            {
-              "title": "Rental Family",
-              "times": [
-                "12:20pm",
-                "3:30pm",
-                "6:00pm"
-              ],
-              "url": "https://www.palacecinemas.com.au/movies/rental-family",
-              "overview": "An American actor in Tokyo struggles to find purpose until he lands an unusual gig: working for a Japanese 'rental family' agency, playing stand-in roles for strangers. As he immerses himself in his clients' worlds, he begins to form genuine bonds that blur the lines between performance and reality.",
-              "posterPath": "https://image.tmdb.org/t/p/w300/dGRZ55srJoK6TcjPTfHe701UWq0.jpg",
-              "rating": 7.6,
-              "year": "2025",
-              "runtime": 110,
-              "trailerUrl": "https://www.youtube.com/watch?v=7W9B-0PdfXQ"
-            },
-            {
-              "title": "Sentimental Value",
-              "times": [
-                "11:40am",
-                "4:45pm",
-                "8:20pm"
-              ],
-              "url": "https://www.palacecinemas.com.au/movies/sentimental-value",
-              "overview": "Sisters Nora and Agnes reunite with their estranged father, the charismatic Gustav, a once-renowned director who offers stage actress Nora a role in what he hopes will be his comeback film. When Nora turns it down, she soon discovers he has given her part to an eager young Hollywood star.",
-              "posterPath": "https://image.tmdb.org/t/p/w300/7YYrTByEx7fPetfcTa6pEF6XjD9.jpg",
-              "rating": 7.6,
-              "year": "2025",
-              "runtime": 133,
-              "trailerUrl": "https://www.youtube.com/watch?v=zBFstFXdk90"
-            },
-            {
-              "title": "Nuremberg",
-              "times": [
-                "10:00am",
-                "1:30pm",
-                "7:30pm"
-              ],
-              "url": "https://www.palacecinemas.com.au/movies/nuremberg",
-              "overview": "In postwar Germany, an American psychiatrist must determine whether Nazi prisoners are fit to go on trial for war crimes, and finds himself in a complex battle of intellect and ethics with Hermann Göring, Hitler's right-hand man.",
-              "posterPath": "https://image.tmdb.org/t/p/w300/sxu8TsG7k06ymWL98ELEIE1EMZV.jpg",
-              "rating": 7.308,
-              "year": "2025",
-              "runtime": 148,
-              "trailerUrl": "https://www.youtube.com/watch?v=iL_z7gzu4co"
-            },
-            {
-              "title": "My Brother's Band",
-              "times": [
-                "10:20am",
-                "2:30pm",
-                "6:15pm"
-              ],
-              "url": "https://www.palacecinemas.com.au/movies/my-brothers-band",
-              "overview": "Diagnosed with leukemia, a successful orchestra conductor learns that he is adopted, and his younger brother is in a village marching band. The conductor decides to help them win a regional contest.",
-              "posterPath": "https://image.tmdb.org/t/p/w300/6lATJ42bWGAIQ0cG2dzSZD8bNcL.jpg",
-              "rating": 7.318,
-              "year": "2024",
-              "runtime": 103,
-              "trailerUrl": "https://www.youtube.com/watch?v=bhfCXPYIKs8"
-            },
-            {
-              "title": "Anaconda",
-              "times": [
-                "1:00pm",
-                "5:50pm"
-              ],
-              "url": "https://www.palacecinemas.com.au/movies/anaconda",
-              "overview": "A group of friends facing mid-life crises head to the rainforest with the intention of remaking their favorite movie from their youth, only to find themselves in a fight for their lives against natural disasters, giant snakes and violent criminals.",
-              "posterPath": "https://image.tmdb.org/t/p/w300/5MDnvvkOqthhE5gQebzkcOhD1p5.jpg",
-              "rating": 6.2,
-              "year": "2025",
-              "runtime": 100,
-              "trailerUrl": "https://www.youtube.com/watch?v=jMbBuQAYOeM"
-            },
-            {
-              "title": "Zootopia 2",
-              "times": [
-                "9:50am"
-              ],
-              "url": "https://www.palacecinemas.com.au/movies/zootopia-2",
-              "overview": "After cracking the biggest case in Zootopia's history, rookie cops Judy Hopps and Nick Wilde find themselves on the twisting trail of a great mystery when Gary De'Snake arrives and turns the animal metropolis upside down. To crack the case, Judy and Nick must go undercover to unexpected new parts of town, where their growing partnership is tested like never before.",
-              "posterPath": "https://image.tmdb.org/t/p/w300/bjUWGw0Ao0qVWxagN3VCwBJHVo6.jpg",
-              "rating": 7.649,
-              "year": "2025",
-              "runtime": 107,
-              "trailerUrl": "https://www.youtube.com/watch?v=knk2Fzxd9zc"
-            },
-            {
-              "title": "The History of Sound",
-              "times": [
-                "3:10pm"
-              ],
-              "url": "https://www.palacecinemas.com.au/movies/the-history-of-sound",
-              "overview": "In 1917, two young music students attending the Boston Conservatory bond over a mutual love of folk music. They reconnect a few years later, embarking on a song-collecting trip in the backwaters of Maine.",
-              "posterPath": "https://image.tmdb.org/t/p/w300/5tNr1CySiYQICRsQbWWSSsDiKjn.jpg",
-              "rating": 6.1,
-              "year": "2025",
-              "runtime": 127,
-              "trailerUrl": "https://www.youtube.com/watch?v=E2PSkw8BI7k"
-            },
-            {
-              "title": "Kokuho",
-              "times": [
-                "10:00am",
-                "2:45pm"
-              ],
-              "url": "https://www.palacecinemas.com.au/movies/kokuho",
-              "overview": "Nagasaki, 1964: Following the death of his yakuza father, 15-year-old Kikuo is taken under the wing of a famous kabuki actor. Alongside Shunsuke, the actor’s only son, he decides to dedicate himself to this traditional form of theatre. For decades, the two young men grow and evolve together – and one will become the greatest Japanese master of the art of kabuki.",
-              "posterPath": "https://image.tmdb.org/t/p/w300/egDmNUBcSvu6aqQPCfyd1UneCYr.jpg",
-              "rating": 8.2,
-              "year": "2025",
-              "runtime": 174,
-              "trailerUrl": "https://www.youtube.com/watch?v=p6k9Y-irvOE"
-            },
-            {
-              "title": "Pellegrinis - A Melbourne Legacy",
-              "times": [
-                "10:10am"
-              ],
-              "url": "https://www.palacecinemas.com.au/movies/pellegrinis-a-melbourne-legacy",
-              "overview": "Pellegrini's Espresso Bar is a testament to the enduring power of community, tradition, and love. This documentary explores the cafe's rich history, its cultural impact, and the profound legacy of its beloved figure, Sisto Malaspina.",
-              "posterPath": "https://image.tmdb.org/t/p/w300/9srr4YptXBmwGNnwV8kzsDG00dQ.jpg",
-              "rating": null,
-              "year": "2025",
-              "runtime": 52,
-              "trailerUrl": null
-            },
-            {
-              "title": "Wake Up Dead Man: A Knives Out Mystery",
-              "times": [
-                "8:00pm"
-              ],
-              "url": "https://www.palacecinemas.com.au/movies/wake-up-dead-man-a-knives-out-mystery",
-              "overview": "When young priest Jud Duplenticy is sent to assist charismatic firebrand Monsignor Jefferson Wicks, it’s clear that all is not well in the pews. After a sudden and seemingly impossible murder rocks the town, the lack of an obvious suspect prompts local police chief Geraldine Scott to join forces with renowned detective Benoit Blanc to unravel a mystery that defies all logic.",
-              "posterPath": "https://image.tmdb.org/t/p/w300/qCOGGi8JBVEZMc3DVby8rUivyXz.jpg",
-              "rating": 7.212,
-              "year": "2025",
-              "runtime": 145,
-              "trailerUrl": "https://www.youtube.com/watch?v=0hc8yz5-d5Y"
-            }
-          ]
+          "sessions": []
         },
         {
           "cinema": "Palace Westgarth",
           "url": "https://www.palacecinemas.com.au/cinemas/palace-westgarth",
-          "sessions": [
-            {
-              "title": "Song Sung Blue",
-              "times": [
-                "10:20am",
-                "3:15pm",
-                "6:00pm",
-                "8:45pm"
-              ],
-              "url": "https://www.palacecinemas.com.au/movies/song-sung-blue",
-              "overview": "Based on a true story, two down-on-their-luck musicians form a joyous Neil Diamond tribute band, proving it's never too late to find love and follow your dreams.",
-              "posterPath": "https://image.tmdb.org/t/p/w300/3HsIAbHWbFDUbY2jfj4wqEjGC3b.jpg",
-              "rating": 7.5,
-              "year": "2025",
-              "runtime": 133,
-              "trailerUrl": "https://www.youtube.com/watch?v=ssZU6xUM-YI"
-            },
-            {
-              "title": "The Choral",
-              "times": [
-                "3:30pm",
-                "6:10pm",
-                "8:30pm"
-              ],
-              "url": "https://www.palacecinemas.com.au/movies/the-choral",
-              "overview": "As World War I rages on, Dr. Henry Guthrie takes over a British choral society that's lost most of its men to the army. The community soon discovers that the best response to the chaos of war is to make beautiful music together.",
-              "posterPath": "https://image.tmdb.org/t/p/w300/yQtms7CSM0CE0W6dYbLLAATb5rL.jpg",
-              "rating": 6.6,
-              "year": "2025",
-              "runtime": 113,
-              "trailerUrl": "https://www.youtube.com/watch?v=6zRVP-ZgMm8"
-            },
-            {
-              "title": "The Housemaid",
-              "times": [
-                "2:50pm",
-                "8:45pm",
-                "8:50pm"
-              ],
-              "url": "https://www.palacecinemas.com.au/movies/the-housemaid",
-              "overview": "Trying to escape her past, Millie Calloway accepts a job as a live-in housemaid for the wealthy Nina and Andrew Winchester. But what begins as a dream job quickly unravels into something far more dangerous—a sexy, seductive game of secrets, scandal, and power.",
-              "posterPath": "https://image.tmdb.org/t/p/w300/cWsBscZzwu5brg9YjNkGewRUvJX.jpg",
-              "rating": 7.394,
-              "year": "2025",
-              "runtime": 131,
-              "trailerUrl": "https://www.youtube.com/watch?v=TGdKFCVn6G0"
-            },
-            {
-              "title": "Avatar: Fire and Ash (2D)",
-              "times": [
-                "12:15pm",
-                "7:45pm"
-              ],
-              "url": "https://www.palacecinemas.com.au/movies/avatar-fire-and-ash-2d",
-              "overview": "In the wake of the devastating war against the RDA and the loss of their eldest son, Jake Sully and Neytiri face a new threat on Pandora: the Ash People, a violent and power-hungry Na'vi tribe led by the ruthless Varang. Jake's family must fight for their survival and the future of Pandora in a conflict that pushes them to their emotional and physical limits.",
-              "posterPath": "https://image.tmdb.org/t/p/w300/g96wHxU7EnoIFwemb2RgohIXrgW.jpg",
-              "rating": 7.386,
-              "year": "2025",
-              "runtime": 198,
-              "trailerUrl": "https://www.youtube.com/watch?v=MEo4auqToCc"
-            },
-            {
-              "title": "Rental Family",
-              "times": [
-                "12:50pm",
-                "6:10pm"
-              ],
-              "url": "https://www.palacecinemas.com.au/movies/rental-family",
-              "overview": "An American actor in Tokyo struggles to find purpose until he lands an unusual gig: working for a Japanese 'rental family' agency, playing stand-in roles for strangers. As he immerses himself in his clients' worlds, he begins to form genuine bonds that blur the lines between performance and reality.",
-              "posterPath": "https://image.tmdb.org/t/p/w300/dGRZ55srJoK6TcjPTfHe701UWq0.jpg",
-              "rating": 7.6,
-              "year": "2025",
-              "runtime": 110,
-              "trailerUrl": "https://www.youtube.com/watch?v=7W9B-0PdfXQ"
-            },
-            {
-              "title": "Sentimental Value",
-              "times": [
-                "3:20pm",
-                "6:00pm"
-              ],
-              "url": "https://www.palacecinemas.com.au/movies/sentimental-value",
-              "overview": "Sisters Nora and Agnes reunite with their estranged father, the charismatic Gustav, a once-renowned director who offers stage actress Nora a role in what he hopes will be his comeback film. When Nora turns it down, she soon discovers he has given her part to an eager young Hollywood star.",
-              "posterPath": "https://image.tmdb.org/t/p/w300/7YYrTByEx7fPetfcTa6pEF6XjD9.jpg",
-              "rating": 7.6,
-              "year": "2025",
-              "runtime": 133,
-              "trailerUrl": "https://www.youtube.com/watch?v=zBFstFXdk90"
-            },
-            {
-              "title": "Nuremberg",
-              "times": [
-                "8:30pm"
-              ],
-              "url": "https://www.palacecinemas.com.au/movies/nuremberg",
-              "overview": "In postwar Germany, an American psychiatrist must determine whether Nazi prisoners are fit to go on trial for war crimes, and finds himself in a complex battle of intellect and ethics with Hermann Göring, Hitler's right-hand man.",
-              "posterPath": "https://image.tmdb.org/t/p/w300/sxu8TsG7k06ymWL98ELEIE1EMZV.jpg",
-              "rating": 7.308,
-              "year": "2025",
-              "runtime": 148,
-              "trailerUrl": "https://www.youtube.com/watch?v=iL_z7gzu4co"
-            },
-            {
-              "title": "My Brother's Band",
-              "times": [
-                "1:10pm",
-                "5:30pm"
-              ],
-              "url": "https://www.palacecinemas.com.au/movies/my-brothers-band",
-              "overview": "Diagnosed with leukemia, a successful orchestra conductor learns that he is adopted, and his younger brother is in a village marching band. The conductor decides to help them win a regional contest.",
-              "posterPath": "https://image.tmdb.org/t/p/w300/6lATJ42bWGAIQ0cG2dzSZD8bNcL.jpg",
-              "rating": 7.318,
-              "year": "2024",
-              "runtime": 103,
-              "trailerUrl": "https://www.youtube.com/watch?v=bhfCXPYIKs8"
-            },
-            {
-              "title": "Anaconda",
-              "times": [
-                "1:20pm",
-                "4:00pm"
-              ],
-              "url": "https://www.palacecinemas.com.au/movies/anaconda",
-              "overview": "A group of friends facing mid-life crises head to the rainforest with the intention of remaking their favorite movie from their youth, only to find themselves in a fight for their lives against natural disasters, giant snakes and violent criminals.",
-              "posterPath": "https://image.tmdb.org/t/p/w300/5MDnvvkOqthhE5gQebzkcOhD1p5.jpg",
-              "rating": 6.2,
-              "year": "2025",
-              "runtime": 100,
-              "trailerUrl": "https://www.youtube.com/watch?v=jMbBuQAYOeM"
-            },
-            {
-              "title": "The Pout-Pout Fish",
-              "times": [
-                "10:15am",
-                "12:50pm"
-              ],
-              "url": "https://www.palacecinemas.com.au/movies/the-pout-pout-fish",
-              "overview": "Living on a rundown shipwreck, Mr. Fish one day discovers a hyperactive young sea dragon Pip - who had mistaken his home for a junkyard - pilfering his belongings. The heated argument that ensues leaves both their houses in ruin. But there is hope! Embarking on a seemingly impossible quest in search of the mythical \"Shimmer\" to grant them a wish, there’s only one problem: someone else is on the hunt…",
-              "posterPath": "https://image.tmdb.org/t/p/w300/13zx8Vh7nlGmP65NT7rPtORwvw9.jpg",
-              "rating": null,
-              "year": "2026",
-              "runtime": 92,
-              "trailerUrl": "https://www.youtube.com/watch?v=NhQfp1eITTY"
-            },
-            {
-              "title": "The SpongeBob Movie: Search for Squarepants",
-              "times": [
-                "10:40am"
-              ],
-              "url": "https://www.palacecinemas.com.au/movies/the-spongebob-movie-search-for-squarepants",
-              "overview": "Desperate to be a big guy, SpongeBob sets out to prove his bravery to Mr. Krabs by following The Flying Dutchman – a mysterious swashbuckling ghost pirate – on a seafaring adventure that takes him to the deepest depths of the deep sea, where no Sponge has gone before.",
-              "posterPath": "https://image.tmdb.org/t/p/w300/pDWYW9v8fmJdA7N0I1MOdQA3ETq.jpg",
-              "rating": 6.8,
-              "year": "2025",
-              "runtime": 88,
-              "trailerUrl": "https://www.youtube.com/watch?v=JZNZsKeulk8"
-            },
-            {
-              "title": "Zootopia 2",
-              "times": [
-                "10:30am"
-              ],
-              "url": "https://www.palacecinemas.com.au/movies/zootopia-2",
-              "overview": "After cracking the biggest case in Zootopia's history, rookie cops Judy Hopps and Nick Wilde find themselves on the twisting trail of a great mystery when Gary De'Snake arrives and turns the animal metropolis upside down. To crack the case, Judy and Nick must go undercover to unexpected new parts of town, where their growing partnership is tested like never before.",
-              "posterPath": "https://image.tmdb.org/t/p/w300/bjUWGw0Ao0qVWxagN3VCwBJHVo6.jpg",
-              "rating": 7.649,
-              "year": "2025",
-              "runtime": 107,
-              "trailerUrl": "https://www.youtube.com/watch?v=knk2Fzxd9zc"
-            },
-            {
-              "title": "Wicked: For Good",
-              "times": [
-                "10:30am"
-              ],
-              "url": "https://www.palacecinemas.com.au/movies/wicked-for-good",
-              "overview": "As an angry mob rises against the Wicked Witch, Glinda and Elphaba will need to come together one final time. With their singular friendship now the fulcrum of their futures, they will need to truly see each other, with honesty and empathy, if they are to change themselves, and all of Oz, for good.",
-              "posterPath": "https://image.tmdb.org/t/p/w300/si9tolnefLSUKaqQEGz1bWArOaL.jpg",
-              "rating": 6.737,
-              "year": "2025",
-              "runtime": 137,
-              "trailerUrl": "https://www.youtube.com/watch?v=iU4Gpi3Jb88"
-            }
-          ]
+          "sessions": []
         },
         {
           "cinema": "Pentridge Cinema",
           "url": "https://www.palacecinemas.com.au/cinemas/pentridge-cinema",
-          "sessions": [
-            {
-              "title": "Song Sung Blue",
-              "times": [
-                "10:30am",
-                "1:00pm",
-                "2:00pm",
-                "4:00pm",
-                "6:00pm",
-                "7:15pm",
-                "9:00pm"
-              ],
-              "url": "https://www.palacecinemas.com.au/movies/song-sung-blue",
-              "overview": "Based on a true story, two down-on-their-luck musicians form a joyous Neil Diamond tribute band, proving it's never too late to find love and follow your dreams.",
-              "posterPath": "https://image.tmdb.org/t/p/w300/3HsIAbHWbFDUbY2jfj4wqEjGC3b.jpg",
-              "rating": 7.5,
-              "year": "2025",
-              "runtime": 133,
-              "trailerUrl": "https://www.youtube.com/watch?v=ssZU6xUM-YI"
-            },
-            {
-              "title": "The Choral",
-              "times": [
-                "10:30am",
-                "1:10pm",
-                "3:50pm",
-                "6:30pm",
-                "8:20pm"
-              ],
-              "url": "https://www.palacecinemas.com.au/movies/the-choral",
-              "overview": "As World War I rages on, Dr. Henry Guthrie takes over a British choral society that's lost most of its men to the army. The community soon discovers that the best response to the chaos of war is to make beautiful music together.",
-              "posterPath": "https://image.tmdb.org/t/p/w300/yQtms7CSM0CE0W6dYbLLAATb5rL.jpg",
-              "rating": 6.6,
-              "year": "2025",
-              "runtime": 113,
-              "trailerUrl": "https://www.youtube.com/watch?v=6zRVP-ZgMm8"
-            },
-            {
-              "title": "The Housemaid",
-              "times": [
-                "10:40am",
-                "1:20pm",
-                "4:15pm",
-                "6:00pm",
-                "7:00pm",
-                "8:50pm"
-              ],
-              "url": "https://www.palacecinemas.com.au/movies/the-housemaid",
-              "overview": "Trying to escape her past, Millie Calloway accepts a job as a live-in housemaid for the wealthy Nina and Andrew Winchester. But what begins as a dream job quickly unravels into something far more dangerous—a sexy, seductive game of secrets, scandal, and power.",
-              "posterPath": "https://image.tmdb.org/t/p/w300/cWsBscZzwu5brg9YjNkGewRUvJX.jpg",
-              "rating": 7.394,
-              "year": "2025",
-              "runtime": 131,
-              "trailerUrl": "https://www.youtube.com/watch?v=TGdKFCVn6G0"
-            },
-            {
-              "title": "Avatar: Fire and Ash (2D)",
-              "times": [
-                "12:00pm",
-                "2:45pm",
-                "4:00pm",
-                "6:15pm",
-                "7:10pm",
-                "8:00pm"
-              ],
-              "url": "https://www.palacecinemas.com.au/movies/avatar-fire-and-ash-2d",
-              "overview": "In the wake of the devastating war against the RDA and the loss of their eldest son, Jake Sully and Neytiri face a new threat on Pandora: the Ash People, a violent and power-hungry Na'vi tribe led by the ruthless Varang. Jake's family must fight for their survival and the future of Pandora in a conflict that pushes them to their emotional and physical limits.",
-              "posterPath": "https://image.tmdb.org/t/p/w300/g96wHxU7EnoIFwemb2RgohIXrgW.jpg",
-              "rating": 7.386,
-              "year": "2025",
-              "runtime": 198,
-              "trailerUrl": "https://www.youtube.com/watch?v=MEo4auqToCc"
-            },
-            {
-              "title": "Rental Family",
-              "times": [
-                "1:10pm",
-                "3:45pm",
-                "6:15pm",
-                "8:50pm"
-              ],
-              "url": "https://www.palacecinemas.com.au/movies/rental-family",
-              "overview": "An American actor in Tokyo struggles to find purpose until he lands an unusual gig: working for a Japanese 'rental family' agency, playing stand-in roles for strangers. As he immerses himself in his clients' worlds, he begins to form genuine bonds that blur the lines between performance and reality.",
-              "posterPath": "https://image.tmdb.org/t/p/w300/dGRZ55srJoK6TcjPTfHe701UWq0.jpg",
-              "rating": 7.6,
-              "year": "2025",
-              "runtime": 110,
-              "trailerUrl": "https://www.youtube.com/watch?v=7W9B-0PdfXQ"
-            },
-            {
-              "title": "Sentimental Value",
-              "times": [
-                "11:40am",
-                "3:00pm",
-                "6:00pm"
-              ],
-              "url": "https://www.palacecinemas.com.au/movies/sentimental-value",
-              "overview": "Sisters Nora and Agnes reunite with their estranged father, the charismatic Gustav, a once-renowned director who offers stage actress Nora a role in what he hopes will be his comeback film. When Nora turns it down, she soon discovers he has given her part to an eager young Hollywood star.",
-              "posterPath": "https://image.tmdb.org/t/p/w300/7YYrTByEx7fPetfcTa6pEF6XjD9.jpg",
-              "rating": 7.6,
-              "year": "2025",
-              "runtime": 133,
-              "trailerUrl": "https://www.youtube.com/watch?v=zBFstFXdk90"
-            },
-            {
-              "title": "Nuremberg",
-              "times": [
-                "10:30am",
-                "3:00pm",
-                "6:20pm",
-                "8:45pm"
-              ],
-              "url": "https://www.palacecinemas.com.au/movies/nuremberg",
-              "overview": "In postwar Germany, an American psychiatrist must determine whether Nazi prisoners are fit to go on trial for war crimes, and finds himself in a complex battle of intellect and ethics with Hermann Göring, Hitler's right-hand man.",
-              "posterPath": "https://image.tmdb.org/t/p/w300/sxu8TsG7k06ymWL98ELEIE1EMZV.jpg",
-              "rating": 7.308,
-              "year": "2025",
-              "runtime": 148,
-              "trailerUrl": "https://www.youtube.com/watch?v=iL_z7gzu4co"
-            },
-            {
-              "title": "My Brother's Band",
-              "times": [
-                "10:30am",
-                "12:50pm",
-                "6:20pm"
-              ],
-              "url": "https://www.palacecinemas.com.au/movies/my-brothers-band",
-              "overview": "Diagnosed with leukemia, a successful orchestra conductor learns that he is adopted, and his younger brother is in a village marching band. The conductor decides to help them win a regional contest.",
-              "posterPath": "https://image.tmdb.org/t/p/w300/6lATJ42bWGAIQ0cG2dzSZD8bNcL.jpg",
-              "rating": 7.318,
-              "year": "2024",
-              "runtime": 103,
-              "trailerUrl": "https://www.youtube.com/watch?v=bhfCXPYIKs8"
-            },
-            {
-              "title": "Anaconda",
-              "times": [
-                "10:40am",
-                "11:40am",
-                "1:00pm",
-                "4:00pm",
-                "6:00pm",
-                "7:00pm",
-                "9:00pm"
-              ],
-              "url": "https://www.palacecinemas.com.au/movies/anaconda",
-              "overview": "A group of friends facing mid-life crises head to the rainforest with the intention of remaking their favorite movie from their youth, only to find themselves in a fight for their lives against natural disasters, giant snakes and violent criminals.",
-              "posterPath": "https://image.tmdb.org/t/p/w300/5MDnvvkOqthhE5gQebzkcOhD1p5.jpg",
-              "rating": 6.2,
-              "year": "2025",
-              "runtime": 100,
-              "trailerUrl": "https://www.youtube.com/watch?v=jMbBuQAYOeM"
-            },
-            {
-              "title": "The Pout-Pout Fish",
-              "times": [
-                "11:00am",
-                "1:20pm",
-                "4:00pm"
-              ],
-              "url": "https://www.palacecinemas.com.au/movies/the-pout-pout-fish",
-              "overview": "Living on a rundown shipwreck, Mr. Fish one day discovers a hyperactive young sea dragon Pip - who had mistaken his home for a junkyard - pilfering his belongings. The heated argument that ensues leaves both their houses in ruin. But there is hope! Embarking on a seemingly impossible quest in search of the mythical \"Shimmer\" to grant them a wish, there’s only one problem: someone else is on the hunt…",
-              "posterPath": "https://image.tmdb.org/t/p/w300/13zx8Vh7nlGmP65NT7rPtORwvw9.jpg",
-              "rating": null,
-              "year": "2026",
-              "runtime": 92,
-              "trailerUrl": "https://www.youtube.com/watch?v=NhQfp1eITTY"
-            },
-            {
-              "title": "The SpongeBob Movie: Search for Squarepants",
-              "times": [
-                "10:40am",
-                "1:40pm",
-                "2:45pm",
-                "3:40pm"
-              ],
-              "url": "https://www.palacecinemas.com.au/movies/the-spongebob-movie-search-for-squarepants",
-              "overview": "Desperate to be a big guy, SpongeBob sets out to prove his bravery to Mr. Krabs by following The Flying Dutchman – a mysterious swashbuckling ghost pirate – on a seafaring adventure that takes him to the deepest depths of the deep sea, where no Sponge has gone before.",
-              "posterPath": "https://image.tmdb.org/t/p/w300/pDWYW9v8fmJdA7N0I1MOdQA3ETq.jpg",
-              "rating": 6.8,
-              "year": "2025",
-              "runtime": 88,
-              "trailerUrl": "https://www.youtube.com/watch?v=JZNZsKeulk8"
-            },
-            {
-              "title": "Zootopia 2",
-              "times": [
-                "10:30am",
-                "1:30pm",
-                "3:20pm"
-              ],
-              "url": "https://www.palacecinemas.com.au/movies/zootopia-2",
-              "overview": "After cracking the biggest case in Zootopia's history, rookie cops Judy Hopps and Nick Wilde find themselves on the twisting trail of a great mystery when Gary De'Snake arrives and turns the animal metropolis upside down. To crack the case, Judy and Nick must go undercover to unexpected new parts of town, where their growing partnership is tested like never before.",
-              "posterPath": "https://image.tmdb.org/t/p/w300/bjUWGw0Ao0qVWxagN3VCwBJHVo6.jpg",
-              "rating": 7.649,
-              "year": "2025",
-              "runtime": 107,
-              "trailerUrl": "https://www.youtube.com/watch?v=knk2Fzxd9zc"
-            },
-            {
-              "title": "Wicked: For Good",
-              "times": [
-                "3:15pm",
-                "9:00pm"
-              ],
-              "url": "https://www.palacecinemas.com.au/movies/wicked-for-good",
-              "overview": "As an angry mob rises against the Wicked Witch, Glinda and Elphaba will need to come together one final time. With their singular friendship now the fulcrum of their futures, they will need to truly see each other, with honesty and empathy, if they are to change themselves, and all of Oz, for good.",
-              "posterPath": "https://image.tmdb.org/t/p/w300/si9tolnefLSUKaqQEGz1bWArOaL.jpg",
-              "rating": 6.737,
-              "year": "2025",
-              "runtime": 137,
-              "trailerUrl": "https://www.youtube.com/watch?v=iU4Gpi3Jb88"
-            },
-            {
-              "title": "Kokuho",
-              "times": [
-                "11:15am"
-              ],
-              "url": "https://www.palacecinemas.com.au/movies/kokuho",
-              "overview": "Nagasaki, 1964: Following the death of his yakuza father, 15-year-old Kikuo is taken under the wing of a famous kabuki actor. Alongside Shunsuke, the actor’s only son, he decides to dedicate himself to this traditional form of theatre. For decades, the two young men grow and evolve together – and one will become the greatest Japanese master of the art of kabuki.",
-              "posterPath": "https://image.tmdb.org/t/p/w300/egDmNUBcSvu6aqQPCfyd1UneCYr.jpg",
-              "rating": 8.2,
-              "year": "2025",
-              "runtime": 174,
-              "trailerUrl": "https://www.youtube.com/watch?v=p6k9Y-irvOE"
-            },
-            {
-              "title": "Eternity",
-              "times": [
-                "12:20pm",
-                "6:15pm"
-              ],
-              "url": "https://www.palacecinemas.com.au/movies/eternity",
-              "overview": "In an afterlife where souls have one week to decide where to spend eternity, Joan is faced with the impossible choice between the man she spent her life with and her first love, who died young and has waited decades for her to arrive.",
-              "posterPath": "https://image.tmdb.org/t/p/w300/o8pg20G67BGmQvRkXwstNre062J.jpg",
-              "rating": 7.154,
-              "year": "2025",
-              "runtime": 114,
-              "trailerUrl": "https://www.youtube.com/watch?v=GzkoY6hUvQQ"
-            },
-            {
-              "title": "Pellegrinis - A Melbourne Legacy",
-              "times": [
-                "10:40am",
-                "1:00pm",
-                "5:00pm"
-              ],
-              "url": "https://www.palacecinemas.com.au/movies/pellegrinis-a-melbourne-legacy",
-              "overview": "Pellegrini's Espresso Bar is a testament to the enduring power of community, tradition, and love. This documentary explores the cafe's rich history, its cultural impact, and the profound legacy of its beloved figure, Sisto Malaspina.",
-              "posterPath": "https://image.tmdb.org/t/p/w300/9srr4YptXBmwGNnwV8kzsDG00dQ.jpg",
-              "rating": null,
-              "year": "2025",
-              "runtime": 52,
-              "trailerUrl": null
-            },
-            {
-              "title": "Wake Up Dead Man: A Knives Out Mystery",
-              "times": [
-                "8:50pm"
-              ],
-              "url": "https://www.palacecinemas.com.au/movies/wake-up-dead-man-a-knives-out-mystery",
-              "overview": "When young priest Jud Duplenticy is sent to assist charismatic firebrand Monsignor Jefferson Wicks, it’s clear that all is not well in the pews. After a sudden and seemingly impossible murder rocks the town, the lack of an obvious suspect prompts local police chief Geraldine Scott to join forces with renowned detective Benoit Blanc to unravel a mystery that defies all logic.",
-              "posterPath": "https://image.tmdb.org/t/p/w300/qCOGGi8JBVEZMc3DVby8rUivyXz.jpg",
-              "rating": 7.212,
-              "year": "2025",
-              "runtime": 145,
-              "trailerUrl": "https://www.youtube.com/watch?v=0hc8yz5-d5Y"
-            },
-            {
-              "title": "Bugonia",
-              "times": [
-                "10:30am"
-              ],
-              "url": "https://www.palacecinemas.com.au/movies/bugonia",
-              "overview": "Two conspiracy obsessed young men kidnap the high-powered CEO of a major company, convinced that she is an alien intent on destroying planet Earth.",
-              "posterPath": "https://image.tmdb.org/t/p/w300/oxgsAQDAAxA92mFGYCZllgWkH9J.jpg",
-              "rating": 7.415,
-              "year": "2025",
-              "runtime": 119,
-              "trailerUrl": "https://www.youtube.com/watch?v=gZ6pPFK6kaQ"
-            }
-          ]
+          "sessions": []
         },
         {
           "cinema": "Imax Melbourne",
@@ -1014,7 +481,7 @@
               "url": "https://www.acmi.net.au/whats-on/kids-flicks-with-feelings-in-cinemas/the-neverending-story/",
               "overview": "While hiding from bullies in his school's attic, a young boy discovers the extraordinary land of Fantasia, through a magical book called The Neverending Story. The book tells the tale of Atreyu, a young warrior who, with the help of a luck dragon named Falkor, must save Fantasia from the destruction of The Nothing.",
               "posterPath": "https://image.tmdb.org/t/p/w300/ddYCa91iDXfJCxaqSYzwi2fjfnl.jpg",
-              "rating": 7.205,
+              "rating": 7.207,
               "year": "1984",
               "runtime": 97,
               "trailerUrl": "https://www.youtube.com/watch?v=ToUgsvlsemo"
@@ -1046,7 +513,7 @@
               "url": "https://www.brunswickpicturehouse.com.au/now-showing/",
               "overview": "Sisters Nora and Agnes reunite with their estranged father, the charismatic Gustav, a once-renowned director who offers stage actress Nora a role in what he hopes will be his comeback film. When Nora turns it down, she soon discovers he has given her part to an eager young Hollywood star.",
               "posterPath": "https://image.tmdb.org/t/p/w300/7YYrTByEx7fPetfcTa6pEF6XjD9.jpg",
-              "rating": 7.6,
+              "rating": 7.614,
               "year": "2025",
               "runtime": 133,
               "trailerUrl": "https://www.youtube.com/watch?v=zBFstFXdk90"
@@ -1059,7 +526,7 @@
               "url": "https://www.brunswickpicturehouse.com.au/now-showing/",
               "overview": "Based on a true story, two down-on-their-luck musicians form a joyous Neil Diamond tribute band, proving it's never too late to find love and follow your dreams.",
               "posterPath": "https://image.tmdb.org/t/p/w300/3HsIAbHWbFDUbY2jfj4wqEjGC3b.jpg",
-              "rating": 7.5,
+              "rating": 7.227,
               "year": "2025",
               "runtime": 133,
               "trailerUrl": "https://www.youtube.com/watch?v=ssZU6xUM-YI"
@@ -1073,8 +540,422 @@
         },
         {
           "cinema": "Cinema Nova",
-          "url": "https://www.cinemanova.com.au/films-today-after-0:00",
-          "sessions": []
+          "url": "https://www.cinemanova.com.au/films-tuesday-after-0:00",
+          "sessions": [
+            {
+              "title": "Rental Family",
+              "times": [
+                "10:10am",
+                "12:25pm",
+                "2:35pm",
+                "4:45pm",
+                "6:55pm",
+                "9:05pm"
+              ],
+              "url": "https://www.cinemanova.com.au/films/rental-family",
+              "overview": "An American actor in Tokyo struggles to find purpose until he lands an unusual gig: working for a Japanese 'rental family' agency, playing stand-in roles for strangers. As he immerses himself in his clients' worlds, he begins to form genuine bonds that blur the lines between performance and reality.",
+              "posterPath": "https://image.tmdb.org/t/p/w300/dGRZ55srJoK6TcjPTfHe701UWq0.jpg",
+              "rating": 7.6,
+              "year": "2025",
+              "runtime": 110,
+              "trailerUrl": "https://www.youtube.com/watch?v=7W9B-0PdfXQ"
+            },
+            {
+              "title": "Wicked: For Good",
+              "times": [
+                "10:10am"
+              ],
+              "url": "https://www.cinemanova.com.au/films/wicked-for-good",
+              "overview": "As an angry mob rises against the Wicked Witch, Glinda and Elphaba will need to come together one final time. With their singular friendship now the fulcrum of their futures, they will need to truly see each other, with honesty and empathy, if they are to change themselves, and all of Oz, for good.",
+              "posterPath": "https://image.tmdb.org/t/p/w300/si9tolnefLSUKaqQEGz1bWArOaL.jpg",
+              "rating": 6.701,
+              "year": "2025",
+              "runtime": 137,
+              "trailerUrl": "https://www.youtube.com/watch?v=iU4Gpi3Jb88"
+            },
+            {
+              "title": "Choral, The",
+              "times": [
+                "10:15am",
+                "12:30pm",
+                "2:45pm",
+                "7:00pm"
+              ],
+              "url": "https://www.cinemanova.com.au/films/choral-the",
+              "overview": "As World War I rages on, Dr. Henry Guthrie takes over a British choral society that's lost most of its men to the army. The community soon discovers that the best response to the chaos of war is to make beautiful music together.",
+              "posterPath": "https://image.tmdb.org/t/p/w300/yQtms7CSM0CE0W6dYbLLAATb5rL.jpg",
+              "rating": 6.6,
+              "year": "2025",
+              "runtime": 113,
+              "trailerUrl": "https://www.youtube.com/watch?v=6zRVP-ZgMm8"
+            },
+            {
+              "title": "My Brother's Band",
+              "times": [
+                "10:20am",
+                "12:35pm",
+                "6:10pm"
+              ],
+              "url": "https://www.cinemanova.com.au/films/my-brother-s-band",
+              "overview": "Diagnosed with leukemia, a successful orchestra conductor learns that he is adopted, and his younger brother is in a village marching band. The conductor decides to help them win a regional contest.",
+              "posterPath": "https://image.tmdb.org/t/p/w300/6lATJ42bWGAIQ0cG2dzSZD8bNcL.jpg",
+              "rating": 7.317,
+              "year": "2024",
+              "runtime": 103,
+              "trailerUrl": "https://www.youtube.com/watch?v=bhfCXPYIKs8"
+            },
+            {
+              "title": "Nuremberg",
+              "times": [
+                "10:20am",
+                "12:40pm",
+                "3:30pm",
+                "6:20pm"
+              ],
+              "url": "https://www.cinemanova.com.au/films/nuremberg",
+              "overview": "In postwar Germany, an American psychiatrist must determine whether Nazi prisoners are fit to go on trial for war crimes, and finds himself in a complex battle of intellect and ethics with Hermann Göring, Hitler's right-hand man.",
+              "posterPath": "https://image.tmdb.org/t/p/w300/sxu8TsG7k06ymWL98ELEIE1EMZV.jpg",
+              "rating": 7.328,
+              "year": "2025",
+              "runtime": 148,
+              "trailerUrl": "https://www.youtube.com/watch?v=iL_z7gzu4co"
+            },
+            {
+              "title": "Eternity",
+              "times": [
+                "10:25am",
+                "2:40pm",
+                "6:35pm",
+                "8:50pm"
+              ],
+              "url": "https://www.cinemanova.com.au/films/eternity",
+              "overview": "In an afterlife where souls have one week to decide where to spend eternity, Joan is faced with the impossible choice between the man she spent her life with and her first love, who died young and has waited decades for her to arrive.",
+              "posterPath": "https://image.tmdb.org/t/p/w300/o8pg20G67BGmQvRkXwstNre062J.jpg",
+              "rating": 7.138,
+              "year": "2025",
+              "runtime": 114,
+              "trailerUrl": "https://www.youtube.com/watch?v=GzkoY6hUvQQ"
+            },
+            {
+              "title": "Orwell: 2+2=5",
+              "times": [
+                "10:25am",
+                "12:45pm",
+                "6:15pm"
+              ],
+              "url": "https://www.cinemanova.com.au/films/orwell-2-2-5",
+              "overview": "George Orwell was one of the most visionary authors of the 20th century, whose novels 1984 and Animal Farm foretold a chilling, authoritarian future. Acclaimed director Raoul Peck interweaves clips, readings from Orwell's diary, cinematic references, and modern-day footage to craft not only a portrait of the writer, but a fresh take on how prophetic his work has become.",
+              "posterPath": "https://image.tmdb.org/t/p/w300/qG1LjcK8ohi4mSJ9j8KHUs5svbe.jpg",
+              "rating": 7.5,
+              "year": "2025",
+              "runtime": 119,
+              "trailerUrl": "https://www.youtube.com/watch?v=npwmcJxgLic"
+            },
+            {
+              "title": "Angel's Egg",
+              "times": [
+                "10:30am"
+              ],
+              "url": "https://www.cinemanova.com.au/films/angel-s-egg",
+              "overview": "In the ruins of a strange city, a young girl takes care of a large egg she holds carefully in her arms. She bonds with a boy who is searching for a bird he saw in a dream.",
+              "posterPath": "https://image.tmdb.org/t/p/w300/dcEUGvckbePFzPKhGXnS9T3kZMG.jpg",
+              "rating": 7.721,
+              "year": "1985",
+              "runtime": 71,
+              "trailerUrl": "https://www.youtube.com/watch?v=SqyVGzaQFpQ"
+            },
+            {
+              "title": "Song Sung Blue",
+              "times": [
+                "10:30am",
+                "1:15pm",
+                "3:50pm",
+                "6:25pm",
+                "9:00pm"
+              ],
+              "url": "https://www.cinemanova.com.au/films/song-sung-blue",
+              "overview": "Based on a true story, two down-on-their-luck musicians form a joyous Neil Diamond tribute band, proving it's never too late to find love and follow your dreams.",
+              "posterPath": "https://image.tmdb.org/t/p/w300/3HsIAbHWbFDUbY2jfj4wqEjGC3b.jpg",
+              "rating": 7.227,
+              "year": "2025",
+              "runtime": 133,
+              "trailerUrl": "https://www.youtube.com/watch?v=ssZU6xUM-YI"
+            },
+            {
+              "title": "Pellegrinis",
+              "times": [
+                "10:35am",
+                "11:50am",
+                "6:00pm"
+              ],
+              "url": "https://www.cinemanova.com.au/films/pellegrinis",
+              "overview": "Pellegrini's Espresso Bar is a testament to the enduring power of community, tradition, and love. This documentary explores the cafe's rich history, its cultural impact, and the profound legacy of its beloved figure, Sisto Malaspina.",
+              "posterPath": "https://image.tmdb.org/t/p/w300/9srr4YptXBmwGNnwV8kzsDG00dQ.jpg",
+              "rating": null,
+              "year": "2025",
+              "runtime": 52,
+              "trailerUrl": null
+            },
+            {
+              "title": "Wake Up Dead Man: A Knives Out Mystery",
+              "times": [
+                "10:40am",
+                "3:25pm",
+                "8:10pm"
+              ],
+              "url": "https://www.cinemanova.com.au/films/wake-up-dead-man-a-knives-out-mystery",
+              "overview": "When young priest Jud Duplenticy is sent to assist charismatic firebrand Monsignor Jefferson Wicks, it’s clear that all is not well in the pews. After a sudden and seemingly impossible murder rocks the town, the lack of an obvious suspect prompts local police chief Geraldine Scott to join forces with renowned detective Benoit Blanc to unravel a mystery that defies all logic.",
+              "posterPath": "https://image.tmdb.org/t/p/w300/qCOGGi8JBVEZMc3DVby8rUivyXz.jpg",
+              "rating": 7.214,
+              "year": "2025",
+              "runtime": 145,
+              "trailerUrl": "https://www.youtube.com/watch?v=0hc8yz5-d5Y"
+            },
+            {
+              "title": "Golden Spurtle, The",
+              "times": [
+                "10:40am",
+                "1:05pm",
+                "6:05pm"
+              ],
+              "url": "https://www.cinemanova.com.au/films/golden-spurtle-the",
+              "overview": "In a quaint Scottish village in the Highlands, contenders from around the globe gather to compete for the title of World Porridge Champion armed only with oats, salt and water. As the ailing Porridge Chieftain's tenure ends, he embarks on a mission to find a successor. Amidst intense rivalries and the charm of eccentric locals, this documentary delves into the legacy of the village and unveils a captivating culinary spectacle.",
+              "posterPath": "https://image.tmdb.org/t/p/w300/miYmbKhA26C8oUIioC2OMTXse0o.jpg",
+              "rating": 6.714,
+              "year": "2025",
+              "runtime": 75,
+              "trailerUrl": "https://www.youtube.com/watch?v=AcTFnWvy8k4"
+            },
+            {
+              "title": "Sentimental Value",
+              "times": [
+                "10:45am",
+                "1:20pm",
+                "2:50pm",
+                "4:00pm",
+                "5:25pm",
+                "6:40pm",
+                "8:00pm",
+                "9:15pm"
+              ],
+              "url": "https://www.cinemanova.com.au/films/sentimental-value",
+              "overview": "Sisters Nora and Agnes reunite with their estranged father, the charismatic Gustav, a once-renowned director who offers stage actress Nora a role in what he hopes will be his comeback film. When Nora turns it down, she soon discovers he has given her part to an eager young Hollywood star.",
+              "posterPath": "https://image.tmdb.org/t/p/w300/7YYrTByEx7fPetfcTa6pEF6XjD9.jpg",
+              "rating": 7.614,
+              "year": "2025",
+              "runtime": 133,
+              "trailerUrl": "https://www.youtube.com/watch?v=zBFstFXdk90"
+            },
+            {
+              "title": "Signorinella: Little Miss",
+              "times": [
+                "10:45am"
+              ],
+              "url": "https://www.cinemanova.com.au/films/signorinella-little-miss",
+              "overview": "In 1940, as ever more countries lined up on either side of burgeoning global conflict, Italian migrant families in Australia were forcibly separated. While the men were rounded up and imprisoned in internment camps, the women were left to carry on alone in isolated pockets of community in suburbs like Carlton. Having little more than one another for company and the generations of tradition they had brought with them, these trailblazers would go on to transform the country they made home. In the wave of immigration that followed the end of World War II, Italian women were once again at the forefront of rebuilding the lives of their families. In the process, they left a lasting influence on Australian culture, permeating the realms of fashion, business, community leadership and more.",
+              "posterPath": "https://image.tmdb.org/t/p/w300/5FIGdGWllvpl9N68cbdZU4VJNtB.jpg",
+              "rating": null,
+              "year": "2025",
+              "runtime": 86,
+              "trailerUrl": "https://www.youtube.com/watch?v=OCNPBBeyk7Q"
+            },
+            {
+              "title": "Mastermind, The",
+              "times": [
+                "11:40am"
+              ],
+              "url": "https://www.cinemanova.com.au/films/mastermind-the",
+              "overview": "In a sedate Massachusetts suburb circa 1970, unemployed family man and amateur art thief J.B. Mooney sets out on his first heist. With the museum cased and accomplices recruited, he has an airtight plan. Or so he thinks.",
+              "posterPath": "https://image.tmdb.org/t/p/w300/oPaEQ3m4zHOzIAstgXCZZtzcHTL.jpg",
+              "rating": 5.8,
+              "year": "2025",
+              "runtime": 110,
+              "trailerUrl": "https://www.youtube.com/watch?v=ASH5vXpi3xA"
+            },
+            {
+              "title": "Resurrection",
+              "times": [
+                "12:00pm",
+                "3:00pm",
+                "6:00pm",
+                "8:15pm"
+              ],
+              "url": "https://www.cinemanova.com.au/films/resurrection",
+              "overview": "A jaded homicide detective has been put on the case of a ruthless killer in the city of Chicago, who leaves a trail of horribly mutilated and dismembered corpses along with perversely ironic biblical quotes.",
+              "posterPath": "https://image.tmdb.org/t/p/w300/2j6cMHN1Mx1u8S897VVhO7wSrce.jpg",
+              "rating": 6.114,
+              "year": "1999",
+              "runtime": 108,
+              "trailerUrl": "https://www.youtube.com/watch?v=XxSMzmBz5oY"
+            },
+            {
+              "title": "If I Had Legs I'd Kick You",
+              "times": [
+                "12:35pm",
+                "9:10pm"
+              ],
+              "url": "https://www.cinemanova.com.au/films/if-i-had-legs-i-d-kick-you",
+              "overview": "With her life crashing down around her, Linda attempts to navigate her child's mysterious illness, her absent husband, a missing person, and an increasingly hostile relationship with her therapist.",
+              "posterPath": "https://image.tmdb.org/t/p/w300/gkIFK1HzqfgQg4v4ifeNKogHtPG.jpg",
+              "rating": 6.5,
+              "year": "2025",
+              "runtime": 113,
+              "trailerUrl": "https://www.youtube.com/watch?v=-oDLBRLkflo"
+            },
+            {
+              "title": "Frankenstein",
+              "times": [
+                "12:50pm"
+              ],
+              "url": "https://www.cinemanova.com.au/films/frankenstein",
+              "overview": "Dr. Victor Frankenstein, a brilliant but egotistical scientist, brings a creature to life in a monstrous experiment that ultimately leads to the undoing of both the creator and his tragic creation.",
+              "posterPath": "https://image.tmdb.org/t/p/w300/g4JtvGlQO7DByTI6frUobqvSL3R.jpg",
+              "rating": 7.707,
+              "year": "2025",
+              "runtime": 150,
+              "trailerUrl": "https://www.youtube.com/watch?v=9WZllcEgWrM"
+            },
+            {
+              "title": "The Housemaid",
+              "times": [
+                "1:10pm",
+                "3:45pm",
+                "6:20pm",
+                "8:55pm"
+              ],
+              "url": "https://www.cinemanova.com.au/films/the-housemaid",
+              "overview": "Trying to escape her past, Millie Calloway accepts a job as a live-in housemaid for the wealthy Nina and Andrew Winchester. But what begins as a dream job quickly unravels into something far more dangerous—a sexy, seductive game of secrets, scandal, and power.",
+              "posterPath": "https://image.tmdb.org/t/p/w300/cWsBscZzwu5brg9YjNkGewRUvJX.jpg",
+              "rating": 7.4,
+              "year": "2025",
+              "runtime": 131,
+              "trailerUrl": "https://www.youtube.com/watch?v=TGdKFCVn6G0"
+            },
+            {
+              "title": "Urchin",
+              "times": [
+                "1:25pm",
+                "6:10pm"
+              ],
+              "url": "https://www.cinemanova.com.au/films/urchin",
+              "overview": "Mike, a rough sleeper in London, is trapped in a cycle of self-destruction as he attempts to turn his life around. Along the way, he encounters unexpected chances for a fresh start.",
+              "posterPath": "https://image.tmdb.org/t/p/w300/zc8n3hm3S2VxFxlNH1MNN28LVMa.jpg",
+              "rating": 6.7,
+              "year": "2025",
+              "runtime": 100,
+              "trailerUrl": "https://www.youtube.com/watch?v=O-hgR7RC39c"
+            },
+            {
+              "title": "Bugonia",
+              "times": [
+                "1:50pm",
+                "4:10pm",
+                "6:30pm",
+                "8:50pm"
+              ],
+              "url": "https://www.cinemanova.com.au/films/bugonia",
+              "overview": "Two conspiracy obsessed young men kidnap the high-powered CEO of a major company, convinced that she is an alien intent on destroying planet Earth.",
+              "posterPath": "https://image.tmdb.org/t/p/w300/oxgsAQDAAxA92mFGYCZllgWkH9J.jpg",
+              "rating": 7.407,
+              "year": "2025",
+              "runtime": 119,
+              "trailerUrl": "https://www.youtube.com/watch?v=gZ6pPFK6kaQ"
+            },
+            {
+              "title": "Kokuho",
+              "times": [
+                "2:40pm",
+                "7:15pm"
+              ],
+              "url": "https://www.cinemanova.com.au/films/kokuho",
+              "overview": "Nagasaki, 1964: Following the death of his yakuza father, 15-year-old Kikuo is taken under the wing of a famous kabuki actor. Alongside Shunsuke, the actor’s only son, he decides to dedicate himself to this traditional form of theatre. For decades, the two young men grow and evolve together – and one will become the greatest Japanese master of the art of kabuki.",
+              "posterPath": "https://image.tmdb.org/t/p/w300/egDmNUBcSvu6aqQPCfyd1UneCYr.jpg",
+              "rating": 8.2,
+              "year": "2025",
+              "runtime": 174,
+              "trailerUrl": "https://www.youtube.com/watch?v=p6k9Y-irvOE"
+            },
+            {
+              "title": "One Battle After Another",
+              "times": [
+                "3:10pm",
+                "8:35pm"
+              ],
+              "url": "https://www.cinemanova.com.au/films/one-battle-after-another",
+              "overview": "Washed-up revolutionary Bob exists in a state of stoned paranoia, surviving off-grid with his spirited, self-reliant daughter, Willa. When his evil nemesis resurfaces after 16 years and she goes missing, the former radical scrambles to find her, father and daughter both battling the consequences of his past.",
+              "posterPath": "https://image.tmdb.org/t/p/w300/r4uXvqCeco0KmO0CjlhXuTEFuSE.jpg",
+              "rating": 7.458,
+              "year": "2025",
+              "runtime": 162,
+              "trailerUrl": "https://www.youtube.com/watch?v=u6GVb4p7oD4"
+            },
+            {
+              "title": "Die My Love",
+              "times": [
+                "3:40pm",
+                "9:00pm"
+              ],
+              "url": "https://www.cinemanova.com.au/films/die-my-love",
+              "overview": "After inheriting a remote Montana house, Jackson moves there from New York with his partner Grace, and the couple soon welcome a child. As Jackson becomes increasingly absent and rural isolation sets in, Grace struggles with loneliness, creative frustration, and unresolved emotional wounds. What begins as an attempt at renewal gradually turns into an intense psychological descent, placing strain on their relationship and exposing the fragile balance between love, identity, and motherhood.",
+              "posterPath": "https://image.tmdb.org/t/p/w300/kajpShbFhOdpl6yCrLezMrr9tB4.jpg",
+              "rating": 6.32,
+              "year": "2025",
+              "runtime": 119,
+              "trailerUrl": "https://www.youtube.com/watch?v=2jzXHW6Qe70"
+            },
+            {
+              "title": "Time Masters, The",
+              "times": [
+                "4:55pm"
+              ],
+              "url": "https://www.cinemanova.com.au/films/time-masters-the",
+              "overview": "On planet Perdide, an attack of giant hornets leaves young Piel alone in a wrecked car with his dying father. A mayday message reaches their friend Jaffar, an adventurer travelling through space. Onboard Jaffar’s shuttle are the renegade Prince Matton, his fiancée, and Silbad, who knows Perdide well. Thus begins an incredible race across space to save Piel.",
+              "posterPath": "https://image.tmdb.org/t/p/w300/2brFFdhCSdcSzBbTOWg9VQra6QI.jpg",
+              "rating": 7.246,
+              "year": "1982",
+              "runtime": 80,
+              "trailerUrl": "https://www.youtube.com/watch?v=D4f4tprXSiA"
+            },
+            {
+              "title": "Mistress Dispeller",
+              "times": [
+                "5:00pm"
+              ],
+              "url": "https://www.cinemanova.com.au/films/mistress-dispeller",
+              "overview": "Teacher Wang works as a 'mistress dispeller' in China, hired to break up affairs by any means necessary. Through one of her cases, we explore the ways class, capital, and culture collide to shape romantic relationships in contemporary China.",
+              "posterPath": "https://image.tmdb.org/t/p/w300/h0gWCKUwROWll8ZzyEuaUJTsigA.jpg",
+              "rating": 7.6,
+              "year": "2025",
+              "runtime": 94,
+              "trailerUrl": "https://www.youtube.com/watch?v=a2yQU81CCn8"
+            },
+            {
+              "title": "My Neighbour Totoro + Spirited Away",
+              "times": [
+                "7:00pm"
+              ],
+              "url": "https://www.cinemanova.com.au/films/my-neighbour-totoro-spirited-away",
+              "overview": null,
+              "posterPath": null,
+              "rating": null,
+              "year": null,
+              "runtime": null,
+              "trailerUrl": null
+            },
+            {
+              "title": "Weapons",
+              "times": [
+                "9:15pm"
+              ],
+              "url": "https://www.cinemanova.com.au/films/weapons",
+              "overview": "When all but one child from the same class mysteriously vanish on the same night at exactly the same time, a community is left questioning who or what is behind their disappearance.",
+              "posterPath": "https://image.tmdb.org/t/p/w300/cpf7vsRZ0MYRQcnLWteD5jK9ymT.jpg",
+              "rating": 7.3,
+              "year": "2025",
+              "runtime": 129,
+              "trailerUrl": "https://www.youtube.com/watch?v=t41avNnPsaA"
+            }
+          ]
         },
         {
           "cinema": "Lido Cinemas",
@@ -1124,7 +1005,7 @@
               "url": "https://www.palacecinemas.com.au/movies/song-sung-blue",
               "overview": "Based on a true story, two down-on-their-luck musicians form a joyous Neil Diamond tribute band, proving it's never too late to find love and follow your dreams.",
               "posterPath": "https://image.tmdb.org/t/p/w300/3HsIAbHWbFDUbY2jfj4wqEjGC3b.jpg",
-              "rating": 7.5,
+              "rating": 7.227,
               "year": "2025",
               "runtime": 133,
               "trailerUrl": "https://www.youtube.com/watch?v=ssZU6xUM-YI"
@@ -1159,7 +1040,7 @@
               "url": "https://www.palacecinemas.com.au/movies/the-housemaid",
               "overview": "Trying to escape her past, Millie Calloway accepts a job as a live-in housemaid for the wealthy Nina and Andrew Winchester. But what begins as a dream job quickly unravels into something far more dangerous—a sexy, seductive game of secrets, scandal, and power.",
               "posterPath": "https://image.tmdb.org/t/p/w300/cWsBscZzwu5brg9YjNkGewRUvJX.jpg",
-              "rating": 7.394,
+              "rating": 7.4,
               "year": "2025",
               "runtime": 131,
               "trailerUrl": "https://www.youtube.com/watch?v=TGdKFCVn6G0"
@@ -1173,8 +1054,8 @@
               ],
               "url": "https://www.palacecinemas.com.au/movies/avatar-fire-and-ash-2d",
               "overview": "In the wake of the devastating war against the RDA and the loss of their eldest son, Jake Sully and Neytiri face a new threat on Pandora: the Ash People, a violent and power-hungry Na'vi tribe led by the ruthless Varang. Jake's family must fight for their survival and the future of Pandora in a conflict that pushes them to their emotional and physical limits.",
-              "posterPath": "https://image.tmdb.org/t/p/w300/g96wHxU7EnoIFwemb2RgohIXrgW.jpg",
-              "rating": 7.386,
+              "posterPath": "https://image.tmdb.org/t/p/w300/cf7hE1ifY4UNbS25tGnaTyyDrI2.jpg",
+              "rating": 7.4,
               "year": "2025",
               "runtime": 198,
               "trailerUrl": "https://www.youtube.com/watch?v=MEo4auqToCc"
@@ -1205,7 +1086,7 @@
               "url": "https://www.palacecinemas.com.au/movies/sentimental-value",
               "overview": "Sisters Nora and Agnes reunite with their estranged father, the charismatic Gustav, a once-renowned director who offers stage actress Nora a role in what he hopes will be his comeback film. When Nora turns it down, she soon discovers he has given her part to an eager young Hollywood star.",
               "posterPath": "https://image.tmdb.org/t/p/w300/7YYrTByEx7fPetfcTa6pEF6XjD9.jpg",
-              "rating": 7.6,
+              "rating": 7.614,
               "year": "2025",
               "runtime": 133,
               "trailerUrl": "https://www.youtube.com/watch?v=zBFstFXdk90"
@@ -1221,7 +1102,7 @@
               "url": "https://www.palacecinemas.com.au/movies/nuremberg",
               "overview": "In postwar Germany, an American psychiatrist must determine whether Nazi prisoners are fit to go on trial for war crimes, and finds himself in a complex battle of intellect and ethics with Hermann Göring, Hitler's right-hand man.",
               "posterPath": "https://image.tmdb.org/t/p/w300/sxu8TsG7k06ymWL98ELEIE1EMZV.jpg",
-              "rating": 7.308,
+              "rating": 7.328,
               "year": "2025",
               "runtime": 148,
               "trailerUrl": "https://www.youtube.com/watch?v=iL_z7gzu4co"
@@ -1236,7 +1117,7 @@
               "url": "https://www.palacecinemas.com.au/movies/my-brothers-band",
               "overview": "Diagnosed with leukemia, a successful orchestra conductor learns that he is adopted, and his younger brother is in a village marching band. The conductor decides to help them win a regional contest.",
               "posterPath": "https://image.tmdb.org/t/p/w300/6lATJ42bWGAIQ0cG2dzSZD8bNcL.jpg",
-              "rating": 7.318,
+              "rating": 7.317,
               "year": "2024",
               "runtime": 103,
               "trailerUrl": "https://www.youtube.com/watch?v=bhfCXPYIKs8"
@@ -1264,7 +1145,7 @@
               "url": "https://www.palacecinemas.com.au/movies/zootopia-2",
               "overview": "After cracking the biggest case in Zootopia's history, rookie cops Judy Hopps and Nick Wilde find themselves on the twisting trail of a great mystery when Gary De'Snake arrives and turns the animal metropolis upside down. To crack the case, Judy and Nick must go undercover to unexpected new parts of town, where their growing partnership is tested like never before.",
               "posterPath": "https://image.tmdb.org/t/p/w300/bjUWGw0Ao0qVWxagN3VCwBJHVo6.jpg",
-              "rating": 7.649,
+              "rating": 7.641,
               "year": "2025",
               "runtime": 107,
               "trailerUrl": "https://www.youtube.com/watch?v=knk2Fzxd9zc"
@@ -1315,7 +1196,7 @@
               "url": "https://www.palacecinemas.com.au/movies/song-sung-blue",
               "overview": "Based on a true story, two down-on-their-luck musicians form a joyous Neil Diamond tribute band, proving it's never too late to find love and follow your dreams.",
               "posterPath": "https://image.tmdb.org/t/p/w300/3HsIAbHWbFDUbY2jfj4wqEjGC3b.jpg",
-              "rating": 7.5,
+              "rating": 7.227,
               "year": "2025",
               "runtime": 133,
               "trailerUrl": "https://www.youtube.com/watch?v=ssZU6xUM-YI"
@@ -1347,7 +1228,7 @@
               "url": "https://www.palacecinemas.com.au/movies/the-housemaid",
               "overview": "Trying to escape her past, Millie Calloway accepts a job as a live-in housemaid for the wealthy Nina and Andrew Winchester. But what begins as a dream job quickly unravels into something far more dangerous—a sexy, seductive game of secrets, scandal, and power.",
               "posterPath": "https://image.tmdb.org/t/p/w300/cWsBscZzwu5brg9YjNkGewRUvJX.jpg",
-              "rating": 7.394,
+              "rating": 7.4,
               "year": "2025",
               "runtime": 131,
               "trailerUrl": "https://www.youtube.com/watch?v=TGdKFCVn6G0"
@@ -1360,8 +1241,8 @@
               ],
               "url": "https://www.palacecinemas.com.au/movies/avatar-fire-and-ash-2d",
               "overview": "In the wake of the devastating war against the RDA and the loss of their eldest son, Jake Sully and Neytiri face a new threat on Pandora: the Ash People, a violent and power-hungry Na'vi tribe led by the ruthless Varang. Jake's family must fight for their survival and the future of Pandora in a conflict that pushes them to their emotional and physical limits.",
-              "posterPath": "https://image.tmdb.org/t/p/w300/g96wHxU7EnoIFwemb2RgohIXrgW.jpg",
-              "rating": 7.386,
+              "posterPath": "https://image.tmdb.org/t/p/w300/cf7hE1ifY4UNbS25tGnaTyyDrI2.jpg",
+              "rating": 7.4,
               "year": "2025",
               "runtime": 198,
               "trailerUrl": "https://www.youtube.com/watch?v=MEo4auqToCc"
@@ -1391,7 +1272,7 @@
               "url": "https://www.palacecinemas.com.au/movies/sentimental-value",
               "overview": "Sisters Nora and Agnes reunite with their estranged father, the charismatic Gustav, a once-renowned director who offers stage actress Nora a role in what he hopes will be his comeback film. When Nora turns it down, she soon discovers he has given her part to an eager young Hollywood star.",
               "posterPath": "https://image.tmdb.org/t/p/w300/7YYrTByEx7fPetfcTa6pEF6XjD9.jpg",
-              "rating": 7.6,
+              "rating": 7.614,
               "year": "2025",
               "runtime": 133,
               "trailerUrl": "https://www.youtube.com/watch?v=zBFstFXdk90"
@@ -1406,7 +1287,7 @@
               "url": "https://www.palacecinemas.com.au/movies/nuremberg",
               "overview": "In postwar Germany, an American psychiatrist must determine whether Nazi prisoners are fit to go on trial for war crimes, and finds himself in a complex battle of intellect and ethics with Hermann Göring, Hitler's right-hand man.",
               "posterPath": "https://image.tmdb.org/t/p/w300/sxu8TsG7k06ymWL98ELEIE1EMZV.jpg",
-              "rating": 7.308,
+              "rating": 7.328,
               "year": "2025",
               "runtime": 148,
               "trailerUrl": "https://www.youtube.com/watch?v=iL_z7gzu4co"
@@ -1421,7 +1302,7 @@
               "url": "https://www.palacecinemas.com.au/movies/my-brothers-band",
               "overview": "Diagnosed with leukemia, a successful orchestra conductor learns that he is adopted, and his younger brother is in a village marching band. The conductor decides to help them win a regional contest.",
               "posterPath": "https://image.tmdb.org/t/p/w300/6lATJ42bWGAIQ0cG2dzSZD8bNcL.jpg",
-              "rating": 7.318,
+              "rating": 7.317,
               "year": "2024",
               "runtime": 103,
               "trailerUrl": "https://www.youtube.com/watch?v=bhfCXPYIKs8"
@@ -1448,7 +1329,7 @@
               "url": "https://www.palacecinemas.com.au/movies/zootopia-2",
               "overview": "After cracking the biggest case in Zootopia's history, rookie cops Judy Hopps and Nick Wilde find themselves on the twisting trail of a great mystery when Gary De'Snake arrives and turns the animal metropolis upside down. To crack the case, Judy and Nick must go undercover to unexpected new parts of town, where their growing partnership is tested like never before.",
               "posterPath": "https://image.tmdb.org/t/p/w300/bjUWGw0Ao0qVWxagN3VCwBJHVo6.jpg",
-              "rating": 7.649,
+              "rating": 7.641,
               "year": "2025",
               "runtime": 107,
               "trailerUrl": "https://www.youtube.com/watch?v=knk2Fzxd9zc"
@@ -1501,7 +1382,7 @@
               "url": "https://www.palacecinemas.com.au/movies/wake-up-dead-man-a-knives-out-mystery",
               "overview": "When young priest Jud Duplenticy is sent to assist charismatic firebrand Monsignor Jefferson Wicks, it’s clear that all is not well in the pews. After a sudden and seemingly impossible murder rocks the town, the lack of an obvious suspect prompts local police chief Geraldine Scott to join forces with renowned detective Benoit Blanc to unravel a mystery that defies all logic.",
               "posterPath": "https://image.tmdb.org/t/p/w300/qCOGGi8JBVEZMc3DVby8rUivyXz.jpg",
-              "rating": 7.212,
+              "rating": 7.214,
               "year": "2025",
               "runtime": 145,
               "trailerUrl": "https://www.youtube.com/watch?v=0hc8yz5-d5Y"
@@ -1523,7 +1404,7 @@
               "url": "https://www.palacecinemas.com.au/movies/song-sung-blue",
               "overview": "Based on a true story, two down-on-their-luck musicians form a joyous Neil Diamond tribute band, proving it's never too late to find love and follow your dreams.",
               "posterPath": "https://image.tmdb.org/t/p/w300/3HsIAbHWbFDUbY2jfj4wqEjGC3b.jpg",
-              "rating": 7.5,
+              "rating": 7.227,
               "year": "2025",
               "runtime": 133,
               "trailerUrl": "https://www.youtube.com/watch?v=ssZU6xUM-YI"
@@ -1552,7 +1433,7 @@
               "url": "https://www.palacecinemas.com.au/movies/the-housemaid",
               "overview": "Trying to escape her past, Millie Calloway accepts a job as a live-in housemaid for the wealthy Nina and Andrew Winchester. But what begins as a dream job quickly unravels into something far more dangerous—a sexy, seductive game of secrets, scandal, and power.",
               "posterPath": "https://image.tmdb.org/t/p/w300/cWsBscZzwu5brg9YjNkGewRUvJX.jpg",
-              "rating": 7.394,
+              "rating": 7.4,
               "year": "2025",
               "runtime": 131,
               "trailerUrl": "https://www.youtube.com/watch?v=TGdKFCVn6G0"
@@ -1565,8 +1446,8 @@
               ],
               "url": "https://www.palacecinemas.com.au/movies/avatar-fire-and-ash-2d",
               "overview": "In the wake of the devastating war against the RDA and the loss of their eldest son, Jake Sully and Neytiri face a new threat on Pandora: the Ash People, a violent and power-hungry Na'vi tribe led by the ruthless Varang. Jake's family must fight for their survival and the future of Pandora in a conflict that pushes them to their emotional and physical limits.",
-              "posterPath": "https://image.tmdb.org/t/p/w300/g96wHxU7EnoIFwemb2RgohIXrgW.jpg",
-              "rating": 7.386,
+              "posterPath": "https://image.tmdb.org/t/p/w300/cf7hE1ifY4UNbS25tGnaTyyDrI2.jpg",
+              "rating": 7.4,
               "year": "2025",
               "runtime": 198,
               "trailerUrl": "https://www.youtube.com/watch?v=MEo4auqToCc"
@@ -1594,7 +1475,7 @@
               "url": "https://www.palacecinemas.com.au/movies/sentimental-value",
               "overview": "Sisters Nora and Agnes reunite with their estranged father, the charismatic Gustav, a once-renowned director who offers stage actress Nora a role in what he hopes will be his comeback film. When Nora turns it down, she soon discovers he has given her part to an eager young Hollywood star.",
               "posterPath": "https://image.tmdb.org/t/p/w300/7YYrTByEx7fPetfcTa6pEF6XjD9.jpg",
-              "rating": 7.6,
+              "rating": 7.614,
               "year": "2025",
               "runtime": 133,
               "trailerUrl": "https://www.youtube.com/watch?v=zBFstFXdk90"
@@ -1607,7 +1488,7 @@
               "url": "https://www.palacecinemas.com.au/movies/nuremberg",
               "overview": "In postwar Germany, an American psychiatrist must determine whether Nazi prisoners are fit to go on trial for war crimes, and finds himself in a complex battle of intellect and ethics with Hermann Göring, Hitler's right-hand man.",
               "posterPath": "https://image.tmdb.org/t/p/w300/sxu8TsG7k06ymWL98ELEIE1EMZV.jpg",
-              "rating": 7.308,
+              "rating": 7.328,
               "year": "2025",
               "runtime": 148,
               "trailerUrl": "https://www.youtube.com/watch?v=iL_z7gzu4co"
@@ -1621,7 +1502,7 @@
               "url": "https://www.palacecinemas.com.au/movies/my-brothers-band",
               "overview": "Diagnosed with leukemia, a successful orchestra conductor learns that he is adopted, and his younger brother is in a village marching band. The conductor decides to help them win a regional contest.",
               "posterPath": "https://image.tmdb.org/t/p/w300/6lATJ42bWGAIQ0cG2dzSZD8bNcL.jpg",
-              "rating": 7.318,
+              "rating": 7.317,
               "year": "2024",
               "runtime": 103,
               "trailerUrl": "https://www.youtube.com/watch?v=bhfCXPYIKs8"
@@ -1675,7 +1556,7 @@
               "url": "https://www.palacecinemas.com.au/movies/zootopia-2",
               "overview": "After cracking the biggest case in Zootopia's history, rookie cops Judy Hopps and Nick Wilde find themselves on the twisting trail of a great mystery when Gary De'Snake arrives and turns the animal metropolis upside down. To crack the case, Judy and Nick must go undercover to unexpected new parts of town, where their growing partnership is tested like never before.",
               "posterPath": "https://image.tmdb.org/t/p/w300/bjUWGw0Ao0qVWxagN3VCwBJHVo6.jpg",
-              "rating": 7.649,
+              "rating": 7.641,
               "year": "2025",
               "runtime": 107,
               "trailerUrl": "https://www.youtube.com/watch?v=knk2Fzxd9zc"
@@ -1688,7 +1569,7 @@
               "url": "https://www.palacecinemas.com.au/movies/wicked-for-good",
               "overview": "As an angry mob rises against the Wicked Witch, Glinda and Elphaba will need to come together one final time. With their singular friendship now the fulcrum of their futures, they will need to truly see each other, with honesty and empathy, if they are to change themselves, and all of Oz, for good.",
               "posterPath": "https://image.tmdb.org/t/p/w300/si9tolnefLSUKaqQEGz1bWArOaL.jpg",
-              "rating": 6.737,
+              "rating": 6.701,
               "year": "2025",
               "runtime": 137,
               "trailerUrl": "https://www.youtube.com/watch?v=iU4Gpi3Jb88"
@@ -1701,7 +1582,7 @@
               "url": "https://www.palacecinemas.com.au/movies/one-battle-after-another",
               "overview": "Washed-up revolutionary Bob exists in a state of stoned paranoia, surviving off-grid with his spirited, self-reliant daughter, Willa. When his evil nemesis resurfaces after 16 years and she goes missing, the former radical scrambles to find her, father and daughter both battling the consequences of his past.",
               "posterPath": "https://image.tmdb.org/t/p/w300/r4uXvqCeco0KmO0CjlhXuTEFuSE.jpg",
-              "rating": 7.461,
+              "rating": 7.458,
               "year": "2025",
               "runtime": 162,
               "trailerUrl": "https://www.youtube.com/watch?v=u6GVb4p7oD4"
@@ -1726,7 +1607,7 @@
               "url": "https://www.palacecinemas.com.au/movies/song-sung-blue",
               "overview": "Based on a true story, two down-on-their-luck musicians form a joyous Neil Diamond tribute band, proving it's never too late to find love and follow your dreams.",
               "posterPath": "https://image.tmdb.org/t/p/w300/3HsIAbHWbFDUbY2jfj4wqEjGC3b.jpg",
-              "rating": 7.5,
+              "rating": 7.227,
               "year": "2025",
               "runtime": 133,
               "trailerUrl": "https://www.youtube.com/watch?v=ssZU6xUM-YI"
@@ -1762,7 +1643,7 @@
               "url": "https://www.palacecinemas.com.au/movies/the-housemaid",
               "overview": "Trying to escape her past, Millie Calloway accepts a job as a live-in housemaid for the wealthy Nina and Andrew Winchester. But what begins as a dream job quickly unravels into something far more dangerous—a sexy, seductive game of secrets, scandal, and power.",
               "posterPath": "https://image.tmdb.org/t/p/w300/cWsBscZzwu5brg9YjNkGewRUvJX.jpg",
-              "rating": 7.394,
+              "rating": 7.4,
               "year": "2025",
               "runtime": 131,
               "trailerUrl": "https://www.youtube.com/watch?v=TGdKFCVn6G0"
@@ -1778,8 +1659,8 @@
               ],
               "url": "https://www.palacecinemas.com.au/movies/avatar-fire-and-ash-2d",
               "overview": "In the wake of the devastating war against the RDA and the loss of their eldest son, Jake Sully and Neytiri face a new threat on Pandora: the Ash People, a violent and power-hungry Na'vi tribe led by the ruthless Varang. Jake's family must fight for their survival and the future of Pandora in a conflict that pushes them to their emotional and physical limits.",
-              "posterPath": "https://image.tmdb.org/t/p/w300/g96wHxU7EnoIFwemb2RgohIXrgW.jpg",
-              "rating": 7.386,
+              "posterPath": "https://image.tmdb.org/t/p/w300/cf7hE1ifY4UNbS25tGnaTyyDrI2.jpg",
+              "rating": 7.4,
               "year": "2025",
               "runtime": 198,
               "trailerUrl": "https://www.youtube.com/watch?v=MEo4auqToCc"
@@ -1810,7 +1691,7 @@
               "url": "https://www.palacecinemas.com.au/movies/sentimental-value",
               "overview": "Sisters Nora and Agnes reunite with their estranged father, the charismatic Gustav, a once-renowned director who offers stage actress Nora a role in what he hopes will be his comeback film. When Nora turns it down, she soon discovers he has given her part to an eager young Hollywood star.",
               "posterPath": "https://image.tmdb.org/t/p/w300/7YYrTByEx7fPetfcTa6pEF6XjD9.jpg",
-              "rating": 7.6,
+              "rating": 7.614,
               "year": "2025",
               "runtime": 133,
               "trailerUrl": "https://www.youtube.com/watch?v=zBFstFXdk90"
@@ -1826,7 +1707,7 @@
               "url": "https://www.palacecinemas.com.au/movies/nuremberg",
               "overview": "In postwar Germany, an American psychiatrist must determine whether Nazi prisoners are fit to go on trial for war crimes, and finds himself in a complex battle of intellect and ethics with Hermann Göring, Hitler's right-hand man.",
               "posterPath": "https://image.tmdb.org/t/p/w300/sxu8TsG7k06ymWL98ELEIE1EMZV.jpg",
-              "rating": 7.308,
+              "rating": 7.328,
               "year": "2025",
               "runtime": 148,
               "trailerUrl": "https://www.youtube.com/watch?v=iL_z7gzu4co"
@@ -1841,7 +1722,7 @@
               "url": "https://www.palacecinemas.com.au/movies/my-brothers-band",
               "overview": "Diagnosed with leukemia, a successful orchestra conductor learns that he is adopted, and his younger brother is in a village marching band. The conductor decides to help them win a regional contest.",
               "posterPath": "https://image.tmdb.org/t/p/w300/6lATJ42bWGAIQ0cG2dzSZD8bNcL.jpg",
-              "rating": 7.318,
+              "rating": 7.317,
               "year": "2024",
               "runtime": 103,
               "trailerUrl": "https://www.youtube.com/watch?v=bhfCXPYIKs8"
@@ -1850,7 +1731,6 @@
               "title": "Anaconda",
               "times": [
                 "10:40am",
-                "11:40am",
                 "1:00pm",
                 "4:00pm",
                 "6:00pm",
@@ -1885,7 +1765,6 @@
               "times": [
                 "10:40am",
                 "1:40pm",
-                "2:45pm",
                 "3:40pm",
                 "6:20pm"
               ],
@@ -1901,13 +1780,15 @@
               "title": "Zootopia 2",
               "times": [
                 "10:30am",
+                "11:30am",
                 "1:30pm",
+                "3:00pm",
                 "3:20pm"
               ],
               "url": "https://www.palacecinemas.com.au/movies/zootopia-2",
               "overview": "After cracking the biggest case in Zootopia's history, rookie cops Judy Hopps and Nick Wilde find themselves on the twisting trail of a great mystery when Gary De'Snake arrives and turns the animal metropolis upside down. To crack the case, Judy and Nick must go undercover to unexpected new parts of town, where their growing partnership is tested like never before.",
               "posterPath": "https://image.tmdb.org/t/p/w300/bjUWGw0Ao0qVWxagN3VCwBJHVo6.jpg",
-              "rating": 7.649,
+              "rating": 7.641,
               "year": "2025",
               "runtime": 107,
               "trailerUrl": "https://www.youtube.com/watch?v=knk2Fzxd9zc"
@@ -1921,7 +1802,7 @@
               "url": "https://www.palacecinemas.com.au/movies/wicked-for-good",
               "overview": "As an angry mob rises against the Wicked Witch, Glinda and Elphaba will need to come together one final time. With their singular friendship now the fulcrum of their futures, they will need to truly see each other, with honesty and empathy, if they are to change themselves, and all of Oz, for good.",
               "posterPath": "https://image.tmdb.org/t/p/w300/si9tolnefLSUKaqQEGz1bWArOaL.jpg",
-              "rating": 6.737,
+              "rating": 6.701,
               "year": "2025",
               "runtime": 137,
               "trailerUrl": "https://www.youtube.com/watch?v=iU4Gpi3Jb88"
@@ -1947,7 +1828,7 @@
               "url": "https://www.palacecinemas.com.au/movies/eternity",
               "overview": "In an afterlife where souls have one week to decide where to spend eternity, Joan is faced with the impossible choice between the man she spent her life with and her first love, who died young and has waited decades for her to arrive.",
               "posterPath": "https://image.tmdb.org/t/p/w300/o8pg20G67BGmQvRkXwstNre062J.jpg",
-              "rating": 7.154,
+              "rating": 7.138,
               "year": "2025",
               "runtime": 114,
               "trailerUrl": "https://www.youtube.com/watch?v=GzkoY6hUvQQ"
@@ -1975,7 +1856,7 @@
               "url": "https://www.palacecinemas.com.au/movies/bugonia",
               "overview": "Two conspiracy obsessed young men kidnap the high-powered CEO of a major company, convinced that she is an alien intent on destroying planet Earth.",
               "posterPath": "https://image.tmdb.org/t/p/w300/oxgsAQDAAxA92mFGYCZllgWkH9J.jpg",
-              "rating": 7.415,
+              "rating": 7.407,
               "year": "2025",
               "runtime": 119,
               "trailerUrl": "https://www.youtube.com/watch?v=gZ6pPFK6kaQ"
@@ -1988,7 +1869,7 @@
               "url": "https://www.palacecinemas.com.au/movies/one-battle-after-another",
               "overview": "Washed-up revolutionary Bob exists in a state of stoned paranoia, surviving off-grid with his spirited, self-reliant daughter, Willa. When his evil nemesis resurfaces after 16 years and she goes missing, the former radical scrambles to find her, father and daughter both battling the consequences of his past.",
               "posterPath": "https://image.tmdb.org/t/p/w300/r4uXvqCeco0KmO0CjlhXuTEFuSE.jpg",
-              "rating": 7.461,
+              "rating": 7.458,
               "year": "2025",
               "runtime": 162,
               "trailerUrl": "https://www.youtube.com/watch?v=u6GVb4p7oD4"
