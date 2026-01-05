@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-01-05T21:32:29.751Z",
+  "generatedAt": "2026-01-05T21:50:02.480Z",
   "days": [
     {
       "date": "Tuesday 6 January 2026",
@@ -1910,7 +1910,56 @@
         {
           "cinema": "Imax Melbourne",
           "url": "https://imaxmelbourne.com.au/session_times_and_tickets",
-          "sessions": []
+          "sessions": [
+            {
+              "title": "T.Rex 3D",
+              "times": [
+                "10:20am"
+              ],
+              "premiumTimes": [],
+              "url": "https://imaxmelbourne.com.au/movie/t.rex-3d",
+              "overview": null,
+              "posterPath": null,
+              "rating": null,
+              "year": "2015",
+              "runtime": null,
+              "trailerUrl": null
+            },
+            {
+              "title": "A Beautiful Planet 3D",
+              "times": [
+                "11:30am"
+              ],
+              "premiumTimes": [],
+              "url": "https://imaxmelbourne.com.au/movie/a-beautiful-planet-3d",
+              "overview": "A breathtaking portrait of Earth from space, providing a unique perspective and increased understanding of our planet and galaxy as never seen before. Made in cooperation with the National Aeronautics and Space Administration (NASA), the film features stunning footage of our magnificent blue planet — and the effects humanity has had on it over time — captured by the astronauts aboard the International Space Station (ISS).",
+              "posterPath": "https://image.tmdb.org/t/p/w300/9naxphfpDgtArLPKnf0dJgGo7bS.jpg",
+              "rating": 7.1,
+              "year": "2016",
+              "runtime": 45,
+              "trailerUrl": "https://www.youtube.com/watch?v=ZEnhWHAlslM"
+            },
+            {
+              "title": "AVATAR: FIRE AND ASH 3D",
+              "times": [
+                "12:40pm",
+                "4:40pm",
+                "8:40pm"
+              ],
+              "premiumTimes": [
+                "12:40pm",
+                "4:40pm",
+                "8:40pm"
+              ],
+              "url": "https://imaxmelbourne.com.au/movie/avatar-fire-ash",
+              "overview": "In the wake of the devastating war against the RDA and the loss of their eldest son, Jake Sully and Neytiri face a new threat on Pandora: the Ash People, a violent and power-hungry Na'vi tribe led by the ruthless Varang. Jake's family must fight for their survival and the future of Pandora in a conflict that pushes them to their emotional and physical limits.",
+              "posterPath": "https://image.tmdb.org/t/p/w300/cf7hE1ifY4UNbS25tGnaTyyDrI2.jpg",
+              "rating": 7.4,
+              "year": "2025",
+              "runtime": 198,
+              "trailerUrl": "https://www.youtube.com/watch?v=bgZJnA7XiXs"
+            }
+          ]
         },
         {
           "cinema": "Sun Theatre",
@@ -3853,7 +3902,56 @@
         {
           "cinema": "Imax Melbourne",
           "url": "https://imaxmelbourne.com.au/session_times_and_tickets",
-          "sessions": []
+          "sessions": [
+            {
+              "title": "Australia 3D",
+              "times": [
+                "10:20am"
+              ],
+              "premiumTimes": [],
+              "url": "https://imaxmelbourne.com.au/movie/australia-twc-3d",
+              "overview": "Set in northern Australia before World War II, an English aristocrat who inherits a sprawling ranch reluctantly pacts with a stock-man in order to protect her new property from a takeover plot. As the pair drive 2,000 head of cattle over unforgiving landscape, they experience the bombing of Darwin by Japanese forces firsthand.",
+              "posterPath": "https://image.tmdb.org/t/p/w300/tFQpccGMTWe24eWxK5U9rb7tK3M.jpg",
+              "rating": 6.587,
+              "year": "2008",
+              "runtime": 165,
+              "trailerUrl": "https://www.youtube.com/watch?v=4XED0wWC_jc"
+            },
+            {
+              "title": "A Beautiful Planet 3D",
+              "times": [
+                "11:30am"
+              ],
+              "premiumTimes": [],
+              "url": "https://imaxmelbourne.com.au/movie/a-beautiful-planet-3d",
+              "overview": "A breathtaking portrait of Earth from space, providing a unique perspective and increased understanding of our planet and galaxy as never seen before. Made in cooperation with the National Aeronautics and Space Administration (NASA), the film features stunning footage of our magnificent blue planet — and the effects humanity has had on it over time — captured by the astronauts aboard the International Space Station (ISS).",
+              "posterPath": "https://image.tmdb.org/t/p/w300/9naxphfpDgtArLPKnf0dJgGo7bS.jpg",
+              "rating": 7.1,
+              "year": "2016",
+              "runtime": 45,
+              "trailerUrl": "https://www.youtube.com/watch?v=ZEnhWHAlslM"
+            },
+            {
+              "title": "AVATAR: FIRE AND ASH 3D",
+              "times": [
+                "12:40pm",
+                "4:40pm",
+                "8:40pm"
+              ],
+              "premiumTimes": [
+                "12:40pm",
+                "4:40pm",
+                "8:40pm"
+              ],
+              "url": "https://imaxmelbourne.com.au/movie/avatar-fire-ash",
+              "overview": "In the wake of the devastating war against the RDA and the loss of their eldest son, Jake Sully and Neytiri face a new threat on Pandora: the Ash People, a violent and power-hungry Na'vi tribe led by the ruthless Varang. Jake's family must fight for their survival and the future of Pandora in a conflict that pushes them to their emotional and physical limits.",
+              "posterPath": "https://image.tmdb.org/t/p/w300/cf7hE1ifY4UNbS25tGnaTyyDrI2.jpg",
+              "rating": 7.4,
+              "year": "2025",
+              "runtime": 198,
+              "trailerUrl": "https://www.youtube.com/watch?v=bgZJnA7XiXs"
+            }
+          ]
         },
         {
           "cinema": "Sun Theatre",
