@@ -431,9 +431,69 @@ async function scrapeBrunswickPictureHouse(page, targetDate) {
 }
 
 async function scrapeEclipse(page, targetDate) {
-  console.log(`Scraping Eclipse Cinema for ${targetDate}... [NOT YET IMPLEMENTED]`);
-  // TODO: Migrate from scraper.js
-  return { cinema: 'Eclipse Cinema', url: 'https://eclipse-cinema.com.au/session-time/', sessions: [] };
+  console.log(`Scraping Eclipse Cinema for ${targetDate}...`);
+  const sessions = [];
+  const url = 'https://eclipse-cinema.com.au/session-time/';
+  
+  // Build date string in Eclipse format: "Mon-05-Jan"
+  const [year, month, day] = targetDate.split('-').map(Number);
+  const targetDateObj = new Date(year, month - 1, day);
+  const dayNames = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+  const monthNames = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+  
+  const eclipseDateStr = `${dayNames[targetDateObj.getDay()]}-${String(day).padStart(2, '0')}-${monthNames[month - 1]}`;
+  console.log(`  Looking for date class: veezi-f-date-${eclipseDateStr}`);
+  
+  try {
+    await page.goto(url, { waitUntil: 'networkidle2', timeout: 90000 });
+    await page.waitForTimeout(3000);
+    
+    const films = await page.evaluate((dateStr) => {
+      const items = [];
+      
+      // Find all film entries that have screenings on the target date
+      const filmEntries = document.querySelectorAll(`.veezi-f-date-${dateStr}`);
+      
+      filmEntries.forEach(entry => {
+        // Get title
+        const titleEl = entry.querySelector('.veezi-filter-film-title');
+        const title = titleEl?.textContent?.trim();
+        if (!title) return;
+        
+        // Get times for this specific date
+        const times = [];
+        const timeLinks = entry.querySelectorAll(`a.veezi-time[class*="-${dateStr}"], p.veezi-soldout[class*="-${dateStr}"]`);
+        
+        timeLinks.forEach(link => {
+          const timeEl = link.querySelector('p') || link;
+          const time = timeEl?.textContent?.trim();
+          if (time && /^\d{1,2}:\d{2}$/.test(time)) {
+            times.push(time);
+          }
+        });
+        
+        if (times.length > 0) {
+          items.push({
+            title,
+            times,
+            url: 'https://eclipse-cinema.com.au/session-time/'
+          });
+        }
+      });
+      
+      return items;
+    }, eclipseDateStr);
+    
+    for (const film of films) {
+      sessions.push(film);
+    }
+    
+    console.log(`  Found ${sessions.length} films`);
+  } catch (error) {
+    console.error('  Eclipse Cinema scrape error:', error.message);
+  }
+  
+  return { cinema: 'Eclipse Cinema', url, sessions };
 }
 
 async function scrapeCinemaNova(page, targetDate) {
