@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-01-05T11:26:19.567Z",
+  "generatedAt": "2026-01-05T12:04:17.545Z",
   "days": [
     {
       "date": "Monday 5 January 2026",
@@ -40,26 +40,26 @@
         {
           "cinema": "Brunswick Picture House",
           "url": "https://www.brunswickpicturehouse.com.au/now-showing/",
-          "sessions": [
-            {
-              "title": "Song Sung Blue",
-              "times": [
-                "8:35pm"
-              ],
-              "url": "https://www.brunswickpicturehouse.com.au/now-showing/",
-              "overview": "Based on a true story, two down-on-their-luck musicians form a joyous Neil Diamond tribute band, proving it's never too late to find love and follow your dreams.",
-              "posterPath": "https://image.tmdb.org/t/p/w300/3HsIAbHWbFDUbY2jfj4wqEjGC3b.jpg",
-              "rating": 7.227,
-              "year": "2025",
-              "runtime": 133,
-              "trailerUrl": "https://www.youtube.com/watch?v=ssZU6xUM-YI"
-            }
-          ]
+          "sessions": []
         },
         {
           "cinema": "Eclipse Cinema",
           "url": "https://eclipse-cinema.com.au/session-time/",
-          "sessions": []
+          "sessions": [
+            {
+              "title": "History of Sound",
+              "times": [
+                "9:00pm"
+              ],
+              "url": "https://eclipse-cinema.com.au/session-time/",
+              "overview": "In 1917, two young music students attending the Boston Conservatory bond over a mutual love of folk music. They reconnect a few years later, embarking on a song-collecting trip in the backwaters of Maine.",
+              "posterPath": "https://image.tmdb.org/t/p/w300/5tNr1CySiYQICRsQbWWSSsDiKjn.jpg",
+              "rating": 6.1,
+              "year": "2025",
+              "runtime": 127,
+              "trailerUrl": "https://www.youtube.com/watch?v=E2PSkw8BI7k"
+            }
+          ]
         },
         {
           "cinema": "Cinema Nova",
@@ -536,7 +536,61 @@
         {
           "cinema": "Eclipse Cinema",
           "url": "https://eclipse-cinema.com.au/session-time/",
-          "sessions": []
+          "sessions": [
+            {
+              "title": "History of Sound",
+              "times": [
+                "3:20pm"
+              ],
+              "url": "https://eclipse-cinema.com.au/session-time/",
+              "overview": "In 1917, two young music students attending the Boston Conservatory bond over a mutual love of folk music. They reconnect a few years later, embarking on a song-collecting trip in the backwaters of Maine.",
+              "posterPath": "https://image.tmdb.org/t/p/w300/5tNr1CySiYQICRsQbWWSSsDiKjn.jpg",
+              "rating": 6.1,
+              "year": "2025",
+              "runtime": 127,
+              "trailerUrl": "https://www.youtube.com/watch?v=E2PSkw8BI7k"
+            },
+            {
+              "title": "Peak Everything",
+              "times": [
+                "1:30pm"
+              ],
+              "url": "https://eclipse-cinema.com.au/session-time/",
+              "overview": "Adam is a kind-hearted kennel-owner. Hypersensitive and borderline depressed, Adam orders a therapeutic solar lamp. Through the lamp’s supplier's technical support line, he meets Tina, a radiant woman with a voice that soothes all of his worries. This unexpected encounter changes everything: Earth trembles, and hearts explode… It's love!",
+              "posterPath": "https://image.tmdb.org/t/p/w300/6aq7flJkxR8HStDrSc95lcDe84Q.jpg",
+              "rating": 6.5,
+              "year": "2025",
+              "runtime": 100,
+              "trailerUrl": "https://www.youtube.com/watch?v=XoV5F_BpRFo"
+            },
+            {
+              "title": "Sentimental Value",
+              "times": [
+                "11:00am",
+                "6:30pm"
+              ],
+              "url": "https://eclipse-cinema.com.au/session-time/",
+              "overview": "Sisters Nora and Agnes reunite with their estranged father, the charismatic Gustav, a once-renowned director who offers stage actress Nora a role in what he hopes will be his comeback film. When Nora turns it down, she soon discovers he has given her part to an eager young Hollywood star.",
+              "posterPath": "https://image.tmdb.org/t/p/w300/7YYrTByEx7fPetfcTa6pEF6XjD9.jpg",
+              "rating": 7.614,
+              "year": "2025",
+              "runtime": 133,
+              "trailerUrl": "https://www.youtube.com/watch?v=zBFstFXdk90"
+            },
+            {
+              "title": "The Fifth Element – RETRO CLASSIX",
+              "times": [
+                "9:00pm"
+              ],
+              "url": "https://eclipse-cinema.com.au/session-time/",
+              "overview": "In 2257, a taxi driver is unintentionally given the task of saving a young girl who is part of the key that will ensure the survival of humanity.",
+              "posterPath": "https://image.tmdb.org/t/p/w300/fPtlCO1yQtnoLHOwKtWz7db6RGU.jpg",
+              "rating": 7.562,
+              "year": "1997",
+              "runtime": 126,
+              "trailerUrl": "https://www.youtube.com/watch?v=4L3Yvk-Tld0"
+            }
+          ]
         },
         {
           "cinema": "Cinema Nova",
