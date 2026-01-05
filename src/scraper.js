@@ -1288,6 +1288,68 @@ async function scrapeImax(page, targetDate) {
   return { cinema: 'Imax Melbourne', url, sessions };
 }
 
+async function scrapeCoburgDriveIn(page, targetDate) {
+  console.log(`Scraping Coburg Drive-In for ${targetDate}...`);
+  const sessions = [];
+  const url = 'https://villagecinemas.com.au/cinemas/coburg-drive-in';
+  const apiUrl = 'https://villagecinemas.com.au/api/session/getMovieSessions?cinemaId=004';
+  
+  try {
+    // Fetch the API directly - no need for Puppeteer page navigation
+    const response = await fetch(apiUrl, {
+      headers: {
+        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
+        'Accept': 'application/json'
+      }
+    });
+    
+    if (!response.ok) {
+      throw new Error(`API returned ${response.status}`);
+    }
+    
+    const movies = await response.json();
+    console.log(`  API returned ${movies.length} movies`);
+    
+    const filmMap = new Map();
+    
+    for (const movie of movies) {
+      const title = movie.Title;
+      if (!title) continue;
+      
+      // Filter sessions for target date
+      const targetSessions = (movie.Sessions || []).filter(session => {
+        // ShowDateTime is like "2026-01-06T21:20:00+11:00"
+        const sessionDate = session.ShowDateTime?.substring(0, 10);
+        return sessionDate === targetDate;
+      });
+      
+      if (targetSessions.length > 0) {
+        // Extract times - SessionTime is like "09:20PM"
+        const times = targetSessions.map(s => {
+          // Convert "09:20PM" to "9:20pm"
+          let time = s.SessionTime || '';
+          time = time.replace(/^0/, '').toLowerCase();
+          return time;
+        });
+        
+        filmMap.set(title, {
+          title,
+          times,
+          url: movie.PageUrl ? `https://villagecinemas.com.au${movie.PageUrl}` : url
+        });
+      }
+    }
+    
+    filmMap.forEach(film => sessions.push(film));
+    console.log(`  Found ${sessions.length} films for ${targetDate}`);
+    
+  } catch (error) {
+    console.error('  Coburg Drive-In scrape error:', error.message);
+  }
+  
+  return { cinema: 'Coburg Drive-In', url, sessions };
+}
+
 // ============================================================================
 // TMDB ENRICHMENT
 // ============================================================================
@@ -1389,7 +1451,8 @@ async function main() {
     scrapePalaceWestgarth,
     scrapePentridge,
     scrapeImax,
-    scrapeSunTheatre
+    scrapeSunTheatre,
+    scrapeCoburgDriveIn
   ];
   
   // Scrape for configured number of days
