@@ -576,9 +576,108 @@ async function scrapeCinemaNova(page, targetDate) {
 }
 
 async function scrapeLido(page, targetDate) {
-  console.log(`Scraping Lido Cinemas for ${targetDate}... [NOT YET IMPLEMENTED]`);
-  // TODO: Migrate from scraper.js
-  return { cinema: 'Lido Cinemas', url: 'https://www.lidocinemas.com.au/now-showing', sessions: [] };
+  console.log(`Scraping Lido Cinemas for ${targetDate}...`);
+  const sessions = [];
+  
+  // Build URL based on target date
+  const [year, month, day] = targetDate.split('-').map(Number);
+  const targetDateObj = new Date(year, month - 1, day);
+  const today = new Date();
+  const melbourneToday = new Date(today.toLocaleString('en-US', { timeZone: 'Australia/Melbourne' }));
+  melbourneToday.setHours(0, 0, 0, 0);
+  
+  const diffDays = Math.round((targetDateObj - melbourneToday) / (1000 * 60 * 60 * 24));
+  
+  let urlPath;
+  if (diffDays === 0) {
+    urlPath = '/now-showing';
+  } else if (diffDays === 1) {
+    urlPath = '/now-showing/tomorrow';
+  } else {
+    // Use lowercase day name
+    const dayName = targetDateObj.toLocaleDateString('en-AU', { weekday: 'long' }).toLowerCase();
+    urlPath = `/now-showing/${dayName}`;
+  }
+  
+  const url = `https://www.lidocinemas.com.au${urlPath}`;
+  console.log(`  Using URL: ${url}`);
+  
+  try {
+    await page.goto(url, { waitUntil: 'networkidle2', timeout: 60000 });
+    await page.waitForTimeout(5000);
+    
+    // Wait for the Sessions elements to appear
+    try {
+      await page.waitForSelector('.Sessions, ul.Sessions, .sessions-link', { timeout: 10000 });
+      console.log('  Session elements found');
+    } catch (e) {
+      console.log('  Waiting for sessions timed out, trying anyway...');
+    }
+    
+    const films = await page.evaluate(() => {
+      const filmMap = new Map();
+      
+      // Target the session links directly - they have data-name attribute with movie title
+      document.querySelectorAll('a.sessions-link, a[class*="sessions-link"]').forEach(link => {
+        const movieName = link.getAttribute('data-name');
+        const timeSpan = link.querySelector('span.Time, .Time');
+        const time = timeSpan?.textContent?.trim();
+        
+        if (movieName && time) {
+          if (filmMap.has(movieName)) {
+            filmMap.get(movieName).times.push(time);
+          } else {
+            filmMap.set(movieName, {
+              title: movieName,
+              times: [time],
+              url: link.href || 'https://www.lidocinemas.com.au/now-showing'
+            });
+          }
+        }
+      });
+      
+      // Also try getting films from the movie cards in case sessions approach fails
+      if (filmMap.size === 0) {
+        document.querySelectorAll('.Markup.Movie, div[class*="Movie"]').forEach(card => {
+          const titleEl = card.querySelector('a[href*="/movies/"]');
+          const title = titleEl?.textContent?.trim() || card.getAttribute('data-name');
+          
+          if (title) {
+            const times = [];
+            card.querySelectorAll('.Time, span[class*="Time"]').forEach(t => {
+              const time = t.textContent?.trim();
+              if (time && /\d{1,2}:\d{2}/.test(time)) {
+                times.push(time);
+              }
+            });
+            
+            if (!filmMap.has(title)) {
+              filmMap.set(title, {
+                title,
+                times: times.length > 0 ? times : ['See website'],
+                url: titleEl?.href || 'https://www.lidocinemas.com.au/now-showing'
+              });
+            }
+          }
+        });
+      }
+      
+      // Convert map to array
+      const result = [];
+      filmMap.forEach(film => result.push(film));
+      return result;
+    });
+    
+    for (const film of films) {
+      sessions.push(film);
+    }
+    
+    console.log(`  Found ${sessions.length} films`);
+  } catch (error) {
+    console.error('  Lido Cinemas scrape error:', error.message);
+  }
+  
+  return { cinema: 'Lido Cinemas', url, sessions };
 }
 
 async function scrapeHoyts(page, targetDate) {
