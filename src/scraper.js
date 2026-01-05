@@ -437,9 +437,82 @@ async function scrapeEclipse(page, targetDate) {
 }
 
 async function scrapeCinemaNova(page, targetDate) {
-  console.log(`Scraping Cinema Nova for ${targetDate}... [NOT YET IMPLEMENTED]`);
-  // TODO: Migrate from scraper.js
-  return { cinema: 'Cinema Nova', url: 'https://www.cinemanova.com.au/films-today-after-0:00', sessions: [] };
+  console.log(`Scraping Cinema Nova for ${targetDate}...`);
+  const sessions = [];
+  
+  // Build URL based on target date
+  const [year, month, day] = targetDate.split('-').map(Number);
+  const targetDateObj = new Date(year, month - 1, day);
+  const today = new Date();
+  const melbourneToday = new Date(today.toLocaleString('en-US', { timeZone: 'Australia/Melbourne' }));
+  melbourneToday.setHours(0, 0, 0, 0);
+  
+  const diffDays = Math.round((targetDateObj - melbourneToday) / (1000 * 60 * 60 * 24));
+  
+  let daySlug;
+  if (diffDays === 0) {
+    daySlug = 'today';
+  } else {
+    // Use lowercase day name (e.g., "monday", "tuesday")
+    daySlug = targetDateObj.toLocaleDateString('en-AU', { weekday: 'long' }).toLowerCase();
+  }
+  
+  const url = `https://www.cinemanova.com.au/films-${daySlug}-after-0:00`;
+  console.log(`  Using URL: ${url}`);
+  
+  try {
+    await page.goto(url, { waitUntil: 'networkidle2', timeout: 60000 });
+    await page.waitForTimeout(3000);
+    
+    // Cinema Nova has a table with time | title format
+    const films = await page.evaluate(() => {
+      const items = [];
+      const filmMap = new Map();
+      
+      // Find the session table - it has rows with time and title
+      const rows = document.querySelectorAll('tr, table tr');
+      
+      rows.forEach(row => {
+        const cells = row.querySelectorAll('td');
+        if (cells.length >= 2) {
+          // First cell is time link, second is title
+          const timeCell = cells[0];
+          const titleCell = cells[1];
+          
+          const timeLink = timeCell.querySelector('a');
+          const time = timeLink?.textContent?.trim() || timeCell.textContent?.trim();
+          const title = titleCell.textContent?.trim();
+          
+          // Validate time format
+          if (time && title && /^\d{1,2}:\d{2}$/.test(time)) {
+            if (filmMap.has(title)) {
+              filmMap.get(title).times.push(time);
+            } else {
+              filmMap.set(title, {
+                title,
+                times: [time],
+                url: `https://www.cinemanova.com.au/films/${title.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '')}`
+              });
+            }
+          }
+        }
+      });
+      
+      // Convert map to array
+      filmMap.forEach(film => items.push(film));
+      return items;
+    });
+    
+    for (const film of films) {
+      sessions.push(film);
+    }
+    
+    console.log(`  Found ${sessions.length} films`);
+  } catch (error) {
+    console.error('  Cinema Nova scrape error:', error.message);
+  }
+  
+  return { cinema: 'Cinema Nova', url, sessions };
 }
 
 async function scrapeLido(page, targetDate) {
