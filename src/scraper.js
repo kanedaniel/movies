@@ -390,8 +390,8 @@ async function scrapeBrunswickPictureHouse(page, targetDate) {
         return { items, debug: 'No container found for ' + searchTerm };
       }
       
-      // Get all movie cards from this container
-      const movieCards = targetContainer.querySelectorAll('[class*="showing-status-now-playing"]');
+      // Get all movie cards from this container - broaden selector to catch all
+      const movieCards = targetContainer.querySelectorAll('.col-12, [class*="col-12"][class*="col-sm-4"]');
       
       movieCards.forEach(card => {
         const titleEl = card.querySelector('.poster-title');
