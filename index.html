@@ -748,7 +748,7 @@
       const main = document.getElementById('main');
       
       try {
-        const response = await fetch('data/sessions-v2.json');
+        const response = await fetch('data/sessions.json');
         if (!response.ok) throw new Error('Failed to load session data');
         
         globalData = await response.json();
