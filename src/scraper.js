@@ -814,15 +814,30 @@ async function scrapeAstor(page, targetDate) {
     
     const diffDays = Math.round((targetDateObj - melbourneToday) / (1000 * 60 * 60 * 24));
     
+    // Build pattern to match the date format
+    // "today" or "tomorrow" or "Thursday 8th January"
     let dayPattern;
+    let timeExtractPattern;
+    
     if (diffDays === 0) {
       dayPattern = /today/i;
+      timeExtractPattern = /today\s+at\s+(\d{1,2}(?::\d{2})?\s*(?:am|pm))/i;
     } else if (diffDays === 1) {
       dayPattern = /tomorrow/i;
+      timeExtractPattern = /tomorrow\s+at\s+(\d{1,2}(?::\d{2})?\s*(?:am|pm))/i;
     } else {
-      // Use day name (e.g., "Monday", "Tuesday")
+      // Format: "Thursday 8th January"
       const dayName = targetDateObj.toLocaleDateString('en-AU', { weekday: 'long' });
-      dayPattern = new RegExp(dayName, 'i');
+      const monthName = targetDateObj.toLocaleDateString('en-AU', { month: 'long' });
+      const dayNum = day;
+      const suffix = (dayNum === 1 || dayNum === 21 || dayNum === 31) ? 'st' : 
+                     (dayNum === 2 || dayNum === 22) ? 'nd' : 
+                     (dayNum === 3 || dayNum === 23) ? 'rd' : 'th';
+      
+      // Match "Thursday 8th January" (case insensitive)
+      const dateStr = `${dayName}\\s+${dayNum}${suffix}\\s+${monthName}`;
+      dayPattern = new RegExp(dateStr, 'i');
+      timeExtractPattern = new RegExp(`${dateStr}\\s+at\\s+(\\d{1,2}(?::\\d{2})?\\s*(?:am|pm))`, 'i');
     }
     
     console.log(`  Looking for day pattern: ${dayPattern}`);
@@ -869,8 +884,8 @@ async function scrapeAstor(page, targetDate) {
       // Check if it matches our target day
       if (!dayPattern.test(block)) continue;
       
-      // Extract time: "Today at 2pm" or "Tomorrow at 6:30pm" or "Monday at 7pm"
-      const timeMatch = block.match(/(?:today|tomorrow|monday|tuesday|wednesday|thursday|friday|saturday|sunday)\s+at\s+(\d{1,2}(?::\d{2})?\s*(?:am|pm))/i);
+      // Extract time using the specific pattern for this day type
+      const timeMatch = block.match(timeExtractPattern);
       const time = timeMatch ? timeMatch[1].toLowerCase().trim() : 'See website';
       
       // Check if it's a double feature
