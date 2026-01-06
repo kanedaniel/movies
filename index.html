@@ -632,7 +632,7 @@
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      gap: 0.3em;
+      gap: 0;
     }
     
     .day-picker {
@@ -640,7 +640,7 @@
       background: var(--gold);
       color: var(--bg-dark);
       padding: 0.1em 0.4em;
-      min-width: 180px;
+      width: 200px;
       text-align: center;
     }
     
@@ -648,18 +648,18 @@
       background: none;
       border: none;
       color: var(--gold);
-      font-size: 1em;
+      font-size: 1.2em;
       font-weight: 700;
       cursor: pointer;
-      padding: 0.1em 0.2em;
-      transition: all 0.2s;
+      padding: 0.2em 0.4em;
+      transition: color 0.2s;
       line-height: 1;
       flex-shrink: 0;
+      width: 40px;
     }
     
     .day-arrow:hover:not(:disabled) {
       color: var(--cream);
-      transform: scale(1.1);
     }
     
     .day-arrow:disabled {

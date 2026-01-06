@@ -354,8 +354,10 @@ async function scrapeBrunswickPictureHouse(page, targetDate) {
     } else if (diffDays === 1) {
       dayLabel = 'tomorrow';
     } else {
-      // Use day name (e.g., "Monday")
-      dayLabel = targetDateObj.toLocaleDateString('en-AU', { weekday: 'long' }).toLowerCase();
+      // Format: "Thu, Jan 8, 2026"
+      const dayNames = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+      const monthNames = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+      dayLabel = `${dayNames[targetDateObj.getDay()]}, ${monthNames[month - 1]} ${day}, ${year}`;
     }
     
     console.log(`  Looking for day label: ${dayLabel}`);
@@ -369,7 +371,10 @@ async function scrapeBrunswickPictureHouse(page, targetDate) {
       let targetContainer = null;
       
       for (const span of daySpans) {
-        if (span.textContent?.toLowerCase().includes(searchLabel)) {
+        const spanText = span.textContent?.toLowerCase() || '';
+        const searchLower = searchLabel.toLowerCase();
+        
+        if (spanText.includes(searchLower)) {
           // Go up to the header div, then get its next sibling (poster-list)
           const headerDiv = span.closest('.text-h6, [class*="text-h6"]');
           if (headerDiv) {
@@ -1307,61 +1312,79 @@ async function scrapeCoburgDriveIn(page, targetDate) {
   console.log(`Scraping Coburg Drive-In for ${targetDate}...`);
   const sessions = [];
   const url = 'https://villagecinemas.com.au/cinemas/coburg-drive-in';
-  const apiUrl = 'https://villagecinemas.com.au/api/session/getMovieSessions?cinemaId=004';
   
   try {
-    // First navigate to the cinema page to establish session/cookies
+    // Navigate to the cinema page
     await page.goto(url, { waitUntil: 'networkidle2', timeout: 60000 });
-    await page.waitForTimeout(2000);
+    await page.waitForTimeout(3000);
     
-    // Now fetch the API using the page context (includes cookies)
-    const movies = await page.evaluate(async (apiUrl) => {
-      const response = await fetch(apiUrl, {
-        headers: {
-          'Accept': 'application/json, text/plain, */*',
-          'Referer': 'https://villagecinemas.com.au/cinemas/coburg-drive-in'
+    // Format target date for comparison: need to match the date shown on the page
+    const [year, month, day] = targetDate.split('-').map(Number);
+    const targetDateObj = new Date(year, month - 1, day);
+    
+    // Try to find and click the correct date tab if it exists
+    // Village uses date format like "Mon 6", "Tue 7", etc.
+    const dayNames = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+    const shortDay = dayNames[targetDateObj.getDay()];
+    const dateLabel = `${shortDay} ${day}`;
+    
+    console.log(`  Looking for date tab: ${dateLabel}`);
+    
+    // Click the date tab
+    const dateClicked = await page.evaluate((label) => {
+      const dateTabs = document.querySelectorAll('[class*="date"], [class*="Date"], button, a');
+      for (const tab of dateTabs) {
+        if (tab.textContent?.includes(label)) {
+          tab.click();
+          return true;
         }
-      });
-      if (!response.ok) {
-        throw new Error(`API returned ${response.status}`);
       }
-      return response.json();
-    }, apiUrl);
+      return false;
+    }, dateLabel);
     
-    console.log(`  API returned ${movies.length} movies`);
-    
-    const filmMap = new Map();
-    
-    for (const movie of movies) {
-      const title = movie.Title;
-      if (!title) continue;
-      
-      // Filter sessions for target date
-      const targetSessions = (movie.Sessions || []).filter(session => {
-        // ShowDateTime is like "2026-01-06T21:20:00+11:00"
-        const sessionDate = session.ShowDateTime?.substring(0, 10);
-        return sessionDate === targetDate;
-      });
-      
-      if (targetSessions.length > 0) {
-        // Extract times - SessionTime is like "09:20PM"
-        const times = targetSessions.map(s => {
-          // Convert "09:20PM" to "9:20pm"
-          let time = s.SessionTime || '';
-          time = time.replace(/^0/, '').toLowerCase();
-          return time;
-        });
-        
-        filmMap.set(title, {
-          title,
-          times,
-          url: movie.PageUrl ? `https://villagecinemas.com.au${movie.PageUrl}` : url
-        });
-      }
+    if (dateClicked) {
+      console.log(`  Clicked date: ${dateLabel}`);
+      await page.waitForTimeout(2000);
     }
     
-    filmMap.forEach(film => sessions.push(film));
-    console.log(`  Found ${sessions.length} films for ${targetDate}`);
+    // Scrape movies from the page
+    const films = await page.evaluate(() => {
+      const items = [];
+      const filmMap = new Map();
+      
+      // Look for movie cards/items
+      const movieElements = document.querySelectorAll('[class*="movie"], [class*="Movie"], [class*="film"], [class*="Film"]');
+      
+      movieElements.forEach(el => {
+        // Try to find title
+        const titleEl = el.querySelector('h2, h3, h4, [class*="title"], [class*="Title"], [class*="name"], [class*="Name"]');
+        const title = titleEl?.textContent?.trim();
+        if (!title || title.length < 2) return;
+        
+        // Try to find times
+        const timeEls = el.querySelectorAll('[class*="time"], [class*="Time"], [class*="session"], [class*="Session"]');
+        const times = [];
+        timeEls.forEach(t => {
+          const timeText = t.textContent?.trim();
+          if (timeText && /\d{1,2}:\d{2}/.test(timeText)) {
+            times.push(timeText);
+          }
+        });
+        
+        if (times.length > 0 && !filmMap.has(title)) {
+          filmMap.set(title, { title, times, url: window.location.href });
+        }
+      });
+      
+      filmMap.forEach(film => items.push(film));
+      return items;
+    });
+    
+    for (const film of films) {
+      sessions.push(film);
+    }
+    
+    console.log(`  Found ${sessions.length} films`);
     
   } catch (error) {
     console.error('  Coburg Drive-In scrape error:', error.message);
