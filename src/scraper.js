@@ -348,53 +348,49 @@ async function scrapeBrunswickPictureHouse(page, targetDate) {
     
     const diffDays = Math.round((targetDateObj - melbourneToday) / (1000 * 60 * 60 * 24));
     
-    // Format: "Today Wed, Jan 7, 2026", "Tomorrow Thu, Jan 8, 2026", "Fri, Jan 9, 2026"
+    // Format the date part: "Wed, Jan 7, 2026"
     const dayNames = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
     const monthNames = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
     const dateStr = `${dayNames[targetDateObj.getDay()]}, ${monthNames[month - 1]} ${day}, ${year}`;
     
-    let dayLabel;
+    // For today/tomorrow, the span contains "Today" or "Tomorrow", and the date follows
+    // For other days, we just search for the date string in the header
+    let searchTerm;
     if (diffDays === 0) {
-      dayLabel = `Today ${dateStr}`;
+      searchTerm = 'today';
     } else if (diffDays === 1) {
-      dayLabel = `Tomorrow ${dateStr}`;
+      searchTerm = 'tomorrow';
     } else {
-      dayLabel = dateStr;
+      searchTerm = dateStr.toLowerCase();
     }
     
-    console.log(`  Looking for day label: ${dayLabel}`);
+    console.log(`  Looking for: ${searchTerm}`);
     
-    const films = await page.evaluate((searchLabel) => {
+    const films = await page.evaluate((searchTerm) => {
       const items = [];
       const seenTitles = new Set();
       
-      // Find all day header spans with class "text-primary"
-      const daySpans = document.querySelectorAll('span.text-primary');
+      // Find the day header - it's a div.text-h6 containing our search term
+      const headers = document.querySelectorAll('.text-h6, div.text-h6');
       let targetContainer = null;
       
-      for (const span of daySpans) {
-        const spanText = span.textContent?.toLowerCase() || '';
-        const searchLower = searchLabel.toLowerCase();
-        
-        if (spanText.includes(searchLower)) {
-          // Go up to the header div, then get its next sibling (poster-list)
-          const headerDiv = span.closest('.text-h6, [class*="text-h6"]');
-          if (headerDiv) {
-            const container = headerDiv.nextElementSibling;
-            if (container && container.classList.contains('poster-list')) {
-              targetContainer = container;
-              break;
-            }
+      for (const header of headers) {
+        const headerText = header.textContent?.toLowerCase() || '';
+        if (headerText.includes(searchTerm)) {
+          // The poster-list is the next sibling
+          const sibling = header.nextElementSibling;
+          if (sibling && sibling.classList.contains('poster-list')) {
+            targetContainer = sibling;
+            break;
           }
         }
       }
       
       if (!targetContainer) {
-        console.log('Could not find container for ' + searchLabel);
-        return items;
+        return { items, debug: 'No container found for ' + searchTerm };
       }
       
-      // Now get all movie cards from just this container
+      // Get all movie cards from this container
       const movieCards = targetContainer.querySelectorAll('[class*="showing-status-now-playing"]');
       
       movieCards.forEach(card => {
@@ -404,11 +400,12 @@ async function scrapeBrunswickPictureHouse(page, targetDate) {
         if (!title || seenTitles.has(title)) return;
         
         const times = [];
-        card.querySelectorAll('button.showing').forEach(btn => {
-          const timeEl = btn.querySelector('div.text-primary, div[style*="color: var(--q-primary)"]');
-          const time = timeEl?.textContent?.trim();
-          if (time && /^\d{1,2}:\d{2}\s*(AM|PM)$/i.test(time)) {
-            times.push(time);
+        // Times are in div.text-primary inside button.showing
+        card.querySelectorAll('button.showing div.text-primary').forEach(div => {
+          const timeText = div.textContent?.trim();
+          // Match time format like "1:15 PM" or "8:35 PM"
+          if (timeText && /^\d{1,2}:\d{2}\s*(AM|PM)$/i.test(timeText)) {
+            times.push(timeText);
           }
         });
         
@@ -422,10 +419,12 @@ async function scrapeBrunswickPictureHouse(page, targetDate) {
         }
       });
       
-      return items;
-    }, dayLabel);
+      return { items, debug: `Found ${movieCards.length} cards` };
+    }, searchTerm);
     
-    for (const film of films) {
+    console.log(`  Debug: ${films.debug}`);
+    
+    for (const film of films.items) {
       sessions.push(film);
     }
     
@@ -1311,74 +1310,10 @@ async function scrapeImax(page, targetDate) {
 }
 
 async function scrapeCoburgDriveIn(page, targetDate) {
-  console.log(`Scraping Coburg Drive-In for ${targetDate}...`);
-  const sessions = [];
-  const url = 'https://villagecinemas.com.au/cinemas/coburg-drive-in';
-  
-  try {
-    // Set up response interception to capture the API data
-    let apiData = null;
-    
-    page.on('response', async (response) => {
-      const responseUrl = response.url();
-      if (responseUrl.includes('getMovieSessions') && responseUrl.includes('cinemaId=004')) {
-        try {
-          apiData = await response.json();
-        } catch (e) {
-          console.log('  Failed to parse API response');
-        }
-      }
-    });
-    
-    // Navigate to the cinema page - this triggers the API call
-    await page.goto(url, { waitUntil: 'networkidle2', timeout: 60000 });
-    await page.waitForTimeout(3000);
-    
-    if (!apiData || !Array.isArray(apiData)) {
-      console.log('  No API data captured');
-      return { cinema: 'Coburg Drive-In', url, sessions };
-    }
-    
-    console.log(`  API returned ${apiData.length} movies`);
-    
-    const filmMap = new Map();
-    
-    for (const movie of apiData) {
-      const title = movie.Title;
-      if (!title) continue;
-      
-      // Filter sessions for target date
-      const targetSessions = (movie.Sessions || []).filter(session => {
-        // ShowDateTime is like "2026-01-06T21:20:00+11:00"
-        const sessionDate = session.ShowDateTime?.substring(0, 10);
-        return sessionDate === targetDate;
-      });
-      
-      if (targetSessions.length > 0) {
-        // Extract times - SessionTime is like "09:20PM"
-        const times = targetSessions.map(s => {
-          // Convert "09:20PM" to "9:20pm"
-          let time = s.SessionTime || '';
-          time = time.replace(/^0/, '').toLowerCase();
-          return time;
-        });
-        
-        filmMap.set(title, {
-          title,
-          times,
-          url: movie.PageUrl ? `https://villagecinemas.com.au${movie.PageUrl}` : url
-        });
-      }
-    }
-    
-    filmMap.forEach(film => sessions.push(film));
-    console.log(`  Found ${sessions.length} films for ${targetDate}`);
-    
-  } catch (error) {
-    console.error('  Coburg Drive-In scrape error:', error.message);
-  }
-  
-  return { cinema: 'Coburg Drive-In', url, sessions };
+  console.log(`Scraping Coburg Drive-In for ${targetDate}... [DISABLED - Cloudflare blocking]`);
+  // TODO: Village Cinemas has Cloudflare protection that blocks scraping
+  // Need to investigate puppeteer-extra-plugin-stealth or alternative approach
+  return { cinema: 'Coburg Drive-In', url: 'https://villagecinemas.com.au/cinemas/coburg-drive-in', sessions: [] };
 }
 
 // ============================================================================
