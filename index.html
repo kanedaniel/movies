@@ -636,11 +636,13 @@
     }
     
     .day-picker {
-      display: inline-block;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
       background: var(--gold);
       color: var(--bg-dark);
       padding: 0.1em 0.4em;
-      width: 200px;
+      width: 220px;
       text-align: center;
     }
     
@@ -651,11 +653,10 @@
       font-size: 1.2em;
       font-weight: 700;
       cursor: pointer;
-      padding: 0.2em 0.4em;
+      padding: 0.2em 0.3em;
       transition: color 0.2s;
       line-height: 1;
       flex-shrink: 0;
-      width: 40px;
     }
     
     .day-arrow:hover:not(:disabled) {
