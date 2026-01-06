@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-01-06T04:04:35.320Z",
+  "generatedAt": "2026-01-06T04:35:38.497Z",
   "days": [
     {
       "date": "Tuesday 6 January 2026",
@@ -611,11 +611,10 @@
             {
               "title": "Song Sung Blue",
               "times": [
-                "3:00pm",
                 "5:45pm",
                 "8:30pm"
               ],
-              "url": "https://www.lidocinemas.com.au/tickets?c=0000000003&s=99536",
+              "url": "https://www.lidocinemas.com.au/tickets?c=0000000003&s=99537",
               "overview": "Based on a true story, two down-on-their-luck musicians form a joyous Neil Diamond tribute band, proving it's never too late to find love and follow your dreams.",
               "posterPath": "https://image.tmdb.org/t/p/w300/3HsIAbHWbFDUbY2jfj4wqEjGC3b.jpg",
               "rating": 7.2,
@@ -652,10 +651,9 @@
             {
               "title": "Nuremberg",
               "times": [
-                "2:40pm",
                 "5:45pm"
               ],
-              "url": "https://www.lidocinemas.com.au/tickets?c=0000000003&s=99558",
+              "url": "https://www.lidocinemas.com.au/tickets?c=0000000003&s=99559",
               "overview": "In postwar Germany, an American psychiatrist must determine whether Nazi prisoners are fit to go on trial for war crimes, and finds himself in a complex battle of intellect and ethics with Hermann Göring, Hitler's right-hand man.",
               "posterPath": "https://image.tmdb.org/t/p/w300/sxu8TsG7k06ymWL98ELEIE1EMZV.jpg",
               "rating": 7.3,
@@ -714,19 +712,6 @@
               "year": "2025",
               "runtime": 162,
               "trailerUrl": "https://www.youtube.com/watch?v=u6GVb4p7oD4"
-            },
-            {
-              "title": "Urchin",
-              "times": [
-                "3:00pm"
-              ],
-              "url": "https://www.lidocinemas.com.au/tickets?c=0000000003&s=99564",
-              "overview": "Mike, a rough sleeper in London, is trapped in a cycle of self-destruction as he attempts to turn his life around. Along the way, he encounters unexpected chances for a fresh start.",
-              "posterPath": "https://image.tmdb.org/t/p/w300/zc8n3hm3S2VxFxlNH1MNN28LVMa.jpg",
-              "rating": 6.7,
-              "year": "2025",
-              "runtime": 100,
-              "trailerUrl": "https://www.youtube.com/watch?v=O-hgR7RC39c"
             },
             {
               "title": "La La Land (2016)",
@@ -841,7 +826,6 @@
             {
               "title": "Wicked: For Good",
               "times": [
-                "3:00pm",
                 "9:15pm"
               ],
               "url": "https://www.hoyts.com.au/movies/wicked-for-good",
@@ -970,7 +954,6 @@
             {
               "title": "Sentimental Value",
               "times": [
-                "2:50pm",
                 "5:50pm"
               ],
               "url": "https://www.palacecinemas.com.au/movies/sentimental-value",
@@ -998,7 +981,6 @@
             {
               "title": "My Brother's Band",
               "times": [
-                "3:00pm",
                 "5:45pm"
               ],
               "url": "https://www.palacecinemas.com.au/movies/my-brothers-band",
@@ -1180,19 +1162,6 @@
               "trailerUrl": "https://www.youtube.com/watch?v=E2PSkw8BI7k"
             },
             {
-              "title": "Kokuho",
-              "times": [
-                "2:45pm"
-              ],
-              "url": "https://www.palacecinemas.com.au/movies/kokuho",
-              "overview": "Nagasaki, 1964: Following the death of his yakuza father, 15-year-old Kikuo is taken under the wing of a famous kabuki actor. Alongside Shunsuke, the actor’s only son, he decides to dedicate himself to this traditional form of theatre. For decades, the two young men grow and evolve together – and one will become the greatest Japanese master of the art of kabuki.",
-              "posterPath": "https://image.tmdb.org/t/p/w300/egDmNUBcSvu6aqQPCfyd1UneCYr.jpg",
-              "rating": 8.188,
-              "year": "2025",
-              "runtime": 174,
-              "trailerUrl": "https://www.youtube.com/watch?v=p6k9Y-irvOE"
-            },
-            {
               "title": "Wake Up Dead Man: A Knives Out Mystery",
               "times": [
                 "8:00pm"
@@ -1242,7 +1211,6 @@
             {
               "title": "The Housemaid",
               "times": [
-                "2:50pm",
                 "8:50pm"
               ],
               "url": "https://www.palacecinemas.com.au/movies/the-housemaid",
@@ -1403,7 +1371,6 @@
             {
               "title": "Avatar: Fire and Ash (2D)",
               "times": [
-                "2:45pm",
                 "4:00pm",
                 "6:15pm",
                 "7:10pm"
@@ -1434,7 +1401,6 @@
             {
               "title": "Sentimental Value",
               "times": [
-                "3:00pm",
                 "6:00pm",
                 "8:20pm"
               ],
@@ -1449,7 +1415,6 @@
             {
               "title": "Nuremberg",
               "times": [
-                "3:00pm",
                 "6:30pm",
                 "8:45pm"
               ],
@@ -1520,7 +1485,6 @@
             {
               "title": "Zootopia 2",
               "times": [
-                "3:00pm",
                 "3:20pm"
               ],
               "url": "https://www.palacecinemas.com.au/movies/zootopia-2",
@@ -5634,7 +5598,244 @@
         {
           "cinema": "Sun Theatre",
           "url": "https://suntheatre.com.au/now-playing/",
-          "sessions": []
+          "sessions": [
+            {
+              "title": "WICKED: FOR GOOD",
+              "times": [
+                "1:45pm"
+              ],
+              "url": "https://suntheatre.com.au/wp-cinema/movie/S25WICKEDFORGOOD/WICKED+FOR+GOOD/",
+              "overview": "As an angry mob rises against the Wicked Witch, Glinda and Elphaba will need to come together one final time. With their singular friendship now the fulcrum of their futures, they will need to truly see each other, with honesty and empathy, if they are to change themselves, and all of Oz, for good.",
+              "posterPath": "https://image.tmdb.org/t/p/w300/si9tolnefLSUKaqQEGz1bWArOaL.jpg",
+              "rating": 6.692,
+              "year": "2025",
+              "runtime": 137,
+              "trailerUrl": "https://www.youtube.com/watch?v=iU4Gpi3Jb88"
+            },
+            {
+              "title": "ZOOTOPIA 2",
+              "times": [
+                "10:10am",
+                "2:20pm"
+              ],
+              "url": "https://suntheatre.com.au/wp-cinema/movie/S25ZOOTOPIA2/ZOOTOPIA+2/",
+              "overview": "After cracking the biggest case in Zootopia's history, rookie cops Judy Hopps and Nick Wilde find themselves on the twisting trail of a great mystery when Gary De'Snake arrives and turns the animal metropolis upside down. To crack the case, Judy and Nick must go undercover to unexpected new parts of town, where their growing partnership is tested like never before.",
+              "posterPath": "https://image.tmdb.org/t/p/w300/bjUWGw0Ao0qVWxagN3VCwBJHVo6.jpg",
+              "rating": 7.6,
+              "year": "2025",
+              "runtime": 107,
+              "trailerUrl": "https://www.youtube.com/watch?v=knk2Fzxd9zc"
+            },
+            {
+              "title": "NUREMBERG",
+              "times": [
+                "4:00pm",
+                "8:15pm"
+              ],
+              "url": "https://suntheatre.com.au/wp-cinema/movie/S25NUREMBERG/NUREMBERG/",
+              "overview": "In postwar Germany, an American psychiatrist must determine whether Nazi prisoners are fit to go on trial for war crimes, and finds himself in a complex battle of intellect and ethics with Hermann Göring, Hitler's right-hand man.",
+              "posterPath": "https://image.tmdb.org/t/p/w300/sxu8TsG7k06ymWL98ELEIE1EMZV.jpg",
+              "rating": 7.3,
+              "year": "2025",
+              "runtime": 148,
+              "trailerUrl": "https://www.youtube.com/watch?v=iL_z7gzu4co"
+            },
+            {
+              "title": "AVATAR: FIRE AND ASH",
+              "times": [
+                "10:10am",
+                "4:20pm",
+                "8:00pm"
+              ],
+              "url": "https://suntheatre.com.au/wp-cinema/movie/S25AVATARFIREAND/AVATAR+FIRE+AND+ASH/",
+              "overview": "In the wake of the devastating war against the RDA and the loss of their eldest son, Jake Sully and Neytiri face a new threat on Pandora: the Ash People, a violent and power-hungry Na'vi tribe led by the ruthless Varang. Jake's family must fight for their survival and the future of Pandora in a conflict that pushes them to their emotional and physical limits.",
+              "posterPath": "https://image.tmdb.org/t/p/w300/cf7hE1ifY4UNbS25tGnaTyyDrI2.jpg",
+              "rating": 7.355,
+              "year": "2025",
+              "runtime": 198,
+              "trailerUrl": "https://www.youtube.com/watch?v=bgZJnA7XiXs"
+            },
+            {
+              "title": "THE SPONGEBOB MOVIE: THE SEARCH FOR SQUAREPANTS",
+              "times": [
+                "10:00am",
+                "12:00pm",
+                "2:00pm"
+              ],
+              "url": "https://suntheatre.com.au/wp-cinema/movie/S25SPONGEBOBMOVI/THE+SPONGEBOB+MOVIE+THE+SEARCH+FOR+SQUAREPANTS/",
+              "overview": "Desperate to be a big guy, SpongeBob sets out to prove his bravery to Mr. Krabs by following The Flying Dutchman – a mysterious swashbuckling ghost pirate – on a seafaring adventure that takes him to the deepest depths of the deep sea, where no Sponge has gone before.",
+              "posterPath": "https://image.tmdb.org/t/p/w300/pDWYW9v8fmJdA7N0I1MOdQA3ETq.jpg",
+              "rating": 6.886,
+              "year": "2025",
+              "runtime": 88,
+              "trailerUrl": "https://www.youtube.com/watch?v=T907pJMKHjs"
+            },
+            {
+              "title": "ANACONDA",
+              "times": [
+                "4:30pm",
+                "7:10pm",
+                "9:30pm"
+              ],
+              "url": "https://suntheatre.com.au/wp-cinema/movie/S25ANACONDA/ANACONDA/",
+              "overview": "A group of friends facing mid-life crises head to the rainforest with the intention of remaking their favorite movie from their youth, only to find themselves in a fight for their lives against natural disasters, giant snakes and violent criminals.",
+              "posterPath": "https://image.tmdb.org/t/p/w300/5MDnvvkOqthhE5gQebzkcOhD1p5.jpg",
+              "rating": 6.2,
+              "year": "2025",
+              "runtime": 100,
+              "trailerUrl": "https://www.youtube.com/watch?v=jMbBuQAYOeM"
+            },
+            {
+              "title": "RENTAL FAMILY",
+              "times": [
+                "11:40am",
+                "4:20pm",
+                "6:50pm"
+              ],
+              "url": "https://suntheatre.com.au/wp-cinema/movie/S25RENTALFAMILY/RENTAL+FAMILY/",
+              "overview": "An American actor in Tokyo struggles to find purpose until he lands an unusual gig: working for a Japanese 'rental family' agency, playing stand-in roles for strangers. As he immerses himself in his clients' worlds, he begins to form genuine bonds that blur the lines between performance and reality.",
+              "posterPath": "https://image.tmdb.org/t/p/w300/dGRZ55srJoK6TcjPTfHe701UWq0.jpg",
+              "rating": 7.6,
+              "year": "2025",
+              "runtime": 110,
+              "trailerUrl": "https://www.youtube.com/watch?v=7W9B-0PdfXQ"
+            },
+            {
+              "title": "SENTIMENTAL VALUE",
+              "times": [
+                "4:40pm",
+                "8:40pm"
+              ],
+              "url": "https://suntheatre.com.au/wp-cinema/movie/S25SENTIMENTALVA/SENTIMENTAL+VALUE/",
+              "overview": "Sisters Nora and Agnes reunite with their estranged father, the charismatic Gustav, a once-renowned director who offers stage actress Nora a role in what he hopes will be his comeback film. When Nora turns it down, she soon discovers he has given her part to an eager young Hollywood star.",
+              "posterPath": "https://image.tmdb.org/t/p/w300/dNy7iCibnVTJuvosArcDEdbruBT.jpg",
+              "rating": 7.625,
+              "year": "2025",
+              "runtime": 133,
+              "trailerUrl": "https://www.youtube.com/watch?v=zBFstFXdk90"
+            },
+            {
+              "title": "THE HOUSEMAID",
+              "times": [
+                "1:50pm",
+                "4:30pm",
+                "7:00pm",
+                "9:10pm"
+              ],
+              "url": "https://suntheatre.com.au/wp-cinema/movie/S25HOUSEMAID/THE+HOUSEMAID/",
+              "overview": "Trying to escape her past, Millie Calloway accepts a job as a live-in housemaid for the wealthy Nina and Andrew Winchester. But what begins as a dream job quickly unravels into something far more dangerous—a sexy, seductive game of secrets, scandal, and power.",
+              "posterPath": "https://image.tmdb.org/t/p/w300/cWsBscZzwu5brg9YjNkGewRUvJX.jpg",
+              "rating": 7.298,
+              "year": "2025",
+              "runtime": 131,
+              "trailerUrl": "https://www.youtube.com/watch?v=TGdKFCVn6G0"
+            },
+            {
+              "title": "SONG SUNG BLUE",
+              "times": [
+                "11:00am",
+                "1:30pm",
+                "4:10pm",
+                "6:40pm",
+                "9:00pm"
+              ],
+              "url": "https://suntheatre.com.au/wp-cinema/movie/S25SONGSUNGBLUE/SONG+SUNG+BLUE/",
+              "overview": "Based on a true story, two down-on-their-luck musicians form a joyous Neil Diamond tribute band, proving it's never too late to find love and follow your dreams.",
+              "posterPath": "https://image.tmdb.org/t/p/w300/3HsIAbHWbFDUbY2jfj4wqEjGC3b.jpg",
+              "rating": 7.2,
+              "year": "2025",
+              "runtime": 133,
+              "trailerUrl": "https://www.youtube.com/watch?v=ssZU6xUM-YI"
+            },
+            {
+              "title": "THE CHORAL",
+              "times": [
+                "10:00am",
+                "12:10pm",
+                "2:20pm",
+                "6:30pm"
+              ],
+              "url": "https://suntheatre.com.au/wp-cinema/movie/S25CHORAL/THE+CHORAL/",
+              "overview": "As World War I rages on, Dr. Henry Guthrie takes over a British choral society that's lost most of its men to the army. The community soon discovers that the best response to the chaos of war is to make beautiful music together.",
+              "posterPath": "https://image.tmdb.org/t/p/w300/yQtms7CSM0CE0W6dYbLLAATb5rL.jpg",
+              "rating": 6.6,
+              "year": "2025",
+              "runtime": 113,
+              "trailerUrl": "https://www.youtube.com/watch?v=6zRVP-ZgMm8"
+            },
+            {
+              "title": "THE POUT POUT FISH",
+              "times": [
+                "12:30pm"
+              ],
+              "url": "https://suntheatre.com.au/wp-cinema/movie/S25POUTPOUTFISH/THE+POUT+POUT+FISH/",
+              "overview": "Living on a rundown shipwreck, Mr. Fish one day discovers a hyperactive young sea dragon Pip - who had mistaken his home for a junkyard - pilfering his belongings. The heated argument that ensues leaves both their houses in ruin. But there is hope! Embarking on a seemingly impossible quest in search of the mythical \"Shimmer\" to grant them a wish, there’s only one problem: someone else is on the hunt…",
+              "posterPath": "https://image.tmdb.org/t/p/w300/13zx8Vh7nlGmP65NT7rPtORwvw9.jpg",
+              "rating": null,
+              "year": "2026",
+              "runtime": 92,
+              "trailerUrl": "https://www.youtube.com/watch?v=NhQfp1eITTY"
+            },
+            {
+              "title": "CHRISTY",
+              "times": [
+                "12:00pm",
+                "4:30pm",
+                "9:00pm"
+              ],
+              "url": "https://suntheatre.com.au/wp-cinema/movie/S25CHRISTY/CHRISTY/",
+              "overview": "Christy Martin never imagined life beyond her small-town roots in West Virginia—until she discovered a knack for punching people. Fueled by grit, raw determination, and an unshakable desire to win, she charges into the world of boxing under the guidance of her trainer and manager-turned-husband, Jim. But while Christy flaunts a fiery persona in the ring, her toughest battles unfold outside it—confronting family, identity, and a relationship that just might become life-or-death.",
+              "posterPath": "https://image.tmdb.org/t/p/w300/ssy1uHGZkuXLkIWJWrtsBczPvVC.jpg",
+              "rating": 7.363,
+              "year": "2025",
+              "runtime": 135,
+              "trailerUrl": "https://www.youtube.com/watch?v=Fkbj5F9qvvE"
+            },
+            {
+              "title": "GRAND PRIX OF EUROPE",
+              "times": [
+                "10:30am",
+                "12:30pm"
+              ],
+              "url": "https://suntheatre.com.au/wp-cinema/movie/S26GRANDPRIXOFEU/GRAND+PRIX+OF+EUROPE/",
+              "overview": "Edda, a young mouse and the daughter of fairground operator Erwin, dreams of becoming a race car driver. Ahead of the 50th anniversary of the European Grand Prix, Edda gets the opportunity to meet her idol, racing star Ed, and to help her father save his failing business. But to do so, she'll have to get behind the wheel herself.",
+              "posterPath": "https://image.tmdb.org/t/p/w300/jGGEqRaHAJ1pKJBj35WVxDyQBNw.jpg",
+              "rating": 7.269,
+              "year": "2025",
+              "runtime": 98,
+              "trailerUrl": "https://www.youtube.com/watch?v=WtAczQwVIPg"
+            },
+            {
+              "title": "NOUVELLE VAGUE",
+              "times": [
+                "10:00am",
+                "2:30pm",
+                "7:00pm"
+              ],
+              "url": "https://suntheatre.com.au/wp-cinema/movie/S25NOUVELLEVAGUE/NOUVELLE+VAGUE/",
+              "overview": "After writing for Cahiers du cinéma, a young Jean-Luc Godard decides making films is the best film criticism. He convinces producer Georges de Beauregard to fund a low-budget feature, and creates a treatment with fellow New Wave filmmaker François Truffaut about a gangster couple. The result? Breathless, one of the first features of the Nouvelle Vague era of French cinema.",
+              "posterPath": "https://image.tmdb.org/t/p/w300/mNcqF4IBrIV7zitgwM6EnpPRzli.jpg",
+              "rating": 7.335,
+              "year": "2025",
+              "runtime": 106,
+              "trailerUrl": "https://www.youtube.com/watch?v=sRqWbsdACzg"
+            },
+            {
+              "title": "SIX THE MUSICAL",
+              "times": [
+                "10:00am",
+                "2:40pm",
+                "6:30pm"
+              ],
+              "url": "https://suntheatre.com.au/wp-cinema/movie/S26SIXTHEMUSICAL/SIX+THE+MUSICAL/",
+              "overview": "The pop-inspired musical brings the six wives of Henry VIII right into the 21st century with infectious, empowering performances, accompanied by the on-stage band, the Ladies in Waiting. The Original West End cast reunites at London’s Vaudeville Theatre in front of a sold-out audience to strut their stuff and re-write their Tudor traumas in an unmissable cinematic recording of the show packed full of style, sass, and sensational songs.",
+              "posterPath": "https://image.tmdb.org/t/p/w300/8m4LGpmZ0wTKKo0ISmSp69ZH70T.jpg",
+              "rating": 7,
+              "year": "2025",
+              "runtime": 91,
+              "trailerUrl": "https://www.youtube.com/watch?v=hLa7v6TRB_E"
+            }
+          ]
         },
         {
           "cinema": "Coburg Drive-In",
@@ -7328,7 +7529,257 @@
         {
           "cinema": "Sun Theatre",
           "url": "https://suntheatre.com.au/now-playing/",
-          "sessions": []
+          "sessions": [
+            {
+              "title": "WICKED: FOR GOOD",
+              "times": [
+                "8:15pm"
+              ],
+              "url": "https://suntheatre.com.au/wp-cinema/movie/S25WICKEDFORGOOD/WICKED+FOR+GOOD/",
+              "overview": "As an angry mob rises against the Wicked Witch, Glinda and Elphaba will need to come together one final time. With their singular friendship now the fulcrum of their futures, they will need to truly see each other, with honesty and empathy, if they are to change themselves, and all of Oz, for good.",
+              "posterPath": "https://image.tmdb.org/t/p/w300/si9tolnefLSUKaqQEGz1bWArOaL.jpg",
+              "rating": 6.692,
+              "year": "2025",
+              "runtime": 137,
+              "trailerUrl": "https://www.youtube.com/watch?v=iU4Gpi3Jb88"
+            },
+            {
+              "title": "ZOOTOPIA 2",
+              "times": [
+                "10:10am",
+                "2:20pm"
+              ],
+              "url": "https://suntheatre.com.au/wp-cinema/movie/S25ZOOTOPIA2/ZOOTOPIA+2/",
+              "overview": "After cracking the biggest case in Zootopia's history, rookie cops Judy Hopps and Nick Wilde find themselves on the twisting trail of a great mystery when Gary De'Snake arrives and turns the animal metropolis upside down. To crack the case, Judy and Nick must go undercover to unexpected new parts of town, where their growing partnership is tested like never before.",
+              "posterPath": "https://image.tmdb.org/t/p/w300/bjUWGw0Ao0qVWxagN3VCwBJHVo6.jpg",
+              "rating": 7.6,
+              "year": "2025",
+              "runtime": 107,
+              "trailerUrl": "https://www.youtube.com/watch?v=knk2Fzxd9zc"
+            },
+            {
+              "title": "NUREMBERG",
+              "times": [
+                "10:00am",
+                "4:00pm"
+              ],
+              "url": "https://suntheatre.com.au/wp-cinema/movie/S25NUREMBERG/NUREMBERG/",
+              "overview": "In postwar Germany, an American psychiatrist must determine whether Nazi prisoners are fit to go on trial for war crimes, and finds himself in a complex battle of intellect and ethics with Hermann Göring, Hitler's right-hand man.",
+              "posterPath": "https://image.tmdb.org/t/p/w300/sxu8TsG7k06ymWL98ELEIE1EMZV.jpg",
+              "rating": 7.3,
+              "year": "2025",
+              "runtime": 148,
+              "trailerUrl": "https://www.youtube.com/watch?v=iL_z7gzu4co"
+            },
+            {
+              "title": "AVATAR: FIRE AND ASH",
+              "times": [
+                "12:45pm",
+                "4:20pm",
+                "8:00pm"
+              ],
+              "url": "https://suntheatre.com.au/wp-cinema/movie/S25AVATARFIREAND/AVATAR+FIRE+AND+ASH/",
+              "overview": "In the wake of the devastating war against the RDA and the loss of their eldest son, Jake Sully and Neytiri face a new threat on Pandora: the Ash People, a violent and power-hungry Na'vi tribe led by the ruthless Varang. Jake's family must fight for their survival and the future of Pandora in a conflict that pushes them to their emotional and physical limits.",
+              "posterPath": "https://image.tmdb.org/t/p/w300/cf7hE1ifY4UNbS25tGnaTyyDrI2.jpg",
+              "rating": 7.355,
+              "year": "2025",
+              "runtime": 198,
+              "trailerUrl": "https://www.youtube.com/watch?v=bgZJnA7XiXs"
+            },
+            {
+              "title": "THE SPONGEBOB MOVIE: THE SEARCH FOR SQUAREPANTS",
+              "times": [
+                "10:00am",
+                "12:00pm",
+                "2:00pm"
+              ],
+              "url": "https://suntheatre.com.au/wp-cinema/movie/S25SPONGEBOBMOVI/THE+SPONGEBOB+MOVIE+THE+SEARCH+FOR+SQUAREPANTS/",
+              "overview": "Desperate to be a big guy, SpongeBob sets out to prove his bravery to Mr. Krabs by following The Flying Dutchman – a mysterious swashbuckling ghost pirate – on a seafaring adventure that takes him to the deepest depths of the deep sea, where no Sponge has gone before.",
+              "posterPath": "https://image.tmdb.org/t/p/w300/pDWYW9v8fmJdA7N0I1MOdQA3ETq.jpg",
+              "rating": 6.886,
+              "year": "2025",
+              "runtime": 88,
+              "trailerUrl": "https://www.youtube.com/watch?v=T907pJMKHjs"
+            },
+            {
+              "title": "ANACONDA",
+              "times": [
+                "4:30pm",
+                "7:10pm",
+                "9:30pm"
+              ],
+              "url": "https://suntheatre.com.au/wp-cinema/movie/S25ANACONDA/ANACONDA/",
+              "overview": "A group of friends facing mid-life crises head to the rainforest with the intention of remaking their favorite movie from their youth, only to find themselves in a fight for their lives against natural disasters, giant snakes and violent criminals.",
+              "posterPath": "https://image.tmdb.org/t/p/w300/5MDnvvkOqthhE5gQebzkcOhD1p5.jpg",
+              "rating": 6.2,
+              "year": "2025",
+              "runtime": 100,
+              "trailerUrl": "https://www.youtube.com/watch?v=jMbBuQAYOeM"
+            },
+            {
+              "title": "RENTAL FAMILY",
+              "times": [
+                "11:40am",
+                "2:30pm",
+                "6:50pm"
+              ],
+              "url": "https://suntheatre.com.au/wp-cinema/movie/S25RENTALFAMILY/RENTAL+FAMILY/",
+              "overview": "An American actor in Tokyo struggles to find purpose until he lands an unusual gig: working for a Japanese 'rental family' agency, playing stand-in roles for strangers. As he immerses himself in his clients' worlds, he begins to form genuine bonds that blur the lines between performance and reality.",
+              "posterPath": "https://image.tmdb.org/t/p/w300/dGRZ55srJoK6TcjPTfHe701UWq0.jpg",
+              "rating": 7.6,
+              "year": "2025",
+              "runtime": 110,
+              "trailerUrl": "https://www.youtube.com/watch?v=7W9B-0PdfXQ"
+            },
+            {
+              "title": "SENTIMENTAL VALUE",
+              "times": [
+                "4:40pm",
+                "8:40pm"
+              ],
+              "url": "https://suntheatre.com.au/wp-cinema/movie/S25SENTIMENTALVA/SENTIMENTAL+VALUE/",
+              "overview": "Sisters Nora and Agnes reunite with their estranged father, the charismatic Gustav, a once-renowned director who offers stage actress Nora a role in what he hopes will be his comeback film. When Nora turns it down, she soon discovers he has given her part to an eager young Hollywood star.",
+              "posterPath": "https://image.tmdb.org/t/p/w300/dNy7iCibnVTJuvosArcDEdbruBT.jpg",
+              "rating": 7.625,
+              "year": "2025",
+              "runtime": 133,
+              "trailerUrl": "https://www.youtube.com/watch?v=zBFstFXdk90"
+            },
+            {
+              "title": "THE HOUSEMAID",
+              "times": [
+                "1:50pm",
+                "4:30pm",
+                "7:00pm",
+                "9:10pm"
+              ],
+              "url": "https://suntheatre.com.au/wp-cinema/movie/S25HOUSEMAID/THE+HOUSEMAID/",
+              "overview": "Trying to escape her past, Millie Calloway accepts a job as a live-in housemaid for the wealthy Nina and Andrew Winchester. But what begins as a dream job quickly unravels into something far more dangerous—a sexy, seductive game of secrets, scandal, and power.",
+              "posterPath": "https://image.tmdb.org/t/p/w300/cWsBscZzwu5brg9YjNkGewRUvJX.jpg",
+              "rating": 7.298,
+              "year": "2025",
+              "runtime": 131,
+              "trailerUrl": "https://www.youtube.com/watch?v=TGdKFCVn6G0"
+            },
+            {
+              "title": "SONG SUNG BLUE",
+              "times": [
+                "11:00am",
+                "1:30pm",
+                "4:10pm",
+                "6:40pm",
+                "9:00pm"
+              ],
+              "url": "https://suntheatre.com.au/wp-cinema/movie/S25SONGSUNGBLUE/SONG+SUNG+BLUE/",
+              "overview": "Based on a true story, two down-on-their-luck musicians form a joyous Neil Diamond tribute band, proving it's never too late to find love and follow your dreams.",
+              "posterPath": "https://image.tmdb.org/t/p/w300/3HsIAbHWbFDUbY2jfj4wqEjGC3b.jpg",
+              "rating": 7.2,
+              "year": "2025",
+              "runtime": 133,
+              "trailerUrl": "https://www.youtube.com/watch?v=ssZU6xUM-YI"
+            },
+            {
+              "title": "THE CHORAL",
+              "times": [
+                "10:00am",
+                "12:10pm",
+                "2:20pm",
+                "6:30pm"
+              ],
+              "url": "https://suntheatre.com.au/wp-cinema/movie/S25CHORAL/THE+CHORAL/",
+              "overview": "As World War I rages on, Dr. Henry Guthrie takes over a British choral society that's lost most of its men to the army. The community soon discovers that the best response to the chaos of war is to make beautiful music together.",
+              "posterPath": "https://image.tmdb.org/t/p/w300/yQtms7CSM0CE0W6dYbLLAATb5rL.jpg",
+              "rating": 6.6,
+              "year": "2025",
+              "runtime": 113,
+              "trailerUrl": "https://www.youtube.com/watch?v=6zRVP-ZgMm8"
+            },
+            {
+              "title": "THE POUT POUT FISH",
+              "times": [
+                "12:30pm"
+              ],
+              "url": "https://suntheatre.com.au/wp-cinema/movie/S25POUTPOUTFISH/THE+POUT+POUT+FISH/",
+              "overview": "Living on a rundown shipwreck, Mr. Fish one day discovers a hyperactive young sea dragon Pip - who had mistaken his home for a junkyard - pilfering his belongings. The heated argument that ensues leaves both their houses in ruin. But there is hope! Embarking on a seemingly impossible quest in search of the mythical \"Shimmer\" to grant them a wish, there’s only one problem: someone else is on the hunt…",
+              "posterPath": "https://image.tmdb.org/t/p/w300/13zx8Vh7nlGmP65NT7rPtORwvw9.jpg",
+              "rating": null,
+              "year": "2026",
+              "runtime": 92,
+              "trailerUrl": "https://www.youtube.com/watch?v=NhQfp1eITTY"
+            },
+            {
+              "title": "CHRISTY",
+              "times": [
+                "12:00pm",
+                "4:30pm",
+                "9:00pm"
+              ],
+              "url": "https://suntheatre.com.au/wp-cinema/movie/S25CHRISTY/CHRISTY/",
+              "overview": "Christy Martin never imagined life beyond her small-town roots in West Virginia—until she discovered a knack for punching people. Fueled by grit, raw determination, and an unshakable desire to win, she charges into the world of boxing under the guidance of her trainer and manager-turned-husband, Jim. But while Christy flaunts a fiery persona in the ring, her toughest battles unfold outside it—confronting family, identity, and a relationship that just might become life-or-death.",
+              "posterPath": "https://image.tmdb.org/t/p/w300/ssy1uHGZkuXLkIWJWrtsBczPvVC.jpg",
+              "rating": 7.363,
+              "year": "2025",
+              "runtime": 135,
+              "trailerUrl": "https://www.youtube.com/watch?v=Fkbj5F9qvvE"
+            },
+            {
+              "title": "GRAND PRIX OF EUROPE",
+              "times": [
+                "10:30am",
+                "12:30pm"
+              ],
+              "url": "https://suntheatre.com.au/wp-cinema/movie/S26GRANDPRIXOFEU/GRAND+PRIX+OF+EUROPE/",
+              "overview": "Edda, a young mouse and the daughter of fairground operator Erwin, dreams of becoming a race car driver. Ahead of the 50th anniversary of the European Grand Prix, Edda gets the opportunity to meet her idol, racing star Ed, and to help her father save his failing business. But to do so, she'll have to get behind the wheel herself.",
+              "posterPath": "https://image.tmdb.org/t/p/w300/jGGEqRaHAJ1pKJBj35WVxDyQBNw.jpg",
+              "rating": 7.269,
+              "year": "2025",
+              "runtime": 98,
+              "trailerUrl": "https://www.youtube.com/watch?v=WtAczQwVIPg"
+            },
+            {
+              "title": "NOUVELLE VAGUE",
+              "times": [
+                "10:00am",
+                "2:30pm",
+                "7:00pm"
+              ],
+              "url": "https://suntheatre.com.au/wp-cinema/movie/S25NOUVELLEVAGUE/NOUVELLE+VAGUE/",
+              "overview": "After writing for Cahiers du cinéma, a young Jean-Luc Godard decides making films is the best film criticism. He convinces producer Georges de Beauregard to fund a low-budget feature, and creates a treatment with fellow New Wave filmmaker François Truffaut about a gangster couple. The result? Breathless, one of the first features of the Nouvelle Vague era of French cinema.",
+              "posterPath": "https://image.tmdb.org/t/p/w300/mNcqF4IBrIV7zitgwM6EnpPRzli.jpg",
+              "rating": 7.335,
+              "year": "2025",
+              "runtime": 106,
+              "trailerUrl": "https://www.youtube.com/watch?v=sRqWbsdACzg"
+            },
+            {
+              "title": "SIX THE MUSICAL",
+              "times": [
+                "10:00am",
+                "4:40pm",
+                "6:30pm"
+              ],
+              "url": "https://suntheatre.com.au/wp-cinema/movie/S26SIXTHEMUSICAL/SIX+THE+MUSICAL/",
+              "overview": "The pop-inspired musical brings the six wives of Henry VIII right into the 21st century with infectious, empowering performances, accompanied by the on-stage band, the Ladies in Waiting. The Original West End cast reunites at London’s Vaudeville Theatre in front of a sold-out audience to strut their stuff and re-write their Tudor traumas in an unmissable cinematic recording of the show packed full of style, sass, and sensational songs.",
+              "posterPath": "https://image.tmdb.org/t/p/w300/8m4LGpmZ0wTKKo0ISmSp69ZH70T.jpg",
+              "rating": 7,
+              "year": "2025",
+              "runtime": 91,
+              "trailerUrl": "https://www.youtube.com/watch?v=hLa7v6TRB_E"
+            },
+            {
+              "title": "URCHIN",
+              "times": [
+                "9:10pm"
+              ],
+              "url": "https://suntheatre.com.au/wp-cinema/movie/S25URCHIN/URCHIN/",
+              "overview": "Mike, a rough sleeper in London, is trapped in a cycle of self-destruction as he attempts to turn his life around. Along the way, he encounters unexpected chances for a fresh start.",
+              "posterPath": "https://image.tmdb.org/t/p/w300/zc8n3hm3S2VxFxlNH1MNN28LVMa.jpg",
+              "rating": 6.7,
+              "year": "2025",
+              "runtime": 100,
+              "trailerUrl": "https://www.youtube.com/watch?v=O-hgR7RC39c"
+            }
+          ]
         },
         {
           "cinema": "Coburg Drive-In",
@@ -9168,7 +9619,256 @@
         {
           "cinema": "Sun Theatre",
           "url": "https://suntheatre.com.au/now-playing/",
-          "sessions": []
+          "sessions": [
+            {
+              "title": "WICKED: FOR GOOD",
+              "times": [
+                "10:10am"
+              ],
+              "url": "https://suntheatre.com.au/wp-cinema/movie/S25WICKEDFORGOOD/WICKED+FOR+GOOD/",
+              "overview": "As an angry mob rises against the Wicked Witch, Glinda and Elphaba will need to come together one final time. With their singular friendship now the fulcrum of their futures, they will need to truly see each other, with honesty and empathy, if they are to change themselves, and all of Oz, for good.",
+              "posterPath": "https://image.tmdb.org/t/p/w300/si9tolnefLSUKaqQEGz1bWArOaL.jpg",
+              "rating": 6.692,
+              "year": "2025",
+              "runtime": 137,
+              "trailerUrl": "https://www.youtube.com/watch?v=iU4Gpi3Jb88"
+            },
+            {
+              "title": "ZOOTOPIA 2",
+              "times": [
+                "11:50am"
+              ],
+              "url": "https://suntheatre.com.au/wp-cinema/movie/S25ZOOTOPIA2/ZOOTOPIA+2/",
+              "overview": "After cracking the biggest case in Zootopia's history, rookie cops Judy Hopps and Nick Wilde find themselves on the twisting trail of a great mystery when Gary De'Snake arrives and turns the animal metropolis upside down. To crack the case, Judy and Nick must go undercover to unexpected new parts of town, where their growing partnership is tested like never before.",
+              "posterPath": "https://image.tmdb.org/t/p/w300/bjUWGw0Ao0qVWxagN3VCwBJHVo6.jpg",
+              "rating": 7.6,
+              "year": "2025",
+              "runtime": 107,
+              "trailerUrl": "https://www.youtube.com/watch?v=knk2Fzxd9zc"
+            },
+            {
+              "title": "NUREMBERG",
+              "times": [
+                "1:50pm",
+                "8:15pm"
+              ],
+              "url": "https://suntheatre.com.au/wp-cinema/movie/S25NUREMBERG/NUREMBERG/",
+              "overview": "In postwar Germany, an American psychiatrist must determine whether Nazi prisoners are fit to go on trial for war crimes, and finds himself in a complex battle of intellect and ethics with Hermann Göring, Hitler's right-hand man.",
+              "posterPath": "https://image.tmdb.org/t/p/w300/sxu8TsG7k06ymWL98ELEIE1EMZV.jpg",
+              "rating": 7.3,
+              "year": "2025",
+              "runtime": 148,
+              "trailerUrl": "https://www.youtube.com/watch?v=iL_z7gzu4co"
+            },
+            {
+              "title": "AVATAR: FIRE AND ASH",
+              "times": [
+                "12:45pm",
+                "4:20pm",
+                "8:00pm"
+              ],
+              "url": "https://suntheatre.com.au/wp-cinema/movie/S25AVATARFIREAND/AVATAR+FIRE+AND+ASH/",
+              "overview": "In the wake of the devastating war against the RDA and the loss of their eldest son, Jake Sully and Neytiri face a new threat on Pandora: the Ash People, a violent and power-hungry Na'vi tribe led by the ruthless Varang. Jake's family must fight for their survival and the future of Pandora in a conflict that pushes them to their emotional and physical limits.",
+              "posterPath": "https://image.tmdb.org/t/p/w300/cf7hE1ifY4UNbS25tGnaTyyDrI2.jpg",
+              "rating": 7.355,
+              "year": "2025",
+              "runtime": 198,
+              "trailerUrl": "https://www.youtube.com/watch?v=bgZJnA7XiXs"
+            },
+            {
+              "title": "THE SPONGEBOB MOVIE: THE SEARCH FOR SQUAREPANTS",
+              "times": [
+                "10:00am",
+                "12:00pm",
+                "2:00pm"
+              ],
+              "url": "https://suntheatre.com.au/wp-cinema/movie/S25SPONGEBOBMOVI/THE+SPONGEBOB+MOVIE+THE+SEARCH+FOR+SQUAREPANTS/",
+              "overview": "Desperate to be a big guy, SpongeBob sets out to prove his bravery to Mr. Krabs by following The Flying Dutchman – a mysterious swashbuckling ghost pirate – on a seafaring adventure that takes him to the deepest depths of the deep sea, where no Sponge has gone before.",
+              "posterPath": "https://image.tmdb.org/t/p/w300/pDWYW9v8fmJdA7N0I1MOdQA3ETq.jpg",
+              "rating": 6.886,
+              "year": "2025",
+              "runtime": 88,
+              "trailerUrl": "https://www.youtube.com/watch?v=T907pJMKHjs"
+            },
+            {
+              "title": "ANACONDA",
+              "times": [
+                "4:30pm",
+                "7:10pm",
+                "9:30pm"
+              ],
+              "url": "https://suntheatre.com.au/wp-cinema/movie/S25ANACONDA/ANACONDA/",
+              "overview": "A group of friends facing mid-life crises head to the rainforest with the intention of remaking their favorite movie from their youth, only to find themselves in a fight for their lives against natural disasters, giant snakes and violent criminals.",
+              "posterPath": "https://image.tmdb.org/t/p/w300/5MDnvvkOqthhE5gQebzkcOhD1p5.jpg",
+              "rating": 6.2,
+              "year": "2025",
+              "runtime": 100,
+              "trailerUrl": "https://www.youtube.com/watch?v=jMbBuQAYOeM"
+            },
+            {
+              "title": "RENTAL FAMILY",
+              "times": [
+                "11:40am",
+                "4:20pm",
+                "6:50pm"
+              ],
+              "url": "https://suntheatre.com.au/wp-cinema/movie/S25RENTALFAMILY/RENTAL+FAMILY/",
+              "overview": "An American actor in Tokyo struggles to find purpose until he lands an unusual gig: working for a Japanese 'rental family' agency, playing stand-in roles for strangers. As he immerses himself in his clients' worlds, he begins to form genuine bonds that blur the lines between performance and reality.",
+              "posterPath": "https://image.tmdb.org/t/p/w300/dGRZ55srJoK6TcjPTfHe701UWq0.jpg",
+              "rating": 7.6,
+              "year": "2025",
+              "runtime": 110,
+              "trailerUrl": "https://www.youtube.com/watch?v=7W9B-0PdfXQ"
+            },
+            {
+              "title": "SENTIMENTAL VALUE",
+              "times": [
+                "4:40pm",
+                "8:40pm"
+              ],
+              "url": "https://suntheatre.com.au/wp-cinema/movie/S25SENTIMENTALVA/SENTIMENTAL+VALUE/",
+              "overview": "Sisters Nora and Agnes reunite with their estranged father, the charismatic Gustav, a once-renowned director who offers stage actress Nora a role in what he hopes will be his comeback film. When Nora turns it down, she soon discovers he has given her part to an eager young Hollywood star.",
+              "posterPath": "https://image.tmdb.org/t/p/w300/dNy7iCibnVTJuvosArcDEdbruBT.jpg",
+              "rating": 7.625,
+              "year": "2025",
+              "runtime": 133,
+              "trailerUrl": "https://www.youtube.com/watch?v=zBFstFXdk90"
+            },
+            {
+              "title": "THE HOUSEMAID",
+              "times": [
+                "2:00pm",
+                "4:00pm",
+                "7:00pm",
+                "9:10pm"
+              ],
+              "url": "https://suntheatre.com.au/wp-cinema/movie/S25HOUSEMAID/THE+HOUSEMAID/",
+              "overview": "Trying to escape her past, Millie Calloway accepts a job as a live-in housemaid for the wealthy Nina and Andrew Winchester. But what begins as a dream job quickly unravels into something far more dangerous—a sexy, seductive game of secrets, scandal, and power.",
+              "posterPath": "https://image.tmdb.org/t/p/w300/cWsBscZzwu5brg9YjNkGewRUvJX.jpg",
+              "rating": 7.298,
+              "year": "2025",
+              "runtime": 131,
+              "trailerUrl": "https://www.youtube.com/watch?v=TGdKFCVn6G0"
+            },
+            {
+              "title": "SONG SUNG BLUE",
+              "times": [
+                "11:00am",
+                "1:30pm",
+                "4:30pm",
+                "6:40pm",
+                "9:00pm"
+              ],
+              "url": "https://suntheatre.com.au/wp-cinema/movie/S25SONGSUNGBLUE/SONG+SUNG+BLUE/",
+              "overview": "Based on a true story, two down-on-their-luck musicians form a joyous Neil Diamond tribute band, proving it's never too late to find love and follow your dreams.",
+              "posterPath": "https://image.tmdb.org/t/p/w300/3HsIAbHWbFDUbY2jfj4wqEjGC3b.jpg",
+              "rating": 7.2,
+              "year": "2025",
+              "runtime": 133,
+              "trailerUrl": "https://www.youtube.com/watch?v=ssZU6xUM-YI"
+            },
+            {
+              "title": "THE CHORAL",
+              "times": [
+                "10:00am",
+                "12:10pm",
+                "2:20pm",
+                "6:30pm"
+              ],
+              "url": "https://suntheatre.com.au/wp-cinema/movie/S25CHORAL/THE+CHORAL/",
+              "overview": "As World War I rages on, Dr. Henry Guthrie takes over a British choral society that's lost most of its men to the army. The community soon discovers that the best response to the chaos of war is to make beautiful music together.",
+              "posterPath": "https://image.tmdb.org/t/p/w300/yQtms7CSM0CE0W6dYbLLAATb5rL.jpg",
+              "rating": 6.6,
+              "year": "2025",
+              "runtime": 113,
+              "trailerUrl": "https://www.youtube.com/watch?v=6zRVP-ZgMm8"
+            },
+            {
+              "title": "THE POUT POUT FISH",
+              "times": [
+                "10:00am"
+              ],
+              "url": "https://suntheatre.com.au/wp-cinema/movie/S25POUTPOUTFISH/THE+POUT+POUT+FISH/",
+              "overview": "Living on a rundown shipwreck, Mr. Fish one day discovers a hyperactive young sea dragon Pip - who had mistaken his home for a junkyard - pilfering his belongings. The heated argument that ensues leaves both their houses in ruin. But there is hope! Embarking on a seemingly impossible quest in search of the mythical \"Shimmer\" to grant them a wish, there’s only one problem: someone else is on the hunt…",
+              "posterPath": "https://image.tmdb.org/t/p/w300/13zx8Vh7nlGmP65NT7rPtORwvw9.jpg",
+              "rating": null,
+              "year": "2026",
+              "runtime": 92,
+              "trailerUrl": "https://www.youtube.com/watch?v=NhQfp1eITTY"
+            },
+            {
+              "title": "CHRISTY",
+              "times": [
+                "12:00pm",
+                "4:30pm",
+                "9:00pm"
+              ],
+              "url": "https://suntheatre.com.au/wp-cinema/movie/S25CHRISTY/CHRISTY/",
+              "overview": "Christy Martin never imagined life beyond her small-town roots in West Virginia—until she discovered a knack for punching people. Fueled by grit, raw determination, and an unshakable desire to win, she charges into the world of boxing under the guidance of her trainer and manager-turned-husband, Jim. But while Christy flaunts a fiery persona in the ring, her toughest battles unfold outside it—confronting family, identity, and a relationship that just might become life-or-death.",
+              "posterPath": "https://image.tmdb.org/t/p/w300/ssy1uHGZkuXLkIWJWrtsBczPvVC.jpg",
+              "rating": 7.363,
+              "year": "2025",
+              "runtime": 135,
+              "trailerUrl": "https://www.youtube.com/watch?v=Fkbj5F9qvvE"
+            },
+            {
+              "title": "GRAND PRIX OF EUROPE",
+              "times": [
+                "10:30am",
+                "12:30pm"
+              ],
+              "url": "https://suntheatre.com.au/wp-cinema/movie/S26GRANDPRIXOFEU/GRAND+PRIX+OF+EUROPE/",
+              "overview": "Edda, a young mouse and the daughter of fairground operator Erwin, dreams of becoming a race car driver. Ahead of the 50th anniversary of the European Grand Prix, Edda gets the opportunity to meet her idol, racing star Ed, and to help her father save his failing business. But to do so, she'll have to get behind the wheel herself.",
+              "posterPath": "https://image.tmdb.org/t/p/w300/jGGEqRaHAJ1pKJBj35WVxDyQBNw.jpg",
+              "rating": 7.269,
+              "year": "2025",
+              "runtime": 98,
+              "trailerUrl": "https://www.youtube.com/watch?v=WtAczQwVIPg"
+            },
+            {
+              "title": "NOUVELLE VAGUE",
+              "times": [
+                "10:00am",
+                "2:30pm",
+                "7:00pm"
+              ],
+              "url": "https://suntheatre.com.au/wp-cinema/movie/S25NOUVELLEVAGUE/NOUVELLE+VAGUE/",
+              "overview": "After writing for Cahiers du cinéma, a young Jean-Luc Godard decides making films is the best film criticism. He convinces producer Georges de Beauregard to fund a low-budget feature, and creates a treatment with fellow New Wave filmmaker François Truffaut about a gangster couple. The result? Breathless, one of the first features of the Nouvelle Vague era of French cinema.",
+              "posterPath": "https://image.tmdb.org/t/p/w300/mNcqF4IBrIV7zitgwM6EnpPRzli.jpg",
+              "rating": 7.335,
+              "year": "2025",
+              "runtime": 106,
+              "trailerUrl": "https://www.youtube.com/watch?v=sRqWbsdACzg"
+            },
+            {
+              "title": "SIX THE MUSICAL",
+              "times": [
+                "10:00am",
+                "2:30pm",
+                "6:30pm"
+              ],
+              "url": "https://suntheatre.com.au/wp-cinema/movie/S26SIXTHEMUSICAL/SIX+THE+MUSICAL/",
+              "overview": "The pop-inspired musical brings the six wives of Henry VIII right into the 21st century with infectious, empowering performances, accompanied by the on-stage band, the Ladies in Waiting. The Original West End cast reunites at London’s Vaudeville Theatre in front of a sold-out audience to strut their stuff and re-write their Tudor traumas in an unmissable cinematic recording of the show packed full of style, sass, and sensational songs.",
+              "posterPath": "https://image.tmdb.org/t/p/w300/8m4LGpmZ0wTKKo0ISmSp69ZH70T.jpg",
+              "rating": 7,
+              "year": "2025",
+              "runtime": 91,
+              "trailerUrl": "https://www.youtube.com/watch?v=hLa7v6TRB_E"
+            },
+            {
+              "title": "HAMNET",
+              "times": [
+                "4:10pm"
+              ],
+              "url": "https://suntheatre.com.au/wp-cinema/movie/S25HAMNET/HAMNET/",
+              "overview": "The powerful story of love and loss that inspired the creation of Shakespeare's timeless masterpiece, Hamlet.",
+              "posterPath": "https://image.tmdb.org/t/p/w300/71KNp6RiOQTbs8Fn1DagrFQrZmx.jpg",
+              "rating": 7.7,
+              "year": "2025",
+              "runtime": 126,
+              "trailerUrl": "https://www.youtube.com/watch?v=GgeFfe5ek4w"
+            }
+          ]
         },
         {
           "cinema": "Coburg Drive-In",
@@ -10915,7 +11615,269 @@
         {
           "cinema": "Sun Theatre",
           "url": "https://suntheatre.com.au/now-playing/",
-          "sessions": []
+          "sessions": [
+            {
+              "title": "WICKED: FOR GOOD",
+              "times": [
+                "1:45pm"
+              ],
+              "url": "https://suntheatre.com.au/wp-cinema/movie/S25WICKEDFORGOOD/WICKED+FOR+GOOD/",
+              "overview": "As an angry mob rises against the Wicked Witch, Glinda and Elphaba will need to come together one final time. With their singular friendship now the fulcrum of their futures, they will need to truly see each other, with honesty and empathy, if they are to change themselves, and all of Oz, for good.",
+              "posterPath": "https://image.tmdb.org/t/p/w300/si9tolnefLSUKaqQEGz1bWArOaL.jpg",
+              "rating": 6.692,
+              "year": "2025",
+              "runtime": 137,
+              "trailerUrl": "https://www.youtube.com/watch?v=iU4Gpi3Jb88"
+            },
+            {
+              "title": "ZOOTOPIA 2",
+              "times": [
+                "11:50am"
+              ],
+              "url": "https://suntheatre.com.au/wp-cinema/movie/S25ZOOTOPIA2/ZOOTOPIA+2/",
+              "overview": "After cracking the biggest case in Zootopia's history, rookie cops Judy Hopps and Nick Wilde find themselves on the twisting trail of a great mystery when Gary De'Snake arrives and turns the animal metropolis upside down. To crack the case, Judy and Nick must go undercover to unexpected new parts of town, where their growing partnership is tested like never before.",
+              "posterPath": "https://image.tmdb.org/t/p/w300/bjUWGw0Ao0qVWxagN3VCwBJHVo6.jpg",
+              "rating": 7.6,
+              "year": "2025",
+              "runtime": 107,
+              "trailerUrl": "https://www.youtube.com/watch?v=knk2Fzxd9zc"
+            },
+            {
+              "title": "NUREMBERG",
+              "times": [
+                "4:00pm",
+                "8:15pm"
+              ],
+              "url": "https://suntheatre.com.au/wp-cinema/movie/S25NUREMBERG/NUREMBERG/",
+              "overview": "In postwar Germany, an American psychiatrist must determine whether Nazi prisoners are fit to go on trial for war crimes, and finds himself in a complex battle of intellect and ethics with Hermann Göring, Hitler's right-hand man.",
+              "posterPath": "https://image.tmdb.org/t/p/w300/sxu8TsG7k06ymWL98ELEIE1EMZV.jpg",
+              "rating": 7.3,
+              "year": "2025",
+              "runtime": 148,
+              "trailerUrl": "https://www.youtube.com/watch?v=iL_z7gzu4co"
+            },
+            {
+              "title": "AVATAR: FIRE AND ASH",
+              "times": [
+                "10:10am",
+                "4:20pm",
+                "8:00pm"
+              ],
+              "url": "https://suntheatre.com.au/wp-cinema/movie/S25AVATARFIREAND/AVATAR+FIRE+AND+ASH/",
+              "overview": "In the wake of the devastating war against the RDA and the loss of their eldest son, Jake Sully and Neytiri face a new threat on Pandora: the Ash People, a violent and power-hungry Na'vi tribe led by the ruthless Varang. Jake's family must fight for their survival and the future of Pandora in a conflict that pushes them to their emotional and physical limits.",
+              "posterPath": "https://image.tmdb.org/t/p/w300/cf7hE1ifY4UNbS25tGnaTyyDrI2.jpg",
+              "rating": 7.355,
+              "year": "2025",
+              "runtime": 198,
+              "trailerUrl": "https://www.youtube.com/watch?v=bgZJnA7XiXs"
+            },
+            {
+              "title": "THE SPONGEBOB MOVIE: THE SEARCH FOR SQUAREPANTS",
+              "times": [
+                "10:00am",
+                "12:00pm",
+                "2:00pm"
+              ],
+              "url": "https://suntheatre.com.au/wp-cinema/movie/S25SPONGEBOBMOVI/THE+SPONGEBOB+MOVIE+THE+SEARCH+FOR+SQUAREPANTS/",
+              "overview": "Desperate to be a big guy, SpongeBob sets out to prove his bravery to Mr. Krabs by following The Flying Dutchman – a mysterious swashbuckling ghost pirate – on a seafaring adventure that takes him to the deepest depths of the deep sea, where no Sponge has gone before.",
+              "posterPath": "https://image.tmdb.org/t/p/w300/pDWYW9v8fmJdA7N0I1MOdQA3ETq.jpg",
+              "rating": 6.886,
+              "year": "2025",
+              "runtime": 88,
+              "trailerUrl": "https://www.youtube.com/watch?v=T907pJMKHjs"
+            },
+            {
+              "title": "ANACONDA",
+              "times": [
+                "4:30pm",
+                "7:10pm",
+                "9:30pm"
+              ],
+              "url": "https://suntheatre.com.au/wp-cinema/movie/S25ANACONDA/ANACONDA/",
+              "overview": "A group of friends facing mid-life crises head to the rainforest with the intention of remaking their favorite movie from their youth, only to find themselves in a fight for their lives against natural disasters, giant snakes and violent criminals.",
+              "posterPath": "https://image.tmdb.org/t/p/w300/5MDnvvkOqthhE5gQebzkcOhD1p5.jpg",
+              "rating": 6.2,
+              "year": "2025",
+              "runtime": 100,
+              "trailerUrl": "https://www.youtube.com/watch?v=jMbBuQAYOeM"
+            },
+            {
+              "title": "RENTAL FAMILY",
+              "times": [
+                "11:40am",
+                "2:30pm",
+                "6:50pm"
+              ],
+              "url": "https://suntheatre.com.au/wp-cinema/movie/S25RENTALFAMILY/RENTAL+FAMILY/",
+              "overview": "An American actor in Tokyo struggles to find purpose until he lands an unusual gig: working for a Japanese 'rental family' agency, playing stand-in roles for strangers. As he immerses himself in his clients' worlds, he begins to form genuine bonds that blur the lines between performance and reality.",
+              "posterPath": "https://image.tmdb.org/t/p/w300/dGRZ55srJoK6TcjPTfHe701UWq0.jpg",
+              "rating": 7.6,
+              "year": "2025",
+              "runtime": 110,
+              "trailerUrl": "https://www.youtube.com/watch?v=7W9B-0PdfXQ"
+            },
+            {
+              "title": "SENTIMENTAL VALUE",
+              "times": [
+                "4:40pm",
+                "8:40pm"
+              ],
+              "url": "https://suntheatre.com.au/wp-cinema/movie/S25SENTIMENTALVA/SENTIMENTAL+VALUE/",
+              "overview": "Sisters Nora and Agnes reunite with their estranged father, the charismatic Gustav, a once-renowned director who offers stage actress Nora a role in what he hopes will be his comeback film. When Nora turns it down, she soon discovers he has given her part to an eager young Hollywood star.",
+              "posterPath": "https://image.tmdb.org/t/p/w300/dNy7iCibnVTJuvosArcDEdbruBT.jpg",
+              "rating": 7.625,
+              "year": "2025",
+              "runtime": 133,
+              "trailerUrl": "https://www.youtube.com/watch?v=zBFstFXdk90"
+            },
+            {
+              "title": "THE HOUSEMAID",
+              "times": [
+                "1:50pm",
+                "4:30pm",
+                "7:00pm",
+                "9:10pm"
+              ],
+              "url": "https://suntheatre.com.au/wp-cinema/movie/S25HOUSEMAID/THE+HOUSEMAID/",
+              "overview": "Trying to escape her past, Millie Calloway accepts a job as a live-in housemaid for the wealthy Nina and Andrew Winchester. But what begins as a dream job quickly unravels into something far more dangerous—a sexy, seductive game of secrets, scandal, and power.",
+              "posterPath": "https://image.tmdb.org/t/p/w300/cWsBscZzwu5brg9YjNkGewRUvJX.jpg",
+              "rating": 7.298,
+              "year": "2025",
+              "runtime": 131,
+              "trailerUrl": "https://www.youtube.com/watch?v=TGdKFCVn6G0"
+            },
+            {
+              "title": "SONG SUNG BLUE",
+              "times": [
+                "11:00am",
+                "1:30pm",
+                "4:10pm",
+                "6:40pm",
+                "9:00pm"
+              ],
+              "url": "https://suntheatre.com.au/wp-cinema/movie/S25SONGSUNGBLUE/SONG+SUNG+BLUE/",
+              "overview": "Based on a true story, two down-on-their-luck musicians form a joyous Neil Diamond tribute band, proving it's never too late to find love and follow your dreams.",
+              "posterPath": "https://image.tmdb.org/t/p/w300/3HsIAbHWbFDUbY2jfj4wqEjGC3b.jpg",
+              "rating": 7.2,
+              "year": "2025",
+              "runtime": 133,
+              "trailerUrl": "https://www.youtube.com/watch?v=ssZU6xUM-YI"
+            },
+            {
+              "title": "THE CHORAL",
+              "times": [
+                "10:00am",
+                "12:10pm",
+                "2:20pm",
+                "6:30pm"
+              ],
+              "url": "https://suntheatre.com.au/wp-cinema/movie/S25CHORAL/THE+CHORAL/",
+              "overview": "As World War I rages on, Dr. Henry Guthrie takes over a British choral society that's lost most of its men to the army. The community soon discovers that the best response to the chaos of war is to make beautiful music together.",
+              "posterPath": "https://image.tmdb.org/t/p/w300/yQtms7CSM0CE0W6dYbLLAATb5rL.jpg",
+              "rating": 6.6,
+              "year": "2025",
+              "runtime": 113,
+              "trailerUrl": "https://www.youtube.com/watch?v=6zRVP-ZgMm8"
+            },
+            {
+              "title": "THE POUT POUT FISH",
+              "times": [
+                "10:00am"
+              ],
+              "url": "https://suntheatre.com.au/wp-cinema/movie/S25POUTPOUTFISH/THE+POUT+POUT+FISH/",
+              "overview": "Living on a rundown shipwreck, Mr. Fish one day discovers a hyperactive young sea dragon Pip - who had mistaken his home for a junkyard - pilfering his belongings. The heated argument that ensues leaves both their houses in ruin. But there is hope! Embarking on a seemingly impossible quest in search of the mythical \"Shimmer\" to grant them a wish, there’s only one problem: someone else is on the hunt…",
+              "posterPath": "https://image.tmdb.org/t/p/w300/13zx8Vh7nlGmP65NT7rPtORwvw9.jpg",
+              "rating": null,
+              "year": "2026",
+              "runtime": 92,
+              "trailerUrl": "https://www.youtube.com/watch?v=NhQfp1eITTY"
+            },
+            {
+              "title": "CHRISTY",
+              "times": [
+                "12:00pm",
+                "4:30pm",
+                "9:00pm"
+              ],
+              "url": "https://suntheatre.com.au/wp-cinema/movie/S25CHRISTY/CHRISTY/",
+              "overview": "Christy Martin never imagined life beyond her small-town roots in West Virginia—until she discovered a knack for punching people. Fueled by grit, raw determination, and an unshakable desire to win, she charges into the world of boxing under the guidance of her trainer and manager-turned-husband, Jim. But while Christy flaunts a fiery persona in the ring, her toughest battles unfold outside it—confronting family, identity, and a relationship that just might become life-or-death.",
+              "posterPath": "https://image.tmdb.org/t/p/w300/ssy1uHGZkuXLkIWJWrtsBczPvVC.jpg",
+              "rating": 7.363,
+              "year": "2025",
+              "runtime": 135,
+              "trailerUrl": "https://www.youtube.com/watch?v=Fkbj5F9qvvE"
+            },
+            {
+              "title": "GRAND PRIX OF EUROPE",
+              "times": [
+                "10:30am",
+                "12:30pm"
+              ],
+              "url": "https://suntheatre.com.au/wp-cinema/movie/S26GRANDPRIXOFEU/GRAND+PRIX+OF+EUROPE/",
+              "overview": "Edda, a young mouse and the daughter of fairground operator Erwin, dreams of becoming a race car driver. Ahead of the 50th anniversary of the European Grand Prix, Edda gets the opportunity to meet her idol, racing star Ed, and to help her father save his failing business. But to do so, she'll have to get behind the wheel herself.",
+              "posterPath": "https://image.tmdb.org/t/p/w300/jGGEqRaHAJ1pKJBj35WVxDyQBNw.jpg",
+              "rating": 7.269,
+              "year": "2025",
+              "runtime": 98,
+              "trailerUrl": "https://www.youtube.com/watch?v=WtAczQwVIPg"
+            },
+            {
+              "title": "NOUVELLE VAGUE",
+              "times": [
+                "10:00am",
+                "2:30pm",
+                "7:00pm"
+              ],
+              "url": "https://suntheatre.com.au/wp-cinema/movie/S25NOUVELLEVAGUE/NOUVELLE+VAGUE/",
+              "overview": "After writing for Cahiers du cinéma, a young Jean-Luc Godard decides making films is the best film criticism. He convinces producer Georges de Beauregard to fund a low-budget feature, and creates a treatment with fellow New Wave filmmaker François Truffaut about a gangster couple. The result? Breathless, one of the first features of the Nouvelle Vague era of French cinema.",
+              "posterPath": "https://image.tmdb.org/t/p/w300/mNcqF4IBrIV7zitgwM6EnpPRzli.jpg",
+              "rating": 7.335,
+              "year": "2025",
+              "runtime": 106,
+              "trailerUrl": "https://www.youtube.com/watch?v=sRqWbsdACzg"
+            },
+            {
+              "title": "SIX THE MUSICAL",
+              "times": [
+                "10:00am",
+                "4:40pm",
+                "6:30pm"
+              ],
+              "url": "https://suntheatre.com.au/wp-cinema/movie/S26SIXTHEMUSICAL/SIX+THE+MUSICAL/",
+              "overview": "The pop-inspired musical brings the six wives of Henry VIII right into the 21st century with infectious, empowering performances, accompanied by the on-stage band, the Ladies in Waiting. The Original West End cast reunites at London’s Vaudeville Theatre in front of a sold-out audience to strut their stuff and re-write their Tudor traumas in an unmissable cinematic recording of the show packed full of style, sass, and sensational songs.",
+              "posterPath": "https://image.tmdb.org/t/p/w300/8m4LGpmZ0wTKKo0ISmSp69ZH70T.jpg",
+              "rating": 7,
+              "year": "2025",
+              "runtime": 91,
+              "trailerUrl": "https://www.youtube.com/watch?v=hLa7v6TRB_E"
+            },
+            {
+              "title": "URCHIN",
+              "times": [
+                "9:10pm"
+              ],
+              "url": "https://suntheatre.com.au/wp-cinema/movie/S25URCHIN/URCHIN/",
+              "overview": "Mike, a rough sleeper in London, is trapped in a cycle of self-destruction as he attempts to turn his life around. Along the way, he encounters unexpected chances for a fresh start.",
+              "posterPath": "https://image.tmdb.org/t/p/w300/zc8n3hm3S2VxFxlNH1MNN28LVMa.jpg",
+              "rating": 6.7,
+              "year": "2025",
+              "runtime": 100,
+              "trailerUrl": "https://www.youtube.com/watch?v=O-hgR7RC39c"
+            },
+            {
+              "title": "HAMNET",
+              "times": [
+                "2:00pm"
+              ],
+              "url": "https://suntheatre.com.au/wp-cinema/movie/S25HAMNET/HAMNET/",
+              "overview": "The powerful story of love and loss that inspired the creation of Shakespeare's timeless masterpiece, Hamlet.",
+              "posterPath": "https://image.tmdb.org/t/p/w300/71KNp6RiOQTbs8Fn1DagrFQrZmx.jpg",
+              "rating": 7.7,
+              "year": "2025",
+              "runtime": 126,
+              "trailerUrl": "https://www.youtube.com/watch?v=GgeFfe5ek4w"
+            }
+          ]
         },
         {
           "cinema": "Coburg Drive-In",
@@ -12578,7 +13540,244 @@
         {
           "cinema": "Sun Theatre",
           "url": "https://suntheatre.com.au/now-playing/",
-          "sessions": []
+          "sessions": [
+            {
+              "title": "WICKED: FOR GOOD",
+              "times": [
+                "12:45pm",
+                "8:15pm"
+              ],
+              "url": "https://suntheatre.com.au/wp-cinema/movie/S25WICKEDFORGOOD/WICKED+FOR+GOOD/",
+              "overview": "As an angry mob rises against the Wicked Witch, Glinda and Elphaba will need to come together one final time. With their singular friendship now the fulcrum of their futures, they will need to truly see each other, with honesty and empathy, if they are to change themselves, and all of Oz, for good.",
+              "posterPath": "https://image.tmdb.org/t/p/w300/si9tolnefLSUKaqQEGz1bWArOaL.jpg",
+              "rating": 6.692,
+              "year": "2025",
+              "runtime": 137,
+              "trailerUrl": "https://www.youtube.com/watch?v=iU4Gpi3Jb88"
+            },
+            {
+              "title": "ZOOTOPIA 2",
+              "times": [
+                "10:10am",
+                "2:20pm"
+              ],
+              "url": "https://suntheatre.com.au/wp-cinema/movie/S25ZOOTOPIA2/ZOOTOPIA+2/",
+              "overview": "After cracking the biggest case in Zootopia's history, rookie cops Judy Hopps and Nick Wilde find themselves on the twisting trail of a great mystery when Gary De'Snake arrives and turns the animal metropolis upside down. To crack the case, Judy and Nick must go undercover to unexpected new parts of town, where their growing partnership is tested like never before.",
+              "posterPath": "https://image.tmdb.org/t/p/w300/bjUWGw0Ao0qVWxagN3VCwBJHVo6.jpg",
+              "rating": 7.6,
+              "year": "2025",
+              "runtime": 107,
+              "trailerUrl": "https://www.youtube.com/watch?v=knk2Fzxd9zc"
+            },
+            {
+              "title": "NUREMBERG",
+              "times": [
+                "4:00pm"
+              ],
+              "url": "https://suntheatre.com.au/wp-cinema/movie/S25NUREMBERG/NUREMBERG/",
+              "overview": "In postwar Germany, an American psychiatrist must determine whether Nazi prisoners are fit to go on trial for war crimes, and finds himself in a complex battle of intellect and ethics with Hermann Göring, Hitler's right-hand man.",
+              "posterPath": "https://image.tmdb.org/t/p/w300/sxu8TsG7k06ymWL98ELEIE1EMZV.jpg",
+              "rating": 7.3,
+              "year": "2025",
+              "runtime": 148,
+              "trailerUrl": "https://www.youtube.com/watch?v=iL_z7gzu4co"
+            },
+            {
+              "title": "AVATAR: FIRE AND ASH",
+              "times": [
+                "3:30pm",
+                "7:30pm"
+              ],
+              "url": "https://suntheatre.com.au/wp-cinema/movie/S25AVATARFIREAND/AVATAR+FIRE+AND+ASH/",
+              "overview": "In the wake of the devastating war against the RDA and the loss of their eldest son, Jake Sully and Neytiri face a new threat on Pandora: the Ash People, a violent and power-hungry Na'vi tribe led by the ruthless Varang. Jake's family must fight for their survival and the future of Pandora in a conflict that pushes them to their emotional and physical limits.",
+              "posterPath": "https://image.tmdb.org/t/p/w300/cf7hE1ifY4UNbS25tGnaTyyDrI2.jpg",
+              "rating": 7.355,
+              "year": "2025",
+              "runtime": 198,
+              "trailerUrl": "https://www.youtube.com/watch?v=bgZJnA7XiXs"
+            },
+            {
+              "title": "THE SPONGEBOB MOVIE: THE SEARCH FOR SQUAREPANTS",
+              "times": [
+                "10:00am",
+                "12:00pm",
+                "2:00pm"
+              ],
+              "url": "https://suntheatre.com.au/wp-cinema/movie/S25SPONGEBOBMOVI/THE+SPONGEBOB+MOVIE+THE+SEARCH+FOR+SQUAREPANTS/",
+              "overview": "Desperate to be a big guy, SpongeBob sets out to prove his bravery to Mr. Krabs by following The Flying Dutchman – a mysterious swashbuckling ghost pirate – on a seafaring adventure that takes him to the deepest depths of the deep sea, where no Sponge has gone before.",
+              "posterPath": "https://image.tmdb.org/t/p/w300/pDWYW9v8fmJdA7N0I1MOdQA3ETq.jpg",
+              "rating": 6.886,
+              "year": "2025",
+              "runtime": 88,
+              "trailerUrl": "https://www.youtube.com/watch?v=T907pJMKHjs"
+            },
+            {
+              "title": "ANACONDA",
+              "times": [
+                "4:30pm",
+                "7:10pm",
+                "9:30pm"
+              ],
+              "url": "https://suntheatre.com.au/wp-cinema/movie/S25ANACONDA/ANACONDA/",
+              "overview": "A group of friends facing mid-life crises head to the rainforest with the intention of remaking their favorite movie from their youth, only to find themselves in a fight for their lives against natural disasters, giant snakes and violent criminals.",
+              "posterPath": "https://image.tmdb.org/t/p/w300/5MDnvvkOqthhE5gQebzkcOhD1p5.jpg",
+              "rating": 6.2,
+              "year": "2025",
+              "runtime": 100,
+              "trailerUrl": "https://www.youtube.com/watch?v=jMbBuQAYOeM"
+            },
+            {
+              "title": "RENTAL FAMILY",
+              "times": [
+                "11:40am",
+                "4:20pm",
+                "6:50pm"
+              ],
+              "url": "https://suntheatre.com.au/wp-cinema/movie/S25RENTALFAMILY/RENTAL+FAMILY/",
+              "overview": "An American actor in Tokyo struggles to find purpose until he lands an unusual gig: working for a Japanese 'rental family' agency, playing stand-in roles for strangers. As he immerses himself in his clients' worlds, he begins to form genuine bonds that blur the lines between performance and reality.",
+              "posterPath": "https://image.tmdb.org/t/p/w300/dGRZ55srJoK6TcjPTfHe701UWq0.jpg",
+              "rating": 7.6,
+              "year": "2025",
+              "runtime": 110,
+              "trailerUrl": "https://www.youtube.com/watch?v=7W9B-0PdfXQ"
+            },
+            {
+              "title": "SENTIMENTAL VALUE",
+              "times": [
+                "4:40pm",
+                "8:40pm"
+              ],
+              "url": "https://suntheatre.com.au/wp-cinema/movie/S25SENTIMENTALVA/SENTIMENTAL+VALUE/",
+              "overview": "Sisters Nora and Agnes reunite with their estranged father, the charismatic Gustav, a once-renowned director who offers stage actress Nora a role in what he hopes will be his comeback film. When Nora turns it down, she soon discovers he has given her part to an eager young Hollywood star.",
+              "posterPath": "https://image.tmdb.org/t/p/w300/dNy7iCibnVTJuvosArcDEdbruBT.jpg",
+              "rating": 7.625,
+              "year": "2025",
+              "runtime": 133,
+              "trailerUrl": "https://www.youtube.com/watch?v=zBFstFXdk90"
+            },
+            {
+              "title": "THE HOUSEMAID",
+              "times": [
+                "1:50pm",
+                "4:30pm",
+                "7:00pm",
+                "9:10pm"
+              ],
+              "url": "https://suntheatre.com.au/wp-cinema/movie/S25HOUSEMAID/THE+HOUSEMAID/",
+              "overview": "Trying to escape her past, Millie Calloway accepts a job as a live-in housemaid for the wealthy Nina and Andrew Winchester. But what begins as a dream job quickly unravels into something far more dangerous—a sexy, seductive game of secrets, scandal, and power.",
+              "posterPath": "https://image.tmdb.org/t/p/w300/cWsBscZzwu5brg9YjNkGewRUvJX.jpg",
+              "rating": 7.298,
+              "year": "2025",
+              "runtime": 131,
+              "trailerUrl": "https://www.youtube.com/watch?v=TGdKFCVn6G0"
+            },
+            {
+              "title": "SONG SUNG BLUE",
+              "times": [
+                "11:00am",
+                "1:30pm",
+                "4:10pm",
+                "6:40pm",
+                "9:00pm"
+              ],
+              "url": "https://suntheatre.com.au/wp-cinema/movie/S25SONGSUNGBLUE/SONG+SUNG+BLUE/",
+              "overview": "Based on a true story, two down-on-their-luck musicians form a joyous Neil Diamond tribute band, proving it's never too late to find love and follow your dreams.",
+              "posterPath": "https://image.tmdb.org/t/p/w300/3HsIAbHWbFDUbY2jfj4wqEjGC3b.jpg",
+              "rating": 7.2,
+              "year": "2025",
+              "runtime": 133,
+              "trailerUrl": "https://www.youtube.com/watch?v=ssZU6xUM-YI"
+            },
+            {
+              "title": "THE CHORAL",
+              "times": [
+                "10:30am",
+                "12:10pm",
+                "2:20pm",
+                "6:30pm"
+              ],
+              "url": "https://suntheatre.com.au/wp-cinema/movie/S25CHORAL/THE+CHORAL/",
+              "overview": "As World War I rages on, Dr. Henry Guthrie takes over a British choral society that's lost most of its men to the army. The community soon discovers that the best response to the chaos of war is to make beautiful music together.",
+              "posterPath": "https://image.tmdb.org/t/p/w300/yQtms7CSM0CE0W6dYbLLAATb5rL.jpg",
+              "rating": 6.6,
+              "year": "2025",
+              "runtime": 113,
+              "trailerUrl": "https://www.youtube.com/watch?v=6zRVP-ZgMm8"
+            },
+            {
+              "title": "THE POUT POUT FISH",
+              "times": [
+                "10:15am",
+                "12:30pm"
+              ],
+              "url": "https://suntheatre.com.au/wp-cinema/movie/S25POUTPOUTFISH/THE+POUT+POUT+FISH/",
+              "overview": "Living on a rundown shipwreck, Mr. Fish one day discovers a hyperactive young sea dragon Pip - who had mistaken his home for a junkyard - pilfering his belongings. The heated argument that ensues leaves both their houses in ruin. But there is hope! Embarking on a seemingly impossible quest in search of the mythical \"Shimmer\" to grant them a wish, there’s only one problem: someone else is on the hunt…",
+              "posterPath": "https://image.tmdb.org/t/p/w300/13zx8Vh7nlGmP65NT7rPtORwvw9.jpg",
+              "rating": null,
+              "year": "2026",
+              "runtime": 92,
+              "trailerUrl": "https://www.youtube.com/watch?v=NhQfp1eITTY"
+            },
+            {
+              "title": "CHRISTY",
+              "times": [
+                "12:00pm",
+                "4:30pm",
+                "9:00pm"
+              ],
+              "url": "https://suntheatre.com.au/wp-cinema/movie/S25CHRISTY/CHRISTY/",
+              "overview": "Christy Martin never imagined life beyond her small-town roots in West Virginia—until she discovered a knack for punching people. Fueled by grit, raw determination, and an unshakable desire to win, she charges into the world of boxing under the guidance of her trainer and manager-turned-husband, Jim. But while Christy flaunts a fiery persona in the ring, her toughest battles unfold outside it—confronting family, identity, and a relationship that just might become life-or-death.",
+              "posterPath": "https://image.tmdb.org/t/p/w300/ssy1uHGZkuXLkIWJWrtsBczPvVC.jpg",
+              "rating": 7.363,
+              "year": "2025",
+              "runtime": 135,
+              "trailerUrl": "https://www.youtube.com/watch?v=Fkbj5F9qvvE"
+            },
+            {
+              "title": "GRAND PRIX OF EUROPE",
+              "times": [
+                "10:30am",
+                "12:30pm"
+              ],
+              "url": "https://suntheatre.com.au/wp-cinema/movie/S26GRANDPRIXOFEU/GRAND+PRIX+OF+EUROPE/",
+              "overview": "Edda, a young mouse and the daughter of fairground operator Erwin, dreams of becoming a race car driver. Ahead of the 50th anniversary of the European Grand Prix, Edda gets the opportunity to meet her idol, racing star Ed, and to help her father save his failing business. But to do so, she'll have to get behind the wheel herself.",
+              "posterPath": "https://image.tmdb.org/t/p/w300/jGGEqRaHAJ1pKJBj35WVxDyQBNw.jpg",
+              "rating": 7.269,
+              "year": "2025",
+              "runtime": 98,
+              "trailerUrl": "https://www.youtube.com/watch?v=WtAczQwVIPg"
+            },
+            {
+              "title": "NOUVELLE VAGUE",
+              "times": [
+                "10:00am",
+                "2:30pm",
+                "7:00pm"
+              ],
+              "url": "https://suntheatre.com.au/wp-cinema/movie/S25NOUVELLEVAGUE/NOUVELLE+VAGUE/",
+              "overview": "After writing for Cahiers du cinéma, a young Jean-Luc Godard decides making films is the best film criticism. He convinces producer Georges de Beauregard to fund a low-budget feature, and creates a treatment with fellow New Wave filmmaker François Truffaut about a gangster couple. The result? Breathless, one of the first features of the Nouvelle Vague era of French cinema.",
+              "posterPath": "https://image.tmdb.org/t/p/w300/mNcqF4IBrIV7zitgwM6EnpPRzli.jpg",
+              "rating": 7.335,
+              "year": "2025",
+              "runtime": 106,
+              "trailerUrl": "https://www.youtube.com/watch?v=sRqWbsdACzg"
+            },
+            {
+              "title": "SIX THE MUSICAL",
+              "times": [
+                "10:00am",
+                "2:40pm",
+                "6:30pm"
+              ],
+              "url": "https://suntheatre.com.au/wp-cinema/movie/S26SIXTHEMUSICAL/SIX+THE+MUSICAL/",
+              "overview": "The pop-inspired musical brings the six wives of Henry VIII right into the 21st century with infectious, empowering performances, accompanied by the on-stage band, the Ladies in Waiting. The Original West End cast reunites at London’s Vaudeville Theatre in front of a sold-out audience to strut their stuff and re-write their Tudor traumas in an unmissable cinematic recording of the show packed full of style, sass, and sensational songs.",
+              "posterPath": "https://image.tmdb.org/t/p/w300/8m4LGpmZ0wTKKo0ISmSp69ZH70T.jpg",
+              "rating": 7,
+              "year": "2025",
+              "runtime": 91,
+              "trailerUrl": "https://www.youtube.com/watch?v=hLa7v6TRB_E"
+            }
+          ]
         },
         {
           "cinema": "Coburg Drive-In",
