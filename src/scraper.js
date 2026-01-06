@@ -1,4 +1,7 @@
-const puppeteer = require('puppeteer');
+const puppeteer = require('puppeteer-extra');
+const StealthPlugin = require('puppeteer-extra-plugin-stealth');
+puppeteer.use(StealthPlugin());
+
 const fs = require('fs');
 const path = require('path');
 
@@ -1310,10 +1313,83 @@ async function scrapeImax(page, targetDate) {
 }
 
 async function scrapeCoburgDriveIn(page, targetDate) {
-  console.log(`Scraping Coburg Drive-In for ${targetDate}... [DISABLED - Cloudflare blocking]`);
-  // TODO: Village Cinemas has Cloudflare protection that blocks scraping
-  // Need to investigate puppeteer-extra-plugin-stealth or alternative approach
-  return { cinema: 'Coburg Drive-In', url: 'https://villagecinemas.com.au/cinemas/coburg-drive-in', sessions: [] };
+  console.log(`Scraping Coburg Drive-In for ${targetDate}...`);
+  const sessions = [];
+  const url = 'https://villagecinemas.com.au/cinemas/coburg-drive-in';
+  
+  try {
+    // Set up a promise to capture the API response
+    const apiDataPromise = new Promise((resolve) => {
+      const handler = async (response) => {
+        const responseUrl = response.url();
+        if (responseUrl.includes('getMovieSessions') && responseUrl.includes('cinemaId=004')) {
+          try {
+            const data = await response.json();
+            resolve(data);
+          } catch (e) {
+            console.log('  Failed to parse API response');
+            resolve(null);
+          }
+          page.off('response', handler);
+        }
+      };
+      page.on('response', handler);
+      
+      // Timeout after 15 seconds
+      setTimeout(() => resolve(null), 15000);
+    });
+    
+    // Navigate to the cinema page - this triggers the API call
+    await page.goto(url, { waitUntil: 'networkidle2', timeout: 60000 });
+    
+    // Wait for the API response
+    const apiData = await apiDataPromise;
+    
+    if (!apiData || !Array.isArray(apiData)) {
+      console.log('  No API data captured');
+      return { cinema: 'Coburg Drive-In', url, sessions };
+    }
+    
+    console.log(`  API returned ${apiData.length} movies`);
+    
+    const filmMap = new Map();
+    
+    for (const movie of apiData) {
+      const title = movie.Title;
+      if (!title) continue;
+      
+      // Filter sessions for target date
+      const targetSessions = (movie.Sessions || []).filter(session => {
+        // ShowDateTime is like "2026-01-06T21:20:00+11:00"
+        const sessionDate = session.ShowDateTime?.substring(0, 10);
+        return sessionDate === targetDate;
+      });
+      
+      if (targetSessions.length > 0) {
+        // Extract times - SessionTime is like "09:20PM"
+        const times = targetSessions.map(s => {
+          // Convert "09:20PM" to "9:20pm"
+          let time = s.SessionTime || '';
+          time = time.replace(/^0/, '').toLowerCase();
+          return time;
+        });
+        
+        filmMap.set(title, {
+          title,
+          times,
+          url: movie.PageUrl ? `https://villagecinemas.com.au${movie.PageUrl}` : url
+        });
+      }
+    }
+    
+    filmMap.forEach(film => sessions.push(film));
+    console.log(`  Found ${sessions.length} films for ${targetDate}`);
+    
+  } catch (error) {
+    console.error('  Coburg Drive-In scrape error:', error.message);
+  }
+  
+  return { cinema: 'Coburg Drive-In', url, sessions };
 }
 
 // ============================================================================
