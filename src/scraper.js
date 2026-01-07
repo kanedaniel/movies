@@ -1318,39 +1318,62 @@ async function scrapeCoburgDriveIn(page, targetDate) {
   const url = 'https://villagecinemas.com.au/cinemas/coburg-drive-in';
   
   try {
-    // Set up a promise to capture the API response
-    const apiDataPromise = new Promise((resolve) => {
-      const handler = async (response) => {
-        const responseUrl = response.url();
-        if (responseUrl.includes('getMovieSessions') && responseUrl.includes('cinemaId=004')) {
-          try {
-            const data = await response.json();
-            resolve(data);
-          } catch (e) {
-            console.log('  Failed to parse API response');
-            resolve(null);
+    let apiData = null;
+    
+    // Set up response listener BEFORE navigation
+    const responseHandler = async (response) => {
+      const responseUrl = response.url();
+      if (responseUrl.includes('getMovieSessions')) {
+        console.log(`  Intercepted API call: ${responseUrl.substring(0, 80)}...`);
+        try {
+          const data = await response.json();
+          if (Array.isArray(data)) {
+            apiData = data;
+            console.log(`  Got ${data.length} movies from API`);
           }
-          page.off('response', handler);
+        } catch (e) {
+          console.log(`  Failed to parse response: ${e.message}`);
         }
-      };
-      page.on('response', handler);
+      }
+    };
+    
+    page.on('response', responseHandler);
+    
+    // Navigate to the cinema page
+    console.log('  Navigating to page...');
+    await page.goto(url, { waitUntil: 'networkidle0', timeout: 90000 });
+    
+    // Wait a bit more for any delayed API calls
+    await page.waitForTimeout(5000);
+    
+    // Clean up listener
+    page.off('response', responseHandler);
+    
+    if (!apiData) {
+      console.log('  No API data captured - trying to fetch directly from page context...');
       
-      // Timeout after 15 seconds
-      setTimeout(() => resolve(null), 15000);
-    });
-    
-    // Navigate to the cinema page - this triggers the API call
-    await page.goto(url, { waitUntil: 'networkidle2', timeout: 60000 });
-    
-    // Wait for the API response
-    const apiData = await apiDataPromise;
-    
-    if (!apiData || !Array.isArray(apiData)) {
-      console.log('  No API data captured');
-      return { cinema: 'Coburg Drive-In', url, sessions };
+      // Try fetching the API from within the page context
+      apiData = await page.evaluate(async () => {
+        try {
+          const response = await fetch('https://villagecinemas.com.au/api/session/getMovieSessions?cinemaId=004');
+          if (response.ok) {
+            return await response.json();
+          }
+        } catch (e) {
+          console.log('Direct fetch failed:', e);
+        }
+        return null;
+      });
+      
+      if (apiData) {
+        console.log(`  Direct fetch got ${apiData.length} movies`);
+      }
     }
     
-    console.log(`  API returned ${apiData.length} movies`);
+    if (!apiData || !Array.isArray(apiData)) {
+      console.log('  No API data available');
+      return { cinema: 'Coburg Drive-In', url, sessions };
+    }
     
     const filmMap = new Map();
     
@@ -1360,15 +1383,12 @@ async function scrapeCoburgDriveIn(page, targetDate) {
       
       // Filter sessions for target date
       const targetSessions = (movie.Sessions || []).filter(session => {
-        // ShowDateTime is like "2026-01-06T21:20:00+11:00"
         const sessionDate = session.ShowDateTime?.substring(0, 10);
         return sessionDate === targetDate;
       });
       
       if (targetSessions.length > 0) {
-        // Extract times - SessionTime is like "09:20PM"
         const times = targetSessions.map(s => {
-          // Convert "09:20PM" to "9:20pm"
           let time = s.SessionTime || '';
           time = time.replace(/^0/, '').toLowerCase();
           return time;
