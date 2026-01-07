@@ -1315,114 +1315,63 @@ async function scrapeImax(page, targetDate) {
 async function scrapeCoburgDriveIn(page, targetDate) {
   console.log(`Scraping Coburg Drive-In for ${targetDate}...`);
   const sessions = [];
-  const url = 'https://villagecinemas.com.au/cinemas/coburg-drive-in';
+  const url = 'https://www.flicks.com.au/cinema/village-cinemas-coburg-drive-in/';
   
   try {
-    let apiData = null;
+    await page.goto(url, { waitUntil: 'networkidle2', timeout: 60000 });
+    await page.waitForTimeout(2000);
     
-    // Set up response listener BEFORE navigation
-    const responseHandler = async (response) => {
-      const responseUrl = response.url();
-      if (responseUrl.includes('getMovieSessions')) {
-        console.log(`  Intercepted API call: ${responseUrl.substring(0, 80)}...`);
-        try {
-          const data = await response.json();
-          if (Array.isArray(data)) {
-            apiData = data;
-            console.log(`  Got ${data.length} movies from API`);
-          }
-        } catch (e) {
-          console.log(`  Failed to parse response: ${e.message}`);
-        }
+    // Find the timetable div for our target date
+    const films = await page.evaluate((targetDate) => {
+      const items = [];
+      
+      // Find the timetable__day div with matching data-date
+      const dayDiv = document.querySelector(`.timetable__day[data-date="${targetDate}"]`);
+      if (!dayDiv) {
+        return { items, debug: `No div found for date ${targetDate}` };
       }
-    };
-    
-    page.on('response', responseHandler);
-    
-    // Navigate to the cinema page
-    console.log('  Navigating to page...');
-    await page.goto(url, { waitUntil: 'networkidle0', timeout: 90000 });
-    
-    // Wait a bit more for any delayed API calls
-    await page.waitForTimeout(5000);
-    
-    // Debug: take a screenshot and get page title
-    const pageTitle = await page.title();
-    console.log(`  Page title: ${pageTitle}`);
-    
-    // Save screenshot for debugging
-    try {
-      const screenshotPath = path.join(__dirname, '..', 'data', 'coburg-debug.png');
-      await page.screenshot({ path: screenshotPath, fullPage: false });
-      console.log(`  Screenshot saved to ${screenshotPath}`);
-    } catch (e) {
-      console.log(`  Could not save screenshot: ${e.message}`);
-    }
-    
-    // Clean up listener
-    page.off('response', responseHandler);
-    
-    if (!apiData) {
-      console.log('  No API data captured - trying to fetch directly from page context...');
       
-      // Try fetching the API from within the page context
-      apiData = await page.evaluate(async () => {
-        try {
-          const response = await fetch('https://villagecinemas.com.au/api/session/getMovieSessions?cinemaId=004');
-          if (response.ok) {
-            return await response.json();
-          }
-        } catch (e) {
-          console.log('Direct fetch failed:', e);
-        }
-        return null;
-      });
+      // Get all movie articles in this day
+      const articles = dayDiv.querySelectorAll('article.timetable__article');
       
-      if (apiData) {
-        console.log(`  Direct fetch got ${apiData.length} movies`);
-      }
-    }
-    
-    if (!apiData || !Array.isArray(apiData)) {
-      console.log('  No API data available');
-      return { cinema: 'Coburg Drive-In', url, sessions };
-    }
-    
-    const filmMap = new Map();
-    
-    for (const movie of apiData) {
-      const title = movie.Title;
-      if (!title) continue;
-      
-      // Filter sessions for target date
-      const targetSessions = (movie.Sessions || []).filter(session => {
-        const sessionDate = session.ShowDateTime?.substring(0, 10);
-        return sessionDate === targetDate;
-      });
-      
-      if (targetSessions.length > 0) {
-        const times = targetSessions.map(s => {
-          let time = s.SessionTime || '';
-          time = time.replace(/^0/, '').toLowerCase();
-          return time;
+      articles.forEach(article => {
+        // Get title from h3.cinema-times__movie-title
+        const titleEl = article.querySelector('h3.cinema-times__movie-title');
+        const title = titleEl?.textContent?.trim();
+        if (!title) return;
+        
+        // Get times from span.times-calendar-times__el__time
+        const times = [];
+        article.querySelectorAll('.times-calendar-times__el__time').forEach(timeEl => {
+          const time = timeEl.textContent?.trim();
+          if (time) times.push(time);
         });
         
-        filmMap.set(title, {
-          title,
-          times,
-          url: movie.PageUrl ? `https://villagecinemas.com.au${movie.PageUrl}` : url
-        });
-      }
+        if (times.length > 0) {
+          items.push({
+            title,
+            times,
+            url: 'https://villagecinemas.com.au/cinemas/coburg-drive-in'
+          });
+        }
+      });
+      
+      return { items, debug: `Found ${articles.length} articles` };
+    }, targetDate);
+    
+    console.log(`  ${films.debug}`);
+    
+    for (const film of films.items) {
+      sessions.push(film);
     }
     
-    filmMap.forEach(film => sessions.push(film));
-    console.log(`  Found ${sessions.length} films for ${targetDate}`);
+    console.log(`  Found ${sessions.length} films`);
     
   } catch (error) {
     console.error('  Coburg Drive-In scrape error:', error.message);
   }
   
-  return { cinema: 'Coburg Drive-In', url, sessions };
+  return { cinema: 'Coburg Drive-In', url: 'https://villagecinemas.com.au/cinemas/coburg-drive-in', sessions };
 }
 
 // ============================================================================
