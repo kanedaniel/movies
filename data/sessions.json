@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-01-06T23:39:13.559Z",
+  "generatedAt": "2026-01-07T00:25:26.645Z",
   "days": [
     {
       "date": "Wednesday 7 January 2026",
@@ -553,7 +553,7 @@
               "url": "https://www.cinemanova.com.au/films/twinless",
               "overview": "Two young men meet in a twin support group and form an unlikely friendship.",
               "posterPath": "https://image.tmdb.org/t/p/w300/9vaw9Az5tPLMjNLj426KgKsp0k8.jpg",
-              "rating": 7.1,
+              "rating": 7.097,
               "year": "2025",
               "runtime": 100,
               "trailerUrl": "https://www.youtube.com/watch?v=dTVJeEb69e0"
@@ -855,7 +855,6 @@
             {
               "title": "Anaconda",
               "times": [
-                "10:15am",
                 "11:45am",
                 "3:45pm",
                 "4:40pm",
@@ -890,7 +889,6 @@
             {
               "title": "Zootopia 2",
               "times": [
-                "10:30am",
                 "1:15pm",
                 "2:10pm",
                 "4:30pm",
@@ -1042,7 +1040,6 @@
             {
               "title": "Song Sung Blue",
               "times": [
-                "10:40am",
                 "1:30pm",
                 "3:10pm",
                 "5:00pm",
@@ -1060,7 +1057,6 @@
             {
               "title": "The Choral",
               "times": [
-                "10:10am",
                 "12:40pm",
                 "3:15pm",
                 "4:20pm",
@@ -1110,7 +1106,6 @@
             {
               "title": "Rental Family",
               "times": [
-                "10:15am",
                 "12:45pm",
                 "4:00pm",
                 "5:45pm"
@@ -1126,7 +1121,6 @@
             {
               "title": "Sentimental Value",
               "times": [
-                "10:10am",
                 "2:50pm",
                 "5:50pm"
               ],
@@ -1196,19 +1190,6 @@
               "year": "2025",
               "runtime": 174,
               "trailerUrl": "https://www.youtube.com/watch?v=p6k9Y-irvOE"
-            },
-            {
-              "title": "Pellegrinis - A Melbourne Legacy",
-              "times": [
-                "10:15am"
-              ],
-              "url": "https://www.palacecinemas.com.au/movies/pellegrinis-a-melbourne-legacy",
-              "overview": "Pellegrini's Espresso Bar is a testament to the enduring power of community, tradition, and love. This documentary explores the cafe's rich history, its cultural impact, and the profound legacy of its beloved figure, Sisto Malaspina.",
-              "posterPath": "https://image.tmdb.org/t/p/w300/9srr4YptXBmwGNnwV8kzsDG00dQ.jpg",
-              "rating": null,
-              "year": "2025",
-              "runtime": 52,
-              "trailerUrl": null
             }
           ]
         },
@@ -1219,7 +1200,6 @@
             {
               "title": "Song Sung Blue",
               "times": [
-                "10:20am",
                 "12:30pm",
                 "3:15pm",
                 "6:00pm",
@@ -1326,7 +1306,6 @@
             {
               "title": "My Brother's Band",
               "times": [
-                "10:20am",
                 "2:30pm",
                 "6:15pm"
               ],
@@ -1379,19 +1358,6 @@
               "trailerUrl": "https://www.youtube.com/watch?v=p6k9Y-irvOE"
             },
             {
-              "title": "Pellegrinis - A Melbourne Legacy",
-              "times": [
-                "10:10am"
-              ],
-              "url": "https://www.palacecinemas.com.au/movies/pellegrinis-a-melbourne-legacy",
-              "overview": "Pellegrini's Espresso Bar is a testament to the enduring power of community, tradition, and love. This documentary explores the cafe's rich history, its cultural impact, and the profound legacy of its beloved figure, Sisto Malaspina.",
-              "posterPath": "https://image.tmdb.org/t/p/w300/9srr4YptXBmwGNnwV8kzsDG00dQ.jpg",
-              "rating": null,
-              "year": "2025",
-              "runtime": 52,
-              "trailerUrl": null
-            },
-            {
               "title": "Wake Up Dead Man: A Knives Out Mystery",
               "times": [
                 "8:00pm"
@@ -1413,7 +1379,6 @@
             {
               "title": "Song Sung Blue",
               "times": [
-                "10:20am",
                 "3:15pm",
                 "6:00pm",
                 "8:45pm"
@@ -1541,7 +1506,6 @@
             {
               "title": "The Pout-Pout Fish",
               "times": [
-                "10:15am",
                 "12:50pm"
               ],
               "url": "https://www.palacecinemas.com.au/movies/the-pout-pout-fish",
@@ -1551,45 +1515,6 @@
               "year": "2026",
               "runtime": 92,
               "trailerUrl": "https://www.youtube.com/watch?v=NhQfp1eITTY"
-            },
-            {
-              "title": "The SpongeBob Movie: Search for Squarepants",
-              "times": [
-                "10:40am"
-              ],
-              "url": "https://www.palacecinemas.com.au/movies/the-spongebob-movie-search-for-squarepants",
-              "overview": "Desperate to be a big guy, SpongeBob sets out to prove his bravery to Mr. Krabs by following The Flying Dutchman – a mysterious swashbuckling ghost pirate – on a seafaring adventure that takes him to the deepest depths of the deep sea, where no Sponge has gone before.",
-              "posterPath": "https://image.tmdb.org/t/p/w300/pDWYW9v8fmJdA7N0I1MOdQA3ETq.jpg",
-              "rating": 6.913,
-              "year": "2025",
-              "runtime": 88,
-              "trailerUrl": "https://www.youtube.com/watch?v=T907pJMKHjs"
-            },
-            {
-              "title": "Zootopia 2",
-              "times": [
-                "10:30am"
-              ],
-              "url": "https://www.palacecinemas.com.au/movies/zootopia-2",
-              "overview": "After cracking the biggest case in Zootopia's history, rookie cops Judy Hopps and Nick Wilde find themselves on the twisting trail of a great mystery when Gary De'Snake arrives and turns the animal metropolis upside down. To crack the case, Judy and Nick must go undercover to unexpected new parts of town, where their growing partnership is tested like never before.",
-              "posterPath": "https://image.tmdb.org/t/p/w300/bjUWGw0Ao0qVWxagN3VCwBJHVo6.jpg",
-              "rating": 7.625,
-              "year": "2025",
-              "runtime": 107,
-              "trailerUrl": "https://www.youtube.com/watch?v=5H7L9j0dW90"
-            },
-            {
-              "title": "Wicked: For Good",
-              "times": [
-                "10:30am"
-              ],
-              "url": "https://www.palacecinemas.com.au/movies/wicked-for-good",
-              "overview": "As an angry mob rises against the Wicked Witch, Glinda and Elphaba will need to come together one final time. With their singular friendship now the fulcrum of their futures, they will need to truly see each other, with honesty and empathy, if they are to change themselves, and all of Oz, for good.",
-              "posterPath": "https://image.tmdb.org/t/p/w300/si9tolnefLSUKaqQEGz1bWArOaL.jpg",
-              "rating": 6.694,
-              "year": "2025",
-              "runtime": 137,
-              "trailerUrl": "https://www.youtube.com/watch?v=iU4Gpi3Jb88"
             },
             {
               "title": "Clueless",
@@ -1613,7 +1538,6 @@
             {
               "title": "Song Sung Blue",
               "times": [
-                "10:30am",
                 "2:00pm",
                 "4:00pm",
                 "6:00pm",
@@ -1631,7 +1555,6 @@
             {
               "title": "The Choral",
               "times": [
-                "10:30am",
                 "1:10pm",
                 "3:50pm",
                 "6:30pm",
@@ -1648,7 +1571,6 @@
             {
               "title": "The Housemaid",
               "times": [
-                "10:40am",
                 "1:20pm",
                 "4:15pm",
                 "6:00pm",
@@ -1715,7 +1637,6 @@
             {
               "title": "Nuremberg",
               "times": [
-                "10:30am",
                 "3:00pm",
                 "6:20pm",
                 "8:45pm"
@@ -1731,7 +1652,6 @@
             {
               "title": "My Brother's Band",
               "times": [
-                "10:30am",
                 "12:50pm",
                 "6:20pm"
               ],
@@ -1746,7 +1666,6 @@
             {
               "title": "Anaconda",
               "times": [
-                "10:40am",
                 "11:40am",
                 "1:00pm",
                 "4:00pm",
@@ -1780,7 +1699,6 @@
             {
               "title": "The SpongeBob Movie: Search for Squarepants",
               "times": [
-                "10:40am",
                 "1:00pm",
                 "1:40pm",
                 "2:45pm",
@@ -1797,7 +1715,6 @@
             {
               "title": "Zootopia 2",
               "times": [
-                "10:30am",
                 "1:30pm",
                 "3:20pm"
               ],
@@ -1853,7 +1770,6 @@
             {
               "title": "Pellegrinis - A Melbourne Legacy",
               "times": [
-                "10:40am",
                 "1:00pm",
                 "5:00pm"
               ],
@@ -1877,19 +1793,6 @@
               "year": "2025",
               "runtime": 145,
               "trailerUrl": "https://www.youtube.com/watch?v=0hc8yz5-d5Y"
-            },
-            {
-              "title": "Bugonia",
-              "times": [
-                "10:30am"
-              ],
-              "url": "https://www.palacecinemas.com.au/movies/bugonia",
-              "overview": "Two conspiracy obsessed young men kidnap the high-powered CEO of a major company, convinced that she is an alien intent on destroying planet Earth.",
-              "posterPath": "https://image.tmdb.org/t/p/w300/oxgsAQDAAxA92mFGYCZllgWkH9J.jpg",
-              "rating": 7.398,
-              "year": "2025",
-              "runtime": 119,
-              "trailerUrl": "https://www.youtube.com/watch?v=gZ6pPFK6kaQ"
             }
           ]
         },
@@ -2792,21 +2695,6 @@
               "trailerUrl": "https://www.youtube.com/watch?v=6zRVP-ZgMm8"
             },
             {
-              "title": "Rental Family",
-              "times": [
-                "4:00pm",
-                "6:40pm",
-                "9:10pm"
-              ],
-              "url": "https://www.lidocinemas.com.au/tickets?c=0000000003&s=99733",
-              "overview": "An American actor in Tokyo struggles to find purpose until he lands an unusual gig: working for a Japanese 'rental family' agency, playing stand-in roles for strangers. As he immerses himself in his clients' worlds, he begins to form genuine bonds that blur the lines between performance and reality.",
-              "posterPath": "https://image.tmdb.org/t/p/w300/dGRZ55srJoK6TcjPTfHe701UWq0.jpg",
-              "rating": 7.636,
-              "year": "2025",
-              "runtime": 110,
-              "trailerUrl": "https://www.youtube.com/watch?v=7W9B-0PdfXQ"
-            },
-            {
               "title": "Nouvelle Vague",
               "times": [
                 "11:00am",
@@ -2820,6 +2708,21 @@
               "year": "2025",
               "runtime": 106,
               "trailerUrl": "https://www.youtube.com/watch?v=sRqWbsdACzg"
+            },
+            {
+              "title": "Rental Family",
+              "times": [
+                "4:00pm",
+                "6:40pm",
+                "9:10pm"
+              ],
+              "url": "https://www.lidocinemas.com.au/tickets?c=0000000003&s=99733",
+              "overview": "An American actor in Tokyo struggles to find purpose until he lands an unusual gig: working for a Japanese 'rental family' agency, playing stand-in roles for strangers. As he immerses himself in his clients' worlds, he begins to form genuine bonds that blur the lines between performance and reality.",
+              "posterPath": "https://image.tmdb.org/t/p/w300/dGRZ55srJoK6TcjPTfHe701UWq0.jpg",
+              "rating": 7.636,
+              "year": "2025",
+              "runtime": 110,
+              "trailerUrl": "https://www.youtube.com/watch?v=7W9B-0PdfXQ"
             },
             {
               "title": "Sentimental Value",
@@ -3048,13 +2951,14 @@
             {
               "title": "Avatar: Fire and Ash",
               "times": [
-                "12:00pm",
-                "2:00pm",
-                "4:00pm",
-                "6:00pm",
-                "8:00pm",
-                "8:45pm",
-                "10:00pm"
+                "11:45am",
+                "1:00pm",
+                "2:15pm",
+                "3:45pm",
+                "5:00pm",
+                "7:45pm",
+                "8:40pm",
+                "9:00pm"
               ],
               "url": "https://www.hoyts.com.au/movies/avatar-fire-and-ash",
               "overview": "In the wake of the devastating war against the RDA and the loss of their eldest son, Jake Sully and Neytiri face a new threat on Pandora: the Ash People, a violent and power-hungry Na'vi tribe led by the ruthless Varang. Jake's family must fight for their survival and the future of Pandora in a conflict that pushes them to their emotional and physical limits.",
@@ -3068,12 +2972,10 @@
               "title": "Anaconda",
               "times": [
                 "10:15am",
-                "11:45am",
-                "3:45pm",
-                "4:40pm",
+                "11:50am",
+                "12:00pm",
                 "6:15pm",
-                "7:00pm",
-                "9:30pm"
+                "9:00pm"
               ],
               "url": "https://www.hoyts.com.au/movies/anaconda",
               "overview": "A group of friends facing mid-life crises head to the rainforest with the intention of remaking their favorite movie from their youth, only to find themselves in a fight for their lives against natural disasters, giant snakes and violent criminals.",
@@ -3086,10 +2988,10 @@
             {
               "title": "The Housemaid",
               "times": [
-                "12:15pm",
-                "3:15pm",
-                "7:00pm",
-                "8:45pm"
+                "10:00am",
+                "2:20pm",
+                "6:00pm",
+                "7:45pm"
               ],
               "url": "https://www.hoyts.com.au/movies/the-housemaid",
               "overview": "Trying to escape her past, Millie Calloway accepts a job as a live-in housemaid for the wealthy Nina and Andrew Winchester. But what begins as a dream job quickly unravels into something far more dangerous—a sexy, seductive game of secrets, scandal, and power.",
@@ -3102,11 +3004,13 @@
             {
               "title": "Zootopia 2",
               "times": [
+                "9:30am",
                 "10:30am",
-                "1:15pm",
-                "2:10pm",
-                "4:30pm",
-                "6:10pm"
+                "1:00pm",
+                "3:30pm",
+                "5:15pm",
+                "7:00pm",
+                "9:30pm"
               ],
               "url": "https://www.hoyts.com.au/movies/zootopia-2",
               "overview": "After cracking the biggest case in Zootopia's history, rookie cops Judy Hopps and Nick Wilde find themselves on the twisting trail of a great mystery when Gary De'Snake arrives and turns the animal metropolis upside down. To crack the case, Judy and Nick must go undercover to unexpected new parts of town, where their growing partnership is tested like never before.",
@@ -3119,9 +3023,9 @@
             {
               "title": "Song Sung Blue",
               "times": [
-                "11:15am",
-                "6:20pm",
-                "9:00pm"
+                "12:40pm",
+                "3:30pm",
+                "6:30pm"
               ],
               "url": "https://www.hoyts.com.au/movies/song-sung-blue",
               "overview": "Based on a true story, two down-on-their-luck musicians form a joyous Neil Diamond tribute band, proving it's never too late to find love and follow your dreams.",
@@ -3134,10 +3038,10 @@
             {
               "title": "The SpongeBob Movie: Search for Squarepants",
               "times": [
+                "9:30am",
                 "11:00am",
-                "2:15pm",
-                "4:15pm",
-                "6:30pm"
+                "1:15pm",
+                "4:45pm"
               ],
               "url": "https://www.hoyts.com.au/movies/the-spongebob-movie-search-for-squarepants",
               "overview": "Desperate to be a big guy, SpongeBob sets out to prove his bravery to Mr. Krabs by following The Flying Dutchman – a mysterious swashbuckling ghost pirate – on a seafaring adventure that takes him to the deepest depths of the deep sea, where no Sponge has gone before.",
@@ -3150,7 +3054,7 @@
             {
               "title": "The Pout-Pout Fish",
               "times": [
-                "12:45pm"
+                "12:10pm"
               ],
               "url": "https://www.hoyts.com.au/movies/the-pout-pout-fish",
               "overview": "Living on a rundown shipwreck, Mr. Fish one day discovers a hyperactive young sea dragon Pip - who had mistaken his home for a junkyard - pilfering his belongings. The heated argument that ensues leaves both their houses in ruin. But there is hope! Embarking on a seemingly impossible quest in search of the mythical \"Shimmer\" to grant them a wish, there’s only one problem: someone else is on the hunt…",
@@ -3161,10 +3065,23 @@
               "trailerUrl": "https://www.youtube.com/watch?v=NhQfp1eITTY"
             },
             {
+              "title": "Grand Prix of Europe",
+              "times": [
+                "9:45am",
+                "2:30pm"
+              ],
+              "url": "https://www.hoyts.com.au/movies/grand-prix-of-europe",
+              "overview": "Edda, a young mouse and the daughter of fairground operator Erwin, dreams of becoming a race car driver. Ahead of the 50th anniversary of the European Grand Prix, Edda gets the opportunity to meet her idol, racing star Ed, and to help her father save his failing business. But to do so, she'll have to get behind the wheel herself.",
+              "posterPath": "https://image.tmdb.org/t/p/w300/jGGEqRaHAJ1pKJBj35WVxDyQBNw.jpg",
+              "rating": 7.148,
+              "year": "2025",
+              "runtime": 98,
+              "trailerUrl": "https://www.youtube.com/watch?v=WtAczQwVIPg"
+            },
+            {
               "title": "Wicked: For Good",
               "times": [
-                "3:00pm",
-                "9:15pm"
+                "3:30pm"
               ],
               "url": "https://www.hoyts.com.au/movies/wicked-for-good",
               "overview": "As an angry mob rises against the Wicked Witch, Glinda and Elphaba will need to come together one final time. With their singular friendship now the fulcrum of their futures, they will need to truly see each other, with honesty and empathy, if they are to change themselves, and all of Oz, for good.",
@@ -3175,30 +3092,31 @@
               "trailerUrl": "https://www.youtube.com/watch?v=iU4Gpi3Jb88"
             },
             {
-              "title": "Nuremberg",
+              "title": "The Fire Raven (Mandarin, Eng Sub)",
               "times": [
-                "1:00pm"
+                "6:30pm",
+                "9:30pm"
               ],
-              "url": "https://www.hoyts.com.au/movies/nuremberg",
-              "overview": "In postwar Germany, an American psychiatrist must determine whether Nazi prisoners are fit to go on trial for war crimes, and finds himself in a complex battle of intellect and ethics with Hermann Göring, Hitler's right-hand man.",
-              "posterPath": "https://image.tmdb.org/t/p/w300/sxu8TsG7k06ymWL98ELEIE1EMZV.jpg",
-              "rating": 7.316,
+              "url": "https://www.hoyts.com.au/movies/the-fire-raven-mandarin-eng-sub",
+              "overview": "Fifteen years ago, a group of powerful and corrupt individuals of varying backgrounds turned Duma City into a \"hell island,\" where high school student Xiaodi was brutally raped and killed. Fifteen years later, these manipulators behind the scenes meet a series of gruesome deaths. Fang Tianyang, who witnessed the murders fifteen years ago, and police officer Fang Zhengnan delve into the investigation, only to discover that this anonymous killing is not merely revenge, but a belated indictment. A series of murders, layers of darkness—how many untold sins lie hidden behind the black web woven by power, money, and desire?",
+              "posterPath": "https://image.tmdb.org/t/p/w300/wz7DchRv3sXIH87LyjhhxJdrVGk.jpg",
+              "rating": 6,
               "year": "2025",
-              "runtime": 148,
-              "trailerUrl": "https://www.youtube.com/watch?v=YWlCCVnZ4bo"
+              "runtime": 116,
+              "trailerUrl": null
             },
             {
-              "title": "Five Nights at Freddy's 2",
+              "title": "Escape from the Outland (Mandarin, Eng Sub)",
               "times": [
-                "9:50pm"
+                "9:15pm"
               ],
-              "url": "https://www.hoyts.com.au/movies/five-nights-at-freddys-2",
-              "overview": "One year since the supernatural nightmare at Freddy Fazbear's Pizza, the stories about what transpired there have been twisted into a campy local legend, inspiring the town's first ever Fazfest. With the truth kept from her, Abby sneaks out to reconnect with Freddy, Bonnie, Chica, and Foxy, setting into motion a terrifying series of events that will reveal dark secrets about the real origin of Freddy's, and unleash a decades-hidden horror.",
-              "posterPath": "https://image.tmdb.org/t/p/w300/udAxQEORq2I5wxI97N2TEqdhzBE.jpg",
-              "rating": 6.779,
+              "url": "https://www.hoyts.com.au/movies/escape-from-the-outland-mandarin-eng-sub",
+              "overview": "The couple of Ma Xiao, a foreign correspondent, and Pan Wenjia, a volunteer doctor, accompanied engineer Miao Feng on a trip to the suburbs to repair a base station. During the trip, the local situation suddenly changed and the three were kidnapped by an extremist organisation. While in prison, they met Zhou Weijie, an overseas Chinese businessman. In order to find a chance of survival, they embarked on a journey of escape in the midst of barbaric warfare and chaos.",
+              "posterPath": "https://image.tmdb.org/t/p/w300/4hlydT6jWkKjSpqStjkunMRCEg2.jpg",
+              "rating": 5.5,
               "year": "2025",
-              "runtime": 104,
-              "trailerUrl": "https://www.youtube.com/watch?v=VWfTR7ptRsQ"
+              "runtime": 131,
+              "trailerUrl": null
             }
           ],
           "note": "Lux sessions not listed"
@@ -5073,20 +4991,6 @@
               "trailerUrl": "https://www.youtube.com/watch?v=6zRVP-ZgMm8"
             },
             {
-              "title": "Rental Family",
-              "times": [
-                "4:00pm",
-                "6:10pm"
-              ],
-              "url": "https://www.lidocinemas.com.au/tickets?c=0000000003&s=99695",
-              "overview": "An American actor in Tokyo struggles to find purpose until he lands an unusual gig: working for a Japanese 'rental family' agency, playing stand-in roles for strangers. As he immerses himself in his clients' worlds, he begins to form genuine bonds that blur the lines between performance and reality.",
-              "posterPath": "https://image.tmdb.org/t/p/w300/dGRZ55srJoK6TcjPTfHe701UWq0.jpg",
-              "rating": 7.636,
-              "year": "2025",
-              "runtime": 110,
-              "trailerUrl": "https://www.youtube.com/watch?v=7W9B-0PdfXQ"
-            },
-            {
               "title": "Nouvelle Vague",
               "times": [
                 "10:50am",
@@ -5100,6 +5004,20 @@
               "year": "2025",
               "runtime": 106,
               "trailerUrl": "https://www.youtube.com/watch?v=sRqWbsdACzg"
+            },
+            {
+              "title": "Rental Family",
+              "times": [
+                "4:00pm",
+                "6:10pm"
+              ],
+              "url": "https://www.lidocinemas.com.au/tickets?c=0000000003&s=99695",
+              "overview": "An American actor in Tokyo struggles to find purpose until he lands an unusual gig: working for a Japanese 'rental family' agency, playing stand-in roles for strangers. As he immerses himself in his clients' worlds, he begins to form genuine bonds that blur the lines between performance and reality.",
+              "posterPath": "https://image.tmdb.org/t/p/w300/dGRZ55srJoK6TcjPTfHe701UWq0.jpg",
+              "rating": 7.636,
+              "year": "2025",
+              "runtime": 110,
+              "trailerUrl": "https://www.youtube.com/watch?v=7W9B-0PdfXQ"
             },
             {
               "title": "Sentimental Value",
@@ -6904,7 +6822,7 @@
               "url": "https://www.acmi.net.au/whats-on/psychedelic-cinema/2001-a-space-odyssey/",
               "overview": "Humanity finds a mysterious object buried beneath the lunar surface and sets off to find its origins with the help of HAL 9000, the world's most advanced super computer.",
               "posterPath": "https://image.tmdb.org/t/p/w300/ve72VxNqjGM69Uky4WTo2bK6rfq.jpg",
-              "rating": 8.1,
+              "rating": 8.061,
               "year": "1968",
               "runtime": 149,
               "trailerUrl": "https://www.youtube.com/watch?v=kR2r-A9H3Kg"
@@ -7519,21 +7437,6 @@
               "trailerUrl": "https://www.youtube.com/watch?v=6zRVP-ZgMm8"
             },
             {
-              "title": "Rental Family",
-              "times": [
-                "11:10am",
-                "4:00pm",
-                "6:00pm"
-              ],
-              "url": "https://www.lidocinemas.com.au/tickets?c=0000000003&s=99646",
-              "overview": "An American actor in Tokyo struggles to find purpose until he lands an unusual gig: working for a Japanese 'rental family' agency, playing stand-in roles for strangers. As he immerses himself in his clients' worlds, he begins to form genuine bonds that blur the lines between performance and reality.",
-              "posterPath": "https://image.tmdb.org/t/p/w300/dGRZ55srJoK6TcjPTfHe701UWq0.jpg",
-              "rating": 7.636,
-              "year": "2025",
-              "runtime": 110,
-              "trailerUrl": "https://www.youtube.com/watch?v=7W9B-0PdfXQ"
-            },
-            {
               "title": "Nouvelle Vague",
               "times": [
                 "10:20am",
@@ -7547,6 +7450,21 @@
               "year": "2025",
               "runtime": 106,
               "trailerUrl": "https://www.youtube.com/watch?v=sRqWbsdACzg"
+            },
+            {
+              "title": "Rental Family",
+              "times": [
+                "11:10am",
+                "4:00pm",
+                "6:00pm"
+              ],
+              "url": "https://www.lidocinemas.com.au/tickets?c=0000000003&s=99646",
+              "overview": "An American actor in Tokyo struggles to find purpose until he lands an unusual gig: working for a Japanese 'rental family' agency, playing stand-in roles for strangers. As he immerses himself in his clients' worlds, he begins to form genuine bonds that blur the lines between performance and reality.",
+              "posterPath": "https://image.tmdb.org/t/p/w300/dGRZ55srJoK6TcjPTfHe701UWq0.jpg",
+              "rating": 7.636,
+              "year": "2025",
+              "runtime": 110,
+              "trailerUrl": "https://www.youtube.com/watch?v=7W9B-0PdfXQ"
             },
             {
               "title": "Sentimental Value",
@@ -9995,21 +9913,6 @@
               "trailerUrl": "https://www.youtube.com/watch?v=6zRVP-ZgMm8"
             },
             {
-              "title": "Rental Family",
-              "times": [
-                "10:30am",
-                "4:00pm",
-                "6:00pm"
-              ],
-              "url": "https://www.lidocinemas.com.au/tickets?c=0000000003&s=99682",
-              "overview": "An American actor in Tokyo struggles to find purpose until he lands an unusual gig: working for a Japanese 'rental family' agency, playing stand-in roles for strangers. As he immerses himself in his clients' worlds, he begins to form genuine bonds that blur the lines between performance and reality.",
-              "posterPath": "https://image.tmdb.org/t/p/w300/dGRZ55srJoK6TcjPTfHe701UWq0.jpg",
-              "rating": 7.636,
-              "year": "2025",
-              "runtime": 110,
-              "trailerUrl": "https://www.youtube.com/watch?v=7W9B-0PdfXQ"
-            },
-            {
               "title": "Nouvelle Vague",
               "times": [
                 "10:20am",
@@ -10023,6 +9926,21 @@
               "year": "2025",
               "runtime": 106,
               "trailerUrl": "https://www.youtube.com/watch?v=sRqWbsdACzg"
+            },
+            {
+              "title": "Rental Family",
+              "times": [
+                "10:30am",
+                "4:00pm",
+                "6:00pm"
+              ],
+              "url": "https://www.lidocinemas.com.au/tickets?c=0000000003&s=99682",
+              "overview": "An American actor in Tokyo struggles to find purpose until he lands an unusual gig: working for a Japanese 'rental family' agency, playing stand-in roles for strangers. As he immerses himself in his clients' worlds, he begins to form genuine bonds that blur the lines between performance and reality.",
+              "posterPath": "https://image.tmdb.org/t/p/w300/dGRZ55srJoK6TcjPTfHe701UWq0.jpg",
+              "rating": 7.636,
+              "year": "2025",
+              "runtime": 110,
+              "trailerUrl": "https://www.youtube.com/watch?v=7W9B-0PdfXQ"
             },
             {
               "title": "Sentimental Value",
@@ -12401,7 +12319,7 @@
               "url": "https://www.cinemanova.com.au/films/twinless",
               "overview": "Two young men meet in a twin support group and form an unlikely friendship.",
               "posterPath": "https://image.tmdb.org/t/p/w300/9vaw9Az5tPLMjNLj426KgKsp0k8.jpg",
-              "rating": 7.1,
+              "rating": 7.097,
               "year": "2025",
               "runtime": 100,
               "trailerUrl": "https://www.youtube.com/watch?v=dTVJeEb69e0"
@@ -12456,20 +12374,6 @@
               "trailerUrl": "https://www.youtube.com/watch?v=6zRVP-ZgMm8"
             },
             {
-              "title": "Rental Family",
-              "times": [
-                "3:30pm",
-                "6:30pm"
-              ],
-              "url": "https://www.lidocinemas.com.au/tickets?c=0000000003&s=99760",
-              "overview": "An American actor in Tokyo struggles to find purpose until he lands an unusual gig: working for a Japanese 'rental family' agency, playing stand-in roles for strangers. As he immerses himself in his clients' worlds, he begins to form genuine bonds that blur the lines between performance and reality.",
-              "posterPath": "https://image.tmdb.org/t/p/w300/dGRZ55srJoK6TcjPTfHe701UWq0.jpg",
-              "rating": 7.636,
-              "year": "2025",
-              "runtime": 110,
-              "trailerUrl": "https://www.youtube.com/watch?v=7W9B-0PdfXQ"
-            },
-            {
               "title": "Nouvelle Vague",
               "times": [
                 "11:00am",
@@ -12483,6 +12387,20 @@
               "year": "2025",
               "runtime": 106,
               "trailerUrl": "https://www.youtube.com/watch?v=sRqWbsdACzg"
+            },
+            {
+              "title": "Rental Family",
+              "times": [
+                "3:30pm",
+                "6:30pm"
+              ],
+              "url": "https://www.lidocinemas.com.au/tickets?c=0000000003&s=99760",
+              "overview": "An American actor in Tokyo struggles to find purpose until he lands an unusual gig: working for a Japanese 'rental family' agency, playing stand-in roles for strangers. As he immerses himself in his clients' worlds, he begins to form genuine bonds that blur the lines between performance and reality.",
+              "posterPath": "https://image.tmdb.org/t/p/w300/dGRZ55srJoK6TcjPTfHe701UWq0.jpg",
+              "rating": 7.636,
+              "year": "2025",
+              "runtime": 110,
+              "trailerUrl": "https://www.youtube.com/watch?v=7W9B-0PdfXQ"
             },
             {
               "title": "Sentimental Value",
@@ -12638,19 +12556,6 @@
               "trailerUrl": "https://www.youtube.com/watch?v=GzkoY6hUvQQ"
             },
             {
-              "title": "The Pout-Pout Fish",
-              "times": [
-                "11:00am"
-              ],
-              "url": "https://www.lidocinemas.com.au/tickets?c=0000000003&s=99782",
-              "overview": "Living on a rundown shipwreck, Mr. Fish one day discovers a hyperactive young sea dragon Pip - who had mistaken his home for a junkyard - pilfering his belongings. The heated argument that ensues leaves both their houses in ruin. But there is hope! Embarking on a seemingly impossible quest in search of the mythical \"Shimmer\" to grant them a wish, there’s only one problem: someone else is on the hunt…",
-              "posterPath": "https://image.tmdb.org/t/p/w300/13zx8Vh7nlGmP65NT7rPtORwvw9.jpg",
-              "rating": null,
-              "year": "2026",
-              "runtime": 92,
-              "trailerUrl": "https://www.youtube.com/watch?v=NhQfp1eITTY"
-            },
-            {
               "title": "One Battle After Another",
               "times": [
                 "8:45pm"
@@ -12662,6 +12567,19 @@
               "year": "2025",
               "runtime": 162,
               "trailerUrl": "https://www.youtube.com/watch?v=u6GVb4p7oD4"
+            },
+            {
+              "title": "The Pout-Pout Fish",
+              "times": [
+                "11:00am"
+              ],
+              "url": "https://www.lidocinemas.com.au/tickets?c=0000000003&s=99782",
+              "overview": "Living on a rundown shipwreck, Mr. Fish one day discovers a hyperactive young sea dragon Pip - who had mistaken his home for a junkyard - pilfering his belongings. The heated argument that ensues leaves both their houses in ruin. But there is hope! Embarking on a seemingly impossible quest in search of the mythical \"Shimmer\" to grant them a wish, there’s only one problem: someone else is on the hunt…",
+              "posterPath": "https://image.tmdb.org/t/p/w300/13zx8Vh7nlGmP65NT7rPtORwvw9.jpg",
+              "rating": null,
+              "year": "2026",
+              "runtime": 92,
+              "trailerUrl": "https://www.youtube.com/watch?v=NhQfp1eITTY"
             },
             {
               "title": "Yi Yi (2000) – 25th Anniversary 4K Restoration",
@@ -14808,20 +14726,6 @@
               "trailerUrl": "https://www.youtube.com/watch?v=6zRVP-ZgMm8"
             },
             {
-              "title": "Rental Family",
-              "times": [
-                "2:45pm",
-                "4:45pm"
-              ],
-              "url": "https://www.lidocinemas.com.au/tickets?c=0000000003&s=99796",
-              "overview": "An American actor in Tokyo struggles to find purpose until he lands an unusual gig: working for a Japanese 'rental family' agency, playing stand-in roles for strangers. As he immerses himself in his clients' worlds, he begins to form genuine bonds that blur the lines between performance and reality.",
-              "posterPath": "https://image.tmdb.org/t/p/w300/dGRZ55srJoK6TcjPTfHe701UWq0.jpg",
-              "rating": 7.636,
-              "year": "2025",
-              "runtime": 110,
-              "trailerUrl": "https://www.youtube.com/watch?v=7W9B-0PdfXQ"
-            },
-            {
               "title": "Nouvelle Vague",
               "times": [
                 "1:15pm",
@@ -14835,6 +14739,20 @@
               "year": "2025",
               "runtime": 106,
               "trailerUrl": "https://www.youtube.com/watch?v=sRqWbsdACzg"
+            },
+            {
+              "title": "Rental Family",
+              "times": [
+                "2:45pm",
+                "4:45pm"
+              ],
+              "url": "https://www.lidocinemas.com.au/tickets?c=0000000003&s=99796",
+              "overview": "An American actor in Tokyo struggles to find purpose until he lands an unusual gig: working for a Japanese 'rental family' agency, playing stand-in roles for strangers. As he immerses himself in his clients' worlds, he begins to form genuine bonds that blur the lines between performance and reality.",
+              "posterPath": "https://image.tmdb.org/t/p/w300/dGRZ55srJoK6TcjPTfHe701UWq0.jpg",
+              "rating": 7.636,
+              "year": "2025",
+              "runtime": 110,
+              "trailerUrl": "https://www.youtube.com/watch?v=7W9B-0PdfXQ"
             },
             {
               "title": "Sentimental Value",
