@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-01-07T04:24:51.980Z",
+  "generatedAt": "2026-01-07T05:02:35.224Z",
   "days": [
     {
       "date": "Wednesday 7 January 2026",
@@ -41,19 +41,6 @@
           "cinema": "Brunswick Picture House",
           "url": "https://www.brunswickpicturehouse.com.au/now-showing/",
           "sessions": [
-            {
-              "title": "Urchin",
-              "times": [
-                "1:15pm"
-              ],
-              "url": "https://www.brunswickpicturehouse.com.au/now-showing/",
-              "overview": "Mike, a rough sleeper in London, is trapped in a cycle of self-destruction as he attempts to turn his life around. Along the way, he encounters unexpected chances for a fresh start.",
-              "posterPath": "https://image.tmdb.org/t/p/w300/zc8n3hm3S2VxFxlNH1MNN28LVMa.jpg",
-              "rating": 6.75,
-              "year": "2025",
-              "runtime": 100,
-              "trailerUrl": "https://www.youtube.com/watch?v=O-hgR7RC39c"
-            },
             {
               "title": "Paris, Texas (1984)",
               "times": [
@@ -332,7 +319,7 @@
               "url": "https://www.cinemanova.com.au/films/the-housemaid",
               "overview": "Trying to escape her past, Millie Calloway accepts a job as a live-in housemaid for the wealthy Nina and Andrew Winchester. But what begins as a dream job quickly unravels into something far more dangerous—a sexy, seductive game of secrets, scandal, and power.",
               "posterPath": "https://image.tmdb.org/t/p/w300/cWsBscZzwu5brg9YjNkGewRUvJX.jpg",
-              "rating": 7.273,
+              "rating": 7.3,
               "year": "2025",
               "runtime": 131,
               "trailerUrl": "https://www.youtube.com/watch?v=TGdKFCVn6G0"
@@ -502,14 +489,13 @@
             {
               "title": "The Housemaid",
               "times": [
-                "3:10pm",
                 "6:00pm",
                 "8:45pm"
               ],
-              "url": "https://www.lidocinemas.com.au/tickets?c=0000000003&s=99588",
+              "url": "https://www.lidocinemas.com.au/tickets?c=0000000003&s=99590",
               "overview": "Trying to escape her past, Millie Calloway accepts a job as a live-in housemaid for the wealthy Nina and Andrew Winchester. But what begins as a dream job quickly unravels into something far more dangerous—a sexy, seductive game of secrets, scandal, and power.",
               "posterPath": "https://image.tmdb.org/t/p/w300/cWsBscZzwu5brg9YjNkGewRUvJX.jpg",
-              "rating": 7.273,
+              "rating": 7.3,
               "year": "2025",
               "runtime": 131,
               "trailerUrl": "https://www.youtube.com/watch?v=TGdKFCVn6G0"
@@ -561,11 +547,10 @@
             {
               "title": "Song Sung Blue",
               "times": [
-                "3:00pm",
                 "5:45pm",
                 "8:30pm"
               ],
-              "url": "https://www.lidocinemas.com.au/tickets?c=0000000003&s=99574",
+              "url": "https://www.lidocinemas.com.au/tickets?c=0000000003&s=99575",
               "overview": "Based on a true story, two down-on-their-luck musicians form a joyous Neil Diamond tribute band, proving it's never too late to find love and follow your dreams.",
               "posterPath": "https://image.tmdb.org/t/p/w300/3HsIAbHWbFDUbY2jfj4wqEjGC3b.jpg",
               "rating": 7.393,
@@ -663,19 +648,6 @@
               "year": "2025",
               "runtime": 162,
               "trailerUrl": "https://www.youtube.com/watch?v=u6GVb4p7oD4"
-            },
-            {
-              "title": "Urchin",
-              "times": [
-                "3:00pm"
-              ],
-              "url": "https://www.lidocinemas.com.au/tickets?c=0000000003&s=99602",
-              "overview": "Mike, a rough sleeper in London, is trapped in a cycle of self-destruction as he attempts to turn his life around. Along the way, he encounters unexpected chances for a fresh start.",
-              "posterPath": "https://image.tmdb.org/t/p/w300/zc8n3hm3S2VxFxlNH1MNN28LVMa.jpg",
-              "rating": 6.75,
-              "year": "2025",
-              "runtime": 100,
-              "trailerUrl": "https://www.youtube.com/watch?v=O-hgR7RC39c"
             }
           ]
         },
@@ -720,14 +692,13 @@
             {
               "title": "The Housemaid",
               "times": [
-                "3:15pm",
                 "7:00pm",
                 "8:45pm"
               ],
               "url": "https://www.hoyts.com.au/movies/the-housemaid",
               "overview": "Trying to escape her past, Millie Calloway accepts a job as a live-in housemaid for the wealthy Nina and Andrew Winchester. But what begins as a dream job quickly unravels into something far more dangerous—a sexy, seductive game of secrets, scandal, and power.",
               "posterPath": "https://image.tmdb.org/t/p/w300/cWsBscZzwu5brg9YjNkGewRUvJX.jpg",
-              "rating": 7.273,
+              "rating": 7.3,
               "year": "2025",
               "runtime": 131,
               "trailerUrl": "https://www.youtube.com/watch?v=TGdKFCVn6G0"
@@ -777,7 +748,6 @@
             {
               "title": "Wicked: For Good",
               "times": [
-                "3:00pm",
                 "9:15pm"
               ],
               "url": "https://www.hoyts.com.au/movies/wicked-for-good",
@@ -855,7 +825,6 @@
             {
               "title": "Song Sung Blue",
               "times": [
-                "3:10pm",
                 "5:00pm",
                 "7:00pm",
                 "8:50pm"
@@ -871,7 +840,6 @@
             {
               "title": "The Choral",
               "times": [
-                "3:15pm",
                 "4:20pm",
                 "6:00pm",
                 "8:30pm"
@@ -887,14 +855,13 @@
             {
               "title": "The Housemaid",
               "times": [
-                "3:20pm",
                 "6:10pm",
                 "8:45pm"
               ],
               "url": "https://www.palacecinemas.com.au/movies/the-housemaid",
               "overview": "Trying to escape her past, Millie Calloway accepts a job as a live-in housemaid for the wealthy Nina and Andrew Winchester. But what begins as a dream job quickly unravels into something far more dangerous—a sexy, seductive game of secrets, scandal, and power.",
               "posterPath": "https://image.tmdb.org/t/p/w300/cWsBscZzwu5brg9YjNkGewRUvJX.jpg",
-              "rating": 7.273,
+              "rating": 7.3,
               "year": "2025",
               "runtime": 131,
               "trailerUrl": "https://www.youtube.com/watch?v=TGdKFCVn6G0"
@@ -957,7 +924,6 @@
             {
               "title": "My Brother's Band",
               "times": [
-                "3:10pm",
                 "5:30pm"
               ],
               "url": "https://www.palacecinemas.com.au/movies/my-brothers-band",
@@ -1003,7 +969,6 @@
             {
               "title": "Song Sung Blue",
               "times": [
-                "3:15pm",
                 "6:00pm",
                 "7:15pm",
                 "8:40pm"
@@ -1040,7 +1005,7 @@
               "url": "https://www.palacecinemas.com.au/movies/the-housemaid",
               "overview": "Trying to escape her past, Millie Calloway accepts a job as a live-in housemaid for the wealthy Nina and Andrew Winchester. But what begins as a dream job quickly unravels into something far more dangerous—a sexy, seductive game of secrets, scandal, and power.",
               "posterPath": "https://image.tmdb.org/t/p/w300/cWsBscZzwu5brg9YjNkGewRUvJX.jpg",
-              "rating": 7.273,
+              "rating": 7.3,
               "year": "2025",
               "runtime": 131,
               "trailerUrl": "https://www.youtube.com/watch?v=TGdKFCVn6G0"
@@ -1061,7 +1026,6 @@
             {
               "title": "Rental Family",
               "times": [
-                "3:30pm",
                 "6:00pm"
               ],
               "url": "https://www.palacecinemas.com.au/movies/rental-family",
@@ -1126,19 +1090,6 @@
               "trailerUrl": "https://www.youtube.com/watch?v=jMbBuQAYOeM"
             },
             {
-              "title": "The History of Sound",
-              "times": [
-                "3:10pm"
-              ],
-              "url": "https://www.palacecinemas.com.au/movies/the-history-of-sound",
-              "overview": "In 1917, two young music students attending the Boston Conservatory bond over a mutual love of folk music. They reconnect a few years later, embarking on a song-collecting trip in the backwaters of Maine.",
-              "posterPath": "https://image.tmdb.org/t/p/w300/5tNr1CySiYQICRsQbWWSSsDiKjn.jpg",
-              "rating": 6.2,
-              "year": "2025",
-              "runtime": 127,
-              "trailerUrl": "https://www.youtube.com/watch?v=E2PSkw8BI7k"
-            },
-            {
               "title": "Wake Up Dead Man: A Knives Out Mystery",
               "times": [
                 "8:00pm"
@@ -1160,7 +1111,6 @@
             {
               "title": "Song Sung Blue",
               "times": [
-                "3:15pm",
                 "6:00pm",
                 "8:45pm"
               ],
@@ -1175,7 +1125,6 @@
             {
               "title": "The Choral",
               "times": [
-                "3:30pm",
                 "6:10pm",
                 "8:30pm"
               ],
@@ -1195,7 +1144,7 @@
               "url": "https://www.palacecinemas.com.au/movies/the-housemaid",
               "overview": "Trying to escape her past, Millie Calloway accepts a job as a live-in housemaid for the wealthy Nina and Andrew Winchester. But what begins as a dream job quickly unravels into something far more dangerous—a sexy, seductive game of secrets, scandal, and power.",
               "posterPath": "https://image.tmdb.org/t/p/w300/cWsBscZzwu5brg9YjNkGewRUvJX.jpg",
-              "rating": 7.273,
+              "rating": 7.3,
               "year": "2025",
               "runtime": 131,
               "trailerUrl": "https://www.youtube.com/watch?v=TGdKFCVn6G0"
@@ -1229,7 +1178,6 @@
             {
               "title": "Sentimental Value",
               "times": [
-                "3:20pm",
                 "6:00pm"
               ],
               "url": "https://www.palacecinemas.com.au/movies/sentimental-value",
@@ -1341,7 +1289,7 @@
               "url": "https://www.palacecinemas.com.au/movies/the-housemaid",
               "overview": "Trying to escape her past, Millie Calloway accepts a job as a live-in housemaid for the wealthy Nina and Andrew Winchester. But what begins as a dream job quickly unravels into something far more dangerous—a sexy, seductive game of secrets, scandal, and power.",
               "posterPath": "https://image.tmdb.org/t/p/w300/cWsBscZzwu5brg9YjNkGewRUvJX.jpg",
-              "rating": 7.273,
+              "rating": 7.3,
               "year": "2025",
               "runtime": 131,
               "trailerUrl": "https://www.youtube.com/watch?v=TGdKFCVn6G0"
@@ -1379,7 +1327,6 @@
             {
               "title": "Sentimental Value",
               "times": [
-                "3:00pm",
                 "6:00pm"
               ],
               "url": "https://www.palacecinemas.com.au/movies/sentimental-value",
@@ -1393,7 +1340,6 @@
             {
               "title": "Nuremberg",
               "times": [
-                "3:00pm",
                 "6:20pm",
                 "8:45pm"
               ],
@@ -1461,22 +1407,8 @@
               "trailerUrl": "https://www.youtube.com/watch?v=T907pJMKHjs"
             },
             {
-              "title": "Zootopia 2",
-              "times": [
-                "3:20pm"
-              ],
-              "url": "https://www.palacecinemas.com.au/movies/zootopia-2",
-              "overview": "After cracking the biggest case in Zootopia's history, rookie cops Judy Hopps and Nick Wilde find themselves on the twisting trail of a great mystery when Gary De'Snake arrives and turns the animal metropolis upside down. To crack the case, Judy and Nick must go undercover to unexpected new parts of town, where their growing partnership is tested like never before.",
-              "posterPath": "https://image.tmdb.org/t/p/w300/bjUWGw0Ao0qVWxagN3VCwBJHVo6.jpg",
-              "rating": 7.6,
-              "year": "2025",
-              "runtime": 107,
-              "trailerUrl": "https://www.youtube.com/watch?v=5H7L9j0dW90"
-            },
-            {
               "title": "Wicked: For Good",
               "times": [
-                "3:15pm",
                 "9:00pm"
               ],
               "url": "https://www.palacecinemas.com.au/movies/wicked-for-good",
@@ -1702,7 +1634,7 @@
               "url": "https://suntheatre.com.au/wp-cinema/movie/S25HOUSEMAID/THE+HOUSEMAID/",
               "overview": "Trying to escape her past, Millie Calloway accepts a job as a live-in housemaid for the wealthy Nina and Andrew Winchester. But what begins as a dream job quickly unravels into something far more dangerous—a sexy, seductive game of secrets, scandal, and power.",
               "posterPath": "https://image.tmdb.org/t/p/w300/cWsBscZzwu5brg9YjNkGewRUvJX.jpg",
-              "rating": 7.273,
+              "rating": 7.3,
               "year": "2025",
               "runtime": 131,
               "trailerUrl": "https://www.youtube.com/watch?v=TGdKFCVn6G0"
@@ -1776,7 +1708,73 @@
         {
           "cinema": "Coburg Drive-In",
           "url": "https://villagecinemas.com.au/cinemas/coburg-drive-in",
-          "sessions": []
+          "sessions": [
+            {
+              "title": "The SpongeBob Movie: Search for Squarepants",
+              "times": [
+                "9:00pm"
+              ],
+              "url": "https://villagecinemas.com.au/cinemas/coburg-drive-in",
+              "overview": "Desperate to be a big guy, SpongeBob sets out to prove his bravery to Mr. Krabs by following The Flying Dutchman – a mysterious swashbuckling ghost pirate – on a seafaring adventure that takes him to the deepest depths of the deep sea, where no Sponge has gone before.",
+              "posterPath": "https://image.tmdb.org/t/p/w300/pDWYW9v8fmJdA7N0I1MOdQA3ETq.jpg",
+              "rating": 6.913,
+              "year": "2025",
+              "runtime": 88,
+              "trailerUrl": "https://www.youtube.com/watch?v=T907pJMKHjs"
+            },
+            {
+              "title": "Anaconda",
+              "times": [
+                "9:20pm"
+              ],
+              "url": "https://villagecinemas.com.au/cinemas/coburg-drive-in",
+              "overview": "A group of friends facing mid-life crises head to the rainforest with the intention of remaking their favorite movie from their youth, only to find themselves in a fight for their lives against natural disasters, giant snakes and violent criminals.",
+              "posterPath": "https://image.tmdb.org/t/p/w300/5MDnvvkOqthhE5gQebzkcOhD1p5.jpg",
+              "rating": 6.009,
+              "year": "2025",
+              "runtime": 100,
+              "trailerUrl": "https://www.youtube.com/watch?v=jMbBuQAYOeM"
+            },
+            {
+              "title": "The Housemaid",
+              "times": [
+                "11:15pm"
+              ],
+              "url": "https://villagecinemas.com.au/cinemas/coburg-drive-in",
+              "overview": "Trying to escape her past, Millie Calloway accepts a job as a live-in housemaid for the wealthy Nina and Andrew Winchester. But what begins as a dream job quickly unravels into something far more dangerous—a sexy, seductive game of secrets, scandal, and power.",
+              "posterPath": "https://image.tmdb.org/t/p/w300/cWsBscZzwu5brg9YjNkGewRUvJX.jpg",
+              "rating": 7.3,
+              "year": "2025",
+              "runtime": 131,
+              "trailerUrl": "https://www.youtube.com/watch?v=TGdKFCVn6G0"
+            },
+            {
+              "title": "Avatar: Fire and Ash",
+              "times": [
+                "10:00pm"
+              ],
+              "url": "https://villagecinemas.com.au/cinemas/coburg-drive-in",
+              "overview": "In the wake of the devastating war against the RDA and the loss of their eldest son, Jake Sully and Neytiri face a new threat on Pandora: the Ash People, a violent and power-hungry Na'vi tribe led by the ruthless Varang. Jake's family must fight for their survival and the future of Pandora in a conflict that pushes them to their emotional and physical limits.",
+              "posterPath": "https://image.tmdb.org/t/p/w300/cf7hE1ifY4UNbS25tGnaTyyDrI2.jpg",
+              "rating": 7.344,
+              "year": "2025",
+              "runtime": 198,
+              "trailerUrl": "https://www.youtube.com/watch?v=lc_zY8gN_Ew"
+            },
+            {
+              "title": "Five Nights at Freddy's 2",
+              "times": [
+                "11:45pm"
+              ],
+              "url": "https://villagecinemas.com.au/cinemas/coburg-drive-in",
+              "overview": "One year since the supernatural nightmare at Freddy Fazbear's Pizza, the stories about what transpired there have been twisted into a campy local legend, inspiring the town's first ever Fazfest. With the truth kept from her, Abby sneaks out to reconnect with Freddy, Bonnie, Chica, and Foxy, setting into motion a terrifying series of events that will reveal dark secrets about the real origin of Freddy's, and unleash a decades-hidden horror.",
+              "posterPath": "https://image.tmdb.org/t/p/w300/udAxQEORq2I5wxI97N2TEqdhzBE.jpg",
+              "rating": 6.791,
+              "year": "2025",
+              "runtime": 104,
+              "trailerUrl": "https://www.youtube.com/watch?v=VWfTR7ptRsQ"
+            }
+          ]
         }
       ]
     },
@@ -2193,7 +2191,7 @@
               "url": "https://www.cinemanova.com.au/films/the-housemaid",
               "overview": "Trying to escape her past, Millie Calloway accepts a job as a live-in housemaid for the wealthy Nina and Andrew Winchester. But what begins as a dream job quickly unravels into something far more dangerous—a sexy, seductive game of secrets, scandal, and power.",
               "posterPath": "https://image.tmdb.org/t/p/w300/cWsBscZzwu5brg9YjNkGewRUvJX.jpg",
-              "rating": 7.273,
+              "rating": 7.3,
               "year": "2025",
               "runtime": 131,
               "trailerUrl": "https://www.youtube.com/watch?v=TGdKFCVn6G0"
@@ -2392,7 +2390,7 @@
               "url": "https://www.lidocinemas.com.au/tickets?c=0000000003&s=99746",
               "overview": "Trying to escape her past, Millie Calloway accepts a job as a live-in housemaid for the wealthy Nina and Andrew Winchester. But what begins as a dream job quickly unravels into something far more dangerous—a sexy, seductive game of secrets, scandal, and power.",
               "posterPath": "https://image.tmdb.org/t/p/w300/cWsBscZzwu5brg9YjNkGewRUvJX.jpg",
-              "rating": 7.273,
+              "rating": 7.3,
               "year": "2025",
               "runtime": 131,
               "trailerUrl": "https://www.youtube.com/watch?v=TGdKFCVn6G0"
@@ -2458,20 +2456,6 @@
               "trailerUrl": "https://www.youtube.com/watch?v=zBFstFXdk90"
             },
             {
-              "title": "Song Sung Blue",
-              "times": [
-                "3:20pm",
-                "6:15pm"
-              ],
-              "url": "https://www.lidocinemas.com.au/tickets?c=0000000003&s=99740",
-              "overview": "Based on a true story, two down-on-their-luck musicians form a joyous Neil Diamond tribute band, proving it's never too late to find love and follow your dreams.",
-              "posterPath": "https://image.tmdb.org/t/p/w300/3HsIAbHWbFDUbY2jfj4wqEjGC3b.jpg",
-              "rating": 7.393,
-              "year": "2025",
-              "runtime": 133,
-              "trailerUrl": "https://www.youtube.com/watch?v=ssZU6xUM-YI"
-            },
-            {
               "title": "Christy",
               "times": [
                 "3:20pm",
@@ -2484,6 +2468,20 @@
               "year": "2025",
               "runtime": 135,
               "trailerUrl": "https://www.youtube.com/watch?v=Fkbj5F9qvvE"
+            },
+            {
+              "title": "Song Sung Blue",
+              "times": [
+                "3:20pm",
+                "6:15pm"
+              ],
+              "url": "https://www.lidocinemas.com.au/tickets?c=0000000003&s=99740",
+              "overview": "Based on a true story, two down-on-their-luck musicians form a joyous Neil Diamond tribute band, proving it's never too late to find love and follow your dreams.",
+              "posterPath": "https://image.tmdb.org/t/p/w300/3HsIAbHWbFDUbY2jfj4wqEjGC3b.jpg",
+              "rating": 7.393,
+              "year": "2025",
+              "runtime": 133,
+              "trailerUrl": "https://www.youtube.com/watch?v=ssZU6xUM-YI"
             },
             {
               "title": "Anaconda",
@@ -2714,7 +2712,7 @@
               "url": "https://www.hoyts.com.au/movies/the-housemaid",
               "overview": "Trying to escape her past, Millie Calloway accepts a job as a live-in housemaid for the wealthy Nina and Andrew Winchester. But what begins as a dream job quickly unravels into something far more dangerous—a sexy, seductive game of secrets, scandal, and power.",
               "posterPath": "https://image.tmdb.org/t/p/w300/cWsBscZzwu5brg9YjNkGewRUvJX.jpg",
-              "rating": 7.273,
+              "rating": 7.3,
               "year": "2025",
               "runtime": 131,
               "trailerUrl": "https://www.youtube.com/watch?v=TGdKFCVn6G0"
@@ -2908,7 +2906,7 @@
               "url": "https://www.palacecinemas.com.au/movies/the-housemaid",
               "overview": "Trying to escape her past, Millie Calloway accepts a job as a live-in housemaid for the wealthy Nina and Andrew Winchester. But what begins as a dream job quickly unravels into something far more dangerous—a sexy, seductive game of secrets, scandal, and power.",
               "posterPath": "https://image.tmdb.org/t/p/w300/cWsBscZzwu5brg9YjNkGewRUvJX.jpg",
-              "rating": 7.273,
+              "rating": 7.3,
               "year": "2025",
               "runtime": 131,
               "trailerUrl": "https://www.youtube.com/watch?v=TGdKFCVn6G0"
@@ -3123,7 +3121,7 @@
               "url": "https://www.palacecinemas.com.au/movies/the-housemaid",
               "overview": "Trying to escape her past, Millie Calloway accepts a job as a live-in housemaid for the wealthy Nina and Andrew Winchester. But what begins as a dream job quickly unravels into something far more dangerous—a sexy, seductive game of secrets, scandal, and power.",
               "posterPath": "https://image.tmdb.org/t/p/w300/cWsBscZzwu5brg9YjNkGewRUvJX.jpg",
-              "rating": 7.273,
+              "rating": 7.3,
               "year": "2025",
               "runtime": 131,
               "trailerUrl": "https://www.youtube.com/watch?v=TGdKFCVn6G0"
@@ -3330,7 +3328,7 @@
               "url": "https://www.palacecinemas.com.au/movies/the-housemaid",
               "overview": "Trying to escape her past, Millie Calloway accepts a job as a live-in housemaid for the wealthy Nina and Andrew Winchester. But what begins as a dream job quickly unravels into something far more dangerous—a sexy, seductive game of secrets, scandal, and power.",
               "posterPath": "https://image.tmdb.org/t/p/w300/cWsBscZzwu5brg9YjNkGewRUvJX.jpg",
-              "rating": 7.273,
+              "rating": 7.3,
               "year": "2025",
               "runtime": 131,
               "trailerUrl": "https://www.youtube.com/watch?v=TGdKFCVn6G0"
@@ -3513,7 +3511,7 @@
               "url": "https://www.palacecinemas.com.au/movies/the-housemaid",
               "overview": "Trying to escape her past, Millie Calloway accepts a job as a live-in housemaid for the wealthy Nina and Andrew Winchester. But what begins as a dream job quickly unravels into something far more dangerous—a sexy, seductive game of secrets, scandal, and power.",
               "posterPath": "https://image.tmdb.org/t/p/w300/cWsBscZzwu5brg9YjNkGewRUvJX.jpg",
-              "rating": 7.273,
+              "rating": 7.3,
               "year": "2025",
               "runtime": 131,
               "trailerUrl": "https://www.youtube.com/watch?v=TGdKFCVn6G0"
@@ -3956,7 +3954,7 @@
               "url": "https://suntheatre.com.au/wp-cinema/movie/S25HOUSEMAID/THE+HOUSEMAID/",
               "overview": "Trying to escape her past, Millie Calloway accepts a job as a live-in housemaid for the wealthy Nina and Andrew Winchester. But what begins as a dream job quickly unravels into something far more dangerous—a sexy, seductive game of secrets, scandal, and power.",
               "posterPath": "https://image.tmdb.org/t/p/w300/cWsBscZzwu5brg9YjNkGewRUvJX.jpg",
-              "rating": 7.273,
+              "rating": 7.3,
               "year": "2025",
               "runtime": 131,
               "trailerUrl": "https://www.youtube.com/watch?v=TGdKFCVn6G0"
@@ -4547,7 +4545,7 @@
               "url": "https://www.cinemanova.com.au/films/the-housemaid",
               "overview": "Trying to escape her past, Millie Calloway accepts a job as a live-in housemaid for the wealthy Nina and Andrew Winchester. But what begins as a dream job quickly unravels into something far more dangerous—a sexy, seductive game of secrets, scandal, and power.",
               "posterPath": "https://image.tmdb.org/t/p/w300/cWsBscZzwu5brg9YjNkGewRUvJX.jpg",
-              "rating": 7.273,
+              "rating": 7.3,
               "year": "2025",
               "runtime": 131,
               "trailerUrl": "https://www.youtube.com/watch?v=TGdKFCVn6G0"
@@ -4689,24 +4687,10 @@
               "url": "https://www.lidocinemas.com.au/tickets?c=0000000003&s=99717",
               "overview": "Trying to escape her past, Millie Calloway accepts a job as a live-in housemaid for the wealthy Nina and Andrew Winchester. But what begins as a dream job quickly unravels into something far more dangerous—a sexy, seductive game of secrets, scandal, and power.",
               "posterPath": "https://image.tmdb.org/t/p/w300/cWsBscZzwu5brg9YjNkGewRUvJX.jpg",
-              "rating": 7.273,
+              "rating": 7.3,
               "year": "2025",
               "runtime": 131,
               "trailerUrl": "https://www.youtube.com/watch?v=TGdKFCVn6G0"
-            },
-            {
-              "title": "The Choral",
-              "times": [
-                "12:10pm",
-                "5:30pm"
-              ],
-              "url": "https://www.lidocinemas.com.au/tickets?c=0000000003&s=99707",
-              "overview": "As World War I rages on, Dr. Henry Guthrie takes over a British choral society that's lost most of its men to the army. The community soon discovers that the best response to the chaos of war is to make beautiful music together.",
-              "posterPath": "https://image.tmdb.org/t/p/w300/yQtms7CSM0CE0W6dYbLLAATb5rL.jpg",
-              "rating": 6.6,
-              "year": "2025",
-              "runtime": 113,
-              "trailerUrl": "https://www.youtube.com/watch?v=6zRVP-ZgMm8"
             },
             {
               "title": "Nouvelle Vague",
@@ -4722,6 +4706,20 @@
               "year": "2025",
               "runtime": 106,
               "trailerUrl": "https://www.youtube.com/watch?v=sRqWbsdACzg"
+            },
+            {
+              "title": "The Choral",
+              "times": [
+                "12:10pm",
+                "5:30pm"
+              ],
+              "url": "https://www.lidocinemas.com.au/tickets?c=0000000003&s=99707",
+              "overview": "As World War I rages on, Dr. Henry Guthrie takes over a British choral society that's lost most of its men to the army. The community soon discovers that the best response to the chaos of war is to make beautiful music together.",
+              "posterPath": "https://image.tmdb.org/t/p/w300/yQtms7CSM0CE0W6dYbLLAATb5rL.jpg",
+              "rating": 6.6,
+              "year": "2025",
+              "runtime": 113,
+              "trailerUrl": "https://www.youtube.com/watch?v=6zRVP-ZgMm8"
             },
             {
               "title": "Rental Family",
@@ -4752,20 +4750,6 @@
               "trailerUrl": "https://www.youtube.com/watch?v=zBFstFXdk90"
             },
             {
-              "title": "Song Sung Blue",
-              "times": [
-                "3:40pm",
-                "8:25pm"
-              ],
-              "url": "https://www.lidocinemas.com.au/tickets?c=0000000003&s=99702",
-              "overview": "Based on a true story, two down-on-their-luck musicians form a joyous Neil Diamond tribute band, proving it's never too late to find love and follow your dreams.",
-              "posterPath": "https://image.tmdb.org/t/p/w300/3HsIAbHWbFDUbY2jfj4wqEjGC3b.jpg",
-              "rating": 7.393,
-              "year": "2025",
-              "runtime": 133,
-              "trailerUrl": "https://www.youtube.com/watch?v=ssZU6xUM-YI"
-            },
-            {
               "title": "Christy",
               "times": [
                 "3:30pm",
@@ -4778,6 +4762,20 @@
               "year": "2025",
               "runtime": 135,
               "trailerUrl": "https://www.youtube.com/watch?v=Fkbj5F9qvvE"
+            },
+            {
+              "title": "Song Sung Blue",
+              "times": [
+                "3:40pm",
+                "8:25pm"
+              ],
+              "url": "https://www.lidocinemas.com.au/tickets?c=0000000003&s=99702",
+              "overview": "Based on a true story, two down-on-their-luck musicians form a joyous Neil Diamond tribute band, proving it's never too late to find love and follow your dreams.",
+              "posterPath": "https://image.tmdb.org/t/p/w300/3HsIAbHWbFDUbY2jfj4wqEjGC3b.jpg",
+              "rating": 7.393,
+              "year": "2025",
+              "runtime": 133,
+              "trailerUrl": "https://www.youtube.com/watch?v=ssZU6xUM-YI"
             },
             {
               "title": "Anaconda",
@@ -4995,7 +4993,7 @@
               "url": "https://www.hoyts.com.au/movies/primate",
               "overview": "Home from college, Lucy reunites with family including pet chimp Ben. Ben contracts rabies during a pool party and turns aggressive. Lucy and friends barricade in pool, devising ways to survive the vicious chimp.",
               "posterPath": "https://image.tmdb.org/t/p/w300/5Q1zdYe9PYEXMGELzjfjyx8Eb7H.jpg",
-              "rating": 6.429,
+              "rating": 6.4,
               "year": "2026",
               "runtime": 89,
               "trailerUrl": "https://www.youtube.com/watch?v=LG-omD7vdLg"
@@ -5047,7 +5045,7 @@
               "url": "https://www.hoyts.com.au/movies/the-housemaid",
               "overview": "Trying to escape her past, Millie Calloway accepts a job as a live-in housemaid for the wealthy Nina and Andrew Winchester. But what begins as a dream job quickly unravels into something far more dangerous—a sexy, seductive game of secrets, scandal, and power.",
               "posterPath": "https://image.tmdb.org/t/p/w300/cWsBscZzwu5brg9YjNkGewRUvJX.jpg",
-              "rating": 7.273,
+              "rating": 7.3,
               "year": "2025",
               "runtime": 131,
               "trailerUrl": "https://www.youtube.com/watch?v=TGdKFCVn6G0"
@@ -5265,7 +5263,7 @@
               "url": "https://www.palacecinemas.com.au/movies/the-housemaid",
               "overview": "Trying to escape her past, Millie Calloway accepts a job as a live-in housemaid for the wealthy Nina and Andrew Winchester. But what begins as a dream job quickly unravels into something far more dangerous—a sexy, seductive game of secrets, scandal, and power.",
               "posterPath": "https://image.tmdb.org/t/p/w300/cWsBscZzwu5brg9YjNkGewRUvJX.jpg",
-              "rating": 7.273,
+              "rating": 7.3,
               "year": "2025",
               "runtime": 131,
               "trailerUrl": "https://www.youtube.com/watch?v=TGdKFCVn6G0"
@@ -5480,7 +5478,7 @@
               "url": "https://www.palacecinemas.com.au/movies/the-housemaid",
               "overview": "Trying to escape her past, Millie Calloway accepts a job as a live-in housemaid for the wealthy Nina and Andrew Winchester. But what begins as a dream job quickly unravels into something far more dangerous—a sexy, seductive game of secrets, scandal, and power.",
               "posterPath": "https://image.tmdb.org/t/p/w300/cWsBscZzwu5brg9YjNkGewRUvJX.jpg",
-              "rating": 7.273,
+              "rating": 7.3,
               "year": "2025",
               "runtime": 131,
               "trailerUrl": "https://www.youtube.com/watch?v=TGdKFCVn6G0"
@@ -5687,7 +5685,7 @@
               "url": "https://www.palacecinemas.com.au/movies/the-housemaid",
               "overview": "Trying to escape her past, Millie Calloway accepts a job as a live-in housemaid for the wealthy Nina and Andrew Winchester. But what begins as a dream job quickly unravels into something far more dangerous—a sexy, seductive game of secrets, scandal, and power.",
               "posterPath": "https://image.tmdb.org/t/p/w300/cWsBscZzwu5brg9YjNkGewRUvJX.jpg",
-              "rating": 7.273,
+              "rating": 7.3,
               "year": "2025",
               "runtime": 131,
               "trailerUrl": "https://www.youtube.com/watch?v=TGdKFCVn6G0"
@@ -5882,7 +5880,7 @@
               "url": "https://www.palacecinemas.com.au/movies/the-housemaid",
               "overview": "Trying to escape her past, Millie Calloway accepts a job as a live-in housemaid for the wealthy Nina and Andrew Winchester. But what begins as a dream job quickly unravels into something far more dangerous—a sexy, seductive game of secrets, scandal, and power.",
               "posterPath": "https://image.tmdb.org/t/p/w300/cWsBscZzwu5brg9YjNkGewRUvJX.jpg",
-              "rating": 7.273,
+              "rating": 7.3,
               "year": "2025",
               "runtime": 131,
               "trailerUrl": "https://www.youtube.com/watch?v=TGdKFCVn6G0"
@@ -6132,7 +6130,7 @@
               "url": "https://www.palacecinemas.com.au/movies/primate",
               "overview": "Home from college, Lucy reunites with family including pet chimp Ben. Ben contracts rabies during a pool party and turns aggressive. Lucy and friends barricade in pool, devising ways to survive the vicious chimp.",
               "posterPath": "https://image.tmdb.org/t/p/w300/5Q1zdYe9PYEXMGELzjfjyx8Eb7H.jpg",
-              "rating": 6.429,
+              "rating": 6.4,
               "year": "2026",
               "runtime": 89,
               "trailerUrl": "https://www.youtube.com/watch?v=LG-omD7vdLg"
@@ -6325,7 +6323,7 @@
               "url": "https://suntheatre.com.au/wp-cinema/movie/S25HOUSEMAID/THE+HOUSEMAID/",
               "overview": "Trying to escape her past, Millie Calloway accepts a job as a live-in housemaid for the wealthy Nina and Andrew Winchester. But what begins as a dream job quickly unravels into something far more dangerous—a sexy, seductive game of secrets, scandal, and power.",
               "posterPath": "https://image.tmdb.org/t/p/w300/cWsBscZzwu5brg9YjNkGewRUvJX.jpg",
-              "rating": 7.273,
+              "rating": 7.3,
               "year": "2025",
               "runtime": 131,
               "trailerUrl": "https://www.youtube.com/watch?v=TGdKFCVn6G0"
@@ -6992,7 +6990,7 @@
               "url": "https://www.cinemanova.com.au/films/the-housemaid",
               "overview": "Trying to escape her past, Millie Calloway accepts a job as a live-in housemaid for the wealthy Nina and Andrew Winchester. But what begins as a dream job quickly unravels into something far more dangerous—a sexy, seductive game of secrets, scandal, and power.",
               "posterPath": "https://image.tmdb.org/t/p/w300/cWsBscZzwu5brg9YjNkGewRUvJX.jpg",
-              "rating": 7.273,
+              "rating": 7.3,
               "year": "2025",
               "runtime": 131,
               "trailerUrl": "https://www.youtube.com/watch?v=TGdKFCVn6G0"
@@ -7134,25 +7132,10 @@
               "url": "https://www.lidocinemas.com.au/tickets?c=0000000003&s=99628",
               "overview": "Trying to escape her past, Millie Calloway accepts a job as a live-in housemaid for the wealthy Nina and Andrew Winchester. But what begins as a dream job quickly unravels into something far more dangerous—a sexy, seductive game of secrets, scandal, and power.",
               "posterPath": "https://image.tmdb.org/t/p/w300/cWsBscZzwu5brg9YjNkGewRUvJX.jpg",
-              "rating": 7.273,
+              "rating": 7.3,
               "year": "2025",
               "runtime": 131,
               "trailerUrl": "https://www.youtube.com/watch?v=TGdKFCVn6G0"
-            },
-            {
-              "title": "The Choral",
-              "times": [
-                "11:30am",
-                "3:30pm",
-                "4:45pm"
-              ],
-              "url": "https://www.lidocinemas.com.au/tickets?c=0000000003&s=99635",
-              "overview": "As World War I rages on, Dr. Henry Guthrie takes over a British choral society that's lost most of its men to the army. The community soon discovers that the best response to the chaos of war is to make beautiful music together.",
-              "posterPath": "https://image.tmdb.org/t/p/w300/yQtms7CSM0CE0W6dYbLLAATb5rL.jpg",
-              "rating": 6.6,
-              "year": "2025",
-              "runtime": 113,
-              "trailerUrl": "https://www.youtube.com/watch?v=6zRVP-ZgMm8"
             },
             {
               "title": "Nouvelle Vague",
@@ -7168,6 +7151,21 @@
               "year": "2025",
               "runtime": 106,
               "trailerUrl": "https://www.youtube.com/watch?v=sRqWbsdACzg"
+            },
+            {
+              "title": "The Choral",
+              "times": [
+                "11:30am",
+                "3:30pm",
+                "4:45pm"
+              ],
+              "url": "https://www.lidocinemas.com.au/tickets?c=0000000003&s=99635",
+              "overview": "As World War I rages on, Dr. Henry Guthrie takes over a British choral society that's lost most of its men to the army. The community soon discovers that the best response to the chaos of war is to make beautiful music together.",
+              "posterPath": "https://image.tmdb.org/t/p/w300/yQtms7CSM0CE0W6dYbLLAATb5rL.jpg",
+              "rating": 6.6,
+              "year": "2025",
+              "runtime": 113,
+              "trailerUrl": "https://www.youtube.com/watch?v=6zRVP-ZgMm8"
             },
             {
               "title": "Rental Family",
@@ -7199,20 +7197,6 @@
               "trailerUrl": "https://www.youtube.com/watch?v=zBFstFXdk90"
             },
             {
-              "title": "Song Sung Blue",
-              "times": [
-                "1:30pm",
-                "8:15pm"
-              ],
-              "url": "https://www.lidocinemas.com.au/tickets?c=0000000003&s=99640",
-              "overview": "Based on a true story, two down-on-their-luck musicians form a joyous Neil Diamond tribute band, proving it's never too late to find love and follow your dreams.",
-              "posterPath": "https://image.tmdb.org/t/p/w300/3HsIAbHWbFDUbY2jfj4wqEjGC3b.jpg",
-              "rating": 7.393,
-              "year": "2025",
-              "runtime": 133,
-              "trailerUrl": "https://www.youtube.com/watch?v=ssZU6xUM-YI"
-            },
-            {
               "title": "Christy",
               "times": [
                 "10:10am",
@@ -7226,6 +7210,20 @@
               "year": "2025",
               "runtime": 135,
               "trailerUrl": "https://www.youtube.com/watch?v=Fkbj5F9qvvE"
+            },
+            {
+              "title": "Song Sung Blue",
+              "times": [
+                "1:30pm",
+                "8:15pm"
+              ],
+              "url": "https://www.lidocinemas.com.au/tickets?c=0000000003&s=99640",
+              "overview": "Based on a true story, two down-on-their-luck musicians form a joyous Neil Diamond tribute band, proving it's never too late to find love and follow your dreams.",
+              "posterPath": "https://image.tmdb.org/t/p/w300/3HsIAbHWbFDUbY2jfj4wqEjGC3b.jpg",
+              "rating": 7.393,
+              "year": "2025",
+              "runtime": 133,
+              "trailerUrl": "https://www.youtube.com/watch?v=ssZU6xUM-YI"
             },
             {
               "title": "Anaconda",
@@ -7441,7 +7439,7 @@
               "url": "https://www.hoyts.com.au/movies/primate",
               "overview": "Home from college, Lucy reunites with family including pet chimp Ben. Ben contracts rabies during a pool party and turns aggressive. Lucy and friends barricade in pool, devising ways to survive the vicious chimp.",
               "posterPath": "https://image.tmdb.org/t/p/w300/5Q1zdYe9PYEXMGELzjfjyx8Eb7H.jpg",
-              "rating": 6.429,
+              "rating": 6.4,
               "year": "2026",
               "runtime": 89,
               "trailerUrl": "https://www.youtube.com/watch?v=LG-omD7vdLg"
@@ -7493,7 +7491,7 @@
               "url": "https://www.hoyts.com.au/movies/the-housemaid",
               "overview": "Trying to escape her past, Millie Calloway accepts a job as a live-in housemaid for the wealthy Nina and Andrew Winchester. But what begins as a dream job quickly unravels into something far more dangerous—a sexy, seductive game of secrets, scandal, and power.",
               "posterPath": "https://image.tmdb.org/t/p/w300/cWsBscZzwu5brg9YjNkGewRUvJX.jpg",
-              "rating": 7.273,
+              "rating": 7.3,
               "year": "2025",
               "runtime": 131,
               "trailerUrl": "https://www.youtube.com/watch?v=TGdKFCVn6G0"
@@ -7773,7 +7771,7 @@
               "url": "https://www.palacecinemas.com.au/movies/the-housemaid",
               "overview": "Trying to escape her past, Millie Calloway accepts a job as a live-in housemaid for the wealthy Nina and Andrew Winchester. But what begins as a dream job quickly unravels into something far more dangerous—a sexy, seductive game of secrets, scandal, and power.",
               "posterPath": "https://image.tmdb.org/t/p/w300/cWsBscZzwu5brg9YjNkGewRUvJX.jpg",
-              "rating": 7.273,
+              "rating": 7.3,
               "year": "2025",
               "runtime": 131,
               "trailerUrl": "https://www.youtube.com/watch?v=TGdKFCVn6G0"
@@ -7995,7 +7993,7 @@
               "url": "https://www.palacecinemas.com.au/movies/the-housemaid",
               "overview": "Trying to escape her past, Millie Calloway accepts a job as a live-in housemaid for the wealthy Nina and Andrew Winchester. But what begins as a dream job quickly unravels into something far more dangerous—a sexy, seductive game of secrets, scandal, and power.",
               "posterPath": "https://image.tmdb.org/t/p/w300/cWsBscZzwu5brg9YjNkGewRUvJX.jpg",
-              "rating": 7.273,
+              "rating": 7.3,
               "year": "2025",
               "runtime": 131,
               "trailerUrl": "https://www.youtube.com/watch?v=TGdKFCVn6G0"
@@ -8214,7 +8212,7 @@
               "url": "https://www.palacecinemas.com.au/movies/the-housemaid",
               "overview": "Trying to escape her past, Millie Calloway accepts a job as a live-in housemaid for the wealthy Nina and Andrew Winchester. But what begins as a dream job quickly unravels into something far more dangerous—a sexy, seductive game of secrets, scandal, and power.",
               "posterPath": "https://image.tmdb.org/t/p/w300/cWsBscZzwu5brg9YjNkGewRUvJX.jpg",
-              "rating": 7.273,
+              "rating": 7.3,
               "year": "2025",
               "runtime": 131,
               "trailerUrl": "https://www.youtube.com/watch?v=TGdKFCVn6G0"
@@ -8409,7 +8407,7 @@
               "url": "https://www.palacecinemas.com.au/movies/the-housemaid",
               "overview": "Trying to escape her past, Millie Calloway accepts a job as a live-in housemaid for the wealthy Nina and Andrew Winchester. But what begins as a dream job quickly unravels into something far more dangerous—a sexy, seductive game of secrets, scandal, and power.",
               "posterPath": "https://image.tmdb.org/t/p/w300/cWsBscZzwu5brg9YjNkGewRUvJX.jpg",
-              "rating": 7.273,
+              "rating": 7.3,
               "year": "2025",
               "runtime": 131,
               "trailerUrl": "https://www.youtube.com/watch?v=TGdKFCVn6G0"
@@ -8661,7 +8659,7 @@
               "url": "https://www.palacecinemas.com.au/movies/primate",
               "overview": "Home from college, Lucy reunites with family including pet chimp Ben. Ben contracts rabies during a pool party and turns aggressive. Lucy and friends barricade in pool, devising ways to survive the vicious chimp.",
               "posterPath": "https://image.tmdb.org/t/p/w300/5Q1zdYe9PYEXMGELzjfjyx8Eb7H.jpg",
-              "rating": 6.429,
+              "rating": 6.4,
               "year": "2026",
               "runtime": 89,
               "trailerUrl": "https://www.youtube.com/watch?v=LG-omD7vdLg"
@@ -8852,7 +8850,7 @@
               "url": "https://suntheatre.com.au/wp-cinema/movie/S25HOUSEMAID/THE+HOUSEMAID/",
               "overview": "Trying to escape her past, Millie Calloway accepts a job as a live-in housemaid for the wealthy Nina and Andrew Winchester. But what begins as a dream job quickly unravels into something far more dangerous—a sexy, seductive game of secrets, scandal, and power.",
               "posterPath": "https://image.tmdb.org/t/p/w300/cWsBscZzwu5brg9YjNkGewRUvJX.jpg",
-              "rating": 7.273,
+              "rating": 7.3,
               "year": "2025",
               "runtime": 131,
               "trailerUrl": "https://www.youtube.com/watch?v=TGdKFCVn6G0"
@@ -9441,7 +9439,7 @@
               "url": "https://www.cinemanova.com.au/films/the-housemaid",
               "overview": "Trying to escape her past, Millie Calloway accepts a job as a live-in housemaid for the wealthy Nina and Andrew Winchester. But what begins as a dream job quickly unravels into something far more dangerous—a sexy, seductive game of secrets, scandal, and power.",
               "posterPath": "https://image.tmdb.org/t/p/w300/cWsBscZzwu5brg9YjNkGewRUvJX.jpg",
-              "rating": 7.273,
+              "rating": 7.3,
               "year": "2025",
               "runtime": 131,
               "trailerUrl": "https://www.youtube.com/watch?v=TGdKFCVn6G0"
@@ -9610,25 +9608,10 @@
               "url": "https://www.lidocinemas.com.au/tickets?c=0000000003&s=99858",
               "overview": "Trying to escape her past, Millie Calloway accepts a job as a live-in housemaid for the wealthy Nina and Andrew Winchester. But what begins as a dream job quickly unravels into something far more dangerous—a sexy, seductive game of secrets, scandal, and power.",
               "posterPath": "https://image.tmdb.org/t/p/w300/cWsBscZzwu5brg9YjNkGewRUvJX.jpg",
-              "rating": 7.273,
+              "rating": 7.3,
               "year": "2025",
               "runtime": 131,
               "trailerUrl": "https://www.youtube.com/watch?v=TGdKFCVn6G0"
-            },
-            {
-              "title": "The Choral",
-              "times": [
-                "1:00pm",
-                "3:30pm",
-                "5:30pm"
-              ],
-              "url": "https://www.lidocinemas.com.au/tickets?c=0000000003&s=99673",
-              "overview": "As World War I rages on, Dr. Henry Guthrie takes over a British choral society that's lost most of its men to the army. The community soon discovers that the best response to the chaos of war is to make beautiful music together.",
-              "posterPath": "https://image.tmdb.org/t/p/w300/yQtms7CSM0CE0W6dYbLLAATb5rL.jpg",
-              "rating": 6.6,
-              "year": "2025",
-              "runtime": 113,
-              "trailerUrl": "https://www.youtube.com/watch?v=6zRVP-ZgMm8"
             },
             {
               "title": "Nouvelle Vague",
@@ -9644,6 +9627,21 @@
               "year": "2025",
               "runtime": 106,
               "trailerUrl": "https://www.youtube.com/watch?v=sRqWbsdACzg"
+            },
+            {
+              "title": "The Choral",
+              "times": [
+                "1:00pm",
+                "3:30pm",
+                "5:30pm"
+              ],
+              "url": "https://www.lidocinemas.com.au/tickets?c=0000000003&s=99673",
+              "overview": "As World War I rages on, Dr. Henry Guthrie takes over a British choral society that's lost most of its men to the army. The community soon discovers that the best response to the chaos of war is to make beautiful music together.",
+              "posterPath": "https://image.tmdb.org/t/p/w300/yQtms7CSM0CE0W6dYbLLAATb5rL.jpg",
+              "rating": 6.6,
+              "year": "2025",
+              "runtime": 113,
+              "trailerUrl": "https://www.youtube.com/watch?v=6zRVP-ZgMm8"
             },
             {
               "title": "Rental Family",
@@ -9675,20 +9673,6 @@
               "trailerUrl": "https://www.youtube.com/watch?v=zBFstFXdk90"
             },
             {
-              "title": "Song Sung Blue",
-              "times": [
-                "1:20pm",
-                "8:20pm"
-              ],
-              "url": "https://www.lidocinemas.com.au/tickets?c=0000000003&s=99668",
-              "overview": "Based on a true story, two down-on-their-luck musicians form a joyous Neil Diamond tribute band, proving it's never too late to find love and follow your dreams.",
-              "posterPath": "https://image.tmdb.org/t/p/w300/3HsIAbHWbFDUbY2jfj4wqEjGC3b.jpg",
-              "rating": 7.393,
-              "year": "2025",
-              "runtime": 133,
-              "trailerUrl": "https://www.youtube.com/watch?v=ssZU6xUM-YI"
-            },
-            {
               "title": "Christy",
               "times": [
                 "10:10am",
@@ -9702,6 +9686,20 @@
               "year": "2025",
               "runtime": 135,
               "trailerUrl": "https://www.youtube.com/watch?v=Fkbj5F9qvvE"
+            },
+            {
+              "title": "Song Sung Blue",
+              "times": [
+                "1:20pm",
+                "8:20pm"
+              ],
+              "url": "https://www.lidocinemas.com.au/tickets?c=0000000003&s=99668",
+              "overview": "Based on a true story, two down-on-their-luck musicians form a joyous Neil Diamond tribute band, proving it's never too late to find love and follow your dreams.",
+              "posterPath": "https://image.tmdb.org/t/p/w300/3HsIAbHWbFDUbY2jfj4wqEjGC3b.jpg",
+              "rating": 7.393,
+              "year": "2025",
+              "runtime": 133,
+              "trailerUrl": "https://www.youtube.com/watch?v=ssZU6xUM-YI"
             },
             {
               "title": "Anaconda",
@@ -9904,7 +9902,7 @@
               "url": "https://www.hoyts.com.au/movies/primate",
               "overview": "Home from college, Lucy reunites with family including pet chimp Ben. Ben contracts rabies during a pool party and turns aggressive. Lucy and friends barricade in pool, devising ways to survive the vicious chimp.",
               "posterPath": "https://image.tmdb.org/t/p/w300/5Q1zdYe9PYEXMGELzjfjyx8Eb7H.jpg",
-              "rating": 6.429,
+              "rating": 6.4,
               "year": "2026",
               "runtime": 89,
               "trailerUrl": "https://www.youtube.com/watch?v=LG-omD7vdLg"
@@ -9967,7 +9965,7 @@
               "url": "https://www.hoyts.com.au/movies/the-housemaid",
               "overview": "Trying to escape her past, Millie Calloway accepts a job as a live-in housemaid for the wealthy Nina and Andrew Winchester. But what begins as a dream job quickly unravels into something far more dangerous—a sexy, seductive game of secrets, scandal, and power.",
               "posterPath": "https://image.tmdb.org/t/p/w300/cWsBscZzwu5brg9YjNkGewRUvJX.jpg",
-              "rating": 7.273,
+              "rating": 7.3,
               "year": "2025",
               "runtime": 131,
               "trailerUrl": "https://www.youtube.com/watch?v=TGdKFCVn6G0"
@@ -10219,7 +10217,7 @@
               "url": "https://www.palacecinemas.com.au/movies/the-housemaid",
               "overview": "Trying to escape her past, Millie Calloway accepts a job as a live-in housemaid for the wealthy Nina and Andrew Winchester. But what begins as a dream job quickly unravels into something far more dangerous—a sexy, seductive game of secrets, scandal, and power.",
               "posterPath": "https://image.tmdb.org/t/p/w300/cWsBscZzwu5brg9YjNkGewRUvJX.jpg",
-              "rating": 7.273,
+              "rating": 7.3,
               "year": "2025",
               "runtime": 131,
               "trailerUrl": "https://www.youtube.com/watch?v=TGdKFCVn6G0"
@@ -10429,7 +10427,7 @@
               "url": "https://www.palacecinemas.com.au/movies/the-housemaid",
               "overview": "Trying to escape her past, Millie Calloway accepts a job as a live-in housemaid for the wealthy Nina and Andrew Winchester. But what begins as a dream job quickly unravels into something far more dangerous—a sexy, seductive game of secrets, scandal, and power.",
               "posterPath": "https://image.tmdb.org/t/p/w300/cWsBscZzwu5brg9YjNkGewRUvJX.jpg",
-              "rating": 7.273,
+              "rating": 7.3,
               "year": "2025",
               "runtime": 131,
               "trailerUrl": "https://www.youtube.com/watch?v=TGdKFCVn6G0"
@@ -10648,7 +10646,7 @@
               "url": "https://www.palacecinemas.com.au/movies/the-housemaid",
               "overview": "Trying to escape her past, Millie Calloway accepts a job as a live-in housemaid for the wealthy Nina and Andrew Winchester. But what begins as a dream job quickly unravels into something far more dangerous—a sexy, seductive game of secrets, scandal, and power.",
               "posterPath": "https://image.tmdb.org/t/p/w300/cWsBscZzwu5brg9YjNkGewRUvJX.jpg",
-              "rating": 7.273,
+              "rating": 7.3,
               "year": "2025",
               "runtime": 131,
               "trailerUrl": "https://www.youtube.com/watch?v=TGdKFCVn6G0"
@@ -10855,7 +10853,7 @@
               "url": "https://www.palacecinemas.com.au/movies/the-housemaid",
               "overview": "Trying to escape her past, Millie Calloway accepts a job as a live-in housemaid for the wealthy Nina and Andrew Winchester. But what begins as a dream job quickly unravels into something far more dangerous—a sexy, seductive game of secrets, scandal, and power.",
               "posterPath": "https://image.tmdb.org/t/p/w300/cWsBscZzwu5brg9YjNkGewRUvJX.jpg",
-              "rating": 7.273,
+              "rating": 7.3,
               "year": "2025",
               "runtime": 131,
               "trailerUrl": "https://www.youtube.com/watch?v=TGdKFCVn6G0"
@@ -11107,7 +11105,7 @@
               "url": "https://www.palacecinemas.com.au/movies/primate",
               "overview": "Home from college, Lucy reunites with family including pet chimp Ben. Ben contracts rabies during a pool party and turns aggressive. Lucy and friends barricade in pool, devising ways to survive the vicious chimp.",
               "posterPath": "https://image.tmdb.org/t/p/w300/5Q1zdYe9PYEXMGELzjfjyx8Eb7H.jpg",
-              "rating": 6.429,
+              "rating": 6.4,
               "year": "2026",
               "runtime": 89,
               "trailerUrl": "https://www.youtube.com/watch?v=LG-omD7vdLg"
@@ -11298,7 +11296,7 @@
               "url": "https://suntheatre.com.au/wp-cinema/movie/S25HOUSEMAID/THE+HOUSEMAID/",
               "overview": "Trying to escape her past, Millie Calloway accepts a job as a live-in housemaid for the wealthy Nina and Andrew Winchester. But what begins as a dream job quickly unravels into something far more dangerous—a sexy, seductive game of secrets, scandal, and power.",
               "posterPath": "https://image.tmdb.org/t/p/w300/cWsBscZzwu5brg9YjNkGewRUvJX.jpg",
-              "rating": 7.273,
+              "rating": 7.3,
               "year": "2025",
               "runtime": 131,
               "trailerUrl": "https://www.youtube.com/watch?v=TGdKFCVn6G0"
@@ -11487,7 +11485,7 @@
               "url": "https://www.acmi.net.au/whats-on/best-of-2025/all-we-imagine-as-light/",
               "overview": "In Mumbai, Nurse Prabha's routine is troubled when she receives an unexpected gift from her estranged husband. Her younger roommate, Anu, tries in vain to find a spot in the city to be intimate with her boyfriend. A trip to a beach town allows them to find a space for their desires to manifest.",
               "posterPath": "https://image.tmdb.org/t/p/w300/ruImrzB4POsrgwCMozmOBV67zs5.jpg",
-              "rating": 6.855,
+              "rating": 6.851,
               "year": "2024",
               "runtime": 118,
               "trailerUrl": "https://www.youtube.com/watch?v=HknqmTUjg8c"
@@ -11915,7 +11913,7 @@
               "url": "https://www.cinemanova.com.au/films/the-housemaid",
               "overview": "Trying to escape her past, Millie Calloway accepts a job as a live-in housemaid for the wealthy Nina and Andrew Winchester. But what begins as a dream job quickly unravels into something far more dangerous—a sexy, seductive game of secrets, scandal, and power.",
               "posterPath": "https://image.tmdb.org/t/p/w300/cWsBscZzwu5brg9YjNkGewRUvJX.jpg",
-              "rating": 7.273,
+              "rating": 7.3,
               "year": "2025",
               "runtime": 131,
               "trailerUrl": "https://www.youtube.com/watch?v=TGdKFCVn6G0"
@@ -12071,25 +12069,10 @@
               "url": "https://www.lidocinemas.com.au/tickets?c=0000000003&s=99778",
               "overview": "Trying to escape her past, Millie Calloway accepts a job as a live-in housemaid for the wealthy Nina and Andrew Winchester. But what begins as a dream job quickly unravels into something far more dangerous—a sexy, seductive game of secrets, scandal, and power.",
               "posterPath": "https://image.tmdb.org/t/p/w300/cWsBscZzwu5brg9YjNkGewRUvJX.jpg",
-              "rating": 7.273,
+              "rating": 7.3,
               "year": "2025",
               "runtime": 131,
               "trailerUrl": "https://www.youtube.com/watch?v=TGdKFCVn6G0"
-            },
-            {
-              "title": "The Choral",
-              "times": [
-                "10:30am",
-                "1:20pm",
-                "5:45pm"
-              ],
-              "url": "https://www.lidocinemas.com.au/tickets?c=0000000003&s=99765",
-              "overview": "As World War I rages on, Dr. Henry Guthrie takes over a British choral society that's lost most of its men to the army. The community soon discovers that the best response to the chaos of war is to make beautiful music together.",
-              "posterPath": "https://image.tmdb.org/t/p/w300/yQtms7CSM0CE0W6dYbLLAATb5rL.jpg",
-              "rating": 6.6,
-              "year": "2025",
-              "runtime": 113,
-              "trailerUrl": "https://www.youtube.com/watch?v=6zRVP-ZgMm8"
             },
             {
               "title": "Nouvelle Vague",
@@ -12105,6 +12088,21 @@
               "year": "2025",
               "runtime": 106,
               "trailerUrl": "https://www.youtube.com/watch?v=sRqWbsdACzg"
+            },
+            {
+              "title": "The Choral",
+              "times": [
+                "10:30am",
+                "1:20pm",
+                "5:45pm"
+              ],
+              "url": "https://www.lidocinemas.com.au/tickets?c=0000000003&s=99765",
+              "overview": "As World War I rages on, Dr. Henry Guthrie takes over a British choral society that's lost most of its men to the army. The community soon discovers that the best response to the chaos of war is to make beautiful music together.",
+              "posterPath": "https://image.tmdb.org/t/p/w300/yQtms7CSM0CE0W6dYbLLAATb5rL.jpg",
+              "rating": 6.6,
+              "year": "2025",
+              "runtime": 113,
+              "trailerUrl": "https://www.youtube.com/watch?v=6zRVP-ZgMm8"
             },
             {
               "title": "Rental Family",
@@ -12365,7 +12363,7 @@
               "url": "https://www.hoyts.com.au/movies/primate",
               "overview": "Home from college, Lucy reunites with family including pet chimp Ben. Ben contracts rabies during a pool party and turns aggressive. Lucy and friends barricade in pool, devising ways to survive the vicious chimp.",
               "posterPath": "https://image.tmdb.org/t/p/w300/5Q1zdYe9PYEXMGELzjfjyx8Eb7H.jpg",
-              "rating": 6.429,
+              "rating": 6.4,
               "year": "2026",
               "runtime": 89,
               "trailerUrl": "https://www.youtube.com/watch?v=LG-omD7vdLg"
@@ -12417,7 +12415,7 @@
               "url": "https://www.hoyts.com.au/movies/the-housemaid",
               "overview": "Trying to escape her past, Millie Calloway accepts a job as a live-in housemaid for the wealthy Nina and Andrew Winchester. But what begins as a dream job quickly unravels into something far more dangerous—a sexy, seductive game of secrets, scandal, and power.",
               "posterPath": "https://image.tmdb.org/t/p/w300/cWsBscZzwu5brg9YjNkGewRUvJX.jpg",
-              "rating": 7.273,
+              "rating": 7.3,
               "year": "2025",
               "runtime": 131,
               "trailerUrl": "https://www.youtube.com/watch?v=TGdKFCVn6G0"
@@ -12635,7 +12633,7 @@
               "url": "https://www.palacecinemas.com.au/movies/the-housemaid",
               "overview": "Trying to escape her past, Millie Calloway accepts a job as a live-in housemaid for the wealthy Nina and Andrew Winchester. But what begins as a dream job quickly unravels into something far more dangerous—a sexy, seductive game of secrets, scandal, and power.",
               "posterPath": "https://image.tmdb.org/t/p/w300/cWsBscZzwu5brg9YjNkGewRUvJX.jpg",
-              "rating": 7.273,
+              "rating": 7.3,
               "year": "2025",
               "runtime": 131,
               "trailerUrl": "https://www.youtube.com/watch?v=TGdKFCVn6G0"
@@ -12861,7 +12859,7 @@
               "url": "https://www.palacecinemas.com.au/movies/the-housemaid",
               "overview": "Trying to escape her past, Millie Calloway accepts a job as a live-in housemaid for the wealthy Nina and Andrew Winchester. But what begins as a dream job quickly unravels into something far more dangerous—a sexy, seductive game of secrets, scandal, and power.",
               "posterPath": "https://image.tmdb.org/t/p/w300/cWsBscZzwu5brg9YjNkGewRUvJX.jpg",
-              "rating": 7.273,
+              "rating": 7.3,
               "year": "2025",
               "runtime": 131,
               "trailerUrl": "https://www.youtube.com/watch?v=TGdKFCVn6G0"
@@ -13080,7 +13078,7 @@
               "url": "https://www.palacecinemas.com.au/movies/the-housemaid",
               "overview": "Trying to escape her past, Millie Calloway accepts a job as a live-in housemaid for the wealthy Nina and Andrew Winchester. But what begins as a dream job quickly unravels into something far more dangerous—a sexy, seductive game of secrets, scandal, and power.",
               "posterPath": "https://image.tmdb.org/t/p/w300/cWsBscZzwu5brg9YjNkGewRUvJX.jpg",
-              "rating": 7.273,
+              "rating": 7.3,
               "year": "2025",
               "runtime": 131,
               "trailerUrl": "https://www.youtube.com/watch?v=TGdKFCVn6G0"
@@ -13288,7 +13286,7 @@
               "url": "https://www.palacecinemas.com.au/movies/the-housemaid",
               "overview": "Trying to escape her past, Millie Calloway accepts a job as a live-in housemaid for the wealthy Nina and Andrew Winchester. But what begins as a dream job quickly unravels into something far more dangerous—a sexy, seductive game of secrets, scandal, and power.",
               "posterPath": "https://image.tmdb.org/t/p/w300/cWsBscZzwu5brg9YjNkGewRUvJX.jpg",
-              "rating": 7.273,
+              "rating": 7.3,
               "year": "2025",
               "runtime": 131,
               "trailerUrl": "https://www.youtube.com/watch?v=TGdKFCVn6G0"
@@ -13717,7 +13715,7 @@
               "url": "https://suntheatre.com.au/wp-cinema/movie/S25HOUSEMAID/THE+HOUSEMAID/",
               "overview": "Trying to escape her past, Millie Calloway accepts a job as a live-in housemaid for the wealthy Nina and Andrew Winchester. But what begins as a dream job quickly unravels into something far more dangerous—a sexy, seductive game of secrets, scandal, and power.",
               "posterPath": "https://image.tmdb.org/t/p/w300/cWsBscZzwu5brg9YjNkGewRUvJX.jpg",
-              "rating": 7.273,
+              "rating": 7.3,
               "year": "2025",
               "runtime": 131,
               "trailerUrl": "https://www.youtube.com/watch?v=TGdKFCVn6G0"
@@ -14266,7 +14264,7 @@
               "url": "https://www.cinemanova.com.au/films/the-housemaid",
               "overview": "Trying to escape her past, Millie Calloway accepts a job as a live-in housemaid for the wealthy Nina and Andrew Winchester. But what begins as a dream job quickly unravels into something far more dangerous—a sexy, seductive game of secrets, scandal, and power.",
               "posterPath": "https://image.tmdb.org/t/p/w300/cWsBscZzwu5brg9YjNkGewRUvJX.jpg",
-              "rating": 7.273,
+              "rating": 7.3,
               "year": "2025",
               "runtime": 131,
               "trailerUrl": "https://www.youtube.com/watch?v=TGdKFCVn6G0"
@@ -14423,25 +14421,10 @@
               "url": "https://www.lidocinemas.com.au/tickets?c=0000000003&s=99810",
               "overview": "Trying to escape her past, Millie Calloway accepts a job as a live-in housemaid for the wealthy Nina and Andrew Winchester. But what begins as a dream job quickly unravels into something far more dangerous—a sexy, seductive game of secrets, scandal, and power.",
               "posterPath": "https://image.tmdb.org/t/p/w300/cWsBscZzwu5brg9YjNkGewRUvJX.jpg",
-              "rating": 7.273,
+              "rating": 7.3,
               "year": "2025",
               "runtime": 131,
               "trailerUrl": "https://www.youtube.com/watch?v=TGdKFCVn6G0"
-            },
-            {
-              "title": "The Choral",
-              "times": [
-                "10:45am",
-                "12:45pm",
-                "4:45pm"
-              ],
-              "url": "https://www.lidocinemas.com.au/tickets?c=0000000003&s=99804",
-              "overview": "As World War I rages on, Dr. Henry Guthrie takes over a British choral society that's lost most of its men to the army. The community soon discovers that the best response to the chaos of war is to make beautiful music together.",
-              "posterPath": "https://image.tmdb.org/t/p/w300/yQtms7CSM0CE0W6dYbLLAATb5rL.jpg",
-              "rating": 6.6,
-              "year": "2025",
-              "runtime": 113,
-              "trailerUrl": "https://www.youtube.com/watch?v=6zRVP-ZgMm8"
             },
             {
               "title": "Nouvelle Vague",
@@ -14457,6 +14440,21 @@
               "year": "2025",
               "runtime": 106,
               "trailerUrl": "https://www.youtube.com/watch?v=sRqWbsdACzg"
+            },
+            {
+              "title": "The Choral",
+              "times": [
+                "10:45am",
+                "12:45pm",
+                "4:45pm"
+              ],
+              "url": "https://www.lidocinemas.com.au/tickets?c=0000000003&s=99804",
+              "overview": "As World War I rages on, Dr. Henry Guthrie takes over a British choral society that's lost most of its men to the army. The community soon discovers that the best response to the chaos of war is to make beautiful music together.",
+              "posterPath": "https://image.tmdb.org/t/p/w300/yQtms7CSM0CE0W6dYbLLAATb5rL.jpg",
+              "rating": 6.6,
+              "year": "2025",
+              "runtime": 113,
+              "trailerUrl": "https://www.youtube.com/watch?v=6zRVP-ZgMm8"
             },
             {
               "title": "Rental Family",
@@ -14712,7 +14710,7 @@
               "url": "https://www.hoyts.com.au/movies/the-housemaid",
               "overview": "Trying to escape her past, Millie Calloway accepts a job as a live-in housemaid for the wealthy Nina and Andrew Winchester. But what begins as a dream job quickly unravels into something far more dangerous—a sexy, seductive game of secrets, scandal, and power.",
               "posterPath": "https://image.tmdb.org/t/p/w300/cWsBscZzwu5brg9YjNkGewRUvJX.jpg",
-              "rating": 7.273,
+              "rating": 7.3,
               "year": "2025",
               "runtime": 131,
               "trailerUrl": "https://www.youtube.com/watch?v=TGdKFCVn6G0"
@@ -14930,7 +14928,7 @@
               "url": "https://www.palacecinemas.com.au/movies/the-housemaid",
               "overview": "Trying to escape her past, Millie Calloway accepts a job as a live-in housemaid for the wealthy Nina and Andrew Winchester. But what begins as a dream job quickly unravels into something far more dangerous—a sexy, seductive game of secrets, scandal, and power.",
               "posterPath": "https://image.tmdb.org/t/p/w300/cWsBscZzwu5brg9YjNkGewRUvJX.jpg",
-              "rating": 7.273,
+              "rating": 7.3,
               "year": "2025",
               "runtime": 131,
               "trailerUrl": "https://www.youtube.com/watch?v=TGdKFCVn6G0"
@@ -15154,7 +15152,7 @@
               "url": "https://www.palacecinemas.com.au/movies/the-housemaid",
               "overview": "Trying to escape her past, Millie Calloway accepts a job as a live-in housemaid for the wealthy Nina and Andrew Winchester. But what begins as a dream job quickly unravels into something far more dangerous—a sexy, seductive game of secrets, scandal, and power.",
               "posterPath": "https://image.tmdb.org/t/p/w300/cWsBscZzwu5brg9YjNkGewRUvJX.jpg",
-              "rating": 7.273,
+              "rating": 7.3,
               "year": "2025",
               "runtime": 131,
               "trailerUrl": "https://www.youtube.com/watch?v=TGdKFCVn6G0"
@@ -15370,7 +15368,7 @@
               "url": "https://www.palacecinemas.com.au/movies/the-housemaid",
               "overview": "Trying to escape her past, Millie Calloway accepts a job as a live-in housemaid for the wealthy Nina and Andrew Winchester. But what begins as a dream job quickly unravels into something far more dangerous—a sexy, seductive game of secrets, scandal, and power.",
               "posterPath": "https://image.tmdb.org/t/p/w300/cWsBscZzwu5brg9YjNkGewRUvJX.jpg",
-              "rating": 7.273,
+              "rating": 7.3,
               "year": "2025",
               "runtime": 131,
               "trailerUrl": "https://www.youtube.com/watch?v=TGdKFCVn6G0"
@@ -15578,7 +15576,7 @@
               "url": "https://www.palacecinemas.com.au/movies/the-housemaid",
               "overview": "Trying to escape her past, Millie Calloway accepts a job as a live-in housemaid for the wealthy Nina and Andrew Winchester. But what begins as a dream job quickly unravels into something far more dangerous—a sexy, seductive game of secrets, scandal, and power.",
               "posterPath": "https://image.tmdb.org/t/p/w300/cWsBscZzwu5brg9YjNkGewRUvJX.jpg",
-              "rating": 7.273,
+              "rating": 7.3,
               "year": "2025",
               "runtime": 131,
               "trailerUrl": "https://www.youtube.com/watch?v=TGdKFCVn6G0"
@@ -16009,7 +16007,7 @@
               "url": "https://suntheatre.com.au/wp-cinema/movie/S25HOUSEMAID/THE+HOUSEMAID/",
               "overview": "Trying to escape her past, Millie Calloway accepts a job as a live-in housemaid for the wealthy Nina and Andrew Winchester. But what begins as a dream job quickly unravels into something far more dangerous—a sexy, seductive game of secrets, scandal, and power.",
               "posterPath": "https://image.tmdb.org/t/p/w300/cWsBscZzwu5brg9YjNkGewRUvJX.jpg",
-              "rating": 7.273,
+              "rating": 7.3,
               "year": "2025",
               "runtime": 131,
               "trailerUrl": "https://www.youtube.com/watch?v=TGdKFCVn6G0"
