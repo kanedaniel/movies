@@ -16,6 +16,18 @@ const TMDB_BASE = 'https://api.themoviedb.org/3';
 
 const tmdbCache = new Map();
 
+// Load TMDB overrides for films that get matched incorrectly
+let tmdbOverrides = {};
+try {
+  const overridesPath = path.join(__dirname, '..', 'data', 'tmdb-overrides.json');
+  if (fs.existsSync(overridesPath)) {
+    tmdbOverrides = JSON.parse(fs.readFileSync(overridesPath, 'utf8'));
+    console.log(`Loaded ${Object.keys(tmdbOverrides).length} TMDB overrides`);
+  }
+} catch (e) {
+  console.log('No TMDB overrides file found (this is fine)');
+}
+
 // Standardise time to format "H:MMam" or "H:MMpm" (e.g., "2:30pm", "10:00am")
 function standardiseTime(timeStr) {
   if (!timeStr || timeStr.toLowerCase().includes('see website')) return timeStr;
@@ -70,6 +82,42 @@ async function fetchTMDB(title) {
   }
 
   try {
+    // Check for manual override first
+    const overrideId = tmdbOverrides[title] || tmdbOverrides[title.toLowerCase()];
+    if (overrideId) {
+      console.log(`  TMDB override: "${title}" -> ID ${overrideId}`);
+      
+      // Fetch movie directly by ID
+      const detailsUrl = `${TMDB_BASE}/movie/${overrideId}?api_key=${TMDB_API_KEY}&append_to_response=videos`;
+      const detailsResponse = await fetch(detailsUrl);
+      const movie = await detailsResponse.json();
+      
+      if (movie && movie.id) {
+        let trailerUrl = null;
+        if (movie.videos && movie.videos.results) {
+          const trailer = movie.videos.results.find(v => 
+            v.site === 'YouTube' && (v.type === 'Trailer' || v.type === 'Teaser')
+          );
+          if (trailer) {
+            trailerUrl = `https://www.youtube.com/watch?v=${trailer.key}`;
+          }
+        }
+        
+        const result = {
+          overview: movie.overview || null,
+          posterPath: movie.poster_path ? `https://image.tmdb.org/t/p/w300${movie.poster_path}` : null,
+          rating: movie.vote_average || null,
+          year: movie.release_date ? movie.release_date.substring(0, 4) : null,
+          runtime: movie.runtime || null,
+          trailerUrl: trailerUrl,
+          tmdbId: movie.id
+        };
+        console.log(`  TMDB override found: "${movie.title}" (${result.year})`);
+        tmdbCache.set(cacheKey, result);
+        return result;
+      }
+    }
+    
     // Store original for ", The" check
     const originalTitle = title;
     
