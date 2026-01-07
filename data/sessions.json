@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-01-07T09:22:41.127Z",
+  "generatedAt": "2026-01-07T10:03:43.904Z",
   "days": [
     {
       "date": "Wednesday 7 January 2026",
@@ -255,12 +255,12 @@
                 "8:15pm"
               ],
               "url": "https://www.cinemanova.com.au/films/resurrection",
-              "overview": "A jaded homicide detective has been put on the case of a ruthless killer in the city of Chicago, who leaves a trail of horribly mutilated and dismembered corpses along with perversely ironic biblical quotes.",
-              "posterPath": "https://image.tmdb.org/t/p/w300/2j6cMHN1Mx1u8S897VVhO7wSrce.jpg",
-              "rating": 6.114,
-              "year": "1999",
-              "runtime": 108,
-              "trailerUrl": "https://www.youtube.com/watch?v=XxSMzmBz5oY"
+              "overview": "In a future where humanity has surrendered its ability to dream in exchange for immortality, an outcast finds illusion, nightmarish visions, and beauty in an intoxicating world of his own making.",
+              "posterPath": "https://image.tmdb.org/t/p/w300/wBXvXc7CoE1TCEL96VzMkMQKYG9.jpg",
+              "rating": 7.155,
+              "year": "2025",
+              "runtime": 160,
+              "trailerUrl": "https://www.youtube.com/watch?v=ZIJezWgFUEY"
             },
             {
               "title": "Golden Spurtle, The",
@@ -441,29 +441,15 @@
             {
               "title": "Rental Family",
               "times": [
-                "8:30pm",
                 "9:00pm"
               ],
-              "url": "https://www.lidocinemas.com.au/tickets?c=0000000003&s=99585",
+              "url": "https://www.lidocinemas.com.au/tickets?c=0000000003&s=97113",
               "overview": "An American actor in Tokyo struggles to find purpose until he lands an unusual gig: working for a Japanese 'rental family' agency, playing stand-in roles for strangers. As he immerses himself in his clients' worlds, he begins to form genuine bonds that blur the lines between performance and reality.",
               "posterPath": "https://image.tmdb.org/t/p/w300/dGRZ55srJoK6TcjPTfHe701UWq0.jpg",
               "rating": 7.6,
               "year": "2025",
               "runtime": 110,
               "trailerUrl": "https://www.youtube.com/watch?v=7W9B-0PdfXQ"
-            },
-            {
-              "title": "Song Sung Blue",
-              "times": [
-                "8:30pm"
-              ],
-              "url": "https://www.lidocinemas.com.au/tickets?c=0000000003&s=99576",
-              "overview": "Based on a true story, two down-on-their-luck musicians form a joyous Neil Diamond tribute band, proving it's never too late to find love and follow your dreams.",
-              "posterPath": "https://image.tmdb.org/t/p/w300/3HsIAbHWbFDUbY2jfj4wqEjGC3b.jpg",
-              "rating": 7.433,
-              "year": "2025",
-              "runtime": 133,
-              "trailerUrl": "https://www.youtube.com/watch?v=ssZU6xUM-YI"
             },
             {
               "title": "Anaconda",
@@ -490,19 +476,6 @@
               "year": "2025",
               "runtime": 114,
               "trailerUrl": "https://www.youtube.com/watch?v=GzkoY6hUvQQ"
-            },
-            {
-              "title": "One Battle After Another",
-              "times": [
-                "8:20pm"
-              ],
-              "url": "https://www.lidocinemas.com.au/tickets?c=0000000003&s=99607",
-              "overview": "Washed-up revolutionary Bob exists in a state of stoned paranoia, surviving off-grid with his spirited, self-reliant daughter, Willa. When his evil nemesis resurfaces after 16 years and she goes missing, the former radical scrambles to find her, father and daughter both battling the consequences of his past.",
-              "posterPath": "https://image.tmdb.org/t/p/w300/r4uXvqCeco0KmO0CjlhXuTEFuSE.jpg",
-              "rating": 7.459,
-              "year": "2025",
-              "runtime": 162,
-              "trailerUrl": "https://www.youtube.com/watch?v=u6GVb4p7oD4"
             }
           ]
         },
@@ -519,7 +492,7 @@
               "url": "https://www.hoyts.com.au/movies/avatar-fire-and-ash",
               "overview": "In the wake of the devastating war against the RDA and the loss of their eldest son, Jake Sully and Neytiri face a new threat on Pandora: the Ash People, a violent and power-hungry Na'vi tribe led by the ruthless Varang. Jake's family must fight for their survival and the future of Pandora in a conflict that pushes them to their emotional and physical limits.",
               "posterPath": "https://image.tmdb.org/t/p/w300/cf7hE1ifY4UNbS25tGnaTyyDrI2.jpg",
-              "rating": 7.344,
+              "rating": 7.348,
               "year": "2025",
               "runtime": 198,
               "trailerUrl": "https://www.youtube.com/watch?v=lc_zY8gN_Ew"
@@ -584,7 +557,7 @@
               "url": "https://www.hoyts.com.au/movies/five-nights-at-freddys-2",
               "overview": "One year since the supernatural nightmare at Freddy Fazbear's Pizza, the stories about what transpired there have been twisted into a campy local legend, inspiring the town's first ever Fazfest. With the truth kept from her, Abby sneaks out to reconnect with Freddy, Bonnie, Chica, and Foxy, setting into motion a terrifying series of events that will reveal dark secrets about the real origin of Freddy's, and unleash a decades-hidden horror.",
               "posterPath": "https://image.tmdb.org/t/p/w300/udAxQEORq2I5wxI97N2TEqdhzBE.jpg",
-              "rating": 6.791,
+              "rating": 6.795,
               "year": "2025",
               "runtime": 104,
               "trailerUrl": "https://www.youtube.com/watch?v=VWfTR7ptRsQ"
@@ -618,20 +591,20 @@
                 },
                 {
                   "title": "Flow",
-                  "overview": "As the ‘flow’ progresses, the world where our ‘giant’ once stood gradually fades away, replaced by their inner worlds. Our ‘giant’ continues to advance endlessly, questioning the relationship between the world and oneself.",
-                  "posterPath": null,
-                  "rating": 8,
+                  "overview": "A solitary cat, displaced by a great flood, finds refuge on a boat with various species and must navigate the challenges of adapting to a transformed world together.",
+                  "posterPath": "https://image.tmdb.org/t/p/w300/zME0Ul0w48MKkYBnFRn40M5qgLh.jpg",
+                  "rating": 8.106,
                   "year": "2024",
-                  "runtime": 8,
-                  "trailerUrl": null,
-                  "tmdbId": 1281775
+                  "runtime": 85,
+                  "trailerUrl": "https://www.youtube.com/watch?v=xLTJ6-8e46M",
+                  "tmdbId": 823219
                 }
               ],
               "posterPath": "https://image.tmdb.org/t/p/w300/jPNShaWZMpVF0iQ7j1dvTuZLD20.jpg",
               "overview": "When a massive, gilled monster emerges from the deep and tears through the city, the government scrambles to save its citizens.  A rag-tag team of volunteers cuts through a web of red tape to uncover the monster's weakness and its mysterious ties to a foreign superpower.  But time is not on their side - the greatest catastrophe to ever befall the world is about to evolve right before their very eyes.",
-              "runtime": 128,
+              "runtime": 205,
               "year": "2016",
-              "rating": 7.6105,
+              "rating": 7.6635,
               "trailerUrl": "https://www.youtube.com/watch?v=AUMLlPateCA"
             }
           ]
@@ -654,45 +627,6 @@
               "trailerUrl": "https://www.youtube.com/watch?v=ssZU6xUM-YI"
             },
             {
-              "title": "The Choral",
-              "times": [
-                "8:30pm"
-              ],
-              "url": "https://www.palacecinemas.com.au/movies/the-choral",
-              "overview": "As World War I rages on, Dr. Henry Guthrie takes over a British choral society that's lost most of its men to the army. The community soon discovers that the best response to the chaos of war is to make beautiful music together.",
-              "posterPath": "https://image.tmdb.org/t/p/w300/yQtms7CSM0CE0W6dYbLLAATb5rL.jpg",
-              "rating": 6.6,
-              "year": "2025",
-              "runtime": 113,
-              "trailerUrl": "https://www.youtube.com/watch?v=6zRVP-ZgMm8"
-            },
-            {
-              "title": "The Housemaid",
-              "times": [
-                "8:45pm"
-              ],
-              "url": "https://www.palacecinemas.com.au/movies/the-housemaid",
-              "overview": "Trying to escape her past, Millie Calloway accepts a job as a live-in housemaid for the wealthy Nina and Andrew Winchester. But what begins as a dream job quickly unravels into something far more dangerous—a sexy, seductive game of secrets, scandal, and power.",
-              "posterPath": "https://image.tmdb.org/t/p/w300/cWsBscZzwu5brg9YjNkGewRUvJX.jpg",
-              "rating": 7.3,
-              "year": "2025",
-              "runtime": 131,
-              "trailerUrl": "https://www.youtube.com/watch?v=TGdKFCVn6G0"
-            },
-            {
-              "title": "Nuremberg",
-              "times": [
-                "8:10pm"
-              ],
-              "url": "https://www.palacecinemas.com.au/movies/nuremberg",
-              "overview": "In postwar Germany, an American psychiatrist must determine whether Nazi prisoners are fit to go on trial for war crimes, and finds himself in a complex battle of intellect and ethics with Hermann Göring, Hitler's right-hand man.",
-              "posterPath": "https://image.tmdb.org/t/p/w300/sxu8TsG7k06ymWL98ELEIE1EMZV.jpg",
-              "rating": 7.321,
-              "year": "2025",
-              "runtime": 148,
-              "trailerUrl": "https://www.youtube.com/watch?v=YWlCCVnZ4bo"
-            },
-            {
               "title": "Anaconda",
               "times": [
                 "9:00pm"
@@ -712,32 +646,6 @@
           "url": "https://www.palacecinemas.com.au/cinemas/the-kino-melbourne",
           "sessions": [
             {
-              "title": "Song Sung Blue",
-              "times": [
-                "8:40pm"
-              ],
-              "url": "https://www.palacecinemas.com.au/movies/song-sung-blue",
-              "overview": "Based on a true story, two down-on-their-luck musicians form a joyous Neil Diamond tribute band, proving it's never too late to find love and follow your dreams.",
-              "posterPath": "https://image.tmdb.org/t/p/w300/3HsIAbHWbFDUbY2jfj4wqEjGC3b.jpg",
-              "rating": 7.433,
-              "year": "2025",
-              "runtime": 133,
-              "trailerUrl": "https://www.youtube.com/watch?v=ssZU6xUM-YI"
-            },
-            {
-              "title": "The Choral",
-              "times": [
-                "8:30pm"
-              ],
-              "url": "https://www.palacecinemas.com.au/movies/the-choral",
-              "overview": "As World War I rages on, Dr. Henry Guthrie takes over a British choral society that's lost most of its men to the army. The community soon discovers that the best response to the chaos of war is to make beautiful music together.",
-              "posterPath": "https://image.tmdb.org/t/p/w300/yQtms7CSM0CE0W6dYbLLAATb5rL.jpg",
-              "rating": 6.6,
-              "year": "2025",
-              "runtime": 113,
-              "trailerUrl": "https://www.youtube.com/watch?v=6zRVP-ZgMm8"
-            },
-            {
               "title": "The Housemaid",
               "times": [
                 "8:50pm"
@@ -749,19 +657,6 @@
               "year": "2025",
               "runtime": 131,
               "trailerUrl": "https://www.youtube.com/watch?v=TGdKFCVn6G0"
-            },
-            {
-              "title": "Sentimental Value",
-              "times": [
-                "8:20pm"
-              ],
-              "url": "https://www.palacecinemas.com.au/movies/sentimental-value",
-              "overview": "Sisters Nora and Agnes reunite with their estranged father, the charismatic Gustav, a once-renowned director who offers stage actress Nora a role in what he hopes will be his comeback film. When Nora turns it down, she soon discovers he has given her part to an eager young Hollywood star.",
-              "posterPath": "https://image.tmdb.org/t/p/w300/dNy7iCibnVTJuvosArcDEdbruBT.jpg",
-              "rating": 7.633,
-              "year": "2025",
-              "runtime": 133,
-              "trailerUrl": "https://www.youtube.com/watch?v=zBFstFXdk90"
             }
           ]
         },
@@ -770,32 +665,6 @@
           "url": "https://www.palacecinemas.com.au/cinemas/palace-westgarth",
           "sessions": [
             {
-              "title": "Song Sung Blue",
-              "times": [
-                "8:45pm"
-              ],
-              "url": "https://www.palacecinemas.com.au/movies/song-sung-blue",
-              "overview": "Based on a true story, two down-on-their-luck musicians form a joyous Neil Diamond tribute band, proving it's never too late to find love and follow your dreams.",
-              "posterPath": "https://image.tmdb.org/t/p/w300/3HsIAbHWbFDUbY2jfj4wqEjGC3b.jpg",
-              "rating": 7.433,
-              "year": "2025",
-              "runtime": 133,
-              "trailerUrl": "https://www.youtube.com/watch?v=ssZU6xUM-YI"
-            },
-            {
-              "title": "The Choral",
-              "times": [
-                "8:30pm"
-              ],
-              "url": "https://www.palacecinemas.com.au/movies/the-choral",
-              "overview": "As World War I rages on, Dr. Henry Guthrie takes over a British choral society that's lost most of its men to the army. The community soon discovers that the best response to the chaos of war is to make beautiful music together.",
-              "posterPath": "https://image.tmdb.org/t/p/w300/yQtms7CSM0CE0W6dYbLLAATb5rL.jpg",
-              "rating": 6.6,
-              "year": "2025",
-              "runtime": 113,
-              "trailerUrl": "https://www.youtube.com/watch?v=6zRVP-ZgMm8"
-            },
-            {
               "title": "The Housemaid",
               "times": [
                 "8:50pm"
@@ -807,32 +676,6 @@
               "year": "2025",
               "runtime": 131,
               "trailerUrl": "https://www.youtube.com/watch?v=TGdKFCVn6G0"
-            },
-            {
-              "title": "Nuremberg",
-              "times": [
-                "8:30pm"
-              ],
-              "url": "https://www.palacecinemas.com.au/movies/nuremberg",
-              "overview": "In postwar Germany, an American psychiatrist must determine whether Nazi prisoners are fit to go on trial for war crimes, and finds himself in a complex battle of intellect and ethics with Hermann Göring, Hitler's right-hand man.",
-              "posterPath": "https://image.tmdb.org/t/p/w300/sxu8TsG7k06ymWL98ELEIE1EMZV.jpg",
-              "rating": 7.321,
-              "year": "2025",
-              "runtime": 148,
-              "trailerUrl": "https://www.youtube.com/watch?v=YWlCCVnZ4bo"
-            },
-            {
-              "title": "Clueless",
-              "times": [
-                "8:45pm"
-              ],
-              "url": "https://www.palacecinemas.com.au/movies/clueless",
-              "overview": "Shallow, rich and socially successful Cher is at the top of her Beverly Hills high school's pecking scale. Seeing herself as a matchmaker, Cher first coaxes two teachers into dating each other. Emboldened by her success, she decides to give hopelessly klutzy new student Tai a makeover. When Tai becomes more popular than she is, Cher realizes that her disapproving ex-stepbrother was right about how misguided she was -- and falls for him.",
-              "posterPath": "https://image.tmdb.org/t/p/w300/8AwVTcgpTnmeOs4TdTWqcFDXEsA.jpg",
-              "rating": 7.26,
-              "year": "1995",
-              "runtime": 97,
-              "trailerUrl": "https://www.youtube.com/watch?v=rnHC1E6VrnQ"
             }
           ]
         },
@@ -854,19 +697,6 @@
               "trailerUrl": "https://www.youtube.com/watch?v=ssZU6xUM-YI"
             },
             {
-              "title": "The Choral",
-              "times": [
-                "8:20pm"
-              ],
-              "url": "https://www.palacecinemas.com.au/movies/the-choral",
-              "overview": "As World War I rages on, Dr. Henry Guthrie takes over a British choral society that's lost most of its men to the army. The community soon discovers that the best response to the chaos of war is to make beautiful music together.",
-              "posterPath": "https://image.tmdb.org/t/p/w300/yQtms7CSM0CE0W6dYbLLAATb5rL.jpg",
-              "rating": 6.6,
-              "year": "2025",
-              "runtime": 113,
-              "trailerUrl": "https://www.youtube.com/watch?v=6zRVP-ZgMm8"
-            },
-            {
               "title": "The Housemaid",
               "times": [
                 "8:50pm"
@@ -878,32 +708,6 @@
               "year": "2025",
               "runtime": 131,
               "trailerUrl": "https://www.youtube.com/watch?v=TGdKFCVn6G0"
-            },
-            {
-              "title": "Rental Family",
-              "times": [
-                "8:45pm"
-              ],
-              "url": "https://www.palacecinemas.com.au/movies/rental-family",
-              "overview": "An American actor in Tokyo struggles to find purpose until he lands an unusual gig: working for a Japanese 'rental family' agency, playing stand-in roles for strangers. As he immerses himself in his clients' worlds, he begins to form genuine bonds that blur the lines between performance and reality.",
-              "posterPath": "https://image.tmdb.org/t/p/w300/dGRZ55srJoK6TcjPTfHe701UWq0.jpg",
-              "rating": 7.6,
-              "year": "2025",
-              "runtime": 110,
-              "trailerUrl": "https://www.youtube.com/watch?v=7W9B-0PdfXQ"
-            },
-            {
-              "title": "Nuremberg",
-              "times": [
-                "8:45pm"
-              ],
-              "url": "https://www.palacecinemas.com.au/movies/nuremberg",
-              "overview": "In postwar Germany, an American psychiatrist must determine whether Nazi prisoners are fit to go on trial for war crimes, and finds himself in a complex battle of intellect and ethics with Hermann Göring, Hitler's right-hand man.",
-              "posterPath": "https://image.tmdb.org/t/p/w300/sxu8TsG7k06ymWL98ELEIE1EMZV.jpg",
-              "rating": 7.321,
-              "year": "2025",
-              "runtime": 148,
-              "trailerUrl": "https://www.youtube.com/watch?v=YWlCCVnZ4bo"
             },
             {
               "title": "Anaconda",
@@ -989,7 +793,7 @@
               "url": "https://imaxmelbourne.com.au/movie/avatar-fire-ash",
               "overview": "In the wake of the devastating war against the RDA and the loss of their eldest son, Jake Sully and Neytiri face a new threat on Pandora: the Ash People, a violent and power-hungry Na'vi tribe led by the ruthless Varang. Jake's family must fight for their survival and the future of Pandora in a conflict that pushes them to their emotional and physical limits.",
               "posterPath": "https://image.tmdb.org/t/p/w300/cf7hE1ifY4UNbS25tGnaTyyDrI2.jpg",
-              "rating": 7.344,
+              "rating": 7.348,
               "year": "2025",
               "runtime": 198,
               "trailerUrl": "https://www.youtube.com/watch?v=lc_zY8gN_Ew"
@@ -1010,7 +814,7 @@
               "url": "https://suntheatre.com.au/wp-cinema/movie/S25ZOOTOPIA2/ZOOTOPIA+2/",
               "overview": "After cracking the biggest case in Zootopia's history, rookie cops Judy Hopps and Nick Wilde find themselves on the twisting trail of a great mystery when Gary De'Snake arrives and turns the animal metropolis upside down. To crack the case, Judy and Nick must go undercover to unexpected new parts of town, where their growing partnership is tested like never before.",
               "posterPath": "https://image.tmdb.org/t/p/w300/bjUWGw0Ao0qVWxagN3VCwBJHVo6.jpg",
-              "rating": 7.6,
+              "rating": 7.627,
               "year": "2025",
               "runtime": 107,
               "trailerUrl": "https://www.youtube.com/watch?v=5H7L9j0dW90"
@@ -1039,7 +843,7 @@
               "url": "https://suntheatre.com.au/wp-cinema/movie/S25AVATARFIREAND/AVATAR+FIRE+AND+ASH/",
               "overview": "In the wake of the devastating war against the RDA and the loss of their eldest son, Jake Sully and Neytiri face a new threat on Pandora: the Ash People, a violent and power-hungry Na'vi tribe led by the ruthless Varang. Jake's family must fight for their survival and the future of Pandora in a conflict that pushes them to their emotional and physical limits.",
               "posterPath": "https://image.tmdb.org/t/p/w300/cf7hE1ifY4UNbS25tGnaTyyDrI2.jpg",
-              "rating": 7.344,
+              "rating": 7.348,
               "year": "2025",
               "runtime": 198,
               "trailerUrl": "https://www.youtube.com/watch?v=lc_zY8gN_Ew"
@@ -1239,7 +1043,7 @@
               "url": "https://villagecinemas.com.au/cinemas/coburg-drive-in",
               "overview": "In the wake of the devastating war against the RDA and the loss of their eldest son, Jake Sully and Neytiri face a new threat on Pandora: the Ash People, a violent and power-hungry Na'vi tribe led by the ruthless Varang. Jake's family must fight for their survival and the future of Pandora in a conflict that pushes them to their emotional and physical limits.",
               "posterPath": "https://image.tmdb.org/t/p/w300/cf7hE1ifY4UNbS25tGnaTyyDrI2.jpg",
-              "rating": 7.344,
+              "rating": 7.348,
               "year": "2025",
               "runtime": 198,
               "trailerUrl": "https://www.youtube.com/watch?v=lc_zY8gN_Ew"
@@ -1252,7 +1056,7 @@
               "url": "https://villagecinemas.com.au/cinemas/coburg-drive-in",
               "overview": "One year since the supernatural nightmare at Freddy Fazbear's Pizza, the stories about what transpired there have been twisted into a campy local legend, inspiring the town's first ever Fazfest. With the truth kept from her, Abby sneaks out to reconnect with Freddy, Bonnie, Chica, and Foxy, setting into motion a terrifying series of events that will reveal dark secrets about the real origin of Freddy's, and unleash a decades-hidden horror.",
               "posterPath": "https://image.tmdb.org/t/p/w300/udAxQEORq2I5wxI97N2TEqdhzBE.jpg",
-              "rating": 6.791,
+              "rating": 6.795,
               "year": "2025",
               "runtime": 104,
               "trailerUrl": "https://www.youtube.com/watch?v=VWfTR7ptRsQ"
@@ -1434,12 +1238,12 @@
                 "7:45pm"
               ],
               "url": "https://www.cinemanova.com.au/films/resurrection",
-              "overview": "A jaded homicide detective has been put on the case of a ruthless killer in the city of Chicago, who leaves a trail of horribly mutilated and dismembered corpses along with perversely ironic biblical quotes.",
-              "posterPath": "https://image.tmdb.org/t/p/w300/2j6cMHN1Mx1u8S897VVhO7wSrce.jpg",
-              "rating": 6.114,
-              "year": "1999",
-              "runtime": 108,
-              "trailerUrl": "https://www.youtube.com/watch?v=XxSMzmBz5oY"
+              "overview": "In a future where humanity has surrendered its ability to dream in exchange for immortality, an outcast finds illusion, nightmarish visions, and beauty in an intoxicating world of his own making.",
+              "posterPath": "https://image.tmdb.org/t/p/w300/wBXvXc7CoE1TCEL96VzMkMQKYG9.jpg",
+              "rating": 7.155,
+              "year": "2025",
+              "runtime": 160,
+              "trailerUrl": "https://www.youtube.com/watch?v=ZIJezWgFUEY"
             },
             {
               "title": "Song Sung Blue",
@@ -1590,7 +1394,7 @@
               "url": "https://www.cinemanova.com.au/films/avatar-fire-and-ash",
               "overview": "In the wake of the devastating war against the RDA and the loss of their eldest son, Jake Sully and Neytiri face a new threat on Pandora: the Ash People, a violent and power-hungry Na'vi tribe led by the ruthless Varang. Jake's family must fight for their survival and the future of Pandora in a conflict that pushes them to their emotional and physical limits.",
               "posterPath": "https://image.tmdb.org/t/p/w300/cf7hE1ifY4UNbS25tGnaTyyDrI2.jpg",
-              "rating": 7.344,
+              "rating": 7.348,
               "year": "2025",
               "runtime": 198,
               "trailerUrl": "https://www.youtube.com/watch?v=lc_zY8gN_Ew"
@@ -1953,20 +1757,6 @@
               "trailerUrl": "https://www.youtube.com/watch?v=Fkbj5F9qvvE"
             },
             {
-              "title": "Song Sung Blue",
-              "times": [
-                "3:20pm",
-                "6:15pm"
-              ],
-              "url": "https://www.lidocinemas.com.au/tickets?c=0000000003&s=99740",
-              "overview": "Based on a true story, two down-on-their-luck musicians form a joyous Neil Diamond tribute band, proving it's never too late to find love and follow your dreams.",
-              "posterPath": "https://image.tmdb.org/t/p/w300/3HsIAbHWbFDUbY2jfj4wqEjGC3b.jpg",
-              "rating": 7.433,
-              "year": "2025",
-              "runtime": 133,
-              "trailerUrl": "https://www.youtube.com/watch?v=ssZU6xUM-YI"
-            },
-            {
               "title": "Anaconda",
               "times": [
                 "1:10pm",
@@ -1995,6 +1785,20 @@
               "trailerUrl": "https://www.youtube.com/watch?v=hLa7v6TRB_E"
             },
             {
+              "title": "Song Sung Blue",
+              "times": [
+                "3:20pm",
+                "6:15pm"
+              ],
+              "url": "https://www.lidocinemas.com.au/tickets?c=0000000003&s=99740",
+              "overview": "Based on a true story, two down-on-their-luck musicians form a joyous Neil Diamond tribute band, proving it's never too late to find love and follow your dreams.",
+              "posterPath": "https://image.tmdb.org/t/p/w300/3HsIAbHWbFDUbY2jfj4wqEjGC3b.jpg",
+              "rating": 7.433,
+              "year": "2025",
+              "runtime": 133,
+              "trailerUrl": "https://www.youtube.com/watch?v=ssZU6xUM-YI"
+            },
+            {
               "title": "Avatar: Fire and Ash",
               "times": [
                 "10:50am",
@@ -2003,7 +1807,7 @@
               "url": "https://www.lidocinemas.com.au/tickets?c=0000000003&s=99741",
               "overview": "In the wake of the devastating war against the RDA and the loss of their eldest son, Jake Sully and Neytiri face a new threat on Pandora: the Ash People, a violent and power-hungry Na'vi tribe led by the ruthless Varang. Jake's family must fight for their survival and the future of Pandora in a conflict that pushes them to their emotional and physical limits.",
               "posterPath": "https://image.tmdb.org/t/p/w300/cf7hE1ifY4UNbS25tGnaTyyDrI2.jpg",
-              "rating": 7.344,
+              "rating": 7.348,
               "year": "2025",
               "runtime": 198,
               "trailerUrl": "https://www.youtube.com/watch?v=lc_zY8gN_Ew"
@@ -2017,7 +1821,7 @@
               "url": "https://www.lidocinemas.com.au/tickets?c=0000000003&s=99750",
               "overview": "After cracking the biggest case in Zootopia's history, rookie cops Judy Hopps and Nick Wilde find themselves on the twisting trail of a great mystery when Gary De'Snake arrives and turns the animal metropolis upside down. To crack the case, Judy and Nick must go undercover to unexpected new parts of town, where their growing partnership is tested like never before.",
               "posterPath": "https://image.tmdb.org/t/p/w300/bjUWGw0Ao0qVWxagN3VCwBJHVo6.jpg",
-              "rating": 7.6,
+              "rating": 7.627,
               "year": "2025",
               "runtime": 107,
               "trailerUrl": "https://www.youtube.com/watch?v=5H7L9j0dW90"
@@ -2090,19 +1894,6 @@
               "trailerUrl": "https://www.youtube.com/watch?v=gZ6pPFK6kaQ"
             },
             {
-              "title": "One Battle After Another",
-              "times": [
-                "8:25pm"
-              ],
-              "url": "https://www.lidocinemas.com.au/tickets?c=0000000003&s=99735",
-              "overview": "Washed-up revolutionary Bob exists in a state of stoned paranoia, surviving off-grid with his spirited, self-reliant daughter, Willa. When his evil nemesis resurfaces after 16 years and she goes missing, the former radical scrambles to find her, father and daughter both battling the consequences of his past.",
-              "posterPath": "https://image.tmdb.org/t/p/w300/r4uXvqCeco0KmO0CjlhXuTEFuSE.jpg",
-              "rating": 7.459,
-              "year": "2025",
-              "runtime": 162,
-              "trailerUrl": "https://www.youtube.com/watch?v=u6GVb4p7oD4"
-            },
-            {
               "title": "The Pout-Pout Fish",
               "times": [
                 "10:50am"
@@ -2116,6 +1907,19 @@
               "trailerUrl": "https://www.youtube.com/watch?v=NhQfp1eITTY"
             },
             {
+              "title": "One Battle After Another",
+              "times": [
+                "8:25pm"
+              ],
+              "url": "https://www.lidocinemas.com.au/tickets?c=0000000003&s=99735",
+              "overview": "Washed-up revolutionary Bob exists in a state of stoned paranoia, surviving off-grid with his spirited, self-reliant daughter, Willa. When his evil nemesis resurfaces after 16 years and she goes missing, the former radical scrambles to find her, father and daughter both battling the consequences of his past.",
+              "posterPath": "https://image.tmdb.org/t/p/w300/r4uXvqCeco0KmO0CjlhXuTEFuSE.jpg",
+              "rating": 7.459,
+              "year": "2025",
+              "runtime": 162,
+              "trailerUrl": "https://www.youtube.com/watch?v=u6GVb4p7oD4"
+            },
+            {
               "title": "Yi Yi (2000) – 25th Anniversary 4K Restoration",
               "times": [
                 "2:45pm"
@@ -2123,7 +1927,7 @@
               "url": "https://www.lidocinemas.com.au/tickets?c=0000000003&s=99744",
               "overview": "A Taipei family faces personal and moral uncertainty as everyday events test their relationships and sense of purpose.",
               "posterPath": "https://image.tmdb.org/t/p/w300/mR8dSQZI8X6Z1NClJhFrtJp636z.jpg",
-              "rating": 7.914,
+              "rating": 7.9,
               "year": "2000",
               "runtime": 174,
               "trailerUrl": "https://www.youtube.com/watch?v=PxgrzNFwyqY"
@@ -2162,7 +1966,7 @@
               "url": "https://www.hoyts.com.au/movies/avatar-fire-and-ash",
               "overview": "In the wake of the devastating war against the RDA and the loss of their eldest son, Jake Sully and Neytiri face a new threat on Pandora: the Ash People, a violent and power-hungry Na'vi tribe led by the ruthless Varang. Jake's family must fight for their survival and the future of Pandora in a conflict that pushes them to their emotional and physical limits.",
               "posterPath": "https://image.tmdb.org/t/p/w300/cf7hE1ifY4UNbS25tGnaTyyDrI2.jpg",
-              "rating": 7.344,
+              "rating": 7.348,
               "year": "2025",
               "runtime": 198,
               "trailerUrl": "https://www.youtube.com/watch?v=lc_zY8gN_Ew"
@@ -2214,7 +2018,7 @@
               "url": "https://www.hoyts.com.au/movies/zootopia-2",
               "overview": "After cracking the biggest case in Zootopia's history, rookie cops Judy Hopps and Nick Wilde find themselves on the twisting trail of a great mystery when Gary De'Snake arrives and turns the animal metropolis upside down. To crack the case, Judy and Nick must go undercover to unexpected new parts of town, where their growing partnership is tested like never before.",
               "posterPath": "https://image.tmdb.org/t/p/w300/bjUWGw0Ao0qVWxagN3VCwBJHVo6.jpg",
-              "rating": 7.6,
+              "rating": 7.627,
               "year": "2025",
               "runtime": 107,
               "trailerUrl": "https://www.youtube.com/watch?v=5H7L9j0dW90"
@@ -2492,7 +2296,7 @@
               "url": "https://www.palacecinemas.com.au/movies/zootopia-2",
               "overview": "After cracking the biggest case in Zootopia's history, rookie cops Judy Hopps and Nick Wilde find themselves on the twisting trail of a great mystery when Gary De'Snake arrives and turns the animal metropolis upside down. To crack the case, Judy and Nick must go undercover to unexpected new parts of town, where their growing partnership is tested like never before.",
               "posterPath": "https://image.tmdb.org/t/p/w300/bjUWGw0Ao0qVWxagN3VCwBJHVo6.jpg",
-              "rating": 7.6,
+              "rating": 7.627,
               "year": "2025",
               "runtime": 107,
               "trailerUrl": "https://www.youtube.com/watch?v=5H7L9j0dW90"
@@ -2921,7 +2725,7 @@
               "url": "https://www.palacecinemas.com.au/movies/zootopia-2",
               "overview": "After cracking the biggest case in Zootopia's history, rookie cops Judy Hopps and Nick Wilde find themselves on the twisting trail of a great mystery when Gary De'Snake arrives and turns the animal metropolis upside down. To crack the case, Judy and Nick must go undercover to unexpected new parts of town, where their growing partnership is tested like never before.",
               "posterPath": "https://image.tmdb.org/t/p/w300/bjUWGw0Ao0qVWxagN3VCwBJHVo6.jpg",
-              "rating": 7.6,
+              "rating": 7.627,
               "year": "2025",
               "runtime": 107,
               "trailerUrl": "https://www.youtube.com/watch?v=5H7L9j0dW90"
@@ -3132,7 +2936,7 @@
               "url": "https://www.palacecinemas.com.au/movies/zootopia-2",
               "overview": "After cracking the biggest case in Zootopia's history, rookie cops Judy Hopps and Nick Wilde find themselves on the twisting trail of a great mystery when Gary De'Snake arrives and turns the animal metropolis upside down. To crack the case, Judy and Nick must go undercover to unexpected new parts of town, where their growing partnership is tested like never before.",
               "posterPath": "https://image.tmdb.org/t/p/w300/bjUWGw0Ao0qVWxagN3VCwBJHVo6.jpg",
-              "rating": 7.6,
+              "rating": 7.627,
               "year": "2025",
               "runtime": 107,
               "trailerUrl": "https://www.youtube.com/watch?v=5H7L9j0dW90"
@@ -3315,7 +3119,7 @@
               "url": "https://imaxmelbourne.com.au/movie/avatar-fire-ash",
               "overview": "In the wake of the devastating war against the RDA and the loss of their eldest son, Jake Sully and Neytiri face a new threat on Pandora: the Ash People, a violent and power-hungry Na'vi tribe led by the ruthless Varang. Jake's family must fight for their survival and the future of Pandora in a conflict that pushes them to their emotional and physical limits.",
               "posterPath": "https://image.tmdb.org/t/p/w300/cf7hE1ifY4UNbS25tGnaTyyDrI2.jpg",
-              "rating": 7.344,
+              "rating": 7.348,
               "year": "2025",
               "runtime": 198,
               "trailerUrl": "https://www.youtube.com/watch?v=lc_zY8gN_Ew"
@@ -3348,7 +3152,7 @@
               "url": "https://suntheatre.com.au/wp-cinema/movie/S25ZOOTOPIA2/ZOOTOPIA+2/",
               "overview": "After cracking the biggest case in Zootopia's history, rookie cops Judy Hopps and Nick Wilde find themselves on the twisting trail of a great mystery when Gary De'Snake arrives and turns the animal metropolis upside down. To crack the case, Judy and Nick must go undercover to unexpected new parts of town, where their growing partnership is tested like never before.",
               "posterPath": "https://image.tmdb.org/t/p/w300/bjUWGw0Ao0qVWxagN3VCwBJHVo6.jpg",
-              "rating": 7.6,
+              "rating": 7.627,
               "year": "2025",
               "runtime": 107,
               "trailerUrl": "https://www.youtube.com/watch?v=5H7L9j0dW90"
@@ -3377,7 +3181,7 @@
               "url": "https://suntheatre.com.au/wp-cinema/movie/S25AVATARFIREAND/AVATAR+FIRE+AND+ASH/",
               "overview": "In the wake of the devastating war against the RDA and the loss of their eldest son, Jake Sully and Neytiri face a new threat on Pandora: the Ash People, a violent and power-hungry Na'vi tribe led by the ruthless Varang. Jake's family must fight for their survival and the future of Pandora in a conflict that pushes them to their emotional and physical limits.",
               "posterPath": "https://image.tmdb.org/t/p/w300/cf7hE1ifY4UNbS25tGnaTyyDrI2.jpg",
-              "rating": 7.344,
+              "rating": 7.348,
               "year": "2025",
               "runtime": 198,
               "trailerUrl": "https://www.youtube.com/watch?v=lc_zY8gN_Ew"
@@ -3615,7 +3419,7 @@
               "url": "https://villagecinemas.com.au/cinemas/coburg-drive-in",
               "overview": "In the wake of the devastating war against the RDA and the loss of their eldest son, Jake Sully and Neytiri face a new threat on Pandora: the Ash People, a violent and power-hungry Na'vi tribe led by the ruthless Varang. Jake's family must fight for their survival and the future of Pandora in a conflict that pushes them to their emotional and physical limits.",
               "posterPath": "https://image.tmdb.org/t/p/w300/cf7hE1ifY4UNbS25tGnaTyyDrI2.jpg",
-              "rating": 7.344,
+              "rating": 7.348,
               "year": "2025",
               "runtime": 198,
               "trailerUrl": "https://www.youtube.com/watch?v=lc_zY8gN_Ew"
@@ -3628,7 +3432,7 @@
               "url": "https://villagecinemas.com.au/cinemas/coburg-drive-in",
               "overview": "One year since the supernatural nightmare at Freddy Fazbear's Pizza, the stories about what transpired there have been twisted into a campy local legend, inspiring the town's first ever Fazfest. With the truth kept from her, Abby sneaks out to reconnect with Freddy, Bonnie, Chica, and Foxy, setting into motion a terrifying series of events that will reveal dark secrets about the real origin of Freddy's, and unleash a decades-hidden horror.",
               "posterPath": "https://image.tmdb.org/t/p/w300/udAxQEORq2I5wxI97N2TEqdhzBE.jpg",
-              "rating": 6.791,
+              "rating": 6.795,
               "year": "2025",
               "runtime": 104,
               "trailerUrl": "https://www.youtube.com/watch?v=VWfTR7ptRsQ"
@@ -3851,12 +3655,12 @@
                 "7:45pm"
               ],
               "url": "https://www.cinemanova.com.au/films/resurrection",
-              "overview": "A jaded homicide detective has been put on the case of a ruthless killer in the city of Chicago, who leaves a trail of horribly mutilated and dismembered corpses along with perversely ironic biblical quotes.",
-              "posterPath": "https://image.tmdb.org/t/p/w300/2j6cMHN1Mx1u8S897VVhO7wSrce.jpg",
-              "rating": 6.114,
-              "year": "1999",
-              "runtime": 108,
-              "trailerUrl": "https://www.youtube.com/watch?v=XxSMzmBz5oY"
+              "overview": "In a future where humanity has surrendered its ability to dream in exchange for immortality, an outcast finds illusion, nightmarish visions, and beauty in an intoxicating world of his own making.",
+              "posterPath": "https://image.tmdb.org/t/p/w300/wBXvXc7CoE1TCEL96VzMkMQKYG9.jpg",
+              "rating": 7.155,
+              "year": "2025",
+              "runtime": 160,
+              "trailerUrl": "https://www.youtube.com/watch?v=ZIJezWgFUEY"
             },
             {
               "title": "Song Sung Blue",
@@ -4022,7 +3826,7 @@
               "url": "https://www.cinemanova.com.au/films/avatar-fire-and-ash",
               "overview": "In the wake of the devastating war against the RDA and the loss of their eldest son, Jake Sully and Neytiri face a new threat on Pandora: the Ash People, a violent and power-hungry Na'vi tribe led by the ruthless Varang. Jake's family must fight for their survival and the future of Pandora in a conflict that pushes them to their emotional and physical limits.",
               "posterPath": "https://image.tmdb.org/t/p/w300/cf7hE1ifY4UNbS25tGnaTyyDrI2.jpg",
-              "rating": 7.344,
+              "rating": 7.348,
               "year": "2025",
               "runtime": 198,
               "trailerUrl": "https://www.youtube.com/watch?v=lc_zY8gN_Ew"
@@ -4311,20 +4115,6 @@
               "trailerUrl": "https://www.youtube.com/watch?v=Fkbj5F9qvvE"
             },
             {
-              "title": "Song Sung Blue",
-              "times": [
-                "3:40pm",
-                "8:25pm"
-              ],
-              "url": "https://www.lidocinemas.com.au/tickets?c=0000000003&s=99702",
-              "overview": "Based on a true story, two down-on-their-luck musicians form a joyous Neil Diamond tribute band, proving it's never too late to find love and follow your dreams.",
-              "posterPath": "https://image.tmdb.org/t/p/w300/3HsIAbHWbFDUbY2jfj4wqEjGC3b.jpg",
-              "rating": 7.433,
-              "year": "2025",
-              "runtime": 133,
-              "trailerUrl": "https://www.youtube.com/watch?v=ssZU6xUM-YI"
-            },
-            {
               "title": "Anaconda",
               "times": [
                 "4:15pm"
@@ -4352,6 +4142,20 @@
               "trailerUrl": "https://www.youtube.com/watch?v=hLa7v6TRB_E"
             },
             {
+              "title": "Song Sung Blue",
+              "times": [
+                "3:40pm",
+                "8:25pm"
+              ],
+              "url": "https://www.lidocinemas.com.au/tickets?c=0000000003&s=99702",
+              "overview": "Based on a true story, two down-on-their-luck musicians form a joyous Neil Diamond tribute band, proving it's never too late to find love and follow your dreams.",
+              "posterPath": "https://image.tmdb.org/t/p/w300/3HsIAbHWbFDUbY2jfj4wqEjGC3b.jpg",
+              "rating": 7.433,
+              "year": "2025",
+              "runtime": 133,
+              "trailerUrl": "https://www.youtube.com/watch?v=ssZU6xUM-YI"
+            },
+            {
               "title": "Avatar: Fire and Ash",
               "times": [
                 "12:10pm"
@@ -4359,7 +4163,7 @@
               "url": "https://www.lidocinemas.com.au/tickets?c=0000000003&s=99703",
               "overview": "In the wake of the devastating war against the RDA and the loss of their eldest son, Jake Sully and Neytiri face a new threat on Pandora: the Ash People, a violent and power-hungry Na'vi tribe led by the ruthless Varang. Jake's family must fight for their survival and the future of Pandora in a conflict that pushes them to their emotional and physical limits.",
               "posterPath": "https://image.tmdb.org/t/p/w300/cf7hE1ifY4UNbS25tGnaTyyDrI2.jpg",
-              "rating": 7.344,
+              "rating": 7.348,
               "year": "2025",
               "runtime": 198,
               "trailerUrl": "https://www.youtube.com/watch?v=lc_zY8gN_Ew"
@@ -4373,7 +4177,7 @@
               "url": "https://www.lidocinemas.com.au/tickets?c=0000000003&s=99713",
               "overview": "After cracking the biggest case in Zootopia's history, rookie cops Judy Hopps and Nick Wilde find themselves on the twisting trail of a great mystery when Gary De'Snake arrives and turns the animal metropolis upside down. To crack the case, Judy and Nick must go undercover to unexpected new parts of town, where their growing partnership is tested like never before.",
               "posterPath": "https://image.tmdb.org/t/p/w300/bjUWGw0Ao0qVWxagN3VCwBJHVo6.jpg",
-              "rating": 7.6,
+              "rating": 7.627,
               "year": "2025",
               "runtime": 107,
               "trailerUrl": "https://www.youtube.com/watch?v=5H7L9j0dW90"
@@ -4467,12 +4271,12 @@
                 "2:20pm"
               ],
               "url": "https://www.lidocinemas.com.au/tickets?c=0000000003&s=99711",
-              "overview": "A jaded homicide detective has been put on the case of a ruthless killer in the city of Chicago, who leaves a trail of horribly mutilated and dismembered corpses along with perversely ironic biblical quotes.",
-              "posterPath": "https://image.tmdb.org/t/p/w300/2j6cMHN1Mx1u8S897VVhO7wSrce.jpg",
-              "rating": 6.114,
-              "year": "1999",
-              "runtime": 108,
-              "trailerUrl": "https://www.youtube.com/watch?v=XxSMzmBz5oY"
+              "overview": "In a future where humanity has surrendered its ability to dream in exchange for immortality, an outcast finds illusion, nightmarish visions, and beauty in an intoxicating world of his own making.",
+              "posterPath": "https://image.tmdb.org/t/p/w300/wBXvXc7CoE1TCEL96VzMkMQKYG9.jpg",
+              "rating": 7.155,
+              "year": "2025",
+              "runtime": 160,
+              "trailerUrl": "https://www.youtube.com/watch?v=ZIJezWgFUEY"
             },
             {
               "title": "The Pout-Pout Fish",
@@ -4560,7 +4364,7 @@
               "url": "https://www.hoyts.com.au/movies/avatar-fire-and-ash",
               "overview": "In the wake of the devastating war against the RDA and the loss of their eldest son, Jake Sully and Neytiri face a new threat on Pandora: the Ash People, a violent and power-hungry Na'vi tribe led by the ruthless Varang. Jake's family must fight for their survival and the future of Pandora in a conflict that pushes them to their emotional and physical limits.",
               "posterPath": "https://image.tmdb.org/t/p/w300/cf7hE1ifY4UNbS25tGnaTyyDrI2.jpg",
-              "rating": 7.344,
+              "rating": 7.348,
               "year": "2025",
               "runtime": 198,
               "trailerUrl": "https://www.youtube.com/watch?v=lc_zY8gN_Ew"
@@ -4611,7 +4415,7 @@
               "url": "https://www.hoyts.com.au/movies/zootopia-2",
               "overview": "After cracking the biggest case in Zootopia's history, rookie cops Judy Hopps and Nick Wilde find themselves on the twisting trail of a great mystery when Gary De'Snake arrives and turns the animal metropolis upside down. To crack the case, Judy and Nick must go undercover to unexpected new parts of town, where their growing partnership is tested like never before.",
               "posterPath": "https://image.tmdb.org/t/p/w300/bjUWGw0Ao0qVWxagN3VCwBJHVo6.jpg",
-              "rating": 7.6,
+              "rating": 7.627,
               "year": "2025",
               "runtime": 107,
               "trailerUrl": "https://www.youtube.com/watch?v=5H7L9j0dW90"
@@ -4914,7 +4718,7 @@
               "url": "https://www.palacecinemas.com.au/movies/zootopia-2",
               "overview": "After cracking the biggest case in Zootopia's history, rookie cops Judy Hopps and Nick Wilde find themselves on the twisting trail of a great mystery when Gary De'Snake arrives and turns the animal metropolis upside down. To crack the case, Judy and Nick must go undercover to unexpected new parts of town, where their growing partnership is tested like never before.",
               "posterPath": "https://image.tmdb.org/t/p/w300/bjUWGw0Ao0qVWxagN3VCwBJHVo6.jpg",
-              "rating": 7.6,
+              "rating": 7.627,
               "year": "2025",
               "runtime": 107,
               "trailerUrl": "https://www.youtube.com/watch?v=5H7L9j0dW90"
@@ -5343,7 +5147,7 @@
               "url": "https://www.palacecinemas.com.au/movies/zootopia-2",
               "overview": "After cracking the biggest case in Zootopia's history, rookie cops Judy Hopps and Nick Wilde find themselves on the twisting trail of a great mystery when Gary De'Snake arrives and turns the animal metropolis upside down. To crack the case, Judy and Nick must go undercover to unexpected new parts of town, where their growing partnership is tested like never before.",
               "posterPath": "https://image.tmdb.org/t/p/w300/bjUWGw0Ao0qVWxagN3VCwBJHVo6.jpg",
-              "rating": 7.6,
+              "rating": 7.627,
               "year": "2025",
               "runtime": 107,
               "trailerUrl": "https://www.youtube.com/watch?v=5H7L9j0dW90"
@@ -5566,7 +5370,7 @@
               "url": "https://www.palacecinemas.com.au/movies/zootopia-2",
               "overview": "After cracking the biggest case in Zootopia's history, rookie cops Judy Hopps and Nick Wilde find themselves on the twisting trail of a great mystery when Gary De'Snake arrives and turns the animal metropolis upside down. To crack the case, Judy and Nick must go undercover to unexpected new parts of town, where their growing partnership is tested like never before.",
               "posterPath": "https://image.tmdb.org/t/p/w300/bjUWGw0Ao0qVWxagN3VCwBJHVo6.jpg",
-              "rating": 7.6,
+              "rating": 7.627,
               "year": "2025",
               "runtime": 107,
               "trailerUrl": "https://www.youtube.com/watch?v=5H7L9j0dW90"
@@ -5749,7 +5553,7 @@
               "url": "https://imaxmelbourne.com.au/movie/avatar-fire-ash",
               "overview": "In the wake of the devastating war against the RDA and the loss of their eldest son, Jake Sully and Neytiri face a new threat on Pandora: the Ash People, a violent and power-hungry Na'vi tribe led by the ruthless Varang. Jake's family must fight for their survival and the future of Pandora in a conflict that pushes them to their emotional and physical limits.",
               "posterPath": "https://image.tmdb.org/t/p/w300/cf7hE1ifY4UNbS25tGnaTyyDrI2.jpg",
-              "rating": 7.344,
+              "rating": 7.348,
               "year": "2025",
               "runtime": 198,
               "trailerUrl": "https://www.youtube.com/watch?v=lc_zY8gN_Ew"
@@ -5782,7 +5586,7 @@
               "url": "https://suntheatre.com.au/wp-cinema/movie/S25ZOOTOPIA2/ZOOTOPIA+2/",
               "overview": "After cracking the biggest case in Zootopia's history, rookie cops Judy Hopps and Nick Wilde find themselves on the twisting trail of a great mystery when Gary De'Snake arrives and turns the animal metropolis upside down. To crack the case, Judy and Nick must go undercover to unexpected new parts of town, where their growing partnership is tested like never before.",
               "posterPath": "https://image.tmdb.org/t/p/w300/bjUWGw0Ao0qVWxagN3VCwBJHVo6.jpg",
-              "rating": 7.6,
+              "rating": 7.627,
               "year": "2025",
               "runtime": 107,
               "trailerUrl": "https://www.youtube.com/watch?v=5H7L9j0dW90"
@@ -5811,7 +5615,7 @@
               "url": "https://suntheatre.com.au/wp-cinema/movie/S25AVATARFIREAND/AVATAR+FIRE+AND+ASH/",
               "overview": "In the wake of the devastating war against the RDA and the loss of their eldest son, Jake Sully and Neytiri face a new threat on Pandora: the Ash People, a violent and power-hungry Na'vi tribe led by the ruthless Varang. Jake's family must fight for their survival and the future of Pandora in a conflict that pushes them to their emotional and physical limits.",
               "posterPath": "https://image.tmdb.org/t/p/w300/cf7hE1ifY4UNbS25tGnaTyyDrI2.jpg",
-              "rating": 7.344,
+              "rating": 7.348,
               "year": "2025",
               "runtime": 198,
               "trailerUrl": "https://www.youtube.com/watch?v=lc_zY8gN_Ew"
@@ -6075,7 +5879,7 @@
               "url": "https://villagecinemas.com.au/cinemas/coburg-drive-in",
               "overview": "In the wake of the devastating war against the RDA and the loss of their eldest son, Jake Sully and Neytiri face a new threat on Pandora: the Ash People, a violent and power-hungry Na'vi tribe led by the ruthless Varang. Jake's family must fight for their survival and the future of Pandora in a conflict that pushes them to their emotional and physical limits.",
               "posterPath": "https://image.tmdb.org/t/p/w300/cf7hE1ifY4UNbS25tGnaTyyDrI2.jpg",
-              "rating": 7.344,
+              "rating": 7.348,
               "year": "2025",
               "runtime": 198,
               "trailerUrl": "https://www.youtube.com/watch?v=lc_zY8gN_Ew"
@@ -6348,12 +6152,12 @@
                 "10:15am"
               ],
               "url": "https://www.cinemanova.com.au/films/flow",
-              "overview": "As the ‘flow’ progresses, the world where our ‘giant’ once stood gradually fades away, replaced by their inner worlds. Our ‘giant’ continues to advance endlessly, questioning the relationship between the world and oneself.",
-              "posterPath": null,
-              "rating": 8,
+              "overview": "A solitary cat, displaced by a great flood, finds refuge on a boat with various species and must navigate the challenges of adapting to a transformed world together.",
+              "posterPath": "https://image.tmdb.org/t/p/w300/zME0Ul0w48MKkYBnFRn40M5qgLh.jpg",
+              "rating": 8.106,
               "year": "2024",
-              "runtime": 8,
-              "trailerUrl": null
+              "runtime": 85,
+              "trailerUrl": "https://www.youtube.com/watch?v=xLTJ6-8e46M"
             },
             {
               "title": "Resurrection",
@@ -6363,12 +6167,12 @@
                 "7:45pm"
               ],
               "url": "https://www.cinemanova.com.au/films/resurrection",
-              "overview": "A jaded homicide detective has been put on the case of a ruthless killer in the city of Chicago, who leaves a trail of horribly mutilated and dismembered corpses along with perversely ironic biblical quotes.",
-              "posterPath": "https://image.tmdb.org/t/p/w300/2j6cMHN1Mx1u8S897VVhO7wSrce.jpg",
-              "rating": 6.114,
-              "year": "1999",
-              "runtime": 108,
-              "trailerUrl": "https://www.youtube.com/watch?v=XxSMzmBz5oY"
+              "overview": "In a future where humanity has surrendered its ability to dream in exchange for immortality, an outcast finds illusion, nightmarish visions, and beauty in an intoxicating world of his own making.",
+              "posterPath": "https://image.tmdb.org/t/p/w300/wBXvXc7CoE1TCEL96VzMkMQKYG9.jpg",
+              "rating": 7.155,
+              "year": "2025",
+              "runtime": 160,
+              "trailerUrl": "https://www.youtube.com/watch?v=ZIJezWgFUEY"
             },
             {
               "title": "Song Sung Blue",
@@ -6532,7 +6336,7 @@
               "url": "https://www.cinemanova.com.au/films/avatar-fire-and-ash",
               "overview": "In the wake of the devastating war against the RDA and the loss of their eldest son, Jake Sully and Neytiri face a new threat on Pandora: the Ash People, a violent and power-hungry Na'vi tribe led by the ruthless Varang. Jake's family must fight for their survival and the future of Pandora in a conflict that pushes them to their emotional and physical limits.",
               "posterPath": "https://image.tmdb.org/t/p/w300/cf7hE1ifY4UNbS25tGnaTyyDrI2.jpg",
-              "rating": 7.344,
+              "rating": 7.348,
               "year": "2025",
               "runtime": 198,
               "trailerUrl": "https://www.youtube.com/watch?v=lc_zY8gN_Ew"
@@ -6826,20 +6630,6 @@
               "trailerUrl": "https://www.youtube.com/watch?v=Fkbj5F9qvvE"
             },
             {
-              "title": "Song Sung Blue",
-              "times": [
-                "1:30pm",
-                "8:15pm"
-              ],
-              "url": "https://www.lidocinemas.com.au/tickets?c=0000000003&s=99640",
-              "overview": "Based on a true story, two down-on-their-luck musicians form a joyous Neil Diamond tribute band, proving it's never too late to find love and follow your dreams.",
-              "posterPath": "https://image.tmdb.org/t/p/w300/3HsIAbHWbFDUbY2jfj4wqEjGC3b.jpg",
-              "rating": 7.433,
-              "year": "2025",
-              "runtime": 133,
-              "trailerUrl": "https://www.youtube.com/watch?v=ssZU6xUM-YI"
-            },
-            {
               "title": "Anaconda",
               "times": [
                 "12:10pm",
@@ -6868,6 +6658,20 @@
               "trailerUrl": "https://www.youtube.com/watch?v=hLa7v6TRB_E"
             },
             {
+              "title": "Song Sung Blue",
+              "times": [
+                "1:30pm",
+                "8:15pm"
+              ],
+              "url": "https://www.lidocinemas.com.au/tickets?c=0000000003&s=99640",
+              "overview": "Based on a true story, two down-on-their-luck musicians form a joyous Neil Diamond tribute band, proving it's never too late to find love and follow your dreams.",
+              "posterPath": "https://image.tmdb.org/t/p/w300/3HsIAbHWbFDUbY2jfj4wqEjGC3b.jpg",
+              "rating": 7.433,
+              "year": "2025",
+              "runtime": 133,
+              "trailerUrl": "https://www.youtube.com/watch?v=ssZU6xUM-YI"
+            },
+            {
               "title": "Avatar: Fire and Ash",
               "times": [
                 "10:30am",
@@ -6876,7 +6680,7 @@
               "url": "https://www.lidocinemas.com.au/tickets?c=0000000003&s=99639",
               "overview": "In the wake of the devastating war against the RDA and the loss of their eldest son, Jake Sully and Neytiri face a new threat on Pandora: the Ash People, a violent and power-hungry Na'vi tribe led by the ruthless Varang. Jake's family must fight for their survival and the future of Pandora in a conflict that pushes them to their emotional and physical limits.",
               "posterPath": "https://image.tmdb.org/t/p/w300/cf7hE1ifY4UNbS25tGnaTyyDrI2.jpg",
-              "rating": 7.344,
+              "rating": 7.348,
               "year": "2025",
               "runtime": 198,
               "trailerUrl": "https://www.youtube.com/watch?v=lc_zY8gN_Ew"
@@ -6889,7 +6693,7 @@
               "url": "https://www.lidocinemas.com.au/tickets?c=0000000003&s=99642",
               "overview": "After cracking the biggest case in Zootopia's history, rookie cops Judy Hopps and Nick Wilde find themselves on the twisting trail of a great mystery when Gary De'Snake arrives and turns the animal metropolis upside down. To crack the case, Judy and Nick must go undercover to unexpected new parts of town, where their growing partnership is tested like never before.",
               "posterPath": "https://image.tmdb.org/t/p/w300/bjUWGw0Ao0qVWxagN3VCwBJHVo6.jpg",
-              "rating": 7.6,
+              "rating": 7.627,
               "year": "2025",
               "runtime": 107,
               "trailerUrl": "https://www.youtube.com/watch?v=5H7L9j0dW90"
@@ -6962,6 +6766,19 @@
               "trailerUrl": "https://www.youtube.com/watch?v=gZ6pPFK6kaQ"
             },
             {
+              "title": "Resurrection",
+              "times": [
+                "2:20pm"
+              ],
+              "url": "https://www.lidocinemas.com.au/tickets?c=0000000003&s=99648",
+              "overview": "In a future where humanity has surrendered its ability to dream in exchange for immortality, an outcast finds illusion, nightmarish visions, and beauty in an intoxicating world of his own making.",
+              "posterPath": "https://image.tmdb.org/t/p/w300/wBXvXc7CoE1TCEL96VzMkMQKYG9.jpg",
+              "rating": 7.155,
+              "year": "2025",
+              "runtime": 160,
+              "trailerUrl": "https://www.youtube.com/watch?v=ZIJezWgFUEY"
+            },
+            {
               "title": "One Battle After Another",
               "times": [
                 "8:20pm"
@@ -6975,19 +6792,6 @@
               "trailerUrl": "https://www.youtube.com/watch?v=u6GVb4p7oD4"
             },
             {
-              "title": "Resurrection",
-              "times": [
-                "2:20pm"
-              ],
-              "url": "https://www.lidocinemas.com.au/tickets?c=0000000003&s=99648",
-              "overview": "A jaded homicide detective has been put on the case of a ruthless killer in the city of Chicago, who leaves a trail of horribly mutilated and dismembered corpses along with perversely ironic biblical quotes.",
-              "posterPath": "https://image.tmdb.org/t/p/w300/2j6cMHN1Mx1u8S897VVhO7wSrce.jpg",
-              "rating": 6.114,
-              "year": "1999",
-              "runtime": 108,
-              "trailerUrl": "https://www.youtube.com/watch?v=XxSMzmBz5oY"
-            },
-            {
               "title": "Yi Yi (2000) – 25th Anniversary 4K Restoration",
               "times": [
                 "2:20pm"
@@ -6995,7 +6799,7 @@
               "url": "https://www.lidocinemas.com.au/tickets?c=0000000003&s=99650",
               "overview": "A Taipei family faces personal and moral uncertainty as everyday events test their relationships and sense of purpose.",
               "posterPath": "https://image.tmdb.org/t/p/w300/mR8dSQZI8X6Z1NClJhFrtJp636z.jpg",
-              "rating": 7.914,
+              "rating": 7.9,
               "year": "2000",
               "runtime": 174,
               "trailerUrl": "https://www.youtube.com/watch?v=PxgrzNFwyqY"
@@ -7072,7 +6876,7 @@
               "url": "https://www.hoyts.com.au/movies/avatar-fire-and-ash",
               "overview": "In the wake of the devastating war against the RDA and the loss of their eldest son, Jake Sully and Neytiri face a new threat on Pandora: the Ash People, a violent and power-hungry Na'vi tribe led by the ruthless Varang. Jake's family must fight for their survival and the future of Pandora in a conflict that pushes them to their emotional and physical limits.",
               "posterPath": "https://image.tmdb.org/t/p/w300/cf7hE1ifY4UNbS25tGnaTyyDrI2.jpg",
-              "rating": 7.344,
+              "rating": 7.348,
               "year": "2025",
               "runtime": 198,
               "trailerUrl": "https://www.youtube.com/watch?v=lc_zY8gN_Ew"
@@ -7123,7 +6927,7 @@
               "url": "https://www.hoyts.com.au/movies/zootopia-2",
               "overview": "After cracking the biggest case in Zootopia's history, rookie cops Judy Hopps and Nick Wilde find themselves on the twisting trail of a great mystery when Gary De'Snake arrives and turns the animal metropolis upside down. To crack the case, Judy and Nick must go undercover to unexpected new parts of town, where their growing partnership is tested like never before.",
               "posterPath": "https://image.tmdb.org/t/p/w300/bjUWGw0Ao0qVWxagN3VCwBJHVo6.jpg",
-              "rating": 7.6,
+              "rating": 7.627,
               "year": "2025",
               "runtime": 107,
               "trailerUrl": "https://www.youtube.com/watch?v=5H7L9j0dW90"
@@ -7483,7 +7287,7 @@
               "url": "https://www.palacecinemas.com.au/movies/zootopia-2",
               "overview": "After cracking the biggest case in Zootopia's history, rookie cops Judy Hopps and Nick Wilde find themselves on the twisting trail of a great mystery when Gary De'Snake arrives and turns the animal metropolis upside down. To crack the case, Judy and Nick must go undercover to unexpected new parts of town, where their growing partnership is tested like never before.",
               "posterPath": "https://image.tmdb.org/t/p/w300/bjUWGw0Ao0qVWxagN3VCwBJHVo6.jpg",
-              "rating": 7.6,
+              "rating": 7.627,
               "year": "2025",
               "runtime": 107,
               "trailerUrl": "https://www.youtube.com/watch?v=5H7L9j0dW90"
@@ -7936,7 +7740,7 @@
               "url": "https://www.palacecinemas.com.au/movies/zootopia-2",
               "overview": "After cracking the biggest case in Zootopia's history, rookie cops Judy Hopps and Nick Wilde find themselves on the twisting trail of a great mystery when Gary De'Snake arrives and turns the animal metropolis upside down. To crack the case, Judy and Nick must go undercover to unexpected new parts of town, where their growing partnership is tested like never before.",
               "posterPath": "https://image.tmdb.org/t/p/w300/bjUWGw0Ao0qVWxagN3VCwBJHVo6.jpg",
-              "rating": 7.6,
+              "rating": 7.627,
               "year": "2025",
               "runtime": 107,
               "trailerUrl": "https://www.youtube.com/watch?v=5H7L9j0dW90"
@@ -8159,7 +7963,7 @@
               "url": "https://www.palacecinemas.com.au/movies/zootopia-2",
               "overview": "After cracking the biggest case in Zootopia's history, rookie cops Judy Hopps and Nick Wilde find themselves on the twisting trail of a great mystery when Gary De'Snake arrives and turns the animal metropolis upside down. To crack the case, Judy and Nick must go undercover to unexpected new parts of town, where their growing partnership is tested like never before.",
               "posterPath": "https://image.tmdb.org/t/p/w300/bjUWGw0Ao0qVWxagN3VCwBJHVo6.jpg",
-              "rating": 7.6,
+              "rating": 7.627,
               "year": "2025",
               "runtime": 107,
               "trailerUrl": "https://www.youtube.com/watch?v=5H7L9j0dW90"
@@ -8329,7 +8133,7 @@
               "url": "https://imaxmelbourne.com.au/movie/avatar-fire-ash",
               "overview": "In the wake of the devastating war against the RDA and the loss of their eldest son, Jake Sully and Neytiri face a new threat on Pandora: the Ash People, a violent and power-hungry Na'vi tribe led by the ruthless Varang. Jake's family must fight for their survival and the future of Pandora in a conflict that pushes them to their emotional and physical limits.",
               "posterPath": "https://image.tmdb.org/t/p/w300/cf7hE1ifY4UNbS25tGnaTyyDrI2.jpg",
-              "rating": 7.344,
+              "rating": 7.348,
               "year": "2025",
               "runtime": 198,
               "trailerUrl": "https://www.youtube.com/watch?v=lc_zY8gN_Ew"
@@ -8375,7 +8179,7 @@
               "url": "https://suntheatre.com.au/wp-cinema/movie/S25ZOOTOPIA2/ZOOTOPIA+2/",
               "overview": "After cracking the biggest case in Zootopia's history, rookie cops Judy Hopps and Nick Wilde find themselves on the twisting trail of a great mystery when Gary De'Snake arrives and turns the animal metropolis upside down. To crack the case, Judy and Nick must go undercover to unexpected new parts of town, where their growing partnership is tested like never before.",
               "posterPath": "https://image.tmdb.org/t/p/w300/bjUWGw0Ao0qVWxagN3VCwBJHVo6.jpg",
-              "rating": 7.6,
+              "rating": 7.627,
               "year": "2025",
               "runtime": 107,
               "trailerUrl": "https://www.youtube.com/watch?v=5H7L9j0dW90"
@@ -8404,7 +8208,7 @@
               "url": "https://suntheatre.com.au/wp-cinema/movie/S25AVATARFIREAND/AVATAR+FIRE+AND+ASH/",
               "overview": "In the wake of the devastating war against the RDA and the loss of their eldest son, Jake Sully and Neytiri face a new threat on Pandora: the Ash People, a violent and power-hungry Na'vi tribe led by the ruthless Varang. Jake's family must fight for their survival and the future of Pandora in a conflict that pushes them to their emotional and physical limits.",
               "posterPath": "https://image.tmdb.org/t/p/w300/cf7hE1ifY4UNbS25tGnaTyyDrI2.jpg",
-              "rating": 7.344,
+              "rating": 7.348,
               "year": "2025",
               "runtime": 198,
               "trailerUrl": "https://www.youtube.com/watch?v=lc_zY8gN_Ew"
@@ -8668,7 +8472,7 @@
               "url": "https://villagecinemas.com.au/cinemas/coburg-drive-in",
               "overview": "In the wake of the devastating war against the RDA and the loss of their eldest son, Jake Sully and Neytiri face a new threat on Pandora: the Ash People, a violent and power-hungry Na'vi tribe led by the ruthless Varang. Jake's family must fight for their survival and the future of Pandora in a conflict that pushes them to their emotional and physical limits.",
               "posterPath": "https://image.tmdb.org/t/p/w300/cf7hE1ifY4UNbS25tGnaTyyDrI2.jpg",
-              "rating": 7.344,
+              "rating": 7.348,
               "year": "2025",
               "runtime": 198,
               "trailerUrl": "https://www.youtube.com/watch?v=lc_zY8gN_Ew"
@@ -8704,12 +8508,12 @@
                 "1:30pm"
               ],
               "url": "https://www.acmi.net.au/whats-on/best-of-2025/flow/",
-              "overview": "As the ‘flow’ progresses, the world where our ‘giant’ once stood gradually fades away, replaced by their inner worlds. Our ‘giant’ continues to advance endlessly, questioning the relationship between the world and oneself.",
-              "posterPath": null,
-              "rating": 8,
+              "overview": "A solitary cat, displaced by a great flood, finds refuge on a boat with various species and must navigate the challenges of adapting to a transformed world together.",
+              "posterPath": "https://image.tmdb.org/t/p/w300/zME0Ul0w48MKkYBnFRn40M5qgLh.jpg",
+              "rating": 8.106,
               "year": "2024",
-              "runtime": 8,
-              "trailerUrl": null
+              "runtime": 85,
+              "trailerUrl": "https://www.youtube.com/watch?v=xLTJ6-8e46M"
             }
           ]
         },
@@ -8863,12 +8667,12 @@
                 "10:15am"
               ],
               "url": "https://www.cinemanova.com.au/films/flow",
-              "overview": "As the ‘flow’ progresses, the world where our ‘giant’ once stood gradually fades away, replaced by their inner worlds. Our ‘giant’ continues to advance endlessly, questioning the relationship between the world and oneself.",
-              "posterPath": null,
-              "rating": 8,
+              "overview": "A solitary cat, displaced by a great flood, finds refuge on a boat with various species and must navigate the challenges of adapting to a transformed world together.",
+              "posterPath": "https://image.tmdb.org/t/p/w300/zME0Ul0w48MKkYBnFRn40M5qgLh.jpg",
+              "rating": 8.106,
               "year": "2024",
-              "runtime": 8,
-              "trailerUrl": null
+              "runtime": 85,
+              "trailerUrl": "https://www.youtube.com/watch?v=xLTJ6-8e46M"
             },
             {
               "title": "Resurrection",
@@ -8878,12 +8682,12 @@
                 "7:45pm"
               ],
               "url": "https://www.cinemanova.com.au/films/resurrection",
-              "overview": "A jaded homicide detective has been put on the case of a ruthless killer in the city of Chicago, who leaves a trail of horribly mutilated and dismembered corpses along with perversely ironic biblical quotes.",
-              "posterPath": "https://image.tmdb.org/t/p/w300/2j6cMHN1Mx1u8S897VVhO7wSrce.jpg",
-              "rating": 6.114,
-              "year": "1999",
-              "runtime": 108,
-              "trailerUrl": "https://www.youtube.com/watch?v=XxSMzmBz5oY"
+              "overview": "In a future where humanity has surrendered its ability to dream in exchange for immortality, an outcast finds illusion, nightmarish visions, and beauty in an intoxicating world of his own making.",
+              "posterPath": "https://image.tmdb.org/t/p/w300/wBXvXc7CoE1TCEL96VzMkMQKYG9.jpg",
+              "rating": 7.155,
+              "year": "2025",
+              "runtime": 160,
+              "trailerUrl": "https://www.youtube.com/watch?v=ZIJezWgFUEY"
             },
             {
               "title": "Song Sung Blue",
@@ -9047,7 +8851,7 @@
               "url": "https://www.cinemanova.com.au/films/avatar-fire-and-ash",
               "overview": "In the wake of the devastating war against the RDA and the loss of their eldest son, Jake Sully and Neytiri face a new threat on Pandora: the Ash People, a violent and power-hungry Na'vi tribe led by the ruthless Varang. Jake's family must fight for their survival and the future of Pandora in a conflict that pushes them to their emotional and physical limits.",
               "posterPath": "https://image.tmdb.org/t/p/w300/cf7hE1ifY4UNbS25tGnaTyyDrI2.jpg",
-              "rating": 7.344,
+              "rating": 7.348,
               "year": "2025",
               "runtime": 198,
               "trailerUrl": "https://www.youtube.com/watch?v=lc_zY8gN_Ew"
@@ -9368,20 +9172,6 @@
               "trailerUrl": "https://www.youtube.com/watch?v=Fkbj5F9qvvE"
             },
             {
-              "title": "Song Sung Blue",
-              "times": [
-                "1:20pm",
-                "8:20pm"
-              ],
-              "url": "https://www.lidocinemas.com.au/tickets?c=0000000003&s=99668",
-              "overview": "Based on a true story, two down-on-their-luck musicians form a joyous Neil Diamond tribute band, proving it's never too late to find love and follow your dreams.",
-              "posterPath": "https://image.tmdb.org/t/p/w300/3HsIAbHWbFDUbY2jfj4wqEjGC3b.jpg",
-              "rating": 7.433,
-              "year": "2025",
-              "runtime": 133,
-              "trailerUrl": "https://www.youtube.com/watch?v=ssZU6xUM-YI"
-            },
-            {
               "title": "Anaconda",
               "times": [
                 "12:45pm"
@@ -9409,6 +9199,20 @@
               "trailerUrl": "https://www.youtube.com/watch?v=hLa7v6TRB_E"
             },
             {
+              "title": "Song Sung Blue",
+              "times": [
+                "1:20pm",
+                "8:20pm"
+              ],
+              "url": "https://www.lidocinemas.com.au/tickets?c=0000000003&s=99668",
+              "overview": "Based on a true story, two down-on-their-luck musicians form a joyous Neil Diamond tribute band, proving it's never too late to find love and follow your dreams.",
+              "posterPath": "https://image.tmdb.org/t/p/w300/3HsIAbHWbFDUbY2jfj4wqEjGC3b.jpg",
+              "rating": 7.433,
+              "year": "2025",
+              "runtime": 133,
+              "trailerUrl": "https://www.youtube.com/watch?v=ssZU6xUM-YI"
+            },
+            {
               "title": "Avatar: Fire and Ash",
               "times": [
                 "10:10am",
@@ -9417,7 +9221,7 @@
               "url": "https://www.lidocinemas.com.au/tickets?c=0000000003&s=99669",
               "overview": "In the wake of the devastating war against the RDA and the loss of their eldest son, Jake Sully and Neytiri face a new threat on Pandora: the Ash People, a violent and power-hungry Na'vi tribe led by the ruthless Varang. Jake's family must fight for their survival and the future of Pandora in a conflict that pushes them to their emotional and physical limits.",
               "posterPath": "https://image.tmdb.org/t/p/w300/cf7hE1ifY4UNbS25tGnaTyyDrI2.jpg",
-              "rating": 7.344,
+              "rating": 7.348,
               "year": "2025",
               "runtime": 198,
               "trailerUrl": "https://www.youtube.com/watch?v=lc_zY8gN_Ew"
@@ -9430,7 +9234,7 @@
               "url": "https://www.lidocinemas.com.au/tickets?c=0000000003&s=99666",
               "overview": "After cracking the biggest case in Zootopia's history, rookie cops Judy Hopps and Nick Wilde find themselves on the twisting trail of a great mystery when Gary De'Snake arrives and turns the animal metropolis upside down. To crack the case, Judy and Nick must go undercover to unexpected new parts of town, where their growing partnership is tested like never before.",
               "posterPath": "https://image.tmdb.org/t/p/w300/bjUWGw0Ao0qVWxagN3VCwBJHVo6.jpg",
-              "rating": 7.6,
+              "rating": 7.627,
               "year": "2025",
               "runtime": 107,
               "trailerUrl": "https://www.youtube.com/watch?v=5H7L9j0dW90"
@@ -9504,6 +9308,19 @@
               "trailerUrl": "https://www.youtube.com/watch?v=gZ6pPFK6kaQ"
             },
             {
+              "title": "Resurrection",
+              "times": [
+                "8:40pm"
+              ],
+              "url": "https://www.lidocinemas.com.au/tickets?c=0000000003&s=99680",
+              "overview": "In a future where humanity has surrendered its ability to dream in exchange for immortality, an outcast finds illusion, nightmarish visions, and beauty in an intoxicating world of his own making.",
+              "posterPath": "https://image.tmdb.org/t/p/w300/wBXvXc7CoE1TCEL96VzMkMQKYG9.jpg",
+              "rating": 7.155,
+              "year": "2025",
+              "runtime": 160,
+              "trailerUrl": "https://www.youtube.com/watch?v=ZIJezWgFUEY"
+            },
+            {
               "title": "One Battle After Another",
               "times": [
                 "8:20pm"
@@ -9515,19 +9332,6 @@
               "year": "2025",
               "runtime": 162,
               "trailerUrl": "https://www.youtube.com/watch?v=u6GVb4p7oD4"
-            },
-            {
-              "title": "Resurrection",
-              "times": [
-                "8:40pm"
-              ],
-              "url": "https://www.lidocinemas.com.au/tickets?c=0000000003&s=99680",
-              "overview": "A jaded homicide detective has been put on the case of a ruthless killer in the city of Chicago, who leaves a trail of horribly mutilated and dismembered corpses along with perversely ironic biblical quotes.",
-              "posterPath": "https://image.tmdb.org/t/p/w300/2j6cMHN1Mx1u8S897VVhO7wSrce.jpg",
-              "rating": 6.114,
-              "year": "1999",
-              "runtime": 108,
-              "trailerUrl": "https://www.youtube.com/watch?v=XxSMzmBz5oY"
             },
             {
               "title": "The Golden Spurtle",
@@ -9614,7 +9418,7 @@
               "url": "https://www.hoyts.com.au/movies/avatar-fire-and-ash",
               "overview": "In the wake of the devastating war against the RDA and the loss of their eldest son, Jake Sully and Neytiri face a new threat on Pandora: the Ash People, a violent and power-hungry Na'vi tribe led by the ruthless Varang. Jake's family must fight for their survival and the future of Pandora in a conflict that pushes them to their emotional and physical limits.",
               "posterPath": "https://image.tmdb.org/t/p/w300/cf7hE1ifY4UNbS25tGnaTyyDrI2.jpg",
-              "rating": 7.344,
+              "rating": 7.348,
               "year": "2025",
               "runtime": 198,
               "trailerUrl": "https://www.youtube.com/watch?v=lc_zY8gN_Ew"
@@ -9662,7 +9466,7 @@
               "url": "https://www.hoyts.com.au/movies/zootopia-2",
               "overview": "After cracking the biggest case in Zootopia's history, rookie cops Judy Hopps and Nick Wilde find themselves on the twisting trail of a great mystery when Gary De'Snake arrives and turns the animal metropolis upside down. To crack the case, Judy and Nick must go undercover to unexpected new parts of town, where their growing partnership is tested like never before.",
               "posterPath": "https://image.tmdb.org/t/p/w300/bjUWGw0Ao0qVWxagN3VCwBJHVo6.jpg",
-              "rating": 7.6,
+              "rating": 7.627,
               "year": "2025",
               "runtime": 107,
               "trailerUrl": "https://www.youtube.com/watch?v=5H7L9j0dW90"
@@ -9996,7 +9800,7 @@
               "url": "https://www.palacecinemas.com.au/movies/zootopia-2",
               "overview": "After cracking the biggest case in Zootopia's history, rookie cops Judy Hopps and Nick Wilde find themselves on the twisting trail of a great mystery when Gary De'Snake arrives and turns the animal metropolis upside down. To crack the case, Judy and Nick must go undercover to unexpected new parts of town, where their growing partnership is tested like never before.",
               "posterPath": "https://image.tmdb.org/t/p/w300/bjUWGw0Ao0qVWxagN3VCwBJHVo6.jpg",
-              "rating": 7.6,
+              "rating": 7.627,
               "year": "2025",
               "runtime": 107,
               "trailerUrl": "https://www.youtube.com/watch?v=5H7L9j0dW90"
@@ -10435,7 +10239,7 @@
               "url": "https://www.palacecinemas.com.au/movies/zootopia-2",
               "overview": "After cracking the biggest case in Zootopia's history, rookie cops Judy Hopps and Nick Wilde find themselves on the twisting trail of a great mystery when Gary De'Snake arrives and turns the animal metropolis upside down. To crack the case, Judy and Nick must go undercover to unexpected new parts of town, where their growing partnership is tested like never before.",
               "posterPath": "https://image.tmdb.org/t/p/w300/bjUWGw0Ao0qVWxagN3VCwBJHVo6.jpg",
-              "rating": 7.6,
+              "rating": 7.627,
               "year": "2025",
               "runtime": 107,
               "trailerUrl": "https://www.youtube.com/watch?v=5H7L9j0dW90"
@@ -10671,7 +10475,7 @@
               "url": "https://www.palacecinemas.com.au/movies/zootopia-2",
               "overview": "After cracking the biggest case in Zootopia's history, rookie cops Judy Hopps and Nick Wilde find themselves on the twisting trail of a great mystery when Gary De'Snake arrives and turns the animal metropolis upside down. To crack the case, Judy and Nick must go undercover to unexpected new parts of town, where their growing partnership is tested like never before.",
               "posterPath": "https://image.tmdb.org/t/p/w300/bjUWGw0Ao0qVWxagN3VCwBJHVo6.jpg",
-              "rating": 7.6,
+              "rating": 7.627,
               "year": "2025",
               "runtime": 107,
               "trailerUrl": "https://www.youtube.com/watch?v=5H7L9j0dW90"
@@ -10841,7 +10645,7 @@
               "url": "https://imaxmelbourne.com.au/movie/avatar-fire-ash",
               "overview": "In the wake of the devastating war against the RDA and the loss of their eldest son, Jake Sully and Neytiri face a new threat on Pandora: the Ash People, a violent and power-hungry Na'vi tribe led by the ruthless Varang. Jake's family must fight for their survival and the future of Pandora in a conflict that pushes them to their emotional and physical limits.",
               "posterPath": "https://image.tmdb.org/t/p/w300/cf7hE1ifY4UNbS25tGnaTyyDrI2.jpg",
-              "rating": 7.344,
+              "rating": 7.348,
               "year": "2025",
               "runtime": 198,
               "trailerUrl": "https://www.youtube.com/watch?v=lc_zY8gN_Ew"
@@ -10887,7 +10691,7 @@
               "url": "https://suntheatre.com.au/wp-cinema/movie/S25ZOOTOPIA2/ZOOTOPIA+2/",
               "overview": "After cracking the biggest case in Zootopia's history, rookie cops Judy Hopps and Nick Wilde find themselves on the twisting trail of a great mystery when Gary De'Snake arrives and turns the animal metropolis upside down. To crack the case, Judy and Nick must go undercover to unexpected new parts of town, where their growing partnership is tested like never before.",
               "posterPath": "https://image.tmdb.org/t/p/w300/bjUWGw0Ao0qVWxagN3VCwBJHVo6.jpg",
-              "rating": 7.6,
+              "rating": 7.627,
               "year": "2025",
               "runtime": 107,
               "trailerUrl": "https://www.youtube.com/watch?v=5H7L9j0dW90"
@@ -10916,7 +10720,7 @@
               "url": "https://suntheatre.com.au/wp-cinema/movie/S25AVATARFIREAND/AVATAR+FIRE+AND+ASH/",
               "overview": "In the wake of the devastating war against the RDA and the loss of their eldest son, Jake Sully and Neytiri face a new threat on Pandora: the Ash People, a violent and power-hungry Na'vi tribe led by the ruthless Varang. Jake's family must fight for their survival and the future of Pandora in a conflict that pushes them to their emotional and physical limits.",
               "posterPath": "https://image.tmdb.org/t/p/w300/cf7hE1ifY4UNbS25tGnaTyyDrI2.jpg",
-              "rating": 7.344,
+              "rating": 7.348,
               "year": "2025",
               "runtime": 198,
               "trailerUrl": "https://www.youtube.com/watch?v=lc_zY8gN_Ew"
@@ -11193,7 +10997,7 @@
               "url": "https://villagecinemas.com.au/cinemas/coburg-drive-in",
               "overview": "In the wake of the devastating war against the RDA and the loss of their eldest son, Jake Sully and Neytiri face a new threat on Pandora: the Ash People, a violent and power-hungry Na'vi tribe led by the ruthless Varang. Jake's family must fight for their survival and the future of Pandora in a conflict that pushes them to their emotional and physical limits.",
               "posterPath": "https://image.tmdb.org/t/p/w300/cf7hE1ifY4UNbS25tGnaTyyDrI2.jpg",
-              "rating": 7.344,
+              "rating": 7.348,
               "year": "2025",
               "runtime": 198,
               "trailerUrl": "https://www.youtube.com/watch?v=lc_zY8gN_Ew"
@@ -11377,12 +11181,12 @@
                 "7:45pm"
               ],
               "url": "https://www.cinemanova.com.au/films/resurrection",
-              "overview": "A jaded homicide detective has been put on the case of a ruthless killer in the city of Chicago, who leaves a trail of horribly mutilated and dismembered corpses along with perversely ironic biblical quotes.",
-              "posterPath": "https://image.tmdb.org/t/p/w300/2j6cMHN1Mx1u8S897VVhO7wSrce.jpg",
-              "rating": 6.114,
-              "year": "1999",
-              "runtime": 108,
-              "trailerUrl": "https://www.youtube.com/watch?v=XxSMzmBz5oY"
+              "overview": "In a future where humanity has surrendered its ability to dream in exchange for immortality, an outcast finds illusion, nightmarish visions, and beauty in an intoxicating world of his own making.",
+              "posterPath": "https://image.tmdb.org/t/p/w300/wBXvXc7CoE1TCEL96VzMkMQKYG9.jpg",
+              "rating": 7.155,
+              "year": "2025",
+              "runtime": 160,
+              "trailerUrl": "https://www.youtube.com/watch?v=ZIJezWgFUEY"
             },
             {
               "title": "Song Sung Blue",
@@ -11561,7 +11365,7 @@
               "url": "https://www.cinemanova.com.au/films/avatar-fire-and-ash",
               "overview": "In the wake of the devastating war against the RDA and the loss of their eldest son, Jake Sully and Neytiri face a new threat on Pandora: the Ash People, a violent and power-hungry Na'vi tribe led by the ruthless Varang. Jake's family must fight for their survival and the future of Pandora in a conflict that pushes them to their emotional and physical limits.",
               "posterPath": "https://image.tmdb.org/t/p/w300/cf7hE1ifY4UNbS25tGnaTyyDrI2.jpg",
-              "rating": 7.344,
+              "rating": 7.348,
               "year": "2025",
               "runtime": 198,
               "trailerUrl": "https://www.youtube.com/watch?v=lc_zY8gN_Ew"
@@ -11880,20 +11684,6 @@
               "trailerUrl": "https://www.youtube.com/watch?v=Fkbj5F9qvvE"
             },
             {
-              "title": "Song Sung Blue",
-              "times": [
-                "3:15pm",
-                "6:00pm"
-              ],
-              "url": "https://www.lidocinemas.com.au/tickets?c=0000000003&s=99772",
-              "overview": "Based on a true story, two down-on-their-luck musicians form a joyous Neil Diamond tribute band, proving it's never too late to find love and follow your dreams.",
-              "posterPath": "https://image.tmdb.org/t/p/w300/3HsIAbHWbFDUbY2jfj4wqEjGC3b.jpg",
-              "rating": 7.433,
-              "year": "2025",
-              "runtime": 133,
-              "trailerUrl": "https://www.youtube.com/watch?v=ssZU6xUM-YI"
-            },
-            {
               "title": "Anaconda",
               "times": [
                 "1:10pm",
@@ -11923,6 +11713,20 @@
               "trailerUrl": "https://www.youtube.com/watch?v=hLa7v6TRB_E"
             },
             {
+              "title": "Song Sung Blue",
+              "times": [
+                "3:15pm",
+                "6:00pm"
+              ],
+              "url": "https://www.lidocinemas.com.au/tickets?c=0000000003&s=99772",
+              "overview": "Based on a true story, two down-on-their-luck musicians form a joyous Neil Diamond tribute band, proving it's never too late to find love and follow your dreams.",
+              "posterPath": "https://image.tmdb.org/t/p/w300/3HsIAbHWbFDUbY2jfj4wqEjGC3b.jpg",
+              "rating": 7.433,
+              "year": "2025",
+              "runtime": 133,
+              "trailerUrl": "https://www.youtube.com/watch?v=ssZU6xUM-YI"
+            },
+            {
               "title": "Avatar: Fire and Ash",
               "times": [
                 "10:50am",
@@ -11931,7 +11735,7 @@
               "url": "https://www.lidocinemas.com.au/tickets?c=0000000003&s=99771",
               "overview": "In the wake of the devastating war against the RDA and the loss of their eldest son, Jake Sully and Neytiri face a new threat on Pandora: the Ash People, a violent and power-hungry Na'vi tribe led by the ruthless Varang. Jake's family must fight for their survival and the future of Pandora in a conflict that pushes them to their emotional and physical limits.",
               "posterPath": "https://image.tmdb.org/t/p/w300/cf7hE1ifY4UNbS25tGnaTyyDrI2.jpg",
-              "rating": 7.344,
+              "rating": 7.348,
               "year": "2025",
               "runtime": 198,
               "trailerUrl": "https://www.youtube.com/watch?v=lc_zY8gN_Ew"
@@ -11945,7 +11749,7 @@
               "url": "https://www.lidocinemas.com.au/tickets?c=0000000003&s=99781",
               "overview": "After cracking the biggest case in Zootopia's history, rookie cops Judy Hopps and Nick Wilde find themselves on the twisting trail of a great mystery when Gary De'Snake arrives and turns the animal metropolis upside down. To crack the case, Judy and Nick must go undercover to unexpected new parts of town, where their growing partnership is tested like never before.",
               "posterPath": "https://image.tmdb.org/t/p/w300/bjUWGw0Ao0qVWxagN3VCwBJHVo6.jpg",
-              "rating": 7.6,
+              "rating": 7.627,
               "year": "2025",
               "runtime": 107,
               "trailerUrl": "https://www.youtube.com/watch?v=5H7L9j0dW90"
@@ -12005,19 +11809,6 @@
               "trailerUrl": "https://www.youtube.com/watch?v=GzkoY6hUvQQ"
             },
             {
-              "title": "One Battle After Another",
-              "times": [
-                "8:45pm"
-              ],
-              "url": "https://www.lidocinemas.com.au/tickets?c=0000000003&s=99777",
-              "overview": "Washed-up revolutionary Bob exists in a state of stoned paranoia, surviving off-grid with his spirited, self-reliant daughter, Willa. When his evil nemesis resurfaces after 16 years and she goes missing, the former radical scrambles to find her, father and daughter both battling the consequences of his past.",
-              "posterPath": "https://image.tmdb.org/t/p/w300/r4uXvqCeco0KmO0CjlhXuTEFuSE.jpg",
-              "rating": 7.459,
-              "year": "2025",
-              "runtime": 162,
-              "trailerUrl": "https://www.youtube.com/watch?v=u6GVb4p7oD4"
-            },
-            {
               "title": "The Pout-Pout Fish",
               "times": [
                 "11:00am"
@@ -12031,6 +11822,19 @@
               "trailerUrl": "https://www.youtube.com/watch?v=NhQfp1eITTY"
             },
             {
+              "title": "One Battle After Another",
+              "times": [
+                "8:45pm"
+              ],
+              "url": "https://www.lidocinemas.com.au/tickets?c=0000000003&s=99777",
+              "overview": "Washed-up revolutionary Bob exists in a state of stoned paranoia, surviving off-grid with his spirited, self-reliant daughter, Willa. When his evil nemesis resurfaces after 16 years and she goes missing, the former radical scrambles to find her, father and daughter both battling the consequences of his past.",
+              "posterPath": "https://image.tmdb.org/t/p/w300/r4uXvqCeco0KmO0CjlhXuTEFuSE.jpg",
+              "rating": 7.459,
+              "year": "2025",
+              "runtime": 162,
+              "trailerUrl": "https://www.youtube.com/watch?v=u6GVb4p7oD4"
+            },
+            {
               "title": "Yi Yi (2000) – 25th Anniversary 4K Restoration",
               "times": [
                 "2:45pm"
@@ -12038,7 +11842,7 @@
               "url": "https://www.lidocinemas.com.au/tickets?c=0000000003&s=99787",
               "overview": "A Taipei family faces personal and moral uncertainty as everyday events test their relationships and sense of purpose.",
               "posterPath": "https://image.tmdb.org/t/p/w300/mR8dSQZI8X6Z1NClJhFrtJp636z.jpg",
-              "rating": 7.914,
+              "rating": 7.9,
               "year": "2000",
               "runtime": 174,
               "trailerUrl": "https://www.youtube.com/watch?v=PxgrzNFwyqY"
@@ -12115,7 +11919,7 @@
               "url": "https://www.hoyts.com.au/movies/avatar-fire-and-ash",
               "overview": "In the wake of the devastating war against the RDA and the loss of their eldest son, Jake Sully and Neytiri face a new threat on Pandora: the Ash People, a violent and power-hungry Na'vi tribe led by the ruthless Varang. Jake's family must fight for their survival and the future of Pandora in a conflict that pushes them to their emotional and physical limits.",
               "posterPath": "https://image.tmdb.org/t/p/w300/cf7hE1ifY4UNbS25tGnaTyyDrI2.jpg",
-              "rating": 7.344,
+              "rating": 7.348,
               "year": "2025",
               "runtime": 198,
               "trailerUrl": "https://www.youtube.com/watch?v=lc_zY8gN_Ew"
@@ -12166,7 +11970,7 @@
               "url": "https://www.hoyts.com.au/movies/zootopia-2",
               "overview": "After cracking the biggest case in Zootopia's history, rookie cops Judy Hopps and Nick Wilde find themselves on the twisting trail of a great mystery when Gary De'Snake arrives and turns the animal metropolis upside down. To crack the case, Judy and Nick must go undercover to unexpected new parts of town, where their growing partnership is tested like never before.",
               "posterPath": "https://image.tmdb.org/t/p/w300/bjUWGw0Ao0qVWxagN3VCwBJHVo6.jpg",
-              "rating": 7.6,
+              "rating": 7.627,
               "year": "2025",
               "runtime": 107,
               "trailerUrl": "https://www.youtube.com/watch?v=5H7L9j0dW90"
@@ -12469,7 +12273,7 @@
               "url": "https://www.palacecinemas.com.au/movies/zootopia-2",
               "overview": "After cracking the biggest case in Zootopia's history, rookie cops Judy Hopps and Nick Wilde find themselves on the twisting trail of a great mystery when Gary De'Snake arrives and turns the animal metropolis upside down. To crack the case, Judy and Nick must go undercover to unexpected new parts of town, where their growing partnership is tested like never before.",
               "posterPath": "https://image.tmdb.org/t/p/w300/bjUWGw0Ao0qVWxagN3VCwBJHVo6.jpg",
-              "rating": 7.6,
+              "rating": 7.627,
               "year": "2025",
               "runtime": 107,
               "trailerUrl": "https://www.youtube.com/watch?v=5H7L9j0dW90"
@@ -12921,7 +12725,7 @@
               "url": "https://www.palacecinemas.com.au/movies/zootopia-2",
               "overview": "After cracking the biggest case in Zootopia's history, rookie cops Judy Hopps and Nick Wilde find themselves on the twisting trail of a great mystery when Gary De'Snake arrives and turns the animal metropolis upside down. To crack the case, Judy and Nick must go undercover to unexpected new parts of town, where their growing partnership is tested like never before.",
               "posterPath": "https://image.tmdb.org/t/p/w300/bjUWGw0Ao0qVWxagN3VCwBJHVo6.jpg",
-              "rating": 7.6,
+              "rating": 7.627,
               "year": "2025",
               "runtime": 107,
               "trailerUrl": "https://www.youtube.com/watch?v=5H7L9j0dW90"
@@ -13157,7 +12961,7 @@
               "url": "https://www.palacecinemas.com.au/movies/zootopia-2",
               "overview": "After cracking the biggest case in Zootopia's history, rookie cops Judy Hopps and Nick Wilde find themselves on the twisting trail of a great mystery when Gary De'Snake arrives and turns the animal metropolis upside down. To crack the case, Judy and Nick must go undercover to unexpected new parts of town, where their growing partnership is tested like never before.",
               "posterPath": "https://image.tmdb.org/t/p/w300/bjUWGw0Ao0qVWxagN3VCwBJHVo6.jpg",
-              "rating": 7.6,
+              "rating": 7.627,
               "year": "2025",
               "runtime": 107,
               "trailerUrl": "https://www.youtube.com/watch?v=5H7L9j0dW90"
@@ -13313,7 +13117,7 @@
               "url": "https://imaxmelbourne.com.au/movie/avatar-fire-ash",
               "overview": "In the wake of the devastating war against the RDA and the loss of their eldest son, Jake Sully and Neytiri face a new threat on Pandora: the Ash People, a violent and power-hungry Na'vi tribe led by the ruthless Varang. Jake's family must fight for their survival and the future of Pandora in a conflict that pushes them to their emotional and physical limits.",
               "posterPath": "https://image.tmdb.org/t/p/w300/cf7hE1ifY4UNbS25tGnaTyyDrI2.jpg",
-              "rating": 7.344,
+              "rating": 7.348,
               "year": "2025",
               "runtime": 198,
               "trailerUrl": "https://www.youtube.com/watch?v=lc_zY8gN_Ew"
@@ -13361,7 +13165,7 @@
               "url": "https://suntheatre.com.au/wp-cinema/movie/S25ZOOTOPIA2/ZOOTOPIA+2/",
               "overview": "After cracking the biggest case in Zootopia's history, rookie cops Judy Hopps and Nick Wilde find themselves on the twisting trail of a great mystery when Gary De'Snake arrives and turns the animal metropolis upside down. To crack the case, Judy and Nick must go undercover to unexpected new parts of town, where their growing partnership is tested like never before.",
               "posterPath": "https://image.tmdb.org/t/p/w300/bjUWGw0Ao0qVWxagN3VCwBJHVo6.jpg",
-              "rating": 7.6,
+              "rating": 7.627,
               "year": "2025",
               "runtime": 107,
               "trailerUrl": "https://www.youtube.com/watch?v=5H7L9j0dW90"
@@ -13388,7 +13192,7 @@
               "url": "https://suntheatre.com.au/wp-cinema/movie/S25AVATARFIREAND/AVATAR+FIRE+AND+ASH/",
               "overview": "In the wake of the devastating war against the RDA and the loss of their eldest son, Jake Sully and Neytiri face a new threat on Pandora: the Ash People, a violent and power-hungry Na'vi tribe led by the ruthless Varang. Jake's family must fight for their survival and the future of Pandora in a conflict that pushes them to their emotional and physical limits.",
               "posterPath": "https://image.tmdb.org/t/p/w300/cf7hE1ifY4UNbS25tGnaTyyDrI2.jpg",
-              "rating": 7.344,
+              "rating": 7.348,
               "year": "2025",
               "runtime": 198,
               "trailerUrl": "https://www.youtube.com/watch?v=lc_zY8gN_Ew"
@@ -13627,7 +13431,7 @@
               "url": "https://villagecinemas.com.au/cinemas/coburg-drive-in",
               "overview": "In the wake of the devastating war against the RDA and the loss of their eldest son, Jake Sully and Neytiri face a new threat on Pandora: the Ash People, a violent and power-hungry Na'vi tribe led by the ruthless Varang. Jake's family must fight for their survival and the future of Pandora in a conflict that pushes them to their emotional and physical limits.",
               "posterPath": "https://image.tmdb.org/t/p/w300/cf7hE1ifY4UNbS25tGnaTyyDrI2.jpg",
-              "rating": 7.344,
+              "rating": 7.348,
               "year": "2025",
               "runtime": 198,
               "trailerUrl": "https://www.youtube.com/watch?v=lc_zY8gN_Ew"
@@ -13640,7 +13444,7 @@
               "url": "https://villagecinemas.com.au/cinemas/coburg-drive-in",
               "overview": "One year since the supernatural nightmare at Freddy Fazbear's Pizza, the stories about what transpired there have been twisted into a campy local legend, inspiring the town's first ever Fazfest. With the truth kept from her, Abby sneaks out to reconnect with Freddy, Bonnie, Chica, and Foxy, setting into motion a terrifying series of events that will reveal dark secrets about the real origin of Freddy's, and unleash a decades-hidden horror.",
               "posterPath": "https://image.tmdb.org/t/p/w300/udAxQEORq2I5wxI97N2TEqdhzBE.jpg",
-              "rating": 6.791,
+              "rating": 6.795,
               "year": "2025",
               "runtime": 104,
               "trailerUrl": "https://www.youtube.com/watch?v=VWfTR7ptRsQ"
@@ -13823,12 +13627,12 @@
                 "7:45pm"
               ],
               "url": "https://www.cinemanova.com.au/films/resurrection",
-              "overview": "A jaded homicide detective has been put on the case of a ruthless killer in the city of Chicago, who leaves a trail of horribly mutilated and dismembered corpses along with perversely ironic biblical quotes.",
-              "posterPath": "https://image.tmdb.org/t/p/w300/2j6cMHN1Mx1u8S897VVhO7wSrce.jpg",
-              "rating": 6.114,
-              "year": "1999",
-              "runtime": 108,
-              "trailerUrl": "https://www.youtube.com/watch?v=XxSMzmBz5oY"
+              "overview": "In a future where humanity has surrendered its ability to dream in exchange for immortality, an outcast finds illusion, nightmarish visions, and beauty in an intoxicating world of his own making.",
+              "posterPath": "https://image.tmdb.org/t/p/w300/wBXvXc7CoE1TCEL96VzMkMQKYG9.jpg",
+              "rating": 7.155,
+              "year": "2025",
+              "runtime": 160,
+              "trailerUrl": "https://www.youtube.com/watch?v=ZIJezWgFUEY"
             },
             {
               "title": "Song Sung Blue",
@@ -13978,7 +13782,7 @@
               "url": "https://www.cinemanova.com.au/films/avatar-fire-and-ash",
               "overview": "In the wake of the devastating war against the RDA and the loss of their eldest son, Jake Sully and Neytiri face a new threat on Pandora: the Ash People, a violent and power-hungry Na'vi tribe led by the ruthless Varang. Jake's family must fight for their survival and the future of Pandora in a conflict that pushes them to their emotional and physical limits.",
               "posterPath": "https://image.tmdb.org/t/p/w300/cf7hE1ifY4UNbS25tGnaTyyDrI2.jpg",
-              "rating": 7.344,
+              "rating": 7.348,
               "year": "2025",
               "runtime": 198,
               "trailerUrl": "https://www.youtube.com/watch?v=lc_zY8gN_Ew"
@@ -14298,20 +14102,6 @@
               "trailerUrl": "https://www.youtube.com/watch?v=Fkbj5F9qvvE"
             },
             {
-              "title": "Song Sung Blue",
-              "times": [
-                "3:10pm",
-                "5:50pm"
-              ],
-              "url": "https://www.lidocinemas.com.au/tickets?c=0000000003&s=99815",
-              "overview": "Based on a true story, two down-on-their-luck musicians form a joyous Neil Diamond tribute band, proving it's never too late to find love and follow your dreams.",
-              "posterPath": "https://image.tmdb.org/t/p/w300/3HsIAbHWbFDUbY2jfj4wqEjGC3b.jpg",
-              "rating": 7.433,
-              "year": "2025",
-              "runtime": 133,
-              "trailerUrl": "https://www.youtube.com/watch?v=ssZU6xUM-YI"
-            },
-            {
               "title": "Anaconda",
               "times": [
                 "2:10pm",
@@ -14340,6 +14130,20 @@
               "trailerUrl": "https://www.youtube.com/watch?v=hLa7v6TRB_E"
             },
             {
+              "title": "Song Sung Blue",
+              "times": [
+                "3:10pm",
+                "5:50pm"
+              ],
+              "url": "https://www.lidocinemas.com.au/tickets?c=0000000003&s=99815",
+              "overview": "Based on a true story, two down-on-their-luck musicians form a joyous Neil Diamond tribute band, proving it's never too late to find love and follow your dreams.",
+              "posterPath": "https://image.tmdb.org/t/p/w300/3HsIAbHWbFDUbY2jfj4wqEjGC3b.jpg",
+              "rating": 7.433,
+              "year": "2025",
+              "runtime": 133,
+              "trailerUrl": "https://www.youtube.com/watch?v=ssZU6xUM-YI"
+            },
+            {
               "title": "Avatar: Fire and Ash",
               "times": [
                 "10:50am"
@@ -14347,7 +14151,7 @@
               "url": "https://www.lidocinemas.com.au/tickets?c=0000000003&s=99816",
               "overview": "In the wake of the devastating war against the RDA and the loss of their eldest son, Jake Sully and Neytiri face a new threat on Pandora: the Ash People, a violent and power-hungry Na'vi tribe led by the ruthless Varang. Jake's family must fight for their survival and the future of Pandora in a conflict that pushes them to their emotional and physical limits.",
               "posterPath": "https://image.tmdb.org/t/p/w300/cf7hE1ifY4UNbS25tGnaTyyDrI2.jpg",
-              "rating": 7.344,
+              "rating": 7.348,
               "year": "2025",
               "runtime": 198,
               "trailerUrl": "https://www.youtube.com/watch?v=lc_zY8gN_Ew"
@@ -14361,7 +14165,7 @@
               "url": "https://www.lidocinemas.com.au/tickets?c=0000000003&s=99819",
               "overview": "After cracking the biggest case in Zootopia's history, rookie cops Judy Hopps and Nick Wilde find themselves on the twisting trail of a great mystery when Gary De'Snake arrives and turns the animal metropolis upside down. To crack the case, Judy and Nick must go undercover to unexpected new parts of town, where their growing partnership is tested like never before.",
               "posterPath": "https://image.tmdb.org/t/p/w300/bjUWGw0Ao0qVWxagN3VCwBJHVo6.jpg",
-              "rating": 7.6,
+              "rating": 7.627,
               "year": "2025",
               "runtime": 107,
               "trailerUrl": "https://www.youtube.com/watch?v=5H7L9j0dW90"
@@ -14411,12 +14215,12 @@
                 "1:30pm"
               ],
               "url": "https://www.lidocinemas.com.au/tickets?c=0000000003&s=99792",
-              "overview": "A jaded homicide detective has been put on the case of a ruthless killer in the city of Chicago, who leaves a trail of horribly mutilated and dismembered corpses along with perversely ironic biblical quotes.",
-              "posterPath": "https://image.tmdb.org/t/p/w300/2j6cMHN1Mx1u8S897VVhO7wSrce.jpg",
-              "rating": 6.114,
-              "year": "1999",
-              "runtime": 108,
-              "trailerUrl": "https://www.youtube.com/watch?v=XxSMzmBz5oY"
+              "overview": "In a future where humanity has surrendered its ability to dream in exchange for immortality, an outcast finds illusion, nightmarish visions, and beauty in an intoxicating world of his own making.",
+              "posterPath": "https://image.tmdb.org/t/p/w300/wBXvXc7CoE1TCEL96VzMkMQKYG9.jpg",
+              "rating": 7.155,
+              "year": "2025",
+              "runtime": 160,
+              "trailerUrl": "https://www.youtube.com/watch?v=ZIJezWgFUEY"
             },
             {
               "title": "The Pout-Pout Fish",
@@ -14477,7 +14281,7 @@
               "url": "https://www.hoyts.com.au/movies/avatar-fire-and-ash",
               "overview": "In the wake of the devastating war against the RDA and the loss of their eldest son, Jake Sully and Neytiri face a new threat on Pandora: the Ash People, a violent and power-hungry Na'vi tribe led by the ruthless Varang. Jake's family must fight for their survival and the future of Pandora in a conflict that pushes them to their emotional and physical limits.",
               "posterPath": "https://image.tmdb.org/t/p/w300/cf7hE1ifY4UNbS25tGnaTyyDrI2.jpg",
-              "rating": 7.344,
+              "rating": 7.348,
               "year": "2025",
               "runtime": 198,
               "trailerUrl": "https://www.youtube.com/watch?v=lc_zY8gN_Ew"
@@ -14528,7 +14332,7 @@
               "url": "https://www.hoyts.com.au/movies/zootopia-2",
               "overview": "After cracking the biggest case in Zootopia's history, rookie cops Judy Hopps and Nick Wilde find themselves on the twisting trail of a great mystery when Gary De'Snake arrives and turns the animal metropolis upside down. To crack the case, Judy and Nick must go undercover to unexpected new parts of town, where their growing partnership is tested like never before.",
               "posterPath": "https://image.tmdb.org/t/p/w300/bjUWGw0Ao0qVWxagN3VCwBJHVo6.jpg",
-              "rating": 7.6,
+              "rating": 7.627,
               "year": "2025",
               "runtime": 107,
               "trailerUrl": "https://www.youtube.com/watch?v=5H7L9j0dW90"
@@ -14830,7 +14634,7 @@
               "url": "https://www.palacecinemas.com.au/movies/zootopia-2",
               "overview": "After cracking the biggest case in Zootopia's history, rookie cops Judy Hopps and Nick Wilde find themselves on the twisting trail of a great mystery when Gary De'Snake arrives and turns the animal metropolis upside down. To crack the case, Judy and Nick must go undercover to unexpected new parts of town, where their growing partnership is tested like never before.",
               "posterPath": "https://image.tmdb.org/t/p/w300/bjUWGw0Ao0qVWxagN3VCwBJHVo6.jpg",
-              "rating": 7.6,
+              "rating": 7.627,
               "year": "2025",
               "runtime": 107,
               "trailerUrl": "https://www.youtube.com/watch?v=5H7L9j0dW90"
@@ -15277,7 +15081,7 @@
               "url": "https://www.palacecinemas.com.au/movies/zootopia-2",
               "overview": "After cracking the biggest case in Zootopia's history, rookie cops Judy Hopps and Nick Wilde find themselves on the twisting trail of a great mystery when Gary De'Snake arrives and turns the animal metropolis upside down. To crack the case, Judy and Nick must go undercover to unexpected new parts of town, where their growing partnership is tested like never before.",
               "posterPath": "https://image.tmdb.org/t/p/w300/bjUWGw0Ao0qVWxagN3VCwBJHVo6.jpg",
-              "rating": 7.6,
+              "rating": 7.627,
               "year": "2025",
               "runtime": 107,
               "trailerUrl": "https://www.youtube.com/watch?v=5H7L9j0dW90"
@@ -15513,7 +15317,7 @@
               "url": "https://www.palacecinemas.com.au/movies/zootopia-2",
               "overview": "After cracking the biggest case in Zootopia's history, rookie cops Judy Hopps and Nick Wilde find themselves on the twisting trail of a great mystery when Gary De'Snake arrives and turns the animal metropolis upside down. To crack the case, Judy and Nick must go undercover to unexpected new parts of town, where their growing partnership is tested like never before.",
               "posterPath": "https://image.tmdb.org/t/p/w300/bjUWGw0Ao0qVWxagN3VCwBJHVo6.jpg",
-              "rating": 7.6,
+              "rating": 7.627,
               "year": "2025",
               "runtime": 107,
               "trailerUrl": "https://www.youtube.com/watch?v=5H7L9j0dW90"
@@ -15670,7 +15474,7 @@
               "url": "https://imaxmelbourne.com.au/movie/avatar-fire-ash",
               "overview": "In the wake of the devastating war against the RDA and the loss of their eldest son, Jake Sully and Neytiri face a new threat on Pandora: the Ash People, a violent and power-hungry Na'vi tribe led by the ruthless Varang. Jake's family must fight for their survival and the future of Pandora in a conflict that pushes them to their emotional and physical limits.",
               "posterPath": "https://image.tmdb.org/t/p/w300/cf7hE1ifY4UNbS25tGnaTyyDrI2.jpg",
-              "rating": 7.344,
+              "rating": 7.348,
               "year": "2025",
               "runtime": 198,
               "trailerUrl": "https://www.youtube.com/watch?v=lc_zY8gN_Ew"
@@ -15717,7 +15521,7 @@
               "url": "https://suntheatre.com.au/wp-cinema/movie/S25ZOOTOPIA2/ZOOTOPIA+2/",
               "overview": "After cracking the biggest case in Zootopia's history, rookie cops Judy Hopps and Nick Wilde find themselves on the twisting trail of a great mystery when Gary De'Snake arrives and turns the animal metropolis upside down. To crack the case, Judy and Nick must go undercover to unexpected new parts of town, where their growing partnership is tested like never before.",
               "posterPath": "https://image.tmdb.org/t/p/w300/bjUWGw0Ao0qVWxagN3VCwBJHVo6.jpg",
-              "rating": 7.6,
+              "rating": 7.627,
               "year": "2025",
               "runtime": 107,
               "trailerUrl": "https://www.youtube.com/watch?v=5H7L9j0dW90"
@@ -15746,7 +15550,7 @@
               "url": "https://suntheatre.com.au/wp-cinema/movie/S25AVATARFIREAND/AVATAR+FIRE+AND+ASH/",
               "overview": "In the wake of the devastating war against the RDA and the loss of their eldest son, Jake Sully and Neytiri face a new threat on Pandora: the Ash People, a violent and power-hungry Na'vi tribe led by the ruthless Varang. Jake's family must fight for their survival and the future of Pandora in a conflict that pushes them to their emotional and physical limits.",
               "posterPath": "https://image.tmdb.org/t/p/w300/cf7hE1ifY4UNbS25tGnaTyyDrI2.jpg",
-              "rating": 7.344,
+              "rating": 7.348,
               "year": "2025",
               "runtime": 198,
               "trailerUrl": "https://www.youtube.com/watch?v=lc_zY8gN_Ew"
@@ -15997,7 +15801,7 @@
               "url": "https://villagecinemas.com.au/cinemas/coburg-drive-in",
               "overview": "In the wake of the devastating war against the RDA and the loss of their eldest son, Jake Sully and Neytiri face a new threat on Pandora: the Ash People, a violent and power-hungry Na'vi tribe led by the ruthless Varang. Jake's family must fight for their survival and the future of Pandora in a conflict that pushes them to their emotional and physical limits.",
               "posterPath": "https://image.tmdb.org/t/p/w300/cf7hE1ifY4UNbS25tGnaTyyDrI2.jpg",
-              "rating": 7.344,
+              "rating": 7.348,
               "year": "2025",
               "runtime": 198,
               "trailerUrl": "https://www.youtube.com/watch?v=lc_zY8gN_Ew"
@@ -16010,7 +15814,7 @@
               "url": "https://villagecinemas.com.au/cinemas/coburg-drive-in",
               "overview": "One year since the supernatural nightmare at Freddy Fazbear's Pizza, the stories about what transpired there have been twisted into a campy local legend, inspiring the town's first ever Fazfest. With the truth kept from her, Abby sneaks out to reconnect with Freddy, Bonnie, Chica, and Foxy, setting into motion a terrifying series of events that will reveal dark secrets about the real origin of Freddy's, and unleash a decades-hidden horror.",
               "posterPath": "https://image.tmdb.org/t/p/w300/udAxQEORq2I5wxI97N2TEqdhzBE.jpg",
-              "rating": 6.791,
+              "rating": 6.795,
               "year": "2025",
               "runtime": 104,
               "trailerUrl": "https://www.youtube.com/watch?v=VWfTR7ptRsQ"
