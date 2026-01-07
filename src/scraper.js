@@ -1321,7 +1321,40 @@ async function scrapeCoburgDriveIn(page, targetDate) {
     await page.goto(url, { waitUntil: 'networkidle2', timeout: 60000 });
     await page.waitForTimeout(2000);
     
-    // Find the timetable div for our target date
+    // Parse target date to find the right tab to click
+    const [year, month, day] = targetDate.split('-').map(Number);
+    
+    // Click on the date tab to load that day's sessions
+    // The tab buttons contain spans with day, date, month
+    const clicked = await page.evaluate((targetDay, targetMonth) => {
+      const monthNames = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+      const targetMonthName = monthNames[targetMonth - 1];
+      
+      const tabs = document.querySelectorAll('.times-calendar__el');
+      for (const tab of tabs) {
+        const dateEl = tab.querySelector('.times-calendar__el__date');
+        const monthEl = tab.querySelector('.times-calendar__el__month');
+        
+        const tabDate = dateEl?.textContent?.trim();
+        const tabMonth = monthEl?.textContent?.trim();
+        
+        if (tabDate === String(targetDay) && tabMonth === targetMonthName) {
+          const btn = tab.querySelector('button');
+          if (btn) {
+            btn.click();
+            return `Clicked tab for ${tabDate} ${tabMonth}`;
+          }
+        }
+      }
+      return 'No matching tab found';
+    }, day, month);
+    
+    console.log(`  ${clicked}`);
+    
+    // Wait for content to load after clicking
+    await page.waitForTimeout(2000);
+    
+    // Now extract the films for the target date
     const films = await page.evaluate((targetDate) => {
       const items = [];
       
