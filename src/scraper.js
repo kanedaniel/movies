@@ -1346,6 +1346,19 @@ async function scrapeCoburgDriveIn(page, targetDate) {
     // Wait a bit more for any delayed API calls
     await page.waitForTimeout(5000);
     
+    // Debug: take a screenshot and get page title
+    const pageTitle = await page.title();
+    console.log(`  Page title: ${pageTitle}`);
+    
+    // Save screenshot for debugging
+    try {
+      const screenshotPath = path.join(__dirname, '..', 'data', 'coburg-debug.png');
+      await page.screenshot({ path: screenshotPath, fullPage: false });
+      console.log(`  Screenshot saved to ${screenshotPath}`);
+    } catch (e) {
+      console.log(`  Could not save screenshot: ${e.message}`);
+    }
+    
     // Clean up listener
     page.off('response', responseHandler);
     
