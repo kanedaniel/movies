@@ -1491,10 +1491,6 @@ async function main() {
     args: ['--no-sandbox', '--disable-setuid-sandbox', '--disable-dev-shm-usage']
   });
   
-  const page = await browser.newPage();
-  await page.setUserAgent('Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36');
-  await page.setViewport({ width: 1920, height: 1080 });
-  
   const scrapers = [
     scrapeACMI,
     scrapeBrunswickPictureHouse,
@@ -1512,34 +1508,56 @@ async function main() {
     scrapeCoburgDriveIn
   ];
   
-  // Scrape for configured number of days
-  const days = [];
-  for (let dayOffset = 0; dayOffset < DAYS_TO_SCRAPE; dayOffset++) {
+  // Function to scrape all cinemas for a single day
+  async function scrapeDay(dayOffset) {
     const targetDate = getMelbourneDateStr(dayOffset);
     const displayDate = getDisplayDate(dayOffset);
+    const dayName = dayOffset === 0 ? 'Today' : dayOffset === 1 ? 'Tomorrow' : displayDate.split(' ')[0];
     
-    console.log('\n' + '='.repeat(60));
-    console.log(`Scraping for: ${displayDate} (${targetDate})`);
-    console.log('='.repeat(60));
+    console.log(`[${dayName}] Starting: ${displayDate} (${targetDate})`);
+    
+    // Create a new page for this day
+    const page = await browser.newPage();
+    await page.setUserAgent('Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36');
+    await page.setViewport({ width: 1920, height: 1080 });
     
     const results = [];
     for (const scraper of scrapers) {
       try {
-        console.log('');
         const data = await scraper(page, targetDate);
         const enriched = await enrichWithTMDB(data);
         results.push(enriched);
       } catch (error) {
-        console.error(`Scraper failed:`, error.message);
+        console.log(`[${dayName}] Scraper failed: ${error.message}`);
       }
     }
     
-    days.push({
+    await page.close();
+    
+    const totalFilms = results.reduce((sum, c) => sum + c.sessions.length, 0);
+    console.log(`[${dayName}] Complete: ${totalFilms} total films from ${results.length} cinemas`);
+    
+    return {
       date: displayDate,
       dateKey: targetDate,
-      cinemas: results
-    });
+      cinemas: results,
+      dayOffset
+    };
   }
+  
+  // Scrape all days in parallel
+  console.log(`Starting parallel scrape for ${DAYS_TO_SCRAPE} days...\n`);
+  const dayPromises = [];
+  for (let dayOffset = 0; dayOffset < DAYS_TO_SCRAPE; dayOffset++) {
+    dayPromises.push(scrapeDay(dayOffset));
+  }
+  
+  const dayResults = await Promise.all(dayPromises);
+  
+  // Sort by dayOffset to ensure correct order
+  const days = dayResults
+    .sort((a, b) => a.dayOffset - b.dayOffset)
+    .map(({ date, dateKey, cinemas }) => ({ date, dateKey, cinemas }));
   
   await browser.close();
   
