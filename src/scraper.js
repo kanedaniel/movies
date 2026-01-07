@@ -83,19 +83,23 @@ async function fetchTMDB(title) {
 
   try {
     // Check for manual override first
-    const overrideId = tmdbOverrides[title] || tmdbOverrides[title.toLowerCase()];
-    if (overrideId) {
-      console.log(`  TMDB override: "${title}" -> ID ${overrideId}`);
+    const override = tmdbOverrides[title] || tmdbOverrides[title.toLowerCase()];
+    if (override) {
+      // Support both simple ID (number) and object format { id: 123, type: "tv" }
+      const overrideId = typeof override === 'number' ? override : override.id;
+      const mediaType = typeof override === 'object' && override.type === 'tv' ? 'tv' : 'movie';
       
-      // Fetch movie directly by ID
-      const detailsUrl = `${TMDB_BASE}/movie/${overrideId}?api_key=${TMDB_API_KEY}&append_to_response=videos`;
+      console.log(`  TMDB override: "${title}" -> ${mediaType} ID ${overrideId}`);
+      
+      // Fetch movie or TV show directly by ID
+      const detailsUrl = `${TMDB_BASE}/${mediaType}/${overrideId}?api_key=${TMDB_API_KEY}&append_to_response=videos`;
       const detailsResponse = await fetch(detailsUrl);
-      const movie = await detailsResponse.json();
+      const item = await detailsResponse.json();
       
-      if (movie && movie.id) {
+      if (item && item.id) {
         let trailerUrl = null;
-        if (movie.videos && movie.videos.results) {
-          const trailer = movie.videos.results.find(v => 
+        if (item.videos && item.videos.results) {
+          const trailer = item.videos.results.find(v => 
             v.site === 'YouTube' && (v.type === 'Trailer' || v.type === 'Teaser')
           );
           if (trailer) {
@@ -103,16 +107,21 @@ async function fetchTMDB(title) {
           }
         }
         
+        // TV shows use different field names
+        const itemTitle = item.title || item.name;
+        const releaseDate = item.release_date || item.first_air_date;
+        const runtime = item.runtime || (item.episode_run_time && item.episode_run_time[0]) || null;
+        
         const result = {
-          overview: movie.overview || null,
-          posterPath: movie.poster_path ? `https://image.tmdb.org/t/p/w300${movie.poster_path}` : null,
-          rating: movie.vote_average || null,
-          year: movie.release_date ? movie.release_date.substring(0, 4) : null,
-          runtime: movie.runtime || null,
+          overview: item.overview || null,
+          posterPath: item.poster_path ? `https://image.tmdb.org/t/p/w300${item.poster_path}` : null,
+          rating: item.vote_average || null,
+          year: releaseDate ? releaseDate.substring(0, 4) : null,
+          runtime: runtime,
           trailerUrl: trailerUrl,
-          tmdbId: movie.id
+          tmdbId: item.id
         };
-        console.log(`  TMDB override found: "${movie.title}" (${result.year})`);
+        console.log(`  TMDB override found: "${itemTitle}" (${result.year})`);
         tmdbCache.set(cacheKey, result);
         return result;
       }
