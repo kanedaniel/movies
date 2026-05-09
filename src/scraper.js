@@ -13,8 +13,22 @@ const OUTPUT_FILENAME = 'sessions.json';
 
 const TMDB_API_KEY = process.env.TMDB_API_KEY;
 const TMDB_BASE = 'https://api.themoviedb.org/3';
+const TMDB_CACHE_PATH = path.join(__dirname, '..', 'data', 'tmdb-cache.json');
 
 const tmdbCache = new Map();
+
+// Load persistent TMDB cache from previous runs
+try {
+  if (fs.existsSync(TMDB_CACHE_PATH)) {
+    const cached = JSON.parse(fs.readFileSync(TMDB_CACHE_PATH, 'utf8'));
+    for (const [key, value] of Object.entries(cached)) {
+      tmdbCache.set(key, value);
+    }
+    console.log(`Loaded ${tmdbCache.size} entries from TMDB cache`);
+  }
+} catch (e) {
+  console.log('Could not load TMDB cache (will rebuild)');
+}
 
 // Load TMDB overrides for films that get matched incorrectly
 let tmdbOverrides = {};
@@ -1623,6 +1637,11 @@ async function main() {
     path.join(dataDir, OUTPUT_FILENAME),
     JSON.stringify(output, null, 2)
   );
+
+  // Persist TMDB cache for next run
+  const cacheObj = Object.fromEntries(tmdbCache);
+  fs.writeFileSync(TMDB_CACHE_PATH, JSON.stringify(cacheObj, null, 2));
+  console.log(`TMDB cache saved: ${tmdbCache.size} entries`);
   
   console.log('\n' + '='.repeat(60));
   console.log('COMPLETE');

@@ -2,7 +2,8 @@ name: Scrape Cinema Sessions
 
 on:
   schedule:
-    - cron: '0 21 * * *'
+    - cron: '0 18 * * *'  # 5am AEDT (UTC+11, summer)
+    - cron: '0 19 * * *'  # 5am AEST (UTC+10, winter)
   workflow_dispatch:
   push:
     branches:
@@ -14,34 +15,49 @@ on:
 jobs:
   scrape:
     runs-on: ubuntu-latest
-    
+
     steps:
+      - name: Check Melbourne time
+        id: time-check
+        run: |
+          MELBOURNE_HOUR=$(TZ=Australia/Melbourne date +%H)
+          echo "Melbourne hour: $MELBOURNE_HOUR"
+          if [ "$MELBOURNE_HOUR" != "05" ] && [ "${{ github.event_name }}" = "schedule" ]; then
+            echo "skip=true" >> $GITHUB_OUTPUT
+          fi
+
       - name: Checkout repository
+        if: steps.time-check.outputs.skip != 'true'
         uses: actions/checkout@v4
-      
+
       - name: Setup Node.js
+        if: steps.time-check.outputs.skip != 'true'
         uses: actions/setup-node@v4
         with:
           node-version: '20'
-      
+
       - name: Install dependencies
+        if: steps.time-check.outputs.skip != 'true'
         run: npm install
-      
+
       - name: Install Chromium dependencies
+        if: steps.time-check.outputs.skip != 'true'
         run: |
           sudo apt-get update
           sudo apt-get install -y libgbm-dev
-      
+
       - name: Run scraper
+        if: steps.time-check.outputs.skip != 'true'
         env:
           TMDB_API_KEY: ${{ secrets.TMDB_API_KEY }}
         run: npm run scrape
-      
+
       - name: Commit and push if changed
+        if: steps.time-check.outputs.skip != 'true'
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
-          git add data/sessions.json
+          git add data/sessions.json data/tmdb-cache.json
           git diff --staged --quiet || git commit -m "Update session data for $(date +'%Y-%m-%d')"
           git pull --rebase
           git push
