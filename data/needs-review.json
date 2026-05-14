@@ -1,0 +1,1259 @@
+{
+  "generatedAt": "2026-05-14T23:26:08.354Z",
+  "count": 51,
+  "items": [
+    {
+      "scrapedTitle": "The Gold Diggers",
+      "canonicalTitle": "The Gold Diggers",
+      "cinema": "ACMI",
+      "category": "ambiguous",
+      "score": 1,
+      "triedVariants": [
+        "The Gold Diggers"
+      ],
+      "topCandidates": [
+        {
+          "tmdbId": 54852,
+          "title": "The Gold Diggers",
+          "year": "1983",
+          "score": 1,
+          "viaVariant": "as-is",
+          "url": "https://www.themoviedb.org/movie/54852"
+        },
+        {
+          "tmdbId": 485741,
+          "title": "The Gold Diggers",
+          "year": "1923",
+          "score": 1,
+          "viaVariant": "as-is",
+          "url": "https://www.themoviedb.org/movie/485741"
+        },
+        {
+          "tmdbId": 428928,
+          "title": "The Gold Diggers",
+          "year": "1986",
+          "score": 1,
+          "viaVariant": "as-is",
+          "url": "https://www.themoviedb.org/movie/428928"
+        }
+      ],
+      "suggestedFix": "Two candidates scored within 0.05 of each other. Pick the right one and add it to data/tmdb-overrides.json."
+    },
+    {
+      "scrapedTitle": "The Human Voice",
+      "canonicalTitle": "The Human Voice",
+      "cinema": "ACMI",
+      "category": "ambiguous",
+      "score": 1,
+      "triedVariants": [
+        "The Human Voice"
+      ],
+      "topCandidates": [
+        {
+          "tmdbId": 538761,
+          "title": "The Human Voice",
+          "year": "2018",
+          "score": 1,
+          "viaVariant": "as-is",
+          "url": "https://www.themoviedb.org/movie/538761"
+        },
+        {
+          "tmdbId": 671577,
+          "title": "The Human Voice",
+          "year": "2020",
+          "score": 1,
+          "viaVariant": "as-is",
+          "url": "https://www.themoviedb.org/movie/671577"
+        },
+        {
+          "tmdbId": 1030533,
+          "title": "The Human Voice",
+          "year": "1979",
+          "score": 1,
+          "viaVariant": "as-is",
+          "url": "https://www.themoviedb.org/movie/1030533"
+        }
+      ],
+      "suggestedFix": "Two candidates scored within 0.05 of each other. Pick the right one and add it to data/tmdb-overrides.json."
+    },
+    {
+      "scrapedTitle": "BUFF - A New Leaf (1971)",
+      "canonicalTitle": "BUFF - A New Leaf (1971)",
+      "cinema": "Brunswick Picture House",
+      "category": "no-match",
+      "score": 0.25,
+      "triedVariants": [
+        "BUFF - A New Leaf (1971)",
+        "BUFF - A New Leaf",
+        "BUFF",
+        "A New Leaf (1971)"
+      ],
+      "topCandidates": [
+        {
+          "tmdbId": 912483,
+          "title": "Buff Cops",
+          "year": "2021",
+          "score": 0.25,
+          "viaVariant": "dash-split",
+          "url": "https://www.themoviedb.org/movie/912483"
+        },
+        {
+          "tmdbId": 105680,
+          "title": "Love in the Buff",
+          "year": "2012",
+          "score": 0.2,
+          "viaVariant": "dash-split",
+          "url": "https://www.themoviedb.org/movie/105680"
+        },
+        {
+          "tmdbId": 42164,
+          "title": "Camera Buff",
+          "year": "1979",
+          "score": 0.2,
+          "viaVariant": "dash-split",
+          "url": "https://www.themoviedb.org/movie/42164"
+        }
+      ],
+      "suggestedFix": "No candidate scored above the floor. Add to data/tmdb-overrides.json or extend data/title-rules.json."
+    },
+    {
+      "scrapedTitle": "BUFF - A New Leaf (1971)",
+      "canonicalTitle": "BUFF - A New Leaf (1971)",
+      "cinema": "Brunswick Picture House",
+      "category": "unknown-prefix",
+      "prefix": "BUFF",
+      "score": 0.25,
+      "suggestedFix": "Looks like a festival prefix. Add \"BUFF\" to data/title-rules.json → festivalPrefixes."
+    },
+    {
+      "scrapedTitle": "BUFF - The Heartbreak Kid (1972)",
+      "canonicalTitle": "BUFF - The Heartbreak Kid (1972)",
+      "cinema": "Brunswick Picture House",
+      "category": "no-match",
+      "score": 0.18,
+      "triedVariants": [
+        "BUFF - The Heartbreak Kid (1972)",
+        "BUFF - The Heartbreak Kid",
+        "BUFF",
+        "The Heartbreak Kid (1972)"
+      ],
+      "topCandidates": [
+        {
+          "tmdbId": 105680,
+          "title": "Love in the Buff",
+          "year": "2012",
+          "score": 0.18,
+          "viaVariant": "dash-split",
+          "url": "https://www.themoviedb.org/movie/105680"
+        },
+        {
+          "tmdbId": 912483,
+          "title": "Buff Cops",
+          "year": "2021",
+          "score": 0.18,
+          "viaVariant": "dash-split",
+          "url": "https://www.themoviedb.org/movie/912483"
+        },
+        {
+          "tmdbId": 42164,
+          "title": "Camera Buff",
+          "year": "1979",
+          "score": 0.14,
+          "viaVariant": "dash-split",
+          "url": "https://www.themoviedb.org/movie/42164"
+        }
+      ],
+      "suggestedFix": "No candidate scored above the floor. Add to data/tmdb-overrides.json or extend data/title-rules.json."
+    },
+    {
+      "scrapedTitle": "BUFF - The Heartbreak Kid (1972)",
+      "canonicalTitle": "BUFF - The Heartbreak Kid (1972)",
+      "cinema": "Brunswick Picture House",
+      "category": "unknown-prefix",
+      "prefix": "BUFF",
+      "score": 0.18,
+      "suggestedFix": "Looks like a festival prefix. Add \"BUFF\" to data/title-rules.json → festivalPrefixes."
+    },
+    {
+      "scrapedTitle": "BUFF - Mikey and Nicky (1976)",
+      "canonicalTitle": "BUFF - Mikey and Nicky (1976)",
+      "cinema": "Brunswick Picture House",
+      "category": "no-match",
+      "score": 0.24,
+      "triedVariants": [
+        "BUFF - Mikey and Nicky (1976)",
+        "BUFF - Mikey and Nicky",
+        "BUFF",
+        "Mikey and Nicky (1976)"
+      ],
+      "topCandidates": [
+        {
+          "tmdbId": 912483,
+          "title": "Buff Cops",
+          "year": "2021",
+          "score": 0.24,
+          "viaVariant": "dash-split",
+          "url": "https://www.themoviedb.org/movie/912483"
+        },
+        {
+          "tmdbId": 105680,
+          "title": "Love in the Buff",
+          "year": "2012",
+          "score": 0.2,
+          "viaVariant": "dash-split",
+          "url": "https://www.themoviedb.org/movie/105680"
+        },
+        {
+          "tmdbId": 42164,
+          "title": "Camera Buff",
+          "year": "1979",
+          "score": 0.16,
+          "viaVariant": "dash-split",
+          "url": "https://www.themoviedb.org/movie/42164"
+        }
+      ],
+      "suggestedFix": "No candidate scored above the floor. Add to data/tmdb-overrides.json or extend data/title-rules.json."
+    },
+    {
+      "scrapedTitle": "BUFF - Mikey and Nicky (1976)",
+      "canonicalTitle": "BUFF - Mikey and Nicky (1976)",
+      "cinema": "Brunswick Picture House",
+      "category": "unknown-prefix",
+      "prefix": "BUFF",
+      "score": 0.24,
+      "suggestedFix": "Looks like a festival prefix. Add \"BUFF\" to data/title-rules.json → festivalPrefixes."
+    },
+    {
+      "scrapedTitle": "BUFF - Ishtar (1987)",
+      "canonicalTitle": "BUFF - Ishtar (1987)",
+      "cinema": "Brunswick Picture House",
+      "category": "no-match",
+      "score": 0.31,
+      "triedVariants": [
+        "BUFF - Ishtar (1987)",
+        "BUFF - Ishtar",
+        "BUFF",
+        "Ishtar (1987)"
+      ],
+      "topCandidates": [
+        {
+          "tmdbId": 912483,
+          "title": "Buff Cops",
+          "year": "2021",
+          "score": 0.31,
+          "viaVariant": "dash-split",
+          "url": "https://www.themoviedb.org/movie/912483"
+        },
+        {
+          "tmdbId": 105680,
+          "title": "Love in the Buff",
+          "year": "2012",
+          "score": 0.25,
+          "viaVariant": "dash-split",
+          "url": "https://www.themoviedb.org/movie/105680"
+        },
+        {
+          "tmdbId": 1617346,
+          "title": "Buff",
+          "year": null,
+          "score": 0.25,
+          "viaVariant": "dash-split",
+          "url": "https://www.themoviedb.org/movie/1617346"
+        }
+      ],
+      "suggestedFix": "No candidate scored above the floor. Add to data/tmdb-overrides.json or extend data/title-rules.json."
+    },
+    {
+      "scrapedTitle": "BUFF - Ishtar (1987)",
+      "canonicalTitle": "BUFF - Ishtar (1987)",
+      "cinema": "Brunswick Picture House",
+      "category": "unknown-prefix",
+      "prefix": "BUFF",
+      "score": 0.31,
+      "suggestedFix": "Looks like a festival prefix. Add \"BUFF\" to data/title-rules.json → festivalPrefixes."
+    },
+    {
+      "scrapedTitle": "Asian Cinema Collective – May 2026",
+      "canonicalTitle": "Asian Cinema Collective – May 2026",
+      "cinema": "Eclipse Cinema",
+      "category": "no-match",
+      "score": 0.19,
+      "triedVariants": [
+        "Asian Cinema Collective – May 2026",
+        "Asian Cinema Collective",
+        "May 2026"
+      ],
+      "topCandidates": [
+        {
+          "tmdbId": 1694806,
+          "title": "Stardom in Korakuen 2026 May.",
+          "year": "2026",
+          "score": 0.19,
+          "viaVariant": "dash-split",
+          "url": "https://www.themoviedb.org/movie/1694806"
+        }
+      ],
+      "suggestedFix": "No candidate scored above the floor. Add to data/tmdb-overrides.json or extend data/title-rules.json."
+    },
+    {
+      "scrapedTitle": "Umbrella Presents: Human Traffic",
+      "canonicalTitle": "Umbrella Presents: Human Traffic",
+      "cinema": "Eclipse Cinema",
+      "category": "no-results",
+      "score": 0,
+      "triedVariants": [
+        "Umbrella Presents: Human Traffic"
+      ],
+      "topCandidates": [],
+      "suggestedFix": "Add a manual override in data/tmdb-overrides.json with the right TMDB ID."
+    },
+    {
+      "scrapedTitle": "Umbrella Presents: The Love Witch",
+      "canonicalTitle": "Umbrella Presents: The Love Witch",
+      "cinema": "Eclipse Cinema",
+      "category": "no-results",
+      "score": 0,
+      "triedVariants": [
+        "Umbrella Presents: The Love Witch"
+      ],
+      "topCandidates": [],
+      "suggestedFix": "Add a manual override in data/tmdb-overrides.json with the right TMDB ID."
+    },
+    {
+      "scrapedTitle": "Secret Agent, The",
+      "canonicalTitle": "The Secret Agent",
+      "cinema": "Cinema Nova",
+      "category": "ambiguous",
+      "score": 1,
+      "triedVariants": [
+        "The Secret Agent"
+      ],
+      "topCandidates": [
+        {
+          "tmdbId": 1220564,
+          "title": "The Secret Agent",
+          "year": "2025",
+          "score": 1,
+          "viaVariant": "as-is",
+          "url": "https://www.themoviedb.org/movie/1220564"
+        },
+        {
+          "tmdbId": 394956,
+          "title": "The Secret Agent",
+          "year": "2015",
+          "score": 1,
+          "viaVariant": "as-is",
+          "url": "https://www.themoviedb.org/movie/394956"
+        },
+        {
+          "tmdbId": 47199,
+          "title": "The Secret Agent",
+          "year": "1996",
+          "score": 1,
+          "viaVariant": "as-is",
+          "url": "https://www.themoviedb.org/movie/47199"
+        }
+      ],
+      "suggestedFix": "Two candidates scored within 0.05 of each other. Pick the right one and add it to data/tmdb-overrides.json."
+    },
+    {
+      "scrapedTitle": "Franz: Becoming Kafka",
+      "canonicalTitle": "Franz: Becoming Kafka",
+      "cinema": "Cinema Nova",
+      "category": "no-results",
+      "score": 0,
+      "triedVariants": [
+        "Franz: Becoming Kafka"
+      ],
+      "topCandidates": [],
+      "suggestedFix": "Add a manual override in data/tmdb-overrides.json with the right TMDB ID."
+    },
+    {
+      "scrapedTitle": "Dreams and Where the Wild Things Are",
+      "canonicalTitle": "Dreams and Where the Wild Things Are",
+      "cinema": "Cinema Nova",
+      "category": "no-results",
+      "score": 0,
+      "triedVariants": [
+        "Dreams and Where the Wild Things Are"
+      ],
+      "topCandidates": [],
+      "suggestedFix": "Add a manual override in data/tmdb-overrides.json with the right TMDB ID."
+    },
+    {
+      "scrapedTitle": "Wingman",
+      "canonicalTitle": "Wingman",
+      "cinema": "Lido Cinemas",
+      "category": "ambiguous",
+      "score": 1,
+      "triedVariants": [
+        "Wingman"
+      ],
+      "topCandidates": [
+        {
+          "tmdbId": 1222518,
+          "title": "Wingman",
+          "year": "2025",
+          "score": 1,
+          "viaVariant": "as-is",
+          "url": "https://www.themoviedb.org/movie/1222518"
+        },
+        {
+          "tmdbId": 1415249,
+          "title": "Wingman",
+          "year": "2012",
+          "score": 1,
+          "viaVariant": "as-is",
+          "url": "https://www.themoviedb.org/movie/1415249"
+        },
+        {
+          "tmdbId": 1512378,
+          "title": "Wingman",
+          "year": "2025",
+          "score": 1,
+          "viaVariant": "as-is",
+          "url": "https://www.themoviedb.org/movie/1512378"
+        }
+      ],
+      "suggestedFix": "Two candidates scored within 0.05 of each other. Pick the right one and add it to data/tmdb-overrides.json."
+    },
+    {
+      "scrapedTitle": "FFFA: Penny Lane is Dead",
+      "canonicalTitle": "FFFA: Penny Lane is Dead",
+      "cinema": "Lido Cinemas",
+      "category": "no-results",
+      "score": 0,
+      "triedVariants": [
+        "FFFA: Penny Lane is Dead"
+      ],
+      "topCandidates": [],
+      "suggestedFix": "Add a manual override in data/tmdb-overrides.json with the right TMDB ID."
+    },
+    {
+      "scrapedTitle": "FFFA: Demons",
+      "canonicalTitle": "FFFA: Demons",
+      "cinema": "Lido Cinemas",
+      "category": "no-results",
+      "score": 0,
+      "triedVariants": [
+        "FFFA: Demons"
+      ],
+      "topCandidates": [],
+      "suggestedFix": "Add a manual override in data/tmdb-overrides.json with the right TMDB ID."
+    },
+    {
+      "scrapedTitle": "The Ruby Glynn Quartet",
+      "canonicalTitle": "The Ruby Glynn Quartet",
+      "cinema": "Lido Cinemas",
+      "category": "no-results",
+      "score": 0,
+      "triedVariants": [
+        "The Ruby Glynn Quartet"
+      ],
+      "topCandidates": [],
+      "suggestedFix": "Add a manual override in data/tmdb-overrides.json with the right TMDB ID."
+    },
+    {
+      "scrapedTitle": "Passenger",
+      "canonicalTitle": "Passenger",
+      "cinema": "Hoyts Melbourne Central",
+      "category": "ambiguous",
+      "score": 1,
+      "triedVariants": [
+        "Passenger"
+      ],
+      "topCandidates": [
+        {
+          "tmdbId": 1368314,
+          "title": "Passenger",
+          "year": "2026",
+          "score": 1,
+          "viaVariant": "as-is",
+          "url": "https://www.themoviedb.org/movie/1368314"
+        },
+        {
+          "tmdbId": 385871,
+          "title": "Passenger",
+          "year": "1987",
+          "score": 1,
+          "viaVariant": "as-is",
+          "url": "https://www.themoviedb.org/movie/385871"
+        },
+        {
+          "tmdbId": 10538,
+          "title": "Passenger 57",
+          "year": "1992",
+          "score": 0.75,
+          "viaVariant": "as-is",
+          "url": "https://www.themoviedb.org/movie/10538"
+        }
+      ],
+      "suggestedFix": "Two candidates scored within 0.05 of each other. Pick the right one and add it to data/tmdb-overrides.json."
+    },
+    {
+      "scrapedTitle": "Thief (1981)",
+      "canonicalTitle": "Thief (1981)",
+      "cinema": "Lido Cinemas",
+      "category": "low-confidence",
+      "score": 0.5,
+      "triedVariants": [
+        "Thief (1981)",
+        "Thief"
+      ],
+      "topCandidates": [
+        {
+          "tmdbId": 11524,
+          "title": "Thief",
+          "year": "1981",
+          "score": 0.5,
+          "viaVariant": "stripped-trailing-paren",
+          "url": "https://www.themoviedb.org/movie/11524"
+        },
+        {
+          "tmdbId": 47423,
+          "title": "Once a Thief",
+          "year": "1991",
+          "score": 0.18,
+          "viaVariant": "stripped-trailing-paren",
+          "url": "https://www.themoviedb.org/movie/47423"
+        },
+        {
+          "tmdbId": 553604,
+          "title": "Honest Thief",
+          "year": "2020",
+          "score": 0.17,
+          "viaVariant": "stripped-trailing-paren",
+          "url": "https://www.themoviedb.org/movie/553604"
+        }
+      ],
+      "suggestedFix": "Verify the top candidate is right; if so, add it to data/tmdb-overrides.json to silence this alert."
+    },
+    {
+      "scrapedTitle": "Bob Sedergreen and Friends with Home Cooking",
+      "canonicalTitle": "Bob Sedergreen and Friends with Home Cooking",
+      "cinema": "Lido Cinemas",
+      "category": "no-results",
+      "score": 0,
+      "triedVariants": [
+        "Bob Sedergreen and Friends with Home Cooking"
+      ],
+      "topCandidates": [],
+      "suggestedFix": "Add a manual override in data/tmdb-overrides.json with the right TMDB ID."
+    },
+    {
+      "scrapedTitle": "FFFA: Love Exposure",
+      "canonicalTitle": "FFFA: Love Exposure",
+      "cinema": "Lido Cinemas",
+      "category": "no-results",
+      "score": 0,
+      "triedVariants": [
+        "FFFA: Love Exposure"
+      ],
+      "topCandidates": [],
+      "suggestedFix": "Add a manual override in data/tmdb-overrides.json with the right TMDB ID."
+    },
+    {
+      "scrapedTitle": "FFFA: The Good Boy",
+      "canonicalTitle": "FFFA: The Good Boy",
+      "cinema": "Lido Cinemas",
+      "category": "no-results",
+      "score": 0,
+      "triedVariants": [
+        "FFFA: The Good Boy"
+      ],
+      "topCandidates": [],
+      "suggestedFix": "Add a manual override in data/tmdb-overrides.json with the right TMDB ID."
+    },
+    {
+      "scrapedTitle": "FFFA: The Weed Eaters",
+      "canonicalTitle": "FFFA: The Weed Eaters",
+      "cinema": "Lido Cinemas",
+      "category": "no-results",
+      "score": 0,
+      "triedVariants": [
+        "FFFA: The Weed Eaters"
+      ],
+      "topCandidates": [],
+      "suggestedFix": "Add a manual override in data/tmdb-overrides.json with the right TMDB ID."
+    },
+    {
+      "scrapedTitle": "Él (1953)",
+      "canonicalTitle": "Él (1953)",
+      "cinema": "Lido Cinemas",
+      "category": "no-match",
+      "score": 0.38,
+      "triedVariants": [
+        "Él (1953)",
+        "Él",
+        "El (1953)",
+        "El"
+      ],
+      "topCandidates": [
+        {
+          "tmdbId": 991708,
+          "title": "El Conde",
+          "year": "2023",
+          "score": 0.38,
+          "viaVariant": "stripped-trailing-paren",
+          "url": "https://www.themoviedb.org/movie/991708"
+        },
+        {
+          "tmdbId": 991708,
+          "title": "El Conde",
+          "year": "2023",
+          "score": 0.38,
+          "viaVariant": "unaccented",
+          "url": "https://www.themoviedb.org/movie/991708"
+        },
+        {
+          "tmdbId": 71393,
+          "title": "The Cold Summer of 1953",
+          "year": "1988",
+          "score": 0.31,
+          "viaVariant": "as-is",
+          "url": "https://www.themoviedb.org/movie/71393"
+        }
+      ],
+      "suggestedFix": "No candidate scored above the floor. Add to data/tmdb-overrides.json or extend data/title-rules.json."
+    },
+    {
+      "scrapedTitle": "FFFA: Wolf Cat Fever",
+      "canonicalTitle": "FFFA: Wolf Cat Fever",
+      "cinema": "Lido Cinemas",
+      "category": "no-results",
+      "score": 0,
+      "triedVariants": [
+        "FFFA: Wolf Cat Fever"
+      ],
+      "topCandidates": [],
+      "suggestedFix": "Add a manual override in data/tmdb-overrides.json with the right TMDB ID."
+    },
+    {
+      "scrapedTitle": "The Wife of Seisaku (1965)",
+      "canonicalTitle": "The Wife of Seisaku (1965)",
+      "cinema": "Lido Cinemas",
+      "category": "no-match",
+      "score": 0.25,
+      "triedVariants": [
+        "The Wife of Seisaku (1965)",
+        "The Wife of Seisaku"
+      ],
+      "topCandidates": [
+        {
+          "tmdbId": 115647,
+          "title": "Seisaku's Wife",
+          "year": "1965",
+          "score": 0.25,
+          "viaVariant": "stripped-trailing-paren",
+          "url": "https://www.themoviedb.org/movie/115647"
+        }
+      ],
+      "suggestedFix": "No candidate scored above the floor. Add to data/tmdb-overrides.json or extend data/title-rules.json."
+    },
+    {
+      "scrapedTitle": "GER26 Berlin Hero",
+      "canonicalTitle": "GER26 Berlin Hero",
+      "cinema": "Palace Como",
+      "category": "no-match",
+      "score": 0.12,
+      "triedVariants": [
+        "GER26 Berlin Hero",
+        "Berlin Hero"
+      ],
+      "topCandidates": [
+        {
+          "tmdbId": 323677,
+          "title": "Race",
+          "year": "2016",
+          "score": 0.12,
+          "viaVariant": "stripped-festival-prefix",
+          "url": "https://www.themoviedb.org/movie/323677"
+        }
+      ],
+      "suggestedFix": "No candidate scored above the floor. Add to data/tmdb-overrides.json or extend data/title-rules.json."
+    },
+    {
+      "scrapedTitle": "GER26 Hello Betty",
+      "canonicalTitle": "GER26 Hello Betty",
+      "cinema": "Palace Como",
+      "category": "no-results",
+      "score": 0,
+      "triedVariants": [
+        "GER26 Hello Betty",
+        "Hello Betty"
+      ],
+      "topCandidates": [],
+      "suggestedFix": "Add a manual override in data/tmdb-overrides.json with the right TMDB ID."
+    },
+    {
+      "scrapedTitle": "GER26 I'm Not Stiller",
+      "canonicalTitle": "GER26 I'm Not Stiller",
+      "cinema": "Palace Como",
+      "category": "no-results",
+      "score": 0,
+      "triedVariants": [
+        "GER26 I'm Not Stiller",
+        "I'm Not Stiller"
+      ],
+      "topCandidates": [],
+      "suggestedFix": "Add a manual override in data/tmdb-overrides.json with the right TMDB ID."
+    },
+    {
+      "scrapedTitle": "GER26 Sound of Falling",
+      "canonicalTitle": "GER26 Sound of Falling",
+      "cinema": "Palace Como",
+      "category": "ambiguous",
+      "score": 0.77,
+      "triedVariants": [
+        "GER26 Sound of Falling",
+        "Sound of Falling"
+      ],
+      "topCandidates": [
+        {
+          "tmdbId": 583447,
+          "title": "The Sound of Falling",
+          "year": "2019",
+          "score": 0.77,
+          "viaVariant": "stripped-festival-prefix",
+          "url": "https://www.themoviedb.org/movie/583447"
+        },
+        {
+          "tmdbId": 1221061,
+          "title": "Sound of Falling",
+          "year": "2025",
+          "score": 0.73,
+          "viaVariant": "stripped-festival-prefix",
+          "url": "https://www.themoviedb.org/movie/1221061"
+        },
+        {
+          "tmdbId": 1070498,
+          "title": "The Sound of Things Falling",
+          "year": null,
+          "score": 0.56,
+          "viaVariant": "stripped-festival-prefix",
+          "url": "https://www.themoviedb.org/movie/1070498"
+        }
+      ],
+      "suggestedFix": "Two candidates scored within 0.05 of each other. Pick the right one and add it to data/tmdb-overrides.json."
+    },
+    {
+      "scrapedTitle": "Films",
+      "canonicalTitle": "Films",
+      "cinema": "The Astor Theatre",
+      "category": "low-confidence",
+      "score": 0.56,
+      "triedVariants": [
+        "Films"
+      ],
+      "topCandidates": [
+        {
+          "tmdbId": 115580,
+          "title": "Jam Films",
+          "year": "2002",
+          "score": 0.56,
+          "viaVariant": "as-is",
+          "url": "https://www.themoviedb.org/movie/115580"
+        },
+        {
+          "tmdbId": 377238,
+          "title": "Jam Films S",
+          "year": "2004",
+          "score": 0.46,
+          "viaVariant": "as-is",
+          "url": "https://www.themoviedb.org/movie/377238"
+        },
+        {
+          "tmdbId": 949252,
+          "title": "SHORT FILMS",
+          "year": "2003",
+          "score": 0.46,
+          "viaVariant": "as-is",
+          "url": "https://www.themoviedb.org/movie/949252"
+        }
+      ],
+      "suggestedFix": "Verify the top candidate is right; if so, add it to data/tmdb-overrides.json to silence this alert."
+    },
+    {
+      "scrapedTitle": "GER26 - The Edge of Heaven",
+      "canonicalTitle": "GER26 - The Edge of Heaven",
+      "cinema": "The Astor Theatre",
+      "category": "ambiguous",
+      "score": 0.75,
+      "triedVariants": [
+        "GER26 - The Edge of Heaven",
+        "- The Edge of Heaven",
+        "GER26",
+        "The Edge of Heaven"
+      ],
+      "topCandidates": [
+        {
+          "tmdbId": 2014,
+          "title": "The Edge of Heaven",
+          "year": "2007",
+          "score": 0.75,
+          "viaVariant": "stripped-festival-prefix",
+          "url": "https://www.themoviedb.org/movie/2014"
+        },
+        {
+          "tmdbId": 2014,
+          "title": "The Edge of Heaven",
+          "year": "2007",
+          "score": 0.75,
+          "viaVariant": "dash-split",
+          "url": "https://www.themoviedb.org/movie/2014"
+        },
+        {
+          "tmdbId": 292750,
+          "title": "Buck at the Edge of Heaven",
+          "year": "1991",
+          "score": 0.73,
+          "viaVariant": "stripped-festival-prefix",
+          "url": "https://www.themoviedb.org/movie/292750"
+        }
+      ],
+      "suggestedFix": "Two candidates scored within 0.05 of each other. Pick the right one and add it to data/tmdb-overrides.json."
+    },
+    {
+      "scrapedTitle": "GER26 - Goodbye Berlin",
+      "canonicalTitle": "GER26 - Goodbye Berlin",
+      "cinema": "The Astor Theatre",
+      "category": "ambiguous",
+      "score": 0.7,
+      "triedVariants": [
+        "GER26 - Goodbye Berlin",
+        "- Goodbye Berlin",
+        "GER26",
+        "Goodbye Berlin"
+      ],
+      "topCandidates": [
+        {
+          "tmdbId": 384664,
+          "title": "Goodbye Berlin",
+          "year": "2016",
+          "score": 0.7,
+          "viaVariant": "stripped-festival-prefix",
+          "url": "https://www.themoviedb.org/movie/384664"
+        },
+        {
+          "tmdbId": 384664,
+          "title": "Goodbye Berlin",
+          "year": "2016",
+          "score": 0.7,
+          "viaVariant": "dash-split",
+          "url": "https://www.themoviedb.org/movie/384664"
+        },
+        {
+          "tmdbId": 272403,
+          "title": "Welcome Goodbye",
+          "year": "2014",
+          "score": 0.35,
+          "viaVariant": "stripped-festival-prefix",
+          "url": "https://www.themoviedb.org/movie/272403"
+        }
+      ],
+      "suggestedFix": "Two candidates scored within 0.05 of each other. Pick the right one and add it to data/tmdb-overrides.json."
+    },
+    {
+      "scrapedTitle": "Malcolm X -35mm",
+      "canonicalTitle": "Malcolm X -35mm",
+      "cinema": "The Astor Theatre",
+      "category": "no-results",
+      "score": 0,
+      "triedVariants": [
+        "Malcolm X -35mm"
+      ],
+      "topCandidates": [],
+      "suggestedFix": "Add a manual override in data/tmdb-overrides.json with the right TMDB ID."
+    },
+    {
+      "scrapedTitle": "GER26 Amrum",
+      "canonicalTitle": "GER26 Amrum",
+      "cinema": "Palace Kino",
+      "category": "low-confidence",
+      "score": 0.53,
+      "triedVariants": [
+        "GER26 Amrum",
+        "Amrum"
+      ],
+      "topCandidates": [
+        {
+          "tmdbId": 73117,
+          "title": "Murder on Amrum",
+          "year": "2009",
+          "score": 0.53,
+          "viaVariant": "stripped-festival-prefix",
+          "url": "https://www.themoviedb.org/movie/73117"
+        },
+        {
+          "tmdbId": 288006,
+          "title": "Tod auf Amrum",
+          "year": "1998",
+          "score": 0.46,
+          "viaVariant": "stripped-festival-prefix",
+          "url": "https://www.themoviedb.org/movie/288006"
+        },
+        {
+          "tmdbId": 1269644,
+          "title": "Amrum",
+          "year": "2025",
+          "score": 0.46,
+          "viaVariant": "stripped-festival-prefix",
+          "url": "https://www.themoviedb.org/movie/1269644"
+        }
+      ],
+      "suggestedFix": "Verify the top candidate is right; if so, add it to data/tmdb-overrides.json to silence this alert."
+    },
+    {
+      "scrapedTitle": "GER26 Home Stories",
+      "canonicalTitle": "GER26 Home Stories",
+      "cinema": "Palace Kino",
+      "category": "ambiguous",
+      "score": 0.67,
+      "triedVariants": [
+        "GER26 Home Stories",
+        "Home Stories"
+      ],
+      "topCandidates": [
+        {
+          "tmdbId": 1299061,
+          "title": "Home Stories",
+          "year": "2026",
+          "score": 0.67,
+          "viaVariant": "stripped-festival-prefix",
+          "url": "https://www.themoviedb.org/movie/1299061"
+        },
+        {
+          "tmdbId": 715085,
+          "title": "Home Stories",
+          "year": "2020",
+          "score": 0.67,
+          "viaVariant": "stripped-festival-prefix",
+          "url": "https://www.themoviedb.org/movie/715085"
+        },
+        {
+          "tmdbId": 354495,
+          "title": "Home Stories",
+          "year": "1990",
+          "score": 0.67,
+          "viaVariant": "stripped-festival-prefix",
+          "url": "https://www.themoviedb.org/movie/354495"
+        }
+      ],
+      "suggestedFix": "Two candidates scored within 0.05 of each other. Pick the right one and add it to data/tmdb-overrides.json."
+    },
+    {
+      "scrapedTitle": "Shrek 25th Anniversary",
+      "canonicalTitle": "Shrek 25th Anniversary",
+      "cinema": "Palace Como",
+      "category": "no-results",
+      "score": 0,
+      "triedVariants": [
+        "Shrek 25th Anniversary"
+      ],
+      "topCandidates": [],
+      "suggestedFix": "Add a manual override in data/tmdb-overrides.json with the right TMDB ID."
+    },
+    {
+      "scrapedTitle": "GER26 The Holy Grill",
+      "canonicalTitle": "GER26 The Holy Grill",
+      "cinema": "Palace Como",
+      "category": "no-results",
+      "score": 0,
+      "triedVariants": [
+        "GER26 The Holy Grill",
+        "The Holy Grill"
+      ],
+      "topCandidates": [],
+      "suggestedFix": "Add a manual override in data/tmdb-overrides.json with the right TMDB ID."
+    },
+    {
+      "scrapedTitle": "GER26 Karla",
+      "canonicalTitle": "GER26 Karla",
+      "cinema": "Palace Como",
+      "category": "no-match",
+      "score": 0.46,
+      "triedVariants": [
+        "GER26 Karla",
+        "Karla"
+      ],
+      "topCandidates": [
+        {
+          "tmdbId": 9695,
+          "title": "Karla",
+          "year": "2006",
+          "score": 0.46,
+          "viaVariant": "stripped-festival-prefix",
+          "url": "https://www.themoviedb.org/movie/9695"
+        },
+        {
+          "tmdbId": 1480424,
+          "title": "Karla",
+          "year": "2025",
+          "score": 0.45,
+          "viaVariant": "stripped-festival-prefix",
+          "url": "https://www.themoviedb.org/movie/1480424"
+        },
+        {
+          "tmdbId": 933187,
+          "title": "Karla",
+          "year": "2016",
+          "score": 0.45,
+          "viaVariant": "stripped-festival-prefix",
+          "url": "https://www.themoviedb.org/movie/933187"
+        }
+      ],
+      "suggestedFix": "No candidate scored above the floor. Add to data/tmdb-overrides.json or extend data/title-rules.json."
+    },
+    {
+      "scrapedTitle": "GER26 22 Laps",
+      "canonicalTitle": "GER26 22 Laps",
+      "cinema": "Palace Como",
+      "category": "no-results",
+      "score": 0,
+      "triedVariants": [
+        "GER26 22 Laps",
+        "22 Laps"
+      ],
+      "topCandidates": [],
+      "suggestedFix": "Add a manual override in data/tmdb-overrides.json with the right TMDB ID."
+    },
+    {
+      "scrapedTitle": "GER26 Gavagai",
+      "canonicalTitle": "GER26 Gavagai",
+      "cinema": "Palace Como",
+      "category": "low-confidence",
+      "score": 0.54,
+      "triedVariants": [
+        "GER26 Gavagai",
+        "Gavagai"
+      ],
+      "topCandidates": [
+        {
+          "tmdbId": 1214833,
+          "title": "Gavagai",
+          "year": "2026",
+          "score": 0.54,
+          "viaVariant": "stripped-festival-prefix",
+          "url": "https://www.themoviedb.org/movie/1214833"
+        },
+        {
+          "tmdbId": 430550,
+          "title": "Gavagai",
+          "year": "2016",
+          "score": 0.54,
+          "viaVariant": "stripped-festival-prefix",
+          "url": "https://www.themoviedb.org/movie/430550"
+        },
+        {
+          "tmdbId": 1683735,
+          "title": "Gavagai",
+          "year": null,
+          "score": 0.54,
+          "viaVariant": "stripped-festival-prefix",
+          "url": "https://www.themoviedb.org/movie/1683735"
+        }
+      ],
+      "suggestedFix": "Verify the top candidate is right; if so, add it to data/tmdb-overrides.json to silence this alert."
+    },
+    {
+      "scrapedTitle": "GER26 Barry & Me",
+      "canonicalTitle": "GER26 Barry & Me",
+      "cinema": "Palace Como",
+      "category": "no-match",
+      "score": 0.27,
+      "triedVariants": [
+        "GER26 Barry & Me",
+        "Barry & Me"
+      ],
+      "topCandidates": [
+        {
+          "tmdbId": 1494724,
+          "title": "My Friend Barry",
+          "year": "2026",
+          "score": 0.27,
+          "viaVariant": "stripped-festival-prefix",
+          "url": "https://www.themoviedb.org/movie/1494724"
+        },
+        {
+          "tmdbId": 826428,
+          "title": "That's Right Diana Barry, You Needed Me",
+          "year": "2009",
+          "score": 0.26,
+          "viaVariant": "stripped-festival-prefix",
+          "url": "https://www.themoviedb.org/movie/826428"
+        },
+        {
+          "tmdbId": 1228618,
+          "title": "Barry White Mexico 1976",
+          "year": "1976",
+          "score": 0.22,
+          "viaVariant": "stripped-festival-prefix",
+          "url": "https://www.themoviedb.org/movie/1228618"
+        }
+      ],
+      "suggestedFix": "No candidate scored above the floor. Add to data/tmdb-overrides.json or extend data/title-rules.json."
+    },
+    {
+      "scrapedTitle": "GER26 Pumuckl's Big Mix-Up",
+      "canonicalTitle": "GER26 Pumuckl's Big Mix-Up",
+      "cinema": "Palace Como",
+      "category": "no-results",
+      "score": 0,
+      "triedVariants": [
+        "GER26 Pumuckl's Big Mix-Up",
+        "Pumuckl's Big Mix-Up"
+      ],
+      "topCandidates": [],
+      "suggestedFix": "Add a manual override in data/tmdb-overrides.json with the right TMDB ID."
+    },
+    {
+      "scrapedTitle": "Calle Málaga (Malaga Street)",
+      "canonicalTitle": "Calle Málaga (Malaga Street)",
+      "cinema": "Palace Kino",
+      "category": "no-match",
+      "score": 0.47,
+      "triedVariants": [
+        "Calle Málaga (Malaga Street)",
+        "Calle Málaga",
+        "Calle Malaga (Malaga Street)",
+        "Calle Malaga"
+      ],
+      "topCandidates": [
+        {
+          "tmdbId": 1399462,
+          "title": "Calle Malaga",
+          "year": "2025",
+          "score": 0.47,
+          "viaVariant": "stripped-trailing-paren",
+          "url": "https://www.themoviedb.org/movie/1399462"
+        },
+        {
+          "tmdbId": 1399462,
+          "title": "Calle Malaga",
+          "year": "2025",
+          "score": 0.47,
+          "viaVariant": "unaccented",
+          "url": "https://www.themoviedb.org/movie/1399462"
+        }
+      ],
+      "suggestedFix": "No candidate scored above the floor. Add to data/tmdb-overrides.json or extend data/title-rules.json."
+    },
+    {
+      "scrapedTitle": "GER26 The Edge of Heaven",
+      "canonicalTitle": "GER26 The Edge of Heaven",
+      "cinema": "Palace Westgarth",
+      "category": "ambiguous",
+      "score": 0.75,
+      "triedVariants": [
+        "GER26 The Edge of Heaven",
+        "The Edge of Heaven"
+      ],
+      "topCandidates": [
+        {
+          "tmdbId": 2014,
+          "title": "The Edge of Heaven",
+          "year": "2007",
+          "score": 0.75,
+          "viaVariant": "stripped-festival-prefix",
+          "url": "https://www.themoviedb.org/movie/2014"
+        },
+        {
+          "tmdbId": 292750,
+          "title": "Buck at the Edge of Heaven",
+          "year": "1991",
+          "score": 0.73,
+          "viaVariant": "stripped-festival-prefix",
+          "url": "https://www.themoviedb.org/movie/292750"
+        },
+        {
+          "tmdbId": 981699,
+          "title": "Tidikawa: At the Edge of Heaven",
+          "year": "1992",
+          "score": 0.63,
+          "viaVariant": "stripped-festival-prefix",
+          "url": "https://www.themoviedb.org/movie/981699"
+        }
+      ],
+      "suggestedFix": "Two candidates scored within 0.05 of each other. Pick the right one and add it to data/tmdb-overrides.json."
+    },
+    {
+      "scrapedTitle": "GER26 Head On",
+      "canonicalTitle": "GER26 Head On",
+      "cinema": "Palace Westgarth",
+      "category": "low-confidence",
+      "score": 0.62,
+      "triedVariants": [
+        "GER26 Head On",
+        "Head On"
+      ],
+      "topCandidates": [
+        {
+          "tmdbId": 420039,
+          "title": "Abby Head On",
+          "year": "2013",
+          "score": 0.62,
+          "viaVariant": "stripped-festival-prefix",
+          "url": "https://www.themoviedb.org/movie/420039"
+        },
+        {
+          "tmdbId": 363,
+          "title": "Head-On",
+          "year": "2004",
+          "score": 0.54,
+          "viaVariant": "stripped-festival-prefix",
+          "url": "https://www.themoviedb.org/movie/363"
+        },
+        {
+          "tmdbId": 13817,
+          "title": "Head On",
+          "year": "1998",
+          "score": 0.54,
+          "viaVariant": "stripped-festival-prefix",
+          "url": "https://www.themoviedb.org/movie/13817"
+        }
+      ],
+      "suggestedFix": "Verify the top candidate is right; if so, add it to data/tmdb-overrides.json to silence this alert."
+    },
+    {
+      "scrapedTitle": "DUNKIRK IN 70MM",
+      "canonicalTitle": "Dunkirk in 70MM",
+      "cinema": "Sun Theatre",
+      "category": "no-results",
+      "score": 0,
+      "triedVariants": [
+        "Dunkirk in 70MM"
+      ],
+      "topCandidates": [],
+      "suggestedFix": "Add a manual override in data/tmdb-overrides.json with the right TMDB ID."
+    },
+    {
+      "scrapedTitle": "The Mandalorian & Grogu",
+      "canonicalTitle": "The Mandalorian & Grogu",
+      "cinema": "Coburg Drive-In",
+      "category": "low-confidence",
+      "score": 0.63,
+      "triedVariants": [
+        "The Mandalorian & Grogu"
+      ],
+      "topCandidates": [
+        {
+          "tmdbId": 1228710,
+          "title": "Star Wars: The Mandalorian and Grogu",
+          "year": "2026",
+          "score": 0.63,
+          "viaVariant": "as-is",
+          "url": "https://www.themoviedb.org/movie/1228710"
+        },
+        {
+          "tmdbId": 1693433,
+          "title": "Family Guy: A Lesson In The Force",
+          "year": "2026",
+          "score": 0.22,
+          "viaVariant": "as-is",
+          "url": "https://www.themoviedb.org/movie/1693433"
+        }
+      ],
+      "suggestedFix": "Verify the top candidate is right; if so, add it to data/tmdb-overrides.json to silence this alert."
+    }
+  ]
+}
