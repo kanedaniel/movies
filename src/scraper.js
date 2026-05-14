@@ -36,10 +36,20 @@ const needsReview = []; // populated by fetchTMDB; written at end of main()
 try {
   if (fs.existsSync(TMDB_CACHE_PATH)) {
     const cached = JSON.parse(fs.readFileSync(TMDB_CACHE_PATH, 'utf8'));
+    let skippedNulls = 0;
     for (const [key, value] of Object.entries(cached)) {
+      // Skip stale null entries — let the new pipeline retry them.
+      // (Successful entries with posters/overview stay cached.)
+      if (value && value.posterPath === null && value.tmdbId === null) {
+        skippedNulls++;
+        continue;
+      }
       tmdbCache.set(key, value);
     }
-    console.log(`Loaded ${tmdbCache.size} entries from TMDB cache`);
+    console.log(
+      `Loaded ${tmdbCache.size} entries from TMDB cache` +
+      (skippedNulls ? ` (skipped ${skippedNulls} stale null entries — will retry)` : '')
+    );
   }
 } catch (e) {
   console.log('Could not load TMDB cache (will rebuild)');
