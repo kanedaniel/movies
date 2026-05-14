@@ -29,8 +29,25 @@ const SCORE_OK = 0.65;          // ≥ this: confident
 const SCORE_FLOOR = 0.50;       // < this: treat as no-match
 const AMBIGUOUS_GAP = 0.05;     // top two within this: ambiguous
 
+// Per-request deadline. Without an AbortController-backed timeout, Node's
+// fetch() will wait forever on a slow/hung response — and since the
+// scraper runs 7 days in parallel, one stuck upstream stalls every day
+// at once.
+const FETCH_TIMEOUT_MS = 30000;
+
 const tmdbCache = new Map();
+const tmdbInFlight = new Map();  // canonical-key → in-flight Promise
 const needsReview = []; // populated by fetchTMDB; written at end of main()
+
+async function fetchWithTimeout(url, options = {}, timeoutMs = FETCH_TIMEOUT_MS) {
+  const controller = new AbortController();
+  const timer = setTimeout(() => controller.abort(), timeoutMs);
+  try {
+    return await fetch(url, { ...options, signal: controller.signal });
+  } finally {
+    clearTimeout(timer);
+  }
+}
 
 // Load persistent TMDB cache from previous runs
 try {
@@ -136,7 +153,21 @@ async function fetchTMDB(canonicalTitle, context = {}) {
   if (tmdbCache.has(cacheKey)) {
     return tmdbCache.get(cacheKey);
   }
+  // In-flight dedup: 7 parallel day-scrapes share one TMDB resolution
+  // per title instead of each running the full variant cascade.
+  if (tmdbInFlight.has(cacheKey)) {
+    return tmdbInFlight.get(cacheKey);
+  }
 
+  const promise = doFetchTMDB(canonicalTitle, context).finally(() => {
+    tmdbInFlight.delete(cacheKey);
+  });
+  tmdbInFlight.set(cacheKey, promise);
+  return promise;
+}
+
+async function doFetchTMDB(canonicalTitle, context = {}) {
+  const cacheKey = canonicalTitle.toLowerCase().trim();
   const fallback = {
     overview: null, posterPath: null, rating: null,
     year: null, runtime: null, trailerUrl: null, tmdbId: null
@@ -166,7 +197,7 @@ async function fetchTMDB(canonicalTitle, context = {}) {
     for (const variant of variants) {
       const searchUrl = `${TMDB_BASE}/search/movie?api_key=${TMDB_API_KEY}&query=${encodeURIComponent(variant.q)}`;
       try {
-        const response = await fetch(searchUrl);
+        const response = await fetchWithTimeout(searchUrl);
         const data = await response.json();
         const top = (data.results || []).slice(0, 5);
         for (const cand of top) {
@@ -285,7 +316,7 @@ async function fetchByOverride(canonicalTitle, override) {
   console.log(`  TMDB override: "${canonicalTitle}" -> ${mediaType} ID ${overrideId}`);
 
   const detailsUrl = `${TMDB_BASE}/${mediaType}/${overrideId}?api_key=${TMDB_API_KEY}&append_to_response=videos`;
-  const detailsResponse = await fetch(detailsUrl);
+  const detailsResponse = await fetchWithTimeout(detailsUrl);
   const item = await detailsResponse.json();
   if (!item || !item.id) return null;
 
@@ -308,7 +339,7 @@ async function enrichWithDetails(candidate) {
   let trailerUrl = null;
   try {
     const detailsUrl = `${TMDB_BASE}/movie/${candidate.id}?api_key=${TMDB_API_KEY}&append_to_response=videos`;
-    const detailsResponse = await fetch(detailsUrl);
+    const detailsResponse = await fetchWithTimeout(detailsUrl);
     const details = await detailsResponse.json();
     runtime = details.runtime || null;
     trailerUrl = findTrailer(details.videos);
@@ -988,18 +1019,6 @@ async function scrapeAstor(page, targetDate) {
   const url = 'https://www.astortheatre.net.au/';
   
   try {
-    // Helper function with timeout
-    const fetchWithTimeout = async (fetchUrl, options = {}, timeoutMs = 30000) => {
-      const controller = new AbortController();
-      const timeout = setTimeout(() => controller.abort(), timeoutMs);
-      try {
-        const response = await fetch(fetchUrl, { ...options, signal: controller.signal });
-        return response;
-      } finally {
-        clearTimeout(timeout);
-      }
-    };
-    
     // Calculate what day label to look for based on targetDate
     const [year, month, day] = targetDate.split('-').map(Number);
     const targetDateObj = new Date(year, month - 1, day);
