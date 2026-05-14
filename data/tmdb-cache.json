@@ -1654,5 +1654,59 @@
     "runtime": 96,
     "trailerUrl": null,
     "tmdbId": 1355797
+  },
+  "the gold diggers": {
+    "overview": "An avant-garde examination of the relationship between women and money in society. Mixing musical, silent melodrama, and philosophical treatise into a post-punk, heady brew.",
+    "posterPath": "https://image.tmdb.org/t/p/w300/vT2jIgvexGUU0H6AvcOg9JL5RhE.jpg",
+    "rating": 5.5,
+    "year": "1983",
+    "runtime": 89,
+    "trailerUrl": null,
+    "tmdbId": 54852
+  },
+  "away from her": {
+    "overview": "Fiona and Grant have been married for nearly 50 years. They have to face the fact that Fiona’s absent-mindedness is a symptom of Alzheimer’s disease. She must go to a specialized nursing home, where she slowly forgets Grant and turns her affection to Aubrey, another patient in the home.",
+    "posterPath": "https://image.tmdb.org/t/p/w300/oyPE6i9sylR1UhTPFmniOHcQpKb.jpg",
+    "rating": 7.025,
+    "year": "2007",
+    "runtime": 110,
+    "trailerUrl": "https://www.youtube.com/watch?v=e-uNrAwb8-0",
+    "tmdbId": 1919
+  },
+  "my neighbor totoro (1988)": {
+    "overview": "Two sisters move to the country with their father in order to be closer to their hospitalized mother, and discover the surrounding trees are inhabited by Totoros, magical spirits of the forest. When the youngest runs away from home, the older sister seeks help from the spirits to find her.",
+    "posterPath": "https://image.tmdb.org/t/p/w300/rtGDOeG9LzoerkDGZF9dnVeLppL.jpg",
+    "rating": 8.062,
+    "year": "1988",
+    "runtime": 86,
+    "trailerUrl": "https://www.youtube.com/watch?v=HaLISMAGdOE",
+    "tmdbId": 8392
+  },
+  "fffa: demons": {
+    "overview": null,
+    "posterPath": null,
+    "rating": null,
+    "year": null,
+    "runtime": null,
+    "trailerUrl": null,
+    "tmdbId": null
+  },
+  "malcolm x -35mm": {
+    "overview": null,
+    "posterPath": null,
+    "rating": null,
+    "year": null,
+    "runtime": null,
+    "trailerUrl": null,
+    "tmdbId": null
+  },
+  "ger26 the edge of heaven": {
+    "overview": null,
+    "posterPath": null,
+    "rating": null,
+    "year": null,
+    "runtime": null,
+    "trailerUrl": null,
+    "tmdbId": null
   }
 }
