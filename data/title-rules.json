@@ -9,7 +9,10 @@
     "BIFF",
     "ACMI",
     "AIDS",
-    "AWFF"
+    "AWFF",
+    "BUFF",
+    "FFA",
+    "Umbrella Presents:"
   ],
 
   "titleCaseAcronyms": [
@@ -47,7 +50,8 @@
     "MASH",
     "TRON",
     "RoboCop",
-    "BlacKkKlansman"
+    "BlacKkKlansman",
+    "35mm"
   ],
 
   "titleCaseSourceWhitelist": [
