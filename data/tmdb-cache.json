@@ -2239,5 +2239,68 @@
     "runtime": 96,
     "trailerUrl": "https://www.youtube.com/watch?v=yBSVBk1Add0",
     "tmdbId": 8835
+  },
+  "the lion king (1994)": {
+    "overview": "Young lion prince Simba, eager to one day become king of the Pride Lands, grows up under the watchful eye of his father Mufasa; all the while his villainous uncle Scar conspires to take the throne for himself. Amid betrayal and tragedy, Simba must confront his past and find his rightful place in the Circle of Life.",
+    "posterPath": "https://image.tmdb.org/t/p/w300/sKCr78MXSLixwmZ8DyJLrpMsd15.jpg",
+    "rating": 8.254,
+    "year": "1994",
+    "runtime": 89,
+    "trailerUrl": "https://www.youtube.com/watch?v=UgjEj5mXLlk",
+    "tmdbId": 8587
+  },
+  "the third man (1949)": {
+    "overview": "In postwar Vienna, Austria, Holly Martins, a writer of pulp Westerns, arrives penniless as a guest of his childhood chum Harry Lime, only to learn he has died. Martins develops a conspiracy theory after learning of a \"third man\" present at the time of Harry's death, running into interference from British officer Major Calloway, and falling head-over-heels for Harry's grief-stricken lover, Anna.",
+    "posterPath": "https://image.tmdb.org/t/p/w300/rO2Fq0AZZx9obs52KJdx4mRE8p5.jpg",
+    "rating": 7.9,
+    "year": "1949",
+    "runtime": 105,
+    "trailerUrl": "https://www.youtube.com/watch?v=Y7nwySBGqCo",
+    "tmdbId": 1092
+  },
+  "debra la velle quartet": {
+    "overview": null,
+    "posterPath": null,
+    "rating": null,
+    "year": null,
+    "runtime": null,
+    "trailerUrl": null,
+    "tmdbId": null
+  },
+  "sanatorium": {
+    "overview": "On a bitterly cold December night, a paranormal investigations team has set their sights on the bloody Hillcrest Sanatorium to answer the age old question: Is there life after death? With rumours of hauntings and local children gone missing, they may just get their answer the hard way when members of the team mysteriously disappear, leaving behind unnerving evidence.",
+    "posterPath": "https://image.tmdb.org/t/p/w300/u5wE05STbRVDqoBUmqFOPK1QcJx.jpg",
+    "rating": 4.908,
+    "year": "2013",
+    "runtime": 90,
+    "trailerUrl": null,
+    "tmdbId": 248576
+  },
+  "timestamp": {
+    "overview": "Despite the war, school life continues in Ukraine, with pupils and teachers striving to continue learning even under constant threat. The film is a mosaic of the everyday lives of teachers and students from different corners of Ukraine.",
+    "posterPath": "https://image.tmdb.org/t/p/w300/b49YNh0qTTBbxS7IP4sWdypTKoP.jpg",
+    "rating": 5.8,
+    "year": "2025",
+    "runtime": 125,
+    "trailerUrl": "https://www.youtube.com/watch?v=5xPjzNrPsRg",
+    "tmdbId": 1421157
+  },
+  "my dinner with daniel": {
+    "overview": "Shot in 1988 at the home of Half Japanese co-founder David Fair. Daniel Johnston, Jad Fair, Susan Fair, David Fair and Charles Brohawn (The Tinklers) all participate, after Daniel's arrival and a taco dinner prepared by David. Daniel performs some of his classic material, including the astonishing \"Don't Play Cards with Satan\".",
+    "posterPath": "https://image.tmdb.org/t/p/w300/dCzXiAmFCbB949ukXsOTovSDYfJ.jpg",
+    "rating": 8,
+    "year": "1988",
+    "runtime": 101,
+    "trailerUrl": "https://www.youtube.com/watch?v=AyM7XdvlwK0",
+    "tmdbId": 732994
+  },
+  "the devil and daniel johnston": {
+    "overview": "This 2005 documentary film chronicles the life of Daniel Johnston, a manic-depressive genius singer/songwriter/artist, from childhood up to the present, with an emphasis on his mental illness and how it manifested itself in demonic self-obsession.",
+    "posterPath": "https://image.tmdb.org/t/p/w300/7c5FUlodgZl52tMlpw2G64kqttt.jpg",
+    "rating": 7.702,
+    "year": "2006",
+    "runtime": 110,
+    "trailerUrl": "https://www.youtube.com/watch?v=2qtFPOxDMs4",
+    "tmdbId": 13222
   }
 }
