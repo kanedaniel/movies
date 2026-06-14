@@ -3805,5 +3805,95 @@
     "runtime": 158,
     "trailerUrl": null,
     "tmdbId": 1479653
+  },
+  "michel gondry, do it yourself!": {
+    "overview": "A portrait of French filmmaker Michel Gondry, creator, for three decades, of an imperfect, astonishing, fascinating, damaged and poetic work.",
+    "posterPath": "https://image.tmdb.org/t/p/w300/kWa9ziiGC8feBNWd2o5HTan7yY7.jpg",
+    "rating": 7.643,
+    "year": "2023",
+    "runtime": 80,
+    "trailerUrl": null,
+    "tmdbId": 1156333
+  },
+  "bandar: monkey in a cage": {
+    "overview": "TV star Samar's life spirals when his ex Gayatri accuses him of rape after he blocks contact with her. Despite his new relationship with Khushi, he faces arrest and encounters a corrupt justice system.",
+    "posterPath": "https://image.tmdb.org/t/p/w300/3TrQUHmnEL2tOYf4KKkXb01BQt2.jpg",
+    "rating": 7,
+    "year": "2026",
+    "runtime": 140,
+    "trailerUrl": "https://www.youtube.com/watch?v=4E0-K9F16r8",
+    "tmdbId": 1293550
+  },
+  "the lies we tell ourselves": {
+    "overview": "An eccentric director on the rise travels to Cannes, Berlin, New Caledonia, Australia and England to create her latest art house film and jumps many entertaining hurdles before realizing her vision.",
+    "posterPath": "https://image.tmdb.org/t/p/w300/9QrzERVZU5H98gRYXF2ILK8zkPd.jpg",
+    "rating": null,
+    "year": "2024",
+    "runtime": 90,
+    "trailerUrl": null,
+    "tmdbId": 1134294
+  },
+  "chiff: tom and jerry: forbidden compass": {
+    "overview": null,
+    "posterPath": null,
+    "rating": null,
+    "year": null,
+    "runtime": null,
+    "trailerUrl": null,
+    "tmdbId": null
+  },
+  "chiff: bird boy": {
+    "overview": null,
+    "posterPath": null,
+    "rating": null,
+    "year": null,
+    "runtime": null,
+    "trailerUrl": null,
+    "tmdbId": null
+  },
+  "chiff: momonsters: the movie": {
+    "overview": null,
+    "posterPath": null,
+    "rating": null,
+    "year": null,
+    "runtime": null,
+    "trailerUrl": null,
+    "tmdbId": null
+  },
+  "the umbrellas of cherbourg (1964)": {
+    "overview": "This simple romantic tragedy begins in 1957. Guy Foucher, a 20-year-old French auto mechanic, has fallen in love with 17-year-old Geneviève Emery, an employee in her widowed mother's chic but financially embattled umbrella shop. On the evening before Guy is to leave for a two-year tour of combat in Algeria, he and Geneviève make love. She becomes pregnant and must choose between waiting for Guy's return or accepting an offer of marriage from a wealthy diamond merchant.",
+    "posterPath": "https://image.tmdb.org/t/p/w300/tAgTf64XKK5ir7w5C7dnB53jWWG.jpg",
+    "rating": 7.4,
+    "year": "1964",
+    "runtime": 93,
+    "trailerUrl": "https://www.youtube.com/watch?v=7H-fl3njp5s",
+    "tmdbId": 5967
+  },
+  "butterfly (2004)": {
+    "overview": "A young man struggles to access sublimated childhood memories. He finds a technique that allows him to travel back into the past, to occupy his childhood body and change history. However, he soon finds that every change he makes has unexpected consequences.",
+    "posterPath": "https://image.tmdb.org/t/p/w300/ea5iv7TWMh18fOKoRGgmtcg85Gx.jpg",
+    "rating": 7.58,
+    "year": "2004",
+    "runtime": 113,
+    "trailerUrl": "https://www.youtube.com/watch?v=KctopagSGJE",
+    "tmdbId": 1954
+  },
+  "chiff: toy story 5": {
+    "overview": null,
+    "posterPath": null,
+    "rating": null,
+    "year": null,
+    "runtime": null,
+    "trailerUrl": null,
+    "tmdbId": null
+  },
+  "spa26 the exterminating angel": {
+    "overview": null,
+    "posterPath": null,
+    "rating": null,
+    "year": null,
+    "runtime": null,
+    "trailerUrl": null,
+    "tmdbId": null
   }
 }
