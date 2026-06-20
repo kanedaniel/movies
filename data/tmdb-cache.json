@@ -3895,5 +3895,410 @@
     "runtime": null,
     "trailerUrl": null,
     "tmdbId": null
+  },
+  "the neverending story": {
+    "overview": "While hiding from bullies in his school's attic, a young boy discovers the extraordinary land of Fantasia, through a magical book called The Neverending Story. The book tells the tale of Atreyu, a young warrior who, with the help of a luck dragon named Falkor, must save Fantasia from the destruction of The Nothing.",
+    "posterPath": "https://image.tmdb.org/t/p/w300/lWJC8om086h01f0CMGR9ombdpnI.jpg",
+    "rating": 7.223,
+    "year": "1984",
+    "runtime": 101,
+    "trailerUrl": "https://www.youtube.com/watch?v=ToUgsvlsemo",
+    "tmdbId": 34584
+  },
+  "flashdance": {
+    "overview": "Alex Owens, a young woman juggling between two odd jobs, aspires to become a successful ballet dancer. Nick, who is her boss and lover, supports and encourages her to fulfil her dream.",
+    "posterPath": "https://image.tmdb.org/t/p/w300/ziiy6ORt8BlxWFXskBChBMInvDA.jpg",
+    "rating": 6.49,
+    "year": "1983",
+    "runtime": 95,
+    "trailerUrl": "https://www.youtube.com/watch?v=hjcbKDW-M9E",
+    "tmdbId": 535
+  },
+  "american gigolo": {
+    "overview": "Julian makes a lucrative living as an escort to older women in the Los Angeles area. He begins a relationship with Michelle, a local politician's wife, without expecting any pay. One of his clients is murdered and Detective Sunday begins pumping him for details on his different clients, something he is reluctant to do considering the nature of his work. Julian begins to suspect he's being framed. Meanwhile Michelle begins to fall in love with him.",
+    "posterPath": "https://image.tmdb.org/t/p/w300/igXGCwti23PHOjLKQX6eGIGzQiJ.jpg",
+    "rating": 6.2,
+    "year": "1980",
+    "runtime": 117,
+    "trailerUrl": "https://www.youtube.com/watch?v=IN7sz-T_tUY",
+    "tmdbId": 2768
+  },
+  "cat people": {
+    "overview": "After years of separation, Irena Gallier and her minister brother, Paul, reunite in New Orleans. When zoologists capture a wild panther, Irena is drawn to the cat – and zoo curator Oliver to her. Soon, Paul will have to reveal the family secret: that when sexually aroused, they revert into predatory jungle cats.",
+    "posterPath": "https://image.tmdb.org/t/p/w300/nYcQnkbTD4LDmp11HCReQuUoMKD.jpg",
+    "rating": 6.044,
+    "year": "1982",
+    "runtime": 118,
+    "trailerUrl": "https://www.youtube.com/watch?v=VKMFlipKWs8",
+    "tmdbId": 6217
+  },
+  "electric dreams": {
+    "overview": "Miles Harding buys a state-of-the-art computer that starts expressing conscious thought and emotion after an interaction with spilled champagne. Things begin getting out of hand when both Miles and Edgar, the computer, fall in love with beautiful neighbor Madeline Robistat.",
+    "posterPath": "https://image.tmdb.org/t/p/w300/2XWmN9EXYrHSRDvkAV9VhvngHGn.jpg",
+    "rating": 6.3,
+    "year": "1984",
+    "runtime": 96,
+    "trailerUrl": "https://www.youtube.com/watch?v=iEi2ZpoJn78",
+    "tmdbId": 19596
+  },
+  "alphabet lane + q&a": {
+    "overview": null,
+    "posterPath": null,
+    "rating": null,
+    "year": null,
+    "runtime": null,
+    "trailerUrl": null,
+    "tmdbId": null
+  },
+  "you, the living": {
+    "overview": "In the Swedish city of Lethe, people from different walks of life take part in a series of short, deadpan vignettes that rush past. Some are just seconds long, none longer than a couple of minutes. A young woman remembers a fantasy honeymoon with a rock guitarist. A man awakes from a dream about bomber planes. A businessman boasts about success while being robbed by a pickpocket, and so on. The absurdist collection is accompanied by Dixieland jazz and similar music.",
+    "posterPath": "https://image.tmdb.org/t/p/w300/j4FAPvqjqUvs1YrQi76p6fIDRUB.jpg",
+    "rating": 7.129,
+    "year": "2007",
+    "runtime": 89,
+    "trailerUrl": "https://www.youtube.com/watch?v=vwLBeFyi6b8",
+    "tmdbId": 5817
+  },
+  "giliap": {
+    "overview": "In a minor town the morose manager is primarily responsible for the bad atmosphere of a restaurant. But central for the plot are three persons: a male waiter who is never named (here called W), the female waiter Anna, and \"the count\", a self-invented nickname by a man cleaning plates. The count is skilled in making others do what he wants. Half a dozen of the personnel assist in a poorly planned and failed attempt to liberate a man whom the police move from one arrest to another. The event involves stealing a motorcycle and threatening policemen with a gun. Anna strongly tries to make contact with W. Finally it turns out that she need his help to break her sexual relation to the count, a relation that from her part is not motivated by positive feelings. W rejects her attempts. And then Anna has suddenly gone. She has got a pleasant job in another town. And then W's feelings awaken.",
+    "posterPath": "https://image.tmdb.org/t/p/w300/3h1pjVCkPgHRTZJ4FxlZrc4gd6.jpg",
+    "rating": 5.476,
+    "year": "1975",
+    "runtime": 130,
+    "trailerUrl": null,
+    "tmdbId": 91873
+  },
+  "acc presents… magellan": {
+    "overview": null,
+    "posterPath": null,
+    "rating": null,
+    "year": null,
+    "runtime": null,
+    "trailerUrl": null,
+    "tmdbId": null
+  },
+  "hundreds of beavers": {
+    "overview": "In the 19th century, a drunken applejack salesman must go from zero to hero and become North America's greatest fur trapper by defeating hundreds of beavers.",
+    "posterPath": "https://image.tmdb.org/t/p/w300/jBg64OA2QEWL0zaOFMoAGipeGjJ.jpg",
+    "rating": 7.236,
+    "year": "2024",
+    "runtime": 108,
+    "trailerUrl": "https://www.youtube.com/watch?v=jBjhpYNES_M",
+    "tmdbId": 1019939
+  },
+  "minions & monsters": {
+    "overview": "This is the rambunctious, ridiculous and totally true story of how the Minions conquered Hollywood, became movie stars, lost everything, unleashed monsters onto the world and then banded together to try and save the planet from the mayhem they had just created.",
+    "posterPath": "https://image.tmdb.org/t/p/w300/nz7i42yhLIJ4ve9JKgM6NthoLHO.jpg",
+    "rating": 9.5,
+    "year": "2026",
+    "runtime": 90,
+    "trailerUrl": "https://www.youtube.com/watch?v=tV1v5EfFc2g",
+    "tmdbId": 1315772
+  },
+  "cult classix: the holy mountain (4k)": {
+    "overview": null,
+    "posterPath": null,
+    "rating": null,
+    "year": null,
+    "runtime": null,
+    "trailerUrl": null,
+    "tmdbId": null
+  },
+  "pride (rainbow popcorn presents)": {
+    "overview": null,
+    "posterPath": null,
+    "rating": null,
+    "year": null,
+    "runtime": null,
+    "trailerUrl": null,
+    "tmdbId": null
+  },
+  "playboy of the western world, the: nt live": {
+    "overview": "A man comes into a pub and boasts that he has just killed his father. Instead of condemning him for the crime, the locals revel in his story and praise him for his deed, with the daughter of the landlord falling for this \"dashing hero\". Things take an even more surprising turn, when the father enters the pub. Based on John Millington Synge's play The Playboy of the Western World.",
+    "posterPath": null,
+    "rating": 7,
+    "year": "1974",
+    "runtime": 101,
+    "trailerUrl": null,
+    "tmdbId": 692562
+  },
+  "bound": {
+    "overview": "Corky, a tough female ex-convict working on an apartment renovation in a Chicago building, meets a couple living next door, Caesar, a paranoid mobster, and Violet, his seductive girlfriend, who is immediately attracted to her.",
+    "posterPath": "https://image.tmdb.org/t/p/w300/9qAy6UWVw44dGrsyKrdEMt5qIUM.jpg",
+    "rating": 7.22,
+    "year": "1996",
+    "runtime": 105,
+    "trailerUrl": "https://www.youtube.com/watch?v=ToCMwdOaWh4",
+    "tmdbId": 9303
+  },
+  "100 nights of hero": {
+    "overview": "When a charming house guest arrives at a remote castle, the delicate dynamic between a neglectful husband, his innocent bride Cherry and their devoted maid Hero is thrown into chaos.",
+    "posterPath": "https://image.tmdb.org/t/p/w300/yJKvHYz0b0ebfPh6LYBO3gGsccZ.jpg",
+    "rating": 6,
+    "year": "2025",
+    "runtime": 91,
+    "trailerUrl": "https://www.youtube.com/watch?v=sMMUnVVLEmM",
+    "tmdbId": 1354518
+  },
+  "moss & freud": {
+    "overview": "Supermodel Kate Moss embarks on a journey of self-discovery when acclaimed artist Lucian Freud offers to paint her portrait.",
+    "posterPath": "https://image.tmdb.org/t/p/w300/eRZYAWgXbcuQ7NAGjJjp4Mw8urw.jpg",
+    "rating": null,
+    "year": "2026",
+    "runtime": 100,
+    "trailerUrl": "https://www.youtube.com/watch?v=mq8gxqb3H2w",
+    "tmdbId": 1086247
+  },
+  "death of robin hood, the": {
+    "overview": "Grappling with his past after a life of crime and murder, Robin Hood finds himself gravely injured after a battle he thought would be his last. In the hands of a mysterious woman, he is offered a chance at salvation.",
+    "posterPath": "https://image.tmdb.org/t/p/w300/4cD7KeABHyzeJmzdA6QKe36fp2d.jpg",
+    "rating": 7,
+    "year": "2026",
+    "runtime": 123,
+    "trailerUrl": "https://www.youtube.com/watch?v=GSfq5jq7ChQ",
+    "tmdbId": 1284465
+  },
+  "challengers and saltburn": {
+    "overview": null,
+    "posterPath": null,
+    "rating": null,
+    "year": null,
+    "runtime": null,
+    "trailerUrl": null,
+    "tmdbId": null
+  },
+  "silent friend": {
+    "overview": "In the heart of a botanical garden in a medieval university town in Germany stands a majestic ginkgo tree. This silent witness has observed over a century the quiet rhythms of transformation across three human lives. At three distinct moments across the 20th and 21st centuries, these people — each carrying their own questions and inner struggles — inevitably find themselves drawn into the presence of this tree, full of mystery and meaning.",
+    "posterPath": "https://image.tmdb.org/t/p/w300/mZjkRpTFfcdsTmtIAzKVM87I94R.jpg",
+    "rating": 7.121,
+    "year": "2026",
+    "runtime": 147,
+    "trailerUrl": "https://www.youtube.com/watch?v=TaRZnpAmtJk",
+    "tmdbId": 1168719
+  },
+  "nt live: the playboy of the western world": {
+    "overview": null,
+    "posterPath": null,
+    "rating": null,
+    "year": null,
+    "runtime": null,
+    "trailerUrl": null,
+    "tmdbId": null
+  },
+  "terminator 2: judgment day (1991)": {
+    "overview": "Ten years after the events of the original, a reprogrammed T-800 is sent back in time to protect young John Connor from the shape-shifting T-1000. Together with his mother Sarah, he fights to stop Skynet from triggering a nuclear apocalypse.",
+    "posterPath": "https://image.tmdb.org/t/p/w300/jFTVD4XoWQTcg7wdyJKa8PEds5q.jpg",
+    "rating": 8.2,
+    "year": "1991",
+    "runtime": 137,
+    "trailerUrl": "https://www.youtube.com/watch?v=CRRlbK5w8AE",
+    "tmdbId": 280
+  },
+  "chiff: my life in versailles: the movie": {
+    "overview": null,
+    "posterPath": null,
+    "rating": null,
+    "year": null,
+    "runtime": null,
+    "trailerUrl": null,
+    "tmdbId": null
+  },
+  "chiff: papaya": {
+    "overview": null,
+    "posterPath": null,
+    "rating": null,
+    "year": null,
+    "runtime": null,
+    "trailerUrl": null,
+    "tmdbId": null
+  },
+  "world cup 2026: australia vs paraguay": {
+    "overview": null,
+    "posterPath": null,
+    "rating": null,
+    "year": null,
+    "runtime": null,
+    "trailerUrl": null,
+    "tmdbId": null
+  },
+  "gone with the wind (1939)": {
+    "overview": "The spoiled daughter of a Georgia plantation owner conducts a tumultuous romance with a cynical profiteer during the American Civil War and Reconstruction Era.",
+    "posterPath": "https://image.tmdb.org/t/p/w300/lNz2Ow0wGCAvzckW7EOjE03KcYv.jpg",
+    "rating": 7.915,
+    "year": "1939",
+    "runtime": 233,
+    "trailerUrl": "https://www.youtube.com/watch?v=KIZ3stUnFiE",
+    "tmdbId": 770
+  },
+  "honey, i shrunk the kids (1989)": {
+    "overview": "The scientist father of a teenage girl and boy accidentally shrinks his and two other neighborhood teens to the size of insects. Now the teens must fight diminutive dangers as the father searches for them.",
+    "posterPath": "https://image.tmdb.org/t/p/w300/omQOzahi2NIeiYznNxHFDvNbvo6.jpg",
+    "rating": 6.324,
+    "year": "1989",
+    "runtime": 93,
+    "trailerUrl": "https://www.youtube.com/watch?v=_av5kqcMVm4",
+    "tmdbId": 9354
+  },
+  "peter baylor's ultrafox quartet": {
+    "overview": null,
+    "posterPath": null,
+    "rating": null,
+    "year": null,
+    "runtime": null,
+    "trailerUrl": null,
+    "tmdbId": null
+  },
+  "saccharine": {
+    "overview": "After succumbing to an obscure weight-loss craze involving the eating of human ashes, lovelorn medical student Hana finds herself haunted by the ghost of the person she's eating.",
+    "posterPath": "https://image.tmdb.org/t/p/w300/wTlqMc4Jt8ZBtHh8CREblU3ajAB.jpg",
+    "rating": 6.212,
+    "year": "2026",
+    "runtime": 113,
+    "trailerUrl": "https://www.youtube.com/watch?v=uIY13LD3RUY",
+    "tmdbId": 1363387
+  },
+  "the invite": {
+    "overview": "Joe and Angela’s marriage is on thin ice. When they invite their enigmatic upstairs neighbors for a dinner party, the night spirals into unexpected places. Have they reignited the spark or lit the match that burns it all down?",
+    "posterPath": "https://image.tmdb.org/t/p/w300/vJRFj5ri9Zm7Tg0Tn7pBmOtXqKb.jpg",
+    "rating": null,
+    "year": "2026",
+    "runtime": 107,
+    "trailerUrl": "https://www.youtube.com/watch?v=nelkiuezJxg",
+    "tmdbId": 950028
+  },
+  "the sweetest thing (2002)": {
+    "overview": "Christina's love life is stuck in neutral. After years of avoiding the hazards of a meaningful relationship, one night while club-hopping with her girlfriends, she meets Peter, her perfect match. Fed up with playing games, she finally gets the courage to let her guard down and follow her heart, only to discover that Peter has suddenly left town. Accompanied by Courtney, she sets out to capture the one that got away.",
+    "posterPath": "https://image.tmdb.org/t/p/w300/qLysz4B5YmiDq52Op0zq4eD75LC.jpg",
+    "rating": 5.613,
+    "year": "2002",
+    "runtime": 84,
+    "trailerUrl": "https://www.youtube.com/watch?v=5sA8dpA3gig",
+    "tmdbId": 11812
+  },
+  "howl's moving castle (2004)": {
+    "overview": "Sophie, a young milliner, is turned into an elderly woman by a witch who enters her shop and curses her. She encounters a wizard named Howl and gets caught up in his resistance to fighting for the king.",
+    "posterPath": "https://image.tmdb.org/t/p/w300/13kOl2v0nD2OLbVSHnHk8GUFEhO.jpg",
+    "rating": 8.387,
+    "year": "2004",
+    "runtime": 119,
+    "trailerUrl": "https://www.youtube.com/watch?v=ARCQf2CEr8k",
+    "tmdbId": 4935
+  },
+  "supergirl": {
+    "overview": "When an unexpected and ruthless adversary strikes too close to home, Kara Zor-El, aka Supergirl, reluctantly joins forces with an unlikely companion on an epic, interstellar journey of vengeance and justice.",
+    "posterPath": "https://image.tmdb.org/t/p/w300/moejGxR2haap29d9NQ7qe8x4eGj.jpg",
+    "rating": 5.2,
+    "year": "2026",
+    "runtime": 108,
+    "trailerUrl": "https://www.youtube.com/watch?v=b5fVIlCft4E",
+    "tmdbId": 1081003
+  },
+  "dear you (teochew - chinese & eng subs)": {
+    "overview": null,
+    "posterPath": null,
+    "rating": null,
+    "year": null,
+    "runtime": null,
+    "trailerUrl": null,
+    "tmdbId": null
+  },
+  "bleach: thousand-year blood war - the calamity": {
+    "overview": "Destruction looms at the end of the Thousand-Year Blood War between the Soul Reapers and Quincies…",
+    "posterPath": "https://image.tmdb.org/t/p/w300/tEaeXZZO7SEcDr6yRP31UrrxcX0.jpg",
+    "rating": null,
+    "year": "2026",
+    "runtime": null,
+    "trailerUrl": "https://www.youtube.com/watch?v=DKKZ10FsSBM",
+    "tmdbId": 1669841
+  },
+  "7 dogs (arabic, eng sub)": {
+    "overview": "Interpol agent Khalid Al-Azzazi joins forces with Ghali Abu Dawood from the 7 Dogs crime syndicate to fight drug trafficking.",
+    "posterPath": "https://image.tmdb.org/t/p/w300/66n5bB6iYTWsWMz0mh3Qv7qmzIJ.jpg",
+    "rating": 6.4,
+    "year": "2026",
+    "runtime": 123,
+    "trailerUrl": "https://www.youtube.com/watch?v=Z2hN4-XnmB8",
+    "tmdbId": 1316427
+  },
+  "inception - 35mm": {
+    "overview": null,
+    "posterPath": null,
+    "rating": null,
+    "year": null,
+    "runtime": null,
+    "trailerUrl": null,
+    "tmdbId": null
+  },
+  "the spirit of the beehive": {
+    "overview": "In 1940, in the immediate aftermath of the Spanish Civil War, a young girl living on the Castilian plain is haunted after attending a screening of James Whale's 1931 film Frankenstein and hearing from her sister that the monster is not dead, instead existing as a spirit inhabiting a nearby barn.",
+    "posterPath": "https://image.tmdb.org/t/p/w300/o6pUTkoCh4r6EA2dHNFKA40OmH2.jpg",
+    "rating": 7.647,
+    "year": "1973",
+    "runtime": 98,
+    "trailerUrl": "https://www.youtube.com/watch?v=aqvpMJNlqxE",
+    "tmdbId": 4495
+  },
+  "the prestige": {
+    "overview": "A mysterious story of two magicians whose intense rivalry leads them on a life-long battle for supremacy -- full of obsession, deceit and jealousy with dangerous and deadly consequences.",
+    "posterPath": "https://image.tmdb.org/t/p/w300/Ag2B2KHKQPukjH7WutmgnnSNurZ.jpg",
+    "rating": 8.208,
+    "year": "2006",
+    "runtime": 130,
+    "trailerUrl": "https://www.youtube.com/watch?v=ObGVA1WOqyE",
+    "tmdbId": 1124
+  },
+  "glenrothan": {
+    "overview": "After thirty-five years abroad, Donal returns to his native Scotland to make amends with his estranged brother Sandy.",
+    "posterPath": "https://image.tmdb.org/t/p/w300/2GFSou9g6euYcgJiRnWe608aqg9.jpg",
+    "rating": 6,
+    "year": "2026",
+    "runtime": 99,
+    "trailerUrl": "https://www.youtube.com/watch?v=tamGytf9Hnk",
+    "tmdbId": 1335666
+  },
+  "the exterminating angel": {
+    "overview": "After a lavish dinner party, the guests find themselves unable to depart... and, over the next few days, all of their elaborate societal pretenses and façades deteriorate as they are reduced to living like animals.",
+    "posterPath": "https://image.tmdb.org/t/p/w300/qqZXHvBFxUpo8Pfbyvgh4SYMiWm.jpg",
+    "rating": 7.931,
+    "year": "1962",
+    "runtime": 93,
+    "trailerUrl": null,
+    "tmdbId": 29264
+  },
+  "cinemaniacs: velvet goldmine": {
+    "overview": null,
+    "posterPath": null,
+    "rating": null,
+    "year": null,
+    "runtime": null,
+    "trailerUrl": null,
+    "tmdbId": null
+  },
+  "back to the future - special guest screening": {
+    "overview": "Eighties teenager Marty McFly is accidentally sent back in time to 1955, inadvertently disrupting his parents' first meeting and attracting his mother's romantic interest. Marty must repair the damage to history by rekindling his parents' romance and - with the help of his eccentric inventor friend Doc Brown - return to 1985.",
+    "posterPath": "https://image.tmdb.org/t/p/w300/vN5B5WgYscRGcQpVhHl6p9DDTP0.jpg",
+    "rating": 8.327,
+    "year": "1985",
+    "runtime": 116,
+    "trailerUrl": "https://www.youtube.com/watch?v=ez6WQ7IX72U",
+    "tmdbId": 105
+  },
+  "spa26 the spirit of the beehive": {
+    "overview": null,
+    "posterPath": null,
+    "rating": null,
+    "year": null,
+    "runtime": null,
+    "trailerUrl": null,
+    "tmdbId": null
+  },
+  "carrie": {
+    "overview": "Withdrawn and sensitive teenager Carrie White faces bullying from her classmates and abuse from her fanatically pious mother. When she begins to suspect that she has supernatural powers, things take a dark and violent turn.",
+    "posterPath": "https://image.tmdb.org/t/p/w300/8tT1rqlsTguyfUBMrbHR9cv1rxM.jpg",
+    "rating": 7.333,
+    "year": "1976",
+    "runtime": 98,
+    "trailerUrl": "https://www.youtube.com/watch?v=5NmGPCjXph0",
+    "tmdbId": 7340
   }
 }
