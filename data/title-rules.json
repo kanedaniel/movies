@@ -1,0 +1,56 @@
+{
+  "_comment": "Rules for the scraper's title normalization pipeline. See README. The scraper alerts you (via a pinned GitHub issue) when it sees titles that don't fit these rules, so this file grows over time.",
+
+  "festivalPrefixes": [
+    "GER",
+    "MIFF",
+    "JFF",
+    "MQFF",
+    "BIFF",
+    "ACMI",
+    "AIDS",
+    "AWFF"
+  ],
+
+  "titleCaseAcronyms": [
+    "3D",
+    "4K",
+    "2K",
+    "2D",
+    "IMAX",
+    "HFR",
+    "HDR",
+    "DCP",
+    "70MM",
+    "35MM",
+    "Dolby",
+    "Atmos",
+    "II",
+    "III",
+    "IV",
+    "VI",
+    "VII",
+    "VIII",
+    "IX",
+    "XI",
+    "XII",
+    "XIII",
+    "M3GAN",
+    "WALL-E",
+    "RBG",
+    "JFK",
+    "FAQ",
+    "NT",
+    "UK",
+    "USA",
+    "DC",
+    "MASH",
+    "TRON",
+    "RoboCop",
+    "BlacKkKlansman"
+  ],
+
+  "titleCaseSourceWhitelist": [
+    "Sun Theatre"
+  ]
+}

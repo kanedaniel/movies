@@ -5,6 +5,14 @@ puppeteer.use(StealthPlugin());
 const fs = require('fs');
 const path = require('path');
 
+const {
+  loadTitleRules,
+  canonicalizeTitle,
+  generateQueryVariants,
+  scoreCandidate,
+  detectUnknownPrefix
+} = require('./title-pipeline');
+
 // ============================================================================
 // CONFIGURATION
 // ============================================================================
@@ -14,8 +22,15 @@ const OUTPUT_FILENAME = 'sessions.json';
 const TMDB_API_KEY = process.env.TMDB_API_KEY;
 const TMDB_BASE = 'https://api.themoviedb.org/3';
 const TMDB_CACHE_PATH = path.join(__dirname, '..', 'data', 'tmdb-cache.json');
+const NEEDS_REVIEW_PATH = path.join(__dirname, '..', 'data', 'needs-review.json');
+
+// Resolver confidence thresholds
+const SCORE_OK = 0.65;          // ≥ this: confident
+const SCORE_FLOOR = 0.50;       // < this: treat as no-match
+const AMBIGUOUS_GAP = 0.05;     // top two within this: ambiguous
 
 const tmdbCache = new Map();
+const needsReview = []; // populated by fetchTMDB; written at end of main()
 
 // Load persistent TMDB cache from previous runs
 try {
@@ -41,6 +56,14 @@ try {
 } catch (e) {
   console.log('No TMDB overrides file found (this is fine)');
 }
+
+// Load title normalization rules (festival prefixes, acronyms, source whitelist)
+const titleRules = loadTitleRules();
+console.log(
+  `Loaded title rules: ${titleRules.festivalPrefixes.length} prefixes, ` +
+  `${titleRules.titleCaseAcronyms.length} acronyms, ` +
+  `${titleRules.titleCaseSourceWhitelist.length} title-case sources`
+);
 
 // Standardise time to format "H:MMam" or "H:MMpm" (e.g., "2:30pm", "10:00am")
 function standardiseTime(timeStr) {
@@ -89,148 +112,230 @@ function standardiseTime(timeStr) {
   return timeStr;
 }
 
-async function fetchTMDB(title) {
-  const cacheKey = title.toLowerCase().trim();
+// ----------------------------------------------------------------------------
+// TMDB resolver. Takes a canonical title (already passed through
+// canonicalizeTitle); runs the variant cascade against TMDB; picks the
+// best-scoring candidate; flags low-confidence/ambiguous/no-match cases
+// into the needsReview array for the alerting workflow.
+//
+// `context` provides cinema + raw title + knownYear for alert payloads
+// and year-proximity scoring.
+// ----------------------------------------------------------------------------
+async function fetchTMDB(canonicalTitle, context = {}) {
+  const cacheKey = canonicalTitle.toLowerCase().trim();
   if (tmdbCache.has(cacheKey)) {
     return tmdbCache.get(cacheKey);
   }
 
+  const fallback = {
+    overview: null, posterPath: null, rating: null,
+    year: null, runtime: null, trailerUrl: null, tmdbId: null
+  };
+
   try {
-    // Check for manual override first
-    const override = tmdbOverrides[title] || tmdbOverrides[title.toLowerCase()];
+    // 1. Manual override (highest priority — always wins)
+    const override =
+      tmdbOverrides[canonicalTitle] ||
+      tmdbOverrides[canonicalTitle.toLowerCase()] ||
+      (context.rawTitle ? tmdbOverrides[context.rawTitle] : null);
     if (override) {
-      // Support both simple ID (number) and object format { id: 123, type: "tv" }
-      const overrideId = typeof override === 'number' ? override : override.id;
-      const mediaType = typeof override === 'object' && override.type === 'tv' ? 'tv' : 'movie';
-
-      console.log(`  TMDB override: "${title}" -> ${mediaType} ID ${overrideId}`);
-
-      // Fetch movie or TV show directly by ID
-      const detailsUrl = `${TMDB_BASE}/${mediaType}/${overrideId}?api_key=${TMDB_API_KEY}&append_to_response=videos`;
-      const detailsResponse = await fetch(detailsUrl);
-      const item = await detailsResponse.json();
-
-      if (item && item.id) {
-        let trailerUrl = null;
-        if (item.videos && item.videos.results) {
-          const trailer = item.videos.results.find(v =>
-            v.site === 'YouTube' && (v.type === 'Trailer' || v.type === 'Teaser')
-          );
-          if (trailer) {
-            trailerUrl = `https://www.youtube.com/watch?v=${trailer.key}`;
-          }
-        }
-        
-        // TV shows use different field names
-        const itemTitle = item.title || item.name;
-        const releaseDate = item.release_date || item.first_air_date;
-        const runtime = item.runtime || (item.episode_run_time && item.episode_run_time[0]) || null;
-
-        const result = {
-          overview: item.overview || null,
-          posterPath: item.poster_path ? `https://image.tmdb.org/t/p/w300${item.poster_path}` : null,
-          rating: item.vote_average || null,
-          year: releaseDate ? releaseDate.substring(0, 4) : null,
-          runtime: runtime,
-          trailerUrl: trailerUrl,
-          tmdbId: item.id
-        };
-        console.log(`  TMDB override found: "${itemTitle}" (${result.year})`);
+      const result = await fetchByOverride(canonicalTitle, override);
+      if (result) {
         tmdbCache.set(cacheKey, result);
         return result;
       }
     }
-    
-    // Store original for ", The" check
-    const originalTitle = title;
-    
-    let cleanTitle = title
-      // Format markers (3D, IMAX, 4K, 2D, HFR, Dolby, etc.)
-      .replace(/\b(3D|IMAX|4K|2K|2D|HFR|HDR|Dolby|Atmos)\b/gi, '')
-      // Language/subtitle markers: (Hindi), (Telugu, Eng Sub), (English Subtitles), etc.
-      .replace(/\([\w\s,'-]*(sub(titled|titles|s)?|dub(bed)?|eng|hindi|telugu|tamil|malayalam|kannada|korean|japanese|mandarin|cantonese|spanish|french|german|italian)[\w\s,'-]*\)/gi, '')
-      // Anniversary/restoration: "- 25th Anniversary", "– 50th Anniversary 4K Restoration", etc.
-      .replace(/[-–—]\s*\d+\s*(st|nd|rd|th)?\s*anniversary.*$/i, '')
-      // Restoration/remaster anywhere at end
-      .replace(/[-–—]?\s*(\d+K\s*)?(digital\s*)?(restoration|remaster(ed)?|re-?release).*$/i, '')
-      // Special screenings: "- Preview", "– Special Event", "- Encore", etc.
-      .replace(/[-–—]\s*(preview|special|encore|screening|event|limited).*$/i, '')
-      // NT Live, Met Opera, etc.
-      .replace(/\s*[-:]\s*(NT Live|Met Opera|National Theatre Live).*$/i, '')
-      // Retro/classic markers
-      .replace(/\s*[-–—]\s*(RETRO CLASSIX|CLASSIC|RETRO)$/i, '')
-      // Year in parentheses at end: (1984), (2024 film)
-      .replace(/\s*\(\d{4}(\s+film)?\)\s*$/i, '')
-      // Brackets at end: [Restored], [Special Edition], etc.
-      .replace(/\s*\[.*?\]\s*$/i, '')
-      // "Housemaid, The" -> "Housemaid" (we'll add "The" back below)
-      .replace(/,\s*The$/i, '')
-      // Clean up extra whitespace and trailing punctuation
-      .replace(/\s+/g, ' ')
-      .replace(/[-–—:]\s*$/g, '')
-      .trim();
 
-    // If original title ends with ", The", move it to front
-    if (originalTitle.match(/,\s*The$/i)) {
-      cleanTitle = 'The ' + cleanTitle;
-    }
+    // 2. Surface unknown ALL-CAPS prefixes for the alerting flow
+    const unknownPrefix = detectUnknownPrefix(canonicalTitle, titleRules);
 
-    console.log(`  TMDB lookup: "${title}" -> "${cleanTitle}"`);
+    // 3. Generate query variants and score everything we get back
+    const variants = generateQueryVariants(canonicalTitle, titleRules);
+    const allScored = []; // { candidate, variantWhy, scoreInfo }
 
-    const searchUrl = `${TMDB_BASE}/search/movie?api_key=${TMDB_API_KEY}&query=${encodeURIComponent(cleanTitle)}`;
-    const response = await fetch(searchUrl);
-    const data = await response.json();
-
-    if (data.results && data.results.length > 0) {
-      // Take first result (best match) - don't prefer recent films as this breaks classic cinema listings
-      const movie = data.results[0];
-      
-      // Fetch movie details to get runtime and trailers
-      let runtime = null;
-      let trailerUrl = null;
+    for (const variant of variants) {
+      const searchUrl = `${TMDB_BASE}/search/movie?api_key=${TMDB_API_KEY}&query=${encodeURIComponent(variant.q)}`;
       try {
-        const detailsUrl = `${TMDB_BASE}/movie/${movie.id}?api_key=${TMDB_API_KEY}&append_to_response=videos`;
-        const detailsResponse = await fetch(detailsUrl);
-        const details = await detailsResponse.json();
-        runtime = details.runtime || null;
-        
-        // Find YouTube trailer
-        if (details.videos && details.videos.results) {
-          const trailer = details.videos.results.find(v => 
-            v.site === 'YouTube' && (v.type === 'Trailer' || v.type === 'Teaser')
-          );
-          if (trailer) {
-            trailerUrl = `https://www.youtube.com/watch?v=${trailer.key}`;
-          }
+        const response = await fetch(searchUrl);
+        const data = await response.json();
+        const top = (data.results || []).slice(0, 5);
+        for (const cand of top) {
+          const scoreInfo = scoreCandidate(cand, canonicalTitle, context.knownYear);
+          allScored.push({ candidate: cand, variantWhy: variant.why, scoreInfo });
         }
-        
-        await new Promise(r => setTimeout(r, 100)); // Small delay to avoid rate limiting
+        // Early exit: if as-is variant returned a near-perfect match, don't bother with fallbacks
+        if (variant.why === 'as-is' && allScored.some(s => s.scoreInfo.score >= 0.95)) {
+          break;
+        }
       } catch (e) {
-        console.log(`  Could not fetch details for ${movie.title}`);
+        console.log(`  TMDB variant query failed ("${variant.q}"): ${e.message}`);
       }
-      
-      const result = {
-        overview: movie.overview || null,
-        posterPath: movie.poster_path ? `https://image.tmdb.org/t/p/w300${movie.poster_path}` : null,
-        rating: movie.vote_average || null,
-        year: movie.release_date ? movie.release_date.substring(0, 4) : null,
-        runtime: runtime,
-        trailerUrl: trailerUrl,
-        tmdbId: movie.id
-      };
-      console.log(`  TMDB found: "${movie.title}" (${result.year})${runtime ? ` - ${runtime}min` : ''}${trailerUrl ? ' [trailer]' : ''}`);
-      tmdbCache.set(cacheKey, result);
-      return result;
-    } else {
-      console.log(`  TMDB: No results for "${cleanTitle}"`);
     }
+
+    allScored.sort((a, b) => b.scoreInfo.score - a.scoreInfo.score);
+    const best = allScored[0];
+    const second = allScored[1];
+
+    // No candidates at all
+    if (!best) {
+      pushReview({
+        scrapedTitle: context.rawTitle || canonicalTitle,
+        canonicalTitle,
+        cinema: context.cinema,
+        category: 'no-results',
+        score: 0,
+        triedVariants: variants.map(v => v.q),
+        topCandidates: [],
+        suggestedFix: 'Add a manual override in data/tmdb-overrides.json with the right TMDB ID.'
+      });
+      console.log(`  TMDB: No results across all variants for "${canonicalTitle}"`);
+      tmdbCache.set(cacheKey, fallback);
+      return fallback;
+    }
+
+    // Build the alert payload (used for both low-confidence and ambiguous cases)
+    const buildCandidatesPayload = () =>
+      allScored.slice(0, 3).map(s => ({
+        tmdbId: s.candidate.id,
+        title: s.candidate.title || s.candidate.name,
+        year: (s.candidate.release_date || s.candidate.first_air_date || '').substring(0, 4) || null,
+        score: round(s.scoreInfo.score),
+        viaVariant: s.variantWhy,
+        url: `https://www.themoviedb.org/movie/${s.candidate.id}`
+      }));
+
+    if (best.scoreInfo.score < SCORE_FLOOR) {
+      pushReview({
+        scrapedTitle: context.rawTitle || canonicalTitle,
+        canonicalTitle,
+        cinema: context.cinema,
+        category: 'no-match',
+        score: round(best.scoreInfo.score),
+        triedVariants: variants.map(v => v.q),
+        topCandidates: buildCandidatesPayload(),
+        suggestedFix: 'No candidate scored above the floor. Add to data/tmdb-overrides.json or extend data/title-rules.json.'
+      });
+    } else if (best.scoreInfo.score < SCORE_OK) {
+      pushReview({
+        scrapedTitle: context.rawTitle || canonicalTitle,
+        canonicalTitle,
+        cinema: context.cinema,
+        category: 'low-confidence',
+        score: round(best.scoreInfo.score),
+        triedVariants: variants.map(v => v.q),
+        topCandidates: buildCandidatesPayload(),
+        suggestedFix: 'Verify the top candidate is right; if so, add it to data/tmdb-overrides.json to silence this alert.'
+      });
+    } else if (second && (best.scoreInfo.score - second.scoreInfo.score) < AMBIGUOUS_GAP) {
+      pushReview({
+        scrapedTitle: context.rawTitle || canonicalTitle,
+        canonicalTitle,
+        cinema: context.cinema,
+        category: 'ambiguous',
+        score: round(best.scoreInfo.score),
+        triedVariants: variants.map(v => v.q),
+        topCandidates: buildCandidatesPayload(),
+        suggestedFix: 'Two candidates scored within 0.05 of each other. Pick the right one and add it to data/tmdb-overrides.json.'
+      });
+    }
+
+    if (unknownPrefix) {
+      pushReview({
+        scrapedTitle: context.rawTitle || canonicalTitle,
+        canonicalTitle,
+        cinema: context.cinema,
+        category: 'unknown-prefix',
+        prefix: unknownPrefix,
+        score: round(best.scoreInfo.score),
+        suggestedFix: `Looks like a festival prefix. Add "${unknownPrefix.replace(/\d+$/, '')}" to data/title-rules.json → festivalPrefixes.`
+      });
+    }
+
+    // Fetch full details (runtime, trailer) for the winner
+    const result = await enrichWithDetails(best.candidate);
+    console.log(
+      `  TMDB found: "${best.candidate.title || best.candidate.name}" (${result.year}) ` +
+      `score=${round(best.scoreInfo.score)} via=${best.variantWhy}`
+    );
+    tmdbCache.set(cacheKey, result);
+    return result;
   } catch (error) {
-    console.error(`  TMDB lookup failed for "${title}":`, error.message);
+    console.error(`  TMDB lookup failed for "${canonicalTitle}":`, error.message);
   }
 
-  const fallback = { overview: null, posterPath: null, rating: null, year: null, runtime: null, trailerUrl: null, tmdbId: null };
   tmdbCache.set(cacheKey, fallback);
   return fallback;
+}
+
+// Helpers for fetchTMDB
+
+async function fetchByOverride(canonicalTitle, override) {
+  const overrideId = typeof override === 'number' ? override : override.id;
+  const mediaType = typeof override === 'object' && override.type === 'tv' ? 'tv' : 'movie';
+  console.log(`  TMDB override: "${canonicalTitle}" -> ${mediaType} ID ${overrideId}`);
+
+  const detailsUrl = `${TMDB_BASE}/${mediaType}/${overrideId}?api_key=${TMDB_API_KEY}&append_to_response=videos`;
+  const detailsResponse = await fetch(detailsUrl);
+  const item = await detailsResponse.json();
+  if (!item || !item.id) return null;
+
+  const trailerUrl = findTrailer(item.videos);
+  const releaseDate = item.release_date || item.first_air_date;
+  const runtime = item.runtime || (item.episode_run_time && item.episode_run_time[0]) || null;
+  return {
+    overview: item.overview || null,
+    posterPath: item.poster_path ? `https://image.tmdb.org/t/p/w300${item.poster_path}` : null,
+    rating: item.vote_average || null,
+    year: releaseDate ? releaseDate.substring(0, 4) : null,
+    runtime,
+    trailerUrl,
+    tmdbId: item.id
+  };
+}
+
+async function enrichWithDetails(candidate) {
+  let runtime = null;
+  let trailerUrl = null;
+  try {
+    const detailsUrl = `${TMDB_BASE}/movie/${candidate.id}?api_key=${TMDB_API_KEY}&append_to_response=videos`;
+    const detailsResponse = await fetch(detailsUrl);
+    const details = await detailsResponse.json();
+    runtime = details.runtime || null;
+    trailerUrl = findTrailer(details.videos);
+    await new Promise(r => setTimeout(r, 100)); // rate-limit cushion
+  } catch (e) {
+    console.log(`  Could not fetch details for ${candidate.title || candidate.name}`);
+  }
+  return {
+    overview: candidate.overview || null,
+    posterPath: candidate.poster_path ? `https://image.tmdb.org/t/p/w300${candidate.poster_path}` : null,
+    rating: candidate.vote_average || null,
+    year: candidate.release_date ? candidate.release_date.substring(0, 4) : null,
+    runtime,
+    trailerUrl,
+    tmdbId: candidate.id
+  };
+}
+
+function findTrailer(videos) {
+  if (!videos || !videos.results) return null;
+  const t = videos.results.find(v =>
+    v.site === 'YouTube' && (v.type === 'Trailer' || v.type === 'Teaser')
+  );
+  return t ? `https://www.youtube.com/watch?v=${t.key}` : null;
+}
+
+function pushReview(entry) {
+  // Dedup by canonicalTitle + cinema + category so a film appearing on
+  // 7 different days only creates one issue entry.
+  const key = `${entry.canonicalTitle}|${entry.cinema}|${entry.category}`;
+  if (!needsReview.some(r => `${r.canonicalTitle}|${r.cinema}|${r.category}` === key)) {
+    needsReview.push(entry);
+  }
+}
+
+function round(n) {
+  return Math.round(n * 100) / 100;
 }
 
 // ============================================================================
@@ -1484,7 +1589,7 @@ async function scrapeCoburgDriveIn(page, targetDate) {
 
 async function enrichWithTMDB(cinemaData) {
   console.log(`Enriching ${cinemaData.cinema} with TMDB data...`);
-  
+
   for (const session of cinemaData.sessions) {
     // Standardise all time formats to "H:MMam/pm"
     if (session.times && Array.isArray(session.times)) {
@@ -1493,39 +1598,39 @@ async function enrichWithTMDB(cinemaData) {
     if (session.premiumTimes && Array.isArray(session.premiumTimes)) {
       session.premiumTimes = session.premiumTimes.map(t => standardiseTime(t));
     }
-    
+
+    // Canonicalize the scraped title once — result becomes display, query
+    // and cache key. Keep the raw form for needs-review payloads.
+    const rawTitle = session.title;
+    session.title = canonicalizeTitle(rawTitle, cinemaData.cinema, titleRules);
+    const context = { cinema: cinemaData.cinema, rawTitle };
+
     if (session.isDoubleFeature && (session.title.includes(' + ') || session.title.includes(' & '))) {
       const separator = session.title.includes(' + ') ? ' + ' : ' & ';
       const titles = session.title.split(separator);
       session.films = [];
-      
+
       let totalRuntime = 0;
       for (const title of titles) {
-        const tmdb = await fetchTMDB(title.trim());
-        session.films.push({ title: title.trim(), ...tmdb });
+        const partTitle = title.trim();
+        const tmdb = await fetchTMDB(partTitle, { ...context, rawTitle: partTitle });
+        session.films.push({ title: partTitle, ...tmdb });
         if (tmdb.runtime) totalRuntime += tmdb.runtime;
         await new Promise(r => setTimeout(r, 250));
       }
-      
-      if (session.films[0]?.posterPath) {
-        session.posterPath = session.films[0].posterPath;
-      }
-      if (session.films[0]?.overview) {
-        session.overview = session.films[0].overview;
-      }
-      // Sum runtime for double features
+
+      if (session.films[0]?.posterPath) session.posterPath = session.films[0].posterPath;
+      if (session.films[0]?.overview) session.overview = session.films[0].overview;
       session.runtime = totalRuntime > 0 ? totalRuntime : null;
-      // Use first film's year and average rating
       session.year = session.films[0]?.year || null;
       if (session.films[0]?.rating && session.films[1]?.rating) {
         session.rating = (session.films[0].rating + session.films[1].rating) / 2;
       } else {
         session.rating = session.films[0]?.rating || session.films[1]?.rating || null;
       }
-      // Use first film's trailer
       session.trailerUrl = session.films[0]?.trailerUrl || session.films[1]?.trailerUrl || null;
     } else {
-      const tmdb = await fetchTMDB(session.title);
+      const tmdb = await fetchTMDB(session.title, context);
       session.overview = tmdb.overview;
       session.posterPath = tmdb.posterPath;
       session.rating = tmdb.rating;
@@ -1535,7 +1640,7 @@ async function enrichWithTMDB(cinemaData) {
       await new Promise(r => setTimeout(r, 250));
     }
   }
-  
+
   return cinemaData;
 }
 
@@ -1651,6 +1756,21 @@ async function main() {
   const cacheObj = Object.fromEntries(tmdbCache);
   fs.writeFileSync(TMDB_CACHE_PATH, JSON.stringify(cacheObj, null, 2));
   console.log(`TMDB cache saved: ${tmdbCache.size} entries`);
+
+  // Write needs-review.json — consumed by the GH Actions workflow to upsert
+  // a pinned issue. Always write, even if empty (so the workflow can close
+  // the issue when there's nothing left to review).
+  const reviewOutput = {
+    generatedAt: new Date().toISOString(),
+    count: needsReview.length,
+    items: needsReview
+  };
+  fs.writeFileSync(NEEDS_REVIEW_PATH, JSON.stringify(reviewOutput, null, 2));
+  console.log(
+    needsReview.length === 0
+      ? 'No titles need review ✓'
+      : `${needsReview.length} title(s) need review — see ${path.relative(process.cwd(), NEEDS_REVIEW_PATH)}`
+  );
   
   console.log('\n' + '='.repeat(60));
   console.log('COMPLETE');
