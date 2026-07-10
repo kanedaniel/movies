@@ -5308,5 +5308,347 @@
     "runtime": 163,
     "trailerUrl": "https://www.youtube.com/watch?v=SalHFAZVxAg",
     "tmdbId": 652
+  },
+  "play school: party animals": {
+    "overview": null,
+    "posterPath": null,
+    "rating": null,
+    "year": null,
+    "runtime": null,
+    "trailerUrl": null,
+    "tmdbId": null
+  },
+  "dogs in space": {
+    "overview": "The place is Melbourne, Australia 1978. The punk phenomenon is sweeping the country and Dogs In Space, a punk group, are part of it. In a squat, in a dodgy suburb, live a ragtag collection of outcasts and don't-wanna-bes who survive on a diet of old TV space films, drugs and good music. And the satellite SKYLAB could crash through their roof at any moment...",
+    "posterPath": "https://image.tmdb.org/t/p/w300/170HfrEGMYMrHxceh27XCAe6J5G.jpg",
+    "rating": 5.974,
+    "year": "1986",
+    "runtime": 103,
+    "trailerUrl": null,
+    "tmdbId": 30994
+  },
+  "new wave": {
+    "overview": "São Paulo, 1983: Women’s soccer has just been legalized in Brazil. A group of rebellious young women form the Gayvotas Football Club and begin training for their first match. But as the team quickly becomes a media sensation, its members are forced to confront the prejudices of the conservative military dictatorship that they live under.",
+    "posterPath": "https://image.tmdb.org/t/p/w300/eKyAO4Q6RQ1v4Az1Xg4FLSjiwFc.jpg",
+    "rating": 5.4,
+    "year": "1984",
+    "runtime": 104,
+    "trailerUrl": "https://www.youtube.com/watch?v=tkaEWLJhARo",
+    "tmdbId": 154556
+  },
+  "malcolm x": {
+    "overview": "A tribute to the controversial black activist and leader of the struggle for black liberation. He hit bottom during his imprisonment in the '50s, he became a Black Muslim and then a leader in the Nation of Islam. His assassination in 1965 left a legacy of self-determination and racial pride.",
+    "posterPath": "https://image.tmdb.org/t/p/w300/o2s9ow0uRRm1BcF3teznk5twd90.jpg",
+    "rating": 7.556,
+    "year": "1992",
+    "runtime": 202,
+    "trailerUrl": "https://www.youtube.com/watch?v=0hMpERkER6s",
+    "tmdbId": 1883
+  },
+  "7 seasons": {
+    "overview": null,
+    "posterPath": null,
+    "rating": null,
+    "year": "1993",
+    "runtime": null,
+    "trailerUrl": null,
+    "tmdbId": 1686483
+  },
+  "kiki's delivery service (1989) - 4k subtitles": {
+    "overview": null,
+    "posterPath": null,
+    "rating": null,
+    "year": null,
+    "runtime": null,
+    "trailerUrl": null,
+    "tmdbId": null
+  },
+  "cult classix: showgirls": {
+    "overview": null,
+    "posterPath": null,
+    "rating": null,
+    "year": null,
+    "runtime": null,
+    "trailerUrl": null,
+    "tmdbId": null
+  },
+  "odyssey, the": {
+    "overview": "Odysseus, the legendary King of Ithaca, embarks on a long and perilous journey home following the Trojan War. Throughout his voyage, he is forced to confront the whims of gods, mythological monsters, and trials that stretch both his cunning and his humanity to the breaking point.",
+    "posterPath": "https://image.tmdb.org/t/p/w300/5rhTDKUhPYvpdQIijFIs5VoWsON.jpg",
+    "rating": 4.6,
+    "year": "2026",
+    "runtime": 173,
+    "trailerUrl": "https://www.youtube.com/watch?v=AyIZ9tiiN8I",
+    "tmdbId": 1368337
+  },
+  "highlander": {
+    "overview": "He fought his first battle on the Scottish Highlands in 1536. He will fight his greatest battle on the streets of New York City in 1986. His name is Connor MacLeod. He is immortal.",
+    "posterPath": "https://image.tmdb.org/t/p/w300/8Z8dptJEypuLoOQro1WugD855YE.jpg",
+    "rating": 6.868,
+    "year": "1986",
+    "runtime": 116,
+    "trailerUrl": "https://www.youtube.com/watch?v=koTNFnABag0",
+    "tmdbId": 8009
+  },
+  "invite, the": {
+    "overview": "Joe and Angela's marriage is on thin ice. When they invite their enigmatic upstairs neighbors for a dinner party, the night spirals into unexpected places. Have they reignited the spark or lit the match that burns it all down?",
+    "posterPath": "https://image.tmdb.org/t/p/w300/b7Dr8Chzse8VagexAporUu2RtLx.jpg",
+    "rating": 7.923,
+    "year": "2026",
+    "runtime": 107,
+    "trailerUrl": "https://www.youtube.com/watch?v=jpBHmbNM_5c",
+    "tmdbId": 950028
+  },
+  "the odyssey": {
+    "overview": "Odysseus, the legendary King of Ithaca, embarks on a long and perilous journey home following the Trojan War. Throughout his voyage, he is forced to confront the whims of gods, mythological monsters, and trials that stretch both his cunning and his humanity to the breaking point.",
+    "posterPath": "https://image.tmdb.org/t/p/w300/5rhTDKUhPYvpdQIijFIs5VoWsON.jpg",
+    "rating": 4.6,
+    "year": "2026",
+    "runtime": 173,
+    "trailerUrl": "https://www.youtube.com/watch?v=AyIZ9tiiN8I",
+    "tmdbId": 1368337
+  },
+  "being john malkovich (1999)": {
+    "overview": "One day at work, unsuccessful puppeteer Craig finds a portal into the head of actor John Malkovich. The portal soon becomes a passion for anybody who enters its mad and controlling world of overtaking another human body.",
+    "posterPath": "https://image.tmdb.org/t/p/w300/31FGQu3OnwdmS4COquENe0vMZc0.jpg",
+    "rating": 7.421,
+    "year": "1999",
+    "runtime": 113,
+    "trailerUrl": "https://www.youtube.com/watch?v=LEtlqumjXLw",
+    "tmdbId": 492
+  },
+  "amélie": {
+    "overview": "At a tiny Parisian café, the adorable yet painfully shy Amélie accidentally discovers a gift for helping others. Soon Amelie is spending her days as a matchmaker, guardian angel, and all-around do-gooder. But when she bumps into a handsome stranger, will she find the courage to become the star of her very own love story?",
+    "posterPath": "https://image.tmdb.org/t/p/w300/nSxDa3M9aMvGVLoItzWTepQ5h5d.jpg",
+    "rating": 7.918,
+    "year": "2001",
+    "runtime": 122,
+    "trailerUrl": "https://www.youtube.com/watch?v=j0aotpJRPgc",
+    "tmdbId": 194
+  },
+  "clockwork orange, a + full metal jacket": {
+    "overview": null,
+    "posterPath": null,
+    "rating": null,
+    "year": null,
+    "runtime": null,
+    "trailerUrl": null,
+    "tmdbId": null
+  },
+  "stop making sense (1984)": {
+    "overview": "A concert film documenting Talking Heads at the height of their popularity, on tour for their 1983 album \"Speaking in Tongues.\" The band takes the stage one by one and is joined by a cadre of guest musicians for a career-spanning and cinematic performance that features creative choreography and visuals.",
+    "posterPath": "https://image.tmdb.org/t/p/w300/utNpurUe1MMjEaHqvpkfxgfpSnV.jpg",
+    "rating": 8.311,
+    "year": "1984",
+    "runtime": 88,
+    "trailerUrl": "https://www.youtube.com/watch?v=-rjMwSTeVeo",
+    "tmdbId": 24128
+  },
+  "inception (2010)": {
+    "overview": "Cobb, a skilled thief who commits corporate espionage by infiltrating the subconscious of his targets is offered a chance to regain his old life as payment for a task considered to be impossible: \"inception\", the implantation of another person's idea into a target's subconscious.",
+    "posterPath": "https://image.tmdb.org/t/p/w300/xlaY2zyzMfkhk0HSC5VUwzoZPU1.jpg",
+    "rating": 8.372,
+    "year": "2010",
+    "runtime": 148,
+    "trailerUrl": "https://www.youtube.com/watch?v=cdx31ak4KbQ",
+    "tmdbId": 27205
+  },
+  "dunkirk (2017)": {
+    "overview": "The story of the miraculous evacuation of Allied soldiers from Belgium, Britain, Canada and France, who were cut off and surrounded by the German army from the beaches and harbour of Dunkirk between May 26th and June 4th 1940 during World War II.",
+    "posterPath": "https://image.tmdb.org/t/p/w300/b4Oe15CGLL61Ped0RAS9JpqdmCt.jpg",
+    "rating": 7.452,
+    "year": "2017",
+    "runtime": 107,
+    "trailerUrl": "https://www.youtube.com/watch?v=kvbiVcj4l0c",
+    "tmdbId": 374720
+  },
+  "the odyssey - 70mm print": {
+    "overview": null,
+    "posterPath": null,
+    "rating": null,
+    "year": null,
+    "runtime": null,
+    "trailerUrl": null,
+    "tmdbId": null
+  },
+  "when marnie was there (2014)": {
+    "overview": "Upon being sent to live with relatives in the countryside due to an illness, an emotionally distant adolescent girl becomes obsessed with an abandoned mansion and infatuated with a girl who lives there - a girl who may or may not be real.",
+    "posterPath": "https://image.tmdb.org/t/p/w300/vug1dvDI1tSa60Z8qjCuUE7ntkO.jpg",
+    "rating": 7.934,
+    "year": "2014",
+    "runtime": 103,
+    "trailerUrl": "https://www.youtube.com/watch?v=YBIfz76BYiY",
+    "tmdbId": 242828
+  },
+  "notting hill (1999)": {
+    "overview": "London bookstore owner William Thacker's quiet life turns upside down when a chance encounter with famous actress Anna Scott sparks an unlikely romance challenged by their vastly different worlds.",
+    "posterPath": "https://image.tmdb.org/t/p/w300/hHRIf2XHeQMbyRb3HUx19SF5Ujw.jpg",
+    "rating": 7.269,
+    "year": "1999",
+    "runtime": 124,
+    "trailerUrl": "https://www.youtube.com/watch?v=sn-m50RUf_Q",
+    "tmdbId": 509
+  },
+  "interstellar (2014)": {
+    "overview": "The adventures of a group of explorers who make use of a newly discovered wormhole to surpass the limitations on human space travel and conquer the vast distances involved in an interstellar voyage.",
+    "posterPath": "https://image.tmdb.org/t/p/w300/yQvGrMoipbRoddT0ZR8tPoR7NfX.jpg",
+    "rating": 8.481,
+    "year": "2014",
+    "runtime": 169,
+    "trailerUrl": "https://www.youtube.com/watch?v=PG5c2GgkA2w",
+    "tmdbId": 157336
+  },
+  "tenet (2020)": {
+    "overview": "Armed with only one word - Tenet - and fighting for the survival of the entire world, the Protagonist journeys through a twilight world of international espionage on a mission that will unfold in something beyond real time.",
+    "posterPath": "https://image.tmdb.org/t/p/w300/aCIFMriQh8rvhxpN1IWGgvH0Tlg.jpg",
+    "rating": 7.175,
+    "year": "2020",
+    "runtime": 150,
+    "trailerUrl": "https://www.youtube.com/watch?v=KJP5RunZUKk",
+    "tmdbId": 577922
+  },
+  "journey home, david gulpilil": {
+    "overview": "A powerful record of grief, community and ceremony in which the renowned Indigenous actor is laid to rest on his Homeland of Gupulul in Arnhem Land, NT.",
+    "posterPath": "https://image.tmdb.org/t/p/w300/AthdDGIP9lQpvGHdxR6nIKvnwxX.jpg",
+    "rating": null,
+    "year": "2025",
+    "runtime": 88,
+    "trailerUrl": "https://www.youtube.com/watch?v=VtONkM6OLes",
+    "tmdbId": 1477506
+  },
+  "nor26 tell everyone": {
+    "overview": null,
+    "posterPath": null,
+    "rating": null,
+    "year": null,
+    "runtime": null,
+    "trailerUrl": null,
+    "tmdbId": null
+  },
+  "nor26 a light that never goes out": {
+    "overview": null,
+    "posterPath": null,
+    "rating": null,
+    "year": null,
+    "runtime": null,
+    "trailerUrl": null,
+    "tmdbId": null
+  },
+  "nor26 the last resort": {
+    "overview": null,
+    "posterPath": null,
+    "rating": null,
+    "year": null,
+    "runtime": null,
+    "trailerUrl": null,
+    "tmdbId": null
+  },
+  "fjord": {
+    "overview": "After the deaths of Mihai's parents, Mihai and Lisbeth Gheorghiu leave everything behind in Romania and move with their children to a remote village in Norway, hoping to rebuild their lives near Lisbeth's family. There, they grow close to their neighbors, the Halbergs, whose warmth offers the promise of a fresh start. But the fragile peace begins to unravel when the Gheorghius' young daughter, Elia, arrives at school covered in bruises.",
+    "posterPath": "https://image.tmdb.org/t/p/w300/wDecatqAjk89T59dTtRClwTnS7R.jpg",
+    "rating": 8,
+    "year": "2026",
+    "runtime": 146,
+    "trailerUrl": "https://www.youtube.com/watch?v=rjf2gfKidO0",
+    "tmdbId": 1401459
+  },
+  "nor26 the pension heist": {
+    "overview": null,
+    "posterPath": null,
+    "rating": null,
+    "year": null,
+    "runtime": null,
+    "trailerUrl": null,
+    "tmdbId": null
+  },
+  "nor26 weightless": {
+    "overview": null,
+    "posterPath": null,
+    "rating": null,
+    "year": null,
+    "runtime": null,
+    "trailerUrl": null,
+    "tmdbId": null
+  },
+  "nor26 fjord": {
+    "overview": null,
+    "posterPath": null,
+    "rating": null,
+    "year": null,
+    "runtime": null,
+    "trailerUrl": null,
+    "tmdbId": null
+  },
+  "nor26 the kidnapping of a president": {
+    "overview": null,
+    "posterPath": null,
+    "rating": null,
+    "year": null,
+    "runtime": null,
+    "trailerUrl": null,
+    "tmdbId": null
+  },
+  "nor26 being bo widerberg": {
+    "overview": null,
+    "posterPath": null,
+    "rating": null,
+    "year": null,
+    "runtime": null,
+    "trailerUrl": null,
+    "tmdbId": null
+  },
+  "nor26 doctor glas": {
+    "overview": null,
+    "posterPath": null,
+    "rating": null,
+    "year": null,
+    "runtime": null,
+    "trailerUrl": null,
+    "tmdbId": null
+  },
+  "la haine": {
+    "overview": "After a chaotic night of rioting in a marginal suburb of Paris, three young friends, Vinz, Hubert and Saïd, wander around unoccupied waiting for news about the state of health of a mutual friend who has been seriously injured when confronting the police.",
+    "posterPath": "https://image.tmdb.org/t/p/w300/hY4exng4s29RzDbtQInjx9MA3PZ.jpg",
+    "rating": 8.082,
+    "year": "1995",
+    "runtime": 98,
+    "trailerUrl": "https://www.youtube.com/watch?v=FKwcXt3JIaU",
+    "tmdbId": 406
+  },
+  "taxi driver - 50th anniversary": {
+    "overview": "Suffering from insomnia, disturbed loner Travis Bickle takes a job as a New York City cabbie, haunting the streets nightly, growing increasingly detached from reality as he dreams of cleaning up the filthy city.",
+    "posterPath": "https://image.tmdb.org/t/p/w300/ekstpH614fwDX8DUln1a2Opz0N8.jpg",
+    "rating": 8.124,
+    "year": "1976",
+    "runtime": 114,
+    "trailerUrl": "https://www.youtube.com/watch?v=zdqCqDSTVNI",
+    "tmdbId": 103
+  },
+  "the odyssey in 70mm": {
+    "overview": null,
+    "posterPath": null,
+    "rating": null,
+    "year": null,
+    "runtime": null,
+    "trailerUrl": null,
+    "tmdbId": null
+  },
+  "the maltese falcon": {
+    "overview": "A private detective takes on a case that involves him with three eccentric criminals, a beautiful liar, and their quest for a priceless statuette.",
+    "posterPath": "https://image.tmdb.org/t/p/w300/bf4o6Uzw5wqLjdKwRuiDrN1xyvl.jpg",
+    "rating": 7.7,
+    "year": "1941",
+    "runtime": 100,
+    "trailerUrl": "https://www.youtube.com/watch?v=Yv-BPuqhW9U",
+    "tmdbId": 963
+  },
+  "kiki's delivery service (remaster)": {
+    "overview": "A young witch, on her mandatory year of independent life, finds fitting into a new community difficult while she supports herself by running an air courier service.",
+    "posterPath": "https://image.tmdb.org/t/p/w300/Aufa4YdZIv4AXpR9rznwVA5SEfd.jpg",
+    "rating": 7.838,
+    "year": "1989",
+    "runtime": 103,
+    "trailerUrl": "https://www.youtube.com/watch?v=nu4OX6RKeLY",
+    "tmdbId": 16859
   }
 }
