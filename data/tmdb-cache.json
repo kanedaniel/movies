@@ -6199,5 +6199,59 @@
     "runtime": 121,
     "trailerUrl": "https://www.youtube.com/watch?v=6uoPeUa7Gkc",
     "tmdbId": 319
+  },
+  "the invite - cry baby": {
+    "overview": null,
+    "posterPath": null,
+    "rating": null,
+    "year": null,
+    "runtime": null,
+    "trailerUrl": null,
+    "tmdbId": null
+  },
+  "wizard of the kremlin, the": {
+    "overview": "In the chaos of post-Soviet Russia, rising KGB officer Vladimir Putin joins forces with master manipulator Vadim Baranov to reshape life behind the Iron Curtain, using violence and deception to change the world forever.",
+    "posterPath": "https://image.tmdb.org/t/p/w300/85EYON4oXVYTPdMuW5q5ELQLU88.jpg",
+    "rating": 6.527,
+    "year": "2026",
+    "runtime": 136,
+    "trailerUrl": "https://www.youtube.com/watch?v=U7ctYp3zQVA",
+    "tmdbId": 1291659
+  },
+  "colours of time (la venue de l’avenir)": {
+    "overview": "United by the unexpected inheritance of a house in Normandy, four estranged cousins discover their family history by retracing their ancestor's steps.",
+    "posterPath": "https://image.tmdb.org/t/p/w300/hPj1RiuhW72lIfa8UrIncDGSSD0.jpg",
+    "rating": 7.3,
+    "year": "2025",
+    "runtime": 126,
+    "trailerUrl": "https://www.youtube.com/watch?v=_sTdOm2BID8",
+    "tmdbId": 1235304
+  },
+  "2001: a space odyssey": {
+    "overview": "Humanity finds a mysterious object buried beneath the lunar surface and sets off to find its origins with the help of HAL 9000, the world's most advanced super computer.",
+    "posterPath": "https://image.tmdb.org/t/p/w300/ve72VxNqjGM69Uky4WTo2bK6rfq.jpg",
+    "rating": 8.048,
+    "year": "1968",
+    "runtime": 149,
+    "trailerUrl": "https://www.youtube.com/watch?v=kR2r-A9H3Kg",
+    "tmdbId": 62
+  },
+  "the princess bride (1987)": {
+    "overview": "In this enchantingly cracked fairy tale, the beautiful Princess Buttercup and the dashing Westley must overcome staggering odds to find happiness amid six-fingered swordsmen, murderous princes, Sicilians and rodents of unusual size. But even death can't stop these true lovebirds from triumphing.",
+    "posterPath": "https://image.tmdb.org/t/p/w300/2FC9L9MrjBoGHYjYZjdWQdopVYb.jpg",
+    "rating": 7.704,
+    "year": "1987",
+    "runtime": 99,
+    "trailerUrl": "https://www.youtube.com/watch?v=ltpgBg-duQE",
+    "tmdbId": 2493
+  },
+  "wham! 10 days in china": {
+    "overview": "In 1985, Wham! were the first Western pop group to perform in communist China. George Michael and Andrew Ridgeley’s two concerts in Beijing and Guangzhou introduced live Western pop to Chinese audiences and marked a turning point for the band. For Wham!, the tour was more than music; it was a bold move to capture American attention and launch them into global superstardom, and it worked.",
+    "posterPath": "https://image.tmdb.org/t/p/w300/fx8ErQNNf1YlvYJAOhwKM4NS3NN.jpg",
+    "rating": null,
+    "year": "2026",
+    "runtime": 90,
+    "trailerUrl": "https://www.youtube.com/watch?v=P7oAaJqqv8w",
+    "tmdbId": 1715914
   }
 }
