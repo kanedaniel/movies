@@ -6586,5 +6586,563 @@
     "runtime": 102,
     "trailerUrl": "https://www.youtube.com/watch?v=LifZzIIlK1k",
     "tmdbId": 1433367
+  },
+  "melbourne international film festival (miff) 2026": {
+    "overview": null,
+    "posterPath": null,
+    "rating": null,
+    "year": null,
+    "runtime": null,
+    "trailerUrl": null,
+    "tmdbId": null
+  },
+  "hen": {
+    "overview": "Escaping from a chicken farm, a hen finds refuge in the courtyard of a crumbling restaurant. There, she discovers love, confronts the pecking order, and fights to protect her eggs from a greedy owner. Her droll yet touching quest for motherhood mirrors the messy compromises and silent struggles of human lives.",
+    "posterPath": "https://image.tmdb.org/t/p/w300/q1HgK2pyhKfWCALvJTN9Gq9gBu4.jpg",
+    "rating": 7.542,
+    "year": "2026",
+    "runtime": 96,
+    "trailerUrl": "https://www.youtube.com/watch?v=Zd9CGEUsIFA",
+    "tmdbId": 1382513
+  },
+  "the siege of paradise": {
+    "overview": "In Cinque Terre on Italy’s northern Riviera, fewer than 3,000 locals endure over four million tourists each summer.  Across one chaotic season, six very different lives play out in parallel, revealing a sharply funny and surprisingly tender story of paradise under pressure in the age of social media driven tourism.",
+    "posterPath": "https://image.tmdb.org/t/p/w300/mjOcer8iypJxEyLwPCY6KMBDkml.jpg",
+    "rating": null,
+    "year": "2026",
+    "runtime": 82,
+    "trailerUrl": null,
+    "tmdbId": 1632613
+  },
+  "a girl unknown": {
+    "overview": "A Chinese girl is passed between three families from the age of 6 to 18, receiving each time a new name and identity. As she searches for belonging and the possibility of love, she has to navigate between the weight of her past and the uncertainty of her future, until she finds her own way.",
+    "posterPath": "https://image.tmdb.org/t/p/w300/5A1dG9Plbr5OkSNVrZqRsDKeoc5.jpg",
+    "rating": null,
+    "year": "2027",
+    "runtime": 128,
+    "trailerUrl": null,
+    "tmdbId": 1364629
+  },
+  "past future continuous": {
+    "overview": "Maryam is an involuntary immigrant in the US, who after forty years has not forgotten her escape from Iran’s border wrapped in a sheep’s skin. Maryam is always worried about her elderly parents and in constant visual connection with the home in Iran from thousands of kilometers through surveillance cameras. These cameras take her to the days of the 1979 revolution. Today, Iran is again experiencing turbulent days and now Maryam encounters her revolutionary past and revolutionary girls who are challenging the present system.",
+    "posterPath": "https://image.tmdb.org/t/p/w300/nWo4OUmdrbXrXcPKu6oaSEA1FH2.jpg",
+    "rating": 7.8,
+    "year": "2025",
+    "runtime": 80,
+    "trailerUrl": "https://www.youtube.com/watch?v=F--y4xQ9zTA",
+    "tmdbId": 1510562
+  },
+  "experimental shorts": {
+    "overview": null,
+    "posterPath": null,
+    "rating": null,
+    "year": null,
+    "runtime": null,
+    "trailerUrl": null,
+    "tmdbId": null
+  },
+  "digby & camille": {
+    "overview": "In this tender, intimate and humorous documentary, experience the adventures and frustrations of a pair of inseparable lovers as they dream of building a life together",
+    "posterPath": "https://image.tmdb.org/t/p/w300/fpKZ6eENKg0R5XVp8Ke8bHSn0qB.jpg",
+    "rating": null,
+    "year": "2026",
+    "runtime": 92,
+    "trailerUrl": null,
+    "tmdbId": 1723983
+  },
+  "the oligarch and the art dealer": {
+    "overview": "When the Swiss art dealer Yves Bouvier meets the Russian oligarch Dmitry Rybolovlev, he quickly rises through the ranks. From a role as a discreet adviser, he becomes a global power broker and manager of Rybolovlev’s investments in one of the world’s most closed and enigmatic markets: the part of the art world where the sums are staggering and the value of artworks is something agreed upon by a narrow elite of connoisseurs and ultrarich tycoons.",
+    "posterPath": null,
+    "rating": null,
+    "year": "2026",
+    "runtime": null,
+    "trailerUrl": null,
+    "tmdbId": 951046
+  },
+  "australian shorts": {
+    "overview": "Australian Shorts is comprised of ten short films, which detail various experiences of people in the Australian community. The films are titled Finding Jedda, Jeanette is the Dog, Each Other, Glen, Une Belle Journée, Prom Night, Wirun, Giants, You and Me, Before and After and Hot Mother.",
+    "posterPath": null,
+    "rating": null,
+    "year": "2021",
+    "runtime": null,
+    "trailerUrl": null,
+    "tmdbId": 860009
+  },
+  "strawberries": {
+    "overview": "Crotchety retired doctor Isak Borg travels from Stockholm to Lund, Sweden, with his pregnant and unhappy daughter-in-law, Marianne, in order to receive an honorary degree from his alma mater. Along the way, they encounter a series of hitchhikers, each of whom causes the elderly doctor to muse upon the pleasures and failures of his own life. These include the vivacious young Sara, a dead ringer for the doctor's own first love.",
+    "posterPath": "https://image.tmdb.org/t/p/w300/iyTD2QnySNMPUPE3IedZQipSWfz.jpg",
+    "rating": 8.07,
+    "year": "1957",
+    "runtime": 91,
+    "trailerUrl": "https://www.youtube.com/watch?v=EwMgTyVbCS0",
+    "tmdbId": 614
+  },
+  "mouse": {
+    "overview": "Mammy Two-Shoes threatens to throw Tom out of the house if he makes a mess. Jerry sees an opportunity to rid himself of his feline nemesis.",
+    "posterPath": "https://image.tmdb.org/t/p/w300/hXMoXr0gRsZAXfPqwmNUICYhWbZ.jpg",
+    "rating": 6.929,
+    "year": "1948",
+    "runtime": 8,
+    "trailerUrl": null,
+    "tmdbId": 40024
+  },
+  "dry leaf": {
+    "overview": "Lisa, a photographer, has gone missing. The last known detail is that she had been photographing rural football stadiums in villages across Georgia. Her father, Irakli, sets out to search for her, traveling from place to place. Levani, Lisa's best friend – and an invisible person – also sets off to help.",
+    "posterPath": "https://image.tmdb.org/t/p/w300/8htVq2GRrGyz5MUVO60hBsYuzES.jpg",
+    "rating": 7,
+    "year": "2026",
+    "runtime": 186,
+    "trailerUrl": "https://www.youtube.com/watch?v=nx1D3hVbMgc",
+    "tmdbId": 1057888
+  },
+  "one in a million": {
+    "overview": "Young Jade Kassis is suddenly stricken with HLH — a rare and deadly blood disorder that throws his family into a battle for his life. As doctors race to find answers and the family strives to maintain hope, the line between the medical and the miraculous is rxplored.",
+    "posterPath": null,
+    "rating": null,
+    "year": null,
+    "runtime": null,
+    "trailerUrl": null,
+    "tmdbId": 1578299
+  },
+  "animation shorts": {
+    "overview": "2019's most spectacular Animated short films .",
+    "posterPath": "https://image.tmdb.org/t/p/w300/1Kt7c5FrNruRx58UDBzB3zKn0zS.jpg",
+    "rating": 6,
+    "year": "2019",
+    "runtime": 55,
+    "trailerUrl": null,
+    "tmdbId": 577854
+  },
+  "back home": {
+    "overview": "During World War II, young Rusty was sent to America for safety. It's now five years later and the spunky redhead returns to her native England. From the family she hardly remembers to snobby classmates and rule-filled boarding schools, Rusty must adapt to a whole new way of life.",
+    "posterPath": "https://image.tmdb.org/t/p/w300/8VpVnCQ7sIcEiFY3v2o0vj1eP70.jpg",
+    "rating": 6.25,
+    "year": "1989",
+    "runtime": 103,
+    "trailerUrl": null,
+    "tmdbId": 455330
+  },
+  "time and tide": {
+    "overview": "An antique shop \"Jidaiya\" sells time not antiques. One day a lady run into this shop with a cat.",
+    "posterPath": "https://image.tmdb.org/t/p/w300/nfWFFrbvsmuy7iSQvyY15agyZIV.jpg",
+    "rating": 7.333,
+    "year": "1983",
+    "runtime": 97,
+    "trailerUrl": "https://www.youtube.com/watch?v=Zbm2WmiUiik",
+    "tmdbId": 352763
+  },
+  "documentary shorts 2": {
+    "overview": null,
+    "posterPath": null,
+    "rating": null,
+    "year": null,
+    "runtime": null,
+    "trailerUrl": null,
+    "tmdbId": null
+  },
+  "the man with the golden arm": {
+    "overview": "When illegal card dealer and recovering heroin addict Frankie Machine gets out of prison, he decides to straighten up. Armed with nothing but an old drum set, Frankie tries to get honest work as a drummer. But when his former employer and his old drug dealer re-enter his life, Frankie finds it hard to stay clean and eventually finds himself succumbing to his old habits.",
+    "posterPath": "https://image.tmdb.org/t/p/w300/3TUOhZhM5GCYIbxwFO3chpZ0DHx.jpg",
+    "rating": 7.148,
+    "year": "1955",
+    "runtime": 119,
+    "trailerUrl": "https://www.youtube.com/watch?v=vUUbNdnwgaE",
+    "tmdbId": 541
+  },
+  "waking hours": {
+    "overview": "At the verge of the forest, stealthy human presences gather around the fire while, from afar, the rumble of gunshots echoes. Not far there is a wall made of sharp metal marking the beginning of Europe. A clan of Afghan smugglers lives waiting for people to lead to the other side of the border, wandering through the labyrinth of an eternal and sleepless night.",
+    "posterPath": "https://image.tmdb.org/t/p/w300/n1gIlG8nOFUMwhRUVG3E27OMUGj.jpg",
+    "rating": 7.2,
+    "year": "2025",
+    "runtime": 78,
+    "trailerUrl": null,
+    "tmdbId": 1516536
+  },
+  "nostalgia for the future": {
+    "overview": "Guided by the evocative narration of Charlotte Rampling, Nostalgia for the Future is a descent into the labyrinthine world of Chris Marker, the “best-known author of unknown films,” who spent a lifetime concealing himself behind a veil of pseudonyms and images of cats.  Moving through a constellation of personal documents and film fragments, an archivist attempts to decode the man through the material traces he left behind. By repurposing and recontextualizing Marker’s own body of work, the film treats his images as “time machines,” transforming the archive into a landscape of living memory. Nostalgia for the Future is a meditation on memory, identity, and the power our past images hold over the futures we imagine.",
+    "posterPath": "https://image.tmdb.org/t/p/w300/fAj2RjFFOE9AJQgFwsKrQl6BE5Q.jpg",
+    "rating": null,
+    "year": "2026",
+    "runtime": 75,
+    "trailerUrl": "https://www.youtube.com/watch?v=PZH9WVyUYH0",
+    "tmdbId": 1688861
+  },
+  "the best summer": {
+    "overview": "Immersive POV camera footage reveals electric performances, candid interviews, and intimate backstage life with the Beastie Boys, Sonic Youth, Foo Fighters, Pavement, Rancid, Beck, The Amps, and Bikini Kill — an all-access view inside an era-defining moment in music.",
+    "posterPath": "https://image.tmdb.org/t/p/w300/ez8djWamPjGyzLAgcGE8H9sp3qQ.jpg",
+    "rating": null,
+    "year": "2026",
+    "runtime": 84,
+    "trailerUrl": null,
+    "tmdbId": 1596324
+  },
+  "the tale of silyan": {
+    "overview": "Inspired by the folktale of the boy Siljan, who, after a quarrel with his father, turns into a stork and leaves home, the film is a story about the relationship between a farmer and a white stork.",
+    "posterPath": "https://image.tmdb.org/t/p/w300/pr4kRAXsQE97CpHv3s5L0cW9w38.jpg",
+    "rating": 7.2,
+    "year": "2025",
+    "runtime": 80,
+    "trailerUrl": "https://www.youtube.com/watch?v=14xo8s-0kU4",
+    "tmdbId": 1517130
+  },
+  "death of a shaman": {
+    "overview": "As Ecuador erupts in protest, the custodian of a threatened way of life contemplates the future of his family line and his people.",
+    "posterPath": "https://image.tmdb.org/t/p/w300/wDEFZqYnoEvectkvfzj3ubO4Jo9.jpg",
+    "rating": null,
+    "year": "2026",
+    "runtime": null,
+    "trailerUrl": null,
+    "tmdbId": 1723981
+  },
+  "whistle": {
+    "overview": "A misfit group of unwitting high school students stumble upon a cursed object, an ancient Aztec Death Whistle. They discover that blowing the whistle and the terrifying sound it emits will summon their future deaths to hunt them down.",
+    "posterPath": "https://image.tmdb.org/t/p/w300/vgonf5kGsiijUBjzxKTvechhT28.jpg",
+    "rating": 6.358,
+    "year": "2026",
+    "runtime": 100,
+    "trailerUrl": "https://www.youtube.com/watch?v=zXNRW8-ngPI",
+    "tmdbId": 1193501
+  },
+  "the dreamed adventure": {
+    "overview": "The story of a woman living in the border region between Bulgaria, Greece and Turkey, who agrees to partake in a special deal in order to help a friend. However, this will lead her into a dangerous situation, and she will have to confront her desires",
+    "posterPath": "https://image.tmdb.org/t/p/w300/26MIN6Xz6QInqYzDd17c243Uxne.jpg",
+    "rating": 5.9,
+    "year": "2026",
+    "runtime": 167,
+    "trailerUrl": null,
+    "tmdbId": 1013822
+  },
+  "johanna d’arc of mongolia": {
+    "overview": "A group of cosmopolitan women passengers aboard the Trans-Siberian/Mongolian Railway are taken prisoner by Ulan Iga, a warrior princess.",
+    "posterPath": "https://image.tmdb.org/t/p/w300/l0X5dXJTr8qNYsyzYOm9gL2MUBp.jpg",
+    "rating": 6.688,
+    "year": "1989",
+    "runtime": 165,
+    "trailerUrl": null,
+    "tmdbId": 120268
+  },
+  "flies": {
+    "overview": "When their plane crashes, 25 schoolboys find themselves trapped on a tropical island, miles from civilization.",
+    "posterPath": "https://image.tmdb.org/t/p/w300/xhxWsFgBYyDfRWfOhM1OrV88QDJ.jpg",
+    "rating": 6.383,
+    "year": "1990",
+    "runtime": 91,
+    "trailerUrl": "https://www.youtube.com/watch?v=1nqycSp77MY",
+    "tmdbId": 10847
+  },
+  "the day she returns": {
+    "overview": "​Having stepped back from acting after marriage and a subsequent divorce, actress Bae Jeongsu returns to the profession with a role in an independent film. As the film’s release approaches, she takes part in a series of press interviews, only to discover later, when asked to revisit those moments in her acting class, that she cannot clearly recall what was said.",
+    "posterPath": "https://image.tmdb.org/t/p/w300/18Ba4BbB9AgDVBTAPw0DNXSJXTr.jpg",
+    "rating": 5.25,
+    "year": "2026",
+    "runtime": 85,
+    "trailerUrl": null,
+    "tmdbId": 1498915
+  },
+  "to hold a mountain": {
+    "overview": "In the remote highlands of Montenegro, a shepherd mother and daughter proudly defend their ancestral mountain from the threat of becoming a NATO military training ground, stirring memories of the violence that shattered their family.",
+    "posterPath": "https://image.tmdb.org/t/p/w300/aQZIVIjqmxUe4nYP0BVEjlcfNXt.jpg",
+    "rating": 8,
+    "year": "2026",
+    "runtime": 105,
+    "trailerUrl": null,
+    "tmdbId": 1596276
+  },
+  "sukundimi walks before me": {
+    "overview": "When an enormous mine threatens the Sepik River, Papua New Guinean activist Manu Peni and his people launch an urgent mission to protect the waterway, by recognising the river’s own Right to Life.",
+    "posterPath": "https://image.tmdb.org/t/p/w300/xVVkwcGVLZH3dapXKmogyqAG4ow.jpg",
+    "rating": null,
+    "year": "2026",
+    "runtime": 93,
+    "trailerUrl": null,
+    "tmdbId": 1657591
+  },
+  "documentary shorts 1": {
+    "overview": "From a Venezuelan immigrant delivering traditional cuisine via bicycle in San Francisco to NYC’s most iconic driving instructor preparing students for the road ahead, the characters in this collection of documentary short films live out their passions on a daily basis. Titles: Arepas en Bici | Livestreams with GrandmaPuzzles | The Endless Wave | TRIP-tych! | Looking Forward | Shanti Rides Shotgun | I Am Louise",
+    "posterPath": null,
+    "rating": null,
+    "year": "2025",
+    "runtime": 62,
+    "trailerUrl": null,
+    "tmdbId": 1552661
+  },
+  "phillip philadelphia": {
+    "overview": "British screenwriter Phillip Philadelphia conducts a retiring life of fantasy, delusion and tawdry eroticism from a Gold Coast motel; meanwhile the ghosts of love and past glory begin to erode his web of reverie.",
+    "posterPath": "https://image.tmdb.org/t/p/w300/tDrXt9Sr5mS1Ro9qhsX6jxu9cVd.jpg",
+    "rating": null,
+    "year": "2026",
+    "runtime": 72,
+    "trailerUrl": "https://www.youtube.com/watch?v=lmLyvSglwBo",
+    "tmdbId": 1730354
+  },
+  "chronovisor": {
+    "overview": "A French academic is seduced into a world of untold histories in her scholarly quest to uncover the mystery of a history-capturing camera-like machine created by clandestine Benedictine monks. An academic-noir, armchair mystery in the lineage of Jorge Luis Borges and Umberto Eco.",
+    "posterPath": "https://image.tmdb.org/t/p/w300/llsrJhr77V0jOsXmEmlvcSyJMZD.jpg",
+    "rating": null,
+    "year": "2026",
+    "runtime": 99,
+    "trailerUrl": "https://www.youtube.com/watch?v=vVJHMKlLrtM",
+    "tmdbId": 1599181
+  },
+  "gentle monster": {
+    "overview": "After relocating with her family to the countryside, a renowned pianist uncovers a life-shattering truth that forces her to confront the complexities of love, trust, and deception.",
+    "posterPath": "https://image.tmdb.org/t/p/w300/rv3PprTMvEf317skaiTeEYAfJcr.jpg",
+    "rating": null,
+    "year": "2026",
+    "runtime": 114,
+    "trailerUrl": null,
+    "tmdbId": 1473148
+  },
+  "beyond borders patagonia + filmmaker q&a": {
+    "overview": null,
+    "posterPath": null,
+    "rating": null,
+    "year": null,
+    "runtime": null,
+    "trailerUrl": null,
+    "tmdbId": null
+  },
+  "bon voyage marie": {
+    "overview": "An unexpected road trip brings a dysfunctional family together for one last journey with their elder, sparking moments of connection, joy, and reconciliation.",
+    "posterPath": "https://image.tmdb.org/t/p/w300/aKeBqIoBGtXUuWc2RkZdUPVuoyc.jpg",
+    "rating": 7.136,
+    "year": "2025",
+    "runtime": 97,
+    "trailerUrl": null,
+    "tmdbId": 1003504
+  },
+  "super troopers 3": {
+    "overview": "When Farva’s wildly over-the-top Indian engagement to Thorny’s sister spirals into chaos, the Super Troopers must navigate Thorny’s schemes to break up the relationship, while trying to crack a pernicious new drug ring  — all to save the day and maybe the wedding itself.",
+    "posterPath": "https://image.tmdb.org/t/p/w300/eV2Uhn8A93V4ELySlrBGvBuQJLj.jpg",
+    "rating": null,
+    "year": "2026",
+    "runtime": 104,
+    "trailerUrl": "https://www.youtube.com/watch?v=S0r_ISKTqLM",
+    "tmdbId": 675871
+  },
+  "the birthday trip bubs": {
+    "overview": null,
+    "posterPath": null,
+    "rating": null,
+    "year": null,
+    "runtime": null,
+    "trailerUrl": null,
+    "tmdbId": null
+  },
+  "penny lane is dead – filmmaker q&a": {
+    "overview": null,
+    "posterPath": null,
+    "rating": null,
+    "year": null,
+    "runtime": null,
+    "trailerUrl": null,
+    "tmdbId": null
+  },
+  "stop! that! train! preview": {
+    "overview": null,
+    "posterPath": null,
+    "rating": null,
+    "year": null,
+    "runtime": null,
+    "trailerUrl": null,
+    "tmdbId": null
+  },
+  "rivals of amziah king, the": {
+    "overview": "Amziah King, beekeeper, musician, and anchor of his community, reunites with former foster daughter Kateri after many years apart, and fends off threats to his honey business.",
+    "posterPath": "https://image.tmdb.org/t/p/w300/3iVDCDS1VwHIm95PjWEPwsfdhaf.jpg",
+    "rating": null,
+    "year": "2026",
+    "runtime": 130,
+    "trailerUrl": "https://www.youtube.com/watch?v=Mto1BmV1p_s",
+    "tmdbId": 1124142
+  },
+  "cities of tomorrow": {
+    "overview": "One billion people on our planet—one in six—live in shantytowns, slums or squats. Slums: Cities of Tomorrow challenges conventional thinking to propose that slums are in fact the solution, not the problem, to urban overcrowding caused by the massive migration of people to cities. (Lynne Fernie, HotDocs)",
+    "posterPath": "https://image.tmdb.org/t/p/w300/mZSMvn2Kx6i7U7kocs8Z05PT2yD.jpg",
+    "rating": 7.5,
+    "year": "2014",
+    "runtime": 81,
+    "trailerUrl": null,
+    "tmdbId": 278851
+  },
+  "charade (1963)": {
+    "overview": "After Regina Lampert falls for the dashing Peter Joshua on a skiing holiday in the French Alps, she discovers upon her return to Paris that her husband has been murdered. Soon, she and Peter are giving chase to three of her late husband's World War II cronies, Tex, Scobie and Gideon, who are after a quarter of a million dollars the quartet stole while behind enemy lines.",
+    "posterPath": "https://image.tmdb.org/t/p/w300/qqaPjC5FQidtKY65jbAKZPiOTaS.jpg",
+    "rating": 7.7,
+    "year": "1963",
+    "runtime": 113,
+    "trailerUrl": "https://www.youtube.com/watch?v=OpuGXAlvDZs",
+    "tmdbId": 4808
+  },
+  "fallen angels (1995)": {
+    "overview": "An indifferent hitman, his infatuated business partner and an ex-convict search for love and meaning as their lives cross paths in Hong Kong.",
+    "posterPath": "https://image.tmdb.org/t/p/w300/yyM9BPdwttK5LKZSLvHae7QPKo1.jpg",
+    "rating": 7.695,
+    "year": "1995",
+    "runtime": 98,
+    "trailerUrl": "https://www.youtube.com/watch?v=IlF9w9mFVaI",
+    "tmdbId": 11220
+  },
+  "kiri and lou go raaa!": {
+    "overview": "The movie follows Lou, a gentle purple creature with an embarrassingly stretchy trunk, as he rescues Kiri, an ungrateful little dinosaur, from a flood — sweeping the pair into the greatest adventure in prehistory. Along the way, they discover that you can find friendship in the wildest places.",
+    "posterPath": "https://image.tmdb.org/t/p/w300/iDPtI221ChIDye3FjICCtuIdiqK.jpg",
+    "rating": null,
+    "year": "2026",
+    "runtime": 101,
+    "trailerUrl": null,
+    "tmdbId": 1705387
+  },
+  "the sandlot (1993)": {
+    "overview": "During a summer of friendship and adventure, one boy becomes a part of the gang, nine boys become a team and their leader becomes a legend by confronting the terrifying mystery beyond the right field wall.",
+    "posterPath": "https://image.tmdb.org/t/p/w300/7PYqz0viEuW8qTvuGinUMjDWMnj.jpg",
+    "rating": 7.6,
+    "year": "1993",
+    "runtime": 101,
+    "trailerUrl": "https://www.youtube.com/watch?v=52yV9dSzV1E",
+    "tmdbId": 11528
+  },
+  "bob sedergreen and friends with special guest chantal mitvalsky": {
+    "overview": null,
+    "posterPath": null,
+    "rating": null,
+    "year": null,
+    "runtime": null,
+    "trailerUrl": null,
+    "tmdbId": null
+  },
+  "gentlemen prefer blondes (1953)": {
+    "overview": "Lorelei Lee is a beautiful showgirl engaged to be married to the wealthy Gus Esmond, much to the disapproval of Gus' rich father, Esmond Sr., who thinks that Lorelei is just after his money. When Lorelei goes on a cruise accompanied only by her best friend, Dorothy Shaw, Esmond Sr. hires Ernie Malone, a private detective, to follow her and report any questionable behavior that would disqualify her from the marriage.",
+    "posterPath": "https://image.tmdb.org/t/p/w300/fDozhst5HVJJcd3BM8ZOsKniO7Q.jpg",
+    "rating": 7.324,
+    "year": "1953",
+    "runtime": 91,
+    "trailerUrl": "https://www.youtube.com/watch?v=TOqfJEPB8rI",
+    "tmdbId": 759
+  },
+  "chris bieniek's kind of blue quartet": {
+    "overview": null,
+    "posterPath": null,
+    "rating": null,
+    "year": null,
+    "runtime": null,
+    "trailerUrl": null,
+    "tmdbId": null
+  },
+  "ice cream man": {
+    "overview": "An idyllic summer town descends into madness when an ice cream man serves kids sweet delights with horrifying results.",
+    "posterPath": "https://image.tmdb.org/t/p/w300/c987gxFjXqYOxZEZKcTkS1ONTWH.jpg",
+    "rating": null,
+    "year": "2026",
+    "runtime": 86,
+    "trailerUrl": "https://www.youtube.com/watch?v=2vhTgOEjFRM",
+    "tmdbId": 1477712
+  },
+  "the way (15th anniversary)": {
+    "overview": null,
+    "posterPath": null,
+    "rating": null,
+    "year": null,
+    "runtime": null,
+    "trailerUrl": null,
+    "tmdbId": null
+  },
+  "ateez : light the way in cinemas": {
+    "overview": "One day, a mysterious message arrives for ATEEZ, who had been spending a peaceful time in their hideout. At that moment, everything began to change. ATINY has vanished… As if under a spell, ATEEZ wanders through a dreamlike wasteland, into a collapsing world engulfed in flames, and the Dark City veiled in dense fog. Pursued by an unknown force, ATEEZ begins to fight back to find ATINY. Experience an intense immersion where every second counts with INCEPTION, an explosion of freedom and energy in the global hit BOUNCY (K-HOT CHILLI PEPPERS), and the pinnacle of refined charisma with Ice On My Teeth, now reimagined for the big screen. The world-class cinematic VR concert that captivated audiences around the globe has been fully refitted for cinemas, bringing ATEEZ's electrifying performances to life on the largest stage of all.",
+    "posterPath": "https://image.tmdb.org/t/p/w300/jPtUs7hVAp08FjOR2YnojdPhayX.jpg",
+    "rating": null,
+    "year": "2026",
+    "runtime": 65,
+    "trailerUrl": null,
+    "tmdbId": 1722720
+  },
+  "miff 2026: sheep in the box": {
+    "overview": null,
+    "posterPath": null,
+    "rating": null,
+    "year": null,
+    "runtime": null,
+    "trailerUrl": null,
+    "tmdbId": null
+  },
+  "miff 2026: the man i love": {
+    "overview": null,
+    "posterPath": null,
+    "rating": null,
+    "year": null,
+    "runtime": null,
+    "trailerUrl": null,
+    "tmdbId": null
+  },
+  "miff 2026: la bola negra": {
+    "overview": null,
+    "posterPath": null,
+    "rating": null,
+    "year": null,
+    "runtime": null,
+    "trailerUrl": null,
+    "tmdbId": null
+  },
+  "miff 2026: parallel tales": {
+    "overview": null,
+    "posterPath": null,
+    "rating": null,
+    "year": null,
+    "runtime": null,
+    "trailerUrl": null,
+    "tmdbId": null
+  },
+  "miff 2026: minotaur": {
+    "overview": null,
+    "posterPath": null,
+    "rating": null,
+    "year": null,
+    "runtime": null,
+    "trailerUrl": null,
+    "tmdbId": null
+  },
+  "miff 2026: dead man's wire": {
+    "overview": null,
+    "posterPath": null,
+    "rating": null,
+    "year": null,
+    "runtime": null,
+    "trailerUrl": null,
+    "tmdbId": null
+  },
+  "monroe 100: there's no business like show business": {
+    "overview": null,
+    "posterPath": null,
+    "rating": null,
+    "year": null,
+    "runtime": null,
+    "trailerUrl": null,
+    "tmdbId": null
+  },
+  "dirty harry": {
+    "overview": "When a madman dubbed 'Scorpio' terrorizes San Francisco, hard-nosed cop, Harry Callahan – famous for his take-no-prisoners approach to law enforcement – is tasked with hunting down the psychopath.",
+    "posterPath": "https://image.tmdb.org/t/p/w300/scl2JDHzYoIEs5xyYy5ITCfyY0G.jpg",
+    "rating": 7.5,
+    "year": "1971",
+    "runtime": 102,
+    "trailerUrl": "https://www.youtube.com/watch?v=K6Vi1VurN9s",
+    "tmdbId": 984
+  },
+  "bonegilla. the migrant's journey - live show": {
+    "overview": null,
+    "posterPath": null,
+    "rating": null,
+    "year": null,
+    "runtime": null,
+    "trailerUrl": null,
+    "tmdbId": null
+  },
+  "stand by me": {
+    "overview": "After learning that a boy their age has been accidentally killed near their rural homes, four boys decide to go see the body. Gordie, Vern, Chris, and Teddy encounter a mean junk man and a marsh full of leeches, but they also learn more about one another and their very different home lives. Just a lark at first, the boys' adventure evolves into a defining event in their lives.",
+    "posterPath": "https://image.tmdb.org/t/p/w300/vz0w9BSehcqjDcJOjRaCk7fgJe7.jpg",
+    "rating": 7.835,
+    "year": "1986",
+    "runtime": 89,
+    "trailerUrl": "https://www.youtube.com/watch?v=2rBenGsz23E",
+    "tmdbId": 235
   }
 }
