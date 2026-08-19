@@ -8917,5 +8917,41 @@
     "runtime": 147,
     "trailerUrl": "https://www.youtube.com/watch?v=3oa64ktrwKY",
     "tmdbId": 1018
+  },
+  "moulin rouge! (rainbow popcorn presents)": {
+    "overview": null,
+    "posterPath": null,
+    "rating": null,
+    "year": null,
+    "runtime": null,
+    "trailerUrl": null,
+    "tmdbId": null
+  },
+  "ghost: 2 big to rig": {
+    "overview": "Captured live over the course of GHOST’s two sold-out shows in Mexico City last year, 2 BIG TO RIG is the definitive document of the band's unforgettable SKELETOUR WORLD TOUR, presented in IMAX® in select locations.  Featuring the only pro-shot footage of Papa V Perpetua and his band of Nameless Ghouls from the phone-free SKELETOUR, 2 BIG TO RIG immerses the audience in the GHOST live ritual, including exclusive behind-the-scenes and backstage access.",
+    "posterPath": "https://image.tmdb.org/t/p/w300/nZnCOQNa4UcBNGjqbw12HPIFqBY.jpg",
+    "rating": null,
+    "year": "2026",
+    "runtime": 115,
+    "trailerUrl": "https://www.youtube.com/watch?v=Gp4a9EF_7Js",
+    "tmdbId": 1693400
+  },
+  "miff 2026: wicker": {
+    "overview": null,
+    "posterPath": null,
+    "rating": null,
+    "year": null,
+    "runtime": null,
+    "trailerUrl": null,
+    "tmdbId": null
+  },
+  "once upon a time... in hollywood in 35mm": {
+    "overview": null,
+    "posterPath": null,
+    "rating": null,
+    "year": null,
+    "runtime": null,
+    "trailerUrl": null,
+    "tmdbId": null
   }
 }
