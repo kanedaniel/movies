@@ -8953,5 +8953,86 @@
     "runtime": null,
     "trailerUrl": null,
     "tmdbId": null
+  },
+  "trainspotting (1996) - 4k restoration": {
+    "overview": "Heroin addict Mark Renton stumbles through bad ideas and sobriety attempts with his unreliable friends --Sick Boy, Begbie, Spud and Tommy. He also has an underage girlfriend, Diane, along for the ride. After cleaning up and moving from Edinburgh to London, Mark finds he can't escape the life he left behind as Begbie and Sick Boy come knocking.",
+    "posterPath": "https://image.tmdb.org/t/p/w300/1jUC02qsqS2NxBMFarbIhcQtazV.jpg",
+    "rating": 7.96,
+    "year": "1996",
+    "runtime": 94,
+    "trailerUrl": "https://www.youtube.com/watch?v=bKrbNruyFVE",
+    "tmdbId": 627
+  },
+  "boyz n the hood": {
+    "overview": "In the middle of the Los Angeles ghetto, drugs, robberies and shootings dominate everyday life. During these times, Furious tries to raise his son Tre to be a decent person. Tre's friends, on the other hand, have little regard for the law and drag the entire neighborhood into a street war...",
+    "posterPath": "https://image.tmdb.org/t/p/w300/v4ox4aSCNT5vyLXl4Q71JiWwCXW.jpg",
+    "rating": 7.636,
+    "year": "1991",
+    "runtime": 112,
+    "trailerUrl": "https://www.youtube.com/watch?v=OJ_qAPj0Tkk",
+    "tmdbId": 650
+  },
+  "no end (1985)": {
+    "overview": "1982, Poland. A translator loses her husband and becomes a victim of her own sorrow. She looks to sex, to her son, to law, and to hypnotism when she has nothing else in this time of martial law when Solidarity was banned.",
+    "posterPath": "https://image.tmdb.org/t/p/w300/3pdF1guvIxNgmhDkmXJHCCk0PkC.jpg",
+    "rating": 7,
+    "year": "1985",
+    "runtime": 108,
+    "trailerUrl": "https://www.youtube.com/watch?v=YboLTZz5sWU",
+    "tmdbId": 124
+  },
+  "harry potter and the philosopher's stone - 25th anniversary with bonus footage": {
+    "overview": "Harry Potter has lived under the stairs at his aunt and uncle's house his whole life. But on his 11th birthday, he learns he's a powerful wizard—with a place waiting for him at the Hogwarts School of Witchcraft and Wizardry. As he learns to harness his newfound powers with the help of the school's kindly headmaster, Harry uncovers the truth about his parents' deaths—and about the villain who's to blame.",
+    "posterPath": "https://image.tmdb.org/t/p/w300/wuMc08IPKEatf9rnMNXvIDxqP4W.jpg",
+    "rating": 7.902,
+    "year": "2001",
+    "runtime": 152,
+    "trailerUrl": "https://www.youtube.com/watch?v=l91Km49W9qI",
+    "tmdbId": 671
+  },
+  "the dog stars": {
+    "overview": "After the world's population has been ravaged by a pandemic, a man lives a lonesome existence in a Colorado airplane hangar with his dog and a dour gunman he has befriended. When a mysterious transmission comes through on the radio while he’s flying his old Cessna, it sparks a hunt for the provenance of the sound.",
+    "posterPath": "https://image.tmdb.org/t/p/w300/A7i16oDi03qrKep5pBfuTWNUTb.jpg",
+    "rating": null,
+    "year": "2026",
+    "runtime": 119,
+    "trailerUrl": "https://www.youtube.com/watch?v=-xSxaE1ClEE",
+    "tmdbId": 1384216
+  },
+  "the fast and the furious - 25th anniversary": {
+    "overview": "Dominic Toretto is a Los Angeles street racer suspected of masterminding a series of big-rig hijackings. When undercover cop Brian O'Conner infiltrates Toretto's iconoclastic crew, he falls for Toretto's sister and must choose a side: the gang or the LAPD.",
+    "posterPath": "https://image.tmdb.org/t/p/w300/gqY0ITBgT7A82poL9jv851qdnIb.jpg",
+    "rating": 7.013,
+    "year": "2001",
+    "runtime": 106,
+    "trailerUrl": "https://www.youtube.com/watch?v=iIU1xlDbbQk",
+    "tmdbId": 9799
+  },
+  "tina arena: unravel me": {
+    "overview": "How do you separate a Melbourne-born Oz music treasure and cosmopolitan star from a resilient woman? Follow the threads of her story, in her own words.",
+    "posterPath": "https://image.tmdb.org/t/p/w300/yYXYolitZrxcYsVREygTFIks1F2.jpg",
+    "rating": null,
+    "year": "2026",
+    "runtime": 90,
+    "trailerUrl": null,
+    "tmdbId": 1724077
+  },
+  "enter the fantasy realm": {
+    "overview": null,
+    "posterPath": null,
+    "rating": null,
+    "year": null,
+    "runtime": null,
+    "trailerUrl": null,
+    "tmdbId": null
+  },
+  "the fast and the furious": {
+    "overview": "Dominic Toretto is a Los Angeles street racer suspected of masterminding a series of big-rig hijackings. When undercover cop Brian O'Conner infiltrates Toretto's iconoclastic crew, he falls for Toretto's sister and must choose a side: the gang or the LAPD.",
+    "posterPath": "https://image.tmdb.org/t/p/w300/gqY0ITBgT7A82poL9jv851qdnIb.jpg",
+    "rating": 7.013,
+    "year": "2001",
+    "runtime": 106,
+    "trailerUrl": "https://www.youtube.com/watch?v=iIU1xlDbbQk",
+    "tmdbId": 9799
   }
 }
