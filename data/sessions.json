@@ -1,2357 +1,6 @@
 {
-  "generatedAt": "2026-08-20T19:36:13.078Z",
+  "generatedAt": "2026-08-21T19:30:49.900Z",
   "days": [
-    {
-      "date": "Friday 21 August 2026",
-      "dateKey": "2026-08-21",
-      "cinemas": [
-        {
-          "cinema": "ACMI",
-          "url": "https://www.acmi.net.au/whats-on/?what=film&when_start=2026-08-21&when_end=2026-08-21",
-          "sessions": [
-            {
-              "title": "Chimney Town: Frozen in Time",
-              "times": [
-                "10:30am"
-              ],
-              "url": "https://www.acmi.net.au/whats-on/miff-2026/chimney-town-frozen-in-time/",
-              "overview": "After losing his friend Poupelle, young Lubicchi wanders into a mysterious realm where a clock in a tower is frozen at 11:59. To return home, he must restart it – and find the courage to believe again.",
-              "posterPath": "https://image.tmdb.org/t/p/w300/imLD9NBCO65hnsG0XzwVxZ2LBFU.jpg",
-              "rating": 4.5,
-              "year": "2026",
-              "runtime": 98,
-              "trailerUrl": "https://www.youtube.com/watch?v=gnWuYVta0oE"
-            },
-            {
-              "title": "To Hold a Mountain",
-              "times": [
-                "11:00am"
-              ],
-              "url": "https://www.acmi.net.au/whats-on/miff-2026/to-hold-a-mountain/",
-              "overview": "In the remote highlands of Montenegro, a shepherd mother and daughter proudly defend their ancestral mountain from the threat of becoming a NATO military training ground, stirring memories of the violence that shattered their family.",
-              "posterPath": "https://image.tmdb.org/t/p/w300/aQZIVIjqmxUe4nYP0BVEjlcfNXt.jpg",
-              "rating": 8,
-              "year": "2026",
-              "runtime": 105,
-              "trailerUrl": null
-            },
-            {
-              "title": "Guided by Horses",
-              "times": [
-                "12:45pm"
-              ],
-              "url": "https://www.acmi.net.au/whats-on/miff-2026/guided-by-horses/",
-              "overview": "In the stunning beauty of the Kimberley, this feature length documentary is a cinematic story of hope, rising from the quiet, unexpectedly powerful bond between a cast of young people and horses, who are participating in a uniquely special sanctuary created by Aboriginal researcher Professor Juli Coffin.",
-              "posterPath": "https://image.tmdb.org/t/p/w300/sW4odph5gs7L8ktDwlynlv1VCeU.jpg",
-              "rating": null,
-              "year": "2026",
-              "runtime": null,
-              "trailerUrl": null
-            },
-            {
-              "title": "Memory",
-              "times": [
-                "1:30pm"
-              ],
-              "url": "https://www.acmi.net.au/whats-on/miff-2026/memory/",
-              "overview": "Alex, an assassin-for-hire, finds that he's become a target after he refuses to complete a job for a dangerous criminal organization. With the crime syndicate and FBI in hot pursuit, Alex has the skills to stay ahead, except for one thing: he is struggling with severe memory loss, affecting his every move. Alex must question his every action and whom he can ultimately trust.",
-              "posterPath": "https://image.tmdb.org/t/p/w300/4Q1n3TwieoULnuaztu9aFjqHDTI.jpg",
-              "rating": 6.723,
-              "year": "2022",
-              "runtime": 114,
-              "trailerUrl": "https://www.youtube.com/watch?v=vYC7PEKwiCA"
-            },
-            {
-              "title": "Australian Shorts",
-              "times": [
-                "3:30pm"
-              ],
-              "url": "https://www.acmi.net.au/whats-on/miff-2026/australian-shorts/",
-              "overview": "Australian Shorts is comprised of ten short films, which detail various experiences of people in the Australian community. The films are titled Finding Jedda, Jeanette is the Dog, Each Other, Glen, Une Belle Journée, Prom Night, Wirun, Giants, You and Me, Before and After and Hot Mother.",
-              "posterPath": null,
-              "rating": null,
-              "year": "2021",
-              "runtime": null,
-              "trailerUrl": null
-            },
-            {
-              "title": "Whispers in the Woods",
-              "times": [
-                "4:00pm"
-              ],
-              "url": "https://www.acmi.net.au/whats-on/miff-2026/whispers-in-the-woods/",
-              "overview": "In the heart of the tranquil Vosges forests, where lynxes, bears and deer roam freely, Vincent Munier accompanies his father on his expeditions. He not only seeks to capture the visual wonders of this forest kingdom, but also aims to make its sounds audible. Every whisper of the forest is a reminder of the knowledge of nature that his father once imbued in him – knowledge that Vincent now passes on to his own son. Vincent Munier combines breathtaking footage of nature and its sounds to create a fairytale-like cinematic experience that slows time down.",
-              "posterPath": "https://image.tmdb.org/t/p/w300/5rcsd0iGbsQ6DFTI3HclJPJzY9K.jpg",
-              "rating": 7.894,
-              "year": "2025",
-              "runtime": 93,
-              "trailerUrl": "https://www.youtube.com/watch?v=jNgDillNElk"
-            },
-            {
-              "title": "Strangers When We Meet",
-              "times": [
-                "6:15pm"
-              ],
-              "url": "https://www.acmi.net.au/whats-on/miff-2026/strangers-when-we-meet/",
-              "overview": "A suburban architect loves his wife but is bored with his marriage and with his work, so he takes up with the neglected, married beauty who lives down the street.",
-              "posterPath": "https://image.tmdb.org/t/p/w300/3fGmqmBjkvnwCE188L8IdYztKnK.jpg",
-              "rating": 6.422,
-              "year": "1960",
-              "runtime": 117,
-              "trailerUrl": null
-            },
-            {
-              "title": "Documentary Shorts 2",
-              "times": [
-                "6:30pm"
-              ],
-              "url": "https://www.acmi.net.au/whats-on/miff-2026/documentary-shorts-2/",
-              "overview": null,
-              "posterPath": null,
-              "rating": null,
-              "year": null,
-              "runtime": null,
-              "trailerUrl": null
-            },
-            {
-              "title": "Filipiñana",
-              "times": [
-                "8:45pm"
-              ],
-              "url": "https://www.acmi.net.au/whats-on/miff-2026/filipinana/",
-              "overview": "A film about a girl drawn to a golf course.",
-              "posterPath": "https://image.tmdb.org/t/p/w300/d9bovHgEC90yTgqLsoarQWnh6JW.jpg",
-              "rating": 4.5,
-              "year": "2020",
-              "runtime": 24,
-              "trailerUrl": "https://www.youtube.com/watch?v=JjYoydeUHWU"
-            },
-            {
-              "title": "Our Effed Up World",
-              "times": [
-                "9:00pm"
-              ],
-              "url": "https://www.acmi.net.au/whats-on/miff-2026/our-effed-up-world/",
-              "overview": "Sheri thought her biggest problem in life was dealing with the recent loss of her beloved grandma.  But when a mysterious entity crash lands in the woods, only she and her group of shitkicker friends are what stands in the way of an insatiable, intergalactic hunger.",
-              "posterPath": "https://image.tmdb.org/t/p/w300/xJ2JAEJR76oj2YmVJh2CMWrgYbS.jpg",
-              "rating": null,
-              "year": "2026",
-              "runtime": 68,
-              "trailerUrl": "https://www.youtube.com/watch?v=nZbTh_RXLw4"
-            },
-            {
-              "title": "Jim Queen",
-              "times": [
-                "11:15pm"
-              ],
-              "url": "https://www.acmi.net.au/whats-on/miff-2026/jim-queen/",
-              "overview": "When Heterosis - a mysterious virus that turns gay men straight sweeps through the Parisian gay scene, Jim, the six packed sovereign of the Gym Queens, goes from Pride royalty to social outcast. With only Lucien, a freshly-out twink with more heart than abs, still by his side, Jim must race to find a cure before the disease erases the community that once worshipped him.",
-              "posterPath": "https://image.tmdb.org/t/p/w300/nvmGrOzolKlW1z90rLudSjPm9cG.jpg",
-              "rating": 7.925,
-              "year": "2026",
-              "runtime": 85,
-              "trailerUrl": "https://www.youtube.com/watch?v=CHof1Bc8oeM"
-            },
-            {
-              "title": "Species",
-              "times": [
-                "11:30pm"
-              ],
-              "url": "https://www.acmi.net.au/whats-on/miff-2026/species/",
-              "overview": "In 1993, the Search for Extra Terrestrial Intelligence Project receives a transmission detailing an alien DNA structure, along with instructions on how to splice it with human DNA. The result is Sil, a sensual but deadly creature who can change from a beautiful woman to an armour-plated killing machine in the blink of an eye.",
-              "posterPath": "https://image.tmdb.org/t/p/w300/cT5wdyo8kT7dycqjrolJ2sHWkFx.jpg",
-              "rating": 5.985,
-              "year": "1995",
-              "runtime": 108,
-              "trailerUrl": "https://www.youtube.com/watch?v=ECe9Yqltw_w"
-            }
-          ]
-        },
-        {
-          "cinema": "Brunswick Picture House",
-          "url": "https://www.brunswickpicturehouse.com.au/now-showing/",
-          "sessions": [
-            {
-              "title": "Trainspotting (1996) - 4K Restoration",
-              "times": [
-                "8:25pm"
-              ],
-              "url": "https://www.brunswickpicturehouse.com.au/now-showing/",
-              "overview": "Heroin addict Mark Renton stumbles through bad ideas and sobriety attempts with his unreliable friends --Sick Boy, Begbie, Spud and Tommy. He also has an underage girlfriend, Diane, along for the ride. After cleaning up and moving from Edinburgh to London, Mark finds he can't escape the life he left behind as Begbie and Sick Boy come knocking.",
-              "posterPath": "https://image.tmdb.org/t/p/w300/1jUC02qsqS2NxBMFarbIhcQtazV.jpg",
-              "rating": 7.96,
-              "year": "1996",
-              "runtime": 94,
-              "trailerUrl": "https://www.youtube.com/watch?v=bKrbNruyFVE"
-            },
-            {
-              "title": "The End of Oak Street",
-              "times": [
-                "4:15pm"
-              ],
-              "url": "https://www.brunswickpicturehouse.com.au/now-showing/",
-              "overview": "After a mysterious cosmic event rips Oak Street from suburbia and transports their neighborhood to someplace unknown, the Platt family soon discovers that their very survival depends on them sticking together as they navigate their now unrecognizable surroundings.",
-              "posterPath": "https://image.tmdb.org/t/p/w300/3SifFCwwFzXdU1Ew0nA4Z92Bs15.jpg",
-              "rating": 7.625,
-              "year": "2026",
-              "runtime": 100,
-              "trailerUrl": "https://www.youtube.com/watch?v=1u7cyfcRtuo"
-            },
-            {
-              "title": "Teenage Sex And Death At Camp Miasma",
-              "times": [
-                "1:50pm"
-              ],
-              "url": "https://www.brunswickpicturehouse.com.au/now-showing/",
-              "overview": "After years of slapdash sequels and waning fandom, the Camp Miasma slasher franchise is handed over to an enthusiastic young director for resurrection. But when she visits the original's star, a now-reclusive actress shrouded in mystery, the two women fall into a blood-soaked world of desire, fear, and delirium.",
-              "posterPath": "https://image.tmdb.org/t/p/w300/nLsFnXifieSTqSeWxjXSS8RvaUZ.jpg",
-              "rating": null,
-              "year": "2026",
-              "runtime": 112,
-              "trailerUrl": "https://www.youtube.com/watch?v=GpfL7SdR0Bc"
-            },
-            {
-              "title": "Tony",
-              "times": [
-                "6:15pm"
-              ],
-              "url": "https://www.brunswickpicturehouse.com.au/now-showing/",
-              "overview": "A 19-year-old Anthony Bourdain travels to Provincetown and stumbles into the chaotic world of a restaurant kitchen, setting off a summer that will shape the course of his life.",
-              "posterPath": "https://image.tmdb.org/t/p/w300/3WN0JWwRI7oGH7Ni2R6poVWej05.jpg",
-              "rating": 8,
-              "year": "2026",
-              "runtime": 106,
-              "trailerUrl": "https://www.youtube.com/watch?v=k1MVnzd2aVc"
-            }
-          ]
-        },
-        {
-          "cinema": "Eclipse Cinema",
-          "url": "https://eclipse-cinema.com.au/session-time/",
-          "sessions": [
-            {
-              "title": "Asian Cinema Collective – August 2026",
-              "times": [
-                "6:00pm"
-              ],
-              "url": "https://eclipse-cinema.com.au/session-time/",
-              "overview": null,
-              "posterPath": null,
-              "rating": null,
-              "year": null,
-              "runtime": null,
-              "trailerUrl": null
-            },
-            {
-              "title": "Holy Days",
-              "times": [
-                "10:00am",
-                "2:00pm"
-              ],
-              "url": "https://eclipse-cinema.com.au/session-time/",
-              "overview": "When young Brian discovers plans to close a convent of delightfully eccentric nuns, he sets off with them on a wild road trip across New Zealand to save their home.",
-              "posterPath": "https://image.tmdb.org/t/p/w300/bQuH4CVkdKoHtOksYu8q4g3nsNa.jpg",
-              "rating": 6.667,
-              "year": "2026",
-              "runtime": 101,
-              "trailerUrl": "https://www.youtube.com/watch?v=cEQmNfSWMZc"
-            },
-            {
-              "title": "Super Troopers 3",
-              "times": [
-                "10:30pm"
-              ],
-              "url": "https://eclipse-cinema.com.au/session-time/",
-              "overview": "When Farva’s wildly over-the-top Indian engagement to Thorny’s sister spirals into chaos, the Super Troopers must navigate Thorny’s schemes to break up the relationship, while trying to crack a pernicious new drug ring  — all to save the day and maybe the wedding itself.",
-              "posterPath": "https://image.tmdb.org/t/p/w300/eV2Uhn8A93V4ELySlrBGvBuQJLj.jpg",
-              "rating": null,
-              "year": "2026",
-              "runtime": 104,
-              "trailerUrl": "https://www.youtube.com/watch?v=S0r_ISKTqLM"
-            },
-            {
-              "title": "Teenage Sex and Death at Camp Miasma",
-              "times": [
-                "8:20pm",
-                "4:00pm"
-              ],
-              "url": "https://eclipse-cinema.com.au/session-time/",
-              "overview": "After years of slapdash sequels and waning fandom, the Camp Miasma slasher franchise is handed over to an enthusiastic young director for resurrection. But when she visits the original's star, a now-reclusive actress shrouded in mystery, the two women fall into a blood-soaked world of desire, fear, and delirium.",
-              "posterPath": "https://image.tmdb.org/t/p/w300/nLsFnXifieSTqSeWxjXSS8RvaUZ.jpg",
-              "rating": null,
-              "year": "2026",
-              "runtime": 112,
-              "trailerUrl": "https://www.youtube.com/watch?v=GpfL7SdR0Bc"
-            },
-            {
-              "title": "The Birthday Trip",
-              "times": [
-                "12:00pm"
-              ],
-              "url": "https://eclipse-cinema.com.au/session-time/",
-              "overview": "An unflinchingly funny satire following three millennial couples whose relationships are thrown into disarray when they descend on a luxury Southern Highlands farmstay for a birthday weekend they'll never forget.",
-              "posterPath": "https://image.tmdb.org/t/p/w300/lWm3ExehCuaC1ZD8p7E7qRzhddS.jpg",
-              "rating": null,
-              "year": "2026",
-              "runtime": 99,
-              "trailerUrl": "https://www.youtube.com/watch?v=ak59E0Ni7WE"
-            }
-          ]
-        },
-        {
-          "cinema": "Cinema Nova",
-          "url": "https://www.cinemanova.com.au/films-today-after-0:00",
-          "sessions": [
-            {
-              "title": "Angel's Egg",
-              "times": [
-                "10:10am"
-              ],
-              "url": "https://www.cinemanova.com.au/films/angel-s-egg",
-              "overview": "In the ruins of a strange city, a young girl takes care of a large egg she holds carefully in her arms. She bonds with a boy who is searching for a bird he saw in a dream.",
-              "posterPath": "https://image.tmdb.org/t/p/w300/dcEUGvckbePFzPKhGXnS9T3kZMG.jpg",
-              "rating": 7.716,
-              "year": "1985",
-              "runtime": 71,
-              "trailerUrl": "https://www.youtube.com/watch?v=SqyVGzaQFpQ"
-            },
-            {
-              "title": "Invite, The",
-              "times": [
-                "10:10am",
-                "12:20pm",
-                "2:30pm",
-                "4:40pm",
-                "6:50pm",
-                "9:00pm"
-              ],
-              "url": "https://www.cinemanova.com.au/films/invite-the",
-              "overview": "Joe and Angela's marriage is on thin ice. When they invite their enigmatic upstairs neighbors for a dinner party, the night spirals into unexpected places. Have they reignited the spark or lit the match that burns it all down?",
-              "posterPath": "https://image.tmdb.org/t/p/w300/b7Dr8Chzse8VagexAporUu2RtLx.jpg",
-              "rating": 7.923,
-              "year": "2026",
-              "runtime": 107,
-              "trailerUrl": "https://www.youtube.com/watch?v=jpBHmbNM_5c"
-            },
-            {
-              "title": "CatVideoFest 2026",
-              "times": [
-                "10:10am",
-                "2:10pm",
-                "6:40pm"
-              ],
-              "url": "https://www.cinemanova.com.au/films/catvideofest-2026",
-              "overview": "Our fuzzy overlords return to the big screen! Each year, CatVideoFest curates a compilation reel of the latest, best cat videos culled from countless hours of unique submissions and sourced animations, music videos, and, of course, classic internet powerhouses (Keyboard Cat, we’re looking at you).",
-              "posterPath": "https://image.tmdb.org/t/p/w300/nRjejxXF7tV8nZ8RFrHyOswuCle.jpg",
-              "rating": null,
-              "year": "2026",
-              "runtime": 70,
-              "trailerUrl": "https://www.youtube.com/watch?v=wbzRCI1AgZ8"
-            },
-            {
-              "title": "Devil Wears Prada 2, The",
-              "times": [
-                "10:20am"
-              ],
-              "url": "https://www.cinemanova.com.au/films/devil-wears-prada-2-the",
-              "overview": "Andy Sachs returns to Runway as Miranda Priestly navigates a new media landscape and Runway's position within. The duo reconnect with former assistant Emily Charlton, now the head of a luxury brand that possesses funding which could ensure Runway's survival.",
-              "posterPath": "https://image.tmdb.org/t/p/w300/xTI42pmsP5EDnvsNJPEDubwWBQO.jpg",
-              "rating": 6.773,
-              "year": "2026",
-              "runtime": 119,
-              "trailerUrl": "https://www.youtube.com/watch?v=GAuHszJ3ECs"
-            },
-            {
-              "title": "Colours Of Time (La Venue De L’Avenir)",
-              "times": [
-                "10:30am",
-                "6:10pm"
-              ],
-              "url": "https://www.cinemanova.com.au/films/colours-of-time-la-venue-de-l-avenir",
-              "overview": "United by the unexpected inheritance of a house in Normandy, four estranged cousins discover their family history by retracing their ancestor's steps.",
-              "posterPath": "https://image.tmdb.org/t/p/w300/hPj1RiuhW72lIfa8UrIncDGSSD0.jpg",
-              "rating": 7.3,
-              "year": "2025",
-              "runtime": 126,
-              "trailerUrl": "https://www.youtube.com/watch?v=_sTdOm2BID8"
-            },
-            {
-              "title": "Blue Trail, The",
-              "times": [
-                "10:40am"
-              ],
-              "url": "https://www.cinemanova.com.au/films/blue-trail-the",
-              "overview": "In the name of economic recovery, the Brazilian Government created a perennial system of compulsory vertical isolation for seniors over 80 to be confined in a colony. Teca is 77 and lives in the village of Muriti, in the Amazon, when she is surprised by the announcement of the age reduction, including her age group. Cornered, Teca makes an intriguing journey hidden from the officers amidst rivers, boats and the underworld to clandestinely try to fulfill her last dream, to take a plane ride.",
-              "posterPath": "https://image.tmdb.org/t/p/w300/ua8XnJ450rhBTxkY2wpD2ITw7BJ.jpg",
-              "rating": 6.92,
-              "year": "2025",
-              "runtime": 86,
-              "trailerUrl": "https://www.youtube.com/watch?v=nFQEUuodCQ0"
-            },
-            {
-              "title": "Odyssey, The",
-              "times": [
-                "10:45am",
-                "1:15pm",
-                "4:30pm",
-                "6:00pm",
-                "7:45pm"
-              ],
-              "url": "https://www.cinemanova.com.au/films/odyssey-the",
-              "overview": "Odysseus, the legendary King of Ithaca, embarks on a long and perilous journey home following the Trojan War. Throughout his voyage, he is forced to confront the whims of gods, mythological monsters, and trials that stretch both his cunning and his humanity to the breaking point.",
-              "posterPath": "https://image.tmdb.org/t/p/w300/5rhTDKUhPYvpdQIijFIs5VoWsON.jpg",
-              "rating": 4.6,
-              "year": "2026",
-              "runtime": 173,
-              "trailerUrl": "https://www.youtube.com/watch?v=AyIZ9tiiN8I"
-            },
-            {
-              "title": "Rivals of Amziah King, The",
-              "times": [
-                "10:50am",
-                "1:20pm",
-                "3:50pm",
-                "6:20pm",
-                "8:50pm"
-              ],
-              "url": "https://www.cinemanova.com.au/films/rivals-of-amziah-king-the",
-              "overview": "Amziah King, beekeeper, musician, and anchor of his community, reunites with former foster daughter Kateri after many years apart, and fends off threats to his honey business.",
-              "posterPath": "https://image.tmdb.org/t/p/w300/3iVDCDS1VwHIm95PjWEPwsfdhaf.jpg",
-              "rating": null,
-              "year": "2026",
-              "runtime": 130,
-              "trailerUrl": "https://www.youtube.com/watch?v=Mto1BmV1p_s"
-            },
-            {
-              "title": "Sheep Detectives, The",
-              "times": [
-                "10:55am"
-              ],
-              "url": "https://www.cinemanova.com.au/films/sheep-detectives-the",
-              "overview": "George Hardy is a shepherd who reads detective novels to his beloved sheep every night, assuming they can't possibly understand. But when a mysterious incident disrupts life on the farm, the sheep realize they must become the detectives. As they follow the clues and investigate human suspects, they prove that even sheep can be brilliant crime-solvers.",
-              "posterPath": "https://image.tmdb.org/t/p/w300/hTirV44jiLh6NqdiB6jtxPsDIoG.jpg",
-              "rating": 7.7,
-              "year": "2026",
-              "runtime": 109,
-              "trailerUrl": "https://www.youtube.com/watch?v=s0KMTgMzZ_A"
-            },
-            {
-              "title": "Tony",
-              "times": [
-                "10:55am",
-                "1:00pm",
-                "3:05pm",
-                "5:10pm",
-                "6:15pm",
-                "7:15pm",
-                "8:20pm",
-                "9:20pm"
-              ],
-              "url": "https://www.cinemanova.com.au/films/tony",
-              "overview": "A 19-year-old Anthony Bourdain travels to Provincetown and stumbles into the chaotic world of a restaurant kitchen, setting off a summer that will shape the course of his life.",
-              "posterPath": "https://image.tmdb.org/t/p/w300/3WN0JWwRI7oGH7Ni2R6poVWej05.jpg",
-              "rating": 8,
-              "year": "2026",
-              "runtime": 106,
-              "trailerUrl": "https://www.youtube.com/watch?v=k1MVnzd2aVc"
-            },
-            {
-              "title": "Trifole",
-              "times": [
-                "11:00am"
-              ],
-              "url": "https://www.cinemanova.com.au/films/trifole",
-              "overview": "In this bittersweet portrait of a vanishing rural way of life, Dalia travels to Piedmont to care for her aging grandfather Igor, an expert forager. Armed with his field notes and loyal dog Birba, she searches for a prizewinning truffle to save his home.",
-              "posterPath": "https://image.tmdb.org/t/p/w300/tQY2QBOMEboxx3s0i8Fz7KdJMM1.jpg",
-              "rating": 6.7,
-              "year": "2024",
-              "runtime": 100,
-              "trailerUrl": "https://www.youtube.com/watch?v=1r9zPoCuPsA"
-            },
-            {
-              "title": "Teenage Sex and Death at Camp Miasma",
-              "times": [
-                "11:00am",
-                "2:00pm",
-                "4:15pm",
-                "6:30pm",
-                "8:45pm"
-              ],
-              "url": "https://www.cinemanova.com.au/films/teenage-sex-and-death-at-camp-miasma",
-              "overview": "After years of slapdash sequels and waning fandom, the Camp Miasma slasher franchise is handed over to an enthusiastic young director for resurrection. But when she visits the original's star, a now-reclusive actress shrouded in mystery, the two women fall into a blood-soaked world of desire, fear, and delirium.",
-              "posterPath": "https://image.tmdb.org/t/p/w300/nLsFnXifieSTqSeWxjXSS8RvaUZ.jpg",
-              "rating": null,
-              "year": "2026",
-              "runtime": 112,
-              "trailerUrl": "https://www.youtube.com/watch?v=GpfL7SdR0Bc"
-            },
-            {
-              "title": "Leviticus",
-              "times": [
-                "11:00am",
-                "3:00pm",
-                "7:00pm"
-              ],
-              "url": "https://www.cinemanova.com.au/films/leviticus",
-              "overview": "Two teenage boys must escape a violent entity that takes the form of the person they desire most — each other.",
-              "posterPath": "https://image.tmdb.org/t/p/w300/cu0XnXLzJGPeI0msCoJKgnEecKz.jpg",
-              "rating": null,
-              "year": "2026",
-              "runtime": 88,
-              "trailerUrl": "https://www.youtube.com/watch?v=WXuK0vlFxII"
-            },
-            {
-              "title": "Rod Quantock: Comedy Warrior",
-              "times": [
-                "11:05am"
-              ],
-              "url": "https://www.cinemanova.com.au/films/rod-quantock-comedy-warrior",
-              "overview": "This feature documentary charts Rod Quantock’s five-decade career and his tireless efforts to communicate the perils of neoliberalism and the urgency of climate change through humour. His journey illustrates the building of the thriving comedy landscape we take for granted today, showcasing a man who has remained steadfast in his pursuit of truth in an hilarious fashion.",
-              "posterPath": "https://image.tmdb.org/t/p/w300/v2uTg6E2UAGuQ29a6jhMKBqZteD.jpg",
-              "rating": null,
-              "year": "2026",
-              "runtime": 150,
-              "trailerUrl": null
-            },
-            {
-              "title": "Love",
-              "times": [
-                "11:40am",
-                "4:20pm",
-                "8:30pm"
-              ],
-              "url": "https://www.cinemanova.com.au/films/love",
-              "overview": "Nicole, nurse in Grenoble, is raped one night by four men. Deeply scarred, emotionally and physically, she thinks she will never recover from the trauma. Following a friend's advice, she decides to file a lawsuit.",
-              "posterPath": "https://image.tmdb.org/t/p/w300/qVGL9xgGCzXtRwexUTmpz7z1MVg.jpg",
-              "rating": 5.82,
-              "year": "1978",
-              "runtime": 115,
-              "trailerUrl": null
-            },
-            {
-              "title": "Primavera",
-              "times": [
-                "12:00pm"
-              ],
-              "url": "https://www.cinemanova.com.au/films/primavera",
-              "overview": "In 18th-century Venice, 20-year-old violin virtuoso Cecilia lives at the Pièta orphanage, where, despite her talent, she remains confined, knowing that marriage is the only way out. Yet, her life takes a turn after she meets Antonio Vivaldi, a brilliant and ambitious composer who becomes the new violin teacher. Guided by Vivaldi and his music, Cecilia finds the strength to challenge the destiny that once seemed inevitable.",
-              "posterPath": "https://image.tmdb.org/t/p/w300/lu2sF3dRYGgzhLvoc9yZNSKtlFO.jpg",
-              "rating": 7.1,
-              "year": "2025",
-              "runtime": 111,
-              "trailerUrl": "https://www.youtube.com/watch?v=veNHDqpaL_E"
-            },
-            {
-              "title": "Tuner",
-              "times": [
-                "12:00pm"
-              ],
-              "url": "https://www.cinemanova.com.au/films/tuner",
-              "overview": "A talented piano tuner's life is turned upside down when he discovers that his meticulous skills for tuning pianos can equally be applied to cracking safes.",
-              "posterPath": "https://image.tmdb.org/t/p/w300/kyM60vcgf7lfofmZB4F5Rj7OrHW.jpg",
-              "rating": 6.8,
-              "year": "2026",
-              "runtime": 107,
-              "trailerUrl": "https://www.youtube.com/watch?v=N7jTV4Iwzfw"
-            },
-            {
-              "title": "Silent Friend",
-              "times": [
-                "12:30pm"
-              ],
-              "url": "https://www.cinemanova.com.au/films/silent-friend",
-              "overview": "In the heart of a botanical garden in a medieval university town in Germany stands a majestic ginkgo tree. This silent witness has observed over a century the quiet rhythms of transformation across three human lives. At three distinct moments across the 20th and 21st centuries, these people — each carrying their own questions and inner struggles — inevitably find themselves drawn into the presence of this tree, full of mystery and meaning.",
-              "posterPath": "https://image.tmdb.org/t/p/w300/mZjkRpTFfcdsTmtIAzKVM87I94R.jpg",
-              "rating": 7.121,
-              "year": "2026",
-              "runtime": 147,
-              "trailerUrl": "https://www.youtube.com/watch?v=TaRZnpAmtJk"
-            },
-            {
-              "title": "2001: A Space Odyssey",
-              "times": [
-                "12:40pm"
-              ],
-              "url": "https://www.cinemanova.com.au/films/2001-a-space-odyssey",
-              "overview": "Humanity finds a mysterious object buried beneath the lunar surface and sets off to find its origins with the help of HAL 9000, the world's most advanced super computer.",
-              "posterPath": "https://image.tmdb.org/t/p/w300/ve72VxNqjGM69Uky4WTo2bK6rfq.jpg",
-              "rating": 8.048,
-              "year": "1968",
-              "runtime": 149,
-              "trailerUrl": "https://www.youtube.com/watch?v=kR2r-A9H3Kg"
-            },
-            {
-              "title": "Obsession",
-              "times": [
-                "12:50pm",
-                "4:50pm",
-                "8:55pm"
-              ],
-              "url": "https://www.cinemanova.com.au/films/obsession",
-              "overview": "After breaking the mysterious \"One Wish Willow\" to win his crush's heart, a hopeless romantic finds himself getting exactly what he asked for but soon discovers that some desires come at a dark, sinister price.",
-              "posterPath": "https://image.tmdb.org/t/p/w300/40I66L7QKguTFDPvcLcdiTbAD7I.jpg",
-              "rating": 6.5,
-              "year": "2026",
-              "runtime": 109,
-              "trailerUrl": "https://www.youtube.com/watch?v=gMC8kkwbIQQ"
-            },
-            {
-              "title": "Backrooms",
-              "times": [
-                "12:55pm"
-              ],
-              "url": "https://www.cinemanova.com.au/films/backrooms",
-              "overview": "A strange doorway appears in the basement of a furniture showroom.",
-              "posterPath": "https://image.tmdb.org/t/p/w300/vpkNMkbisv5cTaIfCzUduYzXnjb.jpg",
-              "rating": 9,
-              "year": "2026",
-              "runtime": 110,
-              "trailerUrl": "https://www.youtube.com/watch?v=2z6a6NUFlsU"
-            },
-            {
-              "title": "First Light",
-              "times": [
-                "1:05pm"
-              ],
-              "url": "https://www.cinemanova.com.au/films/first-light",
-              "overview": "In May 1940, feeling the RAF needs every man to fight to Luftwaffe, Geoffrey 'Boy' Wellum joins at 18, becoming the youngest ever Spitfire pilot. After an intense training, he soon bonds with the flying men of his squadron. In the air, danger is great, but on the ground drinks, sports and girls, in Geoff's case Sarah, provide great comfort. However in time, the casualties exact a grueling psychological toll, until his tour of duty is ended after 18 months.",
-              "posterPath": "https://image.tmdb.org/t/p/w300/mphMVrEyi95IfYNjB2zPAIuNSAO.jpg",
-              "rating": 5.767,
-              "year": "2010",
-              "runtime": 75,
-              "trailerUrl": "https://www.youtube.com/watch?v=qESTWbjtZ4A"
-            },
-            {
-              "title": "Tokyo Story",
-              "times": [
-                "1:05pm"
-              ],
-              "url": "https://www.cinemanova.com.au/films/tokyo-story",
-              "overview": "The elderly Shukishi and his wife, Tomi, take the long journey from their small seaside village to visit their adult children in Tokyo. Their elder son, Koichi, a doctor, and their daughter, Shige, a hairdresser, don't have much time to spend with their aged parents, and so it falls to Noriko, the widow of their younger son who was killed in the war, to keep her in-laws company.",
-              "posterPath": "https://image.tmdb.org/t/p/w300/g2YbTYKpY7N2yDSk7BfXZ18I5QV.jpg",
-              "rating": 8.155,
-              "year": "1953",
-              "runtime": 137,
-              "trailerUrl": "https://www.youtube.com/watch?v=xqO0d3328Do"
-            },
-            {
-              "title": "Chronology of Water, The",
-              "times": [
-                "1:30pm",
-                "4:05pm",
-                "6:35pm",
-                "9:05pm"
-              ],
-              "url": "https://www.cinemanova.com.au/films/chronology-of-water-the",
-              "overview": "Plagued by an abusive childhood, a woman finds escape in competitive swimming, sexual experimentation, toxic relationships, and addiction before ultimately finding her voice through writing.",
-              "posterPath": "https://image.tmdb.org/t/p/w300/pU3GZI6C9lxzxUnBccIQLThDLVY.jpg",
-              "rating": 6.772,
-              "year": "2025",
-              "runtime": 128,
-              "trailerUrl": "https://www.youtube.com/watch?v=OycsHnfoVz0"
-            },
-            {
-              "title": "Sex",
-              "times": [
-                "2:00pm"
-              ],
-              "url": "https://www.cinemanova.com.au/films/sex",
-              "overview": "When fresh-faced Elliot lands an exciting job for renowned artist, icon and provocateur Erika Tracy, his fantasies come true as Erika taps him to become her sexual muse. But Elliot soon finds himself out of his depth as Erika takes him on a journey more profound than he ever could have imagined, into a world of sex, obsession, power, betrayal and murder.",
-              "posterPath": "https://image.tmdb.org/t/p/w300/pR7SIX3AwqdoD96OI44oLG98e7g.jpg",
-              "rating": 6.1,
-              "year": "2026",
-              "runtime": 90,
-              "trailerUrl": "https://www.youtube.com/watch?v=q5oWCPS3akw"
-            },
-            {
-              "title": "DJ Ahmet",
-              "times": [
-                "2:10pm"
-              ],
-              "url": "https://www.cinemanova.com.au/films/dj-ahmet",
-              "overview": "15-year-old Ahmet, from a remote Yuruk village in North Macedonia, finds refuge in music while navigating his father’s expectations, a conservative community, and his first experience with love — a girl already promised to someone else.",
-              "posterPath": "https://image.tmdb.org/t/p/w300/n5OYq5veVaU2hRmOTZhUgl99VH5.jpg",
-              "rating": 6.896,
-              "year": "2025",
-              "runtime": 97,
-              "trailerUrl": "https://www.youtube.com/watch?v=GHBATVjjLWY"
-            },
-            {
-              "title": "Wizard of the Kremlin, The",
-              "times": [
-                "3:20pm"
-              ],
-              "url": "https://www.cinemanova.com.au/films/wizard-of-the-kremlin-the",
-              "overview": "In the chaos of post-Soviet Russia, rising KGB officer Vladimir Putin joins forces with master manipulator Vadim Baranov to reshape life behind the Iron Curtain, using violence and deception to change the world forever.",
-              "posterPath": "https://image.tmdb.org/t/p/w300/85EYON4oXVYTPdMuW5q5ELQLU88.jpg",
-              "rating": 6.527,
-              "year": "2026",
-              "runtime": 136,
-              "trailerUrl": "https://www.youtube.com/watch?v=U7ctYp3zQVA"
-            },
-            {
-              "title": "Disclosure Day",
-              "times": [
-                "3:25pm"
-              ],
-              "url": "https://www.cinemanova.com.au/films/disclosure-day",
-              "overview": "If you found out we weren’t alone, if someone showed you, proved it to you, would that frighten you?",
-              "posterPath": "https://image.tmdb.org/t/p/w300/bGgrr83LC6bVRg9F5UE52i4gpE3.jpg",
-              "rating": 7.9,
-              "year": "2026",
-              "runtime": 146,
-              "trailerUrl": "https://www.youtube.com/watch?v=icDuEHSxE-w"
-            },
-            {
-              "title": "Network",
-              "times": [
-                "3:40pm"
-              ],
-              "url": "https://www.cinemanova.com.au/films/network",
-              "overview": "In 2003, Harvard undergrad and computer programmer Mark Zuckerberg begins work on a new concept that eventually turns into the global social network known as Facebook. Six years later, Mark is one of the youngest billionaires ever, but his unprecedented success leads to both personal and legal complications when he ends up on the receiving end of two lawsuits, one involving his former friend.",
-              "posterPath": "https://image.tmdb.org/t/p/w300/n0ybibhJtQ5icDqTp8eRytcIHJx.jpg",
-              "rating": 7.375,
-              "year": "2010",
-              "runtime": 121,
-              "trailerUrl": "https://www.youtube.com/watch?v=rBCNU0XT9GY"
-            },
-            {
-              "title": "Blue Velvet",
-              "times": [
-                "3:40pm",
-                "9:15pm"
-              ],
-              "url": "https://www.cinemanova.com.au/films/blue-velvet",
-              "overview": "The discovery of a severed human ear found in a field leads a young man on an investigation related to a beautiful, mysterious nightclub singer and a group of psychopathic criminals who have kidnapped her child.",
-              "posterPath": "https://image.tmdb.org/t/p/w300/6v1zYh2FKOYVddY5pCQhd4PO9uX.jpg",
-              "rating": 7.603,
-              "year": "1986",
-              "runtime": 120,
-              "trailerUrl": "https://www.youtube.com/watch?v=rAA6imfqMYQ"
-            },
-            {
-              "title": "Case 137",
-              "times": [
-                "4:00pm",
-                "8:40pm"
-              ],
-              "url": "https://www.cinemanova.com.au/films/case-137",
-              "overview": "Stéphanie, a police officer working for Internal Affairs, is assigned to a case involving a young man severely wounded during a tense and chaotic demonstration in Paris. While she finds no evidence of illegitimate police violence, the case takes a personal turn when she discovers the victim is from her hometown.",
-              "posterPath": "https://image.tmdb.org/t/p/w300/t93h1ptV098Q6vzl9gfEymJQ6Qp.jpg",
-              "rating": 6.947,
-              "year": "2025",
-              "runtime": 115,
-              "trailerUrl": "https://www.youtube.com/watch?v=DRKJKfGbEjc"
-            },
-            {
-              "title": "Colony",
-              "times": [
-                "4:10pm"
-              ],
-              "url": "https://www.cinemanova.com.au/films/colony",
-              "overview": "Professor Se-jeong is thrust into a bloody nightmare when a rapidly mutating virus is released during a biotech conference causing authorities to seal the facility. Trapped inside with no escape, Se-jeong along with a small group of survivors must fight to stay alive while the infected undergo horrific transformations.",
-              "posterPath": "https://image.tmdb.org/t/p/w300/tN799oUR0f1gUKDYdMNrDaY7I51.jpg",
-              "rating": 6.884,
-              "year": "2026",
-              "runtime": 123,
-              "trailerUrl": "https://www.youtube.com/watch?v=LW6dpj1uCK8"
-            },
-            {
-              "title": "Titane",
-              "times": [
-                "6:15pm"
-              ],
-              "url": "https://www.cinemanova.com.au/films/titane",
-              "overview": "A woman with a metal plate in her head from a childhood car accident embarks on a bizarre journey, bringing her into contact with a firefighter who's reunited with his missing son after 10 years.",
-              "posterPath": "https://image.tmdb.org/t/p/w300/mBlpouG3gqB8WLdP65LCOXb3jFb.jpg",
-              "rating": 6.33,
-              "year": "2021",
-              "runtime": 108,
-              "trailerUrl": "https://www.youtube.com/watch?v=_DmFHh7KsWc"
-            },
-            {
-              "title": "In The Mouth Of Madness",
-              "times": [
-                "7:20pm"
-              ],
-              "url": "https://www.cinemanova.com.au/films/in-the-mouth-of-madness",
-              "overview": "An insurance investigator visits a small town while looking into the strange disappearance of a popular horror novelist. He soon finds that the impact of the author’s books is far more than inspirational.",
-              "posterPath": "https://image.tmdb.org/t/p/w300/msh4tEUzbnEqlHcFOUH4O0Zti8r.jpg",
-              "rating": 7.204,
-              "year": "1995",
-              "runtime": 95,
-              "trailerUrl": "https://www.youtube.com/watch?v=qs1qo46GfWs"
-            },
-            {
-              "title": "Boogie Nights",
-              "times": [
-                "8:30pm"
-              ],
-              "url": "https://www.cinemanova.com.au/films/boogie-nights",
-              "overview": "In 1977, an idealistic porn producer and his promising protege try to catch up with the end of an era before their never-ending party collides with cold, hard reality.",
-              "posterPath": "https://image.tmdb.org/t/p/w300/wnE24UPCPQsQnbBOu4zVE2qaDNm.jpg",
-              "rating": 7.638,
-              "year": "1997",
-              "runtime": 156,
-              "trailerUrl": "https://www.youtube.com/watch?v=6__jTfyCMsc"
-            },
-            {
-              "title": "Cure",
-              "times": [
-                "9:20pm"
-              ],
-              "url": "https://www.cinemanova.com.au/films/cure",
-              "overview": "A frustrated detective deals with the case of several gruesome murders committed by people who have no recollection of what they've done.",
-              "posterPath": "https://image.tmdb.org/t/p/w300/xNVJr9q6AtSbjosS6Ed9YirOkSo.jpg",
-              "rating": 7.558,
-              "year": "1997",
-              "runtime": 111,
-              "trailerUrl": "https://www.youtube.com/watch?v=pv91E5L6_Tw"
-            }
-          ]
-        },
-        {
-          "cinema": "Lido Cinemas",
-          "url": "https://www.lidocinemas.com.au/now-showing",
-          "sessions": [
-            {
-              "title": "Spider-Man: Brand New Day",
-              "times": [
-                "11:00am",
-                "1:20pm",
-                "4:30pm",
-                "6:30pm",
-                "8:40pm"
-              ],
-              "url": "https://www.lidocinemas.com.au/tickets?c=0000000003&s=109085",
-              "overview": "Fighting crime full-time as Spider-Man in a world that doesn't remember him—and the pressure of seeing his old friends move on without him—sparks a change in Peter Parker he may not have the power to control. But that transformation might also be the only thing that can stop a shocking new threat to the city and those he loves - a powerful villain no one can even see.",
-              "posterPath": "https://image.tmdb.org/t/p/w300/6Q21yptoOCUq4ErwVncesLPVplb.jpg",
-              "rating": 9.1,
-              "year": "2026",
-              "runtime": 145,
-              "trailerUrl": "https://www.youtube.com/watch?v=tLkx4BNsSiM"
-            },
-            {
-              "title": "Tony",
-              "times": [
-                "11:10am",
-                "1:30pm",
-                "4:15pm",
-                "6:45pm",
-                "8:15pm",
-                "9:10pm"
-              ],
-              "url": "https://www.lidocinemas.com.au/tickets?c=0000000003&s=109084",
-              "overview": "A 19-year-old Anthony Bourdain travels to Provincetown and stumbles into the chaotic world of a restaurant kitchen, setting off a summer that will shape the course of his life.",
-              "posterPath": "https://image.tmdb.org/t/p/w300/3WN0JWwRI7oGH7Ni2R6poVWej05.jpg",
-              "rating": 8,
-              "year": "2026",
-              "runtime": 106,
-              "trailerUrl": "https://www.youtube.com/watch?v=k1MVnzd2aVc"
-            },
-            {
-              "title": "The End of Oak Street",
-              "times": [
-                "11:15am",
-                "1:40pm",
-                "4:00pm",
-                "6:20pm"
-              ],
-              "url": "https://www.lidocinemas.com.au/tickets?c=0000000003&s=109101",
-              "overview": "After a mysterious cosmic event rips Oak Street from suburbia and transports their neighborhood to someplace unknown, the Platt family soon discovers that their very survival depends on them sticking together as they navigate their now unrecognizable surroundings.",
-              "posterPath": "https://image.tmdb.org/t/p/w300/3SifFCwwFzXdU1Ew0nA4Z92Bs15.jpg",
-              "rating": 7.625,
-              "year": "2026",
-              "runtime": 100,
-              "trailerUrl": "https://www.youtube.com/watch?v=1u7cyfcRtuo"
-            },
-            {
-              "title": "The Invite",
-              "times": [
-                "10:50am",
-                "1:30pm",
-                "4:00pm"
-              ],
-              "url": "https://www.lidocinemas.com.au/tickets?c=0000000003&s=109107",
-              "overview": "Joe and Angela’s marriage is on thin ice. When they invite their enigmatic upstairs neighbors for a dinner party, the night spirals into unexpected places. Have they reignited the spark or lit the match that burns it all down?",
-              "posterPath": "https://image.tmdb.org/t/p/w300/vJRFj5ri9Zm7Tg0Tn7pBmOtXqKb.jpg",
-              "rating": null,
-              "year": "2026",
-              "runtime": 107,
-              "trailerUrl": "https://www.youtube.com/watch?v=nelkiuezJxg"
-            },
-            {
-              "title": "One Night Only",
-              "times": [
-                "11:20am",
-                "3:40pm",
-                "9:30pm"
-              ],
-              "url": "https://www.lidocinemas.com.au/tickets?c=0000000003&s=109104",
-              "overview": "Two love-starved strangers crash into each other on the one night of the year when single people are allowed to have sex.",
-              "posterPath": "https://image.tmdb.org/t/p/w300/aG0vY0XevpJqsHy9MKIHqhwLUyN.jpg",
-              "rating": null,
-              "year": "2026",
-              "runtime": 102,
-              "trailerUrl": "https://www.youtube.com/watch?v=LifZzIIlK1k"
-            },
-            {
-              "title": "Teenage Sex and Death at Camp Miasma",
-              "times": [
-                "1:10pm",
-                "4:20pm",
-                "8:45pm"
-              ],
-              "url": "https://www.lidocinemas.com.au/tickets?c=0000000003&s=109090",
-              "overview": "After years of slapdash sequels and waning fandom, the Camp Miasma slasher franchise is handed over to an enthusiastic young director for resurrection. But when she visits the original's star, a now-reclusive actress shrouded in mystery, the two women fall into a blood-soaked world of desire, fear, and delirium.",
-              "posterPath": "https://image.tmdb.org/t/p/w300/nLsFnXifieSTqSeWxjXSS8RvaUZ.jpg",
-              "rating": null,
-              "year": "2026",
-              "runtime": 112,
-              "trailerUrl": "https://www.youtube.com/watch?v=GpfL7SdR0Bc"
-            },
-            {
-              "title": "The Odyssey",
-              "times": [
-                "12:50pm"
-              ],
-              "url": "https://www.lidocinemas.com.au/tickets?c=0000000003&s=109091",
-              "overview": "Odysseus, the legendary King of Ithaca, embarks on a long and perilous journey home following the Trojan War. Throughout his voyage, he is forced to confront the whims of gods, mythological monsters, and trials that stretch both his cunning and his humanity to the breaking point.",
-              "posterPath": "https://image.tmdb.org/t/p/w300/5rhTDKUhPYvpdQIijFIs5VoWsON.jpg",
-              "rating": 4.6,
-              "year": "2026",
-              "runtime": 173,
-              "trailerUrl": "https://www.youtube.com/watch?v=AyIZ9tiiN8I"
-            },
-            {
-              "title": "Insidious: Out of the Further",
-              "times": [
-                "4:15pm",
-                "9:30pm"
-              ],
-              "url": "https://www.lidocinemas.com.au/tickets?c=0000000003&s=109080",
-              "overview": "Gemma, a young mother raising her daughter in the house she grew up in, discovers she can travel into The Further, where she possesses an ability to bring what lives there back to the real world.",
-              "posterPath": "https://image.tmdb.org/t/p/w300/4tTrW9dXCByS5wt2pXVWb58zNjz.jpg",
-              "rating": null,
-              "year": "2026",
-              "runtime": 106,
-              "trailerUrl": "https://www.youtube.com/watch?v=gXjurDkYnEM"
-            },
-            {
-              "title": "Spa Weekend",
-              "times": [
-                "2:00pm",
-                "6:00pm"
-              ],
-              "url": "https://www.lidocinemas.com.au/tickets?c=0000000003&s=109086",
-              "overview": "Three friends go on a spa weekend that descends into chaos when their trainwreck friend joins, leading to hilarious consequences.",
-              "posterPath": "https://image.tmdb.org/t/p/w300/i3I19SbOyz6AIl0cSYdyVJRucMr.jpg",
-              "rating": null,
-              "year": "2026",
-              "runtime": 97,
-              "trailerUrl": "https://www.youtube.com/watch?v=_ZGsnS7W-Rg"
-            },
-            {
-              "title": "Stop! That! Train!",
-              "times": [
-                "10:40am",
-                "9:30pm"
-              ],
-              "url": "https://www.lidocinemas.com.au/tickets?c=0000000003&s=109089",
-              "overview": "Best friends and train stewardesses Tess and DeeDee trade their dreary shifts on the Stank Rail for the glitzy Glamazonian Express. However, when a catastrophic Stormaganza threatens to crash the high-speed train into Celebration, Florida, the duo in coach must join forces with the snobby first-class attendants, a hot but dimwitted co-conductor, and fabulous US President Judy Gagwell to save the day.",
-              "posterPath": "https://image.tmdb.org/t/p/w300/w90dGS6D2lVO4aO5rdQ8QECrUGY.jpg",
-              "rating": 5.054,
-              "year": "2026",
-              "runtime": 90,
-              "trailerUrl": "https://www.youtube.com/watch?v=xEU03WLKkT4"
-            },
-            {
-              "title": "The Rivals of Amziah King",
-              "times": [
-                "1:20pm",
-                "6:40pm"
-              ],
-              "url": "https://www.lidocinemas.com.au/tickets?c=0000000003&s=109081",
-              "overview": "Amziah King, beekeeper, musician, and anchor of his community, reunites with former foster daughter Kateri after many years apart, and fends off threats to his honey business.",
-              "posterPath": "https://image.tmdb.org/t/p/w300/3iVDCDS1VwHIm95PjWEPwsfdhaf.jpg",
-              "rating": 8.333,
-              "year": "2026",
-              "runtime": 130,
-              "trailerUrl": "https://www.youtube.com/watch?v=4laLp51eYLY"
-            },
-            {
-              "title": "Holy Days",
-              "times": [
-                "10:50am"
-              ],
-              "url": "https://www.lidocinemas.com.au/tickets?c=0000000003&s=109088",
-              "overview": "When young Brian discovers plans to close a convent of delightfully eccentric nuns, he sets off with them on a wild road trip across New Zealand to save their home.",
-              "posterPath": "https://image.tmdb.org/t/p/w300/bQuH4CVkdKoHtOksYu8q4g3nsNa.jpg",
-              "rating": 6.667,
-              "year": "2026",
-              "runtime": 101,
-              "trailerUrl": "https://www.youtube.com/watch?v=cEQmNfSWMZc"
-            },
-            {
-              "title": "Tuner",
-              "times": [
-                "10:50am"
-              ],
-              "url": "https://www.lidocinemas.com.au/tickets?c=0000000003&s=109083",
-              "overview": "A talented piano tuner's life is turned upside down when he discovers that his meticulous skills for tuning pianos can equally be applied to cracking safes.",
-              "posterPath": "https://image.tmdb.org/t/p/w300/kyM60vcgf7lfofmZB4F5Rj7OrHW.jpg",
-              "rating": 6.8,
-              "year": "2026",
-              "runtime": 107,
-              "trailerUrl": "https://www.youtube.com/watch?v=N7jTV4Iwzfw"
-            },
-            {
-              "title": "Toy Story 5",
-              "times": [
-                "4:00pm"
-              ],
-              "url": "https://www.lidocinemas.com.au/tickets?c=0000000003&s=109106",
-              "overview": "When Bonnie receives a Lilypad tablet as a gift and becomes obsessed, Buzz, Woody, Jessie and the rest of the gang's jobs become exponentially harder when they have to go head to head with the all-new threat to playtime.",
-              "posterPath": "https://image.tmdb.org/t/p/w300/pxG26JdyuiDvJbSoucknaFiLeZD.jpg",
-              "rating": 6,
-              "year": "2026",
-              "runtime": 102,
-              "trailerUrl": "https://www.youtube.com/watch?v=zhEJKGFQ76E"
-            },
-            {
-              "title": "La Haine (1995)",
-              "times": [
-                "8:00pm"
-              ],
-              "url": "https://www.lidocinemas.com.au/tickets?c=0000000003&s=105672",
-              "overview": "After a chaotic night of rioting in a marginal suburb of Paris, three young friends, Vinz, Hubert and Saïd, wander around unoccupied waiting for news about the state of health of a mutual friend who has been seriously injured when confronting the police.",
-              "posterPath": "https://image.tmdb.org/t/p/w300/hY4exng4s29RzDbtQInjx9MA3PZ.jpg",
-              "rating": 8.08,
-              "year": "1995",
-              "runtime": 98,
-              "trailerUrl": "https://www.youtube.com/watch?v=FKwcXt3JIaU"
-            },
-            {
-              "title": "I Want Your Sex",
-              "times": [
-                "7:00pm"
-              ],
-              "url": "https://www.lidocinemas.com.au/tickets?c=0000000003&s=107991",
-              "overview": "When fresh-faced Elliot lands an exciting job for renowned artist, icon and provocateur Erika Tracy, his fantasies come true as Erika taps him to become her sexual muse. But Elliot soon finds himself out of his depth as Erika takes him on a journey more profound than he ever could have imagined, into a world of sex, obsession, power, betrayal and murder.",
-              "posterPath": "https://image.tmdb.org/t/p/w300/pR7SIX3AwqdoD96OI44oLG98e7g.jpg",
-              "rating": 5.933,
-              "year": "2026",
-              "runtime": 90,
-              "trailerUrl": "https://www.youtube.com/watch?v=q5oWCPS3akw"
-            },
-            {
-              "title": "The Ruby Glynn Quartet",
-              "times": [
-                "8:00pm"
-              ],
-              "url": "https://www.lidocinemas.com.au/tickets?c=0000000003&s=107521",
-              "overview": null,
-              "posterPath": null,
-              "rating": null,
-              "year": null,
-              "runtime": null,
-              "trailerUrl": null
-            }
-          ]
-        },
-        {
-          "cinema": "Hoyts Melbourne Central",
-          "url": "https://www.hoyts.com.au/cinemas/melbourne-central",
-          "sessions": [
-            {
-              "title": "Spider-Man: Brand New Day",
-              "times": [
-                "9:45am",
-                "12:00pm",
-                "12:45pm",
-                "3:30pm",
-                "6:00pm",
-                "6:45pm",
-                "10:00pm"
-              ],
-              "url": "https://www.hoyts.com.au/movies/spider-man-brand-new-day",
-              "overview": "Fighting crime full-time as Spider-Man in a world that doesn't remember him—and the pressure of seeing his old friends move on without him—sparks a change in Peter Parker he may not have the power to control. But that transformation might also be the only thing that can stop a shocking new threat to the city and those he loves - a powerful villain no one can even see.",
-              "posterPath": "https://image.tmdb.org/t/p/w300/6Q21yptoOCUq4ErwVncesLPVplb.jpg",
-              "rating": 9.1,
-              "year": "2026",
-              "runtime": 145,
-              "trailerUrl": "https://www.youtube.com/watch?v=tLkx4BNsSiM"
-            },
-            {
-              "title": "The Odyssey",
-              "times": [
-                "10:30am",
-                "11:30am",
-                "2:15pm",
-                "9:30pm"
-              ],
-              "url": "https://www.hoyts.com.au/movies/the-odyssey",
-              "overview": "Odysseus, the legendary King of Ithaca, embarks on a long and perilous journey home following the Trojan War. Throughout his voyage, he is forced to confront the whims of gods, mythological monsters, and trials that stretch both his cunning and his humanity to the breaking point.",
-              "posterPath": "https://image.tmdb.org/t/p/w300/5rhTDKUhPYvpdQIijFIs5VoWsON.jpg",
-              "rating": 4.6,
-              "year": "2026",
-              "runtime": 173,
-              "trailerUrl": "https://www.youtube.com/watch?v=AyIZ9tiiN8I"
-            },
-            {
-              "title": "Spa Weekend",
-              "times": [
-                "1:00pm",
-                "3:10pm"
-              ],
-              "url": "https://www.hoyts.com.au/movies/spa-weekend",
-              "overview": "Three friends go on a spa weekend that descends into chaos when their trainwreck friend joins, leading to hilarious consequences.",
-              "posterPath": "https://image.tmdb.org/t/p/w300/i3I19SbOyz6AIl0cSYdyVJRucMr.jpg",
-              "rating": null,
-              "year": "2026",
-              "runtime": 97,
-              "trailerUrl": "https://www.youtube.com/watch?v=_ZGsnS7W-Rg"
-            },
-            {
-              "title": "The End of Oak Street",
-              "times": [
-                "9:30am",
-                "1:00pm",
-                "3:15pm"
-              ],
-              "url": "https://www.hoyts.com.au/movies/the-end-of-oak-street",
-              "overview": "After a mysterious cosmic event rips Oak Street from suburbia and transports their neighborhood to someplace unknown, the Platt family soon discovers that their very survival depends on them sticking together as they navigate their now unrecognizable surroundings.",
-              "posterPath": "https://image.tmdb.org/t/p/w300/3SifFCwwFzXdU1Ew0nA4Z92Bs15.jpg",
-              "rating": 7.625,
-              "year": "2026",
-              "runtime": 100,
-              "trailerUrl": "https://www.youtube.com/watch?v=1u7cyfcRtuo"
-            },
-            {
-              "title": "Insidious: Out of the Further",
-              "times": [
-                "12:25pm",
-                "3:15pm",
-                "9:40pm"
-              ],
-              "url": "https://www.hoyts.com.au/movies/insidious-out-of-the-further",
-              "overview": "Gemma, a young mother raising her daughter in the house she grew up in, discovers she can travel into The Further, where she possesses an ability to bring what lives there back to the real world.",
-              "posterPath": "https://image.tmdb.org/t/p/w300/4tTrW9dXCByS5wt2pXVWb58zNjz.jpg",
-              "rating": null,
-              "year": "2026",
-              "runtime": 106,
-              "trailerUrl": "https://www.youtube.com/watch?v=gXjurDkYnEM"
-            },
-            {
-              "title": "Mutiny",
-              "times": [
-                "10:15am",
-                "12:15pm",
-                "4:00pm"
-              ],
-              "url": "https://www.hoyts.com.au/movies/mutiny",
-              "overview": "After witnessing his billionaire boss' murder and being framed for the crime, Cole Reed boards a cargo ship on a one-man crusade to avenge his boss' death only to discover an international conspiracy.",
-              "posterPath": "https://image.tmdb.org/t/p/w300/lsYSWqj6i2iyUDJoLA2cazFJYlC.jpg",
-              "rating": 9,
-              "year": "2026",
-              "runtime": 95,
-              "trailerUrl": "https://www.youtube.com/watch?v=nCdqYxKGpv4"
-            },
-            {
-              "title": "One Night Only",
-              "times": [
-                "10:15am",
-                "3:30pm"
-              ],
-              "url": "https://www.hoyts.com.au/movies/one-night-only",
-              "overview": "Two love-starved strangers crash into each other on the one night of the year when single people are allowed to have sex.",
-              "posterPath": "https://image.tmdb.org/t/p/w300/aG0vY0XevpJqsHy9MKIHqhwLUyN.jpg",
-              "rating": null,
-              "year": "2026",
-              "runtime": 102,
-              "trailerUrl": "https://www.youtube.com/watch?v=LifZzIIlK1k"
-            },
-            {
-              "title": "Kung Fu Soccer (Mandarin, Eng Sub)",
-              "times": [
-                "9:45am",
-                "2:30pm"
-              ],
-              "url": "https://www.hoyts.com.au/movies/kung-fu-soccer-mandarin-eng-sub",
-              "overview": "The \"Supreme Invincible Cup\" is about to begin, and a host of top teams are about to engage in an unprecedented showdown! But the Kung Fu Women's Soccer Team has been dealt a hellish script right from the start?! Their opponents are all highly skilled, and external pressure is mounting. The schemes on the field are one after another... Can they use their kung fu to turn the tide on the green field?",
-              "posterPath": "https://image.tmdb.org/t/p/w300/6QgJQrClh9ej357yzLWgCxrjAmJ.jpg",
-              "rating": 5.909,
-              "year": "2026",
-              "runtime": 106,
-              "trailerUrl": null
-            },
-            {
-              "title": "Kiri and Lou Go Raaa!",
-              "times": [
-                "9:30am"
-              ],
-              "url": "https://www.hoyts.com.au/movies/kiri-and-lou-go-raaa",
-              "overview": "The movie follows Lou, a gentle purple creature with an embarrassingly stretchy trunk, as he rescues Kiri, an ungrateful little dinosaur, from a flood — sweeping the pair into the greatest adventure in prehistory. Along the way, they discover that you can find friendship in the wildest places.",
-              "posterPath": "https://image.tmdb.org/t/p/w300/iDPtI221ChIDye3FjICCtuIdiqK.jpg",
-              "rating": null,
-              "year": "2026",
-              "runtime": 101,
-              "trailerUrl": null
-            },
-            {
-              "title": "Minions & Monsters",
-              "times": [
-                "10:00am"
-              ],
-              "url": "https://www.hoyts.com.au/movies/minions-3",
-              "overview": "This is the rambunctious, ridiculous and totally true story of how the Minions conquered Hollywood, became movie stars, lost everything, unleashed monsters onto the world and then banded together to try and save the planet from the mayhem they had just created.",
-              "posterPath": "https://image.tmdb.org/t/p/w300/nz7i42yhLIJ4ve9JKgM6NthoLHO.jpg",
-              "rating": 9.5,
-              "year": "2026",
-              "runtime": 90,
-              "trailerUrl": "https://www.youtube.com/watch?v=tV1v5EfFc2g"
-            },
-            {
-              "title": "Harry Potter and the Half-Blood Prince",
-              "times": [
-                "6:15pm"
-              ],
-              "url": "https://www.hoyts.com.au/movies/harry-potter-and-the-half-blood-prince",
-              "overview": "Dumbledore tries to prepare Harry for the final battle with Voldemort while Death Eaters wreak havoc in both Muggle and Wizard worlds.",
-              "posterPath": "https://image.tmdb.org/t/p/w300/z7uo9zmQdQwU5ZJHFpv2Upl30i1.jpg",
-              "rating": 7.682,
-              "year": "2009",
-              "runtime": 153,
-              "trailerUrl": "https://www.youtube.com/watch?v=DgeDDXcw--I"
-            }
-          ],
-          "note": "Lux sessions not listed"
-        },
-        {
-          "cinema": "The Astor Theatre",
-          "url": "https://www.astortheatre.net.au/",
-          "sessions": [
-            {
-              "title": "MIFF 2026: The Only Living Pickpocket in New York",
-              "times": [
-                "5:45pm"
-              ],
-              "url": "https://www.astortheatre.net.au/films/miff-2026-the-only-living-pickpocket-in-new-york",
-              "isDoubleFeature": false,
-              "overview": null,
-              "posterPath": null,
-              "rating": null,
-              "year": null,
-              "runtime": null,
-              "trailerUrl": null
-            },
-            {
-              "title": "MIFF 2026: John Cameron Mitchell Presents: Hedwig and the Angry Inch",
-              "times": [
-                "9:00pm"
-              ],
-              "url": "https://www.astortheatre.net.au/films/miff-2026-hedwig-and-the-angry-inch",
-              "isDoubleFeature": false,
-              "overview": null,
-              "posterPath": null,
-              "rating": null,
-              "year": null,
-              "runtime": null,
-              "trailerUrl": null
-            }
-          ]
-        },
-        {
-          "cinema": "Palace Como",
-          "url": "https://www.palacecinemas.com.au/cinemas/palace-cinema-como",
-          "sessions": [
-            {
-              "title": "Tony",
-              "times": [
-                "10:20am",
-                "12:50pm",
-                "3:20pm",
-                "6:00pm",
-                "8:40pm"
-              ],
-              "url": "https://www.palacecinemas.com.au/movies/tony",
-              "overview": "A 19-year-old Anthony Bourdain travels to Provincetown and stumbles into the chaotic world of a restaurant kitchen, setting off a summer that will shape the course of his life.",
-              "posterPath": "https://image.tmdb.org/t/p/w300/3WN0JWwRI7oGH7Ni2R6poVWej05.jpg",
-              "rating": 8,
-              "year": "2026",
-              "runtime": 106,
-              "trailerUrl": "https://www.youtube.com/watch?v=k1MVnzd2aVc"
-            },
-            {
-              "title": "Spider-Man: Brand New Day",
-              "times": [
-                "11:40am",
-                "1:00pm",
-                "2:50pm",
-                "5:50pm",
-                "8:20pm"
-              ],
-              "url": "https://www.palacecinemas.com.au/movies/spider-man-brand-new-day",
-              "overview": "Fighting crime full-time as Spider-Man in a world that doesn't remember him—and the pressure of seeing his old friends move on without him—sparks a change in Peter Parker he may not have the power to control. But that transformation might also be the only thing that can stop a shocking new threat to the city and those he loves - a powerful villain no one can even see.",
-              "posterPath": "https://image.tmdb.org/t/p/w300/6Q21yptoOCUq4ErwVncesLPVplb.jpg",
-              "rating": 9.1,
-              "year": "2026",
-              "runtime": 145,
-              "trailerUrl": "https://www.youtube.com/watch?v=tLkx4BNsSiM"
-            },
-            {
-              "title": "The Odyssey",
-              "times": [
-                "10:15am",
-                "12:15pm",
-                "1:45pm",
-                "3:40pm",
-                "7:10pm"
-              ],
-              "url": "https://www.palacecinemas.com.au/movies/the-odyssey",
-              "overview": "Odysseus, the legendary King of Ithaca, embarks on a long and perilous journey home following the Trojan War. Throughout his voyage, he is forced to confront the whims of gods, mythological monsters, and trials that stretch both his cunning and his humanity to the breaking point.",
-              "posterPath": "https://image.tmdb.org/t/p/w300/5rhTDKUhPYvpdQIijFIs5VoWsON.jpg",
-              "rating": 4.6,
-              "year": "2026",
-              "runtime": 173,
-              "trailerUrl": "https://www.youtube.com/watch?v=AyIZ9tiiN8I"
-            },
-            {
-              "title": "The Invite",
-              "times": [
-                "10:50am",
-                "3:50pm",
-                "6:15pm"
-              ],
-              "url": "https://www.palacecinemas.com.au/movies/the-invite",
-              "overview": "Joe and Angela’s marriage is on thin ice. When they invite their enigmatic upstairs neighbors for a dinner party, the night spirals into unexpected places. Have they reignited the spark or lit the match that burns it all down?",
-              "posterPath": "https://image.tmdb.org/t/p/w300/vJRFj5ri9Zm7Tg0Tn7pBmOtXqKb.jpg",
-              "rating": null,
-              "year": "2026",
-              "runtime": 107,
-              "trailerUrl": "https://www.youtube.com/watch?v=nelkiuezJxg"
-            },
-            {
-              "title": "Case 137",
-              "times": [
-                "1:15pm",
-                "8:15pm"
-              ],
-              "url": "https://www.palacecinemas.com.au/movies/case-137",
-              "overview": "Stéphanie, a police officer working for Internal Affairs, is assigned to a case involving a young man severely wounded during a tense and chaotic demonstration in Paris. While she finds no evidence of illegitimate police violence, the case takes a personal turn when she discovers the victim is from her hometown.",
-              "posterPath": "https://image.tmdb.org/t/p/w300/t93h1ptV098Q6vzl9gfEymJQ6Qp.jpg",
-              "rating": 6.947,
-              "year": "2025",
-              "runtime": 115,
-              "trailerUrl": "https://www.youtube.com/watch?v=DRKJKfGbEjc"
-            },
-            {
-              "title": "Stop! That! Train!",
-              "times": [
-                "1:15pm",
-                "9:00pm"
-              ],
-              "url": "https://www.palacecinemas.com.au/movies/stop-that-train",
-              "overview": "Best friends and train stewardesses Tess and DeeDee trade their dreary shifts on the Stank Rail for the glitzy Glamazonian Express. However, when a catastrophic Stormaganza threatens to crash the high-speed train into Celebration, Florida, the duo in coach must join forces with the snobby first-class attendants, a hot but dimwitted co-conductor, and fabulous US President Judy Gagwell to save the day.",
-              "posterPath": "https://image.tmdb.org/t/p/w300/w90dGS6D2lVO4aO5rdQ8QECrUGY.jpg",
-              "rating": 5.054,
-              "year": "2026",
-              "runtime": 90,
-              "trailerUrl": "https://www.youtube.com/watch?v=xEU03WLKkT4"
-            },
-            {
-              "title": "Spa Weekend",
-              "times": [
-                "10:50am",
-                "4:10pm",
-                "6:00pm",
-                "9:00pm"
-              ],
-              "url": "https://www.palacecinemas.com.au/movies/spa-weekend",
-              "overview": "Three friends go on a spa weekend that descends into chaos when their trainwreck friend joins, leading to hilarious consequences.",
-              "posterPath": "https://image.tmdb.org/t/p/w300/i3I19SbOyz6AIl0cSYdyVJRucMr.jpg",
-              "rating": null,
-              "year": "2026",
-              "runtime": 97,
-              "trailerUrl": "https://www.youtube.com/watch?v=_ZGsnS7W-Rg"
-            },
-            {
-              "title": "One Night Only",
-              "times": [
-                "10:10am",
-                "4:00pm",
-                "9:00pm"
-              ],
-              "url": "https://www.palacecinemas.com.au/movies/one-night-only",
-              "overview": "Two love-starved strangers crash into each other on the one night of the year when single people are allowed to have sex.",
-              "posterPath": "https://image.tmdb.org/t/p/w300/aG0vY0XevpJqsHy9MKIHqhwLUyN.jpg",
-              "rating": null,
-              "year": "2026",
-              "runtime": 102,
-              "trailerUrl": "https://www.youtube.com/watch?v=LifZzIIlK1k"
-            },
-            {
-              "title": "The End of Oak Street",
-              "times": [
-                "3:30pm",
-                "8:40pm"
-              ],
-              "url": "https://www.palacecinemas.com.au/movies/the-end-of-oak-street",
-              "overview": "After a mysterious cosmic event rips Oak Street from suburbia and transports their neighborhood to someplace unknown, the Platt family soon discovers that their very survival depends on them sticking together as they navigate their now unrecognizable surroundings.",
-              "posterPath": "https://image.tmdb.org/t/p/w300/3SifFCwwFzXdU1Ew0nA4Z92Bs15.jpg",
-              "rating": 7.625,
-              "year": "2026",
-              "runtime": 100,
-              "trailerUrl": "https://www.youtube.com/watch?v=1u7cyfcRtuo"
-            },
-            {
-              "title": "Colours Of Time",
-              "times": [
-                "10:30am",
-                "1:15pm"
-              ],
-              "url": "https://www.palacecinemas.com.au/movies/colours-of-time",
-              "overview": "United by the unexpected inheritance of a house in Normandy, four estranged cousins discover their family history by retracing their ancestor's steps.",
-              "posterPath": "https://image.tmdb.org/t/p/w300/hPj1RiuhW72lIfa8UrIncDGSSD0.jpg",
-              "rating": 7.4,
-              "year": "2025",
-              "runtime": 126,
-              "trailerUrl": "https://www.youtube.com/watch?v=_sTdOm2BID8"
-            },
-            {
-              "title": "Holy Days",
-              "times": [
-                "10:00am"
-              ],
-              "url": "https://www.palacecinemas.com.au/movies/holy-days",
-              "overview": "When young Brian discovers plans to close a convent of delightfully eccentric nuns, he sets off with them on a wild road trip across New Zealand to save their home.",
-              "posterPath": "https://image.tmdb.org/t/p/w300/bQuH4CVkdKoHtOksYu8q4g3nsNa.jpg",
-              "rating": 6.667,
-              "year": "2026",
-              "runtime": 101,
-              "trailerUrl": "https://www.youtube.com/watch?v=cEQmNfSWMZc"
-            },
-            {
-              "title": "I Want Your Sex",
-              "times": [
-                "6:30pm"
-              ],
-              "url": "https://www.palacecinemas.com.au/movies/i-want-your-sex",
-              "overview": "When fresh-faced Elliot lands an exciting job for renowned artist, icon and provocateur Erika Tracy, his fantasies come true as Erika taps him to become her sexual muse. But Elliot soon finds himself out of his depth as Erika takes him on a journey more profound than he ever could have imagined, into a world of sex, obsession, power, betrayal and murder.",
-              "posterPath": "https://image.tmdb.org/t/p/w300/pR7SIX3AwqdoD96OI44oLG98e7g.jpg",
-              "rating": 5.933,
-              "year": "2026",
-              "runtime": 90,
-              "trailerUrl": "https://www.youtube.com/watch?v=q5oWCPS3akw"
-            },
-            {
-              "title": "NOR26 The Love That Remains",
-              "times": [
-                "3:30pm"
-              ],
-              "url": "https://www.palacecinemas.com.au/movies/nor26-the-love-that-remains",
-              "overview": null,
-              "posterPath": null,
-              "rating": null,
-              "year": null,
-              "runtime": null,
-              "trailerUrl": null
-            }
-          ]
-        },
-        {
-          "cinema": "Palace Kino",
-          "url": "https://www.palacecinemas.com.au/cinemas/the-kino-melbourne",
-          "sessions": [
-            {
-              "title": "Tony",
-              "times": [
-                "10:10am",
-                "1:00pm",
-                "3:45pm",
-                "6:30pm",
-                "8:50pm"
-              ],
-              "url": "https://www.palacecinemas.com.au/movies/tony",
-              "overview": "A 19-year-old Anthony Bourdain travels to Provincetown and stumbles into the chaotic world of a restaurant kitchen, setting off a summer that will shape the course of his life.",
-              "posterPath": "https://image.tmdb.org/t/p/w300/3WN0JWwRI7oGH7Ni2R6poVWej05.jpg",
-              "rating": 8,
-              "year": "2026",
-              "runtime": 106,
-              "trailerUrl": "https://www.youtube.com/watch?v=k1MVnzd2aVc"
-            },
-            {
-              "title": "Spider-Man: Brand New Day",
-              "times": [
-                "10:10am",
-                "12:30pm",
-                "3:30pm",
-                "7:30pm",
-                "8:20pm"
-              ],
-              "url": "https://www.palacecinemas.com.au/movies/spider-man-brand-new-day",
-              "overview": "Fighting crime full-time as Spider-Man in a world that doesn't remember him—and the pressure of seeing his old friends move on without him—sparks a change in Peter Parker he may not have the power to control. But that transformation might also be the only thing that can stop a shocking new threat to the city and those he loves - a powerful villain no one can even see.",
-              "posterPath": "https://image.tmdb.org/t/p/w300/6Q21yptoOCUq4ErwVncesLPVplb.jpg",
-              "rating": 9.1,
-              "year": "2026",
-              "runtime": 145,
-              "trailerUrl": "https://www.youtube.com/watch?v=tLkx4BNsSiM"
-            },
-            {
-              "title": "The Odyssey",
-              "times": [
-                "10:00am",
-                "2:30pm",
-                "8:10pm"
-              ],
-              "url": "https://www.palacecinemas.com.au/movies/the-odyssey",
-              "overview": "Odysseus, the legendary King of Ithaca, embarks on a long and perilous journey home following the Trojan War. Throughout his voyage, he is forced to confront the whims of gods, mythological monsters, and trials that stretch both his cunning and his humanity to the breaking point.",
-              "posterPath": "https://image.tmdb.org/t/p/w300/5rhTDKUhPYvpdQIijFIs5VoWsON.jpg",
-              "rating": 4.6,
-              "year": "2026",
-              "runtime": 173,
-              "trailerUrl": "https://www.youtube.com/watch?v=AyIZ9tiiN8I"
-            },
-            {
-              "title": "The Invite",
-              "times": [
-                "10:00am",
-                "1:10pm",
-                "8:20pm"
-              ],
-              "url": "https://www.palacecinemas.com.au/movies/the-invite",
-              "overview": "Joe and Angela’s marriage is on thin ice. When they invite their enigmatic upstairs neighbors for a dinner party, the night spirals into unexpected places. Have they reignited the spark or lit the match that burns it all down?",
-              "posterPath": "https://image.tmdb.org/t/p/w300/vJRFj5ri9Zm7Tg0Tn7pBmOtXqKb.jpg",
-              "rating": null,
-              "year": "2026",
-              "runtime": 107,
-              "trailerUrl": "https://www.youtube.com/watch?v=nelkiuezJxg"
-            },
-            {
-              "title": "Case 137",
-              "times": [
-                "10:45am"
-              ],
-              "url": "https://www.palacecinemas.com.au/movies/case-137",
-              "overview": "Stéphanie, a police officer working for Internal Affairs, is assigned to a case involving a young man severely wounded during a tense and chaotic demonstration in Paris. While she finds no evidence of illegitimate police violence, the case takes a personal turn when she discovers the victim is from her hometown.",
-              "posterPath": "https://image.tmdb.org/t/p/w300/t93h1ptV098Q6vzl9gfEymJQ6Qp.jpg",
-              "rating": 6.947,
-              "year": "2025",
-              "runtime": 115,
-              "trailerUrl": "https://www.youtube.com/watch?v=DRKJKfGbEjc"
-            },
-            {
-              "title": "Teenage Sex and Death at Camp Miasma",
-              "times": [
-                "12:20pm"
-              ],
-              "url": "https://www.palacecinemas.com.au/movies/teenage-sex-and-death-at-camp-miasma",
-              "overview": "After years of slapdash sequels and waning fandom, the Camp Miasma slasher franchise is handed over to an enthusiastic young director for resurrection. But when she visits the original's star, a now-reclusive actress shrouded in mystery, the two women fall into a blood-soaked world of desire, fear, and delirium.",
-              "posterPath": "https://image.tmdb.org/t/p/w300/nLsFnXifieSTqSeWxjXSS8RvaUZ.jpg",
-              "rating": null,
-              "year": "2026",
-              "runtime": 112,
-              "trailerUrl": "https://www.youtube.com/watch?v=GpfL7SdR0Bc"
-            },
-            {
-              "title": "Spa Weekend",
-              "times": [
-                "10:30am",
-                "2:45pm",
-                "6:00pm"
-              ],
-              "url": "https://www.palacecinemas.com.au/movies/spa-weekend",
-              "overview": "Three friends go on a spa weekend that descends into chaos when their trainwreck friend joins, leading to hilarious consequences.",
-              "posterPath": "https://image.tmdb.org/t/p/w300/i3I19SbOyz6AIl0cSYdyVJRucMr.jpg",
-              "rating": null,
-              "year": "2026",
-              "runtime": 97,
-              "trailerUrl": "https://www.youtube.com/watch?v=_ZGsnS7W-Rg"
-            },
-            {
-              "title": "One Night Only",
-              "times": [
-                "12:15pm",
-                "3:45pm",
-                "5:10pm"
-              ],
-              "url": "https://www.palacecinemas.com.au/movies/one-night-only",
-              "overview": "Two love-starved strangers crash into each other on the one night of the year when single people are allowed to have sex.",
-              "posterPath": "https://image.tmdb.org/t/p/w300/aG0vY0XevpJqsHy9MKIHqhwLUyN.jpg",
-              "rating": null,
-              "year": "2026",
-              "runtime": 102,
-              "trailerUrl": "https://www.youtube.com/watch?v=LifZzIIlK1k"
-            },
-            {
-              "title": "The End of Oak Street",
-              "times": [
-                "10:10am",
-                "1:30pm",
-                "6:10pm"
-              ],
-              "url": "https://www.palacecinemas.com.au/movies/the-end-of-oak-street",
-              "overview": "After a mysterious cosmic event rips Oak Street from suburbia and transports their neighborhood to someplace unknown, the Platt family soon discovers that their very survival depends on them sticking together as they navigate their now unrecognizable surroundings.",
-              "posterPath": "https://image.tmdb.org/t/p/w300/3SifFCwwFzXdU1Ew0nA4Z92Bs15.jpg",
-              "rating": 7.625,
-              "year": "2026",
-              "runtime": 100,
-              "trailerUrl": "https://www.youtube.com/watch?v=1u7cyfcRtuo"
-            },
-            {
-              "title": "Holy Days",
-              "times": [
-                "1:30pm"
-              ],
-              "url": "https://www.palacecinemas.com.au/movies/holy-days",
-              "overview": "When young Brian discovers plans to close a convent of delightfully eccentric nuns, he sets off with them on a wild road trip across New Zealand to save their home.",
-              "posterPath": "https://image.tmdb.org/t/p/w300/bQuH4CVkdKoHtOksYu8q4g3nsNa.jpg",
-              "rating": 6.667,
-              "year": "2026",
-              "runtime": 101,
-              "trailerUrl": "https://www.youtube.com/watch?v=cEQmNfSWMZc"
-            },
-            {
-              "title": "I Want Your Sex",
-              "times": [
-                "6:15pm"
-              ],
-              "url": "https://www.palacecinemas.com.au/movies/i-want-your-sex",
-              "overview": "When fresh-faced Elliot lands an exciting job for renowned artist, icon and provocateur Erika Tracy, his fantasies come true as Erika taps him to become her sexual muse. But Elliot soon finds himself out of his depth as Erika takes him on a journey more profound than he ever could have imagined, into a world of sex, obsession, power, betrayal and murder.",
-              "posterPath": "https://image.tmdb.org/t/p/w300/pR7SIX3AwqdoD96OI44oLG98e7g.jpg",
-              "rating": 5.933,
-              "year": "2026",
-              "runtime": 90,
-              "trailerUrl": "https://www.youtube.com/watch?v=q5oWCPS3akw"
-            }
-          ]
-        },
-        {
-          "cinema": "Palace Westgarth",
-          "url": "https://www.palacecinemas.com.au/cinemas/palace-westgarth",
-          "sessions": [
-            {
-              "title": "Tony",
-              "times": [
-                "11:00am",
-                "1:30pm",
-                "4:00pm",
-                "6:15pm",
-                "8:40pm"
-              ],
-              "url": "https://www.palacecinemas.com.au/movies/tony",
-              "overview": "A 19-year-old Anthony Bourdain travels to Provincetown and stumbles into the chaotic world of a restaurant kitchen, setting off a summer that will shape the course of his life.",
-              "posterPath": "https://image.tmdb.org/t/p/w300/3WN0JWwRI7oGH7Ni2R6poVWej05.jpg",
-              "rating": 8,
-              "year": "2026",
-              "runtime": 106,
-              "trailerUrl": "https://www.youtube.com/watch?v=k1MVnzd2aVc"
-            },
-            {
-              "title": "Spider-Man: Brand New Day",
-              "times": [
-                "10:30am",
-                "1:00pm",
-                "4:00pm",
-                "7:00pm",
-                "8:30pm"
-              ],
-              "url": "https://www.palacecinemas.com.au/movies/spider-man-brand-new-day",
-              "overview": "Fighting crime full-time as Spider-Man in a world that doesn't remember him—and the pressure of seeing his old friends move on without him—sparks a change in Peter Parker he may not have the power to control. But that transformation might also be the only thing that can stop a shocking new threat to the city and those he loves - a powerful villain no one can even see.",
-              "posterPath": "https://image.tmdb.org/t/p/w300/6Q21yptoOCUq4ErwVncesLPVplb.jpg",
-              "rating": 9.1,
-              "year": "2026",
-              "runtime": 145,
-              "trailerUrl": "https://www.youtube.com/watch?v=tLkx4BNsSiM"
-            },
-            {
-              "title": "The Odyssey",
-              "times": [
-                "10:30am",
-                "3:30pm",
-                "7:15pm"
-              ],
-              "url": "https://www.palacecinemas.com.au/movies/the-odyssey",
-              "overview": "Odysseus, the legendary King of Ithaca, embarks on a long and perilous journey home following the Trojan War. Throughout his voyage, he is forced to confront the whims of gods, mythological monsters, and trials that stretch both his cunning and his humanity to the breaking point.",
-              "posterPath": "https://image.tmdb.org/t/p/w300/5rhTDKUhPYvpdQIijFIs5VoWsON.jpg",
-              "rating": 4.6,
-              "year": "2026",
-              "runtime": 173,
-              "trailerUrl": "https://www.youtube.com/watch?v=AyIZ9tiiN8I"
-            },
-            {
-              "title": "The Invite",
-              "times": [
-                "10:50am",
-                "1:10pm",
-                "3:40pm",
-                "8:15pm"
-              ],
-              "url": "https://www.palacecinemas.com.au/movies/the-invite",
-              "overview": "Joe and Angela’s marriage is on thin ice. When they invite their enigmatic upstairs neighbors for a dinner party, the night spirals into unexpected places. Have they reignited the spark or lit the match that burns it all down?",
-              "posterPath": "https://image.tmdb.org/t/p/w300/vJRFj5ri9Zm7Tg0Tn7pBmOtXqKb.jpg",
-              "rating": null,
-              "year": "2026",
-              "runtime": 107,
-              "trailerUrl": "https://www.youtube.com/watch?v=nelkiuezJxg"
-            },
-            {
-              "title": "Teenage Sex and Death at Camp Miasma",
-              "times": [
-                "3:50pm"
-              ],
-              "url": "https://www.palacecinemas.com.au/movies/teenage-sex-and-death-at-camp-miasma",
-              "overview": "After years of slapdash sequels and waning fandom, the Camp Miasma slasher franchise is handed over to an enthusiastic young director for resurrection. But when she visits the original's star, a now-reclusive actress shrouded in mystery, the two women fall into a blood-soaked world of desire, fear, and delirium.",
-              "posterPath": "https://image.tmdb.org/t/p/w300/nLsFnXifieSTqSeWxjXSS8RvaUZ.jpg",
-              "rating": null,
-              "year": "2026",
-              "runtime": 112,
-              "trailerUrl": "https://www.youtube.com/watch?v=GpfL7SdR0Bc"
-            },
-            {
-              "title": "Spa Weekend",
-              "times": [
-                "10:50am",
-                "1:45pm",
-                "6:00pm"
-              ],
-              "url": "https://www.palacecinemas.com.au/movies/spa-weekend",
-              "overview": "Three friends go on a spa weekend that descends into chaos when their trainwreck friend joins, leading to hilarious consequences.",
-              "posterPath": "https://image.tmdb.org/t/p/w300/i3I19SbOyz6AIl0cSYdyVJRucMr.jpg",
-              "rating": null,
-              "year": "2026",
-              "runtime": 97,
-              "trailerUrl": "https://www.youtube.com/watch?v=_ZGsnS7W-Rg"
-            },
-            {
-              "title": "The End of Oak Street",
-              "times": [
-                "1:30pm"
-              ],
-              "url": "https://www.palacecinemas.com.au/movies/the-end-of-oak-street",
-              "overview": "After a mysterious cosmic event rips Oak Street from suburbia and transports their neighborhood to someplace unknown, the Platt family soon discovers that their very survival depends on them sticking together as they navigate their now unrecognizable surroundings.",
-              "posterPath": "https://image.tmdb.org/t/p/w300/3SifFCwwFzXdU1Ew0nA4Z92Bs15.jpg",
-              "rating": 7.625,
-              "year": "2026",
-              "runtime": 100,
-              "trailerUrl": "https://www.youtube.com/watch?v=1u7cyfcRtuo"
-            },
-            {
-              "title": "I Want Your Sex",
-              "times": [
-                "6:30pm"
-              ],
-              "url": "https://www.palacecinemas.com.au/movies/i-want-your-sex",
-              "overview": "When fresh-faced Elliot lands an exciting job for renowned artist, icon and provocateur Erika Tracy, his fantasies come true as Erika taps him to become her sexual muse. But Elliot soon finds himself out of his depth as Erika takes him on a journey more profound than he ever could have imagined, into a world of sex, obsession, power, betrayal and murder.",
-              "posterPath": "https://image.tmdb.org/t/p/w300/pR7SIX3AwqdoD96OI44oLG98e7g.jpg",
-              "rating": 5.933,
-              "year": "2026",
-              "runtime": 90,
-              "trailerUrl": "https://www.youtube.com/watch?v=q5oWCPS3akw"
-            }
-          ]
-        },
-        {
-          "cinema": "Pentridge Cinema",
-          "url": "https://www.palacecinemas.com.au/cinemas/pentridge-cinema",
-          "sessions": [
-            {
-              "title": "Tony",
-              "times": [
-                "10:45am",
-                "1:15pm",
-                "3:45pm",
-                "6:15pm",
-                "8:45pm"
-              ],
-              "url": "https://www.palacecinemas.com.au/movies/tony",
-              "overview": "A 19-year-old Anthony Bourdain travels to Provincetown and stumbles into the chaotic world of a restaurant kitchen, setting off a summer that will shape the course of his life.",
-              "posterPath": "https://image.tmdb.org/t/p/w300/3WN0JWwRI7oGH7Ni2R6poVWej05.jpg",
-              "rating": 8,
-              "year": "2026",
-              "runtime": 106,
-              "trailerUrl": "https://www.youtube.com/watch?v=k1MVnzd2aVc"
-            },
-            {
-              "title": "Spider-Man: Brand New Day",
-              "times": [
-                "11:00am",
-                "12:15pm",
-                "1:15pm",
-                "2:30pm",
-                "3:45pm",
-                "4:45pm",
-                "6:00pm",
-                "6:00pm",
-                "7:00pm",
-                "8:00pm",
-                "8:30pm",
-                "9:00pm"
-              ],
-              "url": "https://www.palacecinemas.com.au/movies/spider-man-brand-new-day",
-              "overview": "Fighting crime full-time as Spider-Man in a world that doesn't remember him—and the pressure of seeing his old friends move on without him—sparks a change in Peter Parker he may not have the power to control. But that transformation might also be the only thing that can stop a shocking new threat to the city and those he loves - a powerful villain no one can even see.",
-              "posterPath": "https://image.tmdb.org/t/p/w300/6Q21yptoOCUq4ErwVncesLPVplb.jpg",
-              "rating": 9.1,
-              "year": "2026",
-              "runtime": 145,
-              "trailerUrl": "https://www.youtube.com/watch?v=tLkx4BNsSiM"
-            },
-            {
-              "title": "The Odyssey",
-              "times": [
-                "10:50am",
-                "12:00pm",
-                "1:00pm",
-                "2:30pm",
-                "4:40pm",
-                "6:15pm",
-                "8:15pm",
-                "8:45pm"
-              ],
-              "url": "https://www.palacecinemas.com.au/movies/the-odyssey",
-              "overview": "Odysseus, the legendary King of Ithaca, embarks on a long and perilous journey home following the Trojan War. Throughout his voyage, he is forced to confront the whims of gods, mythological monsters, and trials that stretch both his cunning and his humanity to the breaking point.",
-              "posterPath": "https://image.tmdb.org/t/p/w300/5rhTDKUhPYvpdQIijFIs5VoWsON.jpg",
-              "rating": 4.6,
-              "year": "2026",
-              "runtime": 173,
-              "trailerUrl": "https://www.youtube.com/watch?v=AyIZ9tiiN8I"
-            },
-            {
-              "title": "The Invite",
-              "times": [
-                "10:45am",
-                "1:15pm",
-                "3:45pm",
-                "6:20pm",
-                "8:50pm"
-              ],
-              "url": "https://www.palacecinemas.com.au/movies/the-invite",
-              "overview": "Joe and Angela’s marriage is on thin ice. When they invite their enigmatic upstairs neighbors for a dinner party, the night spirals into unexpected places. Have they reignited the spark or lit the match that burns it all down?",
-              "posterPath": "https://image.tmdb.org/t/p/w300/vJRFj5ri9Zm7Tg0Tn7pBmOtXqKb.jpg",
-              "rating": null,
-              "year": "2026",
-              "runtime": 107,
-              "trailerUrl": "https://www.youtube.com/watch?v=nelkiuezJxg"
-            },
-            {
-              "title": "Stop! That! Train!",
-              "times": [
-                "10:45am"
-              ],
-              "url": "https://www.palacecinemas.com.au/movies/stop-that-train",
-              "overview": "Best friends and train stewardesses Tess and DeeDee trade their dreary shifts on the Stank Rail for the glitzy Glamazonian Express. However, when a catastrophic Stormaganza threatens to crash the high-speed train into Celebration, Florida, the duo in coach must join forces with the snobby first-class attendants, a hot but dimwitted co-conductor, and fabulous US President Judy Gagwell to save the day.",
-              "posterPath": "https://image.tmdb.org/t/p/w300/w90dGS6D2lVO4aO5rdQ8QECrUGY.jpg",
-              "rating": 5.054,
-              "year": "2026",
-              "runtime": 90,
-              "trailerUrl": "https://www.youtube.com/watch?v=xEU03WLKkT4"
-            },
-            {
-              "title": "Teenage Sex and Death at Camp Miasma",
-              "times": [
-                "1:10pm"
-              ],
-              "url": "https://www.palacecinemas.com.au/movies/teenage-sex-and-death-at-camp-miasma",
-              "overview": "After years of slapdash sequels and waning fandom, the Camp Miasma slasher franchise is handed over to an enthusiastic young director for resurrection. But when she visits the original's star, a now-reclusive actress shrouded in mystery, the two women fall into a blood-soaked world of desire, fear, and delirium.",
-              "posterPath": "https://image.tmdb.org/t/p/w300/nLsFnXifieSTqSeWxjXSS8RvaUZ.jpg",
-              "rating": null,
-              "year": "2026",
-              "runtime": 112,
-              "trailerUrl": "https://www.youtube.com/watch?v=GpfL7SdR0Bc"
-            },
-            {
-              "title": "Spa Weekend",
-              "times": [
-                "10:50am",
-                "1:45pm",
-                "4:10pm",
-                "6:30pm",
-                "8:40pm"
-              ],
-              "url": "https://www.palacecinemas.com.au/movies/spa-weekend",
-              "overview": "Three friends go on a spa weekend that descends into chaos when their trainwreck friend joins, leading to hilarious consequences.",
-              "posterPath": "https://image.tmdb.org/t/p/w300/i3I19SbOyz6AIl0cSYdyVJRucMr.jpg",
-              "rating": null,
-              "year": "2026",
-              "runtime": 97,
-              "trailerUrl": "https://www.youtube.com/watch?v=_ZGsnS7W-Rg"
-            },
-            {
-              "title": "Insidious: Out of the Further",
-              "times": [
-                "11:15am",
-                "4:00pm",
-                "9:10pm"
-              ],
-              "url": "https://www.palacecinemas.com.au/movies/insidious-out-of-the-further",
-              "overview": "Gemma, a young mother raising her daughter in the house she grew up in, discovers she can travel into The Further, where she possesses an ability to bring what lives there back to the real world.",
-              "posterPath": "https://image.tmdb.org/t/p/w300/4tTrW9dXCByS5wt2pXVWb58zNjz.jpg",
-              "rating": null,
-              "year": "2026",
-              "runtime": 106,
-              "trailerUrl": "https://www.youtube.com/watch?v=gXjurDkYnEM"
-            },
-            {
-              "title": "The Rivals of Amziah King",
-              "times": [
-                "1:15pm",
-                "8:45pm"
-              ],
-              "url": "https://www.palacecinemas.com.au/movies/the-rivals-of-amziah-king",
-              "overview": "Amziah King, beekeeper, musician, and anchor of his community, reunites with former foster daughter Kateri after many years apart, and fends off threats to his honey business.",
-              "posterPath": "https://image.tmdb.org/t/p/w300/3iVDCDS1VwHIm95PjWEPwsfdhaf.jpg",
-              "rating": 8.333,
-              "year": "2026",
-              "runtime": 130,
-              "trailerUrl": "https://www.youtube.com/watch?v=4laLp51eYLY"
-            },
-            {
-              "title": "Mutiny",
-              "times": [
-                "10:45am",
-                "1:20pm",
-                "9:00pm"
-              ],
-              "url": "https://www.palacecinemas.com.au/movies/mutiny",
-              "overview": "After witnessing his billionaire boss' murder and being framed for the crime, Cole Reed boards a cargo ship on a one-man crusade to avenge his boss' death only to discover an international conspiracy.",
-              "posterPath": "https://image.tmdb.org/t/p/w300/lsYSWqj6i2iyUDJoLA2cazFJYlC.jpg",
-              "rating": 9,
-              "year": "2026",
-              "runtime": 95,
-              "trailerUrl": "https://www.youtube.com/watch?v=nCdqYxKGpv4"
-            },
-            {
-              "title": "One Night Only",
-              "times": [
-                "1:00pm",
-                "3:30pm",
-                "6:00pm"
-              ],
-              "url": "https://www.palacecinemas.com.au/movies/one-night-only",
-              "overview": "Two love-starved strangers crash into each other on the one night of the year when single people are allowed to have sex.",
-              "posterPath": "https://image.tmdb.org/t/p/w300/aG0vY0XevpJqsHy9MKIHqhwLUyN.jpg",
-              "rating": null,
-              "year": "2026",
-              "runtime": 102,
-              "trailerUrl": "https://www.youtube.com/watch?v=LifZzIIlK1k"
-            },
-            {
-              "title": "The End of Oak Street",
-              "times": [
-                "10:50am",
-                "4:10pm",
-                "6:30pm",
-                "9:00pm"
-              ],
-              "url": "https://www.palacecinemas.com.au/movies/the-end-of-oak-street",
-              "overview": "After a mysterious cosmic event rips Oak Street from suburbia and transports their neighborhood to someplace unknown, the Platt family soon discovers that their very survival depends on them sticking together as they navigate their now unrecognizable surroundings.",
-              "posterPath": "https://image.tmdb.org/t/p/w300/3SifFCwwFzXdU1Ew0nA4Z92Bs15.jpg",
-              "rating": 7.625,
-              "year": "2026",
-              "runtime": 100,
-              "trailerUrl": "https://www.youtube.com/watch?v=1u7cyfcRtuo"
-            },
-            {
-              "title": "Moana",
-              "times": [
-                "10:45am",
-                "12:50pm",
-                "6:00pm"
-              ],
-              "url": "https://www.palacecinemas.com.au/movies/moana",
-              "overview": "Moana answers the Ocean's call and, for the first time, voyages beyond the reef of her island of Motunui with the infamous demigod Maui on an unforgettable journey to restore prosperity to her people.",
-              "posterPath": "https://image.tmdb.org/t/p/w300/zKVgiv5qHCvCLT4A2ymJi5QeXDH.jpg",
-              "rating": 8.5,
-              "year": "2026",
-              "runtime": 115,
-              "trailerUrl": "https://www.youtube.com/watch?v=BRE8oMvJ3RU"
-            },
-            {
-              "title": "Toy Story 5",
-              "times": [
-                "1:30pm",
-                "4:00pm",
-                "6:30pm"
-              ],
-              "url": "https://www.palacecinemas.com.au/movies/toy-story-5",
-              "overview": "When Bonnie receives a Lilypad tablet as a gift and becomes obsessed, Buzz, Woody, Jessie and the rest of the gang's jobs become exponentially harder when they have to go head to head with the all-new threat to playtime.",
-              "posterPath": "https://image.tmdb.org/t/p/w300/pxG26JdyuiDvJbSoucknaFiLeZD.jpg",
-              "rating": 6,
-              "year": "2026",
-              "runtime": 102,
-              "trailerUrl": "https://www.youtube.com/watch?v=zhEJKGFQ76E"
-            },
-            {
-              "title": "Minions & Monsters",
-              "times": [
-                "10:45am",
-                "3:45pm"
-              ],
-              "url": "https://www.palacecinemas.com.au/movies/minions-and-monsters",
-              "overview": "This is the rambunctious, ridiculous and totally true story of how the Minions conquered Hollywood, became movie stars, lost everything, unleashed monsters onto the world and then banded together to try and save the planet from the mayhem they had just created.",
-              "posterPath": "https://image.tmdb.org/t/p/w300/nz7i42yhLIJ4ve9JKgM6NthoLHO.jpg",
-              "rating": 9.5,
-              "year": "2026",
-              "runtime": 90,
-              "trailerUrl": "https://www.youtube.com/watch?v=tV1v5EfFc2g"
-            },
-            {
-              "title": "Obsession",
-              "times": [
-                "10:45am",
-                "9:10pm"
-              ],
-              "url": "https://www.palacecinemas.com.au/movies/obsession",
-              "overview": "After breaking the mysterious \"One Wish Willow\" to win his crush's heart, a hopeless romantic finds himself getting exactly what he asked for but soon discovers that some desires come at a dark, sinister price.",
-              "posterPath": "https://image.tmdb.org/t/p/w300/40I66L7QKguTFDPvcLcdiTbAD7I.jpg",
-              "rating": 6.5,
-              "year": "2026",
-              "runtime": 109,
-              "trailerUrl": "https://www.youtube.com/watch?v=gMC8kkwbIQQ"
-            },
-            {
-              "title": "Holy Days",
-              "times": [
-                "11:00am",
-                "3:45pm"
-              ],
-              "url": "https://www.palacecinemas.com.au/movies/holy-days",
-              "overview": "When young Brian discovers plans to close a convent of delightfully eccentric nuns, he sets off with them on a wild road trip across New Zealand to save their home.",
-              "posterPath": "https://image.tmdb.org/t/p/w300/bQuH4CVkdKoHtOksYu8q4g3nsNa.jpg",
-              "rating": 6.667,
-              "year": "2026",
-              "runtime": 101,
-              "trailerUrl": "https://www.youtube.com/watch?v=cEQmNfSWMZc"
-            },
-            {
-              "title": "I Want Your Sex",
-              "times": [
-                "6:30pm"
-              ],
-              "url": "https://www.palacecinemas.com.au/movies/i-want-your-sex",
-              "overview": "When fresh-faced Elliot lands an exciting job for renowned artist, icon and provocateur Erika Tracy, his fantasies come true as Erika taps him to become her sexual muse. But Elliot soon finds himself out of his depth as Erika takes him on a journey more profound than he ever could have imagined, into a world of sex, obsession, power, betrayal and murder.",
-              "posterPath": "https://image.tmdb.org/t/p/w300/pR7SIX3AwqdoD96OI44oLG98e7g.jpg",
-              "rating": 5.933,
-              "year": "2026",
-              "runtime": 90,
-              "trailerUrl": "https://www.youtube.com/watch?v=q5oWCPS3akw"
-            },
-            {
-              "title": "NOR26 The Love That Remains",
-              "times": [
-                "3:30pm",
-                "6:10pm"
-              ],
-              "url": "https://www.palacecinemas.com.au/movies/nor26-the-love-that-remains",
-              "overview": null,
-              "posterPath": null,
-              "rating": null,
-              "year": null,
-              "runtime": null,
-              "trailerUrl": null
-            }
-          ]
-        },
-        {
-          "cinema": "Imax Melbourne",
-          "url": "https://imaxmelbourne.com.au/session_times_and_tickets",
-          "sessions": []
-        },
-        {
-          "cinema": "Sun Theatre",
-          "url": "https://suntheatre.com.au/now-playing/",
-          "sessions": [
-            {
-              "title": "TOY STORY 5",
-              "times": [
-                "4:30pm"
-              ],
-              "url": "https://suntheatre.com.au/wp-cinema/movie/S26TOYSTORY5/TOY+STORY+5/",
-              "overview": "When Bonnie receives a Lilypad tablet as a gift and becomes obsessed, Buzz, Woody, Jessie and the rest of the gang's jobs become exponentially harder when they have to go head to head with the all-new threat to playtime.",
-              "posterPath": "https://image.tmdb.org/t/p/w300/pxG26JdyuiDvJbSoucknaFiLeZD.jpg",
-              "rating": 6,
-              "year": "2026",
-              "runtime": 102,
-              "trailerUrl": "https://www.youtube.com/watch?v=zhEJKGFQ76E"
-            },
-            {
-              "title": "THE INVITE",
-              "times": [
-                "4:30pm",
-                "7:00pm"
-              ],
-              "url": "https://suntheatre.com.au/wp-cinema/movie/S26INVITE/THE+INVITE/",
-              "overview": "Joe and Angela’s marriage is on thin ice. When they invite their enigmatic upstairs neighbors for a dinner party, the night spirals into unexpected places. Have they reignited the spark or lit the match that burns it all down?",
-              "posterPath": "https://image.tmdb.org/t/p/w300/vJRFj5ri9Zm7Tg0Tn7pBmOtXqKb.jpg",
-              "rating": null,
-              "year": "2026",
-              "runtime": 107,
-              "trailerUrl": "https://www.youtube.com/watch?v=nelkiuezJxg"
-            },
-            {
-              "title": "THE ODYSSEY IN 70MM",
-              "times": [
-                "2:30pm",
-                "6:00pm",
-                "9:15pm"
-              ],
-              "url": "https://suntheatre.com.au/wp-cinema/movie/S2670MMODYSSEY/THE+ODYSSEY+IN+70mm/",
-              "overview": null,
-              "posterPath": null,
-              "rating": null,
-              "year": null,
-              "runtime": null,
-              "trailerUrl": null
-            },
-            {
-              "title": "SPIDER-MAN: BRAND NEW DAY",
-              "times": [
-                "10:30am",
-                "1:20pm",
-                "3:45pm",
-                "6:30pm",
-                "9:00pm"
-              ],
-              "url": "https://suntheatre.com.au/wp-cinema/movie/S26SPIDERMANBRAN/SPIDER-MAN+BRAND+NEW+DAY/",
-              "overview": "Fighting crime full-time as Spider-Man in a world that doesn't remember him—and the pressure of seeing his old friends move on without him—sparks a change in Peter Parker he may not have the power to control. But that transformation might also be the only thing that can stop a shocking new threat to the city and those he loves - a powerful villain no one can even see.",
-              "posterPath": "https://image.tmdb.org/t/p/w300/6Q21yptoOCUq4ErwVncesLPVplb.jpg",
-              "rating": 9.1,
-              "year": "2026",
-              "runtime": 145,
-              "trailerUrl": "https://www.youtube.com/watch?v=tLkx4BNsSiM"
-            },
-            {
-              "title": "TEENAGE SEX AND DEATH AT CAMP MIASMA",
-              "times": [
-                "4:50pm",
-                "7:00pm",
-                "9:10pm"
-              ],
-              "url": "https://suntheatre.com.au/wp-cinema/movie/S26TEENAGEDEATHA/TEENAGE+SEX+AND+DEATH+AT+CAMP+MIASMA/",
-              "overview": "After years of slapdash sequels and waning fandom, the Camp Miasma slasher franchise is handed over to an enthusiastic young director for resurrection. But when she visits the original's star, a now-reclusive actress shrouded in mystery, the two women fall into a blood-soaked world of desire, fear, and delirium.",
-              "posterPath": "https://image.tmdb.org/t/p/w300/nLsFnXifieSTqSeWxjXSS8RvaUZ.jpg",
-              "rating": null,
-              "year": "2026",
-              "runtime": 112,
-              "trailerUrl": "https://www.youtube.com/watch?v=GpfL7SdR0Bc"
-            },
-            {
-              "title": "HOLY DAYS",
-              "times": [
-                "10:00am",
-                "12:00pm",
-                "2:00pm"
-              ],
-              "url": "https://suntheatre.com.au/wp-cinema/movie/S26HOLYDAYS/HOLY+DAYS/",
-              "overview": "When young Brian discovers plans to close a convent of delightfully eccentric nuns, he sets off with them on a wild road trip across New Zealand to save their home.",
-              "posterPath": "https://image.tmdb.org/t/p/w300/bQuH4CVkdKoHtOksYu8q4g3nsNa.jpg",
-              "rating": 6.667,
-              "year": "2026",
-              "runtime": 101,
-              "trailerUrl": "https://www.youtube.com/watch?v=cEQmNfSWMZc"
-            },
-            {
-              "title": "CATVIDEOFEST 2026",
-              "times": [
-                "5:00pm"
-              ],
-              "url": "https://suntheatre.com.au/wp-cinema/movie/S26CATFEST2026/CATVIDEOFEST+2026/",
-              "overview": "Our fuzzy overlords return to the big screen! Each year, CatVideoFest curates a compilation reel of the latest, best cat videos culled from countless hours of unique submissions and sourced animations, music videos, and, of course, classic internet powerhouses (Keyboard Cat, we’re looking at you).",
-              "posterPath": "https://image.tmdb.org/t/p/w300/nRjejxXF7tV8nZ8RFrHyOswuCle.jpg",
-              "rating": null,
-              "year": "2026",
-              "runtime": 70,
-              "trailerUrl": "https://www.youtube.com/watch?v=wbzRCI1AgZ8"
-            },
-            {
-              "title": "ONE NIGHT ONLY",
-              "times": [
-                "12:00pm",
-                "4:00pm",
-                "8:00pm"
-              ],
-              "url": "https://suntheatre.com.au/wp-cinema/movie/S26ONENIGHTONLY/ONE+NIGHT+ONLY/",
-              "overview": "Two love-starved strangers crash into each other on the one night of the year when single people are allowed to have sex.",
-              "posterPath": "https://image.tmdb.org/t/p/w300/aG0vY0XevpJqsHy9MKIHqhwLUyN.jpg",
-              "rating": null,
-              "year": "2026",
-              "runtime": 102,
-              "trailerUrl": "https://www.youtube.com/watch?v=LifZzIIlK1k"
-            },
-            {
-              "title": "STOP! THAT! TRAIN!",
-              "times": [
-                "12:30pm",
-                "9:10pm"
-              ],
-              "url": "https://suntheatre.com.au/wp-cinema/movie/S26STOPTHATTRAIN/STOP+THAT+TRAIN/",
-              "overview": "Best friends and train stewardesses Tess and DeeDee trade their dreary shifts on the Stank Rail for the glitzy Glamazonian Express. However, when a catastrophic Stormaganza threatens to crash the high-speed train into Celebration, Florida, the duo in coach must join forces with the snobby first-class attendants, a hot but dimwitted co-conductor, and fabulous US President Judy Gagwell to save the day.",
-              "posterPath": "https://image.tmdb.org/t/p/w300/w90dGS6D2lVO4aO5rdQ8QECrUGY.jpg",
-              "rating": 5.054,
-              "year": "2026",
-              "runtime": 90,
-              "trailerUrl": "https://www.youtube.com/watch?v=xEU03WLKkT4"
-            },
-            {
-              "title": "THE END OF OAK STREET",
-              "times": [
-                "10:00am",
-                "2:00pm",
-                "6:00pm"
-              ],
-              "url": "https://suntheatre.com.au/wp-cinema/movie/S26ENDOFOAKSTREE/THE+END+OF+OAK+STREET/",
-              "overview": "After a mysterious cosmic event rips Oak Street from suburbia and transports their neighborhood to someplace unknown, the Platt family soon discovers that their very survival depends on them sticking together as they navigate their now unrecognizable surroundings.",
-              "posterPath": "https://image.tmdb.org/t/p/w300/3SifFCwwFzXdU1Ew0nA4Z92Bs15.jpg",
-              "rating": 7.625,
-              "year": "2026",
-              "runtime": 100,
-              "trailerUrl": "https://www.youtube.com/watch?v=1u7cyfcRtuo"
-            },
-            {
-              "title": "SPA WEEKEND",
-              "times": [
-                "10:30am",
-                "12:30pm",
-                "2:30pm",
-                "6:40pm",
-                "8:40pm"
-              ],
-              "url": "https://suntheatre.com.au/wp-cinema/movie/S26SPAWEEKEND/SPA+WEEKEND/",
-              "overview": "Three friends go on a spa weekend that descends into chaos when their trainwreck friend joins, leading to hilarious consequences.",
-              "posterPath": "https://image.tmdb.org/t/p/w300/i3I19SbOyz6AIl0cSYdyVJRucMr.jpg",
-              "rating": null,
-              "year": "2026",
-              "runtime": 97,
-              "trailerUrl": "https://www.youtube.com/watch?v=_ZGsnS7W-Rg"
-            },
-            {
-              "title": "THE RIVALS OF AMZIAH KING",
-              "times": [
-                "10:00am",
-                "2:30pm",
-                "6:30pm",
-                "9:00pm"
-              ],
-              "url": "https://suntheatre.com.au/wp-cinema/movie/S26RIVALSOFAMZIA/THE+RIVALS+OF+AMZIAH+KING/",
-              "overview": "Amziah King, beekeeper, musician, and anchor of his community, reunites with former foster daughter Kateri after many years apart, and fends off threats to his honey business.",
-              "posterPath": "https://image.tmdb.org/t/p/w300/3iVDCDS1VwHIm95PjWEPwsfdhaf.jpg",
-              "rating": 8.333,
-              "year": "2026",
-              "runtime": 130,
-              "trailerUrl": "https://www.youtube.com/watch?v=4laLp51eYLY"
-            },
-            {
-              "title": "TONY",
-              "times": [
-                "10:00am",
-                "12:10pm",
-                "2:20pm",
-                "4:20pm",
-                "6:50pm",
-                "9:15pm"
-              ],
-              "url": "https://suntheatre.com.au/wp-cinema/movie/S26TONY/TONY/",
-              "overview": "A 19-year-old Anthony Bourdain travels to Provincetown and stumbles into the chaotic world of a restaurant kitchen, setting off a summer that will shape the course of his life.",
-              "posterPath": "https://image.tmdb.org/t/p/w300/3WN0JWwRI7oGH7Ni2R6poVWej05.jpg",
-              "rating": 8,
-              "year": "2026",
-              "runtime": 106,
-              "trailerUrl": "https://www.youtube.com/watch?v=k1MVnzd2aVc"
-            }
-          ]
-        },
-        {
-          "cinema": "Coburg Drive-In",
-          "url": "https://villagecinemas.com.au/cinemas/coburg-drive-in",
-          "sessions": [
-            {
-              "title": "Spider-Man: Brand New Day",
-              "times": [
-                "9:10pm",
-                "9:10pm"
-              ],
-              "url": "https://villagecinemas.com.au/cinemas/coburg-drive-in",
-              "overview": "Fighting crime full-time as Spider-Man in a world that doesn't remember him—and the pressure of seeing his old friends move on without him—sparks a change in Peter Parker he may not have the power to control. But that transformation might also be the only thing that can stop a shocking new threat to the city and those he loves - a powerful villain no one can even see.",
-              "posterPath": "https://image.tmdb.org/t/p/w300/6Q21yptoOCUq4ErwVncesLPVplb.jpg",
-              "rating": 9.1,
-              "year": "2026",
-              "runtime": 145,
-              "trailerUrl": "https://www.youtube.com/watch?v=tLkx4BNsSiM"
-            },
-            {
-              "title": "The Odyssey",
-              "times": [
-                "8:40pm",
-                "8:40pm"
-              ],
-              "url": "https://villagecinemas.com.au/cinemas/coburg-drive-in",
-              "overview": "Odysseus, the legendary King of Ithaca, embarks on a long and perilous journey home following the Trojan War. Throughout his voyage, he is forced to confront the whims of gods, mythological monsters, and trials that stretch both his cunning and his humanity to the breaking point.",
-              "posterPath": "https://image.tmdb.org/t/p/w300/5rhTDKUhPYvpdQIijFIs5VoWsON.jpg",
-              "rating": 4.6,
-              "year": "2026",
-              "runtime": 173,
-              "trailerUrl": "https://www.youtube.com/watch?v=AyIZ9tiiN8I"
-            },
-            {
-              "title": "Spa Weekend",
-              "times": [
-                "6:20pm",
-                "6:20pm"
-              ],
-              "url": "https://villagecinemas.com.au/cinemas/coburg-drive-in",
-              "overview": "Three friends go on a spa weekend that descends into chaos when their trainwreck friend joins, leading to hilarious consequences.",
-              "posterPath": "https://image.tmdb.org/t/p/w300/i3I19SbOyz6AIl0cSYdyVJRucMr.jpg",
-              "rating": null,
-              "year": "2026",
-              "runtime": 97,
-              "trailerUrl": "https://www.youtube.com/watch?v=_ZGsnS7W-Rg"
-            },
-            {
-              "title": "The End of Oak Street",
-              "times": [
-                "6:50pm",
-                "6:50pm"
-              ],
-              "url": "https://villagecinemas.com.au/cinemas/coburg-drive-in",
-              "overview": "After a mysterious cosmic event rips Oak Street from suburbia and transports their neighborhood to someplace unknown, the Platt family soon discovers that their very survival depends on them sticking together as they navigate their now unrecognizable surroundings.",
-              "posterPath": "https://image.tmdb.org/t/p/w300/3SifFCwwFzXdU1Ew0nA4Z92Bs15.jpg",
-              "rating": 7.625,
-              "year": "2026",
-              "runtime": 100,
-              "trailerUrl": "https://www.youtube.com/watch?v=1u7cyfcRtuo"
-            },
-            {
-              "title": "Mutiny",
-              "times": [
-                "7:20pm",
-                "7:20pm"
-              ],
-              "url": "https://villagecinemas.com.au/cinemas/coburg-drive-in",
-              "overview": "After witnessing his billionaire boss' murder and being framed for the crime, Cole Reed boards a cargo ship on a one-man crusade to avenge his boss' death only to discover an international conspiracy.",
-              "posterPath": "https://image.tmdb.org/t/p/w300/lsYSWqj6i2iyUDJoLA2cazFJYlC.jpg",
-              "rating": 9,
-              "year": "2026",
-              "runtime": 95,
-              "trailerUrl": "https://www.youtube.com/watch?v=nCdqYxKGpv4"
-            },
-            {
-              "title": "Insidious: Out of the Further",
-              "times": [
-                "9:40pm",
-                "9:40pm"
-              ],
-              "url": "https://villagecinemas.com.au/cinemas/coburg-drive-in",
-              "overview": "Gemma, a young mother raising her daughter in the house she grew up in, discovers she can travel into The Further, where she possesses an ability to bring what lives there back to the real world.",
-              "posterPath": "https://image.tmdb.org/t/p/w300/4tTrW9dXCByS5wt2pXVWb58zNjz.jpg",
-              "rating": null,
-              "year": "2026",
-              "runtime": 106,
-              "trailerUrl": "https://www.youtube.com/watch?v=gXjurDkYnEM"
-            }
-          ]
-        }
-      ]
-    },
     {
       "date": "Saturday 22 August 2026",
       "dateKey": "2026-08-22",
@@ -2521,7 +170,47 @@
         {
           "cinema": "Brunswick Picture House",
           "url": "https://www.brunswickpicturehouse.com.au/now-showing/",
-          "sessions": []
+          "sessions": [
+            {
+              "title": "Spider-Man: Brand New Day",
+              "times": [
+                "12:45pm"
+              ],
+              "url": "https://www.brunswickpicturehouse.com.au/now-showing/",
+              "overview": "Fighting crime full-time as Spider-Man in a world that doesn't remember him—and the pressure of seeing his old friends move on without him—sparks a change in Peter Parker he may not have the power to control. But that transformation might also be the only thing that can stop a shocking new threat to the city and those he loves - a powerful villain no one can even see.",
+              "posterPath": "https://image.tmdb.org/t/p/w300/6Q21yptoOCUq4ErwVncesLPVplb.jpg",
+              "rating": 9.1,
+              "year": "2026",
+              "runtime": 145,
+              "trailerUrl": "https://www.youtube.com/watch?v=tLkx4BNsSiM"
+            },
+            {
+              "title": "The Birthday Trip + Filmmaker Q&A",
+              "times": [
+                "3:30pm"
+              ],
+              "url": "https://www.brunswickpicturehouse.com.au/now-showing/",
+              "overview": null,
+              "posterPath": null,
+              "rating": null,
+              "year": null,
+              "runtime": null,
+              "trailerUrl": null
+            },
+            {
+              "title": "Tony",
+              "times": [
+                "6:00pm"
+              ],
+              "url": "https://www.brunswickpicturehouse.com.au/now-showing/",
+              "overview": "A 19-year-old Anthony Bourdain travels to Provincetown and stumbles into the chaotic world of a restaurant kitchen, setting off a summer that will shape the course of his life.",
+              "posterPath": "https://image.tmdb.org/t/p/w300/3WN0JWwRI7oGH7Ni2R6poVWej05.jpg",
+              "rating": 8,
+              "year": "2026",
+              "runtime": 106,
+              "trailerUrl": "https://www.youtube.com/watch?v=k1MVnzd2aVc"
+            }
+          ]
         },
         {
           "cinema": "Eclipse Cinema",
@@ -2597,7 +286,7 @@
         },
         {
           "cinema": "Cinema Nova",
-          "url": "https://www.cinemanova.com.au/films-saturday-after-0:00",
+          "url": "https://www.cinemanova.com.au/films-today-after-0:00",
           "sessions": [
             {
               "title": "CatVideoFest 2026",
@@ -2692,7 +381,7 @@
                 "1:15pm",
                 "4:30pm",
                 "6:00pm",
-                "7:45pm"
+                "7:50pm"
               ],
               "url": "https://www.cinemanova.com.au/films/odyssey-the",
               "overview": "Odysseus, the legendary King of Ithaca, embarks on a long and perilous journey home following the Trojan War. Throughout his voyage, he is forced to confront the whims of gods, mythological monsters, and trials that stretch both his cunning and his humanity to the breaking point.",
@@ -3058,7 +747,7 @@
         },
         {
           "cinema": "Lido Cinemas",
-          "url": "https://www.lidocinemas.com.au/now-showing/tomorrow",
+          "url": "https://www.lidocinemas.com.au/now-showing",
           "sessions": [
             {
               "title": "Spider-Man: Brand New Day",
@@ -3141,20 +830,6 @@
               "trailerUrl": "https://www.youtube.com/watch?v=LifZzIIlK1k"
             },
             {
-              "title": "Teenage Sex and Death at Camp Miasma",
-              "times": [
-                "4:00pm",
-                "8:20pm"
-              ],
-              "url": "https://www.lidocinemas.com.au/tickets?c=0000000003&s=109161",
-              "overview": "After years of slapdash sequels and waning fandom, the Camp Miasma slasher franchise is handed over to an enthusiastic young director for resurrection. But when she visits the original's star, a now-reclusive actress shrouded in mystery, the two women fall into a blood-soaked world of desire, fear, and delirium.",
-              "posterPath": "https://image.tmdb.org/t/p/w300/nLsFnXifieSTqSeWxjXSS8RvaUZ.jpg",
-              "rating": null,
-              "year": "2026",
-              "runtime": 112,
-              "trailerUrl": "https://www.youtube.com/watch?v=GpfL7SdR0Bc"
-            },
-            {
               "title": "The Odyssey",
               "times": [
                 "3:45pm",
@@ -3167,6 +842,20 @@
               "year": "2026",
               "runtime": 173,
               "trailerUrl": "https://www.youtube.com/watch?v=AyIZ9tiiN8I"
+            },
+            {
+              "title": "Teenage Sex and Death at Camp Miasma",
+              "times": [
+                "4:00pm",
+                "8:20pm"
+              ],
+              "url": "https://www.lidocinemas.com.au/tickets?c=0000000003&s=109161",
+              "overview": "After years of slapdash sequels and waning fandom, the Camp Miasma slasher franchise is handed over to an enthusiastic young director for resurrection. But when she visits the original's star, a now-reclusive actress shrouded in mystery, the two women fall into a blood-soaked world of desire, fear, and delirium.",
+              "posterPath": "https://image.tmdb.org/t/p/w300/nLsFnXifieSTqSeWxjXSS8RvaUZ.jpg",
+              "rating": null,
+              "year": "2026",
+              "runtime": 112,
+              "trailerUrl": "https://www.youtube.com/watch?v=GpfL7SdR0Bc"
             },
             {
               "title": "Insidious: Out of the Further",
@@ -3225,19 +914,6 @@
               "trailerUrl": "https://www.youtube.com/watch?v=4laLp51eYLY"
             },
             {
-              "title": "Toy Story 5",
-              "times": [
-                "10:45am"
-              ],
-              "url": "https://www.lidocinemas.com.au/tickets?c=0000000003&s=109169",
-              "overview": "When Bonnie receives a Lilypad tablet as a gift and becomes obsessed, Buzz, Woody, Jessie and the rest of the gang's jobs become exponentially harder when they have to go head to head with the all-new threat to playtime.",
-              "posterPath": "https://image.tmdb.org/t/p/w300/pxG26JdyuiDvJbSoucknaFiLeZD.jpg",
-              "rating": 6,
-              "year": "2026",
-              "runtime": 102,
-              "trailerUrl": "https://www.youtube.com/watch?v=zhEJKGFQ76E"
-            },
-            {
               "title": "Frozen (2013)",
               "times": [
                 "11:00am"
@@ -3264,6 +940,19 @@
               "trailerUrl": "https://www.youtube.com/watch?v=FKghQCbQOwY"
             },
             {
+              "title": "Toy Story 5",
+              "times": [
+                "10:45am"
+              ],
+              "url": "https://www.lidocinemas.com.au/tickets?c=0000000003&s=109169",
+              "overview": "When Bonnie receives a Lilypad tablet as a gift and becomes obsessed, Buzz, Woody, Jessie and the rest of the gang's jobs become exponentially harder when they have to go head to head with the all-new threat to playtime.",
+              "posterPath": "https://image.tmdb.org/t/p/w300/pxG26JdyuiDvJbSoucknaFiLeZD.jpg",
+              "rating": 6,
+              "year": "2026",
+              "runtime": 102,
+              "trailerUrl": "https://www.youtube.com/watch?v=zhEJKGFQ76E"
+            },
+            {
               "title": "The Bluetone Assembly",
               "times": [
                 "8:00pm"
@@ -3285,13 +974,16 @@
             {
               "title": "Spider-Man: Brand New Day",
               "times": [
-                "9:45am",
-                "12:00pm",
-                "12:45pm",
-                "3:30pm",
-                "6:00pm",
-                "6:45pm",
-                "10:00pm"
+                "9:00am",
+                "9:30am",
+                "11:20am",
+                "2:35pm",
+                "3:15pm",
+                "5:50pm",
+                "6:15pm",
+                "6:30pm",
+                "9:05pm",
+                "9:45pm"
               ],
               "url": "https://www.hoyts.com.au/movies/spider-man-brand-new-day",
               "overview": "Fighting crime full-time as Spider-Man in a world that doesn't remember him—and the pressure of seeing his old friends move on without him—sparks a change in Peter Parker he may not have the power to control. But that transformation might also be the only thing that can stop a shocking new threat to the city and those he loves - a powerful villain no one can even see.",
@@ -3304,10 +996,10 @@
             {
               "title": "The Odyssey",
               "times": [
+                "9:15am",
                 "10:30am",
-                "11:30am",
                 "2:15pm",
-                "9:30pm"
+                "8:30pm"
               ],
               "url": "https://www.hoyts.com.au/movies/the-odyssey",
               "overview": "Odysseus, the legendary King of Ithaca, embarks on a long and perilous journey home following the Trojan War. Throughout his voyage, he is forced to confront the whims of gods, mythological monsters, and trials that stretch both his cunning and his humanity to the breaking point.",
@@ -3320,8 +1012,7 @@
             {
               "title": "Spa Weekend",
               "times": [
-                "1:00pm",
-                "3:10pm"
+                "6:00pm"
               ],
               "url": "https://www.hoyts.com.au/movies/spa-weekend",
               "overview": "Three friends go on a spa weekend that descends into chaos when their trainwreck friend joins, leading to hilarious consequences.",
@@ -3334,9 +1025,7 @@
             {
               "title": "The End of Oak Street",
               "times": [
-                "9:30am",
-                "1:00pm",
-                "3:15pm"
+                "12:45pm"
               ],
               "url": "https://www.hoyts.com.au/movies/the-end-of-oak-street",
               "overview": "After a mysterious cosmic event rips Oak Street from suburbia and transports their neighborhood to someplace unknown, the Platt family soon discovers that their very survival depends on them sticking together as they navigate their now unrecognizable surroundings.",
@@ -3349,9 +1038,7 @@
             {
               "title": "Insidious: Out of the Further",
               "times": [
-                "12:25pm",
-                "3:15pm",
-                "9:40pm"
+                "9:30pm"
               ],
               "url": "https://www.hoyts.com.au/movies/insidious-out-of-the-further",
               "overview": "Gemma, a young mother raising her daughter in the house she grew up in, discovers she can travel into The Further, where she possesses an ability to bring what lives there back to the real world.",
@@ -3364,9 +1051,8 @@
             {
               "title": "Mutiny",
               "times": [
-                "10:15am",
-                "12:15pm",
-                "4:00pm"
+                "10:00am",
+                "12:20pm"
               ],
               "url": "https://www.hoyts.com.au/movies/mutiny",
               "overview": "After witnessing his billionaire boss' murder and being framed for the crime, Cole Reed boards a cargo ship on a one-man crusade to avenge his boss' death only to discover an international conspiracy.",
@@ -3379,8 +1065,7 @@
             {
               "title": "One Night Only",
               "times": [
-                "10:15am",
-                "3:30pm"
+                "10:40am"
               ],
               "url": "https://www.hoyts.com.au/movies/one-night-only",
               "overview": "Two love-starved strangers crash into each other on the one night of the year when single people are allowed to have sex.",
@@ -3391,57 +1076,43 @@
               "trailerUrl": "https://www.youtube.com/watch?v=LifZzIIlK1k"
             },
             {
-              "title": "Kung Fu Soccer (Mandarin, Eng Sub)",
+              "title": "Tom & Jerry: Forbidden Compass",
               "times": [
-                "9:45am",
-                "2:30pm"
+                "9:00am"
               ],
-              "url": "https://www.hoyts.com.au/movies/kung-fu-soccer-mandarin-eng-sub",
-              "overview": "The \"Supreme Invincible Cup\" is about to begin, and a host of top teams are about to engage in an unprecedented showdown! But the Kung Fu Women's Soccer Team has been dealt a hellish script right from the start?! Their opponents are all highly skilled, and external pressure is mounting. The schemes on the field are one after another... Can they use their kung fu to turn the tide on the green field?",
-              "posterPath": "https://image.tmdb.org/t/p/w300/6QgJQrClh9ej357yzLWgCxrjAmJ.jpg",
-              "rating": 5.909,
-              "year": "2026",
-              "runtime": 106,
-              "trailerUrl": null
+              "url": "https://www.hoyts.com.au/movies/tom-jerry-forbidden-compass",
+              "overview": "During a chase inside a museum, Tom and Jerry find an ancient magical compass and end up being transported through time. Lost in a distant era, they will need to work together to find a way back home.",
+              "posterPath": "https://image.tmdb.org/t/p/w300/5qttWFjsO62k88civZaDMHiBTvy.jpg",
+              "rating": 6.5,
+              "year": "2025",
+              "runtime": 99,
+              "trailerUrl": "https://www.youtube.com/watch?v=VBPlpfK6zXg"
             },
             {
-              "title": "Kiri and Lou Go Raaa!",
+              "title": "Toy Story 5",
               "times": [
-                "9:30am"
+                "9:45am"
               ],
-              "url": "https://www.hoyts.com.au/movies/kiri-and-lou-go-raaa",
-              "overview": "The movie follows Lou, a gentle purple creature with an embarrassingly stretchy trunk, as he rescues Kiri, an ungrateful little dinosaur, from a flood — sweeping the pair into the greatest adventure in prehistory. Along the way, they discover that you can find friendship in the wildest places.",
-              "posterPath": "https://image.tmdb.org/t/p/w300/iDPtI221ChIDye3FjICCtuIdiqK.jpg",
-              "rating": null,
+              "url": "https://www.hoyts.com.au/movies/toy-story-5",
+              "overview": "When Bonnie receives a Lilypad tablet as a gift and becomes obsessed, Buzz, Woody, Jessie and the rest of the gang's jobs become exponentially harder when they have to go head to head with the all-new threat to playtime.",
+              "posterPath": "https://image.tmdb.org/t/p/w300/pxG26JdyuiDvJbSoucknaFiLeZD.jpg",
+              "rating": 6,
               "year": "2026",
-              "runtime": 101,
-              "trailerUrl": null
+              "runtime": 102,
+              "trailerUrl": "https://www.youtube.com/watch?v=zhEJKGFQ76E"
             },
             {
-              "title": "Minions & Monsters",
+              "title": "Harry Potter and the Deathly Hallows: Part 1",
               "times": [
-                "10:00am"
+                "2:45pm"
               ],
-              "url": "https://www.hoyts.com.au/movies/minions-3",
-              "overview": "This is the rambunctious, ridiculous and totally true story of how the Minions conquered Hollywood, became movie stars, lost everything, unleashed monsters onto the world and then banded together to try and save the planet from the mayhem they had just created.",
-              "posterPath": "https://image.tmdb.org/t/p/w300/nz7i42yhLIJ4ve9JKgM6NthoLHO.jpg",
-              "rating": 9.5,
-              "year": "2026",
-              "runtime": 90,
-              "trailerUrl": "https://www.youtube.com/watch?v=tV1v5EfFc2g"
-            },
-            {
-              "title": "Harry Potter and the Half-Blood Prince",
-              "times": [
-                "6:15pm"
-              ],
-              "url": "https://www.hoyts.com.au/movies/harry-potter-and-the-half-blood-prince",
-              "overview": "Dumbledore tries to prepare Harry for the final battle with Voldemort while Death Eaters wreak havoc in both Muggle and Wizard worlds.",
-              "posterPath": "https://image.tmdb.org/t/p/w300/z7uo9zmQdQwU5ZJHFpv2Upl30i1.jpg",
-              "rating": 7.682,
-              "year": "2009",
-              "runtime": 153,
-              "trailerUrl": "https://www.youtube.com/watch?v=DgeDDXcw--I"
+              "url": "https://www.hoyts.com.au/movies/harry-potter-and-the-deathly-hallows-part-1",
+              "overview": "Harry, Ron and Hermione walk away from their last year at Hogwarts to find and destroy the remaining Horcruxes, putting an end to Voldemort's bid for immortality. But with Harry's beloved Dumbledore dead and Voldemort's unscrupulous Death Eaters on the loose, the world is more dangerous than ever.",
+              "posterPath": "https://image.tmdb.org/t/p/w300/iGoXIpQb7Pot00EEdwpwPajheZ5.jpg",
+              "rating": 7.733,
+              "year": "2010",
+              "runtime": 146,
+              "trailerUrl": "https://www.youtube.com/watch?v=Su1LOpjvdZ4"
             }
           ],
           "note": "Lux sessions not listed"
@@ -5294,7 +2965,7 @@
         },
         {
           "cinema": "Lido Cinemas",
-          "url": "https://www.lidocinemas.com.au/now-showing/sunday",
+          "url": "https://www.lidocinemas.com.au/now-showing/tomorrow",
           "sessions": [
             {
               "title": "Spider-Man: Brand New Day",
@@ -5375,20 +3046,6 @@
               "trailerUrl": "https://www.youtube.com/watch?v=LifZzIIlK1k"
             },
             {
-              "title": "Teenage Sex and Death at Camp Miasma",
-              "times": [
-                "2:40pm",
-                "8:00pm"
-              ],
-              "url": "https://www.lidocinemas.com.au/tickets?c=0000000003&s=109195",
-              "overview": "After years of slapdash sequels and waning fandom, the Camp Miasma slasher franchise is handed over to an enthusiastic young director for resurrection. But when she visits the original's star, a now-reclusive actress shrouded in mystery, the two women fall into a blood-soaked world of desire, fear, and delirium.",
-              "posterPath": "https://image.tmdb.org/t/p/w300/nLsFnXifieSTqSeWxjXSS8RvaUZ.jpg",
-              "rating": null,
-              "year": "2026",
-              "runtime": 112,
-              "trailerUrl": "https://www.youtube.com/watch?v=GpfL7SdR0Bc"
-            },
-            {
               "title": "The Odyssey",
               "times": [
                 "12:30pm",
@@ -5401,6 +3058,20 @@
               "year": "2026",
               "runtime": 173,
               "trailerUrl": "https://www.youtube.com/watch?v=AyIZ9tiiN8I"
+            },
+            {
+              "title": "Teenage Sex and Death at Camp Miasma",
+              "times": [
+                "2:40pm",
+                "8:00pm"
+              ],
+              "url": "https://www.lidocinemas.com.au/tickets?c=0000000003&s=109195",
+              "overview": "After years of slapdash sequels and waning fandom, the Camp Miasma slasher franchise is handed over to an enthusiastic young director for resurrection. But when she visits the original's star, a now-reclusive actress shrouded in mystery, the two women fall into a blood-soaked world of desire, fear, and delirium.",
+              "posterPath": "https://image.tmdb.org/t/p/w300/nLsFnXifieSTqSeWxjXSS8RvaUZ.jpg",
+              "rating": null,
+              "year": "2026",
+              "runtime": 112,
+              "trailerUrl": "https://www.youtube.com/watch?v=GpfL7SdR0Bc"
             },
             {
               "title": "Insidious: Out of the Further",
@@ -5471,19 +3142,6 @@
               "trailerUrl": "https://www.youtube.com/watch?v=cEQmNfSWMZc"
             },
             {
-              "title": "Toy Story 5",
-              "times": [
-                "10:10am"
-              ],
-              "url": "https://www.lidocinemas.com.au/tickets?c=0000000003&s=109200",
-              "overview": "When Bonnie receives a Lilypad tablet as a gift and becomes obsessed, Buzz, Woody, Jessie and the rest of the gang's jobs become exponentially harder when they have to go head to head with the all-new threat to playtime.",
-              "posterPath": "https://image.tmdb.org/t/p/w300/pxG26JdyuiDvJbSoucknaFiLeZD.jpg",
-              "rating": 6,
-              "year": "2026",
-              "runtime": 102,
-              "trailerUrl": "https://www.youtube.com/watch?v=zhEJKGFQ76E"
-            },
-            {
               "title": "Frozen (2013)",
               "times": [
                 "11:00am"
@@ -5508,6 +3166,19 @@
               "year": "2026",
               "runtime": 109,
               "trailerUrl": "https://www.youtube.com/watch?v=gMC8kkwbIQQ"
+            },
+            {
+              "title": "Toy Story 5",
+              "times": [
+                "10:10am"
+              ],
+              "url": "https://www.lidocinemas.com.au/tickets?c=0000000003&s=109200",
+              "overview": "When Bonnie receives a Lilypad tablet as a gift and becomes obsessed, Buzz, Woody, Jessie and the rest of the gang's jobs become exponentially harder when they have to go head to head with the all-new threat to playtime.",
+              "posterPath": "https://image.tmdb.org/t/p/w300/pxG26JdyuiDvJbSoucknaFiLeZD.jpg",
+              "rating": 6,
+              "year": "2026",
+              "runtime": 102,
+              "trailerUrl": "https://www.youtube.com/watch?v=zhEJKGFQ76E"
             },
             {
               "title": "Woodstock (1970)",
@@ -5544,14 +3215,15 @@
             {
               "title": "Spider-Man: Brand New Day",
               "times": [
-                "9:50am",
-                "11:15am",
-                "2:30pm",
-                "3:30pm",
-                "5:40pm",
-                "6:40pm",
-                "8:30pm",
-                "9:00pm",
+                "9:00am",
+                "9:30am",
+                "11:20am",
+                "2:35pm",
+                "3:15pm",
+                "5:50pm",
+                "6:15pm",
+                "6:30pm",
+                "9:05pm",
                 "9:45pm"
               ],
               "url": "https://www.hoyts.com.au/movies/spider-man-brand-new-day",
@@ -5565,10 +3237,10 @@
             {
               "title": "The Odyssey",
               "times": [
-                "9:30am",
-                "11:30am",
-                "6:00pm",
-                "9:15pm"
+                "9:15am",
+                "10:30am",
+                "2:15pm",
+                "8:30pm"
               ],
               "url": "https://www.hoyts.com.au/movies/the-odyssey",
               "overview": "Odysseus, the legendary King of Ithaca, embarks on a long and perilous journey home following the Trojan War. Throughout his voyage, he is forced to confront the whims of gods, mythological monsters, and trials that stretch both his cunning and his humanity to the breaking point.",
@@ -5581,8 +3253,7 @@
             {
               "title": "Spa Weekend",
               "times": [
-                "10:15am",
-                "9:45pm"
+                "6:00pm"
               ],
               "url": "https://www.hoyts.com.au/movies/spa-weekend",
               "overview": "Three friends go on a spa weekend that descends into chaos when their trainwreck friend joins, leading to hilarious consequences.",
@@ -5595,8 +3266,7 @@
             {
               "title": "The End of Oak Street",
               "times": [
-                "1:00pm",
-                "3:20pm"
+                "12:45pm"
               ],
               "url": "https://www.hoyts.com.au/movies/the-end-of-oak-street",
               "overview": "After a mysterious cosmic event rips Oak Street from suburbia and transports their neighborhood to someplace unknown, the Platt family soon discovers that their very survival depends on them sticking together as they navigate their now unrecognizable surroundings.",
@@ -5609,9 +3279,7 @@
             {
               "title": "Insidious: Out of the Further",
               "times": [
-                "4:45pm",
-                "7:25pm",
-                "10:00pm"
+                "9:30pm"
               ],
               "url": "https://www.hoyts.com.au/movies/insidious-out-of-the-further",
               "overview": "Gemma, a young mother raising her daughter in the house she grew up in, discovers she can travel into The Further, where she possesses an ability to bring what lives there back to the real world.",
@@ -5624,8 +3292,8 @@
             {
               "title": "Mutiny",
               "times": [
-                "2:30pm",
-                "10:00pm"
+                "10:00am",
+                "12:20pm"
               ],
               "url": "https://www.hoyts.com.au/movies/mutiny",
               "overview": "After witnessing his billionaire boss' murder and being framed for the crime, Cole Reed boards a cargo ship on a one-man crusade to avenge his boss' death only to discover an international conspiracy.",
@@ -5636,11 +3304,50 @@
               "trailerUrl": "https://www.youtube.com/watch?v=nCdqYxKGpv4"
             },
             {
-              "title": "Harry Potter and the Deathly Hallows: Part 2",
+              "title": "One Night Only",
               "times": [
-                "11:30am"
+                "10:40am"
               ],
-              "url": "https://www.hoyts.com.au/movies/harry-potter-and-the-deathly-hallows-part-2",
+              "url": "https://www.hoyts.com.au/movies/one-night-only",
+              "overview": "Two love-starved strangers crash into each other on the one night of the year when single people are allowed to have sex.",
+              "posterPath": "https://image.tmdb.org/t/p/w300/aG0vY0XevpJqsHy9MKIHqhwLUyN.jpg",
+              "rating": null,
+              "year": "2026",
+              "runtime": 102,
+              "trailerUrl": "https://www.youtube.com/watch?v=LifZzIIlK1k"
+            },
+            {
+              "title": "Tom & Jerry: Forbidden Compass",
+              "times": [
+                "9:00am"
+              ],
+              "url": "https://www.hoyts.com.au/movies/tom-jerry-forbidden-compass",
+              "overview": "During a chase inside a museum, Tom and Jerry find an ancient magical compass and end up being transported through time. Lost in a distant era, they will need to work together to find a way back home.",
+              "posterPath": "https://image.tmdb.org/t/p/w300/5qttWFjsO62k88civZaDMHiBTvy.jpg",
+              "rating": 6.5,
+              "year": "2025",
+              "runtime": 99,
+              "trailerUrl": "https://www.youtube.com/watch?v=VBPlpfK6zXg"
+            },
+            {
+              "title": "Toy Story 5",
+              "times": [
+                "9:45am"
+              ],
+              "url": "https://www.hoyts.com.au/movies/toy-story-5",
+              "overview": "When Bonnie receives a Lilypad tablet as a gift and becomes obsessed, Buzz, Woody, Jessie and the rest of the gang's jobs become exponentially harder when they have to go head to head with the all-new threat to playtime.",
+              "posterPath": "https://image.tmdb.org/t/p/w300/pxG26JdyuiDvJbSoucknaFiLeZD.jpg",
+              "rating": 6,
+              "year": "2026",
+              "runtime": 102,
+              "trailerUrl": "https://www.youtube.com/watch?v=zhEJKGFQ76E"
+            },
+            {
+              "title": "Harry Potter and the Deathly Hallows: Part 1",
+              "times": [
+                "2:45pm"
+              ],
+              "url": "https://www.hoyts.com.au/movies/harry-potter-and-the-deathly-hallows-part-1",
               "overview": "Harry, Ron and Hermione walk away from their last year at Hogwarts to find and destroy the remaining Horcruxes, putting an end to Voldemort's bid for immortality. But with Harry's beloved Dumbledore dead and Voldemort's unscrupulous Death Eaters on the loose, the world is more dangerous than ever.",
               "posterPath": "https://image.tmdb.org/t/p/w300/iGoXIpQb7Pot00EEdwpwPajheZ5.jpg",
               "rating": 7.733,
@@ -7533,21 +5240,6 @@
               "trailerUrl": "https://www.youtube.com/watch?v=LifZzIIlK1k"
             },
             {
-              "title": "Teenage Sex and Death at Camp Miasma",
-              "times": [
-                "1:10pm",
-                "4:15pm",
-                "8:15pm"
-              ],
-              "url": "https://www.lidocinemas.com.au/tickets?c=0000000003&s=108997",
-              "overview": "After years of slapdash sequels and waning fandom, the Camp Miasma slasher franchise is handed over to an enthusiastic young director for resurrection. But when she visits the original's star, a now-reclusive actress shrouded in mystery, the two women fall into a blood-soaked world of desire, fear, and delirium.",
-              "posterPath": "https://image.tmdb.org/t/p/w300/nLsFnXifieSTqSeWxjXSS8RvaUZ.jpg",
-              "rating": null,
-              "year": "2026",
-              "runtime": 112,
-              "trailerUrl": "https://www.youtube.com/watch?v=GpfL7SdR0Bc"
-            },
-            {
               "title": "The Odyssey",
               "times": [
                 "12:45pm",
@@ -7561,6 +5253,21 @@
               "year": "2026",
               "runtime": 173,
               "trailerUrl": "https://www.youtube.com/watch?v=AyIZ9tiiN8I"
+            },
+            {
+              "title": "Teenage Sex and Death at Camp Miasma",
+              "times": [
+                "1:10pm",
+                "4:15pm",
+                "8:15pm"
+              ],
+              "url": "https://www.lidocinemas.com.au/tickets?c=0000000003&s=108997",
+              "overview": "After years of slapdash sequels and waning fandom, the Camp Miasma slasher franchise is handed over to an enthusiastic young director for resurrection. But when she visits the original's star, a now-reclusive actress shrouded in mystery, the two women fall into a blood-soaked world of desire, fear, and delirium.",
+              "posterPath": "https://image.tmdb.org/t/p/w300/nLsFnXifieSTqSeWxjXSS8RvaUZ.jpg",
+              "rating": null,
+              "year": "2026",
+              "runtime": 112,
+              "trailerUrl": "https://www.youtube.com/watch?v=GpfL7SdR0Bc"
             },
             {
               "title": "Insidious: Out of the Further",
@@ -7632,19 +5339,6 @@
               "trailerUrl": "https://www.youtube.com/watch?v=cEQmNfSWMZc"
             },
             {
-              "title": "Tuner",
-              "times": [
-                "10:50am"
-              ],
-              "url": "https://www.lidocinemas.com.au/tickets?c=0000000003&s=109000",
-              "overview": "A talented piano tuner's life is turned upside down when he discovers that his meticulous skills for tuning pianos can equally be applied to cracking safes.",
-              "posterPath": "https://image.tmdb.org/t/p/w300/kyM60vcgf7lfofmZB4F5Rj7OrHW.jpg",
-              "rating": 6.8,
-              "year": "2026",
-              "runtime": 107,
-              "trailerUrl": "https://www.youtube.com/watch?v=N7jTV4Iwzfw"
-            },
-            {
               "title": "Lido Film Trivia",
               "times": [
                 "7:00pm"
@@ -7656,6 +5350,19 @@
               "year": null,
               "runtime": null,
               "trailerUrl": null
+            },
+            {
+              "title": "Tuner",
+              "times": [
+                "10:50am"
+              ],
+              "url": "https://www.lidocinemas.com.au/tickets?c=0000000003&s=109000",
+              "overview": "A talented piano tuner's life is turned upside down when he discovers that his meticulous skills for tuning pianos can equally be applied to cracking safes.",
+              "posterPath": "https://image.tmdb.org/t/p/w300/kyM60vcgf7lfofmZB4F5Rj7OrHW.jpg",
+              "rating": 6.8,
+              "year": "2026",
+              "runtime": 107,
+              "trailerUrl": "https://www.youtube.com/watch?v=N7jTV4Iwzfw"
             },
             {
               "title": "His Girl Friday (1940)",
@@ -7671,19 +5378,6 @@
               "trailerUrl": "https://www.youtube.com/watch?v=FKghQCbQOwY"
             },
             {
-              "title": "La Haine (1995)",
-              "times": [
-                "7:30pm"
-              ],
-              "url": "https://www.lidocinemas.com.au/tickets?c=0000000003&s=105673",
-              "overview": "After a chaotic night of rioting in a marginal suburb of Paris, three young friends, Vinz, Hubert and Saïd, wander around unoccupied waiting for news about the state of health of a mutual friend who has been seriously injured when confronting the police.",
-              "posterPath": "https://image.tmdb.org/t/p/w300/hY4exng4s29RzDbtQInjx9MA3PZ.jpg",
-              "rating": 8.08,
-              "year": "1995",
-              "runtime": 98,
-              "trailerUrl": "https://www.youtube.com/watch?v=FKwcXt3JIaU"
-            },
-            {
               "title": "Obsession",
               "times": [
                 "9:00pm"
@@ -7695,6 +5389,19 @@
               "year": "2026",
               "runtime": 109,
               "trailerUrl": "https://www.youtube.com/watch?v=gMC8kkwbIQQ"
+            },
+            {
+              "title": "La Haine (1995)",
+              "times": [
+                "7:30pm"
+              ],
+              "url": "https://www.lidocinemas.com.au/tickets?c=0000000003&s=105673",
+              "overview": "After a chaotic night of rioting in a marginal suburb of Paris, three young friends, Vinz, Hubert and Saïd, wander around unoccupied waiting for news about the state of health of a mutual friend who has been seriously injured when confronting the police.",
+              "posterPath": "https://image.tmdb.org/t/p/w300/hY4exng4s29RzDbtQInjx9MA3PZ.jpg",
+              "rating": 8.08,
+              "year": "1995",
+              "runtime": 98,
+              "trailerUrl": "https://www.youtube.com/watch?v=FKwcXt3JIaU"
             }
           ]
         },
@@ -9720,21 +7427,6 @@
               "trailerUrl": "https://www.youtube.com/watch?v=LifZzIIlK1k"
             },
             {
-              "title": "Teenage Sex and Death at Camp Miasma",
-              "times": [
-                "1:15pm",
-                "4:10pm",
-                "8:15pm"
-              ],
-              "url": "https://www.lidocinemas.com.au/tickets?c=0000000003&s=109136",
-              "overview": "After years of slapdash sequels and waning fandom, the Camp Miasma slasher franchise is handed over to an enthusiastic young director for resurrection. But when she visits the original's star, a now-reclusive actress shrouded in mystery, the two women fall into a blood-soaked world of desire, fear, and delirium.",
-              "posterPath": "https://image.tmdb.org/t/p/w300/nLsFnXifieSTqSeWxjXSS8RvaUZ.jpg",
-              "rating": null,
-              "year": "2026",
-              "runtime": 112,
-              "trailerUrl": "https://www.youtube.com/watch?v=GpfL7SdR0Bc"
-            },
-            {
               "title": "The Odyssey",
               "times": [
                 "12:30pm",
@@ -9748,6 +7440,21 @@
               "year": "2026",
               "runtime": 173,
               "trailerUrl": "https://www.youtube.com/watch?v=AyIZ9tiiN8I"
+            },
+            {
+              "title": "Teenage Sex and Death at Camp Miasma",
+              "times": [
+                "1:15pm",
+                "4:10pm",
+                "8:15pm"
+              ],
+              "url": "https://www.lidocinemas.com.au/tickets?c=0000000003&s=109136",
+              "overview": "After years of slapdash sequels and waning fandom, the Camp Miasma slasher franchise is handed over to an enthusiastic young director for resurrection. But when she visits the original's star, a now-reclusive actress shrouded in mystery, the two women fall into a blood-soaked world of desire, fear, and delirium.",
+              "posterPath": "https://image.tmdb.org/t/p/w300/nLsFnXifieSTqSeWxjXSS8RvaUZ.jpg",
+              "rating": null,
+              "year": "2026",
+              "runtime": 112,
+              "trailerUrl": "https://www.youtube.com/watch?v=GpfL7SdR0Bc"
             },
             {
               "title": "Insidious: Out of the Further",
@@ -10051,7 +7758,22 @@
         {
           "cinema": "The Astor Theatre",
           "url": "https://www.astortheatre.net.au/",
-          "sessions": []
+          "sessions": [
+            {
+              "title": "Top Dog Film Festival 2026: The Ultimate Cinematic Celebration of Dogs",
+              "times": [
+                "7:00pm"
+              ],
+              "url": "https://www.astortheatre.net.au/films/top-dog-film-festival-2026-the-ultimate-cinematic-celebration-of-dogs",
+              "isDoubleFeature": false,
+              "overview": null,
+              "posterPath": null,
+              "rating": null,
+              "year": null,
+              "runtime": null,
+              "trailerUrl": null
+            }
+          ]
         },
         {
           "cinema": "Palace Como",
@@ -10776,21 +8498,9 @@
               "trailerUrl": "https://www.youtube.com/watch?v=tV1v5EfFc2g"
             },
             {
-              "title": "Obsession",
-              "times": [
-                "10:45am"
-              ],
-              "url": "https://www.palacecinemas.com.au/movies/obsession",
-              "overview": "After breaking the mysterious \"One Wish Willow\" to win his crush's heart, a hopeless romantic finds himself getting exactly what he asked for but soon discovers that some desires come at a dark, sinister price.",
-              "posterPath": "https://image.tmdb.org/t/p/w300/40I66L7QKguTFDPvcLcdiTbAD7I.jpg",
-              "rating": 6.5,
-              "year": "2026",
-              "runtime": 109,
-              "trailerUrl": "https://www.youtube.com/watch?v=gMC8kkwbIQQ"
-            },
-            {
               "title": "Holy Days",
               "times": [
+                "10:50am",
                 "10:50am",
                 "3:45pm"
               ],
@@ -11863,20 +9573,6 @@
               "trailerUrl": "https://www.youtube.com/watch?v=LifZzIIlK1k"
             },
             {
-              "title": "Teenage Sex and Death at Camp Miasma",
-              "times": [
-                "1:10pm",
-                "8:15pm"
-              ],
-              "url": "https://www.lidocinemas.com.au/tickets?c=0000000003&s=109030",
-              "overview": "After years of slapdash sequels and waning fandom, the Camp Miasma slasher franchise is handed over to an enthusiastic young director for resurrection. But when she visits the original's star, a now-reclusive actress shrouded in mystery, the two women fall into a blood-soaked world of desire, fear, and delirium.",
-              "posterPath": "https://image.tmdb.org/t/p/w300/nLsFnXifieSTqSeWxjXSS8RvaUZ.jpg",
-              "rating": null,
-              "year": "2026",
-              "runtime": 112,
-              "trailerUrl": "https://www.youtube.com/watch?v=GpfL7SdR0Bc"
-            },
-            {
               "title": "The Odyssey",
               "times": [
                 "12:50pm",
@@ -11890,6 +9586,20 @@
               "year": "2026",
               "runtime": 173,
               "trailerUrl": "https://www.youtube.com/watch?v=AyIZ9tiiN8I"
+            },
+            {
+              "title": "Teenage Sex and Death at Camp Miasma",
+              "times": [
+                "1:10pm",
+                "8:15pm"
+              ],
+              "url": "https://www.lidocinemas.com.au/tickets?c=0000000003&s=109030",
+              "overview": "After years of slapdash sequels and waning fandom, the Camp Miasma slasher franchise is handed over to an enthusiastic young director for resurrection. But when she visits the original's star, a now-reclusive actress shrouded in mystery, the two women fall into a blood-soaked world of desire, fear, and delirium.",
+              "posterPath": "https://image.tmdb.org/t/p/w300/nLsFnXifieSTqSeWxjXSS8RvaUZ.jpg",
+              "rating": null,
+              "year": "2026",
+              "runtime": 112,
+              "trailerUrl": "https://www.youtube.com/watch?v=GpfL7SdR0Bc"
             },
             {
               "title": "Insidious: Out of the Further",
@@ -12020,7 +9730,8 @@
                 "11:15am",
                 "3:00pm",
                 "6:15pm",
-                "9:00pm"
+                "9:00pm",
+                "9:20pm"
               ],
               "url": "https://www.hoyts.com.au/movies/the-odyssey",
               "overview": "Odysseus, the legendary King of Ithaca, embarks on a long and perilous journey home following the Trojan War. Throughout his voyage, he is forced to confront the whims of gods, mythological monsters, and trials that stretch both his cunning and his humanity to the breaking point.",
@@ -12185,6 +9896,19 @@
               "trailerUrl": "https://www.youtube.com/watch?v=S0r_ISKTqLM"
             },
             {
+              "title": "Toxic: A Fairy Tale For Grown-Ups (Kannada, Eng Sub)",
+              "times": [
+                "9:00pm"
+              ],
+              "url": "https://www.hoyts.com.au/movies/toxic-a-fairy-tale-for-grown-ups-kannada-eng-sub",
+              "overview": "A powerful drug cartel pulls the strings behind a facade of sun-soaked beaches as a gritty, violent underworld power struggle emerges during the crumbling of Portuguese colonial rule.",
+              "posterPath": "https://image.tmdb.org/t/p/w300/tZ8eSBXbza96vzCYeVTG9RBJ78E.jpg",
+              "rating": null,
+              "year": "2026",
+              "runtime": 192,
+              "trailerUrl": "https://www.youtube.com/watch?v=EfluEyQ5QIA"
+            },
+            {
               "title": "Make Zhonghe Great Again (Mandarin, Eng Sub)",
               "times": [
                 "1:00pm"
@@ -12203,7 +9927,22 @@
         {
           "cinema": "The Astor Theatre",
           "url": "https://www.astortheatre.net.au/",
-          "sessions": []
+          "sessions": [
+            {
+              "title": "Gutsy Girls Adventure Film Tour 2026",
+              "times": [
+                "7:00pm"
+              ],
+              "url": "https://www.astortheatre.net.au/films/gutsy-girls-adventure-film-tour-2026",
+              "isDoubleFeature": false,
+              "overview": null,
+              "posterPath": null,
+              "rating": null,
+              "year": null,
+              "runtime": null,
+              "trailerUrl": null
+            }
+          ]
         },
         {
           "cinema": "Palace Como",
@@ -13455,20 +11194,6 @@
               "trailerUrl": "https://www.youtube.com/watch?v=l91Km49W9qI"
             },
             {
-              "title": "The Dog Stars",
-              "times": [
-                "9:00am",
-                "6:00pm"
-              ],
-              "url": "https://www.hoyts.com.au/movies/the-dog-stars",
-              "overview": "After the world's population has been ravaged by a pandemic, a man lives a lonesome existence in a Colorado airplane hangar with his dog and a dour gunman he has befriended. When a mysterious transmission comes through on the radio while he’s flying his old Cessna, it sparks a hunt for the provenance of the sound.",
-              "posterPath": "https://image.tmdb.org/t/p/w300/A7i16oDi03qrKep5pBfuTWNUTb.jpg",
-              "rating": null,
-              "year": "2026",
-              "runtime": 119,
-              "trailerUrl": "https://www.youtube.com/watch?v=-xSxaE1ClEE"
-            },
-            {
               "title": "The Fast and the Furious - 25th Anniversary",
               "times": [
                 "6:45pm"
@@ -13480,6 +11205,19 @@
               "year": "2001",
               "runtime": 106,
               "trailerUrl": "https://www.youtube.com/watch?v=iIU1xlDbbQk"
+            },
+            {
+              "title": "The Dog Stars",
+              "times": [
+                "9:00am"
+              ],
+              "url": "https://www.hoyts.com.au/movies/the-dog-stars",
+              "overview": "After the world's population has been ravaged by a pandemic, a man lives a lonesome existence in a Colorado airplane hangar with his dog and a dour gunman he has befriended. When a mysterious transmission comes through on the radio while he’s flying his old Cessna, it sparks a hunt for the provenance of the sound.",
+              "posterPath": "https://image.tmdb.org/t/p/w300/A7i16oDi03qrKep5pBfuTWNUTb.jpg",
+              "rating": null,
+              "year": "2026",
+              "runtime": 119,
+              "trailerUrl": "https://www.youtube.com/watch?v=-xSxaE1ClEE"
             },
             {
               "title": "GHOST: 2 Big To Rig",
@@ -13699,6 +11437,447 @@
               "trailerUrl": "https://www.youtube.com/watch?v=iIU1xlDbbQk"
             }
           ]
+        }
+      ]
+    },
+    {
+      "date": "Friday 28 August 2026",
+      "dateKey": "2026-08-28",
+      "cinemas": [
+        {
+          "cinema": "ACMI",
+          "url": "https://www.acmi.net.au/whats-on/?what=film&when_start=2026-08-28&when_end=2026-08-28",
+          "sessions": [
+            {
+              "title": "Vive L'Amour",
+              "times": [
+                "1:30pm"
+              ],
+              "url": "https://www.acmi.net.au/whats-on/matinees/vive-lamour/",
+              "overview": "Three lonely young denizens of Taipei unknowingly share an apartment: May, a real estate agent who uses it for her sexual affairs; Ah-jung, her current lover; and Hsiao-kang, who's stolen the key and uses the apartment as a retreat.",
+              "posterPath": "https://image.tmdb.org/t/p/w300/w5fAXsJaguGtLYLNAE2imEJnQxS.jpg",
+              "rating": 7.2,
+              "year": "1995",
+              "runtime": 118,
+              "trailerUrl": "https://www.youtube.com/watch?v=Z6L1R0g5Bm8"
+            }
+          ]
+        },
+        {
+          "cinema": "Brunswick Picture House",
+          "url": "https://www.brunswickpicturehouse.com.au/now-showing/",
+          "sessions": []
+        },
+        {
+          "cinema": "Eclipse Cinema",
+          "url": "https://eclipse-cinema.com.au/session-time/",
+          "sessions": [
+            {
+              "title": "1st Birthday – Grand Tour",
+              "times": [
+                "8:30pm"
+              ],
+              "url": "https://eclipse-cinema.com.au/session-time/",
+              "overview": null,
+              "posterPath": null,
+              "rating": null,
+              "year": null,
+              "runtime": null,
+              "trailerUrl": null
+            },
+            {
+              "title": "Asian Cinema Collective – August 2026",
+              "times": [
+                "6:00pm"
+              ],
+              "url": "https://eclipse-cinema.com.au/session-time/",
+              "overview": null,
+              "posterPath": null,
+              "rating": null,
+              "year": null,
+              "runtime": null,
+              "trailerUrl": null
+            },
+            {
+              "title": "Insidious: Out of the Further",
+              "times": [
+                "1:00pm"
+              ],
+              "url": "https://eclipse-cinema.com.au/session-time/",
+              "overview": "Gemma, a young mother raising her daughter in the house she grew up in, discovers she can travel into The Further, where she possesses an ability to bring what lives there back to the real world.",
+              "posterPath": "https://image.tmdb.org/t/p/w300/4tTrW9dXCByS5wt2pXVWb58zNjz.jpg",
+              "rating": null,
+              "year": "2026",
+              "runtime": 106,
+              "trailerUrl": "https://www.youtube.com/watch?v=gXjurDkYnEM"
+            },
+            {
+              "title": "Stop! That! Train!",
+              "times": [
+                "4:15pm"
+              ],
+              "url": "https://eclipse-cinema.com.au/session-time/",
+              "overview": "Best friends and train stewardesses Tess and DeeDee trade their dreary shifts on the Stank Rail for the glitzy Glamazonian Express. However, when a catastrophic Stormaganza threatens to crash the high-speed train into Celebration, Florida, the duo in coach must join forces with the snobby first-class attendants, a hot but dimwitted co-conductor, and fabulous US President Judy Gagwell to save the day.",
+              "posterPath": "https://image.tmdb.org/t/p/w300/w90dGS6D2lVO4aO5rdQ8QECrUGY.jpg",
+              "rating": 5.054,
+              "year": "2026",
+              "runtime": 90,
+              "trailerUrl": "https://www.youtube.com/watch?v=xEU03WLKkT4"
+            }
+          ]
+        },
+        {
+          "cinema": "Cinema Nova",
+          "url": "https://www.cinemanova.com.au/films-friday-after-0:00",
+          "sessions": [
+            {
+              "title": "Maigret and the Dead Lover",
+              "times": [
+                "4:20pm"
+              ],
+              "url": "https://www.cinemanova.com.au/films/maigret-and-the-dead-lover",
+              "overview": "Commissioner Maigret rushes to the Quai d’Orsay with Lieutenant Janvier. There, they find Mademoiselle Larrieu in a state of shock. That very morning, she discovered the bullet-riddled body of Mr. Berthier-Lagès, a renowned former ambassador whom she had served as a housekeeper for 46 years. While searching the victim's apartment, Maigret and Janvier uncover hundreds of letters. The diplomat had maintained a fifty-year-long love correspondence with a certain Princess of Vuynes, whose husband - by a strange coincidence - had died just a few days earlier. As he confronts the various members of the two families and the suspicious silence of Mademoiselle Larrieu, Maigret finds himself faced with surprise after surprise, watching his certainties crumble - until the solution to the mystery finally hits him in the face at the very last moment...",
+              "posterPath": "https://image.tmdb.org/t/p/w300/siGwXsTqwSBC9VcbDM4tdhb1qLo.jpg",
+              "rating": 6,
+              "year": "2026",
+              "runtime": 80,
+              "trailerUrl": "https://www.youtube.com/watch?v=QdR2xExpvQM"
+            },
+            {
+              "title": "Mockbuster",
+              "times": [
+                "6:50pm"
+              ],
+              "url": "https://www.cinemanova.com.au/films/mockbuster",
+              "overview": "A struggling filmmaker’s opportunity collides with chaos and compromise when Sharknado’s notorious studio, The Asylum, invites him to direct a \"mockbuster.\"",
+              "posterPath": "https://image.tmdb.org/t/p/w300/inH9HxbtPFZcUYcTI4AkCNOOxpx.jpg",
+              "rating": 6.2,
+              "year": "2026",
+              "runtime": 90,
+              "trailerUrl": "https://www.youtube.com/watch?v=UfaKokQbW5A"
+            },
+            {
+              "title": "It Ends",
+              "times": [
+                "7:00pm"
+              ],
+              "url": "https://www.cinemanova.com.au/films/it-ends",
+              "overview": "A group of recent grads head out on a late night drive for grub, hoping to enjoy one final hangout before their paths diverge. Instead, they accidentally turn onto a never-ending, two-lane hellscape surrounded by untold horrors and cosmic forces beyond their understanding. Cramped together inside a Jeep Cherokee and with the miles stretching infinitely ahead, they face a choice: embrace their new existence or fight to escape it.",
+              "posterPath": "https://image.tmdb.org/t/p/w300/6dfAGvZWbJnzWfSZ8gxFj63BNAH.jpg",
+              "rating": 5.2,
+              "year": "2026",
+              "runtime": 89,
+              "trailerUrl": "https://www.youtube.com/watch?v=zFszhQLMNXU"
+            },
+            {
+              "title": "2001: A Space Odyssey",
+              "times": [
+                "7:00pm"
+              ],
+              "url": "https://www.cinemanova.com.au/films/2001-a-space-odyssey",
+              "overview": "Humanity finds a mysterious object buried beneath the lunar surface and sets off to find its origins with the help of HAL 9000, the world's most advanced super computer.",
+              "posterPath": "https://image.tmdb.org/t/p/w300/ve72VxNqjGM69Uky4WTo2bK6rfq.jpg",
+              "rating": 8.048,
+              "year": "1968",
+              "runtime": 149,
+              "trailerUrl": "https://www.youtube.com/watch?v=kR2r-A9H3Kg"
+            },
+            {
+              "title": "Holy Motors",
+              "times": [
+                "8:50pm"
+              ],
+              "url": "https://www.cinemanova.com.au/films/holy-motors",
+              "overview": "We follow 24 hours in the life of a being moving from life to life like a cold and solitary assassin moving from hit to hit. In each of these interwoven lives, the being possesses an entirely distinct identity: sometimes a man, sometimes a woman, sometimes youthful, sometimes old. By turns murderer, beggar, company chairman, monstrous creature, worker, family man.",
+              "posterPath": "https://image.tmdb.org/t/p/w300/4ZuTrrDQhCS9f6KzIX6HfsjjyMd.jpg",
+              "rating": 6.979,
+              "year": "2012",
+              "runtime": 116,
+              "trailerUrl": "https://www.youtube.com/watch?v=Uw3Sh1XAu40"
+            }
+          ]
+        },
+        {
+          "cinema": "Lido Cinemas",
+          "url": "https://www.lidocinemas.com.au/now-showing/friday",
+          "sessions": [
+            {
+              "title": "Southland Tales (2007)",
+              "times": [
+                "8:00pm"
+              ],
+              "url": "https://www.lidocinemas.com.au/tickets?c=0000000003&s=105674",
+              "overview": "Set in the futuristic landscape of Los Angeles on July 4, 2008, as it stands on the brink of social, economic and environmental disaster. Boxer Santaros is an action star who's stricken with amnesia. His life intertwines with Krysta Now, an adult film star developing her own reality television project, and Ronald Taverner, a Hermosa Beach police officer who holds the key to a vast conspiracy.",
+              "posterPath": "https://image.tmdb.org/t/p/w300/7dbIDQ80z4bxiDlAvxRwc5TI44C.jpg",
+              "rating": 5.231,
+              "year": "2007",
+              "runtime": 145,
+              "trailerUrl": "https://www.youtube.com/watch?v=Sbovtczv99U"
+            },
+            {
+              "title": "It Ends",
+              "times": [
+                "7:00pm"
+              ],
+              "url": "https://www.lidocinemas.com.au/tickets?c=0000000003&s=108461",
+              "overview": "A group of recent grads head out on a late night drive for grub, hoping to enjoy one final hangout before their paths diverge. Instead, they accidentally turn onto a never-ending, two-lane hellscape surrounded by untold horrors and cosmic forces beyond their understanding. Cramped together inside a Jeep Cherokee and with the miles stretching infinitely ahead, they face a choice: embrace their new existence or fight to escape it.",
+              "posterPath": "https://image.tmdb.org/t/p/w300/6dfAGvZWbJnzWfSZ8gxFj63BNAH.jpg",
+              "rating": 5.2,
+              "year": "2026",
+              "runtime": 89,
+              "trailerUrl": "https://www.youtube.com/watch?v=zFszhQLMNXU"
+            },
+            {
+              "title": "The Tamara Kuldin Quartet",
+              "times": [
+                "8:00pm"
+              ],
+              "url": "https://www.lidocinemas.com.au/tickets?c=0000000003&s=107523",
+              "overview": null,
+              "posterPath": null,
+              "rating": null,
+              "year": null,
+              "runtime": null,
+              "trailerUrl": null
+            }
+          ]
+        },
+        {
+          "cinema": "Hoyts Melbourne Central",
+          "url": "https://www.hoyts.com.au/cinemas/melbourne-central",
+          "sessions": [
+            {
+              "title": "The Odyssey",
+              "times": [
+                "2:15pm",
+                "6:00pm"
+              ],
+              "url": "https://www.hoyts.com.au/movies/the-odyssey",
+              "overview": "Odysseus, the legendary King of Ithaca, embarks on a long and perilous journey home following the Trojan War. Throughout his voyage, he is forced to confront the whims of gods, mythological monsters, and trials that stretch both his cunning and his humanity to the breaking point.",
+              "posterPath": "https://image.tmdb.org/t/p/w300/5rhTDKUhPYvpdQIijFIs5VoWsON.jpg",
+              "rating": 4.6,
+              "year": "2026",
+              "runtime": 173,
+              "trailerUrl": "https://www.youtube.com/watch?v=AyIZ9tiiN8I"
+            },
+            {
+              "title": "Harry Potter and the Philosopher's Stone - 25th Anniversary with bonus footage",
+              "times": [
+                "6:00pm"
+              ],
+              "url": "https://www.hoyts.com.au/movies/harry-potter-and-the-philosophers-stone-25th-anniversary",
+              "overview": "Harry Potter has lived under the stairs at his aunt and uncle's house his whole life. But on his 11th birthday, he learns he's a powerful wizard—with a place waiting for him at the Hogwarts School of Witchcraft and Wizardry. As he learns to harness his newfound powers with the help of the school's kindly headmaster, Harry uncovers the truth about his parents' deaths—and about the villain who's to blame.",
+              "posterPath": "https://image.tmdb.org/t/p/w300/wuMc08IPKEatf9rnMNXvIDxqP4W.jpg",
+              "rating": 7.902,
+              "year": "2001",
+              "runtime": 152,
+              "trailerUrl": "https://www.youtube.com/watch?v=l91Km49W9qI"
+            },
+            {
+              "title": "The Fast and the Furious - 25th Anniversary",
+              "times": [
+                "6:45pm"
+              ],
+              "url": "https://www.hoyts.com.au/movies/the-fast-and-the-furious---25th-anniversary",
+              "overview": "Dominic Toretto is a Los Angeles street racer suspected of masterminding a series of big-rig hijackings. When undercover cop Brian O'Conner infiltrates Toretto's iconoclastic crew, he falls for Toretto's sister and must choose a side: the gang or the LAPD.",
+              "posterPath": "https://image.tmdb.org/t/p/w300/gqY0ITBgT7A82poL9jv851qdnIb.jpg",
+              "rating": 7.013,
+              "year": "2001",
+              "runtime": 106,
+              "trailerUrl": "https://www.youtube.com/watch?v=iIU1xlDbbQk"
+            }
+          ],
+          "note": "Lux sessions not listed"
+        },
+        {
+          "cinema": "The Astor Theatre",
+          "url": "https://www.astortheatre.net.au/",
+          "sessions": []
+        },
+        {
+          "cinema": "Palace Como",
+          "url": "https://www.palacecinemas.com.au/cinemas/palace-cinema-como",
+          "sessions": [
+            {
+              "title": "Maigret and the Dead Lover",
+              "times": [
+                "3:45pm"
+              ],
+              "url": "https://www.palacecinemas.com.au/movies/maigret-and-the-dead-lover",
+              "overview": "Commissioner Maigret rushes to the Quai d’Orsay with Lieutenant Janvier. There, they find Mademoiselle Larrieu in a state of shock. That very morning, she discovered the bullet-riddled body of Mr. Berthier-Lagès, a renowned former ambassador whom she had served as a housekeeper for 46 years. While searching the victim's apartment, Maigret and Janvier uncover hundreds of letters. The diplomat had maintained a fifty-year-long love correspondence with a certain Princess of Vuynes, whose husband - by a strange coincidence - had died just a few days earlier. As he confronts the various members of the two families and the suspicious silence of Mademoiselle Larrieu, Maigret finds himself faced with surprise after surprise, watching his certainties crumble - until the solution to the mystery finally hits him in the face at the very last moment...",
+              "posterPath": "https://image.tmdb.org/t/p/w300/siGwXsTqwSBC9VcbDM4tdhb1qLo.jpg",
+              "rating": 6,
+              "year": "2026",
+              "runtime": 80,
+              "trailerUrl": "https://www.youtube.com/watch?v=QdR2xExpvQM"
+            },
+            {
+              "title": "TINA ARENA: UNRAVEL ME",
+              "times": [
+                "1:30pm"
+              ],
+              "url": "https://www.palacecinemas.com.au/movies/tina-arena-unravel-me",
+              "overview": "How do you separate a Melbourne-born Oz music treasure and cosmopolitan star from a resilient woman? Follow the threads of her story, in her own words.",
+              "posterPath": "https://image.tmdb.org/t/p/w300/yYXYolitZrxcYsVREygTFIks1F2.jpg",
+              "rating": null,
+              "year": "2026",
+              "runtime": 90,
+              "trailerUrl": null
+            }
+          ]
+        },
+        {
+          "cinema": "Palace Kino",
+          "url": "https://www.palacecinemas.com.au/cinemas/the-kino-melbourne",
+          "sessions": [
+            {
+              "title": "Maigret and the Dead Lover",
+              "times": [
+                "4:00pm"
+              ],
+              "url": "https://www.palacecinemas.com.au/movies/maigret-and-the-dead-lover",
+              "overview": "Commissioner Maigret rushes to the Quai d’Orsay with Lieutenant Janvier. There, they find Mademoiselle Larrieu in a state of shock. That very morning, she discovered the bullet-riddled body of Mr. Berthier-Lagès, a renowned former ambassador whom she had served as a housekeeper for 46 years. While searching the victim's apartment, Maigret and Janvier uncover hundreds of letters. The diplomat had maintained a fifty-year-long love correspondence with a certain Princess of Vuynes, whose husband - by a strange coincidence - had died just a few days earlier. As he confronts the various members of the two families and the suspicious silence of Mademoiselle Larrieu, Maigret finds himself faced with surprise after surprise, watching his certainties crumble - until the solution to the mystery finally hits him in the face at the very last moment...",
+              "posterPath": "https://image.tmdb.org/t/p/w300/siGwXsTqwSBC9VcbDM4tdhb1qLo.jpg",
+              "rating": 6,
+              "year": "2026",
+              "runtime": 80,
+              "trailerUrl": "https://www.youtube.com/watch?v=QdR2xExpvQM"
+            },
+            {
+              "title": "TINA ARENA: UNRAVEL ME",
+              "times": [
+                "2:00pm"
+              ],
+              "url": "https://www.palacecinemas.com.au/movies/tina-arena-unravel-me",
+              "overview": "How do you separate a Melbourne-born Oz music treasure and cosmopolitan star from a resilient woman? Follow the threads of her story, in her own words.",
+              "posterPath": "https://image.tmdb.org/t/p/w300/yYXYolitZrxcYsVREygTFIks1F2.jpg",
+              "rating": null,
+              "year": "2026",
+              "runtime": 90,
+              "trailerUrl": null
+            }
+          ]
+        },
+        {
+          "cinema": "Palace Westgarth",
+          "url": "https://www.palacecinemas.com.au/cinemas/palace-westgarth",
+          "sessions": [
+            {
+              "title": "Maigret and the Dead Lover",
+              "times": [
+                "1:30pm"
+              ],
+              "url": "https://www.palacecinemas.com.au/movies/maigret-and-the-dead-lover",
+              "overview": "Commissioner Maigret rushes to the Quai d’Orsay with Lieutenant Janvier. There, they find Mademoiselle Larrieu in a state of shock. That very morning, she discovered the bullet-riddled body of Mr. Berthier-Lagès, a renowned former ambassador whom she had served as a housekeeper for 46 years. While searching the victim's apartment, Maigret and Janvier uncover hundreds of letters. The diplomat had maintained a fifty-year-long love correspondence with a certain Princess of Vuynes, whose husband - by a strange coincidence - had died just a few days earlier. As he confronts the various members of the two families and the suspicious silence of Mademoiselle Larrieu, Maigret finds himself faced with surprise after surprise, watching his certainties crumble - until the solution to the mystery finally hits him in the face at the very last moment...",
+              "posterPath": "https://image.tmdb.org/t/p/w300/siGwXsTqwSBC9VcbDM4tdhb1qLo.jpg",
+              "rating": 6,
+              "year": "2026",
+              "runtime": 80,
+              "trailerUrl": "https://www.youtube.com/watch?v=QdR2xExpvQM"
+            },
+            {
+              "title": "TINA ARENA: UNRAVEL ME",
+              "times": [
+                "3:30pm"
+              ],
+              "url": "https://www.palacecinemas.com.au/movies/tina-arena-unravel-me",
+              "overview": "How do you separate a Melbourne-born Oz music treasure and cosmopolitan star from a resilient woman? Follow the threads of her story, in her own words.",
+              "posterPath": "https://image.tmdb.org/t/p/w300/yYXYolitZrxcYsVREygTFIks1F2.jpg",
+              "rating": null,
+              "year": "2026",
+              "runtime": 90,
+              "trailerUrl": null
+            }
+          ]
+        },
+        {
+          "cinema": "Pentridge Cinema",
+          "url": "https://www.palacecinemas.com.au/cinemas/pentridge-cinema",
+          "sessions": [
+            {
+              "title": "Maigret and the Dead Lover",
+              "times": [
+                "4:00pm"
+              ],
+              "url": "https://www.palacecinemas.com.au/movies/maigret-and-the-dead-lover",
+              "overview": "Commissioner Maigret rushes to the Quai d’Orsay with Lieutenant Janvier. There, they find Mademoiselle Larrieu in a state of shock. That very morning, she discovered the bullet-riddled body of Mr. Berthier-Lagès, a renowned former ambassador whom she had served as a housekeeper for 46 years. While searching the victim's apartment, Maigret and Janvier uncover hundreds of letters. The diplomat had maintained a fifty-year-long love correspondence with a certain Princess of Vuynes, whose husband - by a strange coincidence - had died just a few days earlier. As he confronts the various members of the two families and the suspicious silence of Mademoiselle Larrieu, Maigret finds himself faced with surprise after surprise, watching his certainties crumble - until the solution to the mystery finally hits him in the face at the very last moment...",
+              "posterPath": "https://image.tmdb.org/t/p/w300/siGwXsTqwSBC9VcbDM4tdhb1qLo.jpg",
+              "rating": 6,
+              "year": "2026",
+              "runtime": 80,
+              "trailerUrl": "https://www.youtube.com/watch?v=QdR2xExpvQM"
+            },
+            {
+              "title": "TINA ARENA: UNRAVEL ME",
+              "times": [
+                "1:45pm"
+              ],
+              "url": "https://www.palacecinemas.com.au/movies/tina-arena-unravel-me",
+              "overview": "How do you separate a Melbourne-born Oz music treasure and cosmopolitan star from a resilient woman? Follow the threads of her story, in her own words.",
+              "posterPath": "https://image.tmdb.org/t/p/w300/yYXYolitZrxcYsVREygTFIks1F2.jpg",
+              "rating": null,
+              "year": "2026",
+              "runtime": 90,
+              "trailerUrl": null
+            }
+          ]
+        },
+        {
+          "cinema": "Imax Melbourne",
+          "url": "https://imaxmelbourne.com.au/session_times_and_tickets",
+          "sessions": []
+        },
+        {
+          "cinema": "Sun Theatre",
+          "url": "https://suntheatre.com.au/now-playing/",
+          "sessions": [
+            {
+              "title": "THE ODYSSEY IN 70MM",
+              "times": [
+                "2:30pm",
+                "6:00pm",
+                "9:15pm"
+              ],
+              "url": "https://suntheatre.com.au/wp-cinema/movie/S2670MMODYSSEY/THE+ODYSSEY+IN+70mm/",
+              "overview": null,
+              "posterPath": null,
+              "rating": null,
+              "year": null,
+              "runtime": null,
+              "trailerUrl": null
+            },
+            {
+              "title": "HARRY POTTER AND THE PHILOSOPHER'S STONE",
+              "times": [
+                "8:15pm"
+              ],
+              "url": "https://suntheatre.com.au/wp-cinema/movie/S26HPPHILOSOPHER/HARRY+POTTER+AND+THE+PHILOSOPHERS+STONE/",
+              "overview": "Harry Potter has lived under the stairs at his aunt and uncle's house his whole life. But on his 11th birthday, he learns he's a powerful wizard—with a place waiting for him at the Hogwarts School of Witchcraft and Wizardry. As he learns to harness his newfound powers with the help of the school's kindly headmaster, Harry uncovers the truth about his parents' deaths—and about the villain who's to blame.",
+              "posterPath": "https://image.tmdb.org/t/p/w300/wuMc08IPKEatf9rnMNXvIDxqP4W.jpg",
+              "rating": 7.902,
+              "year": "2001",
+              "runtime": 152,
+              "trailerUrl": "https://www.youtube.com/watch?v=l91Km49W9qI"
+            },
+            {
+              "title": "TINA ARENA: UNRAVEL ME",
+              "times": [
+                "6:30pm"
+              ],
+              "url": "https://suntheatre.com.au/wp-cinema/movie/S26TINAARENAUNRA/TINA+ARENA+UNRAVEL+ME/",
+              "overview": "How do you separate a Melbourne-born Oz music treasure and cosmopolitan star from a resilient woman? Follow the threads of her story, in her own words.",
+              "posterPath": "https://image.tmdb.org/t/p/w300/yYXYolitZrxcYsVREygTFIks1F2.jpg",
+              "rating": null,
+              "year": "2026",
+              "runtime": 90,
+              "trailerUrl": null
+            }
+          ]
+        },
+        {
+          "cinema": "Coburg Drive-In",
+          "url": "https://villagecinemas.com.au/cinemas/coburg-drive-in",
+          "sessions": []
         }
       ]
     }

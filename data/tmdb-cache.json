@@ -9034,5 +9034,86 @@
     "runtime": 106,
     "trailerUrl": "https://www.youtube.com/watch?v=iIU1xlDbbQk",
     "tmdbId": 9799
+  },
+  "the birthday trip + filmmaker q&a": {
+    "overview": null,
+    "posterPath": null,
+    "rating": null,
+    "year": null,
+    "runtime": null,
+    "trailerUrl": null,
+    "tmdbId": null
+  },
+  "1st birthday – grand tour": {
+    "overview": null,
+    "posterPath": null,
+    "rating": null,
+    "year": null,
+    "runtime": null,
+    "trailerUrl": null,
+    "tmdbId": null
+  },
+  "maigret and the dead lover": {
+    "overview": "Commissioner Maigret rushes to the Quai d’Orsay with Lieutenant Janvier. There, they find Mademoiselle Larrieu in a state of shock. That very morning, she discovered the bullet-riddled body of Mr. Berthier-Lagès, a renowned former ambassador whom she had served as a housekeeper for 46 years. While searching the victim's apartment, Maigret and Janvier uncover hundreds of letters. The diplomat had maintained a fifty-year-long love correspondence with a certain Princess of Vuynes, whose husband - by a strange coincidence - had died just a few days earlier. As he confronts the various members of the two families and the suspicious silence of Mademoiselle Larrieu, Maigret finds himself faced with surprise after surprise, watching his certainties crumble - until the solution to the mystery finally hits him in the face at the very last moment...",
+    "posterPath": "https://image.tmdb.org/t/p/w300/siGwXsTqwSBC9VcbDM4tdhb1qLo.jpg",
+    "rating": 6,
+    "year": "2026",
+    "runtime": 80,
+    "trailerUrl": "https://www.youtube.com/watch?v=QdR2xExpvQM",
+    "tmdbId": 1398486
+  },
+  "mockbuster": {
+    "overview": "A struggling filmmaker’s opportunity collides with chaos and compromise when Sharknado’s notorious studio, The Asylum, invites him to direct a \"mockbuster.\"",
+    "posterPath": "https://image.tmdb.org/t/p/w300/inH9HxbtPFZcUYcTI4AkCNOOxpx.jpg",
+    "rating": 6.2,
+    "year": "2026",
+    "runtime": 90,
+    "trailerUrl": "https://www.youtube.com/watch?v=UfaKokQbW5A",
+    "tmdbId": 1497325
+  },
+  "it ends": {
+    "overview": "A group of recent grads head out on a late night drive for grub, hoping to enjoy one final hangout before their paths diverge. Instead, they accidentally turn onto a never-ending, two-lane hellscape surrounded by untold horrors and cosmic forces beyond their understanding. Cramped together inside a Jeep Cherokee and with the miles stretching infinitely ahead, they face a choice: embrace their new existence or fight to escape it.",
+    "posterPath": "https://image.tmdb.org/t/p/w300/6dfAGvZWbJnzWfSZ8gxFj63BNAH.jpg",
+    "rating": 5.2,
+    "year": "2026",
+    "runtime": 89,
+    "trailerUrl": "https://www.youtube.com/watch?v=zFszhQLMNXU",
+    "tmdbId": 1422011
+  },
+  "southland tales (2007)": {
+    "overview": "Set in the futuristic landscape of Los Angeles on July 4, 2008, as it stands on the brink of social, economic and environmental disaster. Boxer Santaros is an action star who's stricken with amnesia. His life intertwines with Krysta Now, an adult film star developing her own reality television project, and Ronald Taverner, a Hermosa Beach police officer who holds the key to a vast conspiracy.",
+    "posterPath": "https://image.tmdb.org/t/p/w300/7dbIDQ80z4bxiDlAvxRwc5TI44C.jpg",
+    "rating": 5.231,
+    "year": "2007",
+    "runtime": 145,
+    "trailerUrl": "https://www.youtube.com/watch?v=Sbovtczv99U",
+    "tmdbId": 4723
+  },
+  "toxic: a fairy tale for grown-ups (kannada, eng sub)": {
+    "overview": "A powerful drug cartel pulls the strings behind a facade of sun-soaked beaches as a gritty, violent underworld power struggle emerges during the crumbling of Portuguese colonial rule.",
+    "posterPath": "https://image.tmdb.org/t/p/w300/tZ8eSBXbza96vzCYeVTG9RBJ78E.jpg",
+    "rating": null,
+    "year": "2026",
+    "runtime": 192,
+    "trailerUrl": "https://www.youtube.com/watch?v=EfluEyQ5QIA",
+    "tmdbId": 1213243
+  },
+  "top dog film festival 2026: the ultimate cinematic celebration of dogs": {
+    "overview": null,
+    "posterPath": null,
+    "rating": null,
+    "year": null,
+    "runtime": null,
+    "trailerUrl": null,
+    "tmdbId": null
+  },
+  "gutsy girls adventure film tour 2026": {
+    "overview": null,
+    "posterPath": null,
+    "rating": null,
+    "year": null,
+    "runtime": null,
+    "trailerUrl": null,
+    "tmdbId": null
   }
 }
