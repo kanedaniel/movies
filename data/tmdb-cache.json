@@ -9115,5 +9115,86 @@
     "runtime": null,
     "trailerUrl": null,
     "tmdbId": null
+  },
+  "essential truths of the lake": {
+    "overview": "Faced with Philippine President Rodrigo Duterte’s bloody murders and brazen lies, ethically conflicted police lieutenant Hermes Papauran continues his struggle to find a resolution to a 15-year-old case around a volcanic ash-laden landscape and an impenetrable lake.",
+    "posterPath": "https://image.tmdb.org/t/p/w300/298QkUOKHmXoEUaKIAWj4RQSWYI.jpg",
+    "rating": 7,
+    "year": "2023",
+    "runtime": 215,
+    "trailerUrl": null,
+    "tmdbId": 1147347
+  },
+  "tastes of africa + q&a": {
+    "overview": null,
+    "posterPath": null,
+    "rating": null,
+    "year": null,
+    "runtime": null,
+    "trailerUrl": null,
+    "tmdbId": null
+  },
+  "mrs. doubtfire (1993)": {
+    "overview": "Loving but irresponsible dad Daniel Hillard, estranged from his exasperated spouse, is crushed by a court order allowing only weekly visits with his kids. When Daniel learns his ex needs a housekeeper, he gets the job -- disguised as a British nanny. Soon he becomes not only his children's best pal but the kind of parent he should have been from the start.",
+    "posterPath": "https://image.tmdb.org/t/p/w300/shHrSmXS5140o6sQzgzXxn3KqSm.jpg",
+    "rating": 7.196,
+    "year": "1993",
+    "runtime": 125,
+    "trailerUrl": "https://www.youtube.com/watch?v=NBZ2ioWBxD8",
+    "tmdbId": 788
+  },
+  "the grapes of wrath (1940)": {
+    "overview": "Tom Joad returns to his home after a jail sentence to find his family kicked out of their farm due to foreclosure. He catches up with them on his Uncle’s farm, and joins them the next day as they head for California and a new life... Hopefully.",
+    "posterPath": "https://image.tmdb.org/t/p/w300/eUcxMVBIA0Jg8l1RGUqycrc3eIQ.jpg",
+    "rating": 7.805,
+    "year": "1940",
+    "runtime": 129,
+    "trailerUrl": "https://www.youtube.com/watch?v=e8C_eK2ra3s",
+    "tmdbId": 596
+  },
+  "the barb kerr quartet": {
+    "overview": null,
+    "posterPath": null,
+    "rating": null,
+    "year": null,
+    "runtime": null,
+    "trailerUrl": null,
+    "tmdbId": null
+  },
+  "paw patrol: the dino movie": {
+    "overview": "The Paw Patrol lands on a mysterious dinosaur island after a storm, where they meet Rex, a stranded pup. When Humdinger's reckless mining triggers a volcano, the team faces their biggest rescue mission yet to save the island.",
+    "posterPath": "https://image.tmdb.org/t/p/w300/qnin56Syy5rbG7KCaxWY7SPuy6p.jpg",
+    "rating": 7,
+    "year": "2026",
+    "runtime": 88,
+    "trailerUrl": "https://www.youtube.com/watch?v=GN9ynEUmZuk",
+    "tmdbId": 1185806
+  },
+  "truth or consequence (amyl & the sniffers)": {
+    "overview": "A film of live music photographed at the famous El Coyote mexican restaurant on Beverly Blvd, Los Angeles 90036.",
+    "posterPath": null,
+    "rating": null,
+    "year": "2026",
+    "runtime": 74,
+    "trailerUrl": null,
+    "tmdbId": 1743364
+  },
+  "monroe 100: bus stop": {
+    "overview": null,
+    "posterPath": null,
+    "rating": null,
+    "year": null,
+    "runtime": null,
+    "trailerUrl": null,
+    "tmdbId": null
+  },
+  "andré rieu's summer concert 2026: viva maastricht!": {
+    "overview": null,
+    "posterPath": "https://image.tmdb.org/t/p/w300/sl8Rs0d5dQbnCN5Cf5CCarfzlW0.jpg",
+    "rating": null,
+    "year": "2026",
+    "runtime": null,
+    "trailerUrl": null,
+    "tmdbId": 1702801
   }
 }
